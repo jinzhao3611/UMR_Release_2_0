@@ -276,7 +276,6 @@ def format_umr_writer_document(input_file, replace_json):
     return output
 
 
-
 def format_chinese():
     input_folder_path = Path(root) / 'chinese/original_data/'
     output_folder_path = Path(root) / 'chinese/formatted_data/'
