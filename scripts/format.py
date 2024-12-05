@@ -1,16 +1,13 @@
 import os, re, json
 from pathlib import Path
 
-# Get the directory of the current script
 current_script_dir = Path(__file__).parent
-
-# Construct the path to the file
 root = current_script_dir.parent
 
-# Input and output file paths
-# input_file_path = "/Users/jinzhao/schoolwork/UMR_Release_2_0/chinese/original_data/coldwave_jingyi.txt"
-# output_file_path = "/Users/jinzhao/schoolwork/UMR_Release_2_0/chinese/jsons/coldwave_jingyi.json"
-def umr_txt2json(input_file_path, output_file_path):
+with open(Path(root) / 'chinese/role_mappings.json', 'r') as file:
+    replacements = json.load(file)
+
+def umr_writer_txt2json(input_file_path, output_file_path):
     parsed_data = {
         "meta": {},
         "annotations": [],
@@ -52,9 +49,11 @@ def umr_txt2json(input_file_path, output_file_path):
                     sentence_id = int(match.group(1))
                 else:
                     print("ERROR: there is no sentence_id extracted. ")
+                if "\t" not in line: #lin bin's file
+                    line = re.sub(r"(# :: snt\d+) ", r"\1\t", line)
                 current_annotation = {
                     "sentence_id": sentence_id,
-                    "sentence": line.split("\t", 1)[1] if "\t" in line else "",
+                    "sentence": line.split("\t", 1)[1],
                     "sentence_graph": "",
                     "alignments": "",
                     "document_level_annotation": ""
@@ -111,15 +110,52 @@ def umr_txt2json(input_file_path, output_file_path):
 
     print(f"Parsed data saved to {output_file_path}")
 
-def umr_folder_txt2json():
+def folder_umr_writer_txt2json():
     input_folder_path = Path(root) / 'chinese/original_data/'
     output_folder_path = Path(root) / 'chinese/jsons/'
     for file_path in input_folder_path.iterdir():
         if file_path.suffix == '.txt':  # Ensure the file has a .txt extension
             try:
-                umr_txt2json(file_path, Path.joinpath(output_folder_path, file_path.name.replace(".txt", ".json")))
+                umr_writer_txt2json(file_path, Path.joinpath(output_folder_path, file_path.name.replace(".txt", ".json")))
+            except Exception as e:
+                print(f"Error processing {file_path}: {e}")
+
+
+
+def json2txt(input_file_path, output_file_path):
+    # input_file_path = "/Users/jinzhao/schoolwork/UMR_Release_2_0/chinese/jsons/coldwave_jingyi.json"
+    # output_file_path = "/Users/jinzhao/schoolwork/UMR_Release_2_0/chinese/formatted_data/coldwave_jingyi.txt"
+    with open(input_file_path, 'r') as file:
+        data = json.load(file)
+
+    output = ""
+    for annotation in data["annotations"]:
+        indices = "\t".join(map(str, range(1, len(annotation["sentence"].strip().split()) + 1)))
+        output += f"""# :: snt{annotation["sentence_id"]}\nIndex:\t{indices}\nWords:\t{annotation["sentence"].strip()}\n\n"""
+        sent_annot = annotation["sentence_graph"]
+        doc_annot = annotation["document_level_annotation"]
+        for key, value in replacements.items():
+            sent_annot = re.sub(re.escape(key), value, sent_annot, flags=re.IGNORECASE)
+            doc_annot = re.sub(re.escape(key), value, doc_annot, flags=re.IGNORECASE)
+
+        output += f"""# sentence level graph:\n{sent_annot}\n"""
+        output += f"""# alignment:\n{annotation["alignments"]}\n"""
+        output += f"""# document level annotation:\n{doc_annot}\n\n"""
+
+
+    with open(output_file_path, 'w') as file:
+        file.write(output)
+
+def folder_json2txt():
+    input_folder_path = Path(root) / 'chinese/jsons/'
+    output_folder_path = Path(root) / 'chinese/formatted_data/'
+    for file_path in input_folder_path.iterdir():
+        if file_path.suffix == '.json':  # Ensure the file has a .txt extension
+            try:
+                json2txt(file_path, Path.joinpath(output_folder_path, file_path.name.replace(".json", ".txt")))
             except Exception as e:
                 print(f"Error processing {file_path}: {e}")
 
 if __name__ == '__main__':
-    umr_folder_txt2json()
+    # folder_umr_writer_txt2json()
+    folder_json2txt()
