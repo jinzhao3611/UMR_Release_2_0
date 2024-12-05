@@ -76,11 +76,14 @@ def umr_txt2json(input_file_path, output_file_path):
                 current_annotation["document_level_annotation"] = ""
             elif current_annotation and not line.startswith("#") and not source_file_start:
                 if sent_level_annot:
-                    current_annotation["sentence_graph"] += line
+                    if line.strip():
+                        current_annotation["sentence_graph"] += line
                 elif alignment_annot:
-                    current_annotation["alignments"] += line
+                    if line.strip():
+                        current_annotation["alignments"] += line
                 elif doc_level_annot:
-                    current_annotation["document_level_annotation"] += line
+                    if line.strip():
+                        current_annotation["document_level_annotation"] += line
                 else:
                     print("ERROR: ", line)
 
@@ -114,7 +117,7 @@ def umr_folder_txt2json():
     for file_path in input_folder_path.iterdir():
         if file_path.suffix == '.txt':  # Ensure the file has a .txt extension
             try:
-                umr_txt2json(file_path, Path.joinpath(output_folder_path, file_path.name))
+                umr_txt2json(file_path, Path.joinpath(output_folder_path, file_path.name.replace(".txt", ".json")))
             except Exception as e:
                 print(f"Error processing {file_path}: {e}")
 
