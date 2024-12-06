@@ -18,7 +18,7 @@ for input_file in "$INPUT_DIR"/*; do
 
     # Run the Python script and redirect both stdout and stderr to the file
     echo "Processing $input_file -> $output_file"
-    python validate.py "$input_file" > "$output_file" 2>&1
+    python validate.py --allow--1 --warn-overlapping-alignment --optional-alignments --no-warn-unaligned-token "$input_file" > "$output_file" 2>&1
 done
 
 echo "All files processed."

@@ -7,6 +7,31 @@ root = current_script_dir.parent
 with open(Path(root) / 'chinese/role_mappings.json', 'r') as file:
     replacements = json.load(file)
 
+import re
+
+def fix_closing_paren_format(text):
+    # Split the text into lines
+    lines = text.split('\n')
+    new_lines = []
+
+    for line in lines:
+        stripped = line.strip()
+        # Check if the line (ignoring whitespace) consists solely of one or more closing parentheses
+        if re.match(r'^\)+$', stripped):
+            # If this line is just closing parentheses
+            if new_lines:
+                # Append these parentheses to the previous line
+                new_lines[-1] = new_lines[-1].rstrip() + stripped
+            else:
+                # If there's no previous line, just add it as is
+                new_lines.append(line)
+        else:
+            # Just a normal line, keep it
+            new_lines.append(line)
+
+    # Join the lines back together
+    return '\n'.join(new_lines)
+
 def umr_writer_txt2json(input_file_path, output_file_path):
     parsed_data = {
         "meta": {},
@@ -137,6 +162,7 @@ def json2txt(input_file_path, output_file_path):
         for key, value in replacements.items():
             sent_annot = re.sub(re.escape(key), value, sent_annot, flags=re.IGNORECASE)
             doc_annot = re.sub(re.escape(key), value, doc_annot, flags=re.IGNORECASE)
+        doc_annot = fix_closing_paren_format(doc_annot)
 
         output += f"""# sentence level graph:\n{sent_annot}\n"""
         output += f"""# alignment:\n{annotation["alignments"]}\n"""
