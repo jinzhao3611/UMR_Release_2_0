@@ -17,3 +17,14 @@ sentence heading standardization: https://github.com/ufal/UMR/issues/9
 
 manual change:
 Little_Prince.txt: the linebreak between s71 and s91 is manually changed to "\n"
+
+
+UMR tool list:
+Abstract Concepts/subroles
+Abstract Rolesets are added in non_event_rolesets and discourse_concepts in validate.py
+Roles are added in known_relations in validate.py
+Attributes/values are added in known_relations in validate.py
+haven't done anything to NE types yet
+We don't have to do anything about three mappings files.
+
+
