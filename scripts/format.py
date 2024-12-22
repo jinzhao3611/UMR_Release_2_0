@@ -32,6 +32,21 @@ def fix_closing_paren_format(text):
     # Join the lines back together
     return '\n'.join(new_lines)
 
+import re
+
+def fix_parentheses(input_text):
+    pattern = re.compile(r'\((\S+)\)')
+
+    # For each match, we replace '(token)' with 'token)'
+    # i.e., remove only the opening parenthesis
+    output_lines = []
+    for line in input_text.split('\n'):
+        new_line = pattern.sub(r'\1)', line)
+        output_lines.append(new_line)
+
+    output_text = "\n".join(output_lines)
+    return output_text
+
 def umr_writer_txt2json(input_file_path, output_file_path):
     parsed_data = {
         "meta": {},
@@ -163,6 +178,7 @@ def json2txt(input_file_path, output_file_path):
             sent_annot = re.sub(re.escape(key), value, sent_annot, flags=re.IGNORECASE)
             doc_annot = re.sub(re.escape(key), value, doc_annot, flags=re.IGNORECASE)
         doc_annot = fix_closing_paren_format(doc_annot)
+        doc_annot = fix_parentheses(doc_annot)
 
         output += f"""# sentence level graph:\n{sent_annot}\n"""
         output += f"""# alignment:\n{annotation["alignments"]}\n"""

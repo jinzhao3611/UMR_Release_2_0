@@ -12,7 +12,6 @@ English Data: I got two folders from Alvin:
 
 
 
-
 sentence heading standardization: https://github.com/ufal/UMR/issues/9
 
 manual change:
@@ -26,5 +25,10 @@ Roles are added in known_relations in validate.py
 Attributes/values are added in known_relations in validate.py
 haven't done anything to NE types yet
 We don't have to do anything about three mappings files.
+
+English release related documents:
+https://docs.google.com/spreadsheets/d/1PVxgXW3ED3OWLieie9scr6iq_xuQ5RAA8YJKwbLwJ2E/edit?gid=0#gid=0
+https://docs.google.com/spreadsheets/d/1UwHf_O7pqXRSKs-AlAL0FxRpPKRDWFH96yQLsOYjHXE/edit?gid=180118374#gid=180118374
+https://docs.google.com/spreadsheets/d/1q0RqXAObwT35nKsMEasYrBKKslEFxavC2HR7Z882Hk8/edit?gid=0#gid=0
 
 

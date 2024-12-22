@@ -1058,7 +1058,7 @@ known_relations = {
     ':ARG5': {'type': 'participant', 'repeat': False},
     ':ARG6': {'type': 'participant', 'repeat': False},
     ':aspect': {'type': 'attribute', 'repeat': False, 'values': ['habitual', 'generic', 'iterative', 'inceptive', 'imperfective', 'process', 'atelic-process', 'perfective', 'state', 'reversible-state', 'irreversible-state', 'inherent-state', 'point-state', 'activity', 'undirected-activity', 'directed-activity', 'endeavor', 'semelfactive', 'undirected-endeavor', 'directed-endeavor', 'performance', 'incremental-accomplishment', 'nonincremental-accomplishment', 'directed-achievement', 'reversible-directed-achievement', 'irreversible-directed-achievement']},
-    ':beneficiary': {'type': 'participant', 'repeat': False}, #todo:?
+    ':beneficiary': {'type': 'participant', 'repeat': False}, #todo: affecttee
     ':calendar': {'type': 'modifier', 'repeat': False},
     ':cause': {'type': 'modifier', 'repeat': True},
     ':causer': {'type': 'participant', 'repeat': False},
@@ -1066,14 +1066,14 @@ known_relations = {
     ':companion': {'type': 'participant', 'repeat': False},
     ':concession': {'type': 'modifier', 'repeat': True},
     ':condition': {'type': 'modifier', 'repeat': True},
-    ':consist-of': {'type': 'modifier', 'repeat': False}, #todo:?
+    ':consist-of': {'type': 'modifier', 'repeat': False}, #todo:? split into other roles(have-group-91, have-material-91)
     ':day': {'type': 'attribute', 'repeat': False},
     ':dayperiod': {'type': 'attribute', 'repeat': False},
     ':decade': {'type': 'modifier', 'repeat': False},
     ':degree': {'type': 'attribute', 'repeat': False, 'value': ['intensifier', 'downtoner', 'equal']},
-    ':destination': {'type': 'modifier', 'repeat': True}, #todo?
+    ':destination': {'type': 'modifier', 'repeat': True}, #todo? :goal
     ':direction': {'type': 'modifier', 'repeat': True},
-    ':domain': {'type': 'modifier', 'repeat': False}, #todo:?
+    ':domain': {'type': 'modifier', 'repeat': False}, #todo:? replaced with have-mode, have rel role, exist 91
     ':duration': {'type': 'modifier', 'repeat': True},
     ':era': {'type': 'modifier', 'repeat': False},
     ':example': {'type': 'modifier', 'repeat': True},
@@ -1084,7 +1084,7 @@ known_relations = {
     ':goal': {'type': 'participant', 'repeat': False},
     ':group': {'type': 'modifier', 'repeat': False},
     ':instrument': {'type': 'participant', 'repeat': False},
-    ':li': {'type': 'modifier', 'repeat': False}, #todo: is this replaced by :list-item?
+    ':li': {'type': 'modifier', 'repeat': False}, #todo: is this replaced by :list-item
     #':location': {'type': 'modifier', 'repeat': True}, # obsolete; use :place instead
     ':manner': {'type': 'modifier', 'repeat': True},
     ':material': {'type': 'participant', 'repeat': False},
@@ -1112,7 +1112,7 @@ known_relations = {
     ':recipient': {'type': 'participant', 'repeat': False},
     ':refer-number': {'type': 'attribute', 'repeat': False, 'values': ['singular', 'non-singular', 'dual', 'paucal', 'plural', 'non-dual-paucal', 'greater-plural', 'trial', 'non-trial-paucal']}, # Note: The guidelines and the spreadsheet originally defined ':ref-number' but it was changed to ':refer-number' in UMR 1.0 to make the annotation more human-readable.
     ':refer-person': {'type': 'attribute', 'repeat': False, 'values': ['1st', '2nd', '3rd', '4th', 'non-3rd', 'non-1st', 'excl','incl']}, # Note: The guidelines and the spreadsheet originally defined ':ref-person' but it was changed to ':refer-person' in UMR 1.0 to make the annotation more human-readable.
-    ':refer-definiteness':{'type':'attribute', 'repeat': False, 'values': ['class']}, #todo: ?
+    ':refer-definiteness':{'type':'attribute', 'repeat': False, 'values': ['class']}, #todo: for cases pronouns that are generic. "you don't do this"
     ':scale': {'type': 'modifier', 'repeat': False},
     ':source': {'type': 'participant', 'repeat': False},
     ':start': {'type': 'participant', 'repeat': False},
@@ -1134,7 +1134,7 @@ known_relations = {
     ':year': {'type': 'attribute', 'repeat': False},
     ':year2': {'type': 'attribute', 'repeat': False},
     # We added the following relations that are not in the guidelines:
-    ':according-to': {'type': 'modifier', 'repeat': False}, # child node is the source of the information #todo:?
+    ':according-to': {'type': 'modifier', 'repeat': False}, # child node is the source of the information #todo:? say-91
     ':axis-relative-polarities': {'type': 'attribute', 'repeat': False, 'values':['left-handed', 'right-handed']},
     ':framework-type':{'type':'attribute', 'repeat':False, 'values':['absolute', 'intrinsic','relative']},
     ':anchor-framework-translation': {'type': 'attribute', 'repeat': False, 'values': ['rotated', 'reflected']},
@@ -1173,7 +1173,7 @@ discourse_concept_re = re.compile(r"^(" + '|'.join(discourse_concepts) + r")$")
 # minus discourse_concepts
 abstract_concepts = {
     'person': {'type': 'basic', 'sub-roles': [':ref-person', ':ref-number']},
-    'individual-person': {'type': 'basic', 'sub-roles': [':ref-person', ':ref-number']}, #todo: bert says replacing 'person'?
+    'individual-person': {'type': 'basic', 'sub-roles': [':ref-person', ':ref-number']}, #todo: bert says replacing 'person'? just the named entities
     'place': {'type': 'basic', 'sub-roles': [':ref-person', ':ref-number']}, #todo: what does ref menu mean?
     'event': {'type': 'basic', 'sub-roles': [':ref-person', ':ref-number']}, #todo: what does ref menu mean?
     'name': {'type': 'basic', 'sub-roles': ':opN'},
@@ -1496,7 +1496,8 @@ non_event_rolesets = [
     'rate-entity-91', 'score-on-scale-91', 'statistical-test-91',
     'street-address-91', 'mean-91', 'have-experience-91', 'weather-91', 'range-91', 'gesture-91',
     'emit-sound-91', 'proverb-91', 'say-91'
-]
+] # todo: don't validating those
+
 non_event_roleset_re = re.compile(r"^(" + '|'.join(non_event_rolesets) + r")$")
 
 def validate_abstract_concept_NEs(sentence, node_dict, args):
