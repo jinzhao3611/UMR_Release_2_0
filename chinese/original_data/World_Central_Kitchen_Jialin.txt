@@ -3,7 +3,7 @@ user id: 465
 file language: chinese
 file format: plain_text
 Doc ID in database: 1686
-export time: 11/27/2024, 1:45:07 PM
+export time: 12/18/2024, 10:43:13 AM
 
 # :: snt1	世界 中央 厨房 车队 加沙 遇袭 案 是 指 2024 年 4 月 1 日 晚 以色列 国防军 对 人道主义 组织 世界 中央 厨房 的 车队 连续 进行 的 3 次 无人机 空袭 事件 ， 当时 该 车队 正在 加沙 地带 中部 城市 代尔拜莱赫 提供 人道 粮食 援助 。
 # sentence level graph:
@@ -19,10 +19,12 @@ export time: 11/27/2024, 1:45:07 PM
                                                      :op3 "厨房")))
                              :place (s1l / local-region
                                       :name (s1n / name
-                                              :op1 "加沙")))))
+                                              :op1 "加沙"))
+                             :Aspect Performance
+                             :MODSTR FullAff)))
   :arg2 (s1x4 / 事件
           :mod (s1x / 空袭-01
-                 :ARG0 (s1g / government-organization
+                 :ARG0 (s1a / armed-organization
                          :name (s1n3 / name
                                  :op1 "国防军")
                          :poss (s1c / country
@@ -49,7 +51,9 @@ export time: 11/27/2024, 1:45:07 PM
                              :ARG0 s1i4
                              :ARG1 (s1x10 / 援助-01
                                      :ARG1 (s1x11 / 粮食)
-                                     :mod (s1x12 / 人道))
+                                     :mod (s1x12 / 人道)
+                                     :Aspect Process
+                                     :MODSTR FullAff)
                              :place (s1c2 / city
                                       :name (s1n5 / name
                                               :op1 "代尔拜莱赫")
@@ -66,9 +70,9 @@ export time: 11/27/2024, 1:45:07 PM
   :Aspect State
   :MODSTR FullAff)
 
+
 # alignment:s1c: -1--1
 s1c2: 44-44
-s1g: -1--1
 s1i3: 0-0
 s1i4: 0-0
 s1i5: 0-0
@@ -102,18 +106,15 @@ s1x9: 45-45
 # document level annotation:
 (s1s0 / sentence
   :temporal ((DCT :before s1t)
-                     (s1t :Contained s1x15)
-                     (s1x15 :overlap s1x)
-                     (s1x :overlap s1x9)
-                     (s1x9 :overlap s1x10))
-
-  :modal ((ROOT :MODAL (AUTH)
-
-                    (AUTH :FullAff (s1x9)
-
-                    (AUTH :FullAff (s1x)
-
-                    (AUTH :FullAff (s1i2)))
+                       (s1t :Contained s1x15)
+                       (s1x15 :overlap s1x)
+                       (s1x :overlap s1x9)
+                       (s1x9 :overlap s1x10))
+  :modal ((ROOT :MODAL AUTH)
+                       (AUTH :FullAff s1x9)
+                       (AUTH :FullAff s1x)
+                       (AUTH :FullAff s1i2))
+)
 
 
 
@@ -134,6 +135,7 @@ s1x9: 45-45
           :Aspect Performance
           :MODSTR FullAff))
 
+
 # alignment:s2x6: 0-0
 s2x7: -1--1
 s2x8: -1--1
@@ -146,6 +148,8 @@ s2x8: -1--1
                        (AUTH :FullAff s2x4)
                        (AUTH :FullAff s2x2))
   :coref ((s1x :same-event s2x2)))
+
+
 
 
 # :: snt3	事件 发生 后 ， 世界 中央 厨房 宣布 暂停 其 在 加沙 地带 的 人道 援助 行动 ， 并 指出 ， “ 将 粮食 作为 战争 武器 ” 以及 “ 对 人道 援助者 进行 袭击 ” 的 行为 是 不可 饶恕 的 ， 世界 各国 领袖 表示 震惊 并 谴责 空袭 事件 。
@@ -217,6 +221,7 @@ s2x8: -1--1
                      :Aspect Performance
                      :MODSTR FullAff)))
 
+
 # alignment:s3a2: 0-0
 s3a3: 0-0
 s3i2: 0-0
@@ -254,8 +259,11 @@ s3x9: 24-24
                        (s3x17 :overlap s3x21)
                        (s3x17 :overlap s3x8)
                        (s3x :overlap s3x5)
+                       (s3x5 :overlap s3x6)
                        (s3x11 :overlap s3x15))
 )
+
+
 
 
 # :: snt4	虽然 以色列 立刻 承认 责任 并 道歉 ， 但 以方 坚持 这次 空袭 是 因为 误 以为 车队 中 混入 了 哈马斯 武装 成员 而 导致 的 “ 不幸 意外 ” 。
@@ -281,7 +289,7 @@ s3x9: 24-24
                          :mod (s4x11 / 这次)
                          :Aspect Performance
                          :MODSTR FullAff)
-                 :ARG1 (s4x6 / 意外
+                 :ARG2 (s4x6 / 意外
                          :mod (s4x12 / 不幸)
                          :ARG1-of (s4x13 / 导致-01
                                     :ARG0 (s4x14 / 以为-01
@@ -291,7 +299,7 @@ s3x9: 24-24
                                                             :mod (s4x18 / 武装-01
                                                                    :Aspect Performance
                                                                    :MODSTR FullAff)
-                                                            :ARG1-of (s4h / have-org-role-91
+                                                            :ARG1-of (s4h / have-org-role-92
                                                                        :ARG2 (s4x19 / 哈马斯)))
                                                     :ARG1 (s4x20 / 车队)
                                                     :Aspect Performance
@@ -305,6 +313,7 @@ s3x9: 24-24
                  :MODSTR FullAff)
          :Aspect state
          :MODSTR FullAff))
+
 
 # alignment:s4c2: 0-0
 s4h: 0-0
@@ -325,6 +334,7 @@ s4x6: 0-0
 # document level annotation:
 (s4s0 / sentence
   :temporal ((DCT :before s4x)
+                       (s4x15 :overlap s4x18)
                        (s4x :overlap s4x4)
                        (s4x4 :overlap s4x5)
                        (s4x5 :before s4x14)
@@ -334,6 +344,8 @@ s4x6: 0-0
   :modal ((AUTH :FullAff s4x)
                        (AUTH :FullAff s4x10))
 )
+
+
 
 
 # :: snt5	2023 年 10 月 7 日 ， 哈马斯 发动 阿克萨 洪水 行动 ， 以色列 方面 随即 予以 反击 并 对 哈马斯 宣战 ， 以色列 — 哈马斯 战争 爆发 。
@@ -351,7 +363,9 @@ s4x6: 0-0
          :temporal (s5d / date-entity
                      :year 2023
                      :month 10
-                     :day 7))
+                     :day 7)
+         :Aspect Performance
+         :MODSTR FullAff)
   :op2 (s5a / and
          :op1 (s5x5 / 予以-01
                 :ARG0 (s5c / country
@@ -363,10 +377,11 @@ s4x6: 0-0
                 :Aspect Performance
                 :MODSTR FullAff)
          :op2 (s5x4 / 宣战-01
-                :ARG0 (s5s / s5c)
+                :ARG0 s5c
                 :ARG1 s5a
                 :Aspect Performance
-                :MODSTR FullAff))
+                :MODSTR FullAff
+                :Aspect Performance))
   :op3 (s5x2 / 爆发-01
          :ARG1 (s5w / war
                  :name (s5n / name
@@ -377,9 +392,12 @@ s4x6: 0-0
          :MODSTR FullAff
          :Aspect Performance))
 
+
 # alignment:s5a: -1--1
 s5a2: -1--1
-s5c: -1--1
+s5c: 0-0
+s5c2: 0-0
+s5d: 0-0
 s5e: -1--1
 s5n: -1--1
 s5n2: -1--1
@@ -391,13 +409,11 @@ s5x2: -1--1
 s5x4: -1--1
 s5x5: -1--1
 s5x6: -1--1
-s5c2: 0-0
-s5s: -1--1
-s5d: 0-0
 
 # document level annotation:
 (s5s0 / sentence
-  :temporal ((s5x :after s5x6)
+  :temporal ((s5x :after s5x5)
+                       (s5x5 :overlap s5x6)
                        (s5x6 :overlap s5x4)
                        (s5x4 :overlap s5x2)
                        (DCT :before s5d)
@@ -408,6 +424,8 @@ s5d: 0-0
                        (AUTH :FullAff s5x4)
                        (AUTH :FullAff s5x2))
 )
+
+
 
 
 # :: snt6	此后 ， 由于 以色列 对 加沙 地带 进行 封锁 等 缘故 ， 加沙 地带 正 面临 人为 的 大 饥荒 。
@@ -430,11 +448,10 @@ s5d: 0-0
                                               :op1 "以色列"))
                               :ARG1 s6l
                               :Aspect Performance
-                              :MODSTR FullAff)
-                      :Aspect State
-                      :MODSTR FullAff))
+                              :MODSTR FullAff)))
   :temporal (s6x7 / 后
               :op1 (s6x8 / 此)))
+
 
 # alignment:s6c2: 4-4
 s6i2: 0-0
@@ -451,6 +468,8 @@ s6x8: 1-1
                        (s6x8 :overlap s6x3)
                        (s6x8 :after s6x))
   :coref ((s5x2 :same-event s6x8)))
+
+
 
 
 # :: snt7	至 2024 年 4 月 2 日 ， 为 加沙 平民 提供 人道主义 援助 的 联合国 近东 巴勒斯坦 难民 救济 和 工程 处 （ 简称 UNRWA ） 已 有 173 名 工作 人员 在 行动 中 身亡 。
@@ -483,7 +502,8 @@ s6x8: 1-1
                                                           :name (s7n / name
                                                                   :op1 "加沙")))
                                          :MODSTR FullAff
-                                         :Aspect Activity))))
+                                         :Aspect Activity))
+                     :MODSTR FullAff))
   :mod (s7a / 已)
   :Aspect performance
   :MODSTR FullAff
@@ -495,6 +515,7 @@ s6x8: 1-1
   :temporal (s7x3 / 行动-01
               :Aspect Activity
               :MODSTR FullAff))
+
 
 # alignment:s7i2: 16-23
 s7n: -1--1
@@ -514,8 +535,12 @@ s7x8: -1--1
   :temporal ((DCT :before s7d)
                        (s7d :before s7x7)
                        (s7x7 :overlap s7x9)
-                       (s7x7 :overlap s7x))
+                       (s7x9 :overlap s7x5)
+                       (s7x5 :overlap s7x3)
+                       (s7x5 :after s7x))
 )
+
+
 
 
 # :: snt8	事发 前 3 天 ， 参与 审理 南非 诉 以色列 犯下 种族 灭绝 罪 的 联合国 国际法院 法官 一致 通过 临时 裁决 ， 要求 以色列 必须 保证 救援 物资 能够 不受 任何 阻碍 地 进入 加沙 ， 保证 加沙 地带 的 基本 生活 所需 水电 供应 ， 并 展开 人道主义 救援 。
@@ -523,7 +548,7 @@ s7x8: -1--1
 (s8a2 / and
   :op1 (s8x / 通过-01
          :arg0 (s8x22 / 法官
-                 :ARG3-of (s8h / have-org-role-91
+                 :ARG3-of (s8h / have-org-role-92
                             :ARG2 (s8i2 / international-organization
                                     :name (s8n5 / name
                                             :op1 "联合国"
@@ -604,7 +629,9 @@ s7x8: -1--1
               :quant 3
               :unit (s8x19 / 天)
               :mod (s8x18 / 前
-                     :op1 (s8x20 / 事发-01))))
+                     :op1 (s8x20 / 事发-01)
+                            :Aspect Performance
+                            :MODSTR FullAff)))
 
 # alignment:s8a: -1--1
 s8a2: 0-0
@@ -650,22 +677,25 @@ s8x9: 44-44
 # document level annotation:
 (s8s0 / sentence
   :temporal ((s8x23 :overlap s8x24)
+                       (s8x30 :after s8x11)
+                       (s8x11 :overlap s8x17)
+                       (s8x11 :after s8x12)
+                       (s8x11 :overlap s8x5)
+                       (s8x5 :overlap s8x9)
+                       (s8x5 :after s8x6)
+                       (s8x5 :overlap s8x2)
+                       (s8x2 :overlap s8x3)
                        (s8t :before s8x23)
                        (s8x24 :before s8x25)
                        (s8x25 :before s8x7)
+                       (s8x7 :overlap s8x27)
                        (s8x :overlap s8x21)
                        (s8x21 :overlap s8x30)
                        (DCT :before s8x20)
-                       (s8t :Contained s8x)
-                       (s8x20 :before s8t)
-                       (s8x30 :after s8x11)
-                       (s8x11 :after s8x12)
-                       (s8x11 :overlap s8x5)
-                       (s8x5 :after s8x6)
-                       (s8x5 :overlap s8x2)
-                       (s8x2 :overlap s8x3))
-  :coref ((s4x10 :same-event s8x20))
-)
+                       (s8t :Contained s8x))
+  :coref ((s4x10 :same-event s8x20)))
+
+
 
 
 # :: snt9	临时 裁决 中 写道 ： “ 加沙 不 是 正 面临 大饥荒 的 危机 ， 而是 正在 发生 大饥荒 。 ”
@@ -687,10 +717,13 @@ s8x9: 44-44
                  :Aspect Activity
                  :MODSTR FullAff)
           :QUOT s9x)
-  :arg2 (s9x2 / 裁决
-          :mod (s9x3 / 临时))
-  :Aspect Performance
+  :arg2 (s9x2 / 裁决-01
+          :mod (s9x3 / 临时)
+          :Aspect Performance
+          :MODSTR FullAff)
+  :Aspect State
   :MODSTR FullAff)
+
 
 # alignment:s9a: -1--1
 s9i2: 0-0
@@ -704,15 +737,18 @@ s9x8: 19-19
 # document level annotation:
 (s9s0 / sentence
   :temporal ((DCT :before s9x)
-                       (s9x :overlap s9x4))
+                       (s9x :overlap s9x4)
+                       (s9x :overlap s9x7))
 )
+
+
 
 
 # :: snt10	据 联合国 观察员 报告 ， 加沙 已经 有 31 人 因为 营养 不 良 或 脱水 而 死亡 ， 其中 27 人 为 儿童 。
 # sentence level graph:
 (s10x11 / 报告-01
   :ARG0 (s10x12 / 观察员
-          :ARG3-of (s10h / have-org-role-91
+          :ARG3-of (s10h / have-org-role-92
                      :ARG2 (s10i2 / international-organization
                              :name (s10n / name
                                      :op1 "联合国"))))
@@ -737,6 +773,7 @@ s9x8: 19-19
   :Aspect Performance
   :MODSTR FullAff)
 
+
 # alignment:s10h: 0-0
 s10i2: 2-2
 s10i3: 0-0
@@ -760,6 +797,8 @@ s10x6: 10-10
     (s10x3 :overlap s10x2)
     (s10x2 :after s10x))
 )
+
+
 
 
 # :: snt11	世界 中央 厨房 是 由 著名 厨师 和 餐馆 老板 何塞 · 安德烈斯 创办 的 人道主义 组织 ， 致力 于 为 世界 各地 受到 自然 灾害 或 武装 冲突 影响 的 灾民 和 难民 提供 食品 援助 。
@@ -814,6 +853,7 @@ s10x6: 10-10
          :Aspect State
          :MODSTR FullAff))
 
+
 # alignment:s11a: 0-0
 s11a2: 0-0
 s11a3: 0-0
@@ -850,8 +890,11 @@ s11x9: -1--1
   :temporal ((DCT :before s11x16)
                        (s11x16 :after s11x2)
                        (s11x2 :overlap s11x3)
-                       (s11x16 :overlap s11x15))
+                       (s11x16 :overlap s11x5)
+                       (s11x3 :overlap s11x14))
 )
+
+
 
 
 # :: snt12	事发 前 两天 ， 以色列 国防军 的 狙击手 曾 向 世界 中央 厨房 的 汽车 开火 ， 世界 中央 厨房 立刻 向 以色列 投诉 并 要求 保障 人道 工作 人员 的 安全 。
@@ -859,7 +902,7 @@ s11x9: -1--1
 (s12a / and
   :op1 (s12x / 开火-01
          :ARG0 (s12x2 / 狙击手
-                 :part (s12m / military
+                 :part (s12m / armed-organization
                          :name (s12n / name
                                  :op1 "国防军")
                          :poss (s12c2 / country
@@ -894,17 +937,20 @@ s11x9: -1--1
                 :ARG2 (s12x6 / 保障-01
                         :ARG1 (s12x7 / 安全
                                 :poss (s12x12 / 人员
-                                        :mod (s12x13 / 工作-01
-                                               :mod (s12x14 / 人道)
-                                               :Aspect State
-                                               :MODSTR FullAff)))
+                                        :ARG0-of (s12x13 / 工作-01
+                                                   :mod (s12x14 / 人道)
+                                                   :Aspect State
+                                                   :MODSTR FullAff)))
                         :Aspect State
                         :MODSTR FullAff)
                 :Aspect Performance
                 :MODSTR FullAff)))
 
-# alignment:s12m: 6-6
+
+# alignment:s12c2: 5-5
+s12m: 6-6
 s12n: -1--1
+s12n4: -1--1
 s12t: 0-0
 s12x10: 3-3
 s12x11: 3-3
@@ -913,8 +959,6 @@ s12x13: -1--1
 s12x14: -1--1
 s12x8: 2-2
 s12x9: 1-1
-s12c2: 5-5
-s12n4: -1--1
 
 # document level annotation:
 (s12s0 / sentence
@@ -923,8 +967,11 @@ s12n4: -1--1
                        (s12x5 :after s12x6)
                        (DCT :before s12x9)
                        (s12x9 :before s12t)
-                       (s12t :Contained s12x))
+                       (s12t :Contained s12x)
+                       (s12x6 :overlap s12x13))
   :coref ((s8x20 :same-event s12x9)))
+
+
 
 
 # :: snt13	空袭 发生 前 一 小时 ， 世界 中央 厨房 从 加沙 地带 北部 港口 的 货船 卸下 约 100 公吨 用于 人道 主义 救援 的 粮食 。
@@ -967,11 +1014,13 @@ s12n4: -1--1
               :quant (s13x17 / 一)
               :unit (s13x18 / 小时)))
 
+
 # alignment:s13c: 11-12
 s13i2: 7-9
 s13n: -1--1
 s13n2: -1--1
 s13t: 0-0
+s13x12: 1-1
 s13x15: -1--1
 s13x16: 3-3
 s13x17: 4-4
@@ -983,14 +1032,16 @@ s13x6: -1--1
 s13x7: -1--1
 s13x8: -1--1
 s13x9: 13-13
-s13x12: 1-1
 
 # document level annotation:
 (s13s0 / sentence
-  :temporal ((DCT :before s13x2)
-                       (s13x2 :before s13t)
-                       (s13t :Contained s13x))
+  :temporal ((s13t :Contained s13x)
+                       (DCT :before s13t)
+                       (s13x :overlap s13x3)
+                       (s13x3 :overlap s13x4))
 )
+
+
 
 
 # :: snt14	尔后 ， 该 组织 的 一辆 运送 救援 物资 的 货车 在 一个 由 3 辆 汽车 组成 的 车队 的 护送 下 ， 前往 位于 代尔拜莱赫 的 用以 存放 救援 粮食 的 仓库 。
@@ -1005,7 +1056,7 @@ s13x12: 1-1
                  :ARG0-of (s14x19 / 运送-01
                             :arg1 (s14x20 / 物资
                                     :mod (s14x21 / 救援-01
-                                           :Aspect Performance
+                                           :Aspect Process
                                            :MODSTR FullAff))
                             :MODSTR FullAff
                             :Aspect Activity))
@@ -1013,13 +1064,19 @@ s13x12: 1-1
                  :ARG0-of (s14x9 / 位于-01
                             :ARG1 (s14c / city
                                     :name (s14n / name
-                                            :op1 "代尔拜莱赫")))
+                                            :op1 "代尔拜莱赫"))
+                            :Aspect State
+                            :MODSTR FullAff)
                  :ARG0-of (s14x10 / 用以-01
                             :ARG1 (s14x11 / 存放-01
                                     :arg1 (s14x12 / 粮食
-                                            :mod (s14x13 / 救援-01))
+                                            :mod (s14x13 / 救援-01
+                                                   :Aspect Process
+                                                   :MODSTR FullAff))
                                     :Aspect Activity
-                                    :MODSTR FullAff)))
+                                    :MODSTR FullAff)
+                            :Aspect State
+                            :MODSTR FullAff))
          :MODSTR FullAff
          :Aspect Activity
          :manner (s14x2 / 护送-01
@@ -1029,7 +1086,12 @@ s13x12: 1-1
                            :ARG0-of (s14x5 / 组成-01
                                       :ARG1 (s14x6 / 汽车
                                               :unit (s14x7 / 辆)
-                                              :quant 3))))))
+                                              :quant 3)
+                                      :Aspect State
+                                      :MODSTR FullAff))
+                   :Aspect Performance
+                   :MODSTR FullAff)))
+
 
 # alignment:s14c: -1--1
 s14c2: 0-0
@@ -1060,8 +1122,14 @@ s14x9: -1--1
   :temporal ((s13x :after s14x2)
                        (s14x2 :overlap s14x)
                        (s14x :overlap s14x19)
-                       (DCT :before s14x19))
+                       (DCT :before s14x19)
+                       (s14x19 :overlap s14x21)
+                       (s14x19 :overlap s14x10)
+                       (s14x10 :overlap s14x11)
+                       (s14x21 :overlap s14x13))
   :coref ((s13i2 :same-entity s14x17)))
+
+
 
 
 # :: snt15	在 车队 卸下 粮食 并 离开 仓库 后 ， 第一 辆 汽车 首先 被 以军 无人机 小型 精确 制导 导弹 命中 ， 存活 下来 的 人员 移动 到 第二 辆 车 上 逃跑 并 用 无线电 向 上级 呼救 。
@@ -1084,7 +1152,7 @@ s14x9: -1--1
                  :mod (s15x9 / 小型)
                  :mod (s15x11 / 制导
                         :mod (s15x10 / 精确))
-                 :poss (s15x20 /  军队
+                 :poss (s15x20 / 军队
                          :poss (s15c2 / country
                                  :name (s15n2 / name
                                          :op1 "以色列"))))
@@ -1111,12 +1179,13 @@ s14x9: -1--1
                 :purpose (s15x19 / 逃跑-01
                            :MODSTR FullAff
                            :Aspect Activity))
-         :op3 (s15x21 / 呼救-01
+         :op2 (s15x21 / 呼救-01
                 :ARG0 s15x16
                 :ARG1 (s15x23 / 上级)
                 :instrument (s15x22 / 无线电)
                 :Aspect Performance
                 :MODSTR FullAff)))
+
 
 # alignment:s15a: -1--1
 s15c2: 0-0
@@ -1144,6 +1213,8 @@ s15x5: 0-0
                        (s15x14 :overlap s15x15)
                        (s15x19 :overlap s15x21))
 )
+
+
 
 
 # :: snt16	第二 辆 车 在 行驶 了 数十 秒钟 后 也 被 导弹 命中 ， 离 第一 辆 汽车 被 击毁 的 位置 仅有 约 900 米 。
@@ -1177,7 +1248,10 @@ s15x5: 0-0
          :ARG2 (s16d / distance-quantity
                  :quant (s16x5 / 约
                           :op1 900)
-                 :unit (s16x4 / 米))))
+                 :unit (s16x4 / 米))
+         :Aspect State
+         :MODSTR FullAff))
+
 
 # alignment:s16a: 0-0
 s16d: 0-0
@@ -1206,6 +1280,8 @@ s16x9: -1--1
     (s16x7 :Contained s16x)
     (s16x7 :before s16x10))
 )
+
+
 
 
 # :: snt17	幸存者 移动 到 第三 辆 汽车 继续 逃命 ， 但 在 驶离 第二 辆 车 被 袭击 地点 约 1.6 公里 后 遭到 无人机 第三次 袭击 ， 车队 的 7 名 人道 工作者 全员 身亡 。
@@ -1262,6 +1338,7 @@ s16x9: -1--1
                 :Aspect Performance
                 :MODSTR FullAff)))
 
+
 # alignment:s17c2: 0-0
 s17c4: 0-0
 s17d: 0-0
@@ -1293,13 +1370,16 @@ s17x9: 18-18
 (s17s0 / sentence
   :temporal ((s17m :after s17x8)
                        (s16x :overlap s17x10)
-                       (s17x8 :after s17x)
+                       (s17x8 :after s17x16)
+                       (s17x16 :after s17x)
                        (s17x :after s17x2)
                        (s17x15 :after s17x2)
                        (s16x :after s17m)
                        (s16x :overlap s17x15)
                        (s17m :overlap s17x15))
 )
+
+
 
 
 # :: snt18	整个 逃离 追杀 的 距离 长达 2.43 公里 ， 过程 中 几乎 每 一 辆 车 都 被 精确 命中 ， 其中 第二 辆 车 更 被 直接 命中 。
@@ -1338,21 +1418,27 @@ s17x9: 18-18
          :MODSTR FullAff
          :mode expressive))
 
+
 # alignment:s18d: 0-0
 s18o: 0-0
+s18x13: 11-11
 s18x15: 3-3
 s18x16: 12-12
+s18x17: 10-10
 s18x3: 0-0
 s18x5: -1--1
 s18x8: 13-15
 s18x9: 24-24
-s18x13: 11-11
-s18x17: 10-10
 
 # document level annotation:
 (s18s0 / sentence
-  :temporal ((DCT :before s18x6))
+  :temporal ((DCT :before s18x3)
+                       (s18x3 :overlap s18x15)
+                       (s18x15 :overlap s18x6)
+                       (s18x6 :overlap s18x11))
 )
+
+
 
 
 # :: snt19	根据 以军 的 说法 ， 他们 得到 情报 称 当时 发现 有 一名 持有 枪械 的 武装 人员 混 在 该 货车 中 ， 该名 武装 人员 和 货车 停留 在 仓库 中 ， 而 世界 中央 厨房 的 车队 则 按照 事先 获得 以军 批准 的 路线 离开 仓库 ， 但 负责 确保 世界 中央 厨房 车队 行驶 路线 安全 的 部门 “为了确保交通路线安全”， 还是 向 无人机 操作员 下达 了 攻击 命令 。
@@ -1395,7 +1481,9 @@ s18x17: 10-10
                             :Aspect State
                             :MODSTR FullAff))
          :ARG1-of (s19i3 / identity-91
-                    :ARG2 (s19x / 说法))
+                    :ARG2 (s19x / 说法
+                            :ARG1-of (s23h / have-source-91
+                                       :ARG2 s19x2)))
          :Aspect Performance
          :MODSTR FullAff)
   :op2 (s19b / but-91
@@ -1425,12 +1513,12 @@ s18x17: 10-10
                 :ARG0 (s19x26 / 部门
                         :ARG0-of (s19x29 / 负责-01
                                    :ARG1 (s19x30 / 确保-01
-                                           :ARG1 (s19x31 / 安全-01
-                                                   :ARG0 (s19x32 / 路线
-                                                           :Path-of (s19x33 / 行驶-01
+                                           :ARG1 (s19x23 / 安全-01
+                                                   :ARG0 (s19x31 / 路线
+                                                           :Path-of (s19x32 / 行驶-01
                                                                       :ARG1 s19x19
-                                                                      :Aspect Activity
-                                                                      :MODSTR FullAff))
+                                                                      :MODSTR FullAff
+                                                                      :Aspect Activity))
                                                    :Aspect State
                                                    :MODSTR FullAff)
                                            :Aspect Performance
@@ -1454,14 +1542,17 @@ s18x17: 10-10
                            :Aspect Performance
                            :MODSTR FullAff))))
 
+
 # alignment:s19a: 0-0
 s19a2: 0-0
 s19b: 0-0
 s19c: 0-0
+s19c3: 0-0
 s19i2: -1--1
 s19i3: -1--1
 s19i4: 36-38
 s19n: -1--1
+s19n3: -1--1
 s19x: -1--1
 s19x10: 0-0
 s19x11: -1--1
@@ -1472,11 +1563,12 @@ s19x15: -1--1
 s19x16: -1--1
 s19x17: 30-30
 s19x18: 0-0
-s19x19: 0-0
-s19x2: 0-0
+s19x19: -1--1
+s19x2: -1--1
 s19x20: 42-42
 s19x21: -1--1
 s19x22: -1--1
+s19x23: 0-0
 s19x24: -1--1
 s19x25: 42-42
 s19x26: 63-63
@@ -1485,9 +1577,8 @@ s19x28: 71-71
 s19x29: 53-53
 s19x3: 49-49
 s19x30: 54-54
-s19x31: 61-61
-s19x32: 60-60
-s19x33: 59-59
+s19x31: -1--1
+s19x32: -1--1
 s19x34: 64-64
 s19x35: 0-0
 s19x36: 64-64
@@ -1500,23 +1591,30 @@ s19x6: 8-8
 s19x7: 11-11
 s19x8: 10-10
 s19x9: -1--1
-s19c3: 0-0
-s19n3: -1--1
+s23h: -1--1
 
 # document level annotation:
 (s19s0 / sentence
   :temporal ((DCT :before s19x5)
+                       (s19x3 :overlap s19x29)
+                       (s19x29 :overlap s19x30)
+                       (s19x30 :overlap s19x32)
+                       (s19x32 :overlap s19x23)
+                       (s19x30 :overlap s19x34)
+                       (s19x34 :overlap s19x35)
+                       (s19x3 :overlap s19x4)
+                       (s19x3 :after s19x28)
                        (s19x5 :before s19x7)
                        (s19x7 :before s19x14)
                        (s19x14 :overlap s19x9)
+                       (s19x14 :overlap s19x16)
                        (s19x9 :overlap s19x17)
                        (s19x17 :after s19x25)
-                       (s19x25 :before s19x24)
-                       (s19x25 :overlap s19x3)
-                       (s19x3 :overlap s19x30)
-                       (s19x30 :overlap s19x33)
-                       (s19x3 :overlap s19x4))
+                       (s19x25 :before s19x21)
+                       (s19x21 :before s19x24))
 )
+
+
 
 
 # :: snt20	世界 中央 厨房 指出 ， 即使 车队 汽车 的 车顶 和 侧面 清楚 印有 该 团体 的 标志 ， 以军 还是 在 受 他们 控制 的 “ 去 冲突 地带 （ deconflicted zone ） ” 对 车队 发动 了 袭击 。
@@ -1561,6 +1659,7 @@ s19n3: -1--1
   :Aspect Performance
   :MODSTR FullAff)
 
+
 # alignment:s20i2: 1-3
 s20n: -1--1
 s20b: 0-0
@@ -1593,6 +1692,8 @@ s20d: 32-33
                        (s20x4 :overlap s20x3)
                        (s20x3 :overlap s20x17))
 )
+
+
 
 
 # :: snt21	调查 报导 组织 啤令猫 进行 影像 分析 并 报导 这次 空袭 具有 “ 以色列 的 精准 空袭 的 特征 ” ， 第一次 空袭 的 全球 定位 坐标 是 北纬 31.4118 ° 东经 34.3231 ° [ 坐标 1 ] ， 第二次 是 北纬 31.4168 ° 东经 34.3290 ° [ 坐标 2 ] ， 而 第三次 是 北纬 31.4005 ° 东经 34.3115 ° [ 坐标 3 ] 。
@@ -1644,7 +1745,9 @@ s20d: 32-33
                                                             :lat 31.4005
                                                             :long 34.3115)
                                                    :Aspect Performance
-                                                   :MODSTR FullAff))))
+                                                   :MODSTR FullAff)))
+                         :Aspect Performance
+                         :MODSTR FullAff)
                  :ARG2 (s21x6 / 特征
                          :poss (s21c2 / country
                                  :name (s21n / name
@@ -1653,16 +1756,28 @@ s20d: 32-33
                                     :ARG2 (s21x10 / 空袭-01
                                             :manner (s21x11 / 精准)
                                             :Aspect Process
-                                            :MODSTR FullAff))))))
+                                            :MODSTR FullAff))))
+         :Aspect Performance
+         :MODSTR FullAff))
 
-# alignment:s21c2: 14-14
+
+# alignment:s21a3: 0-0
+s21c2: 14-14
 s21e: 0-0
+s21g: 0-0
+s21g2: 0-0
+s21g3: 0-0
 s21i2: -1--1
 s21i3: 0-0
+s21i4: 0-0
+s21i5: 0-0
+s21i6: 0-0
 s21n: -1--1
 s21n2: -1--1
 s21o: 0-0
 s21o2: 0-0
+s21o3: 0-0
+s21o4: 0-0
 s21x: 0-0
 s21x10: -1--1
 s21x11: -1--1
@@ -1674,23 +1789,22 @@ s21x6: 19-19
 s21x7: 3-3
 s21x8: 1-1
 s21x9: 2-2
-s21i4: 0-0
-s21a3: 0-0
-s21i5: 0-0
-s21o3: 0-0
-s21i6: 0-0
-s21o4: 0-0
-s21g: 0-0
-s21g2: 0-0
-s21g3: 0-0
 
 # document level annotation:
 (s21s0 / sentence
-  :temporal ((DCT :before s21x2)
-                       (s21x2 :after s21x4)
+  :temporal ((s21x2 :after s21x4)
                        (s21x2 :before s21x)
-                       (s21x :overlap s21e))
-  :coref ((s13x12 :same-event s21x)))
+                       (s21x :overlap s21e)
+                       (DCT :overlap s21x8)
+                       (s21x8 :overlap s21x9)
+                       (s21x9 :overlap s21x2)
+                       (s21x :overlap s21x12)
+                       (s21x :overlap s21i5)
+                       (s21x :overlap s21i6)
+                       (s21x :overlap s21x10))
+)
+
+
 
 
 # :: snt22	第二次 空袭 发生 位置 离 第一次 相隔 了 800 米 ， 第三次 空袭 离 第二次 的 位置 隔 了 1.6 公里 。
@@ -1725,6 +1839,7 @@ s21g3: 0-0
          :Aspect state
          :MODSTR FullAff))
 
+
 # alignment:s22d: 0-0
 s22d2: 0-0
 s22i2: -1--1
@@ -1734,8 +1849,8 @@ s22o2: -1--1
 s22o3: -1--1
 s22x2: -1--1
 s22x4: -1--1
-s22x7: 0-0
 s22x6: 0-0
+s22x7: 0-0
 
 # document level annotation:
 (s22s0 / sentence
@@ -1745,92 +1860,103 @@ s22x6: 0-0
                        (s21x :subset-of s22x4)))
 
 
+
+
 # :: snt23	根据 联合国 人道 事务 协调 厅 （ OCHA ） ， 头 两次 遇袭 地点 的 道路 获 以色列 指定 为 “ 人道主义 援助 可用 道路 （ accessible road for humanitarian aid ） ” ， 第 三次 遇袭 地点 则 在 这条 公路 的 旁边 。
 # sentence level graph:
-(s23i2 / implicit-predicate
-  :ARG0 (s23i3 / international-organization
-          :name (s23n2 / name
-                  :op1 "联合国"
-                  :op2 "人道"
-                  :op3 "事务"
-                  :op4 "协调"
-                  :op5 "厅")
-          :ARG1-of (s23i4 / identity-91
-                     :ARG2 (s23o / ocha)))
-  :ARG1 (s23a / and
-          :op1 (s23x10 / 获-01
-                 :ARG0 (s23x11 / 道路
-                         :Place-of (s23x12 / 地点
-                                     :Place-of (s23x13 / 遇袭-00
-                                                 :Aspect Performance
-                                                 :MODSTR FullAff
-                                                 :ARG1-of (s23h / have-frequency-91
-                                                            :ARG2 2
-                                                            :ord (s23o5 / ordinal-entity
-                                                                   :value 1)))))
-                 :ARG1 (s23x5 / 指定-01
-                         :ARG0 (s23c / country
-                                 :name (s23n / name
-                                         :op1 "以色列"))
-                         :ARG1 s23x11
-                         :ARG2 (s23x6 / 道路
-                                 :ARG1-of (s23x7 / 可用
-                                            :purpose (s23x8 / 援助-01
-                                                       :mod (s23x9 / 人道主义)
-                                                       :Aspect Performance
-                                                       :MODSTR FullAff))
-                                 :ARG1-of (s23i5 / identity-91
-                                            :ARG2 (s23a2 / accessible-road-for-humanitarian-aid)))
-                         :Aspect performance
-                         :MODSTR FullAff)
-                 :Aspect Performance
-                 :MODSTR FullAff)
-          :op2 (s23h2 / have-place-91
-                 :ARG1 (s23x2 / 地点
-                         :Place-of (s23x3 / 遇袭-00
-                                     :ord (s23o4 / ordinal-entity
-                                            :value 3)
-                                     :Aspect Performance
-                                     :MODSTR FullAff))
-                 :ARG2 (s23x / 旁边
-                         :poss s23x11)
+(s23a3 / and
+  :op1 (s23x4 / 获-01
+         :ARG0 (s23x10 / 道路
+                 :Place-of (s23x12 / 地点
+                             :Place-of (s23x13 / 遇袭-00
+                                         :ARG1-of (s23h / have-frequency-91
+                                                    :ARG2 2
+                                                    :ord (s23o2 / ordinal-entity
+                                                           :value 1))
+                                         :MODSTR FullAff
+                                         :Aspect Performance)))
+         :ARG1 (s23x5 / 指定-01
+                 :ARG0 (s23c / country
+                         :name (s23n / name
+                                 :op1 "以色列"))
+                 :ARG1 (s23x11 / 道路)
+                 :ARG2 (s23x6 / 道路
+                         :ARG1-of (s23i5 / identity-91
+                                    :ARG2 (s23a2 / accessible-road-for-humanitarian-aid))
+                         :ARG0-of (s23x7 / 可用-01
+                                    :purpose (s23x8 / 援助-01
+                                               :MODSTR FullAff
+                                               :Aspect Performance
+                                               :mod (s23x9 / 人道主义))
+                                    :Aspect State
+                                    :MODSTR FullAff))
                  :MODSTR FullAff
-                 :Aspect state)))
+                 :Aspect performance)
+         :MODSTR FullAff
+         :Aspect Performance)
+  :op2 (s23h2 / have-place-91
+         :ARG1 (s23x3 / 地点
+                 :Place-of (s23x14 / 遇袭-00
+                             :MODSTR FullAff
+                             :Aspect Performance
+                             :ord (s23o3 / ordinal-entity
+                                    :value 3)))
+         :ARG2 (s23x / 旁边
+                 :poss (s23x2 / 道路))
+         :Aspect state
+         :MODSTR FullAff)
+  :ARG1-of (s23h3 / have-source-91
+             :ARG2 (s23i3 / international-organization
+                     :name (s23n2 / name
+                             :op1 "联合国"
+                             :op2 "人道"
+                             :op3 "事务"
+                             :op4 "协调"
+                             :op5 "厅")
+                     :ARG1-of (s23i4 / identity-91
+                                :ARG2 (s23o / ocha)))))
 
-# alignment:s23a: -1--1
-s23a2: 27-31
-s23c: 18-18
-s23i2: 0-0
-s23i3: 2-6
-s23i4: 0-0
-s23i5: 0-0
+
+# alignment:s23a2: -1--1
+s23a3: 0-0
+s23c: -1--1
+s23h: -1--1
+s23h2: -1--1
+s23h3: -1--1
+s23i3: -1--1
+s23i4: -1--1
+s23i5: -1--1
 s23n: -1--1
 s23n2: -1--1
-s23o: 8-8
-s23o4: 0-0
-s23x: 44-44
-s23x10: 17-17
-s23x11: 0-0
-s23x12: 14-14
-s23x13: 13-13
-s23x2: 38-38
-s23x3: 37-37
+s23o: -1--1
+s23o2: -1--1
+s23o3: -1--1
+s23x: -1--1
+s23x10: -1--1
+s23x11: -1--1
+s23x12: -1--1
+s23x13: -1--1
+s23x14: -1--1
+s23x2: -1--1
+s23x3: -1--1
+s23x4: -1--1
 s23x5: -1--1
-s23x6: 25-25
-s23x7: 24-24
-s23x8: 23-23
-s23x9: 22-22
-s23h: 0-0
-s23o5: 0-0
+s23x6: -1--1
+s23x7: -1--1
+s23x8: -1--1
+s23x9: -1--1
 
 # document level annotation:
 (s23s0 / sentence
-  :temporal ((DCT :before s23i3)
-                       (s23i3 :before s23x13)
-                       (s23x13 :before s23x10)
+  :temporal ((s23x13 :before s23x10)
                        (s23x10 :overlap s23x5)
-                       (s23x13 :after s23x3))
+                       (s23x13 :after s23x3)
+                       (DCT :before s23x13)
+                       (s23x5 :overlap s23x8)
+                       (s23x5 :after s23x7))
 )
+
+
 
 
 # :: snt24	世界 中央 厨房 的 7 名 穿着 保护 装备 的 人道 工作者 由 巴勒斯坦 红 新月 会 移送 到 代尔 拜莱赫 市 的 舒哈达 阿克萨 医院 进行 抢救 ， 但 最终 全员 不治 身亡 。
@@ -1843,17 +1969,22 @@ s23o5: 0-0
                          :op2 "红"
                          :op3 "新月"
                          :op4 "会"))
-         :arg1 (s24x8 / 人道工作者
+         :arg1 (s24x6 / 工作者
                  :ARG0-of (s24x9 / 穿着-00
                             :ARG1 (s24x10 / 装备
-                                    :purpose (s24x11 / 保护-01)))
+                                    :purpose (s24x11 / 保护-01)
+                                               :Aspect Process
+                                               :MODSTR FullAff)
+                            :Aspect Perfective
+                            :MODSTR FullAff)
                  :quant 7
                  :part (s24i2 / international-organization
                          :name (s24n4 / name
                                  :op1 "世界"
                                  :op2 "中央"
                                  :op3 "厨房"))
-                 :unit (s24x12 / 名))
+                 :unit (s24x12 / 名)
+                 :mod (s24x7 / 人道))
          :ARG2 (s24f / facility
                  :name (s24n2 / name
                          :op1 "舒哈达"
@@ -1868,11 +1999,12 @@ s23o5: 0-0
                     :Aspect Performance
                     :MODSTR FullAff))
   :op2 (s24x2 / 不治身亡-01
-         :ARG0 s24x8
+         :ARG0 s24x6
          :mod (s24x3 / 全员)
          :Aspect Performance
          :MODSTR FullAff
          :mod (s24x4 / 最终)))
+
 
 # alignment:s24b: 0-0
 s24c: -1--1
@@ -1889,10 +2021,10 @@ s24x11: 8-8
 s24x12: 6-6
 s24x2: -1--1
 s24x3: -1--1
-s24x5: -1--1
-s24x8: 0-0
-s24x9: -1--1
 s24x4: 31-31
+s24x5: -1--1
+s24x9: -1--1
+s24x7: 11-11
 
 # document level annotation:
 (s24s0 / sentence
@@ -1901,6 +2033,8 @@ s24x4: 31-31
                        (s24x :after s24x5)
                        (s24x5 :after s24x2))
 )
+
+
 
 
 # :: snt25	遗体 被 运 至 加沙 南部 的 医院 。
@@ -1915,6 +2049,7 @@ s24x4: 31-31
   :Aspect performance
   :MODSTR FullAff)
 
+
 # alignment:s25l: 5-5
 s25n: -1--1
 s25x4: 6-6
@@ -1923,6 +2058,8 @@ s25x4: 6-6
 (s25s0 / sentence
   :temporal ((DCT :before s25x))
 )
+
+
 
 
 # :: snt26	4 月 3 日 ， 6 名 外籍 工作 人员 遗体 经 埃及 运回 原居国 ， 而 巴勒斯坦 雇员 则 葬 在 加沙 地带 。
@@ -1958,6 +2095,7 @@ s25x4: 6-6
          :Aspect performance
          :MODSTR FullAff))
 
+
 # alignment:s26x4: 10-10
 s26x5: 9-9
 s26x6: 8-8
@@ -1968,8 +2106,11 @@ s26x8: 15-15
 (s26s0 / sentence
   :temporal ((DCT :before s26d)
                        (s26d :Contained s26x)
-                       (s26x :after s26x3))
+                       (s26x :after s26x3)
+                       (s26d :before s26x5))
 )
+
+
 
 
 # :: snt27	遇难者 中 1 人 为 原居 于 加沙 南部 拉法 市 的 巴勒斯坦 人 ， 1 人 来自 波兰 ， 1 人 来自 澳大利亚 ， 1 人 具有 美国 和 加拿大 双重 国籍 ， 另外 3 人 来自 英国 ， 其中 两名 遇难 的 英国 人 道工作者 曾 在 英国 皇家 海军 陆战队 服役 。
@@ -1980,9 +2121,6 @@ s26x8: 15-15
                  :mod (s27c / country
                         :name (s27n / name
                                 :op1 "巴勒斯坦"))
-                 :origin (s27c2 / city
-                           :name (s27n2 / name
-                                   :op1 "拉法"))
                  :quant 1
                  :ARG0-of (s27x2 / 居-02
                             :ARG1 (s27c8 / city
@@ -2040,7 +2178,7 @@ s26x8: 15-15
                                     :mod (s27x12 / 人道)
                                     :quant 2
                                     :ARG0-of (s27x13 / 服役-01
-                                               :place (s27m / military
+                                               :place (s27m / armed-organization
                                                         :name (s27n11 / name
                                                                 :op1 "英国"
                                                                 :op2 "皇家"
@@ -2050,10 +2188,10 @@ s26x8: 15-15
                                                :MODSTR FullAff)))))
   :ARG2 (s27x / 遇难者))
 
+
 # alignment:s27a2: 0-0
 s27a3: 0-0
 s27c: -1--1
-s27c2: -1--1
 s27c3: -1--1
 s27c4: -1--1
 s27c7: 0-0
@@ -2066,7 +2204,6 @@ s27m: 50-53
 s27n: -1--1
 s27n10: -1--1
 s27n11: -1--1
-s27n2: -1--1
 s27n3: -1--1
 s27n4: -1--1
 s27n5: -1--1
@@ -2095,8 +2232,14 @@ s27x9: 0-0
 # document level annotation:
 (s27s0 / sentence
   :temporal ((DCT :before s27x2)
-                       (DCT :before s27x13))
+                       (DCT :before s27x13)
+                       (PRESENT_REF :overlap s27x5)
+                       (PRESENT_REF :overlap s27x6)
+                       (PRESENT_REF :overlap s27h)
+                       (PRESENT_REF :overlap s27x9))
 )
+
+
 
 
 # :: snt28	澳大利亚 籍 的 人道 工作者 家属 要求 调查 事件 是否 涉及 战争 罪行 ， 美加 籍 的 人道 工作者 家属 则 拒绝 接受 以色列 的 道歉 ， 他们 要求 展开 独立 调查 并 要求 美国 停止 为 以色列 提供 武器 。
@@ -2134,10 +2277,12 @@ s27x9: 0-0
                                               :name (s28n9 / name
                                                       :op1 "加拿大")))))
                 :arg1 (s28x8 / 接受-01
-                        :ARG0 (s28x9 / 道歉
+                        :ARG0 (s28x9 / 道歉-01
                                 :arg0 (s28c / country
                                         :name (s28n2 / name
-                                                :op1 "以色列")))
+                                                :op1 "以色列"))
+                                :Aspect Performance
+                                :MODSTR FullAff)
                         :Aspect Performance
                         :MODSTR FullAff)
                 :Aspect Performance
@@ -2170,6 +2315,7 @@ s27x9: 0-0
                                :MODSTR FullAff)
                        :Aspect Performance
                        :MODSTR FullAff))))
+
 
 # alignment:s28a2: -1--1
 s28a3: 0-0
@@ -2211,6 +2357,7 @@ s28x9: -1--1
                        (s28x :before s28x3)
                        (DCT :before s28x5)
                        (s28x5 :overlap s28x8)
+                       (s28x8 :before s28x9)
                        (s28x :after s28i)
                        (s28x19 :after s28x16)
                        (s28x16 :overlap s28x17)
@@ -2219,6 +2366,8 @@ s28x9: -1--1
                        (s28x2 :after s28x13)
                        (s28x13 :overlap s28x14))
 )
+
+
 
 
 # :: snt29	世界 中央 厨房 原本 计划 协调 供应 给 加沙 平民 340 公吨 粮食 ， 但 在 其 宣布 暂停 在 加沙 的 人道主义 行动 后 ， 第二 队 前往 加沙 运送 救援 粮食 的 货船 船队 于 4 月 3 日 折返回 塞浦路斯 ， 该 船队 运载 的 约 240 公吨 粮食 即是 援助 粮 中 的 第二 批 ， 而 第一 批次 的 100 公吨 即是 本次 空袭 事件 前 经 加沙 北部 港口 卸下 的 那 一 批 。
@@ -2253,7 +2402,10 @@ s28x9: -1--1
                  :arg0 (s29x10 / 船队
                          :mod (s29x12 / 货船)
                          :ARG0-of (s29x17 / 运送-01
-                                    :ARG1 (s29x11 / 粮食)
+                                    :ARG1 (s29x11 / 粮食
+                                            :mod (s29x6 / 救援-01
+                                                   :Aspect Process
+                                                   :MODSTR FullAff))
                                     :goal (s29l2 / local-region
                                             :name (s29n3 / name
                                                     :op1 "加沙"))
@@ -2280,7 +2432,7 @@ s28x9: -1--1
                  :MODSTR FullAff))
   :op2 (s29c / contrast-91
          :ARG1 (s29i3 / identity-91
-                 :ARG2 (s29x23 / 粮食
+                 :ARG1 (s29x23 / 粮食
                          :quant (s29x24 / 约
                                   :op1 240)
                          :ARG1-of (s29x25 / 运载-01
@@ -2288,7 +2440,9 @@ s28x9: -1--1
                                     :Aspect Performance
                                     :MODSTR FullAff))
                  :ARG2 (s29x26 / 粮
-                         :ARG1-of (s29x27 / 援助-01)
+                         :ARG1-of (s29x27 / 援助-01
+                                    :Aspect Process
+                                    :MODSTR FullAff)
                          :ARG2-of (s29i5 / include-91
                                     :ARG1 (s29i6 / implicit-argument
                                             :ord (s29o / ordinal-entity
@@ -2316,7 +2470,9 @@ s28x9: -1--1
                                                 :op1 (s29x36 / 事件
                                                        :ARG1-of (s29i10 / identity-91
                                                                   :ARG2 (s29x37 / 空袭-01
-                                                                          :mod (s29x38 / 本次)))))
+                                                                          :mod (s29x38 / 本次)
+                                                                          :Aspect Performance
+                                                                          :MODSTR FullAff))))
                                     :Aspect Performance
                                     :MODSTR FullAff)))))
 
@@ -2376,6 +2532,7 @@ s29x4: -1--1
 s29x5: -1--1
 s29x8: -1--1
 s29x9: 25-25
+s29x6: 32-32
 
 # document level annotation:
 (s29s0 / sentence
@@ -2385,12 +2542,16 @@ s29x9: 25-25
                        (s29x :after s29x13)
                        (s29x13 :after s29x14)
                        (s29x13 :before s29x17)
+                       (s29x3 :overlap s29x6)
                        (s29x13 :after s29d)
                        (s29d :Contained s29x8)
                        (s29x17 :overlap s29x25)
+                       (s29x6 :overlap s29x27)
                        (s29x13 :before s29x37)
                        (s29x37 :before s29x32))
   :coref ((s21x :same-event s29x37)))
+
+
 
 
 # Source File: 

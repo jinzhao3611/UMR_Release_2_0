@@ -3,7 +3,7 @@ user id: 582
 file language: chinese
 file format: plain_text
 Doc ID in database: 1668
-export time: 2024/12/2 15:30:19
+export time: 2024/12/17 17:22:43
 
 # :: snt1	苹果 推出 公司 首款 增强 现实 装置 “ Apple Vision Pro ” ， 定价 3,499 美元 。
 # sentence level graph:
@@ -20,15 +20,11 @@ export time: 2024/12/2 15:30:19
                              :name (s1n2 / name
                                      :op1 "Apple"
                                      :op2 "Vision"
-                                     :op3 "Pro"))
-                     :Aspect State
-                     :MODSTR FullAff)
+                                     :op3 "Pro")))
           :ARG1-of (s1h / have-value-91
-                     :ARG2 (s1m / money-quantity
+                     :ARG2 (s1m / monetary-quantity
                              :quant 3499
-                             :unit (s1x7 / 美元))
-                     :Aspect State
-                     :MODSTR NeutAff))
+                             :unit (s1x7 / 美元))))
   :Aspect Performance
   :MODSTR FullAff)
 
@@ -157,7 +153,9 @@ s3x9: 0-0
 # document level annotation:
 (s3s0 / sentence
   :temporal ((s3x :overlap s3x8)
-                       (s3x :overlap s3h))
+                       (s3x :overlap s3h)
+                       (PRESENT_REF :overlap s3x16)
+                       (PRESENT_REF :Contained s3x))
   :modal ((AUTH :FullAff s3x))
 )
 
@@ -252,10 +250,9 @@ s4x9: -1--1
                                     :Aspect Performance
                                     :MODSTR FullAff))
                  :ARG1 (s5x2 / 不适
-                         :temporal (s5x5 / 操作-时)
-                         :mod (s5x6 / 操作
-                                :ARG0 (s5x8 / 用家)
-                                :temporal (s5x7 / 时)))
+                         :temporal (s5x5 / 时
+                                     :op1 (s5x12 / 操作-01
+                                            :ARG0 (s5x8 / 用家))))
                  :Aspect State
                  :MODSTR PrtAff)
          :Aspect state
@@ -277,16 +274,16 @@ s5x2: -1--1
 s5x3: 9-9
 s5x4: 0-0
 s5x5: -1--1
-s5x6: -1--1
-s5x7: -1--1
 s5x8: -1--1
 s5x9: -1--1
+s5x12: 20-20
 
 # document level annotation:
 (s5s0 / sentence
   :temporal ((s5x19 :after s5x3)
                        (DCT :before s5x10)
-                       (s5x10 :before s5x2))
+                       (s5x10 :before s5x2)
+                       (PRESENT_REF :overlap s5x))
   :modal ((AUTH :FullAff s5x19))
 )
 
@@ -356,11 +353,15 @@ s6x7: 11-11
                                :op1 (s7x8 / 现实
                                       :mod (s7x9 / 虚拟)
                                       :ARG1-of (s7i2 / identity-91
-                                                 :AGR2 (s7v2 / vr)))
+                                                 :ARG2 (s7p / product
+                                                         :name (s7n7 / name
+                                                                 :op1 "VR"))))
                                :op2 (s7x10 / 现实
                                       :mod (s7x11 / 增强)
                                       :ARG1-of (s7i3 / identity-91
-                                                 :ARG2 (s7a5 / ar))))))
+                                                 :ARG2 (s7p2 / product
+                                                         :name (s7n8 / name
+                                                                 :op1 "AR")))))))
          :Aspect performance
          :MODSTR FullAff
          :temporal (s7x12 / 目前))
@@ -375,7 +376,7 @@ s6x7: 11-11
          :location (s7c2 / country
                      :name (s7n3 / name
                              :op1 "美国"))
-         :price (s7m2 / money-quantity
+         :value (s7m2 / money-quantity
                   :quant 1500
                   :unit "美元")
          :Aspect performance
@@ -386,7 +387,7 @@ s6x7: 11-11
                             :mod (s7x3 / 刚))))
   :op3 (s7r / 降价-01
          :ARG1 s7h2
-         :price (s7m3 / money-quantity
+         :value (s7m3 / money-quantity
                   :quant 999
                   :unit "美元")
          :Aspect performance
@@ -413,7 +414,6 @@ s6x7: 11-11
 
 # alignment:s7a: 0-0
 s7a4: 0-0
-s7a5: -1--1
 s7c: 0-0
 s7c2: 0-0
 s7c3: 15-15
@@ -435,15 +435,20 @@ s7n3: 0-0
 s7n4: 0-0
 s7n5: 0-0
 s7n6: -1--1
+s7n7: -1--1
+s7n8: -1--1
+s7p: 4-4
+s7p2: 8-8
 s7p3: 0-0
 s7p4: 0-0
 s7r: 0-0
 s7s: 0-0
 s7t: -1--1
-s7v2: -1--1
 s7x: -1--1
 s7x10: 7-7
 s7x11: 6-6
+s7x12: 1-1
+s7x13: 31-31
 s7x2: 31-31
 s7x3: -1--1
 s7x4: 36-36
@@ -452,8 +457,6 @@ s7x6: -1--1
 s7x7: 45-45
 s7x8: 3-3
 s7x9: 2-2
-s7x12: 1-1
-s7x13: 31-31
 
 # document level annotation:
 (s7s0 / sentence
@@ -461,7 +464,10 @@ s7x13: 31-31
                        (s7s :after s7r)
                        (s7s :after s7p3)
                        (s7x12 :after s7x13)
-                       (s7c :Contained s7x12))
+                       (s7c :Contained s7x12)
+                       (DCT :before s7x)
+                       (s7x2 :after s7r)
+                       (DCT :before s7x5))
   :modal ((AUTH :FullAff s7d))
 )
 
@@ -528,7 +534,9 @@ s8x9: 26-26
 (s8s0 / sentence
   :temporal ((s8x :before s8x9)
                        (s8x :after s8x5)
-                       (s8x2 :after s8x))
+                       (s8x2 :after s8x)
+                       (DCT :before s8x11)
+                       (s8x :after s8x11))
   :modal ((AUTH :FullAff s8x))
 )
 
@@ -604,7 +612,7 @@ s9x9: 0-0
 
 # :: snt10	除开 各个 平台 操作系统 的 年度 更新 外 ， 苹果 还 首次 推出 轻薄 型 个人 笔记本 电脑 MacBook Air 的 15 吋 版本 。 新版 MacBook Air 和 其他 星期一 新 发布 的 Mac 产品 一样 ， 处理器 全部 由 苹果 自主 研发 ， 而非 由 处理器 制造商 英特尔 提供 ， 英特尔 当日 股价 下挫 百分之 4.6 。
 # sentence level graph:
-(s10a / and-91
+(s10a / and
   :op1 (s10x / 推出-01
          :ARG0 (s10x2 / company
                  :name (s10n / name
@@ -640,7 +648,7 @@ s9x9: 0-0
                                     :mod (s10x24 / 其他)
                                     :Aspect performance
                                     :ARG1-of (s10x22 / 发布-01
-                                               :weekday (s10x23 / 星期一-)
+                                               :weekday (s10x23 / 星期一)
                                                :mod (s10x21 / 新)
                                                :Aspect Performance
                                                :MODSTR FullAff))
@@ -721,7 +729,10 @@ s10x9: 0-0
 (s10s0 / sentence
   :temporal ((s10x :overlap s10x22)
                        (s10x :after s10x17)
-                       (s10x :overlap s10x33))
+                       (s10x :overlap s10x33)
+                       (DCT :before s10x)
+                       (s10x11 :after s10x)
+                       (s10x17 :after s10x33))
   :modal ((AUTH :FullAff s10x)
                        (AUTH :FullAff s10x33)
                        (AUTH :FullNeg s10x25)

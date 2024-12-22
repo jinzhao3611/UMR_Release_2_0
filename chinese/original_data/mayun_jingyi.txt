@@ -3,7 +3,7 @@ user id: 589
 file language: chinese
 file format: plain_text
 Doc ID in database: 1676
-export time: 2024/11/30 23:16:29
+export time: 2024/12/19 16:58:50
 
 # :: snt1	阿里巴巴 创始人 马云 已经 在 海外 客居 一年 多 ， 最近 已 返回 中国 ， 访问 杭州 一所 私立 学校 ， 讨论 AI 聊天 机器人 “ ChatGPT ” 在 教育 行业 的 影响 。 中国 政府 最近 表示 将 支持 民营 企业 ， 据报 马云 曾 婉拒 回国 邀请 。
 # sentence level graph:
@@ -15,7 +15,9 @@ export time: 2024/11/30 23:16:29
                  :ARG0-of (s1x3 / 创始-01
                             :ARG1 (s1c / company
                                     :name (s1n2 / name
-                                            :name (s1x4 / 阿里巴巴)))))
+                                            :name (s1x4 / 阿里巴巴)))
+                            :Aspect Performance
+                            :MODSTR FullAff))
          :ARG1 (s1x21 / 海外)
          :temporal (s1t / temporal-quantity
                      :quant (s1x5 / 1)
@@ -33,41 +35,38 @@ export time: 2024/11/30 23:16:29
          :MODSTR FullAff)
   :op3 (s1x11 / 访问-01
          :ARG0 s1i2
-         :ARG1 (s1s / school
+         :ARG1 (s1x22 / 学校
                  :place (s1x12 / 杭州)
                  :quant (s1x13 / 1)
-                 :unit (s1x14 / 所-)
+                 :unit (s1x14 / 所)
                  :mod (s1x15 / 私立))
          :purpose (s1x16 / 讨论-01
-                    :ARG1 (s1c3 / computer-program
-                            :name (s1n4 / name
-                                    :op1 (s1a2 / ai)
-                                    :op2 (s1x17 / 聊天)
-                                    :op3 (s1x18 / 机器人))
-                            :ARG1-of (s1i3 / identity-91
-                                       :ARG2 (s1c4 / chatgpt))
-                            :ARG0-of (s1x19 / 影响-01
-                                       :ARG1 (s1x20 / 教育-行业)
-                                       :Aspect State
+                    :ARG1 (s1c5 / computer-program
+                            :name (s1n5 / name
+                                    :op1 "ChatGPT")
+                            :ARG1-of (s1i4 / identity-91
+                                       :ARG2 (s1x24 / 机器人
+                                               :mod (s1a2 / ai)
+                                               :mod (s1x17 / 聊天)))
+                            :ARG0-of (s1x18 / 影响-01
+                                       :ARG1 (s1x19 / 行业
+                                               :mod (s1x20 / 教育))
+                                       :Aspect Habitual
                                        :MODSTR FullAff))
                     :Aspect Performance
                     :MODSTR FullAff)
          :Aspect Performance
          :MODSTR FullAff))
 
+
 # alignment:s1a: 0-0
 s1a2: 23-23
 s1c: 0-0
 s1c2: 0-0
-s1c3: 0-0
-s1c4: 27-27
 s1i2: 0-0
-s1i3: 0-0
 s1n: 0-0
 s1n2: 0-0
 s1n3: 0-0
-s1n4: 0-0
-s1s: 0-0
 s1t: 0-0
 s1x: 7-7
 s1x10: 11-11
@@ -78,10 +77,10 @@ s1x14: 1-1
 s1x15: 1-1
 s1x16: 22-22
 s1x17: 24-24
-s1x18: 25-25
-s1x19: 33-33
+s1x18: 33-33
+s1x19: 31-31
 s1x2: 3-3
-s1x20: 30-31
+s1x20: 30-30
 s1x21: 6-6
 s1x3: 2-2
 s1x4: 3-3
@@ -90,14 +89,21 @@ s1x6: 8-8
 s1x7: 9-9
 s1x8: 13-13
 s1x9: 14-14
+s1x24: 25-25
+s1c5: 27-27
+s1n5: -1--1
+s1i4: 0-0
 
 # document level annotation:
 (s1s0 / sentence
   :temporal ((DCT :before s1x)
                        (s1x :before s1x3)
                        (s1x :after s1x8)
-                       (s1x11 :overlap s1x16))
+                       (s1x11 :overlap s1x16)
+                       (DCT :overlap s1x18))
 )
+
+
 
 
 # :: snt2	马云 被 认为 离开 中国 已经 一年 多 ， 在 日本 和 欧洲 的 各个 地方 访问 。 这 是 第一 次 确认 到 马云 已经 返回 中国 。
@@ -115,16 +121,21 @@ s1x9: 14-14
                          :temporal (s2t / temporal-quantity
                                      :quant (s2x5 / 1)
                                      :unit (s2x6 / 年)
-                                     :mod (s2x7 / 多-)))
+                                     :mod (s2x7 / 多))
+                         :Aspect Performance
+                         :MODSTR FullAff)
                  :Aspect State
                  :MODSTR FullAff)
           :op2 (s2x8 / 访问-01
                  :ARG0 s2i2
-                 :ARG1 (s2c2 / country
-                         :name (s2n3 / name
-                                 :op1 (s2x9 / 日本)
-                                 :op2 (s2x10 / 欧洲))
-                         :mod (s2x11 / 各个-地方))
+                 :ARG1 (s2x9 / 地方
+                         :mod (s2x10 / 各个)
+                         :Part-of (s2c2 / country
+                                    :name (s2n3 / name
+                                            :op1 "日本"))
+                         :Part-of (s2c3 / continent
+                                    :name (s2n4 / name
+                                            :op1 "欧洲")))
                  :Aspect Performance
                  :MODSTR FullAff))
   :snt2 (s2i3 / identity-91
@@ -142,20 +153,22 @@ s1x9: 14-14
           :Aspect State
           :MODSTR FullAff))
 
+
 # alignment:s2a: 0-0
 s2c: 0-0
-s2c2: 0-0
+s2c2: 11-11
+s2c3: 13-13
 s2i2: 0-0
 s2i3: 0-0
 s2m: 0-0
 s2n: 0-0
 s2n2: 0-0
-s2n3: 0-0
+s2n3: -1--1
+s2n4: -1--1
 s2o: 0-0
 s2t: 0-0
 s2x: 3-3
-s2x10: 13-13
-s2x11: 15-16
+s2x10: 15-15
 s2x12: 19-19
 s2x13: 23-23
 s2x14: 27-27
@@ -167,15 +180,19 @@ s2x5: 7-7
 s2x6: 7-7
 s2x7: 8-undefined
 s2x8: 17-17
-s2x9: 11-11
+s2x9: 16-16
 
 # document level annotation:
 (s2s0 / sentence
   :temporal ((DCT :overlap s2x)
                        (s2x :before s2x3)
                        (DCT :before s2x13)
-                       (s2x13 :before s2x14))
+                       (s2x13 :before s2x14)
+                       (s2x3 :after s2x8)
+                       (s2x8 :after s2x14))
 )
+
+
 
 
 # :: snt3	但 不 清楚 其 是否 会 在 访问 结束 后 再次 离开 中国 。
@@ -183,22 +200,27 @@ s2x9: 11-11
 (s3c / 清楚-01
   :ARG1 (s3x / 离开-01
           :ARG0 (s3p / pronoun
-                  :ref-person "3rd")
+                  :ref-person "3rd"
+                  :refer-number Singular)
           :ARG1 (s3c2 / country
                   :name (s3n / name
                           :op1 "中国"))
           :temporal (s3x6 / 后
                       :op1 (s3x2 / 结束-01
                              :ARG1 (s3x3 / 访问
-                                     :ARG0 s3p)
+                                     :ARG0 s3p
+                                     :Aspect Process
+                                     :MODSTR FullAff)
                              :Aspect performance
                              :MODSTR FullAff))
           :frequency (s3x4 / 再次)
           :Aspect habitual
-          :polarity amr-unknown)
+          :polarity amr-unknown
+          :MODSTR PrtNeg)
   :MODSTR NeutNeg
   :Aspect state
   :polarity -)
+
 
 # alignment:s3c: 0-0
 s3c2: 0-0
@@ -212,18 +234,21 @@ s3x4: 0-0
 # document level annotation:
 (s3s0 / sentence
   :temporal ((DCT :overlap s3c)
-                       (s3x :after s3x2))
+                       (s3x :before s3x2)
+                       (s3x2 :overlap s3x3))
 )
+
+
 
 
 # :: snt4	中国 政府 最近 表示 将 支持 民营 企业 ， 据 报 马云 曾 婉拒 回国 邀请 。
 # sentence level graph:
-(s4a / and-91
+(s4a / and
   :op1 (s4x / 表示-01
          :ARG0 (s4x2 / 政府
-                 :mod (s4c / country
-                        :name (s4n / name
-                                :op1 (s4x3 / 中国))))
+                 :place (s4c / country
+                          :name (s4n / name
+                                  :op1 (s4x3 / 中国))))
          :ARG1 (s4x4 / 支持-01
                  :ARG1 (s4x5 / 企业
                          :mod (s4x6 / 民营))
@@ -239,14 +264,19 @@ s3x4: 0-0
          :ARG1 (s4x9 / 邀请
                  :ARG0 s4x2
                  :ARG1 s4i2
-                 :ARG2 (s4x10 / 回国-01)
+                 :ARG2 (s4x10 / 回国-01
+                         :Aspect Habitual
+                         :MODSTR FullAff)
                  :Aspect performance
                  :MODSTR FullAff)
          :temporal (s4x11 / 曾)
          :Aspect performance
          :MODSTR FullAff))
 
+
 # alignment:s4a: 0-0
+s4c: 0-0
+s4i2: 0-0
 s4n: 0-0
 s4n2: 0-0
 s4x: 0-0
@@ -260,15 +290,16 @@ s4x6: 0-0
 s4x7: 0-0
 s4x8: 0-0
 s4x9: 0-0
-s4c: 0-0
-s4i2: 0-0
 
 # document level annotation:
 (s4s0 / sentence
   :temporal ((DCT :before s4x)
                        (s4x :after s4x4)
-                       (s4x8 :before s4x9))
+                       (s4x8 :before s4x9)
+                       (s4x9 :after s4x10))
 )
+
+
 
 
 # :: snt5	这 被 视为 政府 安抚 投资者 的 举动 ， 但 马云 回国 是否 能 恢复 企业家 们 对 中国 经济 的 信心 还 需 观察 。
@@ -279,7 +310,9 @@ s4i2: 0-0
           :ARG2 (s5x2 / 举动
                   :purpose (s5x3 / 安抚-01
                              :ARG0 (s5x4 / 政府)
-                             :ARG1 (s5x5 / 投资者)))
+                             :ARG1 (s5x5 / 投资者)
+                             :Aspect Habitual
+                             :MODSTR FullAff))
           :Aspect state
           :MODSTR FullAff)
   :ARG2 (s5x6 / 观察-01
@@ -288,23 +321,35 @@ s4i2: 0-0
                           :ARG0 (s5x9 / 回国-01
                                   :ARG0 (s5i2 / individual-person
                                           :name (s5n / name
-                                                  :op1 (s5x10 / 马云))))
+                                                  :op1 (s5x10 / 马云)))
+                                  :Aspect Activity
+                                  :MODSTR FullAff)
                           :ARG1 (s5x11 / 信心
-                                  :mod (s5x12 / 中国-经济)))
+                                  :mod (s5x12 / 经济
+                                         :place (s5c / country
+                                                  :name (s5n2 / name
+                                                          :op1 "中国"))))
+                          :Aspect Habitual
+                          :MODSTR FullAff)
                   :Aspect state
-                  :polarity amr-unknown)
+                  :polarity amr-unknown
+                  :MODSTR NeutNeg)
           :temporal (s5x17 / 还
                       :mod (s5x18 / 需))
           :Aspect state
           :MODSTR NeutAff))
 
+
 # alignment:s5b: 0-0
+s5c: 19-19
 s5i2: 0-0
 s5n: 0-0
+s5n2: -1--1
 s5x: 0-0
 s5x10: 11-11
 s5x11: 22-22
 s5x12: 19-20
+s5x13: 1-1
 s5x17: 0-0
 s5x18: 0-0
 s5x2: 0-0
@@ -315,32 +360,36 @@ s5x6: 0-0
 s5x7: 0-0
 s5x8: 0-0
 s5x9: 12-12
-s5x13: 1-1
 
 # document level annotation:
 (s5s0 / sentence
   :temporal ((DCT :before s5x)
-                       (s5x8 :depends-on s5x6))
+                       (s5x3 :before s5x9)
+                       (s5x6 :overlap s5x8)
+                       (s5x7 :overlap s5x8)
+                       (s5x8 :depends-on s5x9))
 )
+
+
 
 
 # :: snt6	中国 浙江省 杭州市 的 一所 私立 学校 “ 杭州 云谷 学校 ” 在 本日 （ 3 月 27 日 ） 于 社交 网络 上 透露 ， 马云 参观 了 该 校 ， 并 与 老师 们 讨论 了 人工 智能 聊天 机器人 “ ChatGPT ” 对 教育 行业 的 影响 。
 # sentence level graph:
 (s6x / 透露-01
-  :ARG0 (s6s / 学校
+  :ARG0 (s6s / school
           :name (s6n4 / name
                   :op1 "杭州"
                   :op2 "云谷"
                   :op3 "学校")
-          :mod (s6c / city
-                 :name (s6n / name
-                         :op1 "杭州市")
-                 :part-of (s6p / province
-                            :name (s6n2 / name
-                                    :op1 "浙江省")
-                            :part-of (s6c2 / country
-                                       :name (s6n3 / name
-                                               :op1 "中国"))))
+          :place (s6c / city
+                   :name (s6n / name
+                           :op1 "杭州市")
+                   :part-of (s6p / province
+                              :name (s6n2 / name
+                                      :op1 "浙江")
+                              :part-of (s6c2 / country
+                                         :name (s6n3 / name
+                                                 :op1 "中国"))))
           :mod (s6p2 / 私立)
           :quant 1
           :unit (s6u / 所))
@@ -354,7 +403,7 @@ s5x13: 1-1
                  :MODSTR FullAff)
           :op2 (s6d / 讨论-01
                  :ARG0 (s6i3 / individual-person
-                         :op1 (s6s2 / s6i-)
+                         :op1 (s6s2 / s6i)
                          :op2 (s6x2 / 老师
                                 :refer-number Plural))
                  :ARG1 (s6i2 / 影响-01
@@ -379,6 +428,7 @@ s5x13: 1-1
             :mod (s6m2 / 社交))
   :Aspect performance
   :MODSTR FullAff)
+
 
 # alignment:s6a: 0-0
 s6c: 0-0
@@ -418,8 +468,11 @@ s6x5: 41-41
 (s6s0 / sentence
   :temporal ((DCT :before s6x)
                        (s6x :before s6v)
-                       (s6v :overlap s6d))
+                       (s6v :overlap s6d)
+                       (DCT :overlap s6i2))
 )
+
+
 
 
 # :: snt7	他 说 ： “ 我们 需要 用 人工智能 来 解决 问题 ， 而 不 是 被 人工智能 控制 ” 。
@@ -448,7 +501,8 @@ s6x5: 41-41
           :Aspect State)
   :Aspect Performance
   :MODSTR FullAff
-  :QUOT (s7s / s7x-))
+  :QUOT (s7s / s7x))
+
 
 # alignment:s7b: 0-0
 s7p: 0-0
@@ -463,8 +517,12 @@ s7x7: 18-18
 
 # document level annotation:
 (s7s0 / sentence
-  :temporal ((DCT :before s7x))
+  :temporal ((DCT :before s7x)
+                       (s7x2 :overlap s7x4)
+                       (s7x2 :overlap s7x7))
   :coref ((s7p :same-entity s6i)))
+
+
 
 
 # :: snt8	中国 电子 商务 巨头 阿里巴巴 创始人 马云 的 职业 生涯 开始 于 一名 英语 教师 ， 他 也 曾经 表示 ， 将 在 2019 年 宣布 从 阿里巴巴 集团 控股 退休 后 重返 教学 岗位 。
@@ -483,9 +541,11 @@ s7x7: 18-18
                                             :mod (s8c2 / 巨头
                                                    :mod (s8c3 / 商务
                                                           :mod (s8c4 / 电子)
-                                                          :mod (s8c5 / 国家
-                                                                 :name (s8n3 / name
-                                                                         :op1 "中国"))))))))
+                                                          :place (s8c5 / country
+                                                                   :name (s8n3 / name
+                                                                           :op1 "中国")))))
+                                    :Aspect Performance
+                                    :MODSTR FullAff)))
          :ARG1 (s8x4 / 教师
                  :mod (s8x5 / 英语)
                  :quant 1
@@ -513,6 +573,7 @@ s7x7: 18-18
          :Aspect performance
          :MODSTR FullAff
          :QUOT s8x7))
+
 
 # alignment:s8a: 0-0
 s8a2: 0-0
@@ -544,8 +605,11 @@ s8x9: 0-0
 (s8s0 / sentence
   :temporal ((DCT :before s8x)
                        (s8x8 :after s8x9)
-                       (s8x7 :after s8a2))
+                       (s8x7 :after s8a2)
+                       (s8x :after s8f))
 )
+
+
 
 
 # :: snt9	马云 曾 是 中国 最 直言不讳 的 商人 之一 。
@@ -563,6 +627,7 @@ s8x9: 0-0
                            :op1 (s9x4 / 中国)))
           :ARG2-of (s9i4 / include-91))
   :Aspect State)
+
 
 # alignment:s9c: 0-0
 s9h: 0-0
@@ -582,14 +647,17 @@ s9x5: 5-5
 )
 
 
+
+
 # :: snt10	自 2020 年 10 月 以来 ， 和 他 的 企业 帝国 一直 承受 着 来自 政府 的 巨大 压力 ， 他 在 演讲 中 攻击 中国 的 金融 监管 机构 ， 并 批评 金融 体系 已经 过时 。
 # sentence level graph:
-(s10a / and-91
+(s10a / and
   :op1 (s10x / 承受-01
          :ARG0 (s10x2 / 帝国
                  :mod (s10x3 / 企业)
-                 :mod (s10p / person
-                        :ref-person "3rd"))
+                 :poss (s10p2 / person
+                         :refer-person 3rd
+                         :refer-number Singular))
          :ARG1 (s10x4 / 压力
                  :mod (s10x5 / 巨大)
                  :source (s10x6 / 政府))
@@ -600,21 +668,21 @@ s9x5: 5-5
                      :op2 (s10d3 / now))
          :Aspect habitual
          :MODSTR FullAff)
-  :op2 (s10a2 / and-91
+  :op2 (s10a2 / and
          :op1 (s10x7 / 攻击-01
-                :ARG0 s10p
+                :ARG0 s10p2
                 :ARG1 (s10x8 / 机构
                         :mod (s10x9 / 监管)
                         :mod (s10x10 / 金融)
-                        :mod (s10c / country
-                               :name (s10n / name
-                                       :op1 "中国")))
-                :location (s10x11 / 中
-                            :op1 (s10x12 / 演讲))
+                        :place (s10c / country
+                                 :name (s10n / name
+                                         :op1 "中国")))
+                :place (s10x11 / 中
+                         :op1 (s10x12 / 演讲))
                 :Aspect performance
                 :MODSTR FullAff)
          :op2 (s10x13 / 批评-01
-                :ARG0 s10p
+                :ARG0 s10p2
                 :ARG1 (s10x14 / 体系
                         :mod (s10x15 / 金融)
                         :ARG0-of (s10x16 / 过时-01
@@ -623,6 +691,7 @@ s9x5: 5-5
                 :Aspect performance
                 :MODSTR FullAff)))
 
+
 # alignment:s10a: 0-0
 s10a2: 0-0
 s10c: 0-0
@@ -630,7 +699,7 @@ s10d: 0-0
 s10d2: 0-0
 s10d3: 0-0
 s10n: 0-0
-s10p: 0-0
+s10p2: 0-0
 s10x: 0-0
 s10x10: 0-0
 s10x11: 0-0
@@ -651,8 +720,11 @@ s10x9: 0-0
 # document level annotation:
 (s10s0 / sentence
   :temporal ((DCT :overlap s10x)
-                       (s10x7 :overlap s10x13))
-  :coref ((s10p :same-entity s9x)))
+                       (s10x :Contained s10x7)
+                       (s10x :Contained s10x13))
+)
+
+
 
 
 # :: snt11	当时 的 打击 行动 导致 阿里巴巴 被 处以 超过 180 亿元 人民币 的 罚款 ， 并 暂停 关联 蚂蚁 集团 计划 中 的 首次 公开 募股 。
@@ -669,7 +741,9 @@ s10x9: 0-0
                  :ARG0-of (s11x6 / 超过-01
                             :ARG2 (s11m / monetary-quantity
                                     :value "18,000,000,000"
-                                    :unit (s11x7 / 元)))
+                                    :unit (s11x7 / 元))
+                            :MODSTR FullAff
+                            :Aspect State)
                  :Aspect Performance
                  :MODSTR FullAff)
           :op2 (s11x8 / 暂停-00
@@ -691,6 +765,7 @@ s10x9: 0-0
   :Aspect Performance
   :MODSTR FullAff)
 
+
 # alignment:s11a: 0-0
 s11c: 0-0
 s11c2: 0-0
@@ -703,6 +778,7 @@ s11x11: 25-25
 s11x12: 24-24
 s11x13: 21-21
 s11x14: 19-20
+s11x15: 3-3
 s11x2: 3-4
 s11x3: 1-1
 s11x4: 14-14
@@ -711,13 +787,17 @@ s11x6: 9-9
 s11x7: 11-11
 s11x8: 17-17
 s11x9: 18-18
-s11x15: 3-3
 
 # document level annotation:
 (s11s0 / sentence
   :temporal ((DCT :before s11x)
-                       (s11x4 :overlap s11x8))
+                       (s11x4 :overlap s11x8)
+                       (s11x8 :overlap s11x9)
+                       (s11x9 :overlap s11x13)
+                       (s11x13 :Contained s11x8))
 )
+
+
 
 
 # :: snt12	在 中国 政府 的 打压 后 ， 马云 基本上 从 大众 视野 中 消失 。 在 过去 的 一年 里 ， 他 曾 在 日本 待过 几个 月 ， 还 在 泰国 、 香港 和 澳大利亚 现踪 。
@@ -731,10 +811,14 @@ s11x15: 3-3
                    :mod (s12x4 / 大众))
           :mod (s12x5 / 基本上)
           :Cause-of (s12x6 / 打压-01
-                      :ARG0 (s12g / government-organization
-                              :ARG0 (s12c / country
-                                      :name (s12n2 / name
-                                              :op1 "中国"))))
+                      :ARG0 (s12g2 / government-organization
+                              :name (s12n4 / name
+                                      :op1 "政府")
+                              :place (s12c / country
+                                       :name (s12n2 / name
+                                               :op1 "中国")))
+                      :Aspect Performance
+                      :MODSTR FullAff)
           :Aspect Performance
           :MODSTR FullAff)
   :snt2 (s12a / and
@@ -752,28 +836,40 @@ s11x15: 3-3
                  :MODSTR FullAff)
           :op2 (s12x14 / 现踪-00
                  :ARG0 s12i3
-                 :ARG1 (s12c3 / country
-                         :op1 (s12x15 / 泰国)
-                         :op2 (s12x16 / 香港)
-                         :op3 (s12x17 / 澳大利亚))
                  :Aspect Performance
-                 :MODSTR FullAff)
+                 :MODSTR FullAff
+                 :place (s12c3 / country
+                          :name (s12n5 / name
+                                  :op1 "泰国"))
+                 :place (s12c4 / country-region
+                          :name (s12n6 / name
+                                  :op1 "香港"))
+                 :place (s12c5 / country
+                          :name (s12n7 / name
+                                  :op1 "澳大利亚")))
           :duration (s12t / temporal-quantity
                       :value (s12x7 / 一)
                       :unit (s12x8 / 年)
                       :mod (s12x9 / 过去))))
 
+
 # alignment:s12a: 0-0
 s12c: 2-2
 s12c2: -1--1
-s12c3: 0-0
-s12g: 0-0
+s12c3: 32-32
+s12c4: 34-34
+s12c5: 36-36
+s12g2: 3-3
 s12i2: 0-0
 s12i3: 0-0
 s12m: 0-0
 s12n: 0-0
 s12n2: -1--1
 s12n3: 0-0
+s12n4: -1--1
+s12n5: -1--1
+s12n6: -1--1
+s12n7: -1--1
 s12t: 0-0
 s12t2: 0-0
 s12x: 14-14
@@ -782,9 +878,6 @@ s12x11: 25-25
 s12x12: 27-27
 s12x13: 28-28
 s12x14: 37-37
-s12x15: 32-32
-s12x16: 34-34
-s12x17: 36-36
 s12x2: 8-8
 s12x3: 12-12
 s12x4: 11-11
@@ -798,8 +891,11 @@ s12x9: 17-17
 (s12s0 / sentence
   :temporal ((DCT :before s12x)
                        (DCT :before s12x10)
-                       (s12x10 :overlap s12x14))
+                       (s12x10 :overlap s12x14)
+                       (s12x6 :after s12x))
   :coref ((s12i3 :same-entity s12i2)))
+
+
 
 
 # :: snt13	plaintext虽然 中国 当局 最近 几个 月 表示 他们 已经 结束 监管 打击 行动 ， 并 将 寻找 支持 私营 部门 的 方法 ， 但 中国 企业家 们 表示 ， 他们 看到 马云 仍 决定 留在 海外 ， 是 阻碍 企业界 恢复 信心 的 一个 因素 。
@@ -807,21 +903,30 @@ s12x9: 17-17
 (s13b / but-91
   :op1 (s13x / 表示-01
          :ARG0 (s13x3 / 当局
-                 :mod (s13x4 / 中国))
+                 :place (s13c2 / country
+                          :name (s13n2 / name
+                                  :op1 "中国")))
          :ARG1 (s13a / and
                  :op1 (s13x5 / 结束-01
                         :ARG0 (s13p / person
                                 :refer-person 3rd
                                 :refer-number Plural)
-                        :ARG1 (s13x10 / 行动
-                                :topic (s13x11 / 打击)
-                                :topic (s13x12 / 监管)))
+                        :ARG1 (s13x10 / 行动-01
+                                :topic (s13a2 / and
+                                         :op1 (s13x29 / 打击-01)
+                                         :op2 (s13x30 / 监管-01)))
+                        :Aspect Performance
+                        :MODSTR FullAff)
                  :op2 (s13x13 / 寻找-01
                         :ARG0 s13p
                         :ARG1 (s13x6 / 方法
                                 :ARG1-of (s13x14 / 支持-01
                                            :ARG1 (s13x15 / 部门
-                                                   :mod (s13x16 / 私营))))))
+                                                   :mod (s13x16 / 私营))
+                                           :Aspect Habitual
+                                           :MODSTR FullAff))
+                        :Aspect Process
+                        :MODSTR FullAff))
          :MODSTR FullAff
          :Aspect Performance
          :QUOT s13x
@@ -832,55 +937,67 @@ s12x9: 17-17
   :op2 (s13x2 / 表示-01
          :ARG0 (s13x17 / 企业家
                  :refer-number Plural
-                 :mod (s13x18 / 中国))
+                 :place (s13c / country
+                          :name (s13n / name
+                                  :op1 "中国")))
          :ARG1 (s13x19 / 看到-01
-                 :ARG0 s13x17
-                 :ARG1 (s13x20 / 马云
-                         :ARG0-of (s13x21 / 决定-01
-                                    :ARG1 (s13x22 / 留在-01
-                                            :ARG1 (s13x23 / 海外))
-                                    :mod (s13x24 / 仍)
+                 :ARG1 (s13i2 / individual-person
+                         :name (s13n3 / name
+                                 :op1 "马云")
+                         :ARG0-of (s13x4 / 决定-01
+                                    :ARG1 (s13x12 / 留在-01
+                                            :ARG1 (s13x18 / 海外)
+                                            :Aspect Process
+                                            :MODSTR FullAff)
+                                    :MODSTR FullAff
                                     :Aspect Performance
-                                    :MODSTR FullAff)
-                         :cause (s13x25 / 阻碍-01
-                                  :ARG1 (s13x26 / 企业界)
-                                  :ARG2 (s13x27 / 恢复-01
-                                          :ARG1 (s13x28 / 信心))
-                                  :Aspect Process
-                                  :MODSTR FullAff))
+                                    :mod (s13x11 / 仍))
+                         :cause (s13x21 / 阻碍-01
+                                  :ARG1 (s13x24 / 企业界)
+                                  :ARG2 (s13x22 / 恢复-01
+                                          :ARG1 (s13x23 / 信心)
+                                          :Aspect Habitual
+                                          :MODSTR FullAff)
+                                  :MODSTR FullAff
+                                  :Aspect Process))
                  :Aspect Performance
                  :MODSTR FullAff)
          :Aspect Performance
          :MODSTR FullAff
          :QUOT s13x2))
 
+
 # alignment:s13a: 0-0
+s13a2: 0-0
 s13b: 0-0
+s13c: 25-25
+s13c2: 2-2
+s13i2: 0-0
+s13n: -1--1
+s13n2: -1--1
+s13n3: -1--1
 s13p: 0-0
 s13t: 0-0
 s13x: 0-0
 s13x10: 13-13
-s13x11: 12-12
-s13x12: 11-11
+s13x11: -1--1
+s13x12: -1--1
 s13x13: 17-17
 s13x14: 18-18
 s13x15: 20-20
 s13x16: 19-19
 s13x17: 0-0
-s13x18: 25-25
+s13x18: -1--1
 s13x19: 31-31
 s13x2: 0-0
-s13x20: 0-0
-s13x21: 34-34
-s13x22: 35-35
-s13x23: 36-36
-s13x24: 33-33
-s13x25: 39-39
-s13x26: 40-40
-s13x27: 41-41
-s13x28: 42-42
+s13x21: -1--1
+s13x22: -1--1
+s13x23: -1--1
+s13x24: -1--1
+s13x29: 0-0
 s13x3: 3-3
-s13x4: 2-2
+s13x30: 0-0
+s13x4: -1--1
 s13x5: 10-10
 s13x6: 22-22
 s13x7: 5-5
@@ -890,9 +1007,18 @@ s13x9: 4-4
 # document level annotation:
 (s13s0 / sentence
   :temporal ((DCT :before s13x)
-                       (s13x5 :overlap s13x13)
-                       (s13x2 :overlap s13x19))
-  :coref ((s13x3 :same-entity s13p)))
+                       (s13x :before s13x5)
+                       (s13x5 :overlap s13x10)
+                       (s13x5 :after s13x13)
+                       (s13x :after s13x13)
+                       (DCT :before s13x2)
+                       (s13x2 :before s13x19)
+                       (s13x4 :overlap s13x12)
+                       (s13x4 :after s13x21)
+                       (s13x21 :overlap s13x22))
+)
+
+
 
 
 # :: snt14	而 马云 此次 回归 中国 ， 可能 有助 让 企业家 们 相信 中国 政府 对 民营 企业 的 支持 ， 但 仍 有待 观察 。
@@ -900,7 +1026,7 @@ s13x9: 4-4
 (s14b / but-91
   :ARG1 (s14h / 有助-01
           :ARG0 (s14r / 回归-01
-                  :ARG0 (s14p / person
+                  :ARG0 (s14i2 / individual-person
                           :name (s14n / name
                                   :op1 "马云"))
                   :ARG1 (s14c / country
@@ -913,9 +1039,12 @@ s13x9: 4-4
                   :ARG0 (s14e / 企业家
                           :refer-number Plural)
                   :ARG1 (s14s / 支持-01
-                          :ARG0 (s14g / government
-                                  :name (s14n3 / name
-                                          :op1 "中国"))
+                          :ARG0 (s14g2 / government-organization
+                                  :name (s14n4 / name
+                                          :op1 "政府")
+                                  :place (s14c3 / country
+                                           :name (s14n5 / name
+                                                   :op1 "中国")))
                           :ARG1 (s14c2 / 企业
                                   :mod (s14p2 / 民营)))
                   :Aspect habitual
@@ -929,6 +1058,7 @@ s13x9: 4-4
           :Aspect habitual
           :MODSTR FullAff))
 
+
 # alignment:s14a: 0-0
 s14b: 0-0
 s14b2: 0-0
@@ -936,25 +1066,29 @@ s14c: 0-0
 s14c2: 0-0
 s14d: 0-0
 s14e: 0-0
-s14g: 0-0
 s14h: 0-0
 s14m: 0-0
 s14n: 0-0
 s14n2: 0-0
-s14n3: 0-0
 s14o: 0-0
-s14p: 0-0
 s14p2: 0-0
 s14r: 0-0
 s14s: 0-0
 s14t: 0-0
+s14g2: 14-14
+s14n4: -1--1
+s14c3: 13-13
+s14n5: -1--1
 
 # document level annotation:
 (s14s0 / sentence
   :temporal ((DCT :before s14r)
                        (s14r :after s14b2)
-                       (s14b2 :overlap s14s))
+                       (s14b2 :overlap s14s)
+                       (s14r :after s14o))
 )
+
+
 
 
 # :: snt15	这 被 视为 政府 安抚 投资者 的 举动 ， 但 马云 回国 是否 能 恢复 企业家 们 对 中国 经济 的 信心 还 需 观察 。
@@ -965,7 +1099,9 @@ s14t: 0-0
          :ARG2 (s15x2 / 举动
                  :topic (s15x3 / 安抚-01
                           :ARG0 (s15x4 / 政府)
-                          :ARG1 (s15x5 / 投资者)))
+                          :ARG1 (s15x5 / 投资者)
+                          :Aspect Performance
+                          :MODSTR FullAff))
          :Aspect state
          :MODSTR FullAff)
   :op2 (s15x7 / 需-02
@@ -973,12 +1109,16 @@ s14t: 0-0
                  :ARG0 (s15i2 / individual-person
                          :name (s15n / name
                                  :op1 (s15x11 / 马云))
-                         :ARG0-of (s15x12 / 回国))
+                         :ARG0-of (s15x12 / 回国-01
+                                    :Aspect Performance
+                                    :MODSTR FullAff))
                  :ARG1 (s15x13 / 恢复-01
                          :ARG1 (s15x14 / 企业家)
                          :ARG2 (s15x15 / 相信-01
                                  :ARG1 (s15x16 / 经济
-                                         :mod (s15x17 / 中国))
+                                         :place (s15c / country
+                                                  :name (s15n2 / name
+                                                          :op1 "中国")))
                                  :Aspect State
                                  :MODSTR FullAff)
                          :Aspect State
@@ -990,9 +1130,12 @@ s14t: 0-0
          :Aspect State
          :MODSTR FullAff))
 
+
 # alignment:s15b: 0-0
+s15c: 0-0
 s15i2: 0-0
 s15n: 0-0
+s15n2: -1--1
 s15x: 0-0
 s15x10: 23-23
 s15x11: 11-11
@@ -1001,7 +1144,6 @@ s15x13: 15-15
 s15x14: 16-16
 s15x15: 22-22
 s15x16: 20-20
-s15x17: 19-19
 s15x2: 0-0
 s15x3: 5-5
 s15x4: 4-4
@@ -1014,126 +1156,153 @@ s15x9: 25-25
 # document level annotation:
 (s15s0 / sentence
   :temporal ((DCT :overlap s15x)
-                       (s15x12 :after s15x13))
+                       (s15x :before s15x3)
+                       (DCT :after s15x7)
+                       (s15x12 :after s15x13)
+                       (s15x13 :overlap s15x15)
+                       (s15x13 :overlap s15x9)
+                       (s15x7 :after s15x9))
 )
+
+
 
 
 # :: snt16	马云 在 今年 1 月 放弃 了 对 蚂蚁 集团 的 控制权 ， 他 在 该 公司 的 有效 经营 投票权 从 53.46% 降至 6.2% ， 原因 是 北京 当局 要求 该 公司 与 阿里巴巴 集团 保持 距离 。
 # sentence level graph:
 (s16a / and
   :op1 (s16x / 放弃-01
-         :ARG0 (s16p / person
+         :ARG0 (s16i2 / individual-person
                  :name (s16n / name
                          :op1 "马云"))
          :ARG1 (s16x2 / 控制权
-                 :poss (s16g / group-organization
+                 :poss (s16c / company
                          :name (s16n2 / name
                                  :op1 "蚂蚁"
                                  :op2 "集团")))
-         :time (s16t / time-entity
-                 :year (s16y / this-year)
-                 :month 1)
          :Aspect performance
-         :MODSTR FullAff)
+         :MODSTR FullAff
+         :temporal (s16d / date-entity
+                     :year (s16x11 / 今年)
+                     :month 1))
   :op2 (s16x10 / 降至-01
          :ARG1 (s16x3 / 投票权
-                 :poss s16g
                  :mod (s16x4 / 经营
-                        :mod (s16x5 / 有效)))
-         :ARG2 (s16p2 / percentage-entity
-                 :value 6.2)
-         :ARG3 (s16p3 / percentage-entity
-                 :value 53.46)
-         :time s16t
+                        :mod (s16x5 / 有效))
+                 :poss s16i2)
          :Aspect performance
-         :MODSTR FullAff)
-  :op3 (s16x6 / 要求-01
-         :ARG0 (s16x7 / 当局
-                 :location (s16c2 / city
-                             :name (s16n3 / name
-                                     :op1 "北京")))
-         :ARG1 (s16x8 / 保持-01
-                 :ARG1 s16g
-                 :ARG2 (s16g2 / group-organization
-                         :name (s16n4 / name
-                                 :op1 "阿里巴巴"
-                                 :op2 "集团"))
-                 :manner (s16x9 / 距离))
-         :reason (s16r2 / reason-91
-                   :ARG1 s16x10)
-         :Aspect performance
-         :MODSTR FullAff))
+         :MODSTR FullAff
+         :range (s16a2 / and
+                  :op1 (s16p / percentage-entity
+                         :value 53.46)
+                  :op2 (s16p4 / percentage-entity
+                         :value 6.2))
+         :reason (s16x12 / 要求-01
+                   :ARG0 (s16x7 / 当局
+                           :place (s16c2 / city
+                                    :name (s16n3 / name
+                                            :op1 "北京")))
+                   :ARG1 (s16x8 / 保持-02
+                           :ARG1 (s16x9 / 距离)
+                           :MODSTR FullAff
+                           :Aspect Process)
+                   :ARG2 (s16c3 / company
+                           :name (s16n4 / name
+                                   :op1 "蚂蚁"
+                                   :op2 "集团"))
+                   :Aspect performance
+                   :MODSTR FullAff)))
+
 
 # alignment:s16a: 0-0
-s16c2: 0-0
-s16g: 0-0
-s16g2: 0-0
+s16a2: 0-0
+s16c: 0-0
+s16c2: -1--1
+s16c3: -1--1
+s16d: 0-0
+s16i2: 0-0
 s16n: 0-0
 s16n2: 0-0
-s16n3: 0-0
-s16n4: 0-0
+s16n3: -1--1
+s16n4: -1--1
 s16p: 0-0
-s16p2: 0-0
-s16p3: 0-0
-s16r2: 0-0
-s16t: 0-0
+s16p4: 25-25
 s16x: 0-0
+s16x11: 3-3
+s16x12: 31-31
 s16x2: 0-0
 s16x3: 0-0
 s16x4: 0-0
 s16x5: 0-0
-s16y: 0-0
+s16x7: -1--1
+s16x8: -1--1
+s16x9: -1--1
 
 # document level annotation:
 (s16s0 / sentence
   :temporal ((DCT :before s16x)
-                       (s16x :overlap s16x10)
-                       (s16x10 :overlap s16x6))
+                       (s16x :after s16x10)
+                       (DCT :before s16x12)
+                       (s16x12 :after s16x8))
 )
+
+
 
 
 # :: snt17	在 中国 政府 下达 重组 令 后 ， 蚂蚁 集团 一直 进行 一 系列 全面 改革 。
 # sentence level graph:
 (s17x / 进行-01
-  :ARG0 (s17x2 / 集团
-          :name (s17n / name
-                  :op1 "蚂蚁"))
+  :ARG0 (s17c2 / company
+          :name (s17n3 / name
+                  :op1 "蚂蚁"
+                  :op2 "集团"))
   :ARG1 (s17x3 / 改革-01
           :mod (s17x4 / 全面)
-          :quant (s17x5 / 系列
-                   :quant 1)
           :Aspect habitual
-          :MODSTR FullAff)
-  :temporal (s17x6 / 下达-01
-              :ARG0 (s17x7 / 政府
-                      :location (s17c / country
-                                  :name (s17n2 / name
-                                          :op1 "中国")))
-              :ARG1 (s17x8 / 令
-                      :mod (s17x9 / 重组))
-              :Aspect performance
-              :MODSTR FullAff)
+          :MODSTR FullAff
+          :quant (s17x2 / 1)
+          :unit (s17x10 / 系列)
+          :mod (s17x5 / 一直))
   :Aspect habitual
-  :MODSTR FullAff)
+  :MODSTR FullAff
+  :temporal (s17x11 / 后
+              :op1 (s17x12 / 下达-01
+                     :ARG0 (s17g / government-organization
+                             :name (s17n / name
+                                     :op1 "政府")
+                             :place (s17c / country
+                                      :name (s17n2 / name
+                                              :op1 "中国")))
+                     :ARG1 (s17x6 / 令
+                             :mod (s17x7 / 重组))
+                     :Aspect Performance
+                     :MODSTR FullAff)))
 
-# alignment:s17c: 0-0
-s17n: 0-0
-s17n2: 0-0
+
+# alignment:s17c: 2-2
+s17c2: 9-10
+s17g: 3-3
+s17n: -1--1
+s17n2: -1--1
+s17n3: -1--1
 s17x: 0-0
-s17x2: 0-0
+s17x10: 14-14
+s17x11: 7-7
+s17x12: 4-4
+s17x2: 13-13
 s17x3: 0-0
 s17x4: 0-0
-s17x5: 0-0
-s17x6: 0-0
-s17x7: 0-0
-s17x8: 0-0
-s17x9: 0-0
+s17x5: 11-11
+s17x6: 6-6
+s17x7: 5-5
 
 # document level annotation:
 (s17s0 / sentence
   :temporal ((DCT :overlap s17x)
-                       (s17x3 :after s17x6))
+                       (s17x :overlap s17x3)
+                       (s17x3 :before s17x12))
 )
+
+
 
 
 # :: snt18	当时 据 知情 人士 透露 ， 马云 婉拒 邀请 ， 选择 留在 海外 ， 并 称 他 已 从 公司 撤退 ， 未来 将 专注 于 研究 农业 技术 。
@@ -1143,25 +1312,27 @@ s17x9: 0-0
           :mod (s18i / 知情))
   :ARG1 (s18a / and
           :op1 (s18x2 / 婉拒-01
-                 :ARG0 (s18p2 / person
+                 :ARG0 (s18i2 / individual-person
                          :name (s18n / name
                                  :op1 "马云"))
-                 :ARG1 (s18x3 / 邀请-01)
+                 :ARG1 (s18x3 / 邀请-01
+                         :Aspect Performance
+                         :MODSTR FullAff)
                  :Aspect performance
                  :MODSTR FullAff)
           :op2 (s18x4 / 选择-01
-                 :ARG0 s18p2
+                 :ARG0 s18i2
                  :ARG1 (s18x5 / 留-01
-                         :ARG1 s18p2
-                         :location (s18l / 海外)
+                         :ARG1 s18i2
+                         :place (s18l / 海外)
                          :Aspect state
                          :MODSTR FullAff)
                  :Aspect performance
                  :MODSTR FullAff)
           :op3 (s18x6 / 称-02
-                 :ARG0 s18p2
+                 :ARG0 s18i2
                  :ARG1 (s18x7 / 撤退-01
-                         :ARG0 s18p2
+                         :ARG0 s18i2
                          :ARG1 (s18c / 公司)
                          :temporal (s18t2 / 已)
                          :Aspect performance
@@ -1169,7 +1340,7 @@ s17x9: 0-0
                  :Aspect performance
                  :MODSTR FullAff)
           :op4 (s18x8 / 专注-01
-                 :ARG0 s18p2
+                 :ARG0 s18i2
                  :ARG1 (s18x9 / 研究-01
                          :ARG1 (s18x10 / 技术
                                  :mod (s18x11 / 农业))
@@ -1182,6 +1353,7 @@ s17x9: 0-0
   :Aspect performance
   :MODSTR FullAff)
 
+
 # alignment:s18a: 0-0
 s18c: 0-0
 s18f: 0-0
@@ -1189,7 +1361,6 @@ s18i: 0-0
 s18l: 0-0
 s18n: 0-0
 s18p: 0-0
-s18p2: 0-0
 s18t: 0-0
 s18t2: 0-0
 s18x: 0-0
@@ -1208,8 +1379,14 @@ s18x9: 0-0
 (s18s0 / sentence
   :temporal ((DCT :before s18x)
                        (s18x2 :overlap s18x4)
-                       (s18x7 :after s18x8))
+                       (s18x7 :after s18x8)
+                       (s18x4 :after s18x5)
+                       (s18x2 :after s18x6)
+                       (s18x7 :after s18x9)
+                       (s18x8 :overlap s18x9))
 )
+
+
 
 
 # :: snt19	马云 告诉 蚂蚁 集团 和 阿里巴巴 高管 ， 不要 对 他 回国 一事 耿耿于怀 ， 并 强调 即使 距离 很 远 ， 他 也 会 致力于 他们 的 成功 。
@@ -1220,17 +1397,17 @@ s18x9: 0-0
                   :op1 (s19x2 / 马云)))
   :ARG1 (s19a / and
           :op1 (s19x5 / 耿耿于怀-00
-                 :ARG0 s19o
-                 :ARG1 (s19s / s19i2-
-                         :ARG0-of (s19x6 / 回国-01
-                                    :Aspect Process
-                                    :MODSTR FullAff))
+                 :ARG0 s19x3
+                 :ARG1 (s19x4 / 回国-01
+                         :ARG0 s19i2
+                         :Aspect Habitual
+                         :MODSTR FullAff)
                  :polarity -
                  :Aspect State
                  :MODSTR FullNeg)
           :op2 (s19x7 / 强调-01
                  :ARG1 (s19c / consecutive
-                         :op1 (s19x8 / 远
+                         :op1 (s19x6 / 远-00
                                 :ARG0 (s19x9 / 距离)
                                 :mod (s19x10 / 很))
                          :op2 (s19x11 / 致力于-01
@@ -1245,61 +1422,78 @@ s18x9: 0-0
                                 :MODSTR FullAff))
                  :Aspect State
                  :MODSTR FullAff))
-  :ARG2 (s19o / organization
-          :op1 (s19x3 / 蚂蚁-集团)
-          :op2 (s19x4 / 阿里巴巴))
+  :ARG2 (s19x3 / 高管
+          :place (s19a3 / and
+                   :op1 (s19c2 / company
+                          :name (s19n2 / name
+                                  :op1 "蚂蚁"
+                                  :op2 "集团"))
+                   :op2 (s19c3 / company
+                          :name (s19n3 / name
+                                  :op1 "阿里巴巴"))))
   :Aspect Performance
   :MODSTR FullAff
   :QUOT s19x)
 
+
 # alignment:s19a: 0-0
+s19a3: 0-0
 s19c: 0-0
+s19c2: 0-0
+s19c3: -1--1
 s19i2: 0-0
 s19n: 0-0
-s19o: 0-0
+s19n2: -1--1
+s19n3: -1--1
 s19p: 0-0
 s19p2: 0-0
-s19s: 0-0
 s19x: 0-0
 s19x10: 20-20
 s19x11: 26-26
 s19x12: 29-29
 s19x2: 1-1
-s19x3: 3-4
-s19x4: 6-6
+s19x3: 0-0
+s19x4: 12-12
 s19x5: 14-14
 s19x6: 12-12
 s19x7: 17-17
-s19x8: 21-21
 s19x9: 19-19
 
 # document level annotation:
 (s19s0 / sentence
-  :temporal ((DCT :before s19x))
-)
+  :temporal ((DCT :before s19x)
+                       (s19x5 :overlap s19x4)
+                       (s19x7 :after s19x11))
+  :coref ((s19i2 :same-entity s19p)
+                       (s19p2 :same-entity s19x3)))
+
+
 
 
 # :: snt20	但在 该 消息 曝光 后 不久 ， 马云 随后 现身 于 中国 浙江省 杭州市 。
 # sentence level graph:
 (s20b / but-91
   :ARG2 (s20x / 现身-01
-          :ARG0 (s20p / person
+          :ARG0 (s20i2 / individual-person
                   :name (s20n / name
                           :op1 "马云"))
-          :location (s20l / city
-                      :name (s20n2 / name
-                              :op1 "杭州市")
-                      :part-of (s20p2 / province
-                                 :name (s20n3 / name
-                                         :op1 "浙江省")
-                                 :part-of (s20c2 / country
-                                            :name (s20n4 / name
-                                                    :op1 "中国"))))
+          :place (s20l / city
+                   :name (s20n2 / name
+                           :op1 "杭州")
+                   :part-of (s20p2 / province
+                              :name (s20n3 / name
+                                      :op1 "浙江")
+                              :part-of (s20c2 / country
+                                         :name (s20n4 / name
+                                                 :op1 "中国"))))
           :temporal (s20t / 后
                       :op1 (s20e / 曝光-01
                              :ARG1 (s20m / 消息
                                      :mod (s20d / 该))
-                             :temporal (s20s / 不久))))
+                             :temporal (s20s / 不久)
+                             :Aspect Performance
+                             :MODSTR FullAff))
+          :temporal (s20x2 / 随后))
   :Aspect performance
   :MODSTR FullAff)
 
@@ -1312,17 +1506,19 @@ s20n: 0-0
 s20n2: 0-0
 s20n3: 0-0
 s20n4: 0-0
-s20p: 0-0
 s20p2: 0-0
 s20s: 0-0
 s20t: 0-0
 s20x: 0-0
+s20x2: 9-9
 
 # document level annotation:
 (s20s0 / sentence
   :temporal ((DCT :before s20x)
-                       (s20e :before s20x))
+                       (s20x :before s20e))
 )
+
+
 
 
 # Source File: 

@@ -3,7 +3,7 @@ user id: 589
 file language: chinese
 file format: plain_text
 Doc ID in database: 1669
-export time: 2024/11/30 23:16:21
+export time: 2024/12/19 16:58:40
 
 # :: snt1	随着 冬至 当日 带来 的 罕见 寒潮 袭击 广东 ， 广州 市 气温 急骤 至 3.3 度 ， 打破 近年 纪录 。
 # sentence level graph:
@@ -22,23 +22,29 @@ export time: 2024/11/30 23:16:21
   :temporal (s1x8 / 随着)
   :Cause-of (s1x4 / 急骤-00
               :ARG0 (s1x5 / 气温
-                      :city (s1n2 / name
-                              :op1 (s1x9 / 广州市)))
+                      :place (s1c2 / city
+                               :name (s1n4 / name
+                                       :op1 "广州市")))
               :ARG1 (s1x6 / 至-01
                       :ARG1 (s1t / temperature-quantity
                               :quant 3.3
                               :unit (s1x12 / 度)
                               :ARG0-of (s1x13 / 打破-01
-                                         :ARG0 (s1x14 / 纪录
-                                                 :mod (s1x15 / 近年)))))
+                                         :ARG1 (s1x14 / 纪录
+                                                 :mod (s1x15 / 近年))
+                                         :Aspect Performance
+                                         :MODSTR FullAff))
+                      :Aspect State
+                      :MODSTR FullAff)
               :Aspect Performance
               :MODSTR FullAff))
 
 # alignment:s1a: 0-0
 s1c: -1--1
+s1c2: 0-0
 s1n: -1--1
-s1n2: 0-0
 s1n3: -1--1
+s1n4: -1--1
 s1p: 9-9
 s1t: 0-0
 s1x: 0-0
@@ -52,14 +58,14 @@ s1x4: 14-undefined
 s1x5: 13-13
 s1x6: 0-0
 s1x8: 0-0
-s1x9: 11-11
 
 # document level annotation:
 (s1s0 / sentence
   :temporal ((DCT :before s1a)
                        (s1x4 :after s1x6)
                        (s1x4 :Contained s1x13)
-                       (s1a :Contained s1x4))
+                       (s1a :Contained s1x4)
+                       (s1a :Contained s1x13))
 )
 
 
@@ -118,7 +124,8 @@ s2x9: 1-1
 (s2s0 / sentence
   :temporal ((DCT :before s2x16)
                        (s2x3 :overlap s2x4)
-                       (s2x3 :after s2x16))
+                       (s2x3 :after s2x16)
+                       (s2x9 :overlap s2x11))
 )
 
 
@@ -148,6 +155,8 @@ s2x9: 1-1
 # alignment:s3c: 9-9
 s3h: 0-0
 s3n: -1--1
+s3n2: -1--1
+s3p: 8-8
 s3x: 12-12
 s3x10: 6-6
 s3x12: 2-2
@@ -158,8 +167,6 @@ s3x6: 15-15
 s3x7: 14-14
 s3x8: 14-14
 s3x9: 13-13
-s3p: 8-8
-s3n2: -1--1
 
 # document level annotation:
 (s3s0 / sentence
@@ -170,28 +177,30 @@ s3n2: -1--1
 # :: snt4	面对 首次 在 寒冷 天气 返校 的 学生 ， 多地 教育 部门 发出 提醒 ， 要求 学校 不能 强迫 学生 穿 校服 ， 重视 学生 安全 。
 # sentence level graph:
 (s4x / 提醒-01
-  :ARG0 (s4n / name
+  :ARG0 (s4a2 / and
           :op1 (s4x2 / 教育)
           :op2 (s4x3 / 部门)
           :mod (s4x4 / 多地))
-  :ARG1 (s4x5 / 学校
-          :ARG1 (s4a / and
-                  :op1 (s4x6 / 强迫-01
-                         :ARG1 (s4x7 / 学生)
-                         :ARG2 (s4x8 / 穿-01
-                                 :ARG1 (s4x9 / 校服))
-                         :polarity -
-                         :Aspect Performance
-                         :MODSTR FullNeg)
-                  :op2 (s4x10 / 重视-01
-                         :ARG1 (s4x11 / 安全
-                                 :mod (s4x12 / 学生))
-                         :Aspect Performance
-                         :MODSTR FullAff)))
+  :ARG1 (s4x5 / 学校)
+  :ARG2 (s4a3 / and
+          :op1 (s4x9 / 强迫-01
+                 :ARG1 (s4x12 / 学生)
+                 :ARG2 (s4x10 / 穿-01
+                         :ARG1 (s4x11 / 校服)
+                         :Aspect Activity
+                         :MODSTR FullAff)
+                 :polarity -
+                 :Aspect Performance
+                 :MODSTR FullNeg)
+          :op2 (s4x6 / 重视-01
+                 :ARG1 (s4x7 / 安全
+                         :mod (s4x8 / 学生))
+                 :MODSTR FullAff
+                 :Aspect Activity))
   :Aspect Performance
   :MODSTR FullAff
   :temporal (s4x13 / 返校-01
-              :ARG0-of (s4x14 / 学生)
+              :ARG0 (s4x14 / 学生)
               :ord (s4o / ordinal-entity
                      :value (s4x15 / 1))
               :temporal (s4x16 / 天气
@@ -199,14 +208,12 @@ s3n2: -1--1
               :Aspect Activity
               :MODSTR FullAff))
 
-
-# alignment:s4a: 0-0
-s4n: 0-0
+# alignment:s4a3: 0-0
 s4o: 0-0
 s4x: 14-14
-s4x10: 24-24
-s4x11: 25-25
-s4x12: 25-25
+s4x10: -1--1
+s4x11: -1--1
+s4x12: -1--1
 s4x13: 6-6
 s4x14: 8-8
 s4x15: 2-2
@@ -216,17 +223,18 @@ s4x2: 11-11
 s4x3: 12-12
 s4x4: 10-10
 s4x5: 17-17
-s4x6: 19-19
-s4x7: 20-20
-s4x8: 21-21
-s4x9: 22-22
+s4x6: -1--1
+s4x7: -1--1
+s4x8: -1--1
+s4x9: -1--1
 
 # document level annotation:
 (s4s0 / sentence
   :temporal ((DCT :before s4x)
                        (s4x :overlap s4x6)
                        (s4x :overlap s4x10)
-                       (s4x :overlap s4x13))
+                       (s4x :overlap s4x13)
+                       (s4x9 :overlap s4x10))
 )
 
 
@@ -237,34 +245,40 @@ s4x9: 22-22
           :op1 (s5x / 强制-01
                  :ARG0 (s5x2 / 小学
                          :mod (s5x3 / 部分))
-                 :ARG1 s5x14
                  :ARG2 (s5x4 / 穿-01
                          :ARG1 (s5x6 / 校服)
-                         :mod (s5x5 / 外))
+                         :mod (s5x5 / 外)
+                         :Aspect State
+                         :MODSTR FullAff)
                  :polarity -
                  :Aspect State
                  :MODSTR FullNeg)
           :op2 (s5x7 / 提供-01
                  :ARG0 (s5x8 / 校
                          :mod (s5x9 / 有))
-                 :ARG1 (s5x11 / 保暖服)))
+                 :ARG1 (s5x11 / 保暖服)
+                 :Aspect Performance
+                 :MODSTR FullAff))
   :ARG2 (s5x20 / 投诉
           :ARG0 (s5x10 / 家长
-                  :mod (s5x14 / 中学生))
+                  :ARG3-of (s5h / have-rel-role-91
+                             :ARG2 (s5x15 / 中学生)))
           :ARG1 (s5x12 / 初中
                   :ARG0-of (s5x13 / 强制-01
                              :ARG1 (s5s / s5x14-)
                              :ARG2 (s5x21 / 穿-01
                                      :ARG1 (s5x22 / 校服)
-                                     :manner (s5x23 / 外
-                                               :ARG0-of (s5x15 / 外套))
+                                     :manner (s5x23 / 外)
                                      :ARG1-of (s5i2 / identity-91
                                                 :ARG2 (s5x16 / 难-01)
-                                                :ARG3 (s5x18 / 保暖-01)))))
+                                                :ARG3 (s5x18 / 保暖-01))
+                                     :Aspect Process
+                                     :MODSTR FullAff)
+                             :Aspect Process
+                             :MODSTR FullAff))
           :mod (s5x17 / 也)
           :Aspect Performance
           :MODSTR FullAff))
-
 
 # alignment:s5a: 0-0
 s5b: 0-0
@@ -275,8 +289,6 @@ s5x10: 0-0
 s5x11: 11-11
 s5x12: 20-20
 s5x13: 21-21
-s5x14: 0-0
-s5x15: 22-22
 s5x16: 27-27
 s5x17: 0-0
 s5x18: 28-28
@@ -291,13 +303,16 @@ s5x6: 5-5
 s5x7: 10-10
 s5x8: 9-9
 s5x9: 8-8
+s5h: 0-0
+s5x15: 16-16
 
 # document level annotation:
 (s5s0 / sentence
   :temporal ((DCT :overlap s5x)
                        (s5x :overlap s5x4)
                        (s5x :overlap s5x7)
-                       (s5x20 :overlap s5x13))
+                       (s5x20 :overlap s5x13)
+                       (s5x13 :overlap s5x21))
 )
 
 
@@ -306,31 +321,32 @@ s5x9: 8-8
 (s6x14 / 表示-01
   :ARG0 (s6x16 / 学生
           :ARG0-of (s6x2 / 发-01
-                     :ARG1 (s6x18 / 视频)))
+                     :ARG1 (s6x18 / 视频)
+                     :Aspect Performance
+                     :MODSTR FullAff))
   :ARG1 (s6a2 / and
           :op1 (s6x19 / 要求-01
                  :ARG0 (s6x20 / 学校)
                  :ARG1 (s6x21 / 学生)
                  :ARG2 (s6x22 / 着-01
                          :ARG1 (s6x / 校服)
-                         :manner (s6x24 / 外))
+                         :manner (s6x24 / 外)
+                         :Aspect State
+                         :MODSTR FullAff)
                  :Aspect Habitual
                  :MODSTR FullAff)
           :op2 (s6x3 / 似-01
                  :ARG0 (s6x4 / 学生
                          :quant (s6x5 / 许多))
-                 :ARG1 (s6p / person
-                         :name (s6n / name)
-                         :name (s6x6 / 轮胎-人))
+                 :ARG1 (s6x6 / 人
+                         :mod (s6x8 / 轮胎))
                  :mod (s6x7 / 酷)
                  :Aspect State
                  :MODSTR FullAff))
   :Aspect Performance
   :MODSTR FullAff)
 
-
 # alignment:s6a2: 0-0
-s6p: 0-0
 s6x: 9-9
 s6x14: 5-5
 s6x16: 2-2
@@ -343,46 +359,56 @@ s6x24: 11-11
 s6x3: 16-16
 s6x4: 15-15
 s6x5: 14-14
+s6x6: 19-19
 s6x7: 16-16
-s6n: 1-1
-s6x6: -1--1
+s6x8: 18-18
 
 # document level annotation:
 (s6s0 / sentence
   :temporal ((DCT :before s6x14)
-                       (s6x14 :before s6x19))
+                       (s6x14 :before s6x19)
+                       (s6x2 :overlap s6x14)
+                       (s6x19 :overlap s6x22)
+                       (s6x22 :after s6x3))
 )
 
 
 # :: snt7	冬至 广州 温 3.3 °C 至 12 °C 。
 # sentence level graph:
-(s7x / 温-00
-  :location (s7l / city
-              :name (s7n / name
-                      :op1 "广州"))
-  :temporal (s7t / 冬至)
-  :degree (s7d / range-entity
-            :op1 (s7d2 / degree-entity
-                   :value 3.3
-                   :unit "°C")
-            :op2 (s7d3 / degree-entity
-                   :value 12
-                   :unit "°C"))
-  :Aspect state
+(s7i2 / identity-91
+  :op2 (s7d / degree-entity
+         :value 12
+         :unit "MISSING-VALUE")
+  :ARG1 (s7x2 / 温
+          :place (s7c2 / city
+                   :name (s7n / name
+                           :op1 "广州"))
+          :temporal (s7x3 / 冬至))
+  :ARG2 (s7r / range-entity
+          :op1 (s7d4 / degree-entity
+                 :value 3.3
+                 :unit (s7c / c))
+          :op2 (s7r2 / range-entity
+                 :value 12
+                 :unit (s7c3 / c)))
+  :Aspect Performance
   :MODSTR FullAff)
 
-
-# alignment:s7d: 0-0
-s7d2: 0-0
-s7d3: 0-0
-s7l: 0-0
-s7n: 0-0
-s7t: 0-0
-s7x: 0-0
+# alignment:s7c2: 2-2
+s7d: 0-0
+s7d4: 0-0
+s7i2: 0-0
+s7n: -1--1
+s7r: 0-0
+s7x2: 3-3
+s7x3: 1-1
+s7c: 5-5
+s7r2: 0-0
+s7c3: 8-8
 
 # document level annotation:
 (s7s0 / sentence
-  :temporal ((DCT :before s7x))
+  :temporal ((DCT :before s7i2))
 )
 
 
@@ -393,7 +419,8 @@ s7x: 0-0
           :name (s8n / name
                   :op1 (s8x2 / 教育局))
           :place (s8c / city
-                   :name (s8x3 / 广州-市)))
+                   :name (s8n2 / name
+                           :op1 "广州")))
   :ARG1 (s8x4 / 强制-01
           :ARG0 s8p
           :ARG1 (s8x5 / 要求-01
@@ -412,26 +439,26 @@ s7x: 0-0
   :Aspect Performance
   :MODSTR FullAff)
 
-
-# alignment:s8x: 4-4
-s8p: 0-0
+# alignment:s8c: 1-1
 s8n: 0-0
-s8c: 0-0
+s8n2: -1--1
+s8p: 0-0
+s8x: 4-4
+s8x10: 13-13
 s8x2: 3-3
-s8x3: -1--1
 s8x4: 7-7
 s8x5: 8-8
 s8x6: 9-9
 s8x7: 11-11
 s8x8: 12-12
 s8x9: 10-10
-s8x10: 13-13
 
 # document level annotation:
 (s8s0 / sentence
   :temporal ((DCT :before s8x)
                        (s8x :after s8x4)
-                       (s8x :after s8x7))
+                       (s8x :after s8x7)
+                       (s8x4 :overlap s8x5))
 )
 
 
@@ -440,21 +467,26 @@ s8x10: 13-13
 (s9x / 回应-01
   :ARG0 (s9p / political-organization
           :name (s9x2 / 教育局)
-          :place (s9c / city
-                   :op1 (s9x3 / 广州市)))
+          :place (s9c2 / city
+                   :name (s9n / name
+                           :op1 "广州")))
   :ARG1 (s9b / but-91
           :op1 (s9a / and
                  :op1 (s9x6 / 提醒-01
                         :ARG0 s9p
                         :ARG1 (s9x7 / 学校)
                         :ARG2 (s9x8 / 重视-01
-                                :ARG1 (s9x9 / 安全))
+                                :ARG1 (s9x9 / 安全)
+                                :Aspect Process
+                                :MODSTR FullAff)
                         :Aspect Performance
                         :MODSTR FullAff)
                  :op2 (s9x4 / 强制-01
                         :ARG0 s9p
                         :ARG1 (s9x10 / 要求-01
-                                :ARG1 (s9x11 / 校服))
+                                :ARG1 (s9x11 / 校服)
+                                :Aspect Habitual
+                                :MODSTR FullAff)
                         :polarity -
                         :Aspect Performance
                         :MODSTR FullNeg))
@@ -473,10 +505,8 @@ s8x10: 13-13
   :Aspect Performance
   :MODSTR FullAff)
 
-
 # alignment:s9a: 0-0
 s9b: 0-0
-s9c: 0-0
 s9p: 0-0
 s9t: 0-0
 s9x: 8-8
@@ -489,20 +519,24 @@ s9x15: 25-25
 s9x16: 26-26
 s9x17: 27-27
 s9x2: 7-7
-s9x3: 5-5
 s9x4: 18-18
 s9x5: 3-3
 s9x6: 11-11
 s9x7: 12-12
 s9x8: 14-14
 s9x9: 15-15
+s9c2: 5-5
+s9n: -1--1
 
 # document level annotation:
 (s9s0 / sentence
   :temporal ((DCT :before s9x)
                        (s9x :before s9x6)
                        (s9x :after s9x4)
-                       (s9x :after s9x13))
+                       (s9x :after s9x13)
+                       (s9x4 :overlap s9x10)
+                       (s9x6 :overlap s9x8)
+                       (s9x13 :overlap s9x15))
 )
 
 
@@ -525,8 +559,9 @@ s9x9: 15-15
                          :mod (s10x13 / 首批))
                  :mod (s10x14 / 易)
                  :Aspect habitual
-                 :MODSTR FullAff)))
-
+                 :MODSTR FullAff))
+  :Aspect Performance
+  :MODSTR FullAff)
 
 # alignment:s10a: 0-0
 s10x: 0-0
@@ -555,14 +590,14 @@ s10x9: 11-11
 (s11a / and
   :op1 (s11x / 影响-01
          :ARG0 (s11x15 / 强制-01
-                 :ARG2 (s11x2 / 校服-00))
+                 :ARG2 (s11x2 / 校服-00)
+                 :MODSTR FullAff
+                 :Aspect Habitual)
          :ARG1 (s11x3 / 安全-01)
          :Aspect State
          :MODSTR PrtNeg)
   :op2 (s11x4 / 指引-01
-         :ARG0 (s11p / political-organization
-                 :name (s11n / name
-                         :op1 (s11x6 / 教育部门)))
+         :ARG0 (s11x5 / 部门)
          :ARG1 (s11x8 / 学校)
          :ARG2 (s11x9 / 以-01
                  :ARG1 (s11x10 / 生命-至上))
@@ -571,14 +606,13 @@ s10x9: 11-11
   :op3 (s11x11 / 着重-01
          :ARG1 (s11x12 / 学生)
          :ARG2 (s11x13 / 体验-01
-                 :ARG1 (s11x14 / 安全))
+                 :ARG1 (s11x14 / 安全)
+                 :Aspect Process
+                 :MODSTR FullAff)
          :Aspect State
          :MODSTR FullAff))
 
-
 # alignment:s11a: 0-0
-s11n: 0-0
-s11p: 0-0
 s11x: 1-1
 s11x10: 12-13
 s11x11: 15-15
@@ -586,32 +620,35 @@ s11x12: 16-16
 s11x13: 17-17
 s11x14: 18-18
 s11x15: 1-1
-s11x4: 9-9
-s11x6: 7-7
-s11x8: 10-10
-s11x9: 11-11
 s11x2: 2-2
 s11x3: 5-5
+s11x4: 9-9
+s11x8: 10-10
+s11x9: 11-11
+s11x5: 8-8
 
 # document level annotation:
 (s11s0 / sentence
   :temporal ((DCT :overlap s11x)
                        (DCT :before s11x4)
-                       (s11x4 :overlap s11x11))
+                       (s11x4 :overlap s11x11)
+                       (s11x15 :after s11x)
+                       (s11x15 :overlap s11x2)
+                       (s11x11 :overlap s11x13))
 )
 
 
 # :: snt12	广州 教育局 22 日 表示 ， 提醒 各 学校 在 通知 返校 时 ， 应 提醒 学生 注意 保暖 ， 而 非 强制 要求 必须 穿 校服 ， 此外 ， 也 宜 提供 学生 热饮 以 避寒 ，
 # sentence level graph:
 (s12x / 表示-01
-  :ARG0 (s12p / political-organization
-          :name (s12n / name
-                  :op1 (s12x3 / 广州)
-                  :op2 (s12x21 / 教育局)))
+  :ARG0 (s12x3 / 教育局
+          :place (s12c / city
+                   :name (s12n / name
+                           :op1 "广州")))
   :ARG1 (s12a / and-contrast
           :op1 (s12b / but-91
                  :op1 (s12x2 / 提醒-01
-                        :ARG0 s12p
+                        :ARG0 (s12p / political-organization)
                         :ARG1 (s12x5 / 学生)
                         :ARG2 (s12x6 / 注意-01
                                 :ARG1 (s12x7 / 保暖))
@@ -650,11 +687,10 @@ s11x3: 5-5
   :Aspect Performance
   :QUOT s12x)
 
-
 # alignment:s12a: 0-0
 s12b: 0-0
 s12d: 0-0
-s12n: 0-0
+s12n: -1--1
 s12p: 0-0
 s12x: 0-0
 s12x10: 27-27
@@ -668,19 +704,26 @@ s12x17: 9-9
 s12x18: 8-8
 s12x19: 12-12
 s12x2: 16-16
-s12x21: 2-2
-s12x3: 1-1
+s12x3: 2-2
 s12x4: 23-23
 s12x5: 0-0
 s12x6: 18-18
 s12x7: 19-19
 s12x8: 24-24
 s12x9: 26-26
+s12c: 1-1
 
 # document level annotation:
 (s12s0 / sentence
   :temporal ((DCT :before s12x)
-                       (s12x16 :after s12x19))
+                       (s12x2 :after s12x6)
+                       (s12x4 :overlap s12x8)
+                       (s12x8 :overlap s12x9)
+                       (s12x11 :overlap s12x12)
+                       (s12x16 :overlap s12x19)
+                       (s12x16 :overlap s12x2)
+                       (s12x16 :overlap s12x4)
+                       (s12x16 :overlap s12x11))
 )
 
 
@@ -688,38 +731,42 @@ s12x9: 26-26
 # sentence level graph:
 (s13x9 / 呼吁-01
   :ARG0 (s13x10 / 学校
-          :quant (s13x11 / 多所)
-          :location (s13x12 / 宁波))
+          :quant (s13x3 / 多)
+          :place (s13c / city
+                   :name (s13n / name
+                           :op1 "宁波"))
+          :unit (s13x4 / 所))
   :ARG1 (s13x13 / 穿-01
           :ARG0 (s13x14 / 学生)
           :ARG1 (s13x16 / 校服)
-          :ARG2 (s13x2 / 上下课)
           :polarity -
           :MODSTR PrtNeg
           :temporal (s13x / 近期)
-          :Aspect State)
+          :Aspect State
+          :temporal (s13x2 / 上下课-00
+                      :Aspect Habitual
+                      :MODSTR FullAff))
   :MODSTR FullAff
   :manner (s13x20 / 同样)
-  :Aspect Imperfective
-  :QUOT (s13s / s13x9-))
-
+  :Aspect Performance)
 
 # alignment:s13x: 7-7
 s13x10: 0-0
-s13x11: 0-0
-s13x12: 0-0
 s13x13: 0-0
 s13x14: 0-0
 s13x16: 0-0
 s13x2: 14-14
 s13x20: 0-0
 s13x9: 0-0
-s13s: 0-0
+s13c: 1-1
+s13n: -1--1
+s13x4: 2-2
 
 # document level annotation:
 (s13s0 / sentence
   :temporal ((DCT :before s13x9)
-                       (s13x9 :after s13x13))
+                       (s13x9 :after s13x13)
+                       (s13x13 :overlap s13x2))
 )
 
 
@@ -730,25 +777,30 @@ s13s: 0-0
   :ARG1 (s14a / and
           :op1 (s14x3 / 异常-01
                  :ARG0 (s14x4 / 速度
-                         :ARG0-of (s14x5 / 降温-01
-                                    :ARG0 (s14x6 / 地区
-                                            :mod (s14x7 / 南方))
-                                    :temporal (s14x8 / 今年))
-                         :Aspect performance
-                         :MODSTR FullAff)
+                         :mod (s14x5 / 降温-01
+                                :temporal (s14x8 / 今年)
+                                :place (s14x15 / 地区
+                                         :mod (s14x6 / 南方))
+                                :Aspect Performance
+                                :MODSTR FullAff))
                  :Aspect state
                  :MODSTR FullAff)
           :op2 (s14x9 / 容易-01
                  :ARG0 (s14x16 / 学生
                          :ARG0-of (s14x11 / 体验-01
-                                    :ARG1 (s14x12 / 寒冬))
+                                    :ARG1 (s14x12 / 寒冬)
+                                    :Aspect Habitual
+                                    :MODSTR FullAff)
                          :mod (s14x13 / 批
                                 :ord (s14o / ordinal-entity
                                        :value (s14x14 / 1))))
-                 :ARG1 (s14x10 / 感冒-01)
+                 :ARG1 (s14x10 / 感冒-01
+                         :Aspect Habitual
+                         :MODSTR FullAff)
                  :Aspect habitual
-                 :MODSTR FullAff)))
-
+                 :MODSTR FullAff))
+  :Aspect Performance
+  :MODSTR FullAff)
 
 # alignment:s14a: 0-0
 s14o: 0-0
@@ -758,20 +810,22 @@ s14x11: 13-12
 s14x12: 14-14
 s14x13: 12-12
 s14x14: 11-11
+s14x15: 5-5
 s14x16: 16-16
 s14x2: 0-0
 s14x3: 0-0
 s14x4: 0-0
 s14x5: 0-0
-s14x6: 0-0
-s14x7: 0-0
 s14x8: 0-0
 s14x9: 0-0
+s14x6: 4-4
 
 # document level annotation:
 (s14s0 / sentence
   :temporal ((DCT :before s14x)
-                       (s14x5 :after s14x10))
+                       (s14x3 :after s14x9)
+                       (s14x3 :overlap s14x5)
+                       (s14x11 :after s14x10))
 )
 
 
@@ -799,7 +853,6 @@ s14x9: 0-0
          :Aspect habitual
          :MODSTR FullAff))
 
-
 # alignment:s15x: 0-0
 s15x10: 13-13
 s15x13: -1--1
@@ -815,7 +868,8 @@ s15x9: 14-14
 # document level annotation:
 (s15s0 / sentence
   :temporal ((DCT :before s15x)
-                       (s15x4 :after s15x7))
+                       (s15x4 :after s15x7)
+                       (s15x7 :after s15x8))
 )
 
 
@@ -830,12 +884,13 @@ s15x9: 14-14
                         :mod (s16x7 / 首要)
                         :ARG0-of (s16x8 / 为
                                    :ARG1 (s16x9 / 安全
-                                           :mod (s16x10 / 学生))))
+                                           :mod (s16x10 / 学生))
+                                   :Aspect State
+                                   :MODSTR FullAff))
           :Aspect Performance
           :MODSTR NeutAff)
   :Aspect Performance
   :MODSTR FullAff)
-
 
 # alignment:s16x: 0-0
 s16x10: 11-11
@@ -859,18 +914,24 @@ s16x9: 12-12
 # sentence level graph:
 (s17x / 下达-01
   :ARG0 (s17x2 / 教育局
-          :location (s17l / 泉州))
+          :place (s17c / city
+                   :name (s17n / name
+                           :op1 "泉州")))
   :ARG1 (s17x3 / 通知-01
           :ARG1 (s17x4 / 禁止-01
                   :ARG1 (s17x5 / 强迫-01
                           :ARG0 (s17x6 / 校方)
                           :ARG1 (s17x7 / 学生
                                   :ARG1-of (s17x8 / 穿-01
-                                             :ARG1 (s17x9 / 校服)))
+                                             :ARG1 (s17x9 / 校服)
+                                             :Aspect Habitual
+                                             :MODSTR FullAff))
                           :Aspect performance
                           :MODSTR FullAff)
                   :Aspect performance
-                  :MODSTR FullAff))
+                  :MODSTR FullAff)
+          :Aspect Performance
+          :MODSTR FullAff)
   :mod (s17x10 / 也)
   :Aspect performance
   :MODSTR FullAff
@@ -886,8 +947,8 @@ s16x9: 12-12
              :Aspect Performance
              :MODSTR FullAff))
 
-
-# alignment:s17l: 0-0
+# alignment:s17c: 1-1
+s17n: -1--1
 s17x: 0-0
 s17x10: 0-0
 s17x12: 21-21
@@ -909,7 +970,11 @@ s17x9: 0-0
 # document level annotation:
 (s17s0 / sentence
   :temporal ((DCT :before s17x)
-                       (s17x3 :after s17x4))
+                       (s17x3 :after s17x4)
+                       (s17x4 :overlap s17x5)
+                       (s17x5 :overlap s17x8)
+                       (s17x4 :after s17x17)
+                       (s17x17 :overlap s17x19))
 )
 
 
@@ -921,13 +986,15 @@ s17x9: 0-0
           :op1 (s18x3 / 延后-01
                  :ARG0 (s18x7 / 学校)
                  :ARG1 (s18x4 / 日期
-                         :mod (s18x5 / 返校))
+                         :mod (s18x5 / 返校-01))
                  :manner (s18x6 / 适度)
-                 :Aspect performance
+                 :Aspect Habitual
                  :MODSTR FullAff)
           :op2 (s18x8 / 安排-01
-                 :ARG1 (s18x9 / 返校
-                         :mod (s18x10 / 分批))
+                 :ARG1 (s18x9 / 返校-01
+                         :manner (s18x10 / 分批)
+                         :Aspect Habitual
+                         :MODSTR FullAff)
                  :Aspect performance
                  :MODSTR FullAff))
   :purpose (s18x11 / 适应-01
@@ -936,7 +1003,6 @@ s17x9: 0-0
              :MODSTR FullAff)
   :MODSTR FullAff
   :Aspect Performance)
-
 
 # alignment:s18a: 0-0
 s18x: 0-0
@@ -956,7 +1022,10 @@ s18x9: 0-0
 (s18s0 / sentence
   :temporal ((DCT :before s18x)
                        (s18x :after s18x3)
-                       (s18x :after s18x8))
+                       (s18x :after s18x8)
+                       (s18x8 :after s18x9)
+                       (s18x3 :after s18x11)
+                       (s18x8 :after s18x11))
 )
 
 

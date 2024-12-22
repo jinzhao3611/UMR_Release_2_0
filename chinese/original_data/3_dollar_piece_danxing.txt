@@ -3,7 +3,7 @@ user id: 582
 file language: chinese
 file format: plain_text
 Doc ID in database: 1692
-export time: 2024/12/2 14:48:02
+export time: 2024/12/18 21:57:52
 
 # :: snt1	3 美元 金币 （ 英语 ： three-dollar piece ） 是 由 美国 铸币局 该 局 首席 雕刻师 詹姆斯 · 巴顿 · 朗埃克 设计 ， 1853 年 2 月 21 日 获得 授权 ， 于 1854 至 1889 年 间 生产 的 一种 金币 。
 # sentence level graph:
@@ -139,12 +139,13 @@ s2a2: -1--1
 # document level annotation:
 (s2s0 / sentence
   :temporal ((DCT :before s2x)
-                       (DCT :before s2i4))
+                       (DCT :before s2i4)
+		        (PRESENT_REF:overlap s2x)
+			(PRESENT_REF:overlap s2i4)
+			(PRESENT_REF:overlap s2x15))
   :modal ((AUTH :FullAff s2x)
                        (AUTH :FullAff s2i4))
-)
-
-
+  :coref ((s1x4 :same-entity s2c)))
 
 
 # :: snt3	1851 年 ， 联邦 国会 授权 发行 银质 3 美分 硬币 ， 以便 人们 今后 在 购买 3 美分 邮票 时 不 再 需要 使用 很 不得人心 的 铜质 分币 。
@@ -158,7 +159,9 @@ s2a2: -1--1
           :arg1 (s3x3 / 硬币
                   :unit (s3x4 / 美分)
                   :quant 3
-                  :material (s3x15 / 银质)))
+                  :material (s3x15 / 银质))
+          :Aspect Performance
+          :MODSTR FullAff)
   :Aspect Performance
   :MODSTR FullAff
   :time (s3d / date-entity
@@ -176,9 +179,10 @@ s2a2: -1--1
                                         :arg1 (s3x19 / 邮票
                                                 :quant 3
                                                 :unit (s3x20 / 美分))
-                                        :temporal (s3x16 / 今后))))
-             :MODSTR FullNeg))
-
+                                        :temporal (s3x16 / 今后)
+                                        :Aspect Activity
+                                        :MODSTR NeutAff))
+                     :MODSTR FullNeg)))
 
 # alignment:s3d: 1-1
 s3g: 4-5
@@ -203,13 +207,14 @@ s3x9: -1--1
 (s3s0 / sentence
   :temporal ((s3x :after s3x14)
                        (DCT :after s3x)
-                       (s3x6 :overlap s3x14))
+                       (s3x6 :overlap s3x14)
+                       (s3x :after s3x2)
+                       (s3x :after s3x9)
+                       (s3x9 :overlap s3x14))
   :modal ((AUTH :FullAff s3x)
                        (AUTH :FullNeg s3x14)
                        (AUTH :PrtAff s3x9))
 )
-
-
 
 
 # :: snt4	两年 后 ， 国会 又 通过 法案 授权 发行 3 美元 金币 。
@@ -226,25 +231,26 @@ s3x9: -1--1
   :Aspect performance
   :MODSTR FullAff
   :manner (s4x5 / 授权-01
-            :ARG0 (s4x6 / 法案)))
-
+            :ARG0 (s4x6 / 法案)
+            :Aspect Performance
+            :MODSTR FullAff))
 
 # alignment:s4g: 1-1
 s4n: -1--1
-s4x7: 1-1
-s4x8: 1-1
 s4x3: 1-1
 s4x5: 1-1
 s4x6: 1-1
+s4x7: 1-1
+s4x8: 1-1
 
 # document level annotation:
 (s4s0 / sentence
-  :temporal ((s3d :after s4x3))
+  :temporal ((s3d :after s4x3)
+                       (s4x :after s4x2)
+                       (s4x :after s4x5))
   :modal ((ROOT :MODAL AUTH)
                        (AUTH :FullAff s4x))
 )
-
-
 
 
 # :: snt5	部分 来源 认为 ， 这种 金币 是 为了 方便 人们 大量 购买 邮票 。
@@ -252,7 +258,7 @@ s4x6: 1-1
 (s5x / 认为-01
   :ARG0 (s5x2 / 来源
           :mod (s5x3 / 部分))
-  :ARG1 (s5h / have-topic-of
+  :ARG1 (s5i2 / identity-91
           :ARG1 (s5x4 / 金币
                   :mod (s5x5 / 这)
                   :unit (s5x11 / 种))
@@ -261,19 +267,20 @@ s4x6: 1-1
                      :ARG1 (s5x8 / 购买-01
                              :ARG1 (s5x9 / 邮票)
                              :mod (s5x10 / 大量)
-                             :MODSTR FullAff)
+                             :MODSTR FullAff
+                             :Aspect Process)
                      :Aspect habitual
                      :MODSTR FullAff))
   :Aspect state
   :MODSTR FullAff)
-
 
 # alignment:s5x11: 5-5
 
 # document level annotation:
 (s5s0 / sentence
   :temporal ((DCT :before s5x)
-                       (s5x :after s5h))
+                       (s5x6 :overlap s5x8)
+                       (s5x :after s5x6))
   :modal ((ROOT :PrtAff s5x)
                        (ROOT :PrtAff s5x8))
   :coref ((s4x7 :same-entity s5x4)))
@@ -302,17 +309,20 @@ s4x6: 1-1
           :ARG1-of (s6i2 / identity-91
                      :ARG2 (s6a / and
                              :op1 (s6x12 / 薄-01
-                                    :ARG0 (s6x13 / 坯饼))
+                                    :ARG0 (s6x13 / 坯饼)
+                                    :Aspect State
+                                    :MODSTR FullAff)
                              :op2 (s6x14 / 别具一格-01
                                     :ARG0 (s6x15 / 图案
-                                            :Part-of (s6x16 / 设计))))))
+                                            :Part-of (s6x16 / 设计))
+                                    :Aspect State
+                                    :MODSTR FullAff))))
   :Aspect Performance
   :MODSTR FullAff
   :temporal (s6t / 时
               :op1 (s6d2 / 设计-01
                      :ARG0 s6p
                      :ARG1 (s6x2 / 金币))))
-
 
 # alignment:s6a: 0-0
 s6a2: 0-0
@@ -336,14 +346,13 @@ s6x9: 14-14
 (s6s0 / sentence
   :temporal ((DCT :before s6x)
                        (s6x :after s6i2)
-                       (s6x :after s6e))
+                       (s6x :after s6e)
+                       (s6d2 :overlap s6x)
+                       (s6x12 :overlap s6x14))
   :modal ((AUTH :FullAff s6x)
                        (AUTH :FullAff s6e2)
-                       (AUTH :FullAff s6x12)
-                       (AUTH :FullAff s6x14))
+                       (AUTH :FullAff s6x12))
 )
-
-
 
 
 # :: snt7	金币 投产 后 的 第一 年 就 出产 了 超过 10 万 枚 ， 但 其 流通 程度 非常 有限 。
@@ -353,7 +362,9 @@ s6x9: 14-14
          :ARG1 (s7x1 / 金币
                  :arg1-of (s7x9 / 超过
                             :unit (s7x10 / 枚)
-                            :quant "10万"))
+                            :quant "10万"
+                            :Aspect Performance
+                            :MODSTR FullAff))
          :Aspect performance
          :MODSTR FullAff
          :temporal (s7x3 / 后
@@ -371,7 +382,6 @@ s6x9: 14-14
          :degree (s7x8 / 非常)
          :Aspect state
          :MODSTR FullAff))
-
 
 # alignment:s7o: 5-5
 s7t2: 0-0
@@ -391,11 +401,8 @@ s7x9: -1--1
 (s7s0 / sentence
   :temporal ((DCT :before s7x)
                        (s7x :after s7x7))
-  :modal ((AUTH :FullAff s7x)
-                       (AUTH :Strong-PrtAff s7x7))
+  :modal ((AUTH :FullAff s7x))
 )
-
-
 
 
 # :: snt8	虽然 美国 西岸 部分 地区 不 接受 纸币 ， 只能 使用 金币 和 银币 ， 但 东部 的 情况 截然 不同 ， 特别 是 在 经济 因 内战 爆发 而 陷入 动荡 后 ， 3 美元 金币 基本上 在 东部 的 商品 交易 中 难得 一见 ， 并且 此后 再也 没有 出现 过 大范围 流通 。
@@ -412,7 +419,7 @@ s7x9: -1--1
                 :arg1 (s8x10 / 纸币)
                 :Aspect State
                 :MODSTR FullNeg)
-         :op1 (s8x2 / 使用-01
+         :op2 (s8x2 / 使用-01
                 :ARG1 (s8a2 / and
                         :op1 (s8x11 / 金币)
                         :op2 (s8x12 / 银币))
@@ -427,7 +434,7 @@ s7x9: -1--1
          :Aspect State
          :MODSTR FullAff
          :example (s8a3 / and
-                    :op1 (s8x23 / 难得-一见
+                    :op1 (s8x17 / 一见
                            :arg1 (s8x18 / 金币
                                    :quant 3
                                    :unit (s8x19 / 美元))
@@ -436,11 +443,12 @@ s7x9: -1--1
                                             :op1 "东部")
                                     :Part-of (s8s / s8c))
                            :Aspect Habitual
-                           :MODSTR PrtNeg)
+                           :MODSTR PrtNeg
+                           :mod (s8x23 / 难得))
                     :op2 (s8x24 / 出现-01
                            :arg1 (s8x15 / 流通
                                    :ARG0 s8x18
-                                   :range (s8x16 / 大范围))
+                                   :mod (s8x16 / 大范围))
                            :MODSTR FullNeg
                            :Aspect Performance
                            :mod (s8x14 / 再也))
@@ -452,9 +460,7 @@ s7x9: -1--1
                                                  :ARG0 (s8x22 / 内战))
                                        :Aspect Performance
                                        :MODSTR FullAff)
-                                :mod (s8x / 特别-是)))
-         :ARG0 s8x5))
-
+                                :mod (s8x / 特别)))))
 
 # alignment:s8a: 0-0
 s8a2: 0-0
@@ -480,7 +486,7 @@ s8x2: 11-11
 s8x20: 29-29
 s8x21: -1--1
 s8x22: 28-28
-s8x23: 45-46
+s8x23: 45-45
 s8x24: 52-52
 s8x3: -1--1
 s8x4: -1--1
@@ -493,12 +499,14 @@ s8x9: 33-33
 # document level annotation:
 (s8s0 / sentence
   :temporal ((s8x4 :Contained s8x2)
-                       (s8x20 :after s8x13)
-                       (s8x13 :overlap s8x23)
-                       (s8x13 :after s8x24))
+    (s8x20 :after s8x13)
+    (s8x13 :overlap s8x23)
+    (s8x13 :after s8x24)
+    (DCT :before s8x4)
+    (s8x20 :after s8x15)
+    (s8x13 :after s8x17))
   :modal ((AUTH :FullAff s8x2)
-                       (AUTH :Strong-PrtAff s8x23)
-                       (AUTH :FullNeg s8x4))
+    )
 )
 
 
@@ -519,20 +527,23 @@ s8x9: 33-33
                          :op1 "国会"))
          :ARG1 (s9x9 / 授权-01
                  :ARG1-of (s9x10 / 发行-01
-                            :ARG1 s9x2))
-         :temporal (s9x7 / date-entity
-                     :year (s9x6 / 1990))
+                            :ARG1 s9x2)
+                 :Aspect Performance
+                 :MODSTR FullNeg)
          :Aspect performance
-         :MODSTR FullAff))
-
+         :MODSTR FullAff
+         :temporal (s9x8 / 次年)))
 
 # alignment:s9g: 9-9
 s9n: -1--1
+s9x8: 11-11
 
 # document level annotation:
 (s9s0 / sentence
   :temporal ((s9x :after s9x5)
-                       (DCT :before s9x))
+                       (DCT :before s9x)
+                       (s9x5 :after s9x9)
+                       (s9x9 :after s9x10))
 )
 
 
@@ -583,7 +594,6 @@ s9n: -1--1
                 :Aspect state
                 :MODSTR FullAff)))
 
-
 # alignment:s10a: 0-0
 s10a2: -1--1
 s10b: 0-0
@@ -617,7 +627,8 @@ s10x9: -1--1
 (s10s0 / sentence
   :temporal ((s10h :Contained s10i3)
                        (s10h :Contained s10x13)
-                       (s10x13 :overlap s10x18))
+                       (s10x13 :overlap s10x18)
+                       (PRESENT_REF :overlap s10x5))
   :modal ((AUTH :FullAff s10a)
                        (AUTH :FullAff s10x16))
   :coref ((s9x2 :same-entity s10x8)))

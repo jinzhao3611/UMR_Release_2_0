@@ -3,7 +3,7 @@ user id: 589
 file language: chinese
 file format: plain_text
 Doc ID in database: 1683
-export time: 2024/11/30 23:17:19
+export time: 2024/12/19 16:58:59
 
 # :: snt1	2024 年 4 月 8 日 日食 是 一次 日全食 ， 发生 于 2024 年 4 月 8 日 （ 基里巴斯 部分 区域 和 托克劳 看到 的 日偏食 在 4 月 9 日 ） 。
 # sentence level graph:
@@ -11,10 +11,12 @@ export time: 2024/11/30 23:17:19
   :op1 (s1i3 / identity-91
          :ARG1 (s1x / 日食
                  :ARG0-of (s1x4 / 发生-01
-                            :temporal (s1t / temporal-quantity
+                            :temporal (s1d2 / date-quantity
                                         :day 8
                                         :month 4
-                                        :year (s1x5 / 2024-)))
+                                        :year (s1x5 / 2024))
+                            :Aspect Performance
+                            :MODSTR FullAff)
                  :temporal (s1t2 / temporal-quantity
                              :day 8
                              :month 4
@@ -45,7 +47,6 @@ s1c3: 25-25
 s1i3: 0-0
 s1n: -1--1
 s1n2: -1--1
-s1t: -1--1
 s1t2: -1--1
 s1x: -1--1
 s1x2: -1--1
@@ -68,71 +69,77 @@ s1x8: 22-22
 (s2h / have-condition-91
   :ARG1 (s2x / 出现-01
           :ARG1 (s2x2 / 日食)
-          :Aspect State
+          :Aspect Performance
           :MODSTR FullAff)
   :ARG2 (s2a / and
-          :op1 (s2x3 / 观测-01
-                 :ARG1 (s2x5 / 角-距离
-                         :mod (s2x8 / 极小)
-                         :mod (s2a3 / and
-                                :op1 (s2x18 / 月球)
-                                :op2 (s2x19 / 太阳)))
-                 :place (s2x4 / 地球)
-                 :temporal (s2x6 / 新月
-                             :mod (s2x7 / 当天))
-                 :Aspect State
-                 :MODSTR FullAff)
-          :op2 (s2a2 / and
-                 :op1 (s2x9 / 穿过-01
-                        :ARG0 (s2x12 / 月球
-                                :place (s2x13 / 月球交点
-                                         :mod (s2x14 / 附近)))
-                        :ARG1 (s2a4 / and
-                                :op1 (s2x10 / 太阳)
-                                :op2 (s2x11 / 地球))
-                        :Aspect Process
-                        :MODSTR FullAff)
-                 :op2 (s2x15 / 接近-03
-                        :ARG0 (s2a5 / and
-                                :op1 s2x12
-                                :op2 (s2x17 / 地球)
-                                :op3 (s2x20 / 太阳))
-                        :ARG1 (s2x16 / 一直线)
-                        :Aspect State
-                        :MODSTR FullAff))))
+          :op1 (s2x3 / 穿过-01
+                 :ARG0 (s2p7 / planet
+                         :name (s2n3 / name
+                                 :op1 (s2x15 / 月球))
+                         :place (s2x12 / 交点
+                                  :mod (s2x13 / 附近)
+                                  :poss (s2p5 / planet)))
+                 :ARG1 (s2x4 / 之间
+                         :op1 s2p4
+                         :op2 (s2p / planet
+                                :name (s2n4 / name
+                                        :op1 "地球")))
+                 :MODSTR FullAff
+                 :Aspect Performance)
+          :op2 (s2x9 / 接近-03
+                 :ARG0 (s2a4 / and
+                         :op1 s2p7
+                         :op2 s2p4
+                         :op3 s2p)
+                 :ARG1 (s2x10 / 直线
+                         :value 1)
+                 :MODSTR FullAff
+                 :Aspect State)
+          :temporal (s2x5 / 新月
+                      :op1 (s2x7 / 观测-01
+                             :ARG1 (s2x8 / 角-距离
+                                     :mod (s2x11 / 极小)
+                                     :mod (s2a3 / and
+                                            :op1 s2p7
+                                            :op2 (s2p4 / planet
+                                                   :name (s2n / name
+                                                           :op1 "太阳"))))
+                             :Aspect Performance
+                             :MODSTR FullAff)
+                      :mod (s2x6 / 当天))))
 
 # alignment:s2a: 0-0
-s2a2: 0-0
+s2a3: -1--1
+s2a4: -1--1
 s2h: 0-0
+s2n: -1--1
+s2n3: 20-20
+s2n4: -1--1
+s2p: 0-0
+s2p4: 0-0
+s2p5: 0-0
+s2p7: 0-0
 s2x: 43-43
-s2x10: 29-29
-s2x11: 31-31
-s2x12: 0-0
-s2x13: 26-26
-s2x14: 26-26
-s2x15: 38-38
-s2x16: 39-39
-s2x17: 35-35
+s2x10: -1--1
+s2x11: -1--1
+s2x12: -1--1
+s2x13: -1--1
+s2x15: 0-0
 s2x2: 44-44
-s2x3: 9-9
-s2x4: 7-7
-s2x5: 15-16
-s2x6: 1-1
-s2x7: 2-2
-s2x8: 17-17
-s2x9: 28-28
-s2a3: 0-0
-s2x18: 11-11
-s2x19: 13-13
-s2a4: 0-0
-s2a5: 0-0
-s2x20: 37-37
+s2x3: 0-0
+s2x4: -1--1
+s2x5: -1--1
+s2x6: -1--1
+s2x7: -1--1
+s2x8: -1--1
+s2x9: -1--1
 
 # document level annotation:
 (s2s0 / sentence
   :temporal ((DCT :before s2x)
                        (s2x3 :overlap s2x9)
-                       (s2x9 :after s2x15))
+                       (s2x :before s2x3)
+                       (s2x :before s2x9))
 )
 
 
@@ -142,44 +149,75 @@ s2x20: 37-37
   :op1 (s3h / have-condition-91
          :ARG1 (s3x / 形成-01
                  :ARG2 (s3x2 / 日全食)
-                 :MODSTR FullAff)
+                 :MODSTR FullAff
+                 :Aspect Performance)
          :ARG2 (s3x3 / 接触-01
                  :ARG0 (s3x4 / 本影
                          :mod (s3x5 / 月球))
                  :ARG1 (s3x6 / 地表)
-                 :cause-of (s3x7 / 得到
+                 :cause-of (s3x7 / 得到-01
+                             :ARG0 (s3x13 / 区域
+                                     :mod (s3x14 / 该))
                              :ARG1 (s3x8 / 阳光)
                              :Aspect Performance
                              :MODSTR FullNeg
                              :polarity -)
                  :Aspect Performance
                  :MODSTR FullAff))
-  :op2 (s3x9 / 遮挡-01
-         :ARG0 s3x4
-         :ARG1 (s3x10 / 阳光
-                 :mod (s3x11 / 部分))
-         :temporal (s3x12 / 同时)
-         :Aspect Performance
-         :MODSTR FullAff))
+  :op2 (s3h2 / have-condition-91
+         :ARG1 (s3x15 / 形成-01
+                 :ARG2 (s3x16 / 日偏食)
+                 :Aspect Performance
+                 :MODSTR FullAff)
+         :ARG2 (s3x17 / 遮挡-01
+                 :ARG0 (s3x18 / 本影
+                         :mod (s3x19 / 月球))
+                 :ARG1 (s3x10 / 阳光
+                         :mod (s3x11 / 部分))
+                 :temporal (s3x12 / 同时)
+                 :Aspect Performance
+                 :MODSTR FullAff
+                 :place (s3x9 / 半影
+                          :place (s3x20 / 本影
+                                   :mod (s3x21 / 两侧)
+                                   :value (s3x22 / 千
+                                            :mod (s3x23 / 数))
+                                   :unit (s3x24 / 公里))))))
 
 # alignment:s3h: 0-0
+s3h2: 0-0
 s3x: 17-17
+s3x10: -1--1
+s3x11: -1--1
+s3x12: -1--1
+s3x13: 8-8
+s3x14: 7-7
+s3x15: 34-34
+s3x16: 35-35
+s3x17: 0-0
+s3x18: -1--1
+s3x19: -1--1
 s3x2: 18-18
+s3x20: 22-22
+s3x21: 23-23
+s3x22: 24-24
+s3x23: 24-24
+s3x24: 25-25
 s3x3: 3-3
 s3x4: 0-0
 s3x5: 1-1
 s3x6: 4-4
 s3x7: 10-12
 s3x8: 13-13
-s3x9: 30-30
-s3x10: 32-32
-s3x11: 31-31
-s3x12: 20-20
+s3x9: 27-27
 
 # document level annotation:
 (s3s0 / sentence
-  :temporal ((s3x3 :after s3x)
-                       (s3x7 :overlap s3x9))
+  :temporal ((DCT :before s3x)
+                       (DCT :before s3x15)
+                       (s3x3 :after s3x7)
+                       (s3x :before s3x3)
+                       (s3x15 :before s3x17))
 )
 
 
@@ -230,7 +268,7 @@ s4x12: 22-22
 # :: snt5	另外 ， 发生 在 4 月 初 的 日全食 由于 全食 带 横穿 超过 半个 北美洲 地区 ， 而 在 月影 所 经过 的 国家 或 地区 也 有 超过 6 亿 人 可 欣赏 到 该 日食 ， 其中 超过 6.52 亿 人 可 欣赏 到 日偏食 ， 而 日食 前 预计 4380 万 人 将 在 月球 本影 所 经过 的 地区 可 欣赏 到 日全食 ， 也 因此 别称 为 “ 北美 大 日食 ” 。
 # sentence level graph:
 (s5x / 发生-01
-  :arg1 (s5e / 日全食
+  :ARG1 (s5e / 日全食
           :ARG1-of (s5x3 / 别称-00
                      :ARG2 (s5n / name
                              :op1 (s5x4 / 北美)
@@ -239,17 +277,16 @@ s4x12: 22-22
                      :cause (s5a / and
                               :op1 (s5x7 / 横穿-00
                                      :ARG0 (s5x8 / 全食带)
-                                     :ARG1 (s5g / geographic-entity
-                                             :name (s5n2 / name
-                                                     :op1 "北美洲"
-                                                     :op2 "地区")
-                                             :quant (s5x10 / 半)
-                                             :unit (s5x11 / 个))
+                                     :ARG1 (s5c / continent
+                                             :name (s5n3 / name
+                                                     :op1 "北美洲")
+                                             :value 0.5
+                                             :unit (s5x10 / 个))
                                      :manner (s5x9 / 超过)
                                      :Aspect Performance
                                      :MODSTR FullAff)
                               :op2 (s5x12 / 欣赏-01
-                                     :ARG0 (s5x14 / 人
+                                     :ARG0 (s5p / person
                                              :quant 6
                                              :unit (s5x15 / 亿)
                                              :mod (s5x16 / 超过))
@@ -278,7 +315,9 @@ s4x12: 22-22
                                              :unit (s5x30 / 万)
                                              :ARG1-of (s5x31 / 预计-01
                                                         :temporal (s5x32 / 前
-                                                                    :op1 (s5x33 / 日食))))
+                                                                    :op1 (s5x33 / 日食))
+                                                        :MODSTR FullAff
+                                                        :MODSTR FullAff))
                                      :ARG1 (s5x29 / 日全食)
                                      :place (s5x34 / 经过-01
                                               :ARG0 (s5x35 / 本影
@@ -296,14 +335,12 @@ s4x12: 22-22
   :MODSTR FullAff)
 
 # alignment:s5a: 0-0
-s5g: 16-17
+s5c: 0-0
 s5n: 75-77
-s5n2: -1--1
+s5n3: -1--1
 s5x10: 15-15
-s5x11: 15-15
 s5x12: 46-46
 s5x13: 48-48
-s5x14: 44-44
 s5x15: 43-43
 s5x16: 41-41
 s5x17: 37-37
@@ -340,7 +377,8 @@ s5x9: 14-14
   :temporal ((DCT :before s5x)
                        (s5x7 :overlap s5x12)
                        (s5x12 :overlap s5x18)
-                       (s5x22 :overlap s5x27))
+                       (s5x22 :overlap s5x27)
+                       (s5x22 :Contained s5x34))
 )
 
 
@@ -349,9 +387,11 @@ s5x9: 14-14
 (s6x / 相隔-01
   :ARG0 (s6a / and
           :op1 (s6x2 / 其)
-          :op2 (s6n / name
-                 :op1 (s6x3 / 美洲)
-                 :op2 (s6x4 / 大日食)
+          :op2 (s6e / event
+                 :name (s6n2 / name
+                         :op1 "美洲"
+                         :op2 "大"
+                         :op3 "日食")
                  :temporal (s6d / date-entity
                              :year 2023)))
   :ARG1 (s6t / temporal-quantity
@@ -362,15 +402,14 @@ s5x9: 14-14
   :MODSTR FullAff)
 
 # alignment:s6a: 0-0
-s6x2: 3-3
-s6n: 0-0
-s6x3: 13-13
-s6x4: 14-15
+s6d: 0-0
+s6e: 13-15
+s6n2: -1--1
 s6t: 0-0
+s6x2: 3-3
 s6x5: 20-20
 s6x6: 21-21
 s6x7: 18-18
-s6d: 0-0
 
 # document level annotation:
 (s6s0 / sentence
@@ -381,18 +420,23 @@ s6d: 0-0
 # sentence level graph:
 (s7c / consecutive
   :op1 (s7x / 接触-01
-         :ARG0 (s7x2 / 月球本影)
+         :ARG0 (s7x16 / 本影
+                 :poss (s7p / planet
+                         :name (s7n / name
+                                 :op1 "月球")))
          :ARG1 (s7x3 / 地表)
          :place (s7l / 太平洋
-                  :place (s7g / geographic-entity
-                           :name (s7n2 / name
-                                   :op1 (s7x9 / 波凯莱凯莱岛
-                                          :Part-of (s7x10 / 库克-群岛))
-                                   :direction (s7x11 / 西北)
-                                   :direction (s7d / distance-quantity
-                                                :value 130
-                                                :unit (s7x12 / 公里)
-                                                :mod (s7x13 / 约)))))
+                  :place (s7i2 / island
+                           :name (s7n3 / name
+                                   :op1 "波凯莱凯莱岛")
+                           :Part-of (s7i3 / island
+                                      :name (s7n4 / name
+                                              :op1 "库克-群岛"))
+                           :direction (s7x2 / 西北)
+                           :direction (s7d / distance-quantity
+                                        :mod (s7x11 / 约)
+                                        :unit (s7x12 / 公里)
+                                        :value 130)))
          :Aspect performance
          :MODSTR FullAff
          :mod (s7x14 / 最先))
@@ -408,18 +452,21 @@ s6d: 0-0
               :Aspect Activity
               :MODSTR FullAff))
 
-# alignment:s7x6: 3-3
+# alignment:s7d: -1--1
+s7n: -1--1
+s7p: 0-0
+s7x11: -1--1
+s7x12: -1--1
+s7x14: 19-19
+s7x16: 0-0
+s7x6: 3-3
 s7x7: 2-2
 s7x8: 1-1
-s7g: 0-0
-s7n2: 0-0
-s7x9: 11-11
-s7x10: 9-10
-s7x11: 12-12
-s7d: 14-15
-s7x12: 15-15
-s7x13: 13-13
-s7x14: 19-19
+s7i2: 0-0
+s7n3: -1--1
+s7i3: 0-0
+s7n4: -1--1
+s7x2: -1--1
 
 # document level annotation:
 (s7s0 / sentence
@@ -434,14 +481,15 @@ s7x14: 19-19
 (s8a / and
   :op1 (s8x / 移动-01
          :ARG0 (s8x0 / 本影)
-         :direction (s8x1 / 向东偏北)
+         :direction (s8x21 / 东偏北)
          :Aspect Activity
          :MODSTR FullAff)
   :op2 (s8x6 / 登上-01
-         :arg0 s8x0
-         :arg1 (s8x2 / 大陆
-                 :place (s8x7 / 北美))
-         :place (s8l3 / 墨西哥)
+         :ARG0 s8x0
+         :ARG1 (s8x2 / 大陆
+                 :place (s8c3 / continent
+                          :name (s8n6 / name
+                                  :op1 "北美")))
          :Aspect Performance
          :MODSTR FullAff
          :temporal (s8x15 / 后
@@ -465,7 +513,10 @@ s7x14: 19-19
                                                    :op1 (s8x4 / 玛丽亚-群岛))
                                            :direction (s8x3 / 西北)))
                             :Aspect Performance
-                            :MODSTR FullAff)))
+                            :MODSTR FullAff))
+         :source (s8c2 / country
+                   :name (s8n5 / name
+                           :op1 "墨西哥")))
   :op3 (s8x8 / 达到-01
          :arg0 s8x0
          :arg1 (s8x9 / 食分
@@ -489,15 +540,19 @@ s8x11: -1--1
 s8x12: -1--1
 s8x13: -1--1
 s8x14: -1--1
-s8x3: -1--1
-s8x4: -1--1
-s8x5: -1--1
 s8x15: 28-28
 s8x16: 9-9
 s8x17: -1--1
-s8x7: 34-34
 s8x18: 45-45
 s8x20: 42-42
+s8x3: -1--1
+s8x4: -1--1
+s8x5: -1--1
+s8c2: 0-0
+s8n5: -1--1
+s8x2: 35-35
+s8c3: 34-34
+s8n6: -1--1
 
 # document level annotation:
 (s8s0 / sentence
@@ -531,7 +586,7 @@ s8x20: 42-42
          :MODSTR FullAff)
   :op2 (s9x6 / 进入-01
          :ARG0 s9x2
-         :ARG1 (s9g / geographic-entity
+         :ARG1 (s9o / ocean
                  :name (s9n4 / name
                          :op1 "北大西洋"))
          :Aspect Activity
@@ -543,7 +598,7 @@ s8x20: 42-42
          :MODSTR FullAff)
   :op4 (s9x10 / 结束-01
          :ARG0 s9x2
-         :temporal (s9x11 / 日落-时分)
+         :temporal (s9x11 / 日落)
          :place (s9x12 / 洋面
                   :place (s9c5 / country
                            :name (s9n6 / name
@@ -562,7 +617,6 @@ s9c2: 10-10
 s9c3: 12-12
 s9c5: 28-28
 s9d: 0-0
-s9g: 16-16
 s9n: -1--1
 s9n2: -1--1
 s9n3: -1--1
@@ -587,7 +641,8 @@ s9x9: 20-20
 (s9s0 / sentence
   :temporal ((DCT :before s9x)
                        (s9x4 :overlap s9x6)
-                       (s9x4 :overlap s9x7))
+                       (s9x4 :overlap s9x7)
+                       (s9x7 :after s9x10))
 )
 
 
@@ -595,7 +650,7 @@ s9x9: 20-20
 # sentence level graph:
 (s10x / 覆盖-01
   :ARG0 (s10x2 / 本-影)
-  :ARG1 (s10g / geographic-entity
+  :ARG1 (s10r / river
           :name (s10n / name
                   :op1 "尼亚加拉"
                   :op2 "瀑布")
@@ -608,14 +663,13 @@ s9x9: 20-20
   :MODSTR FullAff
   :manner (s10x3 / 完全))
 
-# alignment:s10g: 9-10
+# alignment:s10a: 0-0
 s10i2: 0-0
 s10n: -1--1
 s10x: 16-16
 s10x2: 13-14
 s10x3: 15-15
 s10x4: 6-6
-s10a: 0-0
 s10x5: 3-3
 s10x6: 4-5
 
@@ -658,7 +712,9 @@ s10x6: 4-5
                                                                                                    :op1 "加拿大"))
                                                                                     :op2 (s11p2 / province
                                                                                            :name (s11n5 / name
-                                                                                                   :op1 "阿拉斯加")))))
+                                                                                                   :op1 "阿拉斯加")))
+                                                                            :Aspect State
+                                                                            :MODSTR FullAff))
                                                             :op3 (s11c4 / country
                                                                    :name (s11n6 / name
                                                                            :op1 "多米尼克")
@@ -820,7 +876,9 @@ s11x9: 20-20
           :ARG1 (s12x6 / 在-01
                   :ARG0 (s12x7 / 区域
                           :mod (s12x8 / 上述))
-                  :ARG1 (s12x9 / 西半球))
+                  :ARG1 (s12x9 / 西半球)
+                  :Aspect State
+                  :MODSTR FullAff)
           :ARG2 (s12a / and
                   :op1 (s12x12 / 改为-01
                          :ARG0 (s12c / country
@@ -843,7 +901,7 @@ s11x9: 20-20
                                                   :op1 "莱恩群岛")))
                          :ARG2 "MISSING-VALUE"
                          :temporal (s12d3 / date-entity
-                                     :year (s12x16 / 1995-))
+                                     :year (s12x16 / 1995))
                          :Aspect Performance
                          :MODSTR FullAff)
                   :op3 (s12x14 / 改为-01
@@ -860,18 +918,27 @@ s11x9: 20-20
 # alignment:s12a: 0-0
 s12b: 0-0
 s12c: -1--1
+s12c2: 24-24
+s12d: 0-0
+s12d2: 0-0
+s12d3: 0-0
+s12d4: 0-0
 s12h: 0-0
 s12i2: -1--1
 s12i3: -1--1
 s12n: -1--1
 s12n2: -1--1
 s12n3: -1--1
+s12n4: -1--1
 s12t: 0-0
 s12x: 41-41
 s12x10: -1--1
 s12x11: -1--1
 s12x12: 19-19
 s12x13: -1--1
+s12x14: 30-30
+s12x15: 29-29
+s12x16: 11-undefined
 s12x2: 42-42
 s12x3: 35-35
 s12x4: 34-34
@@ -880,19 +947,13 @@ s12x6: 5-5
 s12x7: 2-2
 s12x8: 1-1
 s12x9: 6-6
-s12x14: 30-30
-s12x15: 29-29
-s12c2: 24-24
-s12n4: -1--1
-s12d: 0-0
-s12d2: 0-0
-s12d3: 0-0
-s12x16: 11-undefined
-s12d4: 0-0
 
 # document level annotation:
 (s12s0 / sentence
-  :temporal ((DCT :before s12x))
+  :temporal ((DCT :before s12x)
+                       (DCT :before s12x12)
+                       (DCT :before s12x10)
+                       (DCT :before s12x14))
 )
 
 
