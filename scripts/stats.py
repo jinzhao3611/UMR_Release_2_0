@@ -1,55 +1,88 @@
-import os
-def count_valid_graphs(file_path):
-    """
-    Count the number of valid '# sentence level graph:' and
-    '# document level annotation:' entries (where the next line is not empty).
-    """
-    valid_sentence_graph_count = 0
-    valid_document_annotation_count = 0
+import json, os, re
+from pathlib import Path
+import penman
+from tabulate import tabulate
 
-    with open(file_path, 'r') as file:
-        lines = file.readlines()
+# Get the directory of the current script
+current_script_dir = Path(__file__).parent
 
-        for i, line in enumerate(lines):
-            if line.strip().startswith("# sentence level graph:"):
-                # Check if the next line exists and is not empty
-                if i + 1 < len(lines) and lines[i + 1].strip():
-                    valid_sentence_graph_count += 1
-            elif line.strip().startswith("# document level annotation:"):
-                # Check if the next line exists and is not empty
-                if i + 1 < len(lines) and lines[i + 1].strip():
-                    valid_document_annotation_count += 1
+# Construct the path to the file
+root = current_script_dir.parent
 
-    return valid_sentence_graph_count, valid_document_annotation_count
+def count(json_file_path):
+    word_per_file = 0
+    concepts_per_file = 0
+    sent_relation_per_file = 0
+    sent_annotation_per_file = 0
+    doc_annotation_per_file = 0
+    sentence_per_file = 0
+
+    with open(json_file_path, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+    for block in data:
+        sentence_per_file += 1
+        print(json_file_path)
+        if block["sentence_level_graph"]:
+            sent_annotation_per_file += 1
+        if "\n" in block["document_level_annotation"]:
+            doc_annotation_per_file += 1
+        try:
+            triples = penman.decode(block["sentence_level_graph"]).triples
+
+            relations_count = sum(1 for triple in triples if triple[1] != ':instance')
+            concepts_count = sum(1 for triple in triples if triple[1] == ':instance')
+            # print(len(block["words"]))
+            # print(relations_count)
+            # print(concepts_count)
+            # print("******************")
+            word_per_file += len(block["words"])
+            concepts_per_file += concepts_count
+            sent_relation_per_file += relations_count
+        except penman.exceptions.DecodeError:
+            print(penman.exceptions.DecodeError)
+    return word_per_file, concepts_per_file, sent_relation_per_file, sent_annotation_per_file, doc_annotation_per_file, sentence_per_file
 
 
-def process_folder_with_valid_entries(folder_path):
-    """
-    Process all .txt files in the folder to count valid sentence-level graphs
-    and document-level annotations.
-    """
-    txt_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.txt')]
-    total_files = len(txt_files)
 
-    total_valid_sentence_graph = 0
-    total_valid_document_annotation = 0
+def batch_count(json_folder):
+    files_per_folder = 0
+    word_per_folder = 0
+    concepts_per_folder = 0
+    sent_relations_per_folder = 0
+    sentence_annotation_per_folder = 0
+    doc_annotation_per_folder = 0
+    sentence_per_folder = 0
+    for filename in os.listdir(json_folder):
+        if filename.endswith('.json'):
+            json_file_path = os.path.join(json_folder, filename)
+            word_per_file, concepts_per_file, sent_relation_per_file, sent_annotation_per_file, doc_annotation_per_file, sentence_per_file = count(json_file_path)
+            files_per_folder += 1
+            word_per_folder += word_per_file
+            concepts_per_folder += concepts_per_file
+            sent_relations_per_folder += sent_relation_per_file
+            sentence_annotation_per_folder += sent_annotation_per_file
+            doc_annotation_per_folder += doc_annotation_per_file
+            sentence_per_folder += sentence_per_file
+    # Prepare data for the table
+    headers = ["Metric", "Count"]
+    data = [
+        ["Documents", files_per_folder],
+        ["Sentences", sentence_per_folder],
+        ["Words", word_per_folder],
+        ["Sentence Annotations", sentence_annotation_per_folder],
+        ["Document Annotations", doc_annotation_per_folder],
+        ["Concepts", concepts_per_folder],
+        ["Sentence Relations", sent_relations_per_folder],
+    ]
 
-    for txt_file in txt_files:
-        valid_sentence_graph, valid_document_annotation = count_valid_graphs(txt_file)
-        total_valid_sentence_graph += valid_sentence_graph
-        total_valid_document_annotation += valid_document_annotation
-
-    return total_files, total_valid_sentence_graph, total_valid_document_annotation
+    # Print the table
+    print(tabulate(data, headers, tablefmt="grid"))
 
 
 # Example usage
-folder_path = "../english/formatted_data"  # Change this to your folder path
+# json_file_path = Path(root) / 'czech/jsons/czech_ln94200_1.json'
+# count(json_file_path)
 
-# Process the folder
-total_files, total_valid_sentence_graph, total_valid_document_annotation = process_folder_with_valid_entries(
-    folder_path)
-
-# Print the results
-print(f"Total .txt files in the folder: {total_files}")
-print(f"Total valid '# sentence level graph:' count: {total_valid_sentence_graph}")
-print(f"Total valid '# document level annotation:' count: {total_valid_document_annotation}")
+# RUN this to get the count of the language
+lang = 'english'
+batch_count(json_folder=Path(root) / f'{lang}/jsons/')
