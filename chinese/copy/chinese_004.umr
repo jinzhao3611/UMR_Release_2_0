@@ -1,0 +1,1510 @@
+user name: sherly
+user id: 546
+file language: chinese
+file format: plain_text
+Doc ID in database: 1689
+export time: 2024/12/18 下午11:18:07
+
+# :: snt1	贞孝 节烈 牌坊 为 牌坊 的 一种 ， 是 中国 古代 的 文化 产物 。
+# sentence level graph:
+(s1i / identity-91
+  :ARG1 (s1i2 / identity-91
+          :ARG1 (s1x / 牌坊
+                  :mod (s1x4 / 贞孝)
+                  :mod (s1x8 / 节烈))
+          :ARG2 (s1x5 / 牌坊
+                  :quant (s1x6 / 一)
+                  :unit (s1x7 / 种)))
+  :ARG2 (s1x2 / 产物
+          :mod (s1x3 / 文化)
+          :era (s1x9 / 古代
+                 :place (s1c / country :name (s1n / name :op1 "中国")))))
+
+# alignment:s1c: 10-10
+s1i2: 0-0
+s1n: -1--1
+s1x: -1--1
+s1x4: 1-1
+s1x5: 5-5
+s1x6: 7-7
+s1x7: 7-7
+s1x8: 2-2
+s1x9: 11-11
+
+# document level annotation:
+(s1s0 / sentence
+
+  :temporal ((DCT :overlap (s1i)
+
+                    (DCT :overlap (s1i2))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s1x)
+
+                    (AUTH :FullAff (s1i))
+
+  :coref ((s1x2 :subset-of (s1i2)))
+
+
+
+
+# :: snt2	贞孝 节烈 牌坊 是 因为 中国 封建 社会 的 贞节 旌表 制度 而 衍生 的 产物 。
+# sentence level graph:
+(s2i2 / identity-91
+  :ARG1 (s2x / 牌坊
+          :mod (s2x11 / 贞孝)
+          :mod (s2x12 / 节烈))
+  :ARG2 (s2x5 / 产物)
+  :cause (s2x6 / 制度
+           :mod (s2x2 / 旌表
+                  :mod (s2x8 / 贞节))
+           :place (s2x9 / 社会
+                    :mod (s2x10 / 封建)
+                    :place (s2c / country :name (s2n2 / name :op1 "中国")))))
+
+# alignment:s2c: 6-6
+s2i2: -1--1
+s2n2: -1--1
+s2x: 3-undefined
+s2x10: 7-7
+s2x11: 1-1
+s2x12: 2-2
+s2x5: 16-16
+s2x6: 12-12
+s2x8: 10-10
+s2x9: 8-8
+
+# document level annotation:
+(s2s0 / sentence
+
+  :temporal ((DCT :overlap (s2i2))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s2x7)
+
+                    (AUTH :FullAff (s2i2)
+
+                    (AUTH :FullAff (s2x2))
+
+  :coref ((s1x :same-entity (s2x)))
+
+
+
+
+# :: snt3	由于 中国 社会 在 封建 时代 对 妇女 贞操 和 孝义 非常 看重 ， 所以 贞孝 节烈 牌坊 则 是 用于 表扬 女性 守节 守孝 行为 的 奖励 。
+# sentence level graph:
+(s3h3 / have-cause-91
+  :ARG1 (s3x / 看重-01
+          :ARG0 (s3x2 / 社会
+                  :location (s3c2 / country :name (s3n / name :op1 "中国")))
+          :ARG1 (s3a / and
+                  :op1 (s3x3 / 贞操)
+                  :op2 (s3x5 / 孝义)
+                  :poss (s3x6 / 妇女))
+          :degree (s3x7 / 非常)
+          :Aspect State
+          :MODSTR FullAff
+          :era (s3x17 / 时代
+                 :mod (s3x16 / 封建)))
+  :ARG2 (s3i / identity-91
+          :ARG1 (s3x8 / 牌坊
+                  :mod (s3x9 / 贞孝节烈))
+          :ARG2 (s3x10 / 奖励
+                  :purpose (s3x11 / 表扬-01
+                             :ARG1 (s3x12 / 行为
+                                     :mod (s3a2 / and
+                                            :op1 (s3x13 / 守节)
+                                            :op2 (s3x14 / 守孝)))
+                             :ARG2 (s3x15 / 女性)
+                             :Aspect Performance
+                             :MODSTR FullAff))))
+
+# alignment:s3x16: -1--1
+s3x17: 6-6
+s3x6: 0-0
+
+# document level annotation:
+(s3s0 / sentence
+  :temporal ((DCT :before s3x)
+                       (DCT :before s3i)
+                       (PAST_REF :depends-on s3x11))
+  :modal ((ROOT :MODAL AUTH)
+                       (AUTH :FullAff s3x)
+                       (AUTH :FullAff s3x11))
+  :coref ((s1x :same-entity s3x8)))
+
+
+# :: snt4	因为 每个 被 表扬 人士 的 生平 事迹 均 有 不同 ， 所以 贞孝节烈 牌坊 亦 会 被 区分 为 贞节 、 贞寿 、 贞烈 、 节孝 、 节烈 等 牌坊 。
+# sentence level graph:
+(s4h / have-cause-91
+  :ARG1 (s4q / 区分-01
+          :ARG0 (s4a / 牌坊
+                  :mod (s4x9 / 贞孝节烈))
+          :ARG1 (s4x7 / 牌坊
+                  :mod (s4a2 / and
+                         :op1 (s4x10 / 贞节)
+                         :op2 (s4x / 贞寿)
+                         :op3 (s4x11 / 贞烈)
+                         :op4 (s4x12 / 节孝)
+                         :op5 (s4x13 / 节烈)))
+          :mod (s4i / 亦)
+          :Aspect Performance
+          :MODSTR FullAff)
+  :ARG2 (s4x2 / 同-00
+          :ARG0 (s4j / 事迹
+                  :poss (s4p / 人士
+                          :ARG1-of (s4b / 表扬-01
+                                     :Aspect Performance
+                                     :MODSTR FullAff)
+                          :quant (s4x4 / 每)
+                          :unit (s4x3 / 个))
+                  :mod (s4x6 / 生平))
+          :polarity -
+          :mod (s4x5 / 均)
+          :Aspect State
+          :MODSTR FullAff))
+
+# alignment:s4a2: 0-0
+s4x: -1--1
+s4x10: -1--1
+s4x11: -1--1
+s4x12: -1--1
+s4x13: -1--1
+s4x3: -1--1
+s4x4: -1--1
+s4x5: 9-9
+s4x6: 7-7
+s4x7: 31-31
+s4x9: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+
+  :temporal ((DCT :overlap (s4q)
+
+                    (DCT :overlap (s4x2)
+
+                    (DCT :before (s4b))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s4q)
+
+                    (AUTH :FullAff (s4x2))
+
+  :coref ((s1x :same-entity (s4a)))
+
+
+
+
+# :: snt5	虽然 旌表 贞节 制度 早于 秦代 就 已经 存在 ， 但 最 早 有关 贞孝 节烈 牌坊 的 记载 则 追溯 到 明代 ， 而 贞孝 节烈 牌坊 亦 在 明代 年间 得到 法制 保证 。
+# sentence level graph:
+(s5b / but-91
+  :op1 (s5x / 存在-01
+         :ARG0 (s5x2 / 制度
+                 :mod (s5x10 / 贞节
+                        :mod (s5x18 / 旌表)))
+         :temporal (s5x4 / 秦代)
+         :Aspect State
+         :MODSTR FullAff
+         :mod (s5x5 / 已经)
+         :mod (s5x13 / 早))
+  :op2 (s5c / consecutive
+         :ARG1 (s5x6 / 追溯-02
+                 :ARG1 (s5x7 / 记载
+                         :topic (s5x8 / 牌坊
+                                  :mod (s5x9 / 贞孝节烈))
+                         :mod (s5x14 / 早
+                                :Degree-of (s5x15 / 最)))
+                 :ARG2 (s5x3 / 明代)
+                 :Aspect Performance
+                 :MODSTR FullAff)
+         :ARG2 (s5x11 / 得到-01
+                 :ARG0 s5x8
+                 :ARG1 (s5x12 / 保证
+                         :mod (s5x17 / 法制))
+                 :Aspect Performance
+                 :MODSTR FullAff
+                 :temporal (s5x20 / 年間
+                             :op1 (s5x16 / 明代)))))
+
+# alignment:s5x10: 3-3
+s5x12: 35-35
+s5x13: 0-0
+s5x14: 13-13
+s5x15: 12-12
+s5x16: 31-31
+s5x17: 34-34
+s5x18: 32-32
+s5x5: 8-8
+
+# document level annotation:
+(s5s0 / sentence
+
+  :temporal ((DCT :overlap (s5x)
+
+                    (DCT :overlap (s5x6)
+
+                    (DCT :before (s5x11))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s5x)
+
+                    (AUTH :FullAff (s5x6)
+
+                    (AUTH :FullAff (s5x11))
+
+  :coref ((s2x6 :same-entity (s5x2)
+
+                    (s1x :same-entity (s5x8)))
+
+
+
+
+# :: snt6	贞孝节烈 牌坊 在 明清 二代 在 中国 各地 大肆 兴建 。
+# sentence level graph:
+(s6x / 兴建-01
+  :arg1 (s6x2 / 牌坊
+          :mod (s6x3 / 贞孝节烈))
+  :temporal (s6x4 / 明清
+              :quant (s6x7 / 二)
+              :unit (s6x8 / 代))
+  :place (s6x5 / 各地
+           :part (s6c / country :name (s6n / name :op1 "中国")))
+  :manner (s6x6 / 大肆)
+  :Aspect performance
+  :MODSTR FullAff)
+
+# alignment:s6x7: 5-5
+s6x8: 5-5
+s6c: 7-7
+s6n: -1--1
+
+# document level annotation:
+(s6s0 / sentence
+
+  :temporal ((DCT :before (s6x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s6x))
+
+  :coref ((s1x :same-entity (s6x2)))
+
+
+
+
+# :: snt7	在 清代 ， 政府 当局 拨发 银两 用以 兴建 贞孝 节烈 牌坊 是 朝廷 表扬 贞节 旌表 三 种 方法 的 其中 一种 。
+# sentence level graph:
+(s7i2 / identity-91
+  :ARG1 (s7x2 / 拨发-01
+          :ARG0 (s7g / government-organization :name (s7n / name :op1 "政府")
+                  :mod (s7x4 / 当局))
+          :ARG1 (s7x5 / 银两)
+          :MODSTR FullAff
+          :purpose (s7x6 / 兴建-01
+                     :ARG1 (s7x7 / 牌坊
+                             :mod (s7x8 / 贞孝节烈))
+                     :Aspect Performance))
+  :ARG2 (s7x9 / 一种
+          :mod (s7x10 / 其中
+                 :refer-number Non-singular)
+          :domain (s7x11 / 方法
+                    :quant "三"
+                    :purpose (s7x12 / 表扬-01
+                               :ARG0 (s7x13 / 朝廷)
+                               :ARG1 (s7x3 / 旌表
+                                       :mod (s7x14 / 贞节))
+                               :Aspect Performance
+                               :MODSTR FullAff)))
+  :era (s7x / 清代))
+
+# alignment:s7g: 4-4
+s7n: -1--1
+s7x: -1--1
+s7x14: 16-16
+s7x4: -1--1
+s7x6: -1--1
+s7x7: -1--1
+s7x8: -1--1
+
+# document level annotation:
+(s7s0 / sentence
+
+  :temporal ((DCT :overlap (s7i2)
+
+                    (DCT :before (s7x2)
+
+                    (s7x2 :after (s7x6)
+
+                    (DCT :before (s7x6)
+
+                    (DCT :before (s7x3)
+
+                    (DCT :before (s7x12))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s7x5)
+
+                    (AUTH :FullAff (s7x2)
+
+                    (AUTH :FullAff (s7x12)
+
+                    (AUTH :FullAff (s7i2))
+
+  :coref ((s1x :same-entity (s7x7)))
+
+
+
+
+# :: snt8	清代 当局 最后 由于 拨发 建 牌坊 的 银两 数目 有限 而 达不到 彰显 守节 守孝 的 效果 ， 所以 在 中国 各地 设立 节孝祠 。
+# sentence level graph:
+(s8h / have-cause-91
+  :ARG1 (s8x / 设立-01
+          :ARG0 (s8x11 / 当局
+                  :era (s8x12 / 清代))
+          :ARG1 (s8x9 / 节孝祠)
+          :place (s8c2 / country :name (s8n / name :op1 "中国")
+                   :quant (s8x19 / 各)
+                   :unit (s8x20 / 地))
+          :Aspect Performance
+          :MODSTR FullAff)
+  :ARG2 (s8c / consecutive
+          :ARG1 (s8x13 / 有限-01
+                  :ARG0 (s8x18 / 数目
+                          :mod (s8x5 / 银两
+                                 :ARG1-of (s8x2 / 拨发-01
+                                            :purpose (s8x3 / 建-01
+                                                       :ARG1 (s8x4 / 牌坊)
+                                                       :Aspect Process
+                                                       :MODSTR FullAff)
+                                            :Aspect Performance
+                                            :MODSTR FullAff)))
+                  :temporal (s8x6 / 最后)
+                  :Aspect State
+                  :MODSTR FullAff)
+          :ARG2 (s8x14 / 达到-01
+                  :ARG1 (s8x17 / 效果)
+                  :polarity -
+                  :mod (s8x8 / 彰显-01
+                         :ARG1 (s8a / and
+                                 :op1 (s8x15 / 守节)
+                                 :op2 (s8x16 / 守孝))
+                         :Aspect Performance
+                         :MODSTR FullAff)
+                  :Aspect Performance
+                  :MODSTR FullAff)))
+
+# alignment:s8a: 0-0
+s8c: 0-0
+s8c2: 22-22
+s8h: 0-0
+s8n: -1--1
+s8x: 0-0
+s8x11: -1--1
+s8x12: -1--1
+s8x13: 11-11
+s8x14: 13-13
+s8x15: 0-0
+s8x16: 0-0
+s8x17: 18-18
+s8x18: 10-10
+s8x19: 23-23
+s8x2: 5-5
+s8x20: 23-23
+s8x3: -1--1
+s8x4: -1--1
+s8x5: -1--1
+s8x6: 3-3
+s8x8: 14-14
+s8x9: -1--1
+
+# document level annotation:
+(s8s0 / sentence
+
+  :temporal ((DCT :before (s8x2)
+
+                    (s8x2 :after (s8x13)
+
+                    (s8x2 :after (s8x3)
+
+                    (s8x2 :after (s8x14)
+
+                    (s8x14 :depends-on (s8x8)
+
+                    (s8x13 :after (s8x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s8x)
+
+                    (AUTH :FullAff (s8x)
+
+                    (AUTH :FullAff (s8x13)
+
+                    (AUTH :FullAff (s8x8)
+
+                    (AUTH :FullAff (s8x14)))
+
+
+
+
+# :: snt9	中华民国 建立 后 ， 北洋 政府 仍 实行 贞节 旌表 。
+# sentence level graph:
+(s9x / 实行-01
+  :ARG0 (s9x2 / government
+          :mod (s9x3 / 北洋))
+  :ARG1 (s9x4 / 旌表
+          :mod (s9x5 / 贞节))
+  :mod (s9x6 / 仍)
+  :temporal (s9x7 / 建立-01
+              :ARG0 (s9c / country :name (s9n / name :op1 "中华民国"))
+              :Aspect Performance
+              :MODSTR FullAff
+              :mod (s9x8 / 后))
+  :Aspect Activity
+  :MODSTR FullAff)
+
+# alignment:s9x8: 3-3
+
+# document level annotation:
+(s9s0 / sentence
+
+  :temporal ((DCT :before (s9x)
+
+                    (DCT :before (s9x4)
+
+                    (s9x7 :after (s9x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s9x7)
+
+                    (AUTH :FullAff (s9x))
+
+  :coref ((s2x6 :same-entity (s9x4)))
+
+
+
+
+# :: snt10	但 不久 ， 要求 女性 恪守 贞节 的 风俗 习惯 即 因 新文化 运动 引发 的 女性 解放 和 男女 平等 倡议 而 遭到 冲击 。
+# sentence level graph:
+(s10b / but-91
+  :ARG2 (s10x17 / 遭到-01
+          :ARG0 (s10x32 / 习惯
+                  :mod (s10x / 风俗)
+                  :mod (s10x2 / 要求-02
+                         :ARG1 (s10x4 / 女性)
+                         :ARG2 (s10x5 / 恪守-01
+                                 :ARG1 (s10x3 / 贞节)
+                                 :Aspect State
+                                 :MODSTR FullAff)
+                         :Aspect Performance
+                         :MODSTR FullAff))
+          :ARG1 (s10x27 / 冲击-01
+                  :ARG1 s10x32
+                  :Aspect performance
+                  :MODSTR FullAff)
+          :cause (s10a3 / and
+                   :op1 (s10x22 / 解放-01
+                          :ARG1 (s10x26 / 女性)
+                          :ARG1-of (s10x23 / 引发-01
+                                     :ARG0 (s10x6 / 运动
+                                             :mod (s10x25 / 新文化))
+                                     :Aspect Performance
+                                     :MODSTR FullAff)
+                          :Aspect Performance
+                          :MODSTR FullAff)
+                   :op2 (s10x19 / 倡议-01
+                          :ARG1 (s10a4 / and
+                                  :op1 (s10x20 / 平等-01
+                                         :ARG1 (s10x21 / 男女)
+                                         :Aspect State
+                                         :MODSTR FullAff))
+                          :Aspect Performance
+                          :MODSTR FullAff))
+          :Aspect Performance
+          :MODSTR FullAff)
+  :temporal (s10x18 / 不久))
+
+# alignment:s10a3: -1--1
+s10a4: -1--1
+s10b: 0-0
+s10x: 9-9
+s10x17: 0-0
+s10x18: -1--1
+s10x19: -1--1
+s10x2: -1--1
+s10x20: -1--1
+s10x21: -1--1
+s10x22: -1--1
+s10x23: -1--1
+s10x25: -1--1
+s10x26: -1--1
+s10x27: -1--1
+s10x3: -1--1
+s10x32: 0-0
+s10x4: -1--1
+s10x5: 6-6
+
+# document level annotation:
+(s10s0 / sentence
+  :temporal ((DCT :before s10x27)
+                       (DCT :before s10x22)
+                       (DCT :before s10x23)
+                       (DCT :before s10x19)
+                       (DCT :before s10x20)
+                       (s10x22 :after s10x23)
+                       (s10x19 :after s10x20)
+                       (s10x22 :overlap s10x19)
+                       (s10x2 :depends-on s10x5))
+  :modal ((ROOT :MODAL AUTH)
+                       (AUTH :FullAff s10x27)
+                       (AUTH :FullAff s10x23)
+                       (AUTH :FullAff s10x22)
+                       (AUTH :FullAff s10x19)
+                       (AUTH :FullAff s10x17))
+)
+
+
+# :: snt11	国民政府 执政 后 ， 废除 贞节 旌表 。
+# sentence level graph:
+(s11x / 废除-01
+  :ARG1 (s11x4 / 旌表
+          :mod (s11x5 / 贞节))
+  :temporal (s11x2 / 执政-01
+              :ARG0 (s11x3 / 国民政府)
+              :Aspect Performance
+              :MODSTR FullAff
+              :mod (s11x6 / 后))
+  :Aspect Performance
+  :MODSTR FullAff)
+
+# alignment:s11x6: 3-3
+
+# document level annotation:
+(s11s0 / sentence
+  :temporal ((s11x :after s10b)
+    (DCT :before s11x)
+    (DCT :before s11x2))
+  :modal ((ROOT :MODAL AUTH)
+    (AUTH :FullAff s11x2)
+    (AUTH :FullAff s11x))
+  :coref ())
+
+
+# :: snt12	2015 年 ， 中华 人民 共和国 湖南省 衡阳县 文物局 考查 发现 中国 现存 、 可 考证 时间 的 最后 一座 贞孝 节烈 牌坊 。
+# sentence level graph:
+(s12a / and
+  :op1 (s12x / 考查-00
+         :ARG0 (s12g / government-organization :name (s12n / name :op1 "中华" :op2 "人民" :op3 "共和国" :op4 "湖南省" :op5 "衡阳县" :op6 "文物局")))
+  :op2 (s12x2 / 发现-01
+         :ARG0 s12g
+         :ARG1 (s12x3 / 牌坊
+                 :mod (s12x4 / 贞孝节烈)
+                 :quant (s12x5 / 一)
+                 :unit (s12x6 / 座)
+                 :mod (s12x7 / 最后)
+                 :mod (s12a2 / and
+                        :op1 (s12x8 / 现存-01
+                               :place (s12x10 / 中国)
+                               :Aspect State
+                               :MODSTR FullAff)
+                        :op2 (s12x9 / 考证-01
+                               :ARG1 (s12x11 / 时间)
+                               :mod (s12x12 / 可)
+                               :MODSTR FullAff
+                               :Aspect Process))))
+  :year 2015)
+
+# alignment:s12a: 0-0
+s12a2: 0-0
+s12g: 0-0
+s12n: -1--1
+s12x: 10-10
+s12x10: 12-12
+s12x11: 17-17
+s12x12: 15-undefined
+s12x2: 11-11
+s12x3: 23-23
+s12x4: 21-22
+s12x5: 20-20
+s12x6: 20-20
+s12x7: 19-19
+s12x8: 13-13
+s12x9: 16-16
+
+# document level annotation:
+(s12s0 / sentence
+  :temporal ((DCT :before s12x)
+                       (DCT :before s12x2))
+  :modal ((ROOT :MODAL AUTH)
+                       (AUTH :FullAff s12x)
+                       (AUTH :FullAff s12x6)
+                       (AUTH :FullAff s12x7)
+                       (AUTH :FullAff s12x2))
+  :coref ((s1x :subset-of s12x4)))
+
+
+# :: snt13	这座 牌坊 位于 该 县 台源 镇 柳树 村 ， 是 当地 村民 为 守节 寡妇 廖黄氏 于 1921 年 所 建 。
+# sentence level graph:
+(s13a / and
+  :ARG1 (s13x / 位于-01
+          :ARG0 (s13x13 / 牌坊
+                  :quant (s13x14 / 这)
+                  :unit (s13x15 / 座))
+          :ARG1 (s13x7 / 村 :name (s13x16 / 柳树)
+                  :Part-of (s13x17 / 镇 :name (s13x18 / 台源)
+                             :Part-of (s13c / county :name (s13n2 / name :op1 "县")
+                                        :quant (s13x19 / 该))))
+          :MODSTR FullAff
+          :Aspect State)
+  :ARG2 (s13x2 / 建-01
+          :ARG0 (s13x3 / 村民
+                  :mod (s13x4 / 当地))
+          :Aspect Performance
+          :MODSTR FullAff
+          :degree Intensifier
+          :affectee (s13i2 / individual-person :name (s13n3 / name :op1 "廖黄氏")
+                      :mod (s13x8 / 寡妇
+                             :mod (s13x9 / 守节)))
+          :year 1921))
+
+# alignment:s13a: 0-0
+s13c: 0-0
+s13i2: 0-0
+s13n2: -1--1
+s13n3: -1--1
+s13x: 0-0
+s13x13: -1--1
+s13x14: 1-1
+s13x15: 1-undefined
+s13x16: 8-8
+s13x17: 0-0
+s13x18: 6-6
+s13x19: 4-4
+s13x2: 0-0
+s13x3: -1--1
+s13x4: -1--1
+s13x7: -1--1
+s13x8: 16-16
+s13x9: 15-15
+
+# document level annotation:
+(s13s0 / sentence
+
+  :temporal ((DCT :overlap (s13x)
+
+                    (DCT :before (s13x2))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s13x)
+
+                    (AUTH :FullAff (s13x2))
+
+  :coref ((s12x4 :same-entity (s13x13)
+
+                    (s12c2 :same-entity (s13c)
+
+                    (s13x7 :same-entity (s13x4)))
+
+
+
+
+# :: snt14	牌坊 上 放 上 石匾 ， 而 石匾 上 则 刻 有 由 第二 任 中华民国 大 总统 徐世昌 题写 的 “ 节励 松筠 ” 四字 。
+# sentence level graph:
+(s14a / and
+  :op1 (s14x / 放上-01
+         :ARG1 (s14x3 / 石匾)
+         :Aspect Performance
+         :MODSTR FullAff
+         :place (s14x2 / 牌坊
+                  :direction (s14x6 / 上)))
+  :op2 (s14x4 / 刻-01
+         :ARG0 (s14i / individual-person :name (s14n / name :op1 "徐世昌")
+                 :ARG1-of (s14h / have-rel-role-91
+                            :ARG2 (s14x10 / 总统)
+                            :ARG3 (s14c / country :name (s14n3 / name :op1 "中华民国"))
+                            :unit (s14u / 任)
+                            :quant (s14x8 / 第二)
+                            :Aspect State
+                            :MODSTR FullAff))
+         :ARG1 (s14x5 / 四字
+                 :mod "节励松筠"
+                 :ARG1-of (s14x9 / 题写-01
+                            :ARG0 s14i
+                            :Aspect Performance
+                            :MODSTR FullAff))
+         :Aspect Performance
+         :MODSTR FullAff
+         :place (s14x7 / 石匾)))
+
+# alignment:s14i: 0-0
+s14x10: 0-0
+s14x3: 0-0
+s14x6: 2-2
+s14x7: 0-0
+s14x8: 14-14
+s14x9: 20-20
+
+# document level annotation:
+(s14s0 / sentence
+  :temporal ((DCT :before s14x)
+                       (DCT :before s14x4)
+                       (DCT :before s14x9)
+                       (s14x9 :before s14x4)
+                       (s14x4 :before s14x))
+  :modal ((ROOT :MODAL AUTH)
+                       (AUTH :FullAff s14x)
+                       (AUTH :FullAff s14x4))
+  :coref ((s13x13 :same-entity s14x2)))
+
+
+# :: snt15	建筑 形式 因应 各 地区 而 略有 不同 ， 但 一般 为 牌楼 形式 ， 少数 则 为 墓碑 形式 。
+# sentence level graph:
+(s15c / contrast-01
+  :ARG1 (s15x / 同-01
+          :ARG0 (s15x2 / 形式
+                  :mod (s15x3 / 建筑))
+          :reason (s15x4 / 因应-01
+                    :ARG1 (s15x5 / 地区
+                            :quant (s15x6 / 各))
+                    :Aspect State
+                    :MODSTR FullAff)
+          :MODSTR PrtAff
+          :Aspect State
+          :polarity -
+          :mod (s15x15 / 略有))
+  :ARG2 (s15a / and-contrast
+          :ARG1 (s15i2 / identity-91
+                  :ARG1 (s15x16 / 一般
+                          :Mod-of s15x2)
+                  :ARG2 (s15x8 / 形式
+                          :mod (s15x9 / 牌楼))
+                  :Aspect State
+                  :MODSTR FullAff)
+          :ARG2 (s15i3 / identity-91
+                  :ARG1 (s15x17 / 少数
+                          :Mod-of s15x2)
+                  :ARG2 (s15x12 / 形式
+                          :mod (s15x13 / 墓碑))
+                  :Aspect State
+                  :MODSTR FullAff))
+  :Aspect State
+  :MODSTR FullAff)
+
+# alignment:s15i2: 0-0
+s15i3: 0-0
+s15x12: -1--1
+s15x13: -1--1
+s15x15: 7-7
+s15x16: 0-0
+s15x17: 0-0
+s15x2: 0-0
+s15x8: -1--1
+s15x9: -1--1
+
+# document level annotation:
+(s15s0 / sentence
+  :temporal ((DCT :overlap s15x)
+                       (DCT :overlap s15i2)
+                       (DCT :overlap s15i3)
+                       (PAST_REF :depends-on s15x4))
+  :modal ((ROOT :MODAL AUTH)
+                       (AUTH :PrtAff s15x)
+                       (AUTH :FullAff s15i2)
+                       (AUTH :FullAff s15i3))
+  :coref ((s15x2 :subset-of s15x8)))
+
+
+# :: snt16	上面 常用 的 四 大 字 为 “ 钦 旌 节 孝 ” 等 ， 其下 可能 记载 节妇 相 资料 事迹 ， 或 两侧 附 相关 对联 诗句 。
+# sentence level graph:
+(s16a / and
+  :ARG1 (s16i2 / identity-91
+          :ARG1 (s16x11 / 字
+                  :mod (s16x12 / 大)
+                  :quant (s16x13 / 四)
+                  :ARG1-of (s16x8 / 常用-01
+                             :Aspect Habitual
+                             :MODSTR FullAff))
+          :ARG2 (s16h / have-example-91
+                  :ARG1 s16x11
+                  :ARG2 (s16x16 / 钦旌节孝))
+          :place (s16i4 / implicit-argument
+                   :part (s16x15 / 上面))
+          :Aspect State
+          :MODSTR FullAff)
+  :ARG2 (s16o / or
+          :ARG1 (s16x6 / 记载-01
+                  :ARG1 (s16a2 / and
+                          :op1 (s16x18 / 事迹)
+                          :op2 (s16x19 / 资料
+                                 :topic (s16x9 / 节妇)))
+                  :MODSTR NeutAff
+                  :Aspect Performance
+                  :place (s16i3 / implicit-argument
+                           :part (s16x7 / 其下)))
+          :ARG2 (s16x / 附-01
+                  :ARG1 (s16x3 / 诗句
+                          :mod (s16x4 / 对联))
+                  :MODSTR NeutAff
+                  :Aspect Performance
+                  :ARG0-of (s16x5 / 相关-01
+                             :Aspect State
+                             :MODSTR FullAff)
+                  :place (s16i5 / implicit-argument
+                           :part (s16x2 / 两侧)))))
+
+# alignment:s16a: 0-0
+s16a2: 0-0
+s16h: 0-0
+s16i2: 0-0
+s16i3: -1--1
+s16i4: 0-0
+s16i5: 0-0
+s16o: 0-0
+s16x: -1--1
+s16x11: 0-0
+s16x12: 4-5
+s16x13: 4-4
+s16x15: 1-1
+s16x16: 9-12
+s16x18: 0-0
+s16x19: 0-0
+s16x2: -1--1
+s16x3: -1--1
+s16x4: -1--1
+s16x5: 0-0
+s16x6: -1--1
+s16x7: -1--1
+s16x8: -1--1
+s16x9: -1--1
+
+# document level annotation:
+(s16s0 / sentence
+
+  :temporal ((DCT :before (s16x8)
+
+                    (DCT :overlap (s16x6)
+
+                    (DCT :overlap (s16x)
+
+                    (DCT :overlap (s16x5))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s16x8)
+
+                    (AUTH :FullAff (s16i2)
+
+                    (AUTH :FullAff (s16x20)
+
+                    (AUTH :NeutAff (s16x6)
+
+                    (AUTH :NeutAff (s16x)
+
+                    (AUTH :FullAff (s16x5))
+
+  :coref ((s14x2 :same-entity (s16i4)
+
+                    (s14x2 :same-entity (s16i3)
+
+                    (s14x2 :same-entity (s16i5)))
+
+
+
+
+# :: snt17	贞孝节烈 牌坊 必须 得到 官方 准许 才能 兴建 。
+# sentence level graph:
+(s17x / 兴建-01
+  :ARG1 (s17x2 / 牌坊
+          :mod (s17x3 / 贞孝节烈))
+  :condition (s17x4 / 准许-01
+               :ARG0 (s17g / government-organization :name (s17n / name :op1 "官方"))
+               :ARG1-of (s17x6 / 得到-01
+                          :Aspect Performance
+                          :MODSTR FullAff
+                          :mod (s17x7 / 必须))
+               :Aspect Performance
+               :MODSTR FullAff)
+  :mod (s17x8 / 才能)
+  :Aspect Performance
+  :MODSTR FullAff)
+
+# alignment:s17g: 5-5
+s17n: -1--1
+s17x7: -1--1
+
+# document level annotation:
+(s17s0 / sentence
+  :temporal ((DCT :before s17x)
+                       (s17x :before s17x6)
+                       (DCT :before s17x6)
+                       (DCT :depends-on s17x4))
+  :modal ((ROOT :MODAL AUTH)
+                       (AUTH :FullAff s17x6)
+                       (AUTH :FullAff s17x4)
+                       (AUTH :FullAff s17x))
+  :coref ((s1x :same-entity s17x2)))
+
+
+# :: snt18	建造 程序 由 地方 官 掌控 ， 在 查访 后 向 直省 督抚 报告 ， 然后 在 上报 礼部 奏请 旌表 。
+# sentence level graph:
+(s18x / 掌控-01
+  :ARG0 (s18x2 / 官
+          :mod (s18x3 / 地方))
+  :ARG1 (s18x4 / 程序
+          :mod (s18x5 / 建造))
+  :Aspect State
+  :MODSTR FullAff
+  :consecutive (s18c / consecutive
+                 :ARG1 (s18x6 / 报告-01
+                         :ARG0 s18x2
+                         :ARG2 (s18x7 / 督抚
+                                 :mod (s18x8 / 直省)
+                                 :ARG1-of (s18h / have-rel-role-91))
+                         :temporal (s18x9 / 查访-01
+                                     :ARG0 s18x2
+                                     :ARG1 s18x4
+                                     :mod (s18x13 / 后)
+                                     :Aspect Performance
+                                     :MODSTR FullAff)
+                         :Aspect Performance
+                         :MODSTR FullAff)
+                 :ARG2 (s18x14 / 上报-01
+                         :ARG2 (s18g / government-organization :name (s18n / name :op1 "礼部"))
+                         :purpose (s18x10 / 奏请-00
+                                    :ARG1 (s18x15 / 旌表)
+                                    :Aspect Performance
+                                    :MODSTR FullAff)
+                         :Aspect Performance
+                         :MODSTR FullAff
+                         :mod (s18x11 / 在))))
+
+# alignment:s18g: 19-19
+s18h: 0-0
+s18n: -1--1
+s18x10: -1--1
+s18x11: 17-17
+s18x13: 10-10
+s18x14: 18-18
+s18x15: -1--1
+s18x2: 0-0
+s18x4: 0-0
+s18x7: 0-0
+
+# document level annotation:
+(s18s0 / sentence
+
+  :temporal ((DCT :before (s17x)
+
+                    (DCT :before (s17x4)
+
+                    (DCT :before (s17x6)
+
+                    (s17x4 :before (s17x6)
+
+                    (s17x :before (s17x4))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s18x)
+
+                    (AUTH :FullAff (s18x9)
+
+                    (AUTH :FullAff (s18x6)
+
+                    (AUTH :FullAff (s18x10)
+
+                    (AUTH :FullAff (s18x14))
+
+  :coref ((s1x :same-entity (s17x2)))
+
+
+
+
+# :: snt19	北洋 政府 时期 ， 政府 允许 贞节 旌表 受 褒扬 人 、 家属 ， 及 同乡 为 其 建 坊 立 碑 ， 地方 官员 亦 会 亲 撰 碑文 。
+# sentence level graph:
+(s19x / 允许-01
+  :ARG0 (s19x2 / 政府)
+  :ARG1 (s19a / and
+          :ARG1 (s19a2 / and
+                  :ARG1 (s19x3 / 建坊-00
+                          :ARG0 (s19a3 / and
+                                  :op1 (s19x13 / 人
+                                         :ARG1-of (s19x16 / 褒扬-01
+                                                    :source (s19x17 / 旌表
+                                                              :mod (s19x18 / 贞节))
+                                                    :Aspect Performance
+                                                    :MODSTR FullAff))
+                                  :op2 (s19x14 / 家属
+                                         :ARG4-of (s19h2 / have-rel-role-91
+                                                    :ARG1 s19x13
+                                                    :Aspect State
+                                                    :MODSTR FullAff))
+                                  :op3 (s19x15 / 同乡
+                                         :ARG4-of (s19h3 / have-rel-role-91
+                                                    :ARG1 s19x13
+                                                    :MODSTR FullAff)))
+                          :ARG2 (s19x4 / 立-01)
+                          :affectee s19x13
+                          :Aspect Performance
+                          :MODSTR FullAff))
+          :ARG2 (s19x7 / 撰-00
+                  :ARG0 (s19x9 / 官员
+                          :mod (s19x10 / 地方)
+                          :ARG1-of (s19h / have-rel-role-91
+                                     :MODSTR FullAff
+                                     :Aspect State))
+                  :ARG2 (s19x19 / 碑文)
+                  :manner (s19x8 / 亲)
+                  :mod (s19x20 / 亦)
+                  :Aspect Performance
+                  :MODSTR FullAff))
+  :temporal (s19g / government-organization :name (s19n / name :op1 "北洋" :op2 "政府" :op3 "时期"))
+  :Aspect State
+  :MODSTR FullAff)
+
+# alignment:s19a2: 0-0
+s19a3: 0-0
+s19g: 1-3
+s19h2: 0-0
+s19h3: 0-0
+s19n: -1--1
+s19x10: -1--1
+s19x13: 0-0
+s19x14: 0-0
+s19x15: 16-16
+s19x16: 10-10
+s19x17: 8-8
+s19x18: 7-7
+s19x19: 30-30
+s19x20: 26-26
+s19x3: -1--1
+s19x4: 21-21
+s19x7: -1--1
+s19x8: -1--1
+s19x9: -1--1
+
+# document level annotation:
+(s19s0 / sentence
+  :temporal ((PAST_REF :depends-on s19h3)
+                       (s19x :after s19x4)
+                       (s19x3 :overlap s19x16)
+                       (s19a2 :overlap s19x7)
+                       (DCT :before s19x)
+                       (DCT :before s19x3)
+                       (DCT :before s19x16)
+                       (DCT :before s19x7))
+  :modal ((ROOT :MODAL AUTH)
+                       (AUTH :FullAff s19x16)
+                       (AUTH :FullAff s19x3)
+                       (AUTH :FullAff s19x7)
+                       (AUTH :FullAff s19x))
+)
+
+
+# :: snt20	如 民国 十三 年 十一 月 ， 四川 高等 检察厅 检察长 黄绶 为 成都 惨死 的 寡妇 牛萧福贞 撰写 碑文 。
+# sentence level graph:
+(s20h / have-example-91
+  :ARG1 (s20i2 / implicit-predicate)
+  :ARG2 (s20x / 撰写-01
+          :ARG0 (s20i4 / individual-person :name (s20n4 / name :op1 "黄绶")
+                  :ARG1-of (s20h2 / have-rel-role-91
+                             :ARG2 (s20o / organization :name (s20n3 / name :op1 "四川" :op2 "高等" :op3 "检察厅"))
+                             :ARG3 (s20x6 / 检察长)
+                             :Aspect State
+                             :MODSTR FullAff))
+          :ARG1 (s20x5 / 碑文)
+          :affectee (s20i3 / individual-person :name (s20n2 / name :op1 "牛萧福贞" :ARG0-of (s20x3 / 惨死-01))
+                      :mod (s20x4 / 寡妇)
+                      :place (s20c / city :name (s20n5 / name :op1 "成都")))
+          :Aspect Performance
+          :MODSTR FullAff)
+  :Aspect State
+  :MODSTR FullAff
+  :era (s20x7 / 民国
+         :year (s20x8 / 十三)
+         :month (s20x9 / 十一)))
+
+# alignment:s20c: 0-0
+s20h: 0-0
+s20h2: -1--1
+s20i2: 0-0
+s20i3: -1--1
+s20i4: -1--1
+s20n2: -1--1
+s20n3: -1--1
+s20n4: -1--1
+s20n5: -1--1
+s20o: -1--1
+s20x: 0-0
+s20x3: 0-0
+s20x4: -1--1
+s20x5: -1--1
+s20x6: -1--1
+s20x7: 2-2
+s20x8: 3-3
+s20x9: 5-5
+
+# document level annotation:
+(s20s0 / sentence
+  :temporal ((DCT :before s20x)
+                       (DCT :before s20x3)
+                       (s20x :before s20x3)
+                       (PAST_REF :depends-on s20h))
+  :modal ((ROOT :MODAL AUTH)
+                       (AUTH :FullAff s20h2)
+                       (AUTH :FullAff s20x)
+                       (AUTH :FullAff s20h))
+  :coref ((s19x7 :same-event s20i2)))
+
+
+# :: snt21	台金 地区 内 有 至少 10 座 贞孝 节烈 牌坊 ， 其中 位于 金门 县 的 邱良功 母 节孝坊 更 被 列为 国定 古迹 。
+# sentence level graph:
+(s21a / and
+  :ARG1 (s21e / exist-91
+          :ARG0 (s21x24 / 地区
+                  :direction (s21x25 / 内)
+                  :mod (s21x26 / 台金))
+          :ARG1 (s21x19 / 牌坊
+                  :mod (s21x20 / 至少)
+                  :mod (s21x21 / 节烈)
+                  :mod (s21x22 / 贞孝)
+                  :unit (s21x23 / 座)
+                  :quant 10)
+          :MODSTR FullAff
+          :Aspect State)
+  :ARG2 (s21x / 列为-01
+          :ARG1 (s21x2 / 牌坊 :name (s21n / name :op1 "邱良功" :op2 "母" :op3 "节孝坊")
+                  :ARG0-of (s21x5 / 位于-01
+                             :ARG1 (s21c / county :name (s21n2 / name :op1 "金门"))
+                             :Aspect State
+                             :MODSTR FullAff))
+          :ARG2 (s21x3 / 古迹
+                  :mod (s21x4 / 国定))
+          :Aspect Performance
+          :MODSTR FullAff))
+
+# alignment:s21a: 0-0
+s21c: -1--1
+s21n: -1--1
+s21n2: -1--1
+s21x: -1--1
+s21x19: -1--1
+s21x2: 0-0
+s21x20: -1--1
+s21x21: -1--1
+s21x22: -1--1
+s21x23: -1--1
+s21x24: -1--1
+s21x25: -1--1
+s21x26: -1--1
+s21x3: 0-0
+s21x4: -1--1
+s21x5: 13-13
+
+# document level annotation:
+(s21s0 / sentence
+
+  :temporal ((DCT :overlap (s21x14)
+
+                    (DCT :overlap (s21x)
+
+                    (DCT :overlap (s21x5))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s21x14)
+
+                    (AUTH :FullAff (s21x))
+
+  :coref ((s1x :same-entity (s21x19)))
+
+
+
+
+# :: snt22	其他 有名 的 贞孝 节烈 牌坊 包括 位于 台中市 大甲区 的 林氏 贞孝坊 ， 和 位于 台北市 二二八 和平 纪念 公园 内 的 黄氏 节孝坊 。
+# sentence level graph:
+(s22h / have-example-91
+  :ARG1 (s22i2 / implicit-predicate)
+  :ARG2 (s22x / 包括-01
+          :ARG0 (s22x5 / 牌坊
+                  :mod (s22x6 / 其他)
+                  :mod (s22x7 / 有名)
+                  :mod (s22x8 / 节烈)
+                  :mod (s22x9 / 贞孝))
+          :ARG1 (s22a / and
+                  :op1 (s22x4 / 贞孝坊
+                         :mod (s22i3 / individual-person :name (s22n5 / name :op1 "林氏"))
+                         :place (s22d / district :name (s22n4 / name :op1 "大甲区")
+                                  :part-of (s22c2 / city :name (s22n3 / name :op1 "台中市"))))
+                  :op2 (s22x2 / 节孝坊
+                         :mod (s22i4 / individual-person :name (s22n6 / name :op1 "黄氏"))
+                         :place (s22p / park :name (s22n2 / name :op1 "二二八和平纪念公园")
+                                  :diection (s22x3 / 内)
+                                  :part-of (s22c / city :name (s22n / name :op1 "台北市")))))
+          :MODSTR FullAff
+          :Aspect state))
+
+# alignment:s22a: -1--1
+s22c: -1--1
+s22c2: -1--1
+s22d: -1--1
+s22h: 0-0
+s22i2: 0-0
+s22i3: 0-0
+s22i4: 0-0
+s22n: -1--1
+s22n2: -1--1
+s22n3: -1--1
+s22n4: -1--1
+s22n5: -1--1
+s22n6: -1--1
+s22p: -1--1
+s22x: 0-0
+s22x2: -1--1
+s22x3: -1--1
+s22x4: -1--1
+s22x5: -1--1
+s22x6: -1--1
+s22x7: -1--1
+s22x8: -1--1
+s22x9: -1--1
+
+# document level annotation:
+(s22s0 / sentence
+
+  :temporal ((DCT :overlap (s22x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s22x))
+
+  :coref ((s21x19 :same-entity (s22i2)
+
+                    (s22x5 :subset-of (s22x4)
+
+                    (s22x5 :subset-of (s22x2)))
+
+
+
+
+# :: snt23	根据 2013 年 厦门 晚报 的 报道 ， 福建省 厦门市 内 现在 还 有 总共 11 座 贞孝 节烈 牌坊 ， 而 湖南省 则 至少 有 1 座 。
+# sentence level graph:
+(s23a / and-contrast
+  :op1 (s23x / 有-03
+         :ARG1 (s23p2 / place :name (s23n / name :op1 (s23p / province :name (s23n4 / name :op1 "福建省")) :op2 (s23c / city :name (s23n5 / name :op1 "厦门市"))))
+         :ARG2 (s23x2 / 牌坊
+                 :mod (s23x3 / 贞孝)
+                 :mod (s23x4 / 节烈)
+                 :quant 11
+                 :unit (s23x5 / 座)
+                 :mod (s23x6 / 总共))
+         :temporal (s23x7 / 现在)
+         :mod (s23x8 / 还)
+         :Aspect State
+         :MODSTR FullAff)
+  :op2 (s23x9 / 有-03
+         :ARG1 (s23p3 / province :name (s23n6 / name :op1 "湖南省"))
+         :ARG2 (s23x10 / 牌坊
+                 :quant 1
+                 :unit (s23x11 / 座)
+                 :mod (s23x12 / 至少))
+         :Aspect State
+         :MODSTR FullAff)
+  :source (s23x13 / 报道
+            :source (s23n2 / newspaper :name (s23n7 / name :op1 "厦门" :op2 "晚报")))
+  :year 2013)
+
+# alignment:s23c: 10-10
+s23n2: 4-5
+s23n4: -1--1
+s23n5: -1--1
+s23n6: -1--1
+s23n7: -1--1
+s23p: 9-9
+s23p3: -1--1
+
+# document level annotation:
+(s23s0 / sentence
+
+  :temporal ((DCT :overlap (s23x)
+
+                    (DCT :overlap (s23x9))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s23x)
+
+                    (AUTH :FullAff (s23x9))
+
+  :coref ((s1x :subset-of (s23x2)
+
+                    (s1x :subset-of (s23x10)))
+
+
+
+
+# :: snt24	现代 社会 普遍 认为 ， 贞节 牌坊 束缚 女子 的 自由 ， 是 封建 社会 的 糟粕 。
+# sentence level graph:
+(s24x / 认为-01
+  :ARG0 (s24x2 / 社会
+          :mod (s24x3 / 现代))
+  :ARG1 (s24a / and
+          :ARG1 (s24a2 / and
+                  :ARG1 (s24x5 / 束缚-01
+                          :ARG0 (s24x15 / 牌坊
+                                  :mod (s24x16 / 贞节))
+                          :ARG1 (s24x13 / 自由
+                                  :poss (s24x14 / 女子))
+                          :Aspect Performance
+                          :MODSTR FullAff))
+          :ARG2 (s24i2 / identity-91
+                  :ARG1 s24x15
+                  :ARG2 (s24x10 / 糟粕
+                          :mod (s24x11 / 社会
+                                 :era (s24x12 / 封建)))
+                  :Aspect State
+                  :MODSTR FullAff))
+  :mod (s24x17 / 普遍)
+  :Aspect State
+  :MODSTR FullAff)
+
+# alignment:s24a: 0-0
+s24i2: -1--1
+s24x10: -1--1
+s24x11: -1--1
+s24x12: -1--1
+s24x13: -1--1
+s24x14: -1--1
+s24x15: 0-0
+s24x16: -1--1
+s24x17: 3-3
+s24x5: -1--1
+
+# document level annotation:
+(s24s0 / sentence
+
+  :temporal ((DCT :overlap (s24x)
+
+                    (DCT :overlap (s24x5)
+
+                    (DCT :overlap (s24i2))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s24x5)
+
+                    (AUTH :FullAff (s24i2)
+
+                    (AUTH :FullAff (s24x))
+
+  :coref ((s1x :same-entity (s24x15)))
+
+
+
+
+# :: snt25	有 现代 学者 亦 认为 贞节牌坊 其实 是 富有 的 大户 人家 炫耀 其 显赫 地位 的 工具 ， 并未 对 守节 妇女 真正 进行 关怀 。
+# sentence level graph:
+(s25x / 认为-01
+  :ARG0 (s25x2 / 学者
+          :mod (s25x3 / 现代))
+  :ARG1 (s25a / and-contrast
+          :ARG1 (s25i2 / identity-91
+                  :ARG1 s25x20
+                  :ARG2 (s25x10 / 工具
+                          :Instrument-of (s25x17 / 炫耀-01
+                                           :ARG0 (s25x21 / 人家
+                                                   :mod (s25x22 / 大户)
+                                                   :mod (s25x23 / 富有))
+                                           :ARG1 (s25x24 / 地位
+                                                   :mod (s25x16 / 显赫))
+                                           :Aspect Performance
+                                           :MODSTR FullAff))
+                  :mod (s25x19 / 其实))
+          :ARG2 (s25x9 / 关怀-01
+                  :ARG1 (s25x6 / 妇女
+                          :mod (s25x7 / 守节))
+                  :mod (s25x18 / 并未)
+                  :mod (s25x8 / 真正)
+                  :ARG1-of (s25x11 / 进行-01)
+                  :Aspect Process
+                  :MODSTR FullAff
+                  :polarity -)
+          :topic (s25x20 / 贞节牌坊))
+  :mod (s25x4 / 亦)
+  :Aspect State
+  :MODSTR FullAff)
+
+# alignment:s25a: 0-0
+s25i2: -1--1
+s25x10: -1--1
+s25x11: 25-25
+s25x16: -1--1
+s25x17: 0-0
+s25x18: -1--1
+s25x19: 7-7
+s25x20: 0-0
+s25x21: 12-12
+s25x22: 11-11
+s25x23: 9-9
+s25x24: 16-16
+s25x6: -1--1
+s25x7: -1--1
+s25x8: -1--1
+s25x9: -1--1
+
+# document level annotation:
+(s25s0 / sentence
+
+  :temporal ((DCT :overlap (s25x)
+
+                    (DCT :overlap (s25i2)
+
+                    (DCT :before (s25i2)
+
+                    (DCT :before (s25x9))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s25x17)
+
+                    (AUTH :FullAff (s25x9)
+
+                    (AUTH :FullAff (s25x)))
+
+
+
+
+# Source File: 
+贞孝 节烈 牌坊 为 牌坊 的 一种 ， 是 中国 古代 的 文化 产物 。
+贞孝 节烈 牌坊 是 因为 中国 封建 社会 的 贞节 旌表 制度 而 衍生 的 产物 。
+由于 中国 社会 在 封建 时代 对 妇女 贞操 和 孝义 非常 看重 ， 所以 贞孝 节烈 牌坊 则 是 用于 表扬 女性 守节 守孝 行为 的 奖励 。
+因为 每个 被 表扬 人士 的 生平 事迹 均 有 不同 ， 所以 贞孝节烈 牌坊 亦 会 被 区分 为 贞节 、 贞寿 、 贞烈 、 节孝 、 节烈 等 牌坊 。
+虽然 旌表 贞节 制度 早于 秦代 就 已经 存在 ， 但 最 早 有关 贞孝 节烈 牌坊 的 记载 则 追溯 到 明代 ， 而 贞孝 节烈 牌坊 亦 在 明代 年间 得到 法制 保证 。
+贞孝节烈 牌坊 在 明清 二代 在 中国 各地 大肆 兴建 。
+在 清代 ， 政府 当局 拨发 银两 用以 兴建 贞孝 节烈 牌坊 是 朝廷 表扬 贞节 旌表 三 种 方法 的 其中 一种 。
+清代 当局 最后 由于 拨发 建 牌坊 的 银两 数目 有限 而 达不到 彰显 守节 守孝 的 效果 ， 所以 在 中国 各地 设立 节孝祠 。
+中华民国 建立 后 ， 北洋 政府 仍 实行 贞节 旌表 。
+但 不久 ， 要求 女性 恪守 贞节 的 风俗 习惯 即 因 新文化 运动 引发 的 女性 解放 和 男女 平等 倡议 而 遭到 冲击 。
+国民政府 执政 后 ， 废除 贞节 旌表 。
+2015 年 ， 中华 人民 共和国 湖南省 衡阳县 文物局 考查 发现 中国 现存 、 可 考证 时间 的 最后 一座 贞孝 节烈 牌坊 。
+这座 牌坊 位于 该 县 台源 镇 柳树 村 ， 是 当地 村民 为 守节 寡妇 廖黄氏 于 1921 年 所 建 。
+牌坊 上 放 上 石匾 ， 而 石匾 上 则 刻 有 由 第二 任 中华民国 大 总统 徐世昌 题写 的 “ 节励 松筠 ” 四字 。
+建筑 形式 因应 各 地区 而 略有 不同 ， 但 一般 为 牌楼 形式 ， 少数 则 为 墓碑 形式 。
+上面 常用 的 四 大 字 为 “ 钦 旌 节 孝 ” 等 ， 其下 可能 记载 节妇 相 资料 事迹 ， 或 两侧 附 相关 对联 诗句 。
+贞孝节烈 牌坊 必须 得到 官方 准许 才能 兴建 。
+建造 程序 由 地方 官 掌控 ， 在 查访 后 向 直省 督抚 报告 ， 然后 在 上报 礼部 奏请 旌表 。
+北洋 政府 时期 ， 政府 允许 贞节 旌表 受 褒扬 人 、 家属 ， 及 同乡 为 其 建 坊 立 碑 ， 地方 官员 亦 会 亲 撰 碑文 。
+如 民国 十三 年 十一 月 ， 四川 高等 检察厅 检察长 黄绶 为 成都 惨死 的 寡妇 牛萧福贞 撰写 碑文 。
+台金 地区 内 有 至少 10 座 贞孝 节烈 牌坊 ， 其中 位于 金门 县 的 邱良功 母 节孝坊 更 被 列为 国定 古迹 。
+其他 有名 的 贞孝 节烈 牌坊 包括 位于 台中市 大甲区 的 林氏 贞孝坊 ， 和 位于 台北市 二二八 和平 纪念 公园 内 的 黄氏 节孝坊 。
+根据 2013 年 厦门 晚报 的 报道 ， 福建省 厦门市 内 现在 还 有 总共 11 座 贞孝 节烈 牌坊 ， 而 湖南省 则 至少 有 1 座 。
+现代 社会 普遍 认为 ， 贞节 牌坊 束缚 女子 的 自由 ， 是 封建 社会 的 糟粕 。
+有 现代 学者 亦 认为 贞节牌坊 其实 是 富有 的 大户 人家 炫耀 其 显赫 地位 的 工具 ， 并未 对 守节 妇女 真正 进行 关怀 。

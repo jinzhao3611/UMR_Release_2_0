@@ -1,0 +1,1096 @@
+user name: sherly
+user id: 546
+file language: chinese
+file format: plain_text
+Doc ID in database: 1688
+export time: 2024/12/18 下午11:32:36
+
+# :: snt1	载人 航天 是 指 由 宇航员 执行 的 太空 探索 ， 可以 由 单人 或 多人 执行 ， 惟 均 需 使用 载人 航天器 进行 。
+# sentence level graph:
+(s1a / and-but
+  :op1 (s1a2 / and
+         :op1 (s1x / 指-01
+                :ARG1 (s1x11 / 航天-01
+                        :mod (s1x12 / 载人))
+                :ARG2 (s1x14 / 探索-01
+                        :ARG1 (s1x15 / 太空)
+                        :ARG1-of (s1x16 / 执行-01
+                                   :ARG0 (s1x17 / 宇航员))))
+         :op2 (s1x18 / 执行-01
+                :manner (s1o2 / or
+                          :op1 (s1x19 / 单人)
+                          :op2 (s1x20 / 多人))
+                :ARG0-of (s1x21 / 可以-02))
+         :MODSTR FullAff
+         :Aspect State)
+  :op2 (s1x13 / 需-01
+         :ARG1 (s1x23 / 使用-01
+                 :ARG1 (s1x24 / 航天器
+                         :mod (s1x25 / 载人))
+                 :ARG2 (s1x26 / 进行-01))
+         :mod (s1x22 / 均)
+         :Aspect Habitual
+         :MODSTR FullAff))
+
+# alignment:s1a: 0-0
+s1a2: 0-0
+s1o2: 0-0
+s1x: 4-4
+s1x11: 0-0
+s1x12: -1--1
+s1x13: 21-21
+s1x14: 10-10
+s1x15: 9-9
+s1x16: 7-7
+s1x17: 6-6
+s1x18: 17-17
+s1x19: 14-14
+s1x20: 16-16
+s1x21: 12-12
+s1x22: 20-20
+s1x23: 22-22
+s1x24: 24-24
+s1x25: 23-23
+s1x26: 25-25
+
+# document level annotation:
+(s1s0 / sentence
+
+  :temporal ((DCT :overlap (s1x)
+
+                    (DCT :overlap (s1x13))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s1a2)
+
+                    (AUTH :FullAff (s1x13)))
+
+
+
+
+# :: snt2	目前 为止 只有 苏联 及其 继承 国 俄罗斯 、 美国 、 中华人民共和国 三个 国家 有 能力 独立 完成 载人 航天 。
+# sentence level graph:
+(s2x / 有-01
+  :ARG0 (s2x2 / 国家
+          :quant (s2x3 / 三
+                   :example (s2a2 / and
+                              :op1 (s2c / country :name (s2n / name :op1 "苏联")
+                                     :ARG1-of (s2x16 / 继承-01
+                                                :ARG0 (s2c4 / country :name (s2n4 / name :op1 "俄罗斯"))))
+                              :op2 (s2c2 / country :name (s2n2 / name :op1 "美国"))
+                              :op3 (s2c3 / country :name (s2n3 / name :op1 "中华人民共和国"))))
+          :unit (s2x15 / 个)
+          :mod (s2x14 / 只有))
+  :ARG1 (s2x8 / 能力)
+  :temporal (s2x13 / 目前为止)
+  :Aspect State
+  :MODSTR FullAff
+  :purpose (s2x4 / 完成-01
+             :ARG1 (s2x6 / 航天-01
+                     :mod (s2x7 / 载人))
+             :MODSTR FullAff
+             :Aspect Performance
+             :manner (s2x5 / 独立)))
+
+# alignment:s2a2: 0-0
+s2c: 4-4
+s2c2: 10-10
+s2c3: 12-12
+s2n: -1--1
+s2n2: -1--1
+s2n3: -1--1
+s2x14: 6-6
+s2x15: 0-0
+s2x16: 6-6
+s2c4: 8-8
+s2n4: -1--1
+s2x4: -1--1
+s2x5: -1--1
+s2x6: -1--1
+s2x7: -1--1
+
+# document level annotation:
+(s2s0 / sentence
+
+  :temporal ((DCT :overlap (s2x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s2x)
+
+                    (AUTH :FullAff (s2x4)))
+
+
+
+
+# :: snt3	历史 上 首次 载人 航天 任务 是 1961 年 4 月 12 日 苏联 发射 的 东方 1 号 ， 苏联 宇航员 尤里 · 加加林 在 环绕 地球 轨道 一周 后 安全 返回 地球 。
+# sentence level graph:
+(s3i2 / identity-91
+  :ARG1 (s3x16 / 任务
+          :mod (s3x17 / 航天
+                 :mod (s3x18 / 载人))
+          :ord (s3x20 / 首)
+          :unit (s3x22 / 次))
+  :ARG2 (s3x / 返回-01
+          :ARG0 (s3i3 / individual-person :name (s3n3 / name :op1 "尤里" :op2 "·" :op3 "加加林")
+                  :ARG1-of (s3h / have-org-role-91
+                             :ARG2 (s3c2 / country :name (s3n2 / name :op1 "苏联"))
+                             :ARG3 (s3x12 / 宇航员)))
+          :ARG1 (s3x11 / 地球)
+          :MODSTR FullAff
+          :Aspect Performance
+          :instrument (s3x2 / 东方1号
+                        :ARG1-of (s3x3 / 发射-01
+                                   :ARG0 (s3c / country :name (s3n / name :op1 "苏联"))
+                                   :MODSTR FullAff
+                                   :Aspect Performance
+                                   :temporal (s3d / date-entity
+                                               :year 1961
+                                               :month 4
+                                               :day 12)))
+          :manner (s3x4 / 安全)
+          :temporal (s3x5 / 后
+                      :op1 (s3x6 / 环绕-01
+                             :ARG1 (s3x9 / 轨道
+                                     :poss (s3x10 / 地球))
+                             :quant (s3x7 / 一)
+                             :unit (s3x8 / 周)
+                             :Aspect Performance
+                             :MODSTR FullAff)))
+  :temporal (s3x21 / 历史))
+
+# alignment:s3c: -1--1
+s3c2: -1--1
+s3d: -1--1
+s3h: -1--1
+s3i2: 0-0
+s3i3: -1--1
+s3n: -1--1
+s3n2: -1--1
+s3n3: -1--1
+s3x: -1--1
+s3x10: -1--1
+s3x11: -1--1
+s3x12: -1--1
+s3x16: 13-13
+s3x17: -1--1
+s3x18: -1--1
+s3x2: -1--1
+s3x20: 3-3
+s3x21: 1-1
+s3x22: 3-3
+s3x3: -1--1
+s3x4: -1--1
+s3x5: -1--1
+s3x6: -1--1
+s3x7: -1--1
+s3x8: -1--1
+s3x9: -1--1
+
+# document level annotation:
+(s3s0 / sentence
+
+  :temporal ((DCT :overlap (s3i2)
+
+                    (s3x6 :after (s3x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s3x)
+
+                    (AUTH :FullAff (s3x3)
+
+                    (AUTH :FullAff (s3x6)))
+
+
+
+
+# :: snt4	5 月 5 日 ， 艾伦 · 雪帕德 执行 自由 7 号 时 成为 了 第一个 进入 太空 的 美国 宇航员 ， 也 是 人类 历史 上 第二 人 ， 航天器 在 太空 停留 了 15 分钟 。
+# sentence level graph:
+(s4a / and
+  :op1 (s4x / 成为-01
+         :ARG0 (s4i / individual-person :name (s4n / name :op1 "艾伦" :op2 "雪帕德"))
+         :ARG1 (s4a3 / and
+                 :op1 (s4h2 / have-org-role-91
+                        :ARG2 (s4c2 / country :name (s4n4 / name :op1 "美国"))
+                        :ARG3 (s4x2 / 宇航员
+                                :ARG1 (s4x13 / 太空)
+                                :ord (s4x3 / 第一)
+                                :unit (s4x11 / 个)
+                                :ARG0-of (s4x12 / 进入-01
+                                           :ARG1 (s4x14 / 太空)
+                                           :Aspect Performance
+                                           :MODSTR FullAff)))
+                 :op2 (s4h3 / have-org-role-91
+                        :ARG3 (s4i2 / implicit-argument
+                                :ord (s4x17 / 第二)
+                                :unit (s4x18 / 人))
+                        :temporal (s4x15 / 历史
+                                    :mod (s4x16 / 人类))))
+         :Aspect Performance
+         :MODSTR FullAff
+         :temporal (s4x9 / 时
+                     :op1 (s4x10 / 执行-01
+                            :ARG1 (s4a2 / aircraft-type :name (s4n3 / name :op1 "自由" :op2 "7" :op3 "号"))
+                            :Aspect Process
+                            :MODSTR FullAff)))
+  :op2 (s4x7 / 停留-01
+         :ARG0 (s4x8 / 航天器)
+         :location (s4x19 / 太空)
+         :duration (s4t / 15分钟)
+         :Aspect Performance
+         :MODSTR FullAff)
+  :temporal (s4d / date-entity
+              :day 5
+              :month 5))
+
+# alignment:s4a2: 10-12
+s4a3: 0-0
+s4c2: 20-20
+s4d: -1--1
+s4h2: 0-0
+s4h3: 0-0
+s4i2: 0-0
+s4n3: -1--1
+s4n4: -1--1
+s4x10: 9-9
+s4x11: 16-16
+s4x12: 17-17
+s4x13: 18-18
+s4x14: 18-18
+s4x15: 26-26
+s4x16: 25-25
+s4x17: 28-28
+s4x18: 29-29
+s4x2: 0-0
+s4x3: 16-16
+s4x9: 13-13
+
+# document level annotation:
+(s4s0 / sentence
+
+  :temporal ((DCT :before (s4x)
+
+                    (DCT :before (s4x7)
+
+                    (DCT :before (s4x10)
+
+                    (s4x10 :Contained (s4x7)
+
+                    (s3x :after (s4x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s4x12)
+
+                    (AUTH :FullAff (s4x)
+
+                    (AUTH :FullAff (s4x10)
+
+                    (AUTH :FullAff (s4x7)))
+
+
+
+
+# :: snt5	1963 年 6 月 16 日 ， 苏联 宇航员 瓦莲京娜 · 捷列什科娃 执行 东方 6 号 任务 时 成为 了 第一 名 进入 太空 的 女性 。
+# sentence level graph:
+(s5x / 成为-01
+  :ARG0 (s5i / individual-person :name (s5n / name :op1 "瓦莲京娜" :op2 "捷列什科娃")
+          :ARG1-of (s5h / have-org-role-91
+                     :ARG2 (s5c / country :name (s5n2 / name :op1 "苏联"))
+                     :ARG3 (s5r / 宇航员)))
+  :ARG1 (s5w / 女性
+          :ord (s5f / 第一)
+          :ARG0-of (s5x3 / 进入-01
+                     :ARG1 (s5s / 太空)
+                     :Aspect Performance
+                     :MODSTR FullAff)
+          :unit (s5x4 / 名))
+  :temporal (s5d / date-entity
+              :year 1963
+              :month 6
+              :day 16)
+  :Aspect Performance
+  :MODSTR FullAff
+  :temporal (s5x5 / 时
+              :op1 (s5x6 / 执行-01
+                     :ARG0 s5i
+                     :ARG1 (s5x7 / 任务 :name (s5x8 / 东方6号))
+                     :Aspect Performance
+                     :MODSTR FullAff)))
+
+# alignment:s5x4: 22-undefined
+s5x5: 18-18
+s5x6: 13-13
+s5i: 0-0
+s5x7: 17-17
+s5x8: 14-16
+
+# document level annotation:
+(s5s0 / sentence
+
+  :temporal ((s4x :after (s5x)
+
+                    (DCT :before (s5x)
+
+                    (s5x6 :Contained (s5x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s5x3)
+
+                    (AUTH :FullAff (s5x)
+
+                    (AUTH :FullAff (s5x6))
+
+  :coref ((s5i :same-entity (s5w)))
+
+
+
+
+# :: snt6	中国 则 是 第三个 尝试 追赶 美 苏 的 国家 ， 但 载人 计划 在 1973 年 被 中途 取消 ， 直到 三十 年 后 的 2003 年 ， 中国 的 航天员 杨利伟 乘坐 神舟五号 ， 成功 围绕 地球 十四 圈 并 安全 返回 地球 ， 标志 着 中国 成为 第三个 有 能力 独立 完成 载人 航天 的 国家 。
+# sentence level graph:
+(s6a2 / and
+  :op1 (s6b / but-91
+         :op1 (s6i2 / identity-91
+                :ARG1 (s6c6 / country :name (s6n8 / name :op1 "中国"))
+                :ARG2 (s6x6 / 国家
+                        :mod (s6x11 / 尝试-01
+                               :ARG1 (s6x12 / 追赶-01
+                                       :ARG1 (s6a4 / and
+                                               :op1 (s6c7 / country :name (s6n9 / name :op1 "美"))
+                                               :op2 (s6c8 / country :name (s6n10 / name :op1 "苏")))
+                                       :Aspect Activity
+                                       :MODSTR FullAff)
+                               :Aspect Performance
+                               :MODSTR FullAff))
+                :mod (s6x13 / 则))
+         :op2 (s6x7 / 取消-01
+                :ARG1 (s6x9 / 计划
+                        :mod (s6x10 / 载人))
+                :mod (s6x8 / 中途)
+                :year 1973
+                :Aspect Performance
+                :MODSTR FullAff))
+  :op2 (s6a3 / and
+         :op1 (s6x14 / 乘坐-01
+                :ARG0 (s6i3 / individual-person :name (s6n11 / name :op1 "杨利伟")
+                        :ARG1-of (s6i4 / individual-person :name (s6n12 / name :op1 "have-org-role-91")
+                                   :ARG2 (s6c9 / country :name (s6n13 / name :op1 "中国"))
+                                   :ARG3 (s6x16 / 航天员)))
+                :Aspect Performance
+                :MODSTR FullAff)
+         :op2 (s6a5 / and
+                :op1 (s6x17 / 围绕-01
+                       :manner (s6x20 / 成功)
+                       :unit (s6x21 / 圈)
+                       :quant (s6x22 / 十四)
+                       :Aspect Performance
+                       :MODSTR FullAff)
+                :op2 (s6x18 / 返回-01
+                       :ARG1 (s6x23 / 地球)
+                       :manner (s6x24 / 安全)
+                       :Aspect Performance
+                       :MODSTR FullAff)
+                :ARG0-of (s6x15 / 标志-01
+                           :ARG2 (s6x19 / 成为-01
+                                   :ARG0 (s6c10 / country :name (s6n14 / name :op1 "中国"))
+                                   :ARG1 (s6x25 / 国家
+                                           :ord (s6x26 / 第三)
+                                           :unit (s6x27 / 个)
+                                           :ARG0-of (s6x28 / 有-01
+                                                      :ARG1 (s6x29 / 能力)
+                                                      :purpose (s6x30 / 完成-01
+                                                                 :ARG1 (s6x32 / 航天
+                                                                         :mod (s6x33 / 载人))
+                                                                 :manner (s6x31 / 独立))
+                                                      :Aspect State
+                                                      :MODSTR FullAff))
+                                   :Aspect Performance
+                                   :MODSTR FullAff)
+                           :Aspect Performance
+                           :MODSTR FullAff))
+         :temporal (s6x34 / 直到
+                     :op1 (s6d2 / date-entity
+                            :year 2003)
+                     :op2 (s6x35 / 后
+                            :op1 (s6h / have-duration-91
+                                   :quant (s6x36 / 三十)
+                                   :unit (s6x37 / 年))))))
+
+# alignment:s6a2: 0-0
+s6a3: 0-0
+s6a4: 0-0
+s6a5: 0-0
+s6b: 0-0
+s6c10: 49-49
+s6c6: 1-1
+s6c7: 7-undefined
+s6c8: 8-8
+s6c9: 30-30
+s6d2: 0-0
+s6h: 0-0
+s6i2: 0-0
+s6i3: 33-33
+s6i4: 0-0
+s6n10: -1--1
+s6n11: -1--1
+s6n12: -1--1
+s6n13: -1--1
+s6n14: -1--1
+s6n8: -1--1
+s6n9: -1--1
+s6x10: 13-13
+s6x11: 5-5
+s6x12: 6-6
+s6x13: 2-2
+s6x14: 38-38
+s6x15: 47-47
+s6x16: 32-32
+s6x17: 38-38
+s6x18: 44-44
+s6x19: 52-52
+s6x20: 37-37
+s6x21: 41-41
+s6x22: 40-40
+s6x23: 45-45
+s6x24: 43-43
+s6x25: 59-59
+s6x26: 51-51
+s6x27: 51-51
+s6x28: 52-52
+s6x29: 53-53
+s6x30: 55-55
+s6x31: 54-54
+s6x32: 57-57
+s6x33: 56-56
+s6x34: 22-22
+s6x35: 25-25
+s6x36: 23-23
+s6x37: 24-24
+s6x6: 10-10
+s6x7: 20-20
+s6x8: 19-19
+s6x9: 14-14
+
+# document level annotation:
+(s6s0 / sentence
+
+  :temporal ((s6x7 :before (s6x11)
+
+                    (s6x7 :after (s6x14)
+
+                    (s6x14 :depends-on (s6x17)
+
+                    (s6x17 :after (s6x18)
+
+                    (s6x17 :overlap (s6x15))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s6x12)
+
+                    (AUTH :FullAff (s6x11)
+
+                    (AUTH :FullAff (s6x7)
+
+                    (AUTH :FullAff (s6x14)
+
+                    (AUTH :FullAff (s6x17)
+
+                    (AUTH :FullAff (s6x18)
+
+                    (AUTH :FullAff (s6x28)
+
+                    (AUTH :FullAff (s6x19)
+
+                    (AUTH :FullAff (s6x15)))
+
+
+
+
+# :: snt7	目前 除 俄 美 中 三国 外 ， 还有 欧洲 空间局 、 日本 、 印度 、 伊朗 、 马来西亚 等 国家 和 机构 也 在 计划 实施 载人 航天 。
+# sentence level graph:
+(s7x / 计划-01
+  :ARG0 (s7h / have-example-91
+          :op1 (s7x4 / 国
+                 :quant (s7x5 / 三)
+                 :example (s7c6 / country :name (s7n7 / name :op1 "俄" :op2 "美" :op3 "中")))
+          :op2 (s7a3 / and
+                 :op1 (s7o / organization :name (s7n2 / name :op1 "欧洲" :op2 "空间局"))
+                 :op2 (s7c2 / country :name (s7n3 / name :op1 "日本"))
+                 :op3 (s7c3 / country :name (s7n4 / name :op1 "印度"))
+                 :op4 (s7c4 / country :name (s7n5 / name :op1 "伊朗"))
+                 :op5 (s7c5 / country :name (s7n6 / name :op1 "马来西亚"))
+                 :degree Intensifier
+                 :mod (s7a4 / and)
+                 :mod (s7x6 / 等)))
+  :ARG1 (s7x7 / 实施-01
+          :ARG1 (s7x2 / 航天-01
+                  :mod (s7x3 / 载人)))
+  :Aspect Activity
+  :MODSTR FullAff
+  :temporal (s7x8 / 目前))
+
+# alignment:s7h: 0-0
+s7x4: 6-6
+s7x5: 6-6
+s7c6: 3-5
+s7n7: -1--1
+s7a3: 0-0
+s7x6: -1--1
+s7o: 0-0
+s7n2: -1--1
+s7c2: -1--1
+s7n3: -1--1
+s7c3: -1--1
+s7n4: -1--1
+s7c4: -1--1
+s7n5: -1--1
+s7c5: -1--1
+s7n6: -1--1
+s7a4: 20-20
+s7x7: 27-27
+s7x2: -1--1
+s7x3: -1--1
+s7x8: 1-1
+
+# document level annotation:
+(s7s0 / sentence
+
+  :temporal ((DCT :overlap (s7x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s7x)))
+
+
+
+
+# :: snt8	1966 年 ， 美国 的 双子星 11 号 创造 了 最高 地球 轨道 记录 ， 飞行 高度 达 1374 公里 。
+# sentence level graph:
+(s8x / 创造-01
+  :ARG0 (s8x2 / 双子星11号
+          :poss (s8c / country :name (s8n2 / name :op1 "美国")))
+  :ARG1 (s8x4 / 记录
+          :mod (s8x6 / 最高)
+          :mod (s8x3 / 轨道
+                 :poss (s8x10 / 地球)))
+  :temporal (s8d / date-entity
+              :year 1966)
+  :Aspect Performance
+  :MODSTR FullAff
+  :manner (s8x7 / 达-01
+            :ARG0 (s8x5 / 高度
+                    :mod (s8x8 / 飞行))
+            :ARG1 (s8x9 / 公里
+                    :quant 1374)
+            :Aspect Performance
+            :MODSTR FullAff))
+
+# alignment:s8c: 4-4
+s8n2: -1--1
+s8x3: 13-13
+s8x10: 12-12
+s8x8: 16-16
+
+# document level annotation:
+(s8s0 / sentence
+
+  :temporal ((DCT :before (s8x)
+
+                    (s8x :overlap (s8x7))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s8x)
+
+                    (AUTH :FullAff (s8x7)))
+
+
+
+
+# :: snt9	发射 和 修理 哈勃 太空 望远镜 的 两次 航天 飞机 任务 也 曾 达到 600 公里 左右 的 飞行 高度 。
+# sentence level graph:
+(s9x / 达到-01
+  :ARG0 (s9x2 / 任务
+          :mod (s9x3 / 航天飞机)
+          :topic (s9a / and
+                   :op1 (s9x4 / 发射-01
+                          :ARG1 (s9x5 / 望远镜 :name (s9x16 / 哈勃)
+                                  :mod (s9x6 / 太空))
+                          :Aspect Performance
+                          :MODSTR FullAff)
+                   :op2 (s9x8 / 修理-01
+                          :ARG1 s9x5
+                          :Aspect Performance
+                          :MODSTR FullAff))
+          :quant (s9x14 / 两)
+          :unit (s9x15 / 次))
+  :ARG1 (s9x9 / 高度
+          :mod (s9x10 / 飞行)
+          :quant 600
+          :unit (s9x11 / 公里)
+          :mod (s9x12 / 左右))
+  :temporal (s9x13 / 曾)
+  :Aspect Performance
+  :MODSTR FullAff
+  :mod (s9x7 / 也))
+
+# alignment:s9x14: -1--1
+s9x15: -1--1
+s9x16: 4-4
+s9x7: 12-12
+
+# document level annotation:
+(s9s0 / sentence
+
+  :temporal ((DCT :before (s9x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s9x4)
+
+                    (AUTH :FullAff (s9x8)
+
+                    (AUTH :FullAff (s9x)))
+
+
+
+
+# :: snt10	迄今为止 ， 载人 航天 飞行 目标 在 地球 轨道 之外 的 任务 只 限于 月球 ， 尽管 月球 本身 也 是 地球 的 卫星 。
+# sentence level graph:
+(s10c / concession
+  :op1 (s10x / 限于-01
+         :ARG1 (s10x2 / 任务
+                 :mod (s10x14 / 目标
+                        :place (s10x15 / 之外
+                                 :op1 (s10x16 / 轨道
+                                        :poss (s10x17 / 地球)))
+                        :mod (s10x4 / 飞行-01
+                               :mod (s10x5 / 航天
+                                      :mod (s10x18 / 载人)))))
+         :ARG2 (s10x7 / 月球)
+         :Aspect State
+         :MODSTR FullAff
+         :mod (s10x13 / 只))
+  :op2 (s10i2 / identity-91
+         :ARG1 (s10x9 / 月球
+                 :mod (s10x11 / 本身))
+         :ARG2 (s10x12 / 卫星
+                 :poss (s10x10 / 地球))
+         :Aspect State
+         :MODSTR FullAff
+         :mod (s10x8 / 也))
+  :temporal (s10x6 / 迄今为止))
+
+# alignment:s10i2: 0-0
+s10x11: -1--1
+s10x12: -1--1
+s10x13: 13-13
+s10x14: 6-6
+s10x15: 10-10
+s10x16: 9-9
+s10x17: 8-8
+s10x6: 0-0
+s10x8: 20-20
+s10x9: -1--1
+s10x4: 5-5
+s10x5: 4-4
+s10x18: 3-3
+
+# document level annotation:
+(s10s0 / sentence
+
+  :temporal ((DCT :overlap (s10x)
+
+                    (DCT :overlap (s10i2))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s10x)
+
+                    (AUTH :FullAff (s10i2)))
+
+
+
+
+# :: snt11	第一次 去 月球 的 载人 任务 阿波罗8号 中 ， 三位 宇航员 曾 进入 月球 轨道 。
+# sentence level graph:
+(s11x / 进入-01
+  :ARG0 (s11x2 / 宇航员
+          :quant (s11x9 / 三)
+          :unit (s11x10 / 位))
+  :ARG1 (s11x3 / 轨道
+          :poss (s11x4 / 月球))
+  :temporal (s11x5 / 曾)
+  :Aspect Performance
+  :MODSTR FullAff
+  :temporal (s11x11 / 中
+              :op1 (s11x12 / 任务 :name (s11x13 / 阿波罗8号)
+                     :mod (s11x14 / 载人)
+                     :topic (s11x15 / 去-01
+                              :ARG1 (s11p2 / planet :name (s11n2 / name :op1 "月球"))
+                              :ord (s11x16 / 第一)
+                              :unit (s11x17 / 次)))))
+
+# alignment:s11x10: 10-10
+s11x11: 8-8
+s11x12: 6-6
+s11x13: 0-0
+s11x9: 10-10
+s11x14: 5-5
+s11x15: 2-2
+s11p2: 3-3
+s11n2: -1--1
+s11x16: 1-1
+s11x17: 1-undefined
+
+# document level annotation:
+(s11s0 / sentence
+
+  :temporal ((DCT :before (s11x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s11x)))
+
+
+
+
+# :: snt12	阿波罗10号 第二次 环绕 了 月球 ， 在 月球 轨道 进行 了 登月 航天器 的 测试 。
+# sentence level graph:
+(s12s / sequential
+  :op1 (s12x / 环绕-01
+         :ARG0 (s12c / craft :name (s12n / name :op1 "阿波罗10号"))
+         :ARG1 (s12p / planet :name (s12n2 / name :op1 "月球"))
+         :Aspect Performance
+         :MODSTR FullAff
+         :ord (s12x6 / 第二)
+         :unit (s12x7 / 次))
+  :op2 (s12x3 / 测试-01
+         :ARG1 (s12x4 / 航天器
+                 :mod (s12x5 / 登月))
+         :place (s12l / 轨道
+                  :poss (s12p2 / planet :name (s12n3 / name :op1 "月球")))
+         :Aspect Performance
+         :MODSTR FullAff))
+
+# alignment:s12x6: 2-2
+s12x7: 2-2
+
+# document level annotation:
+(s12s0 / sentence
+
+  :temporal ((s11x :after (s12x)
+
+                    (s12x :Contained (s12x3))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s12x)
+
+                    (AUTH :FullAff (s12x3)))
+
+
+
+
+# :: snt13	阿波罗 11 号 至 17 号 中 除了 13 号 的 六 次 任务 都 成功 登月 ， 每次 都 有 两 名 宇航员 踏上 了 月球 。
+# sentence level graph:
+(s13a / and
+  :op1 (s13x / 成功-01
+         :arg1 (s13x2 / 任务
+                 :quant (s13x3 / 六
+                          :mod (s13x13 / 都))
+                 :unit (s13x4 / 次)
+                 :example (s13x14 / 至-00
+                            :op1 (s13a2 / aircraft-type :name (s13n / name :op1 "阿波罗" :op2 "11" :op3 "号"))
+                            :op2 (s13a3 / aircraft-type :name (s13n2 / name :op1 "17" :op2 "号"))
+                            :mod (s13x15 / 除了-00
+                                   :ARG1 (s13a4 / aircraft-type :name (s13n3 / name :op1 "13" :op2 "号")))))
+         :Aspect Performance
+         :MODSTR FullAff)
+  :op2 (s13x7 / 踏上-01
+         :ARG0 (s13x8 / 宇航员
+                 :quant (s13x9 / 两)
+                 :unit (s13x5 / 名))
+         :ARG1 (s13x11 / 月球)
+         :Aspect performance
+         :MODSTR FullAff
+         :quant (s13x6 / 每
+                  :mod (s13x16 / 都))
+         :unit (s13x10 / 次)))
+
+# alignment:s13x13: 15-15
+s13x4: -1--1
+s13x14: 4-4
+s13a2: 1-3
+s13n: -1--1
+s13a3: 5-6
+s13n2: -1--1
+s13a4: 9-10
+s13n3: -1--1
+s13x15: 8-8
+s13x5: -1--1
+s13x6: 0-0
+s13x10: 0-0
+s13x16: 0-0
+
+# document level annotation:
+(s13s0 / sentence
+
+  :temporal ((DCT :before (s13x))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s13x)
+
+                    (AUTH :FullAff (s13x7))
+
+  :coref ((s13x :same-event (s13x7)))
+
+
+
+
+# :: snt14	于是 有 十二 名 宇航员 在 执行 阿波罗 计划 任务 时 完成 了 登月 的 壮举 ， 并 全部 安全 返回 。
+# sentence level graph:
+(s14c / consecutive
+  :op1 (s14i2 / implicit-predicate)
+  :op2 (s14a / and
+         :op1 (s14x2 / 完成-01
+                :ARG0 (s14x4 / 宇航员
+                        :quant (s14x5 / 十二)
+                        :unit (s14x / 名)
+                        :quant (s14x9 / 全部))
+                :ARG1 (s14x6 / 壮举
+                        :mod (s14x7 / 登月))
+                :Aspect Performance
+                :MODSTR FullAff)
+         :op2 (s14x3 / 返回-01
+                :ARG0 s14x4
+                :manner (s14x8 / 安全)
+                :Aspect Performance
+                :MODSTR FullAff)
+         :temporal (s14x10 / 时
+                     :op1 (s14x11 / 执行-01
+                            :ARG1 (s14x21 / 任务 :name (s14x22 / 阿波罗计划)))))
+  :mod (s14x13 / 于是))
+
+# alignment:s14c: 0-0
+s14i2: 0-0
+s14x: -1--1
+s14x13: -1--1
+s14x21: 10-10
+s14x22: 8-9
+s14a: 0-0
+s14x2: 12-12
+s14x3: 21-21
+s14x4: 0-0
+s14x5: -1--1
+s14x6: -1--1
+s14x7: -1--1
+s14x8: 20-20
+s14x9: -1--1
+s14x10: 11-undefined
+s14x11: 7-7
+
+# document level annotation:
+(s14s0 / sentence
+
+  :temporal ((s14x11 :Contained (s14x2)
+
+                    (s14x11 :Contained (s14x3)
+
+                    (DCT :before (s14x11))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s14x2)
+
+                    (AUTH :FullAff (s14x3))
+
+  :coref ((s13x :same-event (s14i2)))
+
+
+
+
+# :: snt15	某些 情况 下 ， 人类 以外 的 动物 也 曾 乘坐 航天器 进入 太空 ， 也 曾 有 过 多次 没能 返回 地球 的 情况 。
+# sentence level graph:
+(s15a / and
+  :op1 (s15x / 乘坐-01
+         :ARG0 (s15x2 / 动物
+                 :scope (s15x3 / 人类以外))
+         :ARG1 (s15x5 / 航天器
+                 :mod (s15x4 / 太空))
+         :Aspect Performance
+         :MODSTR FullAff
+         :temporal (s15x6 / 曾)
+         :mod (s15x13 / 也))
+  :op2 (s15x7 / 有-01
+         :ARG1 (s15x8 / 情况
+                 :mod (s15x9 / 返回-01
+                        :ARG1 (s15x10 / 地球)
+                        :mod (s15x12 / 没能)
+                        :Aspect Performance
+                        :MODSTR FullNeg
+                        :quant (s15x17 / 多)
+                        :unit (s15x18 / 次)))
+         :mod (s15x16 / 也)
+         :Aspect Perfective
+         :MODSTR FullAff)
+  :condition (s15x14 / 情况
+               :quant (s15x15 / 某些)))
+
+# alignment:s15x14: 2-2
+s15x15: 1-1
+s15x13: 9-undefined
+s15x16: 16-16
+s15x3: -1--1
+s15x4: -1--1
+s15x6: 10-10
+s15x17: 0-0
+s15x18: 0-0
+
+# document level annotation:
+(s15s0 / sentence
+
+  :temporal ((DCT :before (s15x)
+
+                    (DCT :before (s15x7))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s15x)
+
+                    (AUTH :FullNeg (s15x9)
+
+                    (AUTH :FullAff (s15x7)))
+
+
+
+
+# :: snt16	狗 是 第一 批 进入 太空 的 大型 哺乳 动物 。
+# sentence level graph:
+(s16i / identity-91
+  :ARG1 (s16d / 狗)
+  :ARG2 (s16a / 动物
+          :mod (s16s / 大型)
+          :mod (s16m / 哺乳)
+          :ord (s16x2 / 第一)
+          :unit (s16x3 / 批)
+          :mod (s16x / 进入-01
+                 :ARG1 (s16x4 / 太空)
+                 :MODSTR FullAff
+                 :Aspect Performance))
+  :Aspect State
+  :MODSTR FullAff)
+
+# alignment:s16x: -1--1
+s16x2: 3-3
+s16x3: 4-4
+s16x4: -1--1
+
+# document level annotation:
+(s16s0 / sentence
+
+  :temporal ((DCT :overlap (s16i))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s16x)
+
+                    (AUTH :FullAff (s16i)))
+
+
+
+
+# :: snt17	随着 航天技术 从 学术 及 公用 领域 走入 民间 ， 载人航天 也 开始 迈向 商业化 ， 并 使 包括 太空旅游 在内 的 商业 太空 飞行 成为 现实 。
+# sentence level graph:
+(s17a / and
+  :op1 (s17x9 / 迈向-01
+         :ARG0 (s17x3 / 载人航天)
+         :ARG1 (s17x10 / 商业化)
+         :Aspect Activity
+         :MODSTR FullAff
+         :ARG1-of (s17x / 开始-01)
+         :mod (s17x2 / 也))
+  :op2 (s17x5 / 成为-01
+         :ARG0 (s17x4 / 飞行
+                 :mod (s17x6 / 太空)
+                 :mod (s17x18 / 商业)
+                 :ARG0-of (s17x19 / 包括-01
+                            :ARG1 (s17x20 / 太空旅游)
+                            :mod (s17x21 / 在内)
+                            :Aspect Performance
+                            :MODSTR FullAff))
+         :ARG1 (s17x8 / 现实)
+         :ARG2 s17x11
+         :Aspect State
+         :MODSTR FullAff)
+  :temporal (s17x11 / 随着
+              :op1 (s17x12 / 走入-01
+                     :ARG0 (s17x16 / 航天技术)
+                     :ARG1 (s17x17 / 民间)
+                     :start (s17x13 / 领域
+                              :mod (s17a2 / and
+                                     :op1 (s17x14 / 学术)
+                                     :op2 (s17x15 / 公用)))
+                     :MODSTR FullAff
+                     :Aspect Activity)))
+
+# alignment:s17a2: 0-0
+s17x: 13-13
+s17x11: 0-0
+s17x12: 8-8
+s17x13: 7-7
+s17x14: 4-4
+s17x15: 6-6
+s17x16: 2-2
+s17x17: 9-9
+s17x18: 23-23
+s17x19: 19-19
+s17x2: 12-12
+s17x20: 20-20
+s17x21: 21-21
+s17x3: 11-11
+s17x6: 24-24
+
+# document level annotation:
+(s17s0 / sentence
+
+  :temporal ((s17x12 :overlap (s17x5)
+
+                    (s17x12 :depends-on (s17x5))
+
+  :modal ((ROOT :MODAL (AUTH)
+
+                    (AUTH :FullAff (s17x9)
+
+                    (AUTH :FullAff (s17x19)
+
+                    (AUTH :FullAff (s17x5)
+
+                    (AUTH :FullAff (s17x12)))
+
+
+
+
+# Source File: 
+载人 航天 是 指 由 宇航员 执行 的 太空 探索 ， 可以 由 单人 或 多人 执行 ， 惟 均 需 使用 载人 航天器 进行 。
+目前 为止 只有 苏联 及其 继承 国 俄罗斯 、 美国 、 中华人民共和国 三个 国家 有 能力 独立 完成 载人 航天 。
+历史 上 首次 载人 航天 任务 是 1961 年 4 月 12 日 苏联 发射 的 东方 1 号 ， 苏联 宇航员 尤里 · 加加林 在 环绕 地球 轨道 一周 后 安全 返回 地球 。
+5 月 5 日 ， 艾伦 · 雪帕德 执行 自由 7 号 时 成为 了 第一个 进入 太空 的 美国 宇航员 ， 也 是 人类 历史 上 第二 人 ， 航天器 在 太空 停留 了 15 分钟 。
+1963 年 6 月 16 日 ， 苏联 宇航员 瓦莲京娜 · 捷列什科娃 执行 东方 6 号 任务 时 成为 了 第一 名 进入 太空 的 女性 。
+中国 则 是 第三个 尝试 追赶 美 苏 的 国家 ， 但 载人 计划 在 1973 年 被 中途 取消 ， 直到 三十 年 后 的 2003 年 ， 中国 的 航天员 杨利伟 乘坐 神舟五号 ， 成功 围绕 地球 十四 圈 并 安全 返回 地球 ， 标志 着 中国 成为 第三个 有 能力 独立 完成 载人 航天 的 国家 。
+目前 除 俄 美 中 三国 外 ， 还有 欧洲 空间局 、 日本 、 印度 、 伊朗 、 马来西亚 等 国家 和 机构 也 在 计划 实施 载人 航天 。
+1966 年 ， 美国 的 双子星 11 号 创造 了 最高 地球 轨道 记录 ， 飞行 高度 达 1374 公里 。
+发射 和 修理 哈勃 太空 望远镜 的 两次 航天 飞机 任务 也 曾 达到 600 公里 左右 的 飞行 高度 。
+迄今为止 ， 载人 航天 飞行 目标 在 地球 轨道 之外 的 任务 只 限于 月球 ， 尽管 月球 本身 也 是 地球 的 卫星 。
+第一次 去 月球 的 载人 任务 阿波罗8号 中 ， 三位 宇航员 曾 进入 月球 轨道 。
+阿波罗10号 第二次 环绕 了 月球 ， 在 月球 轨道 进行 了 登月 航天器 的 测试 。
+阿波罗 11 号 至 17 号 中 除了 13 号 的 六 次 任务 都 成功 登月 ， 每次 都 有 两 名 宇航员 踏上 了 月球 。
+于是 有 十二 名 宇航员 在 执行 阿波罗 计划 任务 时 完成 了 登月 的 壮举 ， 并 全部 安全 返回 。
+某些 情况 下 ， 人类 以外 的 动物 也 曾 乘坐 航天器 进入 太空 ， 也 曾 有 过 多次 没能 返回 地球 的 情况 。
+狗 是 第一 批 进入 太空 的 大型 哺乳 动物 。
+随着 航天技术 从 学术 及 公用 领域 走入 民间 ， 载人航天 也 开始 迈向 商业化 ， 并 使 包括 太空旅游 在内 的 商业 太空 飞行 成为 现实 。

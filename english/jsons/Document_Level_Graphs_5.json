@@ -1,0 +1,54 @@
+[
+    {
+        "meta_info": "::id lrec-umr-modal-tool_2023-release.1 ::authors bonn",
+        "sentence_id": 1,
+        "sentence": "Lindsay  left  in  order  to  eat  lunch  .",
+        "index": "1      2      3      4      5      6      7      8",
+        "words": [
+            "Lindsay",
+            "left",
+            "in",
+            "order",
+            "to",
+            "eat",
+            "lunch",
+            "."
+        ],
+        "sentence_level_graph": "(s1l / leave-02\n    :ARG0 (s1p / person\n        :name (s1n / name :op1 \"Lindsay\"))\n    :aspect performance\n    :purpose (s1e / eat-01\n        :ARG0 s1p\n        :ARG1 (s1l2 / lunch)\n        :aspect performance))",
+        "alignment": {
+            "s1l": "2-2",
+            "s1p": "1-1",
+            "s1n": "0-0",
+            "s1e": "6-6",
+            "s1l2": "7-7"
+        },
+        "document_level_annotation": "(s1s0 / sentence\n    :temporal ((document-creation-time :before s1l)\n            (s1l :after s1e))\n    :modal ((root :modal author)\n            (root :modal author)\n            (author :full-affirmative s1l)\n            (author :full-negative s1e)\n            (s1p :partial-affirmative purpose)\n            (purpose :full-affirmative s1e)))"
+    },
+    {
+        "meta_info": "::id lrec-umr-modal-tool_2023-release.2 ::authors bonn",
+        "sentence_id": 2,
+        "sentence": "If  it  rains  ,  Alana  won't  water  the  plants  .",
+        "index": "1      2      3      4      5      6      7      8      9     10",
+        "words": [
+            "If",
+            "it",
+            "rains",
+            ",",
+            "Alana",
+            "won't",
+            "water",
+            "the",
+            "plants",
+            "."
+        ],
+        "sentence_level_graph": "(s2w / water-01\n    :ARG0 (s2p / person\n        :name (s2n / name :op1 \"Alana\"))\n    :ARG1 (s2p2 / plant\n        :refer-number plural)\n    :condition (s2r / rain-01\n        :aspect process)\n    :aspect performance)",
+        "alignment": {
+            "s2w": "7-7",
+            "s2p": "5-5",
+            "s2n": "0-0",
+            "s2p2": "9-9",
+            "s2r": "3-3"
+        },
+        "document_level_annotation": "(s2s0 / sentence\n    :temporal ((document-creation-time :after s2w)\n            (document-creation-time :after s2r))\n    :modal ((root :modal author)\n            (root :modal author)\n            (author :neutral-affirmative have-condition)\n            (have-condition :full-negative s2w)\n            (have-condition :full-affirmative s2r)))"
+    }
+]

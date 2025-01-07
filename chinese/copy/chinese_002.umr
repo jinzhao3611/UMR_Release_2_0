@@ -1,0 +1,753 @@
+user name: xd109
+user id: 582
+file language: chinese
+file format: plain_text
+Doc ID in database: 1668
+export time: 2024/12/17 17:22:43
+
+# :: snt1	苹果 推出 公司 首款 增强 现实 装置 “ Apple Vision Pro ” ， 定价 3,499 美元 。
+# sentence level graph:
+(s1x / 推出-01
+  :ARG0 (s1c / company
+          :name (s1n / name
+                  :op1 "苹果"))
+  :ARG1 (s1x3 / 装置
+          :mod (s1x4 / 增强
+                 :mod (s1x5 / 现实))
+          :mod (s1x6 / 首款)
+          :ARG1-of (s1i3 / identity-91
+                     :ARG2 (s1p2 / product
+                             :name (s1n2 / name
+                                     :op1 "Apple"
+                                     :op2 "Vision"
+                                     :op3 "Pro")))
+          :ARG1-of (s1h / have-value-91
+                     :ARG2 (s1m / monetary-quantity
+                             :quant 3499
+                             :unit (s1x7 / 美元))))
+  :Aspect Performance
+  :MODSTR FullAff)
+
+# alignment:s1c: 1-1
+s1h: 0-0
+s1i3: 0-0
+s1m: -1--1
+s1n: -1--1
+s1n2: -1--1
+s1p2: 0-0
+s1x: 0-0
+s1x3: -1--1
+s1x4: 0-0
+s1x5: 0-0
+s1x6: 0-0
+s1x7: -1--1
+
+# document level annotation:
+(s1s0 / sentence
+  :temporal ((DCT :before s1x)
+                       (s1x :before s1x7))
+  :modal ((AUTH :FullAff s1x)
+                       (AUTH :FullAff s1x7))
+)
+
+
+# :: snt2	苹果 在 美国 西岸 时间 星期一 的 活动 上 发布 Apple Vision Pro 。
+# sentence level graph:
+(s2x / 发布-01
+  :ARG0 (s2x2 / company
+          :name (s2n / name
+                  :op1 "苹果"))
+  :ARG1 (s2x3 / product
+          :name (s2n2 / name
+                  :op1 "Apple"
+                  :op2 "Vision"
+                  :op3 "Pro"))
+  :place (s2x4 / 活动
+           :temporal (s2d / date-entity
+                       :weekday (s2w / 星期一))
+           :timezone (s2x5 / 西岸
+                       :part-of (s2x6 / 美国)))
+  :Aspect Performance
+  :MODSTR FullAff)
+
+# alignment:s2d: 0-0
+s2n: 0-0
+s2n2: 0-0
+s2w: 0-0
+s2x: 0-0
+s2x2: 0-0
+s2x3: 0-0
+s2x4: 0-0
+s2x5: 4-4
+s2x6: 3-3
+
+# document level annotation:
+(s2s0 / sentence
+  :temporal ((DCT :before s2x))
+  :modal ((AUTH :FullAff s2x))
+)
+
+
+# :: snt3	头戴 显示器 搭载 5 个 传感器 、 12 个 镜头 ， 并 为 两个 眼睛 各 配置 一面 4K 荧幕 ， 而 在 头盔 的 正面 有 一 面 荧幕 可 展示 用家 的 眼部 。
+# sentence level graph:
+(s3a / and
+  :op1 (s3x / 搭载-01
+         :ARG1 (s3x2 / 显示器
+                 :mod (s3x3 / 头戴))
+         :ARG2 (s3a2 / and
+                 :op1 (s3x4 / 传感器
+                        :quant 5
+                        :unit (s3x5 / 个))
+                 :op2 (s3x6 / 镜头
+                        :quant 12
+                        :unit (s3x7 / 个)))
+         :Aspect state
+         :MODSTR FullAff)
+  :op2 (s3x8 / 配置-01
+         :ARG1 (s3x9 / 荧幕
+                 :quant 1
+                 :unit (s3x10 / 面)
+                 :mod (s3x11 / 4K)
+                 :affectee (s3x13 / 眼睛
+                             :quant 2
+                             :unit (s3x14 / 个)))
+         :Aspect state
+         :MODSTR FullAff
+         :mod (s3x12 / 各))
+  :op3 (s3h / have-91
+         :ARG1 (s3x23 / 头盔
+                 :place (s3x24 / 正面))
+         :ARG2 (s3x15 / 荧幕
+                 :quant 1
+                 :unit (s3x17 / 面)
+                 :place-of (s3x16 / 展示-01
+                             :ARG1 (s3x18 / 眼部
+                                     :Poss (s3x19 / 用家))))
+         :Aspect state
+         :MODSTR FullAff))
+
+# alignment:s3a: 0-0
+s3a2: 0-0
+s3x: 0-0
+s3x10: 0-0
+s3x11: 0-0
+s3x12: 16-16
+s3x13: -1--1
+s3x14: -1--1
+s3x15: 30-30
+s3x16: 32-32
+s3x17: -1--1
+s3x18: 35-35
+s3x19: 33-33
+s3x2: 0-0
+s3x23: 24-24
+s3x24: 26-26
+s3x3: 0-0
+s3x4: 0-0
+s3x5: 0-0
+s3x6: 0-0
+s3x7: 0-0
+s3x8: 0-0
+s3x9: 0-0
+
+# document level annotation:
+(s3s0 / sentence
+  :temporal ((s3x :overlap s3x8)
+                       (s3x :overlap s3h)
+                       (PRESENT_REF :overlap s3x16)
+                       (PRESENT_REF :Contained s3x))
+  :modal ((AUTH :FullAff s3x))
+)
+
+
+# :: snt4	和 早前 的 传闻 相同 ， 头盔 可 透过 眼球 、 手部 和 语音 控制 ， 并且 能够 连线 并 操作 苹果 的 Mac 电脑 。
+# sentence level graph:
+(s4a3 / and
+  :op1 (s4x3 / 相同-01
+         :ARG1 (s4x / 传闻
+                 :mod (s4x14 / 早前))
+         :Aspect State
+         :MODSTR FullAff)
+  :op2 (s4x15 / 控制-01
+         :ARG1 (s4x17 / 头盔)
+         :manner-of (s4x6 / 透过
+                      :arg1 (s4a / and
+                              :op1 (s4x9 / 眼球)
+                              :op2 (s4x8 / 手部)
+                              :op3 (s4x5 / 语音)))
+         :MODSTR FullAff
+         :Aspect State)
+  :op3 (s4a4 / and
+         :op1 (s4x16 / 连线-01
+                :ARG1 (s4p / product
+                        :name (s4n3 / name
+                                :op1 "Mac"
+                                :op2 "电脑")
+                        :Poss-of (s4c / company
+                                   :name (s4n / name
+                                           :op1 "苹果")))
+                :Aspect State
+                :MODSTR NeutAff)
+         :op2 (s4x18 / 操作-01
+                :ARG1 s4p
+                :instrument (s4s / s4x17)
+                :Aspect State
+                :MODSTR NeutAff)))
+
+# alignment:s4a3: 0-0
+s4a4: 0-0
+s4c: -1--1
+s4n: -1--1
+s4n3: -1--1
+s4p: 0-0
+s4s: -1--1
+s4x: -1--1
+s4x14: -1--1
+s4x15: 15-15
+s4x16: 19-19
+s4x17: 7-7
+s4x18: 21-21
+s4x3: 5-5
+s4x5: -1--1
+s4x6: -1--1
+s4x8: -1--1
+s4x9: -1--1
+
+# document level annotation:
+(s4s0 / sentence
+  :temporal ((s4x15 :overlap s4x16)
+                       (s4x16 :overlap s4x18)
+                       (DCT :before s4x3))
+  :modal ((AUTH :FullAff s4x15))
+  :coref ((s1p2 :same-entity s4x17)))
+
+
+# :: snt5	头盔 配有 苹果 的 M2 处理器 ， 公司 表示 为 专门 新 研发 的 R1 处理器 可 减少 用家 操作 时 的 不适 。
+# sentence level graph:
+(s5a / and
+  :op1 (s5x19 / 配有-01
+         :ARG1 (s5x15 / 头盔)
+         :ARG2 (s5p / product
+                 :name (s5n2 / name
+                         :op1 "M2"
+                         :op2 "处理器")
+                 :Poss (s5c / company
+                         :name (s5n / name
+                                 :op1 "苹果")))
+         :MODSTR FullAff
+         :Aspect state)
+  :op2 (s5x3 / 表示-01
+         :ARG0 (s5x4 / 公司)
+         :ARG1 (s5x / 减少-01
+                 :ARG0 (s5p2 / product
+                         :name (s5n3 / name
+                                 :op1 "R1"
+                                 :op2 "处理器")
+                         :ARG1-of (s5x10 / 研发
+                                    :ARG0 s5x4
+                                    :mod (s5x11 / 专门)
+                                    :mod (s5x9 / 新)
+                                    :Aspect Performance
+                                    :MODSTR FullAff))
+                 :ARG1 (s5x2 / 不适
+                         :temporal (s5x5 / 时
+                                     :op1 (s5x12 / 操作-01
+                                            :ARG0 (s5x8 / 用家))))
+                 :Aspect State
+                 :MODSTR PrtAff)
+         :Aspect state
+         :MODSTR FullAff))
+
+# alignment:s5a: 0-0
+s5c: -1--1
+s5n: -1--1
+s5n2: -1--1
+s5n3: -1--1
+s5p: 5-6
+s5p2: 15-16
+s5x: 18-18
+s5x10: -1--1
+s5x11: -1--1
+s5x15: -1--1
+s5x19: 2-2
+s5x2: -1--1
+s5x3: 9-9
+s5x4: 0-0
+s5x5: -1--1
+s5x8: -1--1
+s5x9: -1--1
+s5x12: 20-20
+
+# document level annotation:
+(s5s0 / sentence
+  :temporal ((s5x19 :after s5x3)
+                       (DCT :before s5x10)
+                       (s5x10 :before s5x2)
+                       (PRESENT_REF :overlap s5x))
+  :modal ((AUTH :FullAff s5x19))
+)
+
+
+# :: snt6	苹果 指 头戴 显示器 会 在 明年 初 于 美国 上市 ， 价格 为 3,499 美元 。
+# sentence level graph:
+(s6x6 / 指-02
+  :ARG0 (s6c3 / company
+          :name (s6n2 / name
+                  :op1 "苹果"))
+  :ARG1 (s6x7 / 上市-01
+          :ARG0 (s6x2 / 显示器
+                  :ARG1-of (s6h / have-value-91
+                             :ARG2 (s6m / monetary-quantity
+                                     :unit (s6x4 / 美元)
+                                     :quant 3499))
+                  :mod (s6x5 / 头戴))
+          :location (s6c / country
+                      :name (s6n / name
+                              :op1 "美国"))
+          :MODSTR FullAff
+          :Aspect Performance
+          :temporal (s6x / 初
+                      :op1 (s6x3 / 明年)))
+  :Aspect State
+  :MODSTR FullAff)
+
+# alignment:s6c: -1--1
+s6c3: 1-1
+s6m: -1--1
+s6n: -1--1
+s6n2: -1--1
+s6x: 7-7
+s6x2: -1--1
+s6x3: 7-7
+s6x4: -1--1
+s6x5: -1--1
+s6x6: 2-2
+s6x7: 11-11
+
+# document level annotation:
+(s6s0 / sentence
+  :temporal ((DCT :before s6x6)
+                       (s6x6 :after s6x7))
+  :modal ((AUTH :FullAff s6x6))
+)
+
+
+# :: snt7	目前 虚拟 现实 VR 和 增强 现实 AR 头盔 市场 由 2014 年 收购 Oculus 的 Meta 主导 ， Meta 的 高端 级 头盔 Quest Pro 在 美国 刚 推出 时 售卖 1,500 美元 ， 其后 降价 至 999 美元 ， 而 针对 普及 市场 的 最新 款 产品 Quest 3 则 定价 为 500 美元 。
+# sentence level graph:
+(s7a / and
+  :op1 (s7d / 主导-01
+         :ARG0 (s7c / company
+                 :name (s7n / name
+                         :op1 "Meta")
+                 :ARG0-of (s7x / 收购-01
+                            :ARG1 (s7c3 / company
+                                    :name (s7n6 / name
+                                            :op1 "Oculus"))
+                            :time (s7t / time
+                                    :year 2014)
+                            :Aspect Performance
+                            :MODSTR FullAff))
+         :ARG1 (s7m / 市场
+                 :mod (s7h / 头盔
+                        :mod (s7a4 / and
+                               :op1 (s7x8 / 现实
+                                      :mod (s7x9 / 虚拟)
+                                      :ARG1-of (s7i2 / identity-91
+                                                 :ARG2 (s7p / product
+                                                         :name (s7n7 / name
+                                                                 :op1 "VR"))))
+                               :op2 (s7x10 / 现实
+                                      :mod (s7x11 / 增强)
+                                      :ARG1-of (s7i3 / identity-91
+                                                 :ARG2 (s7p2 / product
+                                                         :name (s7n8 / name
+                                                                 :op1 "AR")))))))
+         :Aspect performance
+         :MODSTR FullAff
+         :temporal (s7x12 / 目前))
+  :op2 (s7s / 售卖-01
+         :ARG0 s7c
+         :ARG1 (s7h2 / 头盔
+                 :mod (s7n2 / name
+                        :op1 "Quest"
+                        :op2 "Pro")
+                 :mod (s7g / 高端)
+                 :mod (s7l / 级))
+         :location (s7c2 / country
+                     :name (s7n3 / name
+                             :op1 "美国"))
+         :value (s7m2 / money-quantity
+                  :quant 1500
+                  :unit "美元")
+         :Aspect performance
+         :MODSTR FullAff
+         :temporal (s7x13 / 时
+                     :op1 (s7x2 / 推出-01
+                            :ARG1 s7h2
+                            :mod (s7x3 / 刚))))
+  :op3 (s7r / 降价-01
+         :ARG1 s7h2
+         :value (s7m3 / money-quantity
+                  :quant 999
+                  :unit "美元")
+         :Aspect performance
+         :MODSTR FullAff
+         :temporal (s7x4 / 后
+                     :op1 "其"))
+  :op4 (s7p3 / 定价-01
+         :ARG1 (s7h3 / 头盔
+                 :mod (s7n4 / name
+                        :op1 "Quest"
+                        :op2 3)
+                 :mod (s7n5 / 最新款)
+                 :mod (s7p4 / 产品)
+                 :ARG0-of (s7x5 / 针对-01
+                            :arg1 (s7x7 / 市场
+                                    :mod (s7x6 / 普及))
+                            :Aspect State
+                            :MODSTR FullAff))
+         :value (s7m4 / money-quantity
+                  :quant 500
+                  :unit "美元")
+         :Aspect performance
+         :MODSTR FullAff))
+
+# alignment:s7a: 0-0
+s7a4: 0-0
+s7c: 0-0
+s7c2: 0-0
+s7c3: 15-15
+s7d: 0-0
+s7g: 0-0
+s7h: 0-0
+s7h2: 0-0
+s7h3: 0-0
+s7i2: 4-4
+s7i3: 8-8
+s7l: 0-0
+s7m: 0-0
+s7m2: 0-0
+s7m3: 0-0
+s7m4: 0-0
+s7n: 0-0
+s7n2: 0-0
+s7n3: 0-0
+s7n4: 0-0
+s7n5: 0-0
+s7n6: -1--1
+s7n7: -1--1
+s7n8: -1--1
+s7p: 4-4
+s7p2: 8-8
+s7p3: 0-0
+s7p4: 0-0
+s7r: 0-0
+s7s: 0-0
+s7t: -1--1
+s7x: -1--1
+s7x10: 7-7
+s7x11: 6-6
+s7x12: 1-1
+s7x13: 31-31
+s7x2: 31-31
+s7x3: -1--1
+s7x4: 36-36
+s7x5: 43-43
+s7x6: -1--1
+s7x7: 45-45
+s7x8: 3-3
+s7x9: 2-2
+
+# document level annotation:
+(s7s0 / sentence
+  :temporal ((s7d :before s7s)
+                       (s7s :after s7r)
+                       (s7s :after s7p3)
+                       (s7x12 :after s7x13)
+                       (s7c :Contained s7x12)
+                       (DCT :before s7x)
+                       (s7x2 :after s7r)
+                       (DCT :before s7x5))
+  :modal ((AUTH :FullAff s7d))
+)
+
+
+# :: snt8	Apple Vision Pro 推出 后 ， 苹果 的 股价 由 当日 184 美元 的 高位 下跌 ， 星期一 收市 报 179.58 元 ， 较 前一日 跌 百分之 0.8 。
+# sentence level graph:
+(s8x / 下跌-01
+  :ARG1 (s8x3 / 股价
+          :poss (s8c / company
+                  :name (s8n2 / name
+                          :op1 "苹果"))
+          :mod (s8x4 / 高位
+                 :quant 184
+                 :unit (s8u / 美元)
+                 :temporal (s8d / 当日))
+          :ARG0-of (s8x9 / 跌-01
+                     :ARG1 (s8p2 / percentage-entity
+                             :value 0.8)
+                     :temporal (s8x10 / 较前一日)
+                     :Aspect Performance
+                     :MODSTR FullAff))
+  :ARG2 (s8x5 / 报-01
+          :ARG1 s8x3
+          :ARG2 (s8m / money-quantity
+                  :quant 179.58
+                  :unit (s8u2 / 元))
+          :temporal (s8x8 / 收市
+                      :weekday (s8x7 / 星期一))
+          :Aspect State
+          :MODSTR FullAff)
+  :temporal (s8x2 / 后
+              :op1 (s8x11 / 推出-01
+                     :ARG1 (s8p / product
+                             :name (s8n / name
+                                     :op1 "Apple"
+                                     :op2 "Vision"
+                                     :op3 "Pro")))
+              :Aspect performance
+              :MODSTR FullAff)
+  :Aspect performance
+  :MODSTR FullAff)
+
+# alignment:s8c: 0-0
+s8d: 0-0
+s8m: 0-0
+s8n: -1--1
+s8n2: 0-0
+s8p: -1--1
+s8p2: 27-28
+s8u: 0-0
+s8u2: 0-0
+s8x: 0-0
+s8x10: 25-25
+s8x11: 4-4
+s8x2: 0-0
+s8x3: 0-0
+s8x4: 0-0
+s8x5: 0-0
+s8x7: 18-18
+s8x8: 19-19
+s8x9: 26-26
+
+# document level annotation:
+(s8s0 / sentence
+  :temporal ((s8x :before s8x9)
+                       (s8x :after s8x5)
+                       (s8x2 :after s8x)
+                       (DCT :before s8x11)
+                       (s8x :after s8x11))
+  :modal ((AUTH :FullAff s8x))
+)
+
+
+# :: snt9	微软 、 Google 等 科技 巨擎 陆续 投入 人工 智能 对话 平台 的 竞逐 ， 苹果 在 开发商 大会 上 就 没有 相关 的 新 产品 发布 。
+# sentence level graph:
+(s9c / contrast-91
+  :ARG1 (s9x / 投入-01
+          :ARG0 (s9x19 / 巨擎
+                  :example (s9a2 / and
+                             :op1 (s9c4 / company
+                                    :name (s9n / name
+                                            :op1 "微软"))
+                             :op2 (s9c2 / company
+                                    :name (s9n2 / name
+                                            :op1 "Google")))
+                  :mod (s9x7 / 科技))
+          :ARG1 (s9x2 / 竞逐-01
+                  :ARG1 (s9x3 / 平台
+                          :mod (s9x4 / 对话)
+                          :mod (s9x5 / 智能
+                                 :mod (s9x6 / 人工))))
+          :mod (s9x9 / 陆续)
+          :Aspect performance
+          :MODSTR FullAff)
+  :ARG2 (s9x10 / 发布-01
+          :ARG0 (s9c3 / company
+                  :name (s9n3 / name
+                          :op1 "苹果"))
+          :ARG1 (s9x11 / 产品
+                  :mod (s9x12 / 新)
+                  :mod (s9x13 / 相关))
+          :location (s9x14 / 大会
+                      :mod (s9x15 / 开发商))
+          :temporal (s9x17 / 就)
+          :polarity -
+          :MODSTR FullNeg
+          :Aspect Performance))
+
+# alignment:s9a2: 0-0
+s9c: 0-0
+s9c2: -1--1
+s9c3: 0-0
+s9c4: -1--1
+s9n: -1--1
+s9n2: -1--1
+s9n3: 0-0
+s9x: 0-0
+s9x10: 0-0
+s9x11: 0-0
+s9x12: 0-0
+s9x13: 0-0
+s9x14: 0-0
+s9x15: 0-0
+s9x17: 0-0
+s9x19: 6-6
+s9x2: 0-0
+s9x3: 0-0
+s9x4: 0-0
+s9x5: 0-0
+s9x6: 0-0
+s9x7: 5-5
+s9x9: 0-0
+
+# document level annotation:
+(s9s0 / sentence
+  :temporal ((s9x :overlap s9x10)
+                       (DCT :before s9x))
+  :modal ((AUTH :FullNeg s9x10)
+                       (AUTH :FullAff s9x))
+)
+
+
+# :: snt10	除开 各个 平台 操作系统 的 年度 更新 外 ， 苹果 还 首次 推出 轻薄 型 个人 笔记本 电脑 MacBook Air 的 15 吋 版本 。 新版 MacBook Air 和 其他 星期一 新 发布 的 Mac 产品 一样 ， 处理器 全部 由 苹果 自主 研发 ， 而非 由 处理器 制造商 英特尔 提供 ， 英特尔 当日 股价 下挫 百分之 4.6 。
+# sentence level graph:
+(s10a / and
+  :op1 (s10x / 推出-01
+         :ARG0 (s10x2 / company
+                 :name (s10n / name
+                         :op1 "苹果"))
+         :ARG1 (s10x3 / 电脑
+                 :name (s10n2 / name
+                         :op1 "MacBook"
+                         :op2 "Air")
+                 :mod (s10x4 / 笔记本
+                        :mod (s10x5 / 个人)
+                        :mod (s10x6 / 轻薄型))
+                 :poss (s10x7 / 版本
+                         :unit (s10x8 / 吋)
+                         :quant 15))
+         :ordinal-entity (s10x9 / 首次)
+         :condition (s10x10 / 除开-01
+                      :ARG1 (s10x11 / 更新-01
+                              :ARG1 (s10x12 / 系统
+                                      :mod (s10x13 / 操作
+                                             :mod (s10x14 / 平台
+                                                    :mod (s10x15 / 各个))))
+                              :Aspect habitual
+                              :mod (s10x16 / 年度)))
+         :Aspect performance
+         :MODSTR FullAff)
+  :op2 (s10x17 / 研发-01
+         :ARG0 s10x2
+         :ARG1 (s10x18 / 处理器
+                 :mod (s10x19 / 全部)
+                 :ARG1-of (s10x37 / 一样-02
+                            :ARG1 (s10x20 / 产品
+                                    :mod (s10m / mac)
+                                    :mod (s10x24 / 其他)
+                                    :Aspect performance
+                                    :ARG1-of (s10x22 / 发布-01
+                                               :weekday (s10x23 / 星期一)
+                                               :mod (s10x21 / 新)
+                                               :Aspect Performance
+                                               :MODSTR FullAff))
+                            :MODSTR FullAff
+                            :Aspect State)
+                 :Poss-of (s10p / product
+                            :name (s10n5 / name
+                                    :op1 "MacBook"
+                                    :op2 "Air")))
+         :mod (s10x28 / 自主)
+         :Aspect habitual
+         :MODSTR FullAff)
+  :op3 (s10b / but-91
+         :ARG2 (s10x25 / 提供-01
+                 :ARG0 (s10x26 / 制造商
+                         :name (s10n3 / name
+                                 :op1 "英特尔")
+                         :mod (s10x27 / 处理器))
+                 :ARG1 s10x18
+                 :MODSTR FullNeg
+                 :Aspect State))
+  :op4 (s10x33 / 下挫-01
+         :ARG0 (s10x34 / 股价
+                 :poss-of (s10c / company
+                            :name (s10n4 / name
+                                    :op1 "英特尔")))
+         :ARG1 (s10p2 / percentage-entity
+                 :value 4.6)
+         :day (s10x36 / 当日)
+         :Aspect performance
+         :MODSTR FullAff))
+
+# alignment:s10a: 0-0
+s10b: 0-0
+s10c: 53-53
+s10m: -1--1
+s10n: 0-0
+s10n2: 0-0
+s10n3: -1--1
+s10n4: -1--1
+s10n5: -1--1
+s10p: 27-28
+s10p2: 58-58
+s10x: 0-0
+s10x10: 0-0
+s10x11: 0-0
+s10x12: 0-0
+s10x13: 0-0
+s10x14: 0-0
+s10x15: 0-0
+s10x16: -1--1
+s10x17: 0-0
+s10x18: -1--1
+s10x19: 0-0
+s10x2: 0-0
+s10x20: 0-0
+s10x21: 32-32
+s10x22: 33-33
+s10x23: 31-undefined
+s10x24: -1--1
+s10x25: -1--1
+s10x26: -1--1
+s10x27: -1--1
+s10x28: 0-0
+s10x3: 0-0
+s10x33: 0-0
+s10x34: 0-0
+s10x36: 0-0
+s10x37: 37-37
+s10x4: 0-0
+s10x5: 0-0
+s10x6: 0-0
+s10x7: 0-0
+s10x8: 0-0
+s10x9: 0-0
+
+# document level annotation:
+(s10s0 / sentence
+  :temporal ((s10x :overlap s10x22)
+                       (s10x :after s10x17)
+                       (s10x :overlap s10x33)
+                       (DCT :before s10x)
+                       (s10x11 :after s10x)
+                       (s10x17 :after s10x33))
+  :modal ((AUTH :FullAff s10x)
+                       (AUTH :FullAff s10x33)
+                       (AUTH :FullNeg s10x25)
+                       (AUTH :FullAff s10x17))
+)
+
+
+# Source File: 
+苹果 推出 公司 首款 增强 现实 装置 “ Apple Vision Pro ” ， 定价 3,499 美元 。
+苹果 在 美国 西岸 时间 星期一 的 活动 上 发布 Apple Vision Pro 。
+头戴 显示器 搭载 5 个 传感器 、 12 个 镜头 ， 并 为 两个 眼睛 各 配置 一面 4K 荧幕 ， 而 在 头盔 的 正面 有 一 面 荧幕 可 展示 用家 的 眼部 。
+和 早前 的 传闻 相同 ， 头盔 可 透过 眼球 、 手部 和 语音 控制 ， 并且 能够 连线 并 操作 苹果 的 Mac 电脑 。
+头盔 配有 苹果 的 M2 处理器 ， 公司 表示 为 专门 新 研发 的 R1 处理器 可 减少 用家 操作 时 的 不适 。
+苹果 指 头戴 显示器 会 在 明年 初 于 美国 上市 ， 价格 为 3,499 美元 。
+目前 虚拟 现实 VR 和 增强 现实 AR 头盔 市场 由 2014 年 收购 Oculus 的 Meta 主导 ， Meta 的 高端 级 头盔 Quest Pro 在 美国 刚 推出 时 售卖 1,500 美元 ， 其后 降价 至 999 美元 ， 而 针对 普及 市场 的 最新 款 产品 Quest 3 则 定价 为 500 美元 。
+Apple Vision Pro 推出 后 ， 苹果 的 股价 由 当日 184 美元 的 高位 下跌 ， 星期一 收市 报 179.58 元 ， 较 前一日 跌 百分之 0.8 。
+微软 、 Google 等 科技 巨擎 陆续 投入 人工 智能 对话 平台 的 竞逐 ， 苹果 在 开发商 大会 上 就 没有 相关 的 新 产品 发布 。
+除开 各个 平台 操作系统 的 年度 更新 外 ， 苹果 还 首次 推出 轻薄 型 个人 笔记本 电脑 MacBook Air 的 15 吋 版本 。 新版 MacBook Air 和 其他 星期一 新 发布 的 Mac 产品 一样 ， 处理器 全部 由 苹果 自主 研发 ， 而非 由 处理器 制造商 英特尔 提供 ， 英特尔 当日 股价 下挫 百分之 4.6 。
