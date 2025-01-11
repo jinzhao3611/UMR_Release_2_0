@@ -1,15 +1,9 @@
 # Usage
+The English UMR 2.0 dataset is a subset of the English AMR dataset selected for conversion. The corpus is split into three categories based on the completeness of conversion:
+- <strong>Document Level:</strong> Sentence level graph fully converted based on current UMR guidelines with document level annotation also provided.
+- <strong>Full Conversion:</strong> Sentence level graph fully converted based on current UMR guidelines but no document level annotation.
+- <strong>Partial Conversion:</strong> Sentence level graphs with roleset conversions detailed below: 
 
-The English UMR 2.0 dataset is a subset of the English AMR dataset (link not working) selected for conversion. 
-
-## Document Level
-difference between doc level and full conversion
-
-## Full Conversion
-fully annotated to UMR 2.0 standards
-
-## Partial Conversion
-a subset of amr documents selected for conversion into umr 2.0 format. currently the partially converted subset contains the following changes:
 | Original AMR Structure             | UMR 2.0 Structure     | Change Type   | Number of Occurrences |
 |------------------------------------|-----------------------|---------------|:---------------------:|
 | :location                          | :place                | deterministic | 17,108                |
