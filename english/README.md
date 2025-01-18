@@ -1,6 +1,6 @@
 # Usage
-The English UMR 2.0 dataset is a subset of the English AMR dataset selected for conversion. The corpus is split into three categories based on the completeness of conversion:
-- <strong>Document Level:</strong> Sentence level graph fully converted based on current UMR guidelines with document level annotation also provided.
+The English UMR 2.0 dataset is a subset of the English AMR dataset selected for conversion; a list of included sentences along with their corresponding filenames can be found in `directory_by_sentence.tsv`. The corpus is split into three categories based on the completeness of conversion:
+- <strong>Document Level Conversion:</strong> Sentence level graph fully converted based on current UMR guidelines with document level annotation also provided.
 - <strong>Full Conversion:</strong> Sentence level graph fully converted based on current UMR guidelines but no document level annotation.
 - <strong>Partial Conversion:</strong> Sentence level graphs with roleset conversions detailed below: 
 
