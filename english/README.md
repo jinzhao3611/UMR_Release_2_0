@@ -46,7 +46,7 @@ The English UMR 2.0 dataset is a subset of the English AMR dataset selected for 
 
 # Acknowledgments (Copied from 1.0)
 
-The creators of the English UMRs wish to express their gratitude to Matt Buchholz, Skatje Myers, Alexis Palmer, Martha Palmer, Jin Zhao, Claire Bonial, and Tim O’Gorman for their assistance.
+The creators of the English UMRs wish to express their gratitude to Matt Buchholz, Skatje Myers, Alexis Palmer, Martha Palmer, Jin Zhao, Claire Bonial, Jens E. Van Gysel, Meagan Vigus, (Kristin, Benet, Carlos, Loden, ) Tim O’Gorman for their assistance.
 
 
 <pre>
