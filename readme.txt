@@ -1,34 +1,31 @@
-python validate.py ../english/formatted_data/Document_Level_Graphs_2.txt > /Users/jinzhao/Downloads/UMR_Release_2_0/english/errors/Document_Level_Graphs_2.txt
+In respond to https://github.com/ufal/UMR/issues/9
+Data format:
+################################################################################
+# meta-info :: sent_id = NW_PRI_ENG_0153_2000_1214.1
+# :: snt1
+Index: 1       2       3       4       5       6       7       8       9       10      11      12      13      14      15
+Words: Edmund  Pope    tasted  freedom today   for     the     first   time    in      more    than    eight   months  .
+# sentence level graph:
+(s1t / taste-01
+    :ARG0 (s1p / person
+        :name (s1n / name :op1 "Edmund" :op2 "Pope"))
+    :ARG1 (s1f / free-04
+        :ARG1 s1p
+        :aspect state)
+    :temporal (s1t2 / today)
+    :aspect state)
 
+# alignment:
+s1t: 3-3
+s1n: 1-2
+s1p: 0-0
+s1f: 4-4
+s1t2: 5-5
 
-
-English Data: I got two folders from Alvin:
-    for full_conversion folder:
-    1. this folder contains documents from 4 sources, I break up each source into documents by workset name
-    2. the files in this folder have irregular number of line breaks. I fixed it to be there should be two empty lines after each sentence, and one empty line after each annotation block.
-
-    for partial_conversion folder:
-    there is no sentence number in each variable
-
-
-
-sentence heading standardization: https://github.com/ufal/UMR/issues/9
-
-manual change:
-Little_Prince.txt: the linebreak between s71 and s91 is manually changed to "\n"
-
-
-UMR tool list:
-Abstract Concepts/subroles
-Abstract Rolesets are added in non_event_rolesets and discourse_concepts in validate.py
-Roles are added in known_relations in validate.py
-Attributes/values are added in known_relations in validate.py
-haven't done anything to NE types yet
-We don't have to do anything about three mappings files.
-
-English release related documents:
-https://docs.google.com/spreadsheets/d/1PVxgXW3ED3OWLieie9scr6iq_xuQ5RAA8YJKwbLwJ2E/edit?gid=0#gid=0
-https://docs.google.com/spreadsheets/d/1UwHf_O7pqXRSKs-AlAL0FxRpPKRDWFH96yQLsOYjHXE/edit?gid=180118374#gid=180118374
-https://docs.google.com/spreadsheets/d/1q0RqXAObwT35nKsMEasYrBKKslEFxavC2HR7Z882Hk8/edit?gid=0#gid=0
-
-
+# document level annotation:
+(s1s0 / sentence
+    :temporal ((document-creation-time :depends-on s1t2)
+            (s1t2 :contains s1t))
+    :modal ((root :modal author)
+            (author :full-affirmative s1t)
+            (author :full-affirmative s1f)))

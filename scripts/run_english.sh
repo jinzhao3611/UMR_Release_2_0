@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the input directory containing the files to process
-INPUT_DIR="../english/formatted_data"
+INPUT_DIR="../english/release_data"
 # Set the output directory where errors will be stored
 OUTPUT_DIR="../english/errors"
 
