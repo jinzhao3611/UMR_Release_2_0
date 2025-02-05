@@ -304,6 +304,7 @@ def json2txt(json_file_path, output_file_path):
                     words_line = "Words: " + "".join(f"{word:<{max_width + 1}}" for word in words)  # Align words
                     out_file.write(indices + "\n")
                     out_file.write(words_line + "\n")
+                    out_file.write("\n")
 
                 out_file.write(f"# sentence level graph:\n{sentence_graph}\n\n")
                 out_file.write(f"# alignment:\n")
@@ -311,19 +312,18 @@ def json2txt(json_file_path, output_file_path):
                     for v, i in alignment.items():
                         out_file.write(f"{v}: {i}\n")
                 out_file.write(f"\n")
-                out_file.write(f"# document level annotation:\n{document_annotation}\n\n\n")
+                out_file.write(f"# document level annotation:\n{document_annotation.strip()}\n\n\n")
     print(f"Entries have been written to {output_file_path}")
 
-def batch_json2txt(json_folder_path):
+def batch_json2txt(json_folder_path, output_folder_path):
+    output_folder_path.mkdir(parents=True, exist_ok=True)
     for subdir, _, files in os.walk(json_folder_path):
         for file in files:
             if file.endswith(".json"):
                 json_file_path = os.path.join(subdir, file)
-                output_file_path = json_file_path.replace("jsons", "output_data")
+                output_file_path = os.path.join(output_folder_path, file)
                 output_file_path = output_file_path.replace(".json", ".umr")
                 print(f"Processing file: {json_file_path}")
-                print(f"formatted file: {output_file_path}")
-
                 json2txt(json_file_path, output_file_path)
 
 
@@ -474,9 +474,9 @@ release_folder_path = Path(root) / f'{lang}/release_data/'
 #todo: running above: Error: The file '/Users/jinzhao/schoolwork/UMR_Release_2_0/english/jsons/partial_conversion/ldc/dfb/bolt-eng-DF-170-181103-8883028_0147.json' was not found.
 
 # step 6: write to standard lindakat format from merged jsons
-# batch_json2txt(merged_jsons_folder_path)
+batch_json2txt(merged_jsons_folder_path, output_folder_path)
 
 # step 7:change file names to standards
-flatten_directory_structure(output_folder_path, release_folder_path)
+# flatten_directory_structure(output_folder_path, release_folder_path)
 
 

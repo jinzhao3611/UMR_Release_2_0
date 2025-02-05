@@ -16,11 +16,7 @@ def pre_format(input_file_path, output_file_path):
         if line.startswith("# sent_id ="):
             # Add separator before the # sent_id line
             modified_lines.append("################################################################################\n")
-            modified_lines.append(line)
-        elif line.startswith("Sentence:"):
-            continue         # skip #TODO: make this line on meta info
-        elif line.startswith("Sentence Gloss"):
-            continue  # Skip #TODO: make this line on meta info
+            modified_lines.append(line.replace("# sent_id =", "# meta-info :: sent_id ="))
         else:
             modified_lines.append(line)
 
@@ -105,8 +101,9 @@ lang = "latin"
 original_file_path = Path(root) / 'latin/original_data/latin_umr-0001.txt'
 formatted_file_path = Path(root) / 'latin/formatted_data/latin_umr-0001.umr'
 # step 1:
-# pre_format(input_file_path=original_file_path, output_file_path=formatted_file_path)
-# step 2:
-batch_process_file(input_folder= Path(root) / f'{lang}/formatted_data/', output_folder= Path(root) / f'{lang}/jsons/')
+pre_format(input_file_path=original_file_path, output_file_path=formatted_file_path)
+
+# step 2: This step is not needed for publishing
+# batch_process_file(input_folder= Path(root) / f'{lang}/formatted_data/', output_folder= Path(root) / f'{lang}/jsons/')
 
 

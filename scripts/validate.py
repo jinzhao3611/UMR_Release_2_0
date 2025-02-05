@@ -280,9 +280,10 @@ def sentences(inp, args):
                     lines = []
                     corrupt = False
                 else:
-                    testid = 'extra-empty-line'
-                    testmessage = 'Spurious empty line. One empty line is expected after every annotation block and two after every sentence.'
-                    warn(testmessage, testclass, testlevel=testlevel, testid=testid)
+                    if args.check_extra_empty_line:
+                        testid = 'extra-empty-line'
+                        testmessage = 'Spurious empty line. One empty line is expected after every annotation block and two after every sentence.'
+                        warn(testmessage, testclass, testlevel=testlevel, testid=testid)
         elif line[0] == '#':
             # We will really validate sentence ids later. But now we want to remember
             # everything that looks like a sentence id and use it in the error messages.
@@ -1672,14 +1673,14 @@ def validate_wiki(sentence, node_dict, args):
         relations = sorted(node['relations'], key=lambda x: x['line0'])
         for r in relations:
             if r['relation'] == ':wiki':
-                if r['type'] != 'string':
+                if args.check_string_wiki and r['type'] != 'string':
                     testid = 'unexpected-value'
                     testmessage = "Expected string attribute of '%s', found '%s'." % (r['relation'], r['type'])
                     warn(testmessage, testclass, testlevel, testid, lineno=r['line0'])
                 else:
                     # At ÚFAL we require the :wiki value to be a Wikidata identifier (from URL after stripping https://wikidata.org/wiki/).
                     # The US UMR team allow article title from English Wikipedia instead, so this test is not universally applicable.
-                    if not re.match(r"^Q[1-9][0-9]*$", r['value']):
+                    if args.check_non_q_wiki and not re.match(r"^Q[1-9][0-9]*$", r['value']):
                         testid = 'unexpected-value'
                         testmessage = "Expected Wikidata id (Q+number), found '%s'." % (r['value'])
                         warn(testmessage, testclass, testlevel, testid, lineno=r['line0'])
@@ -2421,6 +2422,21 @@ if __name__=="__main__":
     strict_group.add_argument('--warn-overlapping-alignment', dest='check_overlapping_alignment', action='store_true', default=False, help='Report words that are aligned to more than one node. This is a warning only, and it is turned off by default.')
     strict_group.add_argument('--no-warn-unaligned-token', dest='check_unaligned_token', action='store_false', default=True, help='Report words that are not aligned to any node. This is a warning only, and it is turned on by default.')
     strict_group.add_argument('--optional-aspect-modstr', dest='check_aspect_modstr', action='store_false', default=True, help='Do not require that every eventive concept has :aspect and :modstr.')
+    strict_group.add_argument('--allow-non-q-wiki', dest='check_non_q_wiki',
+                              action='store_false', default=True,
+                              help='Do not require that :wiki be a Q-number.')
+    strict_group.add_argument('--allow-non-string-wiki',
+                              dest='check_string_wiki',
+                              action='store_false',
+                              default=True,
+                              help='Do not require that :wiki be a string attribute.')
+    strict_group.add_argument(
+        '--allow-extra-empty-lines',
+        dest='check_extra_empty_line',
+        action='store_false',
+        default=True,
+        help='Do not report extra/spurious empty lines.'
+    )
 
     report_group = opt_parser.add_argument_group('Reports', 'Options for printing additional reports about the data.')
     report_group.add_argument('--print-relations', dest='print_relations', action='store_true', default=False, help='Print detailed info about all nodes and relations.')
