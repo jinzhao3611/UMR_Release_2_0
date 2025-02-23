@@ -1,11 +1,96 @@
 import os, re, json
 from pathlib import Path
-
+from tabulate import tabulate
+import penman
+from penman.exceptions import DecodeError
 current_script_dir = Path(__file__).parent
 root = current_script_dir.parent
 
 with open(Path(root) / 'chinese/role_mappings.json', 'r') as file:
     replacements = json.load(file)
+
+def add_modal_triple(doc_text, new_triple="(author :full-affirmative s3z)"):
+    """
+    Given the text of a document-level annotation (AMR-like),
+    add `new_triple` to the :modal block if it doesn't already exist.
+    1) If there is no :modal block, create one.
+    2) If there is a :modal block, insert the new triple before the final ')'.
+    3) If `new_triple` (exact line match ignoring indentation) is already present, do nothing.
+    """
+    lines = doc_text.split("\n")
+
+    # 0) Check if `new_triple` is already present (line-by-line)
+    new_triple_stripped = new_triple.strip()
+    for line in lines:
+        if line.strip() == new_triple_stripped:
+            # This exact triple line is already present
+            return doc_text  # do nothing, return original
+
+    # 1) Find if there's a :modal block
+    found_modal_block = False
+    modal_start_index = None
+
+    for i, line in enumerate(lines):
+        if line.strip().startswith(":modal ("):
+            found_modal_block = True
+            modal_start_index = i
+            break
+
+    if found_modal_block:
+        # We already have a :modal block. Let's find its matching close.
+        bracket_count = 0
+        start = modal_start_index
+
+        # Count parentheses from the start line until the block ends
+        for j in range(start, len(lines)):
+            bracket_count += lines[j].count("(")
+            bracket_count -= lines[j].count(")")
+            if bracket_count == 0:
+                # j is the line where the :modal block closes
+                # Insert our new triple just before this line.
+                indent = " " * 8
+                insertion_line = indent + new_triple
+                lines.insert(j, insertion_line)
+                break
+    else:
+        # No :modal block found => create a brand-new one.
+        modal_block_lines = [
+            "    :modal ((root :modal author)",
+            f"        {new_triple})"  # close the parentheses
+        ]
+
+        # Insert near the end of the doc (just before the final line).
+        insert_idx = len(lines) - 1
+        # If you need a more precise spot, do a search for the top-level closing parenthesis.
+        lines[insert_idx:insert_idx] = modal_block_lines
+
+    # Return updated text
+    return "\n".join(lines)
+
+def create_aligned_lines(words):
+    """
+    Takes a list of words and returns two lines:
+      1) An index line: "Index: 1  2  3  ..."
+      2) A words line: "Words: w1 w2 w3 ..."
+    using tabulate for alignment.
+    """
+    # Prepare a 2-row table where the first row has "Index:" + each index
+    # and the second row has "Words:" + each word.
+    data = [
+        ["Index:"] + [str(i + 1) for i in range(len(words))],
+        ["Words:"] + words
+    ]
+
+    # Generate a plain table with left alignment
+    table_str = tabulate(data, tablefmt="plain", stralign="left")
+
+    # Split the table into lines
+    lines = table_str.split("\n")
+    index_line = lines[0]
+    words_line = lines[1]
+
+    return index_line, words_line
+
 
 def fix_closing_paren_format(text):
     # Split the text into lines
@@ -81,6 +166,7 @@ def umr_writer_txt2json(input_file_path, output_file_path):
                 if current_annotation:
                     parsed_data["annotations"].append(current_annotation)
                 match = re.search(r"# :: snt(\d+)", line)
+                sentence_id = None
                 if match:
                     sentence_id = int(match.group(1))
                 else:
@@ -97,6 +183,29 @@ def umr_writer_txt2json(input_file_path, output_file_path):
                     "alignments": "", #TODO: change the alignment from string to dictionary
                     "document_level_annotation": "",
                 }
+            elif line.startswith("# ::snt"): #lin bin's file
+                sent_level_annot = False
+                alignment_annot = False
+                doc_level_annot = False
+                if current_annotation:
+                    parsed_data["annotations"].append(current_annotation)
+                match = re.search(r"# ::snt(\d+)Sentence:", line)
+                sentence_id = None
+                if match:
+                    sentence_id = int(match.group(1))
+                else:
+                    print("ERROR: there is no sentence_id extracted. ")
+                current_annotation = {
+                    "meta_info": "",
+                    "sentence_id": sentence_id,
+                    "sentence": line.split("Sentence:", 1)[1],
+                    "index":"",
+                    "words":line.split("Sentence:", 1)[1].strip().split(),
+                    "sentence_level_graph": "",
+                    "alignments": "", #TODO: change the alignment from string to dictionary
+                    "document_level_annotation": "",
+                }
+                current_annotation["conversion_type"] = "partial-conversion"
             elif current_annotation and line.startswith("# sentence level graph:"):
                 sent_level_annot = True
                 alignment_annot = False
@@ -143,6 +252,33 @@ def umr_writer_txt2json(input_file_path, output_file_path):
     if current_annotation:
         parsed_data["annotations"].append(current_annotation)
 
+
+    for annot in parsed_data["annotations"]:
+        sent_level_graph = annot["sentence_level_graph"]
+        doc_level_graph = annot["document_level_annotation"]
+        if doc_level_graph.strip() and not "ROOT" in doc_level_graph:
+            doc_level_graph = add_modal_triple(doc_level_graph, "(ROOT :modal AUTH)")
+        try:
+            g = penman.decode(sent_level_graph)
+            triples = g.triples
+            for triple in triples:
+                if triple[1] == ":MODSTR" or triple[1] == ":modal-strength":
+                    if doc_level_graph.strip():
+                        doc_level_graph = add_modal_triple(doc_level_graph, f"(AUTH :{triple[2]} {triple[0]})")
+            # 2) Filter out any triple whose relation is ':MODSTR'
+            filtered_triples = [t for t in triples if t[1] != ':MODSTR' and t[1] != ":modal-strength"]
+
+            # 3) Build a new Graph with the filtered triples
+            new_graph = penman.Graph(filtered_triples, epidata=g.epidata)
+
+            # 4) Encode back to AMR-like text
+            sent_level_graph = penman.encode(new_graph)
+        except DecodeError:
+            print(f"DecodeError in block:\n{sent_level_graph}\n")
+
+        annot["sentence_level_graph"] = sent_level_graph
+        annot["document_level_annotation"] = doc_level_graph
+
     # Save the parsed output as JSON for review
     with open(output_file_path, "w", encoding="utf-8") as output_file:
         json.dump(parsed_data["annotations"], output_file, ensure_ascii=False, indent=4)
@@ -154,49 +290,79 @@ def folder_umr_writer_txt2json():
     output_folder_path = Path(root) / 'chinese/jsons/'
     for file_path in input_folder_path.iterdir():
         if file_path.suffix == '.txt':  # Ensure the file has a .txt extension
-            try:
-                umr_writer_txt2json(file_path, Path.joinpath(output_folder_path, file_path.name.replace(".txt", ".json")))
-            except Exception as e:
-                print(f"Error processing {file_path}: {e}")
+            umr_writer_txt2json(file_path, Path.joinpath(output_folder_path, file_path.name.replace(".txt", ".json")))
+
+            # try:
+            # except Exception as e:
+            #     print(f"Error processing {file_path}: {e}")
 
 
-
-def json2txt(input_file_path, output_file_path):
-    # input_file_path = "/Users/jinzhao/schoolwork/UMR_Release_2_0/chinese/jsons/coldwave_jingyi.json"
-    # output_file_path = "/Users/jinzhao/schoolwork/UMR_Release_2_0/chinese/formatted_data/coldwave_jingyi.txt"
-    with open(input_file_path, 'r') as file:
+def json2txt(json_file_path, output_file_path):
+    with open(json_file_path, 'r', encoding='utf-8') as file:
         data = json.load(file)
 
-    output = ""
-    for annotation in data["annotations"]:
-        indices = "\t".join(map(str, range(1, len(annotation["sentence"].strip().split()) + 1)))
-        output += f"""# :: snt{annotation["sentence_id"]}\nIndex:\t{indices}\nWords:\t{annotation["sentence"].strip()}\n\n"""
-        sent_annot = annotation["sentence_level_graph"]
-        doc_annot = annotation["document_level_annotation"]
-        for key, value in replacements.items():
-            sent_annot = re.sub(re.escape(key), value, sent_annot, flags=re.IGNORECASE)
-            doc_annot = re.sub(re.escape(key), value, doc_annot, flags=re.IGNORECASE)
-        doc_annot = fix_closing_paren_format(doc_annot)
-        doc_annot = fix_parentheses(doc_annot)
+    with open(output_file_path, 'w', encoding='utf-8') as out_file:
+        for entry in data:
+            # Prepare content for each entry
+            id_info = entry.get("meta_info", "")
+            conversion_type = entry.get("conversion_type", "")
+            sentence_id = entry.get("sentence_id", "No sentence ID")
+            words = entry.get("words", [])
+            sent_annot = entry.get("sentence_level_graph", "No graph")
+            alignment = entry.get("alignment", {})
+            doc_annot = entry.get("document_level_annotation", "")
+            for key, value in replacements.items():
+                sent_annot = re.sub(re.escape(key), value, sent_annot, flags=re.IGNORECASE)
+                doc_annot = re.sub(re.escape(key), value, doc_annot, flags=re.IGNORECASE)
+            doc_annot = fix_closing_paren_format(doc_annot)
+            doc_annot = fix_parentheses(doc_annot)
 
-        output += f"""# sentence level graph:\n{sent_annot}\n"""
-        output += f"""# alignment:\n{annotation["alignments"]}\n"""
-        output += f"""# document level annotation:\n{doc_annot}\n\n"""
+            if sentence_id != "No sentence ID":
+                out_file.write("################################################################################\n")
+                # Write the content to the file
+                if id_info:
+                    if conversion_type:
+                        out_file.write(f"# meta-info :: sent_id = {id_info} :: type = partial_conversion\n")
+                    else:
+                        out_file.write(f"# meta-info :: sent_id = {id_info}\n")
+                else:
+                    if conversion_type:
+                        out_file.write(f"# meta-info :: type = partial_conversion\n")
+                    else:
+                        out_file.write(f"# meta-info\n")
 
+                out_file.write(f"# :: snt{sentence_id}\n")
 
-    with open(output_file_path, 'w') as file:
-        file.write(output)
+                # Calculate the maximum width of the words for alignment
+                if words:
+                    index_str, words_str = create_aligned_lines(words)
 
-def folder_json2txt():
-    input_folder_path = Path(root) / 'chinese/jsons/'
-    output_folder_path = Path(root) / 'chinese/formatted_data/'
-    for file_path in input_folder_path.iterdir():
-        if file_path.suffix == '.json':  # Ensure the file has a .txt extension
-            try:
-                json2txt(file_path, Path.joinpath(output_folder_path, file_path.name.replace(".json", ".txt")))
-            except Exception as e:
-                print(f"Error processing {file_path}: {e}")
+                    out_file.write(index_str + "\n")
+                    out_file.write(words_str + "\n")
+                    out_file.write("\n")
+
+                out_file.write(f"# sentence level graph:\n{sent_annot}\n\n")
+                out_file.write(f"# alignment:\n")
+                if alignment:
+                    for v, i in alignment.items():
+                        out_file.write(f"{v}: {i}\n")
+                out_file.write(f"\n")
+                out_file.write(f"# document level annotation:\n{doc_annot.strip()}\n\n\n")
+    print(f"Entries have been written to {output_file_path}")
+
+def batch_json2txt(json_folder_path, output_folder_path):
+    output_folder_path.mkdir(parents=True, exist_ok=True)
+    for subdir, _, files in os.walk(json_folder_path):
+        for file in files:
+            if file.endswith(".json"):
+                json_file_path = os.path.join(subdir, file)
+                output_file_path = os.path.join(output_folder_path, file)
+                output_file_path = output_file_path.replace(".json", ".umr")
+                print(f"Processing file: {json_file_path}")
+                json2txt(json_file_path, output_file_path)
 
 if __name__ == '__main__':
-    folder_umr_writer_txt2json()
-    # folder_json2txt()
+    # step 1:
+    # folder_umr_writer_txt2json()
+    # step 2:
+    batch_json2txt(Path(root) / 'chinese/jsons', Path(root) / 'chinese/formatted_data')
