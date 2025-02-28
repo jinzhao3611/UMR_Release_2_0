@@ -501,8 +501,10 @@ def json2txt(json_file_path, output_file_path):
             alignments = entry.get("alignments", {})
             doc_annot = entry.get("document_level_annotation", "")
             for key, value in replacements.items():
-                sent_annot = re.sub(re.escape(key), value, sent_annot, flags=re.IGNORECASE)
-                doc_annot = re.sub(re.escape(key), value, doc_annot, flags=re.IGNORECASE)
+                # Add word boundaries \b to ensure exact word matches only
+                pattern = r'\b' + re.escape(key) + r'\b'
+                sent_annot = re.sub(pattern, value, sent_annot, flags=re.IGNORECASE)
+                doc_annot = re.sub(pattern, value, doc_annot, flags=re.IGNORECASE)
             doc_annot = fix_closing_paren_format(doc_annot)
             doc_annot = fix_parentheses(doc_annot)
 
