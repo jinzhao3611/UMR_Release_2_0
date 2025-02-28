@@ -72,22 +72,28 @@ def create_aligned_lines(words):
     Takes a list of words and returns two lines:
       1) An index line: "Index: 1  2  3  ..."
       2) A words line: "Words: w1 w2 w3 ..."
-    using tabulate for alignment.
+    using tabulate for alignment, with proper handling of Chinese character widths.
     """
-    # Prepare a 2-row table where the first row has "Index:" + each index
-    # and the second row has "Words:" + each word.
-    data = [
-        ["Index:"] + [str(i + 1) for i in range(len(words))],
-        ["Words:"] + words
-    ]
+    try:
+        import wcwidth
+    except ImportError:
+        import os
+        os.system('pip install wcwidth')
+        import wcwidth
 
-    # Generate a plain table with left alignment
-    table_str = tabulate(data, tablefmt="plain", stralign="left")
-
-    # Split the table into lines
-    lines = table_str.split("\n")
-    index_line = lines[0]
-    words_line = lines[1]
+    # Calculate display widths for each word
+    word_widths = [sum(wcwidth.wcwidth(c) for c in word) for word in words]
+    
+    # Create the index numbers with proper spacing
+    indices = [str(i + 1) for i in range(len(words))]
+    index_widths = [len(idx) for idx in indices]
+    
+    # Calculate the width needed for each column
+    column_widths = [max(iw, ww) for iw, ww in zip(index_widths, word_widths)]
+    
+    # Create the lines with proper spacing
+    index_line = "Index:" + "".join(f" {idx:>{width}}" for idx, width in zip(indices, column_widths))
+    words_line = "Words:" + "".join(f" {word:<{width}}" for word, width in zip(words, column_widths))
 
     return index_line, words_line
 
@@ -128,6 +134,187 @@ def fix_parentheses(input_text):
     output_text = "\n".join(output_lines)
     return output_text
 
+def parse_alignment_span(span_str):
+    """
+    Parse an alignment span string (e.g., "1-1", "0-0", "-1--1", "1-2, 5-6") into a list of tuples.
+    Returns list of (start, end) tuples or None if invalid format.
+    """
+    try:
+        # Handle special cases first
+        if span_str == "-1--1":
+            return [(-1, -1)]
+        if span_str == "0-0":
+            return [(0, 0)]
+        
+        # Handle invalid formats
+        if "undefined" in span_str.lower():
+            print(f"Warning: Found 'undefined' in alignment span: {span_str}")
+            return None
+        
+        # Split multiple spans if they exist
+        spans = [s.strip() for s in span_str.split(",")]
+        result = []
+        
+        for span in spans:
+            if "-" not in span:
+                print(f"Warning: Invalid span format (missing hyphen): {span}")
+                continue
+            try:
+                start, end = map(int, span.split("-"))
+                result.append((start, end))
+            except ValueError:
+                print(f"Warning: Invalid numbers in span: {span}")
+                continue
+            
+        return result if result else None
+    except (ValueError, TypeError) as e:
+        print(f"Warning: Invalid alignment span format: {span_str} ({str(e)})")
+        return None
+
+def validate_alignment_span(span_str, max_token_idx):
+    """
+    Validate that an alignment span is well-formed and within bounds.
+    Args:
+        span_str: The span string to validate (e.g., "1-1" or "1-2, 5-6")
+        max_token_idx: The maximum valid token index (length of sentence)
+    Returns:
+        bool: True if valid, False otherwise
+    """
+    spans = parse_alignment_span(span_str)
+    if spans is None:
+        return False
+        
+    # Special cases with single span
+    if len(spans) == 1:
+        start, end = spans[0]
+        if (start, end) == (-1, -1) or (start, end) == (0, 0):
+            return True
+    
+    # For all spans (including multiple spans):
+    for start, end in spans:
+        # Each span must satisfy:
+        # 1. start <= end
+        # 2. start >= 1 (1-based indexing)
+        # 3. end <= max_token_idx
+        if not (start <= end and start >= 1 and end <= max_token_idx):
+            return False
+            
+        # For multiple spans, also check they don't overlap
+        for other_start, other_end in spans:
+            if (start, end) != (other_start, other_end):  # Don't compare span with itself
+                # Check for overlap
+                if not (end < other_start or start > other_end):
+                    print(f"Warning: Overlapping spans in alignment: {span_str}")
+                    return False
+    
+    return True
+
+def process_alignment(var, span_str, max_token_idx):
+    """
+    Process and validate an alignment entry.
+    Returns (var, span_str) tuple if valid, None otherwise.
+    """
+    var = var.strip()
+    span_str = span_str.strip()
+    
+    if not var:
+        print(f"Warning: Empty variable name in alignment")
+        return None
+        
+    if not validate_alignment_span(span_str, max_token_idx):
+        print(f"Warning: Invalid alignment span {span_str} for variable {var}")
+        return None
+        
+    return (var, span_str)
+
+def extract_variables_and_concepts(graph_text):
+    """
+    Extract variables and their associated concepts from the graph using penman.
+    
+    Args:
+        graph_text: The sentence level graph text
+        
+    Returns:
+        dict: A dictionary mapping variables to their concepts
+    """
+    try:
+        g = penman.decode(graph_text)
+        var_concepts = {}
+        for instance in g.instances():
+            # Remove any -01, -02 etc. suffixes from concepts
+            base_concept = re.sub(r'-\d+$', '', instance.target)
+            var_concepts[instance.source] = base_concept
+        return var_concepts
+    except Exception as e:
+        print(f"Error parsing graph with penman: {e}")
+        return {}
+
+def find_token_for_concept(concept, words):
+    """
+    Find the token that best matches the concept.
+    
+    Args:
+        concept: The concept to match
+        words: List of tokens in the sentence
+        
+    Returns:
+        int: The 1-based index of the matching token, or 0 if no match found
+    """
+    # Convert concept to base form (remove hyphens and numbers)
+    base_concept = concept.lower().replace('-', '')
+    
+    # First try exact match
+    for i, word in enumerate(words, 1):
+        if word.lower() == base_concept:
+            return i
+            
+    # Then try stem/substring matching
+    for i, word in enumerate(words, 1):
+        word_lower = word.lower()
+        # Check if either is a substring of the other
+        if (base_concept in word_lower or 
+            word_lower in base_concept or
+            # Handle common variations (e.g., "take" matching "takes", "taking", etc.)
+            word_lower.startswith(base_concept) or
+            base_concept.startswith(word_lower)):
+            return i
+    
+    return 0
+
+def generate_alignments_from_graph(graph_text, words, num_tokens):
+    """
+    Generate alignments from the graph by matching variables' concepts with tokens.
+    Uses penman to properly parse the graph structure.
+    Always returns either a valid token index or 0-0, never -1--1.
+    
+    Args:
+        graph_text: The sentence level graph text
+        words: List of tokens in the sentence
+        num_tokens: Number of tokens in the sentence
+        
+    Returns:
+        dict: A dictionary mapping variables to alignment spans
+    """
+    alignments = {}
+    try:
+        # Extract variables and their concepts using penman
+        var_concepts = extract_variables_and_concepts(graph_text)
+        
+        # For each variable, try to find a matching token
+        for var, concept in var_concepts.items():
+            token_idx = find_token_for_concept(concept, words)
+            
+            # Assign alignment
+            if token_idx > 0 and token_idx <= num_tokens:
+                alignments[var] = f"{token_idx}-{token_idx}"
+            else:
+                alignments[var] = "0-0"
+                
+        return alignments
+    except Exception as e:
+        print(f"Error generating alignments: {e}")
+        return {}
+
 def umr_writer_txt2json(input_file_path, output_file_path):
     parsed_data = {
         "meta": {},
@@ -159,53 +346,31 @@ def umr_writer_txt2json(input_file_path, output_file_path):
                 parsed_data["meta"]["export_time"] = line.split(":", 1)[1].strip()
 
             # Parse annotations
-            elif line.startswith("# :: snt"):
+            elif line.startswith("# :: snt") or line.startswith("# ::snt"):
                 sent_level_annot = False
                 alignment_annot = False
                 doc_level_annot = False
                 if current_annotation:
                     parsed_data["annotations"].append(current_annotation)
-                match = re.search(r"# :: snt(\d+)", line)
+                # Try both formats
+                match = re.search(r"# ::(?: )?snt(\d+)(?:Sentence:)?", line)
                 sentence_id = None
                 if match:
                     sentence_id = int(match.group(1))
                 else:
                     print("ERROR: there is no sentence_id extracted. ")
                 if "\t" not in line: #lin bin's file
-                    line = re.sub(r"(# :: snt\d+) ", r"\1\t", line)
+                    line = re.sub(r"(# ::(?: )?snt\d+(?:Sentence:)?)\s+", r"\1\t", line)
                 current_annotation = {
                     "meta_info": "",
                     "sentence_id": sentence_id,
-                    "sentence": line.split("\t", 1)[1],
+                    "sentence": line.split("\t", 1)[1] if "\t" in line else line.split("Sentence:", 1)[1] if "Sentence:" in line else "",
                     "index":"",
-                    "words":line.split("\t", 1)[1].split(),
+                    "words": line.split("\t", 1)[1].split() if "\t" in line else line.split("Sentence:", 1)[1].split() if "Sentence:" in line else [],
                     "sentence_level_graph": "",
-                    "alignments": "", #TODO: change the alignment from string to dictionary
+                    "alignments": {},  # Initialize as empty dictionary instead of empty string
                     "document_level_annotation": "",
                 }
-            elif line.startswith("# ::snt"): #lin bin's file
-                sent_level_annot = False
-                alignment_annot = False
-                doc_level_annot = False
-                if current_annotation:
-                    parsed_data["annotations"].append(current_annotation)
-                match = re.search(r"# ::snt(\d+)Sentence:", line)
-                sentence_id = None
-                if match:
-                    sentence_id = int(match.group(1))
-                else:
-                    print("ERROR: there is no sentence_id extracted. ")
-                current_annotation = {
-                    "meta_info": "",
-                    "sentence_id": sentence_id,
-                    "sentence": line.split("Sentence:", 1)[1],
-                    "index":"",
-                    "words":line.split("Sentence:", 1)[1].strip().split(),
-                    "sentence_level_graph": "",
-                    "alignments": "", #TODO: change the alignment from string to dictionary
-                    "document_level_annotation": "",
-                }
-                current_annotation["conversion_type"] = "partial-conversion"
             elif current_annotation and line.startswith("# sentence level graph:"):
                 sent_level_annot = True
                 alignment_annot = False
@@ -215,7 +380,15 @@ def umr_writer_txt2json(input_file_path, output_file_path):
                 sent_level_annot = False
                 alignment_annot = True
                 doc_level_annot = False
-                current_annotation["alignments"] += line.split(":", 1)[1]
+                # Parse the first alignment on this line after "# alignment:"
+                parts = line.split(":", 2)
+                if len(parts) > 2 and ":" in parts[2]:  # Make sure we have enough parts and there's an alignment
+                    first_alignment = parts[2].strip()
+                    var, span = first_alignment.split(":", 1)
+                    max_tokens = len(current_annotation["words"])
+                    alignment_entry = process_alignment(var, span, max_tokens)
+                    if alignment_entry:
+                        current_annotation["alignments"][alignment_entry[0]] = alignment_entry[1]
             elif current_annotation and line.startswith("# document level annotation:"):
                 sent_level_annot = False
                 alignment_annot = False
@@ -227,7 +400,13 @@ def umr_writer_txt2json(input_file_path, output_file_path):
                         current_annotation["sentence_level_graph"] += line
                 elif alignment_annot:
                     if line.strip():
-                        current_annotation["alignments"] += line
+                        # Parse subsequent alignment lines
+                        if ":" in line:  # Make sure it's a valid alignment line
+                            var, span = line.strip().split(":", 1)
+                            max_tokens = len(current_annotation["words"])
+                            alignment_entry = process_alignment(var, span, max_tokens)
+                            if alignment_entry:
+                                current_annotation["alignments"][alignment_entry[0]] = alignment_entry[1]
                 elif doc_level_annot:
                     if line.strip():
                         current_annotation["document_level_annotation"] += line
@@ -252,10 +431,20 @@ def umr_writer_txt2json(input_file_path, output_file_path):
     if current_annotation:
         parsed_data["annotations"].append(current_annotation)
 
-
+    # After reading the file, before saving to JSON, generate and merge alignments
     for annot in parsed_data["annotations"]:
         sent_level_graph = annot["sentence_level_graph"]
         doc_level_graph = annot["document_level_annotation"]
+        
+        # Generate new alignments from the graph
+        num_tokens = len(annot["words"])
+        words = annot["words"]
+        generated_alignments = generate_alignments_from_graph(sent_level_graph, words, num_tokens)
+        
+        # Replace all alignments with generated ones
+        annot["alignments"] = generated_alignments
+        
+        # Process modal triples as before
         if doc_level_graph.strip() and not "ROOT" in doc_level_graph:
             doc_level_graph = add_modal_triple(doc_level_graph, "(ROOT :modal AUTH)")
         try:
@@ -265,13 +454,13 @@ def umr_writer_txt2json(input_file_path, output_file_path):
                 if triple[1] == ":MODSTR" or triple[1] == ":modal-strength":
                     if doc_level_graph.strip():
                         doc_level_graph = add_modal_triple(doc_level_graph, f"(AUTH :{triple[2]} {triple[0]})")
-            # 2) Filter out any triple whose relation is ':MODSTR'
+            # Filter out any triple whose relation is ':MODSTR'
             filtered_triples = [t for t in triples if t[1] != ':MODSTR' and t[1] != ":modal-strength"]
 
-            # 3) Build a new Graph with the filtered triples
+            # Build a new Graph with the filtered triples
             new_graph = penman.Graph(filtered_triples, epidata=g.epidata)
 
-            # 4) Encode back to AMR-like text
+            # Encode back to AMR-like text
             sent_level_graph = penman.encode(new_graph)
         except DecodeError:
             print(f"DecodeError in block:\n{sent_level_graph}\n")
@@ -309,7 +498,7 @@ def json2txt(json_file_path, output_file_path):
             sentence_id = entry.get("sentence_id", "No sentence ID")
             words = entry.get("words", [])
             sent_annot = entry.get("sentence_level_graph", "No graph")
-            alignment = entry.get("alignment", {})
+            alignments = entry.get("alignments", {})
             doc_annot = entry.get("document_level_annotation", "")
             for key, value in replacements.items():
                 sent_annot = re.sub(re.escape(key), value, sent_annot, flags=re.IGNORECASE)
@@ -343,9 +532,10 @@ def json2txt(json_file_path, output_file_path):
 
                 out_file.write(f"# sentence level graph:\n{sent_annot}\n\n")
                 out_file.write(f"# alignment:\n")
-                if alignment:
-                    for v, i in alignment.items():
-                        out_file.write(f"{v}: {i}\n")
+                if alignments:
+                    # Sort alignments by variable name for consistent output
+                    for var in sorted(alignments.keys()):
+                        out_file.write(f"{var}: {alignments[var]}\n")
                 out_file.write(f"\n")
                 out_file.write(f"# document level annotation:\n{doc_annot.strip()}\n\n\n")
     print(f"Entries have been written to {output_file_path}")
@@ -362,7 +552,20 @@ def batch_json2txt(json_folder_path, output_folder_path):
                 json2txt(json_file_path, output_file_path)
 
 if __name__ == '__main__':
-    # step 1:
-    # folder_umr_writer_txt2json()
-    # step 2:
-    batch_json2txt(Path(root) / 'chinese/jsons', Path(root) / 'chinese/formatted_data')
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Process Chinese UMR files')
+    parser.add_argument('--step', type=str, choices=['txt2json', 'json2txt', 'both'], 
+                      default='both', help='Which step to run: txt2json (convert txt to json), json2txt (convert json to formatted txt), or both')
+    
+    args = parser.parse_args()
+    
+    if args.step in ['txt2json', 'both']:
+        print("Step 1: Converting txt files to json...")
+        folder_umr_writer_txt2json()
+    
+    if args.step in ['json2txt', 'both']:
+        print("Step 2: Converting json files to formatted txt...")
+        batch_json2txt(Path(root) / 'chinese/jsons', Path(root) / 'chinese/formatted_data')
+    
+    print("Done!")
