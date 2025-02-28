@@ -6,287 +6,296 @@ from penman.exceptions import DecodeError
 current_script_dir = Path(__file__).parent
 root = current_script_dir.parent
 
-import os
 import re
 
 def align_rows(rows):
     """
-    Aligns rows of tokens into columns.
-    rows: list of lists, e.g. [
-      ["Index:", "1", "2"],
-      ["Words:", "anyentehlehlta", "ampay'avehla'"],
-      ["Morphemes:", "an-", "yentehl", "-e", "=hlta", ...],
-      ...
-    ]
-    Returns a list of aligned strings, one per row.
+    Given a list of rows, each row a list of strings, preserve the exact spacing
+    from the original file format. Each token should maintain its original width
+    and spacing.
     """
     if not rows:
         return []
 
-    # Find how many columns in the widest row
-    max_cols = max(len(r) for r in rows)
+    # Get the maximum width needed for each column
+    num_cols = max(len(row) for row in rows)
+    col_widths = []
+    
+    # First column (labels) needs special handling
+    col_widths.append(max(len(row[0]) for row in rows))
+    
+    # For remaining columns, find max width including all spaces
+    for col in range(1, num_cols):
+        width = 0
+        for row in rows:
+            if col < len(row):
+                # Use the full token width including all spaces
+                token = row[col] if col < len(row) else ""
+                width = max(width, len(token))
+        col_widths.append(width)
 
-    # Compute max width per column
-    col_widths = [0] * max_cols
+    # Format each row
+    aligned = []
     for row in rows:
-        for c, cell in enumerate(row):
-            col_widths[c] = max(col_widths[c], len(cell))
+        # Handle label column specially
+        parts = [row[0].ljust(col_widths[0])]
+        
+        # Handle remaining columns, preserving original content
+        for i in range(1, num_cols):
+            if i < len(row):
+                token = row[i]
+                # Keep original spacing but ensure minimum width
+                parts.append(token.ljust(col_widths[i]))
+            else:
+                # Add empty space for missing columns
+                parts.append(" " * col_widths[i])
+        
+        # Join with tabs
+        aligned_row = '\t'.join(parts)
+        aligned.append(aligned_row)
+    
+    return aligned
 
-    # Build aligned lines
-    aligned_lines = []
-    for row in rows:
-        padded_cells = []
-        for c, cell in enumerate(row):
-            padded_cells.append(cell.ljust(col_widths[c]))
-        # Join columns with a single space
-        aligned_lines.append(" ".join(padded_cells))
-
-    return aligned_lines
-
-def parse_block(block_lines):
+def reformat_file(old_path, new_path):
     """
-    Given lines for one block (starting with '# :: sntX'), gather:
-      - snt_line
-      - words, morphemes, morph_gloss_en, morph_gloss_es, morph_cat, word_gloss
-      - english_sent_gloss, spanish_sent_gloss
-      - sentence_level_graph, alignment, doc_annotation
+    Read an input file, parse it into blocks starting at '# :: snt',
+    and produce a new-format file.
     """
-    data = {
-        "snt_line": None,
-        "words": [],
-        "morphemes": [],
-        "morph_gloss_en": [],
-        "morph_gloss_es": [],
-        "morph_cat": [],
-        "word_gloss": [],
-        "eng_sent_gloss": "",
-        "spa_sent_gloss": "",
-        "sentence_graph": [],
-        "alignment": [],
-        "doc_annotation": []
-    }
-
-    in_sentence_graph = False
-    in_alignment = False
-    in_doc_annot = False
-
-    for line in block_lines:
-        ln = line.rstrip("\n")
-
-        # Check for # :: snt
-        if ln.startswith("# :: snt"):
-            data["snt_line"] = ln
-            in_sentence_graph = False
-            in_alignment = False
-            in_doc_annot = False
-            continue
-
-        # # sentence level graph:
-        if ln.startswith("# sentence level graph"):
-            in_sentence_graph = True
-            in_alignment = False
-            in_doc_annot = False
-            continue
-
-        # # alignment:
-        if ln.startswith("# alignment") or ln.startswith("# alignments"):
-            in_sentence_graph = False
-            in_alignment = True
-            in_doc_annot = False
-            continue
-
-        # # document level annotation:
-        if ln.startswith("# document level annotation") or ln.startswith("# document level graph"):
-            in_sentence_graph = False
-            in_alignment = False
-            in_doc_annot = True
-            continue
-
-        # If we're in the sentence-level graph
-        if in_sentence_graph:
-            data["sentence_graph"].append(ln)
-            continue
-        # If we're in alignment
-        if in_alignment:
-            data["alignment"].append(ln)
-            continue
-        # If we're in doc-level annotation
-        if in_doc_annot:
-            data["doc_annotation"].append(ln)
-            continue
-
-        # Otherwise, check morphological lines:
-        # We'll do a simpler approach: check if line starts with "Words", "Morphemes", etc.
-        # Then parse the rest as tokens.
-        # Or if line starts with e.g. "English Sent Gloss:", we store that in data["eng_sent_gloss"].
-
-        # Lowercase check:
-        line_low = ln.lower()
-
-        if line_low.startswith("words"):
-            # e.g. "Words         anyentehlehlta  ampay'avehla'"
-            parts = ln.split(None, 1)
-            if len(parts) > 1:
-                data["words"] = parts[1].split()
-            continue
-
-        if line_low.startswith("morphemes"):
-            parts = ln.split(None, 1)
-            if len(parts) > 1:
-                data["morphemes"] = parts[1].split()
-            continue
-
-        if line_low.startswith("morpheme gloss(en)"):
-            parts = ln.split(None, 1)
-            if len(parts) > 1:
-                data["morph_gloss_en"] = parts[1].split()
-            continue
-
-        if line_low.startswith("morpheme gloss(es)"):
-            parts = ln.split(None, 1)
-            if len(parts) > 1:
-                data["morph_gloss_es"] = parts[1].split()
-            continue
-
-        if line_low.startswith("morpheme cat"):
-            parts = ln.split(None, 1)
-            if len(parts) > 1:
-                data["morph_cat"] = parts[1].split()
-            continue
-
-        if line_low.startswith("word gloss"):
-            parts = ln.split(None, 1)
-            if len(parts) > 1:
-                data["word_gloss"] = parts[1].split()
-            continue
-
-        # English Sent Gloss:
-        if line_low.startswith("english sent gloss:"):
-            idx = ln.lower().index("english sent gloss:") + len("english sent gloss:")
-            text = ln[idx:].strip()
-            data["eng_sent_gloss"] = text
-            continue
-
-        # Spanish Sent Gloss:
-        if line_low.startswith("spanish sent gloss:"):
-            idx = ln.lower().index("spanish sent gloss:") + len("spanish sent gloss:")
-            text = ln[idx:].strip()
-            data["spa_sent_gloss"] = text
-            continue
-
-    return data
-
-def reformat_block(data_dict):
-    """
-    Build the new format lines from the parsed block data.
-    """
-    lines = []
-    lines.append("################################################################################")
-    lines.append("# meta-info ")
-    if data_dict["snt_line"]:
-        lines.append(data_dict["snt_line"])
-
-    # We'll build morphological rows for alignment:
-    # 1) Index: (based on length of data["words"])
-    morphological_rows = []
-
-    if data_dict["words"]:
-        index_row = ["Index:"]
-        for i in range(len(data_dict["words"])):
-            index_row.append(str(i+1))
-        morphological_rows.append(index_row)
-
-        # Words:
-        morphological_rows.append(["Words:"] + data_dict["words"])
-
-    if data_dict["morphemes"]:
-        morphological_rows.append(["Morphemes:"] + data_dict["morphemes"])
-
-    if data_dict["morph_gloss_en"]:
-        morphological_rows.append(["Morpheme Gloss(en):"] + data_dict["morph_gloss_en"])
-
-    if data_dict["morph_gloss_es"]:
-        morphological_rows.append(["Morpheme Gloss(es):"] + data_dict["morph_gloss_es"])
-
-    if data_dict["morph_cat"]:
-        morphological_rows.append(["Morpheme Cat:"] + data_dict["morph_cat"])
-
-    if data_dict["word_gloss"]:
-        morphological_rows.append(["Word Gloss:"] + data_dict["word_gloss"])
-
-    # English Sent Gloss:
-    if data_dict["eng_sent_gloss"] or data_dict["eng_sent_gloss"] == "":
-        # Even if empty, we want the line
-        morphological_rows.append(["English Sent Gloss:", data_dict["eng_sent_gloss"]])
-
-    # Spanish Sent Gloss:
-    if data_dict["spa_sent_gloss"] or data_dict["spa_sent_gloss"] == "":
-        morphological_rows.append(["Spanish Sent Gloss:", data_dict["spa_sent_gloss"]])
-
-    aligned = align_rows(morphological_rows)
-    lines.extend(aligned)
-
-    # If we have a sentence-level graph
-    if data_dict["sentence_graph"]:
-        lines.append("")
-        lines.append("# sentence level graph:")
-        lines.extend(data_dict["sentence_graph"])
-
-    # If we have alignment
-    if data_dict["alignment"]:
-        lines.append("")
-        lines.append("# alignment:")
-        lines.extend(data_dict["alignment"])
-
-    # If we have doc-level annotation
-    if data_dict["doc_annotation"]:
-        lines.append("")
-        lines.append("# document level annotation:")
-        lines.extend(data_dict["doc_annotation"])
-
-    lines.append("")
-    return lines
-
-def reformat_file(input_path, output_path):
-    """
-    Read one file, split into blocks (# :: sntX), parse & reformat each, write output.
-    """
-    with open(input_path, "r", encoding="utf-8") as f:
+    with open(old_path, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
-    # Split into blocks
     blocks = []
     current_block = []
+    in_block = False
+
+    # Define titles with consistent width
+    TITLE_WIDTH = len("Translation(English):")  # Use longest title as standard
+    TITLES = {
+        "Words": "Words:".ljust(TITLE_WIDTH) + "\t",
+        "Morphemes": "Morphemes:".ljust(TITLE_WIDTH) + "\t",
+        "Morpheme Gloss(en)": "Morpheme Gloss(English):".ljust(TITLE_WIDTH) + "\t",
+        "Morpheme Gloss(es)": "Morpheme Gloss(Spanish):".ljust(TITLE_WIDTH) + "\t",
+        "Morpheme Cat": "Morpheme Category:".ljust(TITLE_WIDTH) + "\t",
+        "Word Gloss": "Words(English):".ljust(TITLE_WIDTH) + "\t",
+        "English Sent Gloss:": "Translation(English):".ljust(TITLE_WIDTH) + "\t",
+        "Spanish Sent Gloss": "Translation(Spanish):".ljust(TITLE_WIDTH) + "\t"
+    }
+    INDEX_TITLE = "Index:".ljust(TITLE_WIDTH) + "\t"
+    TRANSLATION_TITLE = "Translation(English):".ljust(TITLE_WIDTH) + "\t"
+
+    def split_into_tokens(text):
+        """Split text into tokens, handling both whitespace and punctuation."""
+        # First split by whitespace
+        whitespace_tokens = text.split()
+        
+        # Then handle punctuation in each token
+        final_tokens = []
+        for token in whitespace_tokens:
+            current = ""
+            for char in token:
+                if char in ",.\"!":  # Punctuation marks are individual tokens
+                    if current:
+                        final_tokens.append(current)
+                        current = ""
+                    final_tokens.append(char)
+                else:
+                    current += char
+            if current:
+                final_tokens.append(current)
+        
+        return final_tokens
+
     for line in lines:
         if line.strip().startswith("# :: snt"):
-            # new block
             if current_block:
                 blocks.append(current_block)
-            current_block = [line]
-        else:
+            current_block = []
+            in_block = True
+        if in_block:
             current_block.append(line)
-    # Add the last block
     if current_block:
         blocks.append(current_block)
 
-    all_new_lines = []
-    for blk in blocks:
-        parsed_data = parse_block(blk)
-        reformatted = reformat_block(parsed_data)
-        all_new_lines.extend(reformatted)
+    reformatted = []
+    first_block = True
+    for block in blocks:
+        if not first_block:
+            reformatted.append("################################################################################")
+        else:
+            reformatted.append("################################################################################")
+        first_block = False
 
-    with open(output_path, "w", encoding="utf-8") as outf:
-        for ln in all_new_lines:
-            outf.write(ln + "\n")
+        snt_line = None
+        tx_line = None  # Keep the entire original line
+        mb_line = None
+        ge_line = None
+        ps_line = None
+        wc_line = None
+        wg_line = None
+        tr_text_eng = ""
+        tr_text_spa = ""
+        sentence_level_graph = []
+        alignment_lines = []
+        doc_level_annotation = []
+
+        in_graph = False
+        in_alignment = False
+        in_doc_annot = False
+
+        for ln in block:
+            line = ln.rstrip("\n")
+            
+            # 1) First check the "section" markers
+            if line.strip() == "# sentence level graph:":
+                in_graph = True
+                in_alignment = False
+                in_doc_annot = False
+                sentence_level_graph.append(line)  # Include the header
+                continue
+
+            elif line.strip() == "# alignment:" or line.strip() == "# alignments:":
+                in_graph = False
+                in_alignment = True
+                in_doc_annot = False
+                alignment_lines.append(line)  # Include the header
+                continue
+
+            elif line.strip() in ["# document level annotation:", "# document level graph:"]:
+                in_graph = False
+                in_alignment = False
+                in_doc_annot = True
+                doc_level_annotation.append(line)  # Include the header
+                continue
+
+            # 2) If we are *currently* in one of those sections, append lines accordingly
+            if in_graph:
+                sentence_level_graph.append(line)
+                continue
+            if in_alignment:
+                # Replace -1--1 with 0-0 in alignment lines
+                if "-1--1" in line:
+                    line = line.replace("-1--1", "0-0")
+                alignment_lines.append(line)
+                continue
+            if in_doc_annot:
+                doc_level_annotation.append(line)
+                continue
+
+            # 3) If we're in *none* of those sections, then we parse morphological lines
+            parts = line.split(None, 1)
+            if len(parts) >= 2:
+                tag, content = parts[0], parts[1]
+                if tag == "Words":
+                    tx_line = content
+                elif tag == "Morphemes":
+                    mb_line = content
+                elif tag == "Morpheme Gloss(en)":
+                    ge_line = content
+                elif tag == "Morpheme Gloss(es)":
+                    ps_line = content
+                elif tag == "Morpheme Cat":
+                    wc_line = content
+                elif tag == "Word Gloss":
+                    wg_line = content
+                elif tag == "English Sent Gloss:":
+                    tr_text_eng = content.strip()
+                elif tag == "Spanish Sent Gloss":
+                    tr_text_spa = content.strip()
+                # If none of those, just ignore or do something else...
+                continue
+
+
+            # Handle section headers and content
+            if line.strip() == "# sentence level graph:":
+                in_graph = True
+                in_alignment = False
+                in_doc_annot = False
+                sentence_level_graph.append(line)  # Include the header
+            elif line.strip() == "# alignment:":
+                in_graph = False
+                in_alignment = True
+                in_doc_annot = False
+                alignment_lines.append(line)  # Include the header
+            elif line.strip() == "# document level annotation:":
+                in_graph = False
+                in_alignment = False
+                in_doc_annot = True
+                doc_level_annotation.append(line)  # Include the header
+            # Add content to appropriate section, including empty lines and preserving original line
+            elif in_graph:
+                sentence_level_graph.append(line)
+            elif in_alignment:
+                alignment_lines.append(line)
+            elif in_doc_annot:
+                doc_level_annotation.append(line)
+
+        # Build the reformatted output
+        reformatted.append("# meta-info")
+
+        if snt_line:
+            reformatted.append(snt_line)
+
+        # Build all the morphological rows
+        if tx_line:
+            # Process each tab-separated part and handle punctuation
+            all_tokens = []
+            for part in tx_line.split("\t"):
+                if part.strip():
+                    tokens = split_into_tokens(part.strip())
+                    all_tokens.extend(tokens)
+            
+            # Generate index numbers
+            index_parts = [str(i+1) for i in range(len(all_tokens))]
+            
+            # Add rows with new labels but preserve original content
+            reformatted.append(INDEX_TITLE + "\t".join(index_parts))
+            reformatted.append(TITLES["Words"] + tx_line)
+            if mb_line: reformatted.append(TITLES["Morphemes"] + mb_line)
+            if ge_line: reformatted.append(TITLES["Morpheme Gloss(English)"] + ge_line)
+            if ps_line: reformatted.append(TITLES["Morpheme Gloss(Spanish)"] + ps_line)
+            if tr_text_eng: reformatted.append(TITLES["Translation(English)"] + tr_text_eng)
+            if tr_text_spa: reformatted.append(TITLES["Translation(Spanish)"] + tr_text_spa)
+            
+            # Add translation on its own line if it exists
+            if tr_text_eng:
+                reformatted.append(TRANSLATION_TITLE + tr_text_eng)
+            if tr_text_spa:
+                reformatted.append(TRANSLATION_TITLE + tr_text_spa)
+
+        # Add the sections with their content
+        reformatted.append("")
+        reformatted.append("# sentence level graph:")
+        if sentence_level_graph:
+            for line in sentence_level_graph[1:]:  # Skip the header since we already added it
+                reformatted.append(line)
+
+        reformatted.append("")
+        reformatted.append("# alignment:")
+        if alignment_lines:
+            for line in alignment_lines[1:]:  # Skip the header since we already added it
+                reformatted.append(line)
+
+        reformatted.append("")
+        reformatted.append("# document level annotation:")
+        if doc_level_annotation:
+            for line in doc_level_annotation[1:]:  # Skip the header since we already added it
+                reformatted.append(line)
+
+        # Add a newline before the next block
+        reformatted.append("")
+
+    # Write out the reformatted file
+    with open(new_path, "w", encoding="utf-8") as out:
+        for ln in reformatted:
+            out.write(ln + "\n")
 
 def reformat_folder(input_folder, output_folder):
-    """
-    Process all .txt files in input_folder, output to output_folder.
-    """
+    """Process all files in 'input_folder' and write reformatted files to 'output_folder'."""
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
     for fname in os.listdir(input_folder):
+        # If you only want to process .txt:
         if not fname.endswith(".txt"):
             continue
         old_path = os.path.join(input_folder, fname)
@@ -298,4 +307,3 @@ if __name__ == "__main__":
     input_dir = Path(root) / "umr_1_0/navajo/"
     output_dir = Path(root) / "umr_1_0_formatted/navajo/"
     reformat_folder(input_dir, output_dir)
-
