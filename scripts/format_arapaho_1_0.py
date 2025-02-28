@@ -10,237 +10,278 @@ import re
 
 def align_rows(rows):
     """
-    Given a list of rows (each a list of strings), compute the max width
-    of each column and pad so columns are aligned.
-    Returns a list of joined strings (one per row).
+    Given a list of rows, each row a list of strings, preserve the exact spacing
+    from the original file format. Each token should maintain its original width
+    and spacing.
     """
     if not rows:
         return []
 
-    # 1) Find how many columns we have in the widest row
-    max_cols = max(len(r) for r in rows)
+    # Get the maximum width needed for each column
+    num_cols = max(len(row) for row in rows)
+    col_widths = []
+    
+    # First column (labels) needs special handling
+    col_widths.append(max(len(row[0]) for row in rows))
+    
+    # For remaining columns, find max width including all spaces
+    for col in range(1, num_cols):
+        width = 0
+        for row in rows:
+            if col < len(row):
+                # Use the full token width including all spaces
+                token = row[col] if col < len(row) else ""
+                width = max(width, len(token))
+        col_widths.append(width)
 
-    # 2) Compute the max width of each column c
-    col_widths = [0] * max_cols
-    for r in rows:
-        for c, cell in enumerate(r):
-            col_widths[c] = max(col_widths[c], len(cell))
-
-    # 3) Build each row as a padded string
-    aligned_lines = []
-    for r in rows:
-        # For columns that don't exist in this row, treat as empty
-        padded_cells = []
-        for c in range(max_cols):
-            if c < len(r):
-                cell = r[c]
+    # Format each row
+    aligned = []
+    for row in rows:
+        # Handle label column specially
+        parts = [row[0].ljust(col_widths[0])]
+        
+        # Handle remaining columns, preserving original content
+        for i in range(1, num_cols):
+            if i < len(row):
+                token = row[i]
+                # Keep original spacing but ensure minimum width
+                parts.append(token.ljust(col_widths[i]))
             else:
-                cell = ""
-            padded_cells.append(cell.ljust(col_widths[c]))
-        # Join them with a space in between (or tab if you prefer)
-        aligned_lines.append(" ".join(padded_cells))
-    return aligned_lines
+                # Add empty space for missing columns
+                parts.append(" " * col_widths[i])
+        
+        # Join with tabs
+        aligned_row = '\t'.join(parts)
+        aligned.append(aligned_row)
+    
+    return aligned
 
 def reformat_file(old_path, new_path):
+    """
+    Read an input file, parse it into blocks starting at '# :: snt',
+    and produce a new-format file.
+    """
     with open(old_path, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     blocks = []
     current_block = []
+    in_block = False
 
-    # Split the file into blocks whenever we see "# :: snt..."
+    # Define titles with consistent width
+    TITLE_WIDTH = len("Translation(English):")  # Use longest title as standard
+    TITLES = {
+        "tx": "Words:".ljust(TITLE_WIDTH) + "\t",
+        "mb": "Morphemes:".ljust(TITLE_WIDTH) + "\t",
+        "ge": "Morphemes(English):".ljust(TITLE_WIDTH) + "\t",
+        "ps": "Part of Speech:".ljust(TITLE_WIDTH) + "\t"
+    }
+    INDEX_TITLE = "Index:".ljust(TITLE_WIDTH) + "\t"
+    TRANSLATION_TITLE = "Translation(English):".ljust(TITLE_WIDTH) + "\t"
+
+    def split_into_tokens(text):
+        """Split text into tokens, handling both whitespace and punctuation."""
+        # First split by whitespace
+        whitespace_tokens = text.split()
+        
+        # Then handle punctuation in each token
+        final_tokens = []
+        for token in whitespace_tokens:
+            current = ""
+            for char in token:
+                if char in ",.\"!":  # Punctuation marks are individual tokens
+                    if current:
+                        final_tokens.append(current)
+                        current = ""
+                    final_tokens.append(char)
+                else:
+                    current += char
+            if current:
+                final_tokens.append(current)
+        
+        return final_tokens
+
     for line in lines:
         if line.strip().startswith("# :: snt"):
-            # start a new block
             if current_block:
                 blocks.append(current_block)
-            current_block = [line]
-        else:
+            current_block = []
+            in_block = True
+        if in_block:
             current_block.append(line)
-    # Add the last block if not empty
     if current_block:
         blocks.append(current_block)
 
-    reformatted_lines = []
+    reformatted = []
+    first_block = True
     for block in blocks:
-        block_stripped = [ln.rstrip("\n") for ln in block]
-
-        # We'll store morphological lines:
-        tx_tokens = []
-        mb_tokens = []
-        ge_tokens = []
-        ps_tokens = []
-        tr_tokens = []
+        if not first_block:
+            reformatted.append("################################################################################")
+        else:
+            reformatted.append("################################################################################")
+        first_block = False
 
         snt_line = None
+        tx_line = None  # Keep the entire original line
+        mb_line = None
+        ge_line = None
+        ps_line = None
+        tr_text = ""    # full translation
         sentence_level_graph = []
-        doc_level_graph = []
         alignment_lines = []
+        doc_level_annotation = []
 
-        in_slevel_graph = False
-        in_dlevel_graph = False
+        in_graph = False
         in_alignment = False
+        in_doc_annot = False
 
-        for ln in block_stripped:
-            # detect the # :: snt line
-            if ln.startswith("# :: snt"):
-                snt_line = ln
-                in_slevel_graph = False
-                in_dlevel_graph = False
+        for ln in block:
+            line = ln.rstrip("\n")
+            
+            # 1) First check the “section” markers
+            if line.strip() == "# sentence level graph:":
+                in_graph = True
                 in_alignment = False
+                in_doc_annot = False
+                sentence_level_graph.append(line)  # Include the header
                 continue
 
-            # parse morphological lines
-            parts = ln.split()
-            if not parts:
-                # blank or empty line
-                in_slevel_graph = False
-                in_dlevel_graph = False
-                in_alignment = False
-                continue
-
-            tag = parts[0]
-            tokens = parts[1:]
-
-            if tag == "tx":
-                tx_tokens = tokens
-                in_slevel_graph = False
-                in_dlevel_graph = False
-                in_alignment = False
-            elif tag == "mb":
-                mb_tokens = tokens
-                in_slevel_graph = False
-                in_dlevel_graph = False
-                in_alignment = False
-            elif tag == "ge":
-                ge_tokens = tokens
-                in_slevel_graph = False
-                in_dlevel_graph = False
-                in_alignment = False
-            elif tag == "ps":
-                ps_tokens = tokens
-                in_slevel_graph = False
-                in_dlevel_graph = False
-                in_alignment = False
-            elif tag == "tr":
-                tr_tokens = tokens
-                in_slevel_graph = False
-                in_dlevel_graph = False
-                in_alignment = False
-
-            elif ln.startswith("# sentence level graph"):
-                # from now on, lines go into sentence_level_graph
-                sentence_level_graph = []
-                in_slevel_graph = True
-                in_dlevel_graph = False
-                in_alignment = False
-            elif ln.startswith("# alignments") or ln.startswith("# alignment"):
-                alignment_lines = []
-                in_slevel_graph = False
-                in_dlevel_graph = False
+            elif line.strip() == "# alignment:" or line.strip() == "# alignments:":
+                in_graph = False
                 in_alignment = True
-            elif ln.startswith("# document level graph"):
-                doc_level_graph = []
-                in_slevel_graph = False
-                in_dlevel_graph = True
+                in_doc_annot = False
+                alignment_lines.append(line)  # Include the header
+                continue
+
+            elif line.strip() in ["# document level annotation:", "# document level graph:"]:
+                in_graph = False
                 in_alignment = False
-            else:
-                # If we're inside the sentence-level graph block, store it
-                if in_slevel_graph:
-                    sentence_level_graph.append(ln)
-                elif in_dlevel_graph:
-                    doc_level_graph.append(ln)
-                elif in_alignment:
-                    alignment_lines.append(ln)
-                else:
-                    # Possibly ignore or handle otherwise
-                    pass
+                in_doc_annot = True
+                doc_level_annotation.append(line)  # Include the header
+                continue
 
-        # Build up the morphological table lines
-        # We'll store them as rows of tokens, then align them
-        rows = []
-        # 1) index row
-        if tx_tokens:
-            index_row = ["Index:"]
-            for i in range(len(tx_tokens)):
-                index_row.append(str(i+1))
-            rows.append(index_row)
+            # 2) If we are *currently* in one of those sections, append lines accordingly
+            if in_graph:
+                sentence_level_graph.append(line)
+                continue
+            if in_alignment:
+                alignment_lines.append(line)
+                continue
+            if in_doc_annot:
+                doc_level_annotation.append(line)
+                continue
 
-        # 2) words row
-        if tx_tokens:
-            rows.append(["Words:"] + tx_tokens)
+            # 3) If we’re in *none* of those sections, then we parse morphological lines
+            parts = line.split(None, 1)
+            if len(parts) >= 2:
+                tag, content = parts[0], parts[1]
+                if tag == "tx":
+                    tx_line = content
+                elif tag == "mb":
+                    mb_line = content
+                elif tag == "ge":
+                    ge_line = content
+                elif tag == "ps":
+                    ps_line = content
+                elif tag == "tr":
+                    tr_text = content.strip()
+                # If none of those, just ignore or do something else...
+                continue
 
-        # 3) mb row
-        if mb_tokens:
-            rows.append(["mb:"] + mb_tokens)
 
-        # 4) ge row
-        if ge_tokens:
-            rows.append(["ge:"] + ge_tokens)
+            # Handle section headers and content
+            if line.strip() == "# sentence level graph:":
+                in_graph = True
+                in_alignment = False
+                in_doc_annot = False
+                sentence_level_graph.append(line)  # Include the header
+            elif line.strip() == "# alignment:":
+                in_graph = False
+                in_alignment = True
+                in_doc_annot = False
+                alignment_lines.append(line)  # Include the header
+            elif line.strip() == "# document level annotation:":
+                in_graph = False
+                in_alignment = False
+                in_doc_annot = True
+                doc_level_annotation.append(line)  # Include the header
+            # Add content to appropriate section, including empty lines and preserving original line
+            elif in_graph:
+                sentence_level_graph.append(line)
+            elif in_alignment:
+                alignment_lines.append(line)
+            elif in_doc_annot:
+                doc_level_annotation.append(line)
 
-        # 5) ps row
-        if ps_tokens:
-            rows.append(["ps:"] + ps_tokens)
+        # Build the reformatted output
+        reformatted.append("# meta-info")
 
-        # 6) tr row
-        if tr_tokens:
-            rows.append(["tr:"] + tr_tokens)
-
-        aligned_rows = align_rows(rows)
-
-        # Now output the re-formatted block
-        reformatted_lines.append("################################################################################")
-        reformatted_lines.append("# meta-info")
         if snt_line:
-            reformatted_lines.append(snt_line)
+            reformatted.append(snt_line)
 
-        # Add the aligned morphological lines
-        reformatted_lines.extend(aligned_rows)
+        # Build all the morphological rows
+        if tx_line:
+            # Process each tab-separated part and handle punctuation
+            all_tokens = []
+            for part in tx_line.split("\t"):
+                if part.strip():
+                    tokens = split_into_tokens(part.strip())
+                    all_tokens.extend(tokens)
+            
+            # Generate index numbers
+            index_parts = [str(i+1) for i in range(len(all_tokens))]
+            
+            # Add rows with new labels but preserve original content
+            reformatted.append(INDEX_TITLE + "\t".join(index_parts))
+            reformatted.append(TITLES["tx"] + tx_line)
+            if mb_line: reformatted.append(TITLES["mb"] + mb_line)
+            if ge_line: reformatted.append(TITLES["ge"] + ge_line)
+            if ps_line: reformatted.append(TITLES["ps"] + ps_line)
+            
+            # Add translation on its own line if it exists
+            if tr_text:
+                reformatted.append(TRANSLATION_TITLE + tr_text)
 
-        # # sentence level graph
+        # Add the sections with their content
+        reformatted.append("")
+        reformatted.append("# sentence level graph:")
         if sentence_level_graph:
-            reformatted_lines.append("")
-            reformatted_lines.append("# sentence level graph: ")
-            reformatted_lines.extend(sentence_level_graph)
+            for line in sentence_level_graph[1:]:  # Skip the header since we already added it
+                reformatted.append(line)
 
-        # # alignment
+        reformatted.append("")
+        reformatted.append("# alignment:")
         if alignment_lines:
-            reformatted_lines.append("")
-            reformatted_lines.append("# alignment:")
-            reformatted_lines.extend(alignment_lines)
+            for line in alignment_lines[1:]:  # Skip the header since we already added it
+                reformatted.append(line)
 
-        # # document level annotation
-        if doc_level_graph:
-            reformatted_lines.append("")
-            reformatted_lines.append("# document level annotation: ")
-            reformatted_lines.extend(doc_level_graph)
+        reformatted.append("")
+        reformatted.append("# document level annotation:")
+        if doc_level_annotation:
+            for line in doc_level_annotation[1:]:  # Skip the header since we already added it
+                reformatted.append(line)
 
-        reformatted_lines.append("")
+        # Add a newline before the next block
+        reformatted.append("")
 
-    # Write out the final lines
-    with open(new_path, "w", encoding="utf-8") as fout:
-        for ln in reformatted_lines:
-            fout.write(ln + "\n")
-
-    print(f"Done. Reformatted output in {new_path}")
-
+    # Write out the reformatted file
+    with open(new_path, "w", encoding="utf-8") as out:
+        for ln in reformatted:
+            out.write(ln + "\n")
 
 def reformat_folder(input_folder, output_folder):
-    """
-    Process all files in input_folder (that match some pattern, e.g. .txt)
-    and write reformatted files to output_folder with the same filename.
-    """
+    """Process all files in 'input_folder' and write reformatted files to 'output_folder'."""
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
     for fname in os.listdir(input_folder):
-        # skip non-.txt if that's desired
+        # If you only want to process .txt:
         if not fname.endswith(".txt"):
             continue
-
         old_path = os.path.join(input_folder, fname)
         new_path = os.path.join(output_folder, fname).replace(".txt", ".umr")
         reformat_file(old_path, new_path)
+        print(f"Reformatted {old_path} -> {new_path}")
 
 if __name__ == "__main__":
     input_dir = Path(root) / "umr_1_0/arapaho/"
