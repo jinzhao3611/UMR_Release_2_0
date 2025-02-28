@@ -38,6 +38,94 @@ def align_rows(rows):
     return aligned
 
 
+def extract_variables_and_concepts(graph_text):
+    """
+    Extract variables and their associated concepts from the graph using penman.
+    
+    Args:
+        graph_text: The sentence level graph text
+        
+    Returns:
+        dict: A dictionary mapping variables to their concepts
+    """
+    try:
+        g = penman.decode(graph_text)
+        var_concepts = {}
+        for instance in g.instances():
+            # Remove any -01, -02 etc. suffixes from concepts
+            base_concept = re.sub(r'-\d+$', '', instance.target)
+            var_concepts[instance.source] = base_concept
+        return var_concepts
+    except Exception as e:
+        print(f"Error parsing graph with penman: {e}")
+        return {}
+
+def find_token_for_concept(concept, words):
+    """
+    Find the token that best matches the concept.
+    
+    Args:
+        concept: The concept to match
+        words: List of tokens in the sentence
+        
+    Returns:
+        int: The 1-based index of the matching token, or 0 if no match found
+    """
+    # Convert concept to base form (remove hyphens and numbers)
+    base_concept = concept.lower().replace('-', '')
+    
+    # First try exact match
+    for i, word in enumerate(words, 1):
+        if word.lower() == base_concept:
+            return i
+            
+    # Then try stem/substring matching
+    for i, word in enumerate(words, 1):
+        word_lower = word.lower()
+        # Check if either is a substring of the other
+        if (base_concept in word_lower or 
+            word_lower in base_concept or
+            # Handle common variations (e.g., "take" matching "takes", "taking", etc.)
+            word_lower.startswith(base_concept) or
+            base_concept.startswith(word_lower)):
+            return i
+    
+    return 0
+
+def generate_alignments_from_graph(graph_text, words, num_tokens):
+    """
+    Generate alignments from the graph by matching variables' concepts with tokens.
+    Uses penman to properly parse the graph structure.
+    Always returns either a valid token index or 0-0, never -1--1.
+    
+    Args:
+        graph_text: The sentence level graph text
+        words: List of tokens in the sentence
+        num_tokens: Number of tokens in the sentence
+        
+    Returns:
+        dict: A dictionary mapping variables to alignment spans
+    """
+    alignments = {}
+    try:
+        # Extract variables and their concepts using penman
+        var_concepts = extract_variables_and_concepts(graph_text)
+        
+        # For each variable, try to find a matching token
+        for var, concept in var_concepts.items():
+            token_idx = find_token_for_concept(concept, words)
+            
+            # Assign alignment
+            if token_idx > 0 and token_idx <= num_tokens:
+                alignments[var] = f"{token_idx}-{token_idx}"
+            else:
+                alignments[var] = "0-0"
+                
+        return alignments
+    except Exception as e:
+        print(f"Error generating alignments: {e}")
+        return {}
+
 def reformat_file(old_path, new_path):
     """
     Read an input file, parse it into blocks starting at '# :: snt',
@@ -87,41 +175,28 @@ def reformat_file(old_path, new_path):
 
             # detect "# :: sntX"
             if line.startswith("# :: snt"):
-                snt_line = line
-                # parse out the tokens to the right
-                # Format might be: "# :: snt2 该 周报 综合 ..."
-                # We'll split on whitespace, ignoring the first two tokens: "#", "::", and "snt2" as well
-                # But actually let's do a simpler approach:
+                # Extract just the snt number part
+                match = re.match(r"# :: (snt\d+)", line)
+                if match:
+                    snt_number = match.group(1)
+                    snt_line = f"# :: {snt_number}"
+                else:
+                    snt_number = "sntX"
+                    snt_line = "# :: sntX"
+                
+                # Parse the sentence tokens if they exist
                 line_split = line.split(None, 2)  # up to 3 parts
-                # e.g. ["#", "::", "snt2    该 周报 综合..."]
                 if len(line_split) > 2:
-                    # we want the 3rd part which might be "snt2 该 周报..."
                     third_part = line_split[2].strip()
-                    # Now let's see if there's a tab or something
-                    # Some users do: "# :: snt2\t该 周报", others do "# :: snt2 该 周报"
-                    # We'll do a regex to separate the "snt2" from the rest:
                     match = re.match(r"(snt\d+)\s+(.*)", third_part)
                     if match:
-                        snt_number = match.group(1)  # "snt2"
                         tokens_str = match.group(2)  # "该 周报 综合 ..."
                         sentence_tokens = tokens_str.split()
                     else:
-                        # fallback if no match
-                        # possibly there's a tab
                         if "\t" in third_part:
                             parts2 = third_part.split("\t", 1)
-                            snt_number = parts2[0]
-                            sentence_tokens = []
                             if len(parts2) > 1:
                                 sentence_tokens = parts2[1].split()
-                        else:
-                            # no tokens found
-                            snt_number = third_part
-                            sentence_tokens = []
-                else:
-                    # no tokens
-                    snt_number = ""
-                    sentence_tokens = []
 
                 # done reading this line, move on
                 in_graph = False
@@ -157,24 +232,10 @@ def reformat_file(old_path, new_path):
 
         # Now we build the new format
         reformatted.append("################################################################################")
-        # We'll guess a sent_id from the snt_number. For example, if snt_number="snt2"
-        # we might produce "u_tree-cs-s2-root". Adjust as needed.
-        # If no snt_number found, just do something generic
-        if not snt_number:
-            snt_number = "sntX"
-        # Example: snt2 -> s2 => "u_tree-cs-s2-root"
-        # We'll parse out the digits:
-        digits_match = re.search(r"snt(\d+)", snt_number)
-        if digits_match:
-            short_id = digits_match.group(1)  # e.g. "2"
-            full_sent_id = f"u_tree-cs-s{short_id}-root"
-        else:
-            full_sent_id = "u_tree-cs-sX-root"
-
-        reformatted.append(f"# meta-info :: sent_id = {full_sent_id}")
+        reformatted.append("# meta-info")
 
         if snt_line:
-            reformatted.append(snt_line)
+            reformatted.append(snt_line)  # This will now only contain "# :: sntX" without the sentence
 
         # Build an "Index:" row and "Words:" row
         # We'll align them in columns
@@ -194,11 +255,18 @@ def reformat_file(old_path, new_path):
             reformatted.append("# sentence level graph:")
             reformatted.extend(sentence_level_graph)
 
-        # Print alignment lines
-        if alignment_lines:
-            reformatted.append("")
-            reformatted.append("# alignment:")
-            reformatted.extend(alignment_lines)
+        # Generate new alignments from the graph
+        if sentence_level_graph and sentence_tokens:
+            graph_text = "\n".join(sentence_level_graph)
+            num_tokens = len(sentence_tokens)
+            generated_alignments = generate_alignments_from_graph(graph_text, sentence_tokens, num_tokens)
+            
+            # Add the generated alignments
+            if generated_alignments:
+                reformatted.append("")
+                reformatted.append("# alignment:")
+                for var in sorted(generated_alignments.keys()):
+                    reformatted.append(f"{var}: {generated_alignments[var]}")
 
         # Print doc-level annotation
         if doc_level_annotation:
@@ -230,6 +298,6 @@ def reformat_folder(input_folder, output_folder):
 
 
 if __name__ == "__main__":
-    input_dir = Path(root) / "umr_1_0/english/"
-    output_dir = Path(root) / "umr_1_0_formatted/english/"
+    input_dir = Path(root) / "umr_1_0/chinese/"
+    output_dir = Path(root) / "umr_1_0_formatted/chinese/"
     reformat_folder(input_dir, output_dir)
