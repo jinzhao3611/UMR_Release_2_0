@@ -500,9 +500,8 @@ def json2txt(json_file_path, output_file_path):
             sent_annot = entry.get("sentence_level_graph", "No graph")
             alignments = entry.get("alignments", {})
             doc_annot = entry.get("document_level_annotation", "")
-            for key, value in replacements.items():
-                # Add word boundaries \b to ensure exact word matches only
-                pattern = r'\b' + re.escape(key) + r'\b'
+            for key, value in replacements.items():   # Use case-insensitive literal substring matching
+                pattern = r'(?<![A-Za-z0-9])' + re.escape(key) + r'(?![A-Za-z0-9])'
                 sent_annot = re.sub(pattern, value, sent_annot, flags=re.IGNORECASE)
                 doc_annot = re.sub(pattern, value, doc_annot, flags=re.IGNORECASE)
             doc_annot = fix_closing_paren_format(doc_annot)
