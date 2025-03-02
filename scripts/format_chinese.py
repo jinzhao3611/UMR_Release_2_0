@@ -434,17 +434,23 @@ def umr_writer_txt2json(input_file_path, output_file_path):
                 sent_level_annot = False
                 alignment_annot = False
                 doc_level_annot = False
-                if current_annotation:
-                    parsed_data["annotations"].append(current_annotation)
                 source_file_start = True
+                # Add the current annotation before moving to source file section
+                if current_annotation:
+                    if is_tlp_file:
+                        current_annotation["conversion_type"] = "partial-conversion"
+                    parsed_data["annotations"].append(current_annotation)
+                    current_annotation = None
             elif source_file_start:
                 sent_level_annot = False
                 alignment_annot = False
                 doc_level_annot = False
                 parsed_data["source_file"].append(line)
 
-    # Finalize if the last annotation was not added
+    # Always add the last annotation if it exists
     if current_annotation:
+        if is_tlp_file:
+            current_annotation["conversion_type"] = "partial-conversion"
         parsed_data["annotations"].append(current_annotation)
 
     # After reading the file, before saving to JSON, generate and merge alignments
