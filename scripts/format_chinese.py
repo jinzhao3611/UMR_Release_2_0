@@ -328,6 +328,10 @@ def umr_writer_txt2json(input_file_path, output_file_path):
     sent_level_annot = False
     alignment_annot = False
     doc_level_annot = False
+    
+    # Check if this is the tlp_umr_wa_1120.umr file
+    is_tlp_file = "tlp_umr_wa_1120.txt" in str(input_file_path)
+    
     with open(input_file_path, "r", encoding="utf-8") as file:
         for line in file:
 
@@ -351,6 +355,9 @@ def umr_writer_txt2json(input_file_path, output_file_path):
                 alignment_annot = False
                 doc_level_annot = False
                 if current_annotation:
+                    # Add conversion_type for tlp file before appending
+                    if is_tlp_file:
+                        current_annotation["conversion_type"] = "partial-conversion"
                     parsed_data["annotations"].append(current_annotation)
                 # Try both formats
                 match = re.search(r"# ::(?: )?snt(\d+)(?:Sentence:)?", line)
@@ -361,16 +368,25 @@ def umr_writer_txt2json(input_file_path, output_file_path):
                     print("ERROR: there is no sentence_id extracted. ")
                 if "\t" not in line: #lin bin's file
                     line = re.sub(r"(# ::(?: )?snt\d+(?:Sentence:)?)\s+", r"\1\t", line)
+                
+                # Get the content part (everything after the sentence ID)
+                content = line.split("\t", 1)[1] if "\t" in line else line.split("Sentence:", 1)[1] if "Sentence:" in line else ""
+                # Remove any "Sentence:" prefix from the content
+                content = re.sub(r"^Sentence:\s*", "", content.strip())
+                
                 current_annotation = {
                     "meta_info": "",
                     "sentence_id": sentence_id,
-                    "sentence": line.split("\t", 1)[1] if "\t" in line else line.split("Sentence:", 1)[1] if "Sentence:" in line else "",
+                    "sentence": content,
                     "index":"",
-                    "words": line.split("\t", 1)[1].split() if "\t" in line else line.split("Sentence:", 1)[1].split() if "Sentence:" in line else [],
+                    "words": content.split(),
                     "sentence_level_graph": "",
                     "alignments": {},  # Initialize as empty dictionary instead of empty string
                     "document_level_annotation": "",
                 }
+                # Add conversion_type for tlp file right after creation
+                if is_tlp_file:
+                    current_annotation["conversion_type"] = "partial-conversion"
             elif current_annotation and line.startswith("# sentence level graph:"):
                 sent_level_annot = True
                 alignment_annot = False
@@ -570,3 +586,7 @@ if __name__ == '__main__':
         batch_json2txt(Path(root) / 'chinese/jsons', Path(root) / 'chinese/formatted_data')
     
     print("Done!")
+
+    #how to run this script to get formatted data from original data:
+    #python format_chinese.py --step txt2json
+    #python format_chinese.py --step json2txt
