@@ -89,24 +89,61 @@ def split_into_chapters(source_file_path, chapter_starts, output_dir):
                     # Process the meta information line
                     meta_info_added = False
                     processed_lines = []
+                    in_graph = False
+                    in_alignment = False
+                    in_doc_annotation = False
+                    
                     for j, line in enumerate(lines):
+                        # Track which section we're in
+                        if "# sentence level graph:" in line:
+                            in_graph = True
+                            in_alignment = False
+                            in_doc_annotation = False
+                        elif "# alignment:" in line:
+                            in_graph = False
+                            in_alignment = True
+                            in_doc_annotation = False
+                        elif "# document level annotation:" in line:
+                            in_graph = False
+                            in_alignment = False
+                            in_doc_annotation = True
+                            
+                        # Process meta-info line
                         if "# meta-info" in line:
                             if not meta_info_added:
-                                # Add the meta-info line with sent_id
                                 processed_lines.append(f"{line.strip()} :: sent_id = {sent_num}")
                                 meta_info_added = True
-                            # Skip duplicate meta-info lines
                             continue
-                        # Replace the sentence number with sequential numbering
+                            
+                        # Process sentence number line
                         if "# :: snt" in line:
                             processed_lines.append(f"# :: snt{sent_counter}")
-                            sent_counter += 1
-                        else:
-                            processed_lines.append(line)
+                            continue
+                            
+                        # Process sentence level graph
+                        if in_graph and line.strip():
+                            # Replace sXXX with current sentence counter
+                            line = re.sub(r's' + str(sent_num) + r'([a-zA-Z]\d*)', f's{sent_counter}\\1', line)
+                            
+                        # Process alignments
+                        elif in_alignment and line.strip() and ':' in line:
+                            # Update variable names in alignments
+                            var, span = line.strip().split(':', 1)
+                            if var.startswith('s' + str(sent_num)):
+                                var = f's{sent_counter}' + var[len(str(sent_num))+1:]
+                            line = f"{var}:{span}"
+                            
+                        # Process document level annotation
+                        elif in_doc_annotation and line.strip():
+                            # Replace sXXX with current sentence counter
+                            line = re.sub(r's' + str(sent_num) + r'([a-zA-Z]\d*)', f's{sent_counter}\\1', line)
+                            
+                        processed_lines.append(line)
                     
                     # Add the processed lines
                     chapter_content.extend(processed_lines)
                     chapter_content.append('################################################################################')
+                    sent_counter += 1
         
         # Write chapter to file
         output_file = os.path.join(output_dir, f'tlp_chapter{chapter}.txt')
