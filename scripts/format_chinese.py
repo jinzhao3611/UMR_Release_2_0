@@ -502,12 +502,51 @@ def folder_umr_writer_txt2json():
             #     print(f"Error processing {file_path}: {e}")
 
 
+def json_to_txt(json_data):
+    """Convert json data to txt format."""
+    txt_lines = []
+    for i, entry in enumerate(json_data, 1):  # Start counting from 1
+        txt_lines.append("################################################################################")
+        txt_lines.append(entry["meta_info"])
+        txt_lines.append(entry["sentence_id"])
+        txt_lines.append(f"Index: {entry['index']}")
+        txt_lines.append(f"Words: {entry['sentence']}")
+        txt_lines.append("")
+        txt_lines.append("# sentence level graph:")
+        txt_lines.append(entry["sentence_level_graph"])
+        txt_lines.append("")
+        txt_lines.append("# alignment:")
+        txt_lines.append(entry["alignments"])
+        txt_lines.append("")
+        txt_lines.append("# document level annotation:")
+        # Add default document level annotation if empty
+        if not entry["document_level_annotation"].strip():
+            txt_lines.append(f"(s{i}s0 / sentence)")
+        else:
+            txt_lines.append(entry["document_level_annotation"])
+        txt_lines.append("")
+    return "\n".join(txt_lines)
+
+def batch_json2txt(json_folder_path, output_folder_path):
+    """Convert all json files in a folder to txt format."""
+    # Create output folder if it doesn't exist
+    os.makedirs(output_folder_path, exist_ok=True)
+    
+    # Process each json file
+    for json_file in os.listdir(json_folder_path):
+        if json_file.endswith('.json'):
+            json_file_path = os.path.join(json_folder_path, json_file)
+            output_file_path = os.path.join(output_folder_path, json_file)
+            output_file_path = output_file_path.replace(".json", ".umr")
+            print(f"Processing file: {json_file_path}")
+            json2txt(json_file_path, output_file_path)
+
 def json2txt(json_file_path, output_file_path):
     with open(json_file_path, 'r', encoding='utf-8') as file:
         data = json.load(file)
 
     with open(output_file_path, 'w', encoding='utf-8') as out_file:
-        for entry in data:
+        for i, entry in enumerate(data, 1):  # Start counting from 1
             # Prepare content for each entry
             id_info = entry.get("meta_info", "")
             conversion_type = entry.get("conversion_type", "")
@@ -515,7 +554,12 @@ def json2txt(json_file_path, output_file_path):
             words = entry.get("words", [])
             sent_annot = entry.get("sentence_level_graph", "No graph")
             alignments = entry.get("alignments", {})
-            doc_annot = entry.get("document_level_annotation", "")
+            doc_annot = entry.get("document_level_annotation", "").strip()
+            
+            # Add default document level annotation if empty
+            if not doc_annot:
+                doc_annot = f"(s{i}s0 / sentence)"
+            
             for key, value in replacements.items():   # Use case-insensitive literal substring matching
                 pattern = r'(?<![A-Za-z0-9])' + re.escape(key) + r'(?![A-Za-z0-9])'
                 sent_annot = re.sub(pattern, value, sent_annot, flags=re.IGNORECASE)
@@ -554,19 +598,8 @@ def json2txt(json_file_path, output_file_path):
                     for var in sorted(alignments.keys()):
                         out_file.write(f"{var}: {alignments[var]}\n")
                 out_file.write(f"\n")
-                out_file.write(f"# document level annotation:\n{doc_annot.strip()}\n\n\n")
+                out_file.write(f"# document level annotation:\n{doc_annot}\n\n\n")
     print(f"Entries have been written to {output_file_path}")
-
-def batch_json2txt(json_folder_path, output_folder_path):
-    output_folder_path.mkdir(parents=True, exist_ok=True)
-    for subdir, _, files in os.walk(json_folder_path):
-        for file in files:
-            if file.endswith(".json"):
-                json_file_path = os.path.join(subdir, file)
-                output_file_path = os.path.join(output_folder_path, file)
-                output_file_path = output_file_path.replace(".json", ".umr")
-                print(f"Processing file: {json_file_path}")
-                json2txt(json_file_path, output_file_path)
 
 if __name__ == '__main__':
     import argparse
