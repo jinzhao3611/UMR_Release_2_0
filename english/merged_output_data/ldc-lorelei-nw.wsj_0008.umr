@@ -1,0 +1,198 @@
+################################################################################
+# meta-info :: sent_id = nw.wsj_0008.1 :: type = partial_conversion
+# :: snt1
+Index: 1          2          3          4          5          6          7          8          9          10         11         12         13         14         15         16         17         18         19         20         
+Words: The        federal    government suspended  sales      of         U.S.       savings    bonds      because    Congress   has        n't        lifted     the        ceiling    on         government debt       .          
+
+# sentence level graph:
+(s1s / suspend-01
+     :ARG0 (s1g4 / government-organization
+                 :ARG0-of (s1g / govern-01)
+                 :mod (s1f / federal))
+     :ARG1 (s1s2 / sell-01
+                 :ARG1 (s1b / bond
+                            :mod (s1s3 / savings)
+                            :mod (s1c3 / country
+                                       :name (s1n / name
+                                                  :op1 "U.S.")
+                                       :wiki "United_States")))
+     :ARG1-of (s1c / cause-01
+                   :ARG0 (s1l / lift-01
+                              :ARG0 (s1g3 / government-organization
+                                          :name (s1n2 / name
+                                                      :op1 "Congress")
+                                          :wiki "United_States_Congress")
+                              :ARG1 (s1c4 / ceiling
+                                          :prep-on (s1d / debt
+                                                        :mod (s1g5 / government-organization
+                                                                   :ARG0-of (s1g2 / govern-01))))
+                              :polarity -)))
+
+# alignment:
+
+# document level annotation:
+
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0008.2 :: type = partial_conversion
+# :: snt2
+Index: 1           2           3           4           5           6           7           8           9           10          11          12          13          14          15          16          17          18          19          20          21          22          23          
+Words: Until       Congress    acts        ,           the         government  has         n't         any         authority   to          issue       new         debt        obligations of          any         kind        ,           the         Treasury    said        .           
+
+# sentence level graph:
+(s2s / say-01
+     :ARG0 (s2g3 / government-organization
+                 :name (s2t / name
+                            :op1 "Treasury")
+                 :wiki "United_States_Department_of_the_Treasury")
+     :ARG1 (s2a / authorize-01
+                :ARG1 (s2i / issue-01
+                           :ARG0 (s2g4 / government-organization
+                                       :ARG0-of (s2g / govern-01))
+                           :ARG1 (s2o2 / obligation
+                                       :mod (s2d / debt)
+                                       :ARG1-of (s2n / new-01)
+                                       :mod (s2k / kind
+                                                 :mod (s2a3 / any))))
+                :ARG2 s2g4
+                :temporal (s2u / until
+                               :op1 (s2a2 / act-02
+                                          :ARG0 (s2g2 / government-organization
+                                                      :name (s2c / name
+                                                                 :op1 "Congress")
+                                                      :wiki "United_States_Congress")))
+                :polarity -))
+
+# alignment:
+
+# document level annotation:
+
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0008.3 :: type = partial_conversion
+# :: snt3
+Index: 1          2          3          4          5          6          7          8          9          10         11         12         13         14         15         16         17         18         
+Words: The        government 's         borrowing  authority  dropped    at         midnight   Tuesday    to         $          2.80       trillion   from       $          2.87       trillion   .          
+
+# sentence level graph:
+(s3d4 / drop-01
+      :ARG1 (s3t / thing
+                 :ARG1-of (s3b / borrow-01
+                               :ARG0 (s3g / government-organization
+                                          :ARG0-of (s3g2 / govern-01))
+                               :ARG1-of (s3a / authorize-01
+                                             :ARG2 s3g)))
+      :ARG3 (s3m2 / monetary-quantity
+                  :unit (s3d3 / dollar)
+                  :quant 2870000000000)
+      :ARG4 (s3m / monetary-quantity
+                 :unit (s3d2 / dollar)
+                 :quant 2800000000000)
+      :temporal (s3d / date-entity
+                     :weekday (s3w / wednesday)
+                     :time "0:00"))
+
+# alignment:
+
+# document level annotation:
+
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0008.4 :: type = partial_conversion
+# :: snt4
+Index: 1           2           3           4           5           6           7           8           9           10          11          12          13          14          15          16          17          18          
+Words: Legislation to          lift        the         debt        ceiling     is          ensnarled   in          the         fight       over        cutting     capital     -           gains       taxes       .           
+
+# sentence level graph:
+(s4e / ensnarl-01
+     :ARG1 (s4l / legislate-01
+                :ARG1 (s4l2 / lift-01
+                            :ARG1 (s4c / ceiling
+                                       :mod (s4d / debt))))
+     :ARG2 (s4f / fight-01
+                :ARG2 (s4c2 / cut-02
+                            :ARG1 (s4t2 / thing
+                                        :ARG1-of (s4t / tax-01
+                                                      :ARG3 (s4t3 / thing
+                                                                  :ARG1-of (s4g3 / gain-02
+                                                                                 :mod (s4c5 / capital))))))))
+
+# alignment:
+
+# document level annotation:
+
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0008.5 :: type = partial_conversion
+# :: snt5
+Index: 1        2        3        4        5        6        7        8        9        10       11       12       13       14       15       16       17       18       19       20       21       22       23       24       25       26       27       28       
+Words: The      House    has      voted    to       raise    the      ceiling  to       $        3.1      trillion ,        but      the      Senate   is       n't      expected to       act      until    next     week     at       the      earliest .        
+
+# sentence level graph:
+(s5c2 / contrast-91
+      :ARG1 (s5v / vote-01
+                 :ARG0 (s5g / government-organization
+                            :name (s5n / name
+                                       :op1 "House")
+                            :wiki "United_States_House_of_Representatives")
+                 :ARG1 (s5r / raise-01
+                            :ARG1 (s5c / ceiling)
+                            :ARG4 (s5m / monetary-quantity
+                                       :unit (s5d / dollar)
+                                       :quant 3100000000000)))
+      :ARG2 (s5e / expect-01
+                 :ARG1 (s5a / act-02
+                            :ARG0 (s5g2 / government-organization
+                                        :name (s5n2 / name
+                                                    :op1 "Senate")
+                                        :wiki "United_States_Senate")
+                            :temporal (s5b2 / before
+                                            :op1 (s5w / week
+                                                      :mod (s5n3 / next)))
+                            :polarity -)))
+
+# alignment:
+
+# document level annotation:
+
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0008.6 :: type = partial_conversion
+# :: snt6
+Index: 1        2        3        4        5        6        7        8        9        10       11       12       13       14       15       16       17       18       
+Words: The      Treasury said     the      U.S.     will     default  on       Nov.     9        if       Congress does     n't      act      by       then     .        
+
+# sentence level graph:
+(s6s / say-01
+     :ARG0 (s6g / government-organization
+                :name (s6n / name
+                           :op1 "Treasury")
+                :wiki "United_States_Department_of_the_Treasury")
+     :ARG1 (s6d2 / default-01
+                 :ARG1 (s6c / country
+                            :name (s6u / name
+                                       :op1 "U.S.")
+                            :wiki "United_States")
+                 :temporal (s6d / date-entity
+                                :month 11
+                                :day 9)
+                 :condition (s6a / act-02
+                                 :ARG0 (s6g2 / government-organization
+                                             :name (s6n2 / name
+                                                         :op1 "Congress")
+                                             :wiki "United_States_Congress")
+                                 :temporal (s6b / by
+                                                :op1 s6d)
+                                 :polarity -)))
+
+# alignment:
+
+# document level annotation:
+
+
+

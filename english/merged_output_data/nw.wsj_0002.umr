@@ -1,0 +1,59 @@
+################################################################################
+# meta-info :: sent_id = nw.wsj_0002.1
+# :: snt1
+Index: 1            2            3            4            5            6            7            8            9            10           11           12           13           14           15           16           17           18           19           20           21           22           23           24           25           26           
+Words: Rudolph      Agnew        ,            55           years        old          and          former       chairman     of           Consolidated Gold         Fields       PLC          ,            was          named        a            nonexecutive director     of           this         British      industrial   conglomerate .            
+
+# sentence level graph:
+(s1n / name-03
+    :ARG1 (s1p / person :wiki -
+        :name (s1n2 / name :op1 "Rudolph" :op2 "Agnew")
+        :age (s1t / temporal-quantity :quant 55
+            :unit (s1y / year))
+        :ARG1-of (s1h / have-org-role-92
+            :ARG2 (s1o / organization :wiki "Consolidated_Gold_Fields"
+                :name (s1n3 / name :op1 "Consolidated" :op2 "Gold" :op3 "Fields" :op4 "PLC"))
+            :ARG3 (s1c3 / chairman)
+            :temporal (s1f / former)))
+    :ARG2 (s1d / director
+        :mod (s1e / executive :polarity -)
+        :ARG3-of (s1h2 / have-org-role-92
+            :ARG1 s1p
+            :ARG2 (s1c5 / conglomerate 
+                :mod (s1c2 / country :wiki "United_Kingdom"
+                    :name (s1n4 / name :op1 "Britain"))
+                :mod (s1i / industry)
+                :mod (s1t2 / this)
+                :ARG1-of (s1i2 / identity-91
+                    :ARG2 s1o))))
+    :aspect performance)
+
+# alignment:
+s1n: 17-17
+s1p: 1-2
+s1n2: 1-2
+s1t: 4-6
+s1y: 5-5
+s1h: 0-0
+s1o: 11-14
+s1n3: 11-14
+s1c3: 9-9
+s1f: 8-8
+s1d: 20-20
+s1e: 19-19
+s1h2: 0-0
+s1c5: 25-25
+s1c2: 23-23
+s1n4: 23-23
+s1i: 24-24
+s1t2: 22-22
+s1i2: 0-0
+
+# document level annotation:
+(s1s0 / sentence
+    :temporal ((document-creation-time :before s1n)
+            (past-reference :depends-on s1f))
+    :modal ((root :modal author)
+            (author :full-affirmative s1n)))
+
+

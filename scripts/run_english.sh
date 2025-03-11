@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the input directory containing the files to process
-INPUT_DIR="../english/formatted_data"
+INPUT_DIR="../english/merged_output_data"
 # Set the output directory where errors will be stored
 OUTPUT_DIR="../english/errors"
 
@@ -18,7 +18,7 @@ for input_file in "$INPUT_DIR"/*; do
 
     # Run the Python script and redirect both stdout and stderr to the file
     echo "Processing $input_file -> $output_file"
-    python validate.py "$input_file" > "$output_file" 2>&1
+    python validate.py --optional-alignments --allow-trailing-whitespace --no-warn-unaligned-token --optional-aspect-modstr --allow-non-q-wiki --allow-non-string-wiki --allow-extra-empty-lines "$input_file" > "$output_file" 2>&1
 done
 
 echo "All files processed."
