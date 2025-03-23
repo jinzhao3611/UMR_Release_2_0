@@ -448,12 +448,12 @@ def merge_full_conversion_into_partial_conversion_jsons():
 
 
 lang = "english"
-original_folder_path = Path(root) / f'{lang}/original_data/'
-formatted_folder_path = Path(root) / f'{lang}/formatted_data/'
-jsons_folder_path = Path(root) / f'{lang}/jsons/'
-merged_jsons_folder_path = Path(root) / f'{lang}/merged_jsons/'
-output_folder_path = Path(root) / f'{lang}/merged_output_data/'
-release_folder_path = Path(root) / f'{lang}/release_data/'
+original_folder_path = Path(root) / f'umr_2_0/{lang}/original_data/'
+formatted_folder_path = Path(root) / f'umr_2_0/{lang}/formatted_data/'
+jsons_folder_path = Path(root) / f'umr_2_0/{lang}/jsons/'
+merged_jsons_folder_path = Path(root) / f'umr_2_0/{lang}/merged_jsons/'
+output_folder_path = Path(root) / f'umr_2_0/{lang}/merged_output_data/'
+release_folder_path = Path(root) / f'umr_2_0/{lang}/release_data/'
 
 # step 1:
 # copy_folder_structure(original_folder_path, formatted_folder_path)

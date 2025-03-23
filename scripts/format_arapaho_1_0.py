@@ -284,6 +284,6 @@ def reformat_folder(input_folder, output_folder):
         print(f"Reformatted {old_path} -> {new_path}")
 
 if __name__ == "__main__":
-    input_dir = Path(root) / "umr_1_0/arapaho/"
-    output_dir = Path(root) / "umr_1_0_formatted/arapaho/"
+    input_dir = Path(root) / "umr_1_0/arapaho/original_data"
+    output_dir = Path(root) / "umr_1_0/arapaho/formatted_data"
     reformat_folder(input_dir, output_dir)

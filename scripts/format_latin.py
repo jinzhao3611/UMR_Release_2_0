@@ -20,8 +20,8 @@ def pre_format(input_file_path, output_file_path):
         outfile.writelines(modified_lines)
 
 lang = "latin"
-original_file_path = Path(root) / 'latin/original_data/latin_umr-0001.txt'
-formatted_file_path = Path(root) / 'latin/formatted_data/latin_umr-0001.umr'
+original_file_path = Path(root) / 'umr_2_0/latin/original_data/latin_umr-0001.txt'
+formatted_file_path = Path(root) / 'umr_2_0/latin/formatted_data/latin_umr-0001.umr'
 # step 1:
 pre_format(input_file_path=original_file_path, output_file_path=formatted_file_path)
 

@@ -296,6 +296,6 @@ def reformat_folder(input_folder, output_folder):
         print(f"Reformatted {old_path} -> {new_path}")
 
 if __name__ == "__main__":
-    input_dir = Path(root) / "umr_1_0/kukama/"
-    output_dir = Path(root) / "umr_1_0_formatted/kukama/"
+    input_dir = Path(root) / "umr_1_0/kukama/original_data"
+    output_dir = Path(root) / "umr_1_0/kukama/formatted_data"
     reformat_folder(input_dir, output_dir)

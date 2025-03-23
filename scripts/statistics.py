@@ -282,15 +282,15 @@ def print_explanation():
 
 if __name__ == "__main__":
     # lang = 'english'
-    # folder_path = Path(root) / f'{lang}/merged_output_data/'
+    # folder_path = Path(root) / f'umr_2_0/{lang}/merged_output_data/'
     # analyze_folder(folder_path)
 
     # lang = 'czech'
-    # folder_path = Path(root) / f'{lang}/original_data/'
+    # folder_path = Path(root) / f'umr_2_0/{lang}/original_data/'
     # analyze_folder(folder_path)
 
     lang = 'chinese'
-    folder_path = Path(root) / f'{lang}/formatted_data/'
+    folder_path = Path(root) / f'umr_2_0/{lang}/formatted_data/'
     analyze_folder(folder_path)
 
     # print_explanation()

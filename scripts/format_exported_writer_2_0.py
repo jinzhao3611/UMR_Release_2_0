@@ -2,7 +2,7 @@
 import os
 import re
 import glob
-
+from pathlib import Path
 def standardize_tree_indentation(lines):
     """
     Standardize indentation in tree structures (sentence level graph and document level annotation)
@@ -291,8 +291,10 @@ def format_checkedout_file(input_file, output_file):
 
 def process_directory():
     """Process all files in the utils/checkedout directory."""
-    input_dir = "utils/checkedout"
-    output_dir = "utils/formatted_checkedout"
+    current_script_dir = Path(__file__).parent
+    root = current_script_dir.parent
+    input_dir = Path(root) / "exported_writer_2_0/original_data"
+    output_dir = Path(root) / "exported_writer_2_0/formatted_data"
     
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)

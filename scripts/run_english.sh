@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Set the input directory containing the files to process
-INPUT_DIR="../english/merged_output_data"
+INPUT_DIR="../umr_2_0/english/merged_output_data"
 # Set the output directory where errors will be stored
-OUTPUT_DIR="../english/errors"
+OUTPUT_DIR="../umr_2_0/english/errors"
 
 # Ensure the output directory exists
 mkdir -p "$OUTPUT_DIR"

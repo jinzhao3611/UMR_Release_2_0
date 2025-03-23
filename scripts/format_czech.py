@@ -43,6 +43,6 @@ def replace_sent_id(folder_path):
 
 
 if __name__ == "__main__":
-    folder = Path(root) / 'czech/original_data/'
+    folder = Path(root) / 'umr_2_0/czech/original_data/'
     replace_sent_id(folder)
 

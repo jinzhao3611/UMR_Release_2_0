@@ -622,7 +622,7 @@ if __name__ == '__main__':
     
     if args.step in ['json2txt', 'both']:
         print("Step 2: Converting json files to formatted txt...")
-        batch_json2txt(Path(root) / 'chinese/jsons', Path(root) / 'chinese/formatted_data')
+        batch_json2txt(Path(root) / 'umr_2_0/chinese/jsons', Path(root) / 'umr_2_0/chinese/formatted_data')
     
     print("Done!")
 

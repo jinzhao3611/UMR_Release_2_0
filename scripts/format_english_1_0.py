@@ -230,6 +230,6 @@ def reformat_folder(input_folder, output_folder):
 
 
 if __name__ == "__main__":
-    input_dir = Path(root) / "umr_1_0/english/"
-    output_dir = Path(root) / "umr_1_0_formatted/english/"
+    input_dir = Path(root) / "umr_1_0/english/original_data"
+    output_dir = Path(root) / "umr_1_0/english/formatted_data"
     reformat_folder(input_dir, output_dir)

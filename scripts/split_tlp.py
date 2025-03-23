@@ -154,9 +154,9 @@ def main():
     try:
         # Set up paths
         root = Path(__file__).parent.parent
-        seg_file = root / "utils" / "tlp_umr_wa_seg_0224.txt"
-        formatted_file = root / "chinese" / "formatted_data" / "tlp_umr_wa_1120.umr"
-        output_dir = root / "utils" / "tlp"
+        seg_file = root / "tlp_chinese/reference_data/tlp_umr_wa_seg_0224.txt"
+        formatted_file = root / "tlp_chinese/original_data/tlp_umr_wa_1120.umr"
+        output_dir = root / "tlp_chinese/formatted_data"
 
         # Get chapter-sentence mapping from the segmentation file
         chapter_mapping = get_chapter_sentence_mapping(seg_file)

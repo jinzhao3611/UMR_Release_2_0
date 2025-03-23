@@ -2,6 +2,7 @@
 import os
 import re
 import glob
+from pathlib import Path
 
 def standardize_tree_indentation(lines):
     """
@@ -303,8 +304,10 @@ def format_llm_parsed_file(input_file, output_file):
 
 def process_directory():
     """Process all files in the utils/llm_parsed directory."""
-    input_dir = "utils/llm_parsed"
-    output_dir = "utils/formatted_output"
+    current_script_dir = Path(__file__).parent
+    root = current_script_dir.parent
+    input_dir = Path(root) / "llm_parsed/original_data"
+    output_dir = Path(root) / "llm_parsed/formatted_data"
     
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
