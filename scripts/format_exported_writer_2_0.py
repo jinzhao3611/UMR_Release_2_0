@@ -76,11 +76,31 @@ def standardize_document_tree_indentation(lines):
     # Track node depth and indentation
     depth_stack = []  # Stack to track nested depth
     base_indent = 4   # Base indentation spaces for each level
+    in_property_list = False  # Track if we're inside a property list
+    property_first_item = False  # Track if this is the first item in a property list
     
-    # Process lines
+    # First, combine property with its first list item if they're on separate lines
     i = 0
+    combined_lines = []
     while i < len(lines):
-        line = lines[i]
+        line = lines[i].strip()
+        
+        # If this line starts a property with a list
+        if line.startswith(":") and "(" in line and line.endswith("("):
+            # Check if next line is a list item
+            if i + 1 < len(lines) and lines[i + 1].strip().startswith("("):
+                # Combine property with first list item
+                combined_lines.append(line + lines[i + 1].strip())
+                i += 2
+                continue
+        
+        combined_lines.append(line)
+        i += 1
+    
+    # Now process the combined lines
+    i = 0
+    while i < len(combined_lines):
+        line = combined_lines[i]
         stripped = line.lstrip()
         
         if not stripped:  # Empty line
@@ -94,10 +114,20 @@ def standardize_document_tree_indentation(lines):
         
         # Check if the next line is just closing parentheses
         next_line_is_just_closing = False
-        if i < len(lines) - 1:
-            next_line = lines[i + 1].strip()
+        if i < len(combined_lines) - 1:
+            next_line = combined_lines[i + 1].strip()
             if next_line and all(c == ')' for c in next_line):
                 next_line_is_just_closing = True
+        
+        # Check if this is a property line with a list
+        is_property_with_list = False
+        if stripped.startswith(":") and "(" in stripped:
+            property_open_parens = stripped.count("(")
+            # If a property contains an opening bracket for a list
+            if property_open_parens >= 2 or (property_open_parens == 1 and ":" in stripped[stripped.find("("):]):
+                is_property_with_list = True
+                in_property_list = True
+                property_first_item = True
         
         # Determine the indentation level
         if stripped.startswith("("):  # Node definition
@@ -107,11 +137,23 @@ def standardize_document_tree_indentation(lines):
                 else:  # Child nodes
                     indent = len(depth_stack) * base_indent
                 depth_stack.append(len(depth_stack))
+                in_property_list = False
+                property_first_item = False
+            elif in_property_list and not property_first_item and ":" in stripped:  # This is a property list item after the first one
+                # Additional items in property list are indented 8 spaces (4 more than property)
+                indent = (len(depth_stack) - 1) * base_indent + base_indent * 2
             else:  # This is a continuation of a previous node
                 indent = len(depth_stack) * base_indent if depth_stack else 0
+                property_first_item = False
         elif stripped.startswith(":"):  # Property
             # Properties are indented 4 spaces from their parent node
             indent = len(depth_stack) * base_indent if depth_stack else base_indent
+            
+            # If this is not a property with a list, reset list tracking
+            if not is_property_with_list:
+                in_property_list = False
+                property_first_item = False
+            
             # If this property introduces a new node with a concept
             if "(" in stripped and "/" in stripped:
                 depth_stack.append(len(depth_stack))
@@ -125,21 +167,28 @@ def standardize_document_tree_indentation(lines):
                 i += 1
                 continue
             indent = len(depth_stack) * base_indent if depth_stack else 0
+            in_property_list = False
+            property_first_item = False
         
         # If the next line is just closing brackets, merge it with this line
         if next_line_is_just_closing:
-            next_line = lines[i + 1].strip()
+            next_line = combined_lines[i + 1].strip()
             stripped += next_line
             close_count += next_line.count(")")
             i += 1  # Skip the next line as we've merged it
+        
+        # Apply indentation
+        result.append(" " * indent + stripped)
+        
+        # Update tracking for next iteration
+        if in_property_list and property_first_item:
+            property_first_item = False
         
         # Update depth stack based on closing parentheses
         for _ in range(close_count):
             if depth_stack:
                 depth_stack.pop()
         
-        # Apply indentation
-        result.append(" " * indent + stripped)
         i += 1
     
     return result
@@ -178,27 +227,58 @@ def create_document_level_annotation(sentence_id, doc_annotation_part):
     if doc_annotation_part and doc_annotation_part.strip():
         lines = doc_annotation_part.strip().split('\n')
         
-        # Process the lines to make sure closing brackets don't end up on their own line
-        processed_lines = []
-        i = 0
-        while i < len(lines):
-            line = lines[i].strip()
-            
-            # Check if the next line is just closing parentheses
-            if i < len(lines) - 1 and all(c == ')' for c in lines[i+1].strip()):
-                processed_lines.append(line + lines[i+1].strip())
-                i += 2  # Skip the next line
-            else:
-                processed_lines.append(line)
-                i += 1
+        # Track the root node and its direct children (properties)
+        root_node = None
+        properties = {}
+        current_prop = None
+        content_by_prop = {}
         
-        # Add the processed lines to the annotation
-        doc_annotation.extend(processed_lines)
+        # First pass: collect all properties and their content
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+                
+            if line.startswith("(") and "/" in line:
+                # This is the root node
+                root_node = line
+            elif line.startswith(":"):
+                # This is a property
+                parts = line.split(None, 1)
+                current_prop = parts[0]  # Get the property name
+                properties[current_prop] = []
+                
+                # If there's a content part on this line
+                if len(parts) > 1 and parts[1].strip():
+                    content = parts[1].strip()
+                    properties[current_prop].append(content)
+            elif current_prop:
+                # This line continues the current property
+                properties[current_prop].append(line)
+        
+        # Add the root node
+        if root_node:
+            doc_annotation.append(root_node)
+            
+            # Add each property with the desired formatting
+            for prop, content_list in properties.items():
+                if not content_list:
+                    continue
+                    
+                # For the first content item, keep it on the same line as the property
+                first_item = content_list[0]
+                doc_annotation.append(f"    {prop} {first_item}")
+                
+                # For subsequent items, indent by 8 spaces
+                for item in content_list[1:]:
+                    doc_annotation.append(f"        {item}")
     else:
         # Otherwise create a simple placeholder with the closing bracket on the same line
         sentence_var = f"s{sentence_id}s0"
         doc_annotation.append(f"({sentence_var} / sentence)")
     
+    # No need to apply standardize_document_tree_indentation since we're manually constructing
+    # the document annotation with the exact desired formatting
     return doc_annotation
 
 def format_checkedout_file(input_file, output_file):
@@ -281,12 +361,71 @@ def format_checkedout_file(input_file, output_file):
                 out.write(f"{var}: {alignments[var]}\n")
             out.write("\n")
             
-            # Generate and write document level annotation with improved indentation
-            doc_annotation = create_document_level_annotation(sentence_id, doc_annotation_part)
-            standardized_doc = standardize_document_tree_indentation(doc_annotation)
+            # Write document level annotation
+            out.write("# document level annotation:\n")
             
-            for line in standardized_doc:
-                out.write(line + "\n")
+            # Custom formatting for document level annotation
+            if doc_annotation_part and doc_annotation_part.strip():
+                lines = doc_annotation_part.strip().split('\n')
+                
+                current_indentation = 0
+                current_property = None
+                first_item_in_list = False
+                
+                for i, line in enumerate(lines):
+                    stripped = line.strip()
+                    
+                    if not stripped:
+                        continue
+                    
+                    # Handle root node (no indentation)
+                    if stripped.startswith("(") and "/" in stripped:
+                        out.write(f"{stripped}\n")
+                        current_indentation = 4  # Set indentation for properties
+                    
+                    # Handle properties (indent 4 spaces)
+                    elif stripped.startswith(":"):
+                        current_property = stripped.split()[0]
+                        
+                        # Check if this property has list content on the same line
+                        if "(" in stripped:
+                            # Get the content part
+                            content_start = stripped.find("(")
+                            property_part = stripped[:content_start].strip()
+                            content_part = stripped[content_start:].strip()
+                            
+                            # Write property with first list item on the same line
+                            out.write(f"{' ' * current_indentation}{property_part} {content_part}\n")
+                            first_item_in_list = True
+                        else:
+                            # Property without content on the same line
+                            out.write(f"{' ' * current_indentation}{stripped}\n")
+                            first_item_in_list = False
+                    
+                    # Handle list items after a property (indent 8 spaces if not the first item)
+                    elif current_property and stripped.startswith("(") and ":" in stripped:
+                        if first_item_in_list:
+                            # This is a second or later item in a list
+                            out.write(f"{' ' * 8}{stripped}\n")
+                        else:
+                            # This is the first list item
+                            out.write(f"{' ' * current_indentation}{current_property} {stripped}\n")
+                            first_item_in_list = True
+                    
+                    # Handle other content or closing brackets
+                    else:
+                        # If it's a closing bracket for the root node, no indentation
+                        if stripped == ")" and i == len(lines) - 1:
+                            out.write(f"{stripped}\n")
+                        else:
+                            # Use 8 spaces for subsequent list items
+                            indentation = 8 if first_item_in_list else current_indentation
+                            out.write(f"{' ' * indentation}{stripped}\n")
+            else:
+                # Simple placeholder
+                sentence_var = f"s{sentence_id}s0"
+                out.write(f"({sentence_var} / sentence)\n")
+            
             out.write("\n\n")
 
 def process_directory():
