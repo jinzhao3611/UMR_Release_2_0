@@ -114,6 +114,8 @@ def reformat_file(old_path, new_path):
 
     reformatted = []
     first_block = True
+    # Add sentence counter
+    sentence_counter = 1
     for block in blocks:
         if not first_block:
             reformatted.append("################################################################################")
@@ -138,7 +140,7 @@ def reformat_file(old_path, new_path):
         for ln in block:
             line = ln.rstrip("\n")
             
-            # 1) First check the “section” markers
+            # 1) First check the "section" markers
             if line.strip() == "# sentence level graph:":
                 in_graph = True
                 in_alignment = False
@@ -171,7 +173,7 @@ def reformat_file(old_path, new_path):
                 doc_level_annotation.append(line)
                 continue
 
-            # 3) If we’re in *none* of those sections, then we parse morphological lines
+            # 3) If we're in *none* of those sections, then we parse morphological lines
             parts = line.split(None, 1)
             if len(parts) >= 2:
                 tag, content = parts[0], parts[1]
@@ -215,6 +217,11 @@ def reformat_file(old_path, new_path):
 
         # Build the reformatted output
         reformatted.append("# meta-info")
+
+        # Add the sentence ID line with the correct sentence number
+        reformatted.append(f"# :: snt{sentence_counter}")
+        # Increment the sentence counter for the next block
+        sentence_counter += 1
 
         if snt_line:
             reformatted.append(snt_line)

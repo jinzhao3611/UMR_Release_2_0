@@ -118,6 +118,8 @@ def reformat_file(old_path, new_path):
 
     reformatted = []
     first_block = True
+    # Add sentence counter
+    sentence_counter = 1
     for block in blocks:
         if not first_block:
             reformatted.append("################################################################################")
@@ -231,6 +233,11 @@ def reformat_file(old_path, new_path):
 
         # Build the reformatted output
         reformatted.append("# meta-info")
+
+        # Add the sentence ID line with the correct sentence number
+        reformatted.append(f"# :: snt{sentence_counter}")
+        # Increment the sentence counter for the next block
+        sentence_counter += 1
 
         if snt_line:
             reformatted.append(snt_line)
