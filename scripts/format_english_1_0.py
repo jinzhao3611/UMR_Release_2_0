@@ -72,7 +72,7 @@ def reformat_file(old_path, new_path):
         # 4) The alignment lines
         # 5) The doc-level annotation
 
-        snt_line = None
+        snt_number = None
         sentence_tokens = []
         sentence_level_graph = []
         alignment_lines = []
@@ -87,7 +87,6 @@ def reformat_file(old_path, new_path):
 
             # detect "# :: sntX"
             if line.startswith("# :: snt"):
-                snt_line = line
                 # parse out the tokens to the right
                 # Format might be: "# :: snt2 该 周报 综合 ..."
                 # We'll split on whitespace, ignoring the first two tokens: "#", "::", and "snt2" as well
@@ -173,8 +172,8 @@ def reformat_file(old_path, new_path):
 
         reformatted.append(f"# meta-info :: sent_id = {full_sent_id}")
 
-        if snt_line:
-            reformatted.append(snt_line)
+        # Only include the sentence index part without the sentence text
+        reformatted.append(f"# :: {snt_number}")
 
         # Build an "Index:" row and "Words:" row
         # We'll align them in columns
