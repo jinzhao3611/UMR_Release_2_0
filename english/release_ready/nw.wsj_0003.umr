@@ -1,0 +1,2087 @@
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.1
+# :: snt1
+Index: 1           2           3           4           5           6           7           8           9           10          11          12          13          14          15          16          17          18          19          20          21          22          23          24          25          26          27          28          29          30          31          32          33          34          35          36          
+Words: A           form        of          asbestos    once        used        to          make        Kent        cigarette   filters     has         caused      a           high        percentage  of          cancer      deaths      among       a           group       of          workers     exposed     to          it          more        than        30          years       ago         ,           researchers reported    .           
+
+# sentence level graph:
+(s1r / report-01
+    :ARG0 (s1p4 / person
+        :ARG0-of (s1r2 / research-01)
+        :refer-number plural)
+    :ARG1 (s1c / cause-01
+        :ARG0 (s1a2 / asbestos
+            :mod (s1f / form)
+            :ARG1-of (s1u / use-01
+                :ARG2 (s1m / make-01
+                    :ARG1 (s1t2 / thing
+                        :refer-number plural
+                        :instrument-of (s1f2 / filter-02)
+                        :part-of (s1c2 / cigarette 
+                            :refer-number plural
+                            :mod (s1c3 / company :wiki "Kent_(cigarette)"
+                                :name (s1n / name :op1 "Kent"))))
+                    :aspect habitual)
+                :temporal (s1o / once)
+                :aspect habitual))
+        :ARG1 (s1p3 / percentage
+            :ARG3-of (s1i / include-91
+                :ARG1 (s1p7 / person
+                    :refer-number plural
+                    :ARG1-of (s1d / die-01
+                        :cause (s1d2 / disease :wiki "Cancer"
+                            :name (s1n3 / name :op1 "cancer"))
+                        :aspect performance))
+                :ARG2 (s1p6 / person
+                    :refer-number plural
+                    :ARG0-of (s1w2 / work-01)
+                    :ARG1-of (s1e / expose-01
+                        :ARG2 s1a2
+                        :temporal (s1b / before
+                            :op1 (s1n2 / now)
+                            :quant (s1m2 / more-than
+                                :op1 (s1t / temporal-quantity :quant 30
+                                    :unit (s1y / year))))
+                        :aspect habitual)))
+            :ARG1-of (s1h / high-02))
+        :aspect performance
+        :quote s1p4)
+    :aspect performance)
+
+# alignment:
+s1r: 35-35
+s1p4: 34-34
+s1r2: 34-34
+s1c: 13-13
+s1a2: 4-4
+s1f: 2-2
+s1u: 6-6
+s1m: 8-8
+s1t2: 11-11
+s1f2: 11-11
+s1c2: 10-10
+s1c3: 9-9
+s1n: 9-9
+s1o: 5-5
+s1p3: 16-16
+s1i: 0-0
+s1p7: 0-0
+s1d: 19-19
+s1d2: 18-18
+s1n3: 18-18
+s1p6: 24-24
+s1w2: 24-24
+s1e: 25-25
+s1b: 32-32
+s1n2: 32-32
+s1m2: 28-29
+s1t: 30-30
+s1y: 31-31
+s1h: 15-15
+
+# document level annotation:
+(s1s0 / sentence
+    :temporal ((document-creation-time :before s1r)
+            (s1c :after s1r)
+            (s1u :overlap s1c)
+            (s1u :overlap s1m)
+            (s1d :after s1c)
+            (s1e :after s1d)
+            (past-reference :depends-on s1b)
+            (past-reference :depends-on s1o))
+    :modal ((root :modal author)
+            (author :full-affirmative s1r)
+            (author :full-affirmative s1p4)
+            (s1p4 :full-affirmative s1c)
+            (s1p4 :full-affirmative s1u)
+            (s1p4 :full-affirmative s1m)
+            (s1p4 :full-affirmative s1d)
+            (s1p4 :full-affirmative s1e)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.2
+# :: snt2
+Index: 1           2           3           4           5           6           7           8           9           10          11          12          13          14          15          16          17          18          19          20          21          22          23          24          25          26          27          28          29          30          31          32          
+Words: The         asbestos    fiber       ,           crocidolite ,           is          unusually   resilient   once        it          enters      the         lungs       ,           with        even        brief       exposures   to          it          causing     symptoms    that        show        up          decades     later       ,           researchers said        .           
+
+# sentence level graph:
+(s2s / say-01
+    :ARG0 (s2p / person
+        :refer-number plural
+        :ARG0-of (s2r / research-01))
+    :ARG1 (s2a2 / and
+        :op1 (s2r2 / resiliency-01
+            :ARG1 (s2f / fiber
+                :material (s2a / asbestos))
+                :ARG1-of (s2i / identity-91
+                    :ARG2 (s2c / crocidolite))
+            :degree intensifier
+            :temporal (s2a3 / after
+                :op1 (s2e / enter-01
+                    :ARG0 s2c
+                    :ARG1 (s2l / lung
+                        :refer-number plural)
+                    :aspect performance))
+            :aspect state)
+        :op2 (s2c2 / cause-01
+            :ARG0 (s2e2 / expose-01
+                :ARG2 s2c
+                :duration (s2b / brief
+                    :mod (s2e3 / even))
+                :aspect habitual)
+            :ARG1 (s2s3 / show-up-02
+                :ARG1 (s2t2 / thing
+                    :refer-number plural
+                    :ARG2-of (s2s2 / symptomatic-01))
+                :temporal (s2a4 / after
+                    :op1 s2e2
+                    :quant (s2m / multiple
+                        :op1 (s2t / temporal-quantity :quant 1
+                            :unit (s2d2 / decade))))
+                :aspect performance)
+            :aspect habitual)
+        :quote s2s)
+    :aspect performance)
+
+# alignment:
+s2s: 31-31
+s2p: 30-30
+s2r: 30-30
+s2a2: 0-0
+s2r2: 9-9
+s2f: 3-3
+s2a: 2-2
+s2i: 0-0
+s2c: 5-5
+s2a3: 10-10
+s2e: 12-12
+s2l: 14-14
+s2c2: 22-22
+s2e2: 19-19
+s2b: 18-18
+s2e3: 17-17
+s2s3: 25-26
+s2t2: 23-23
+s2s2: 23-23
+s2a4: 28-28
+s2m: 27-27
+s2t: 27-27
+s2d2: 27-27
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2f :same-entity s1a2))
+    :temporal ((document-creation-time :before s2s)
+            (s2s :after s1r)
+            (s2s :contains s2r2)
+            (s2r :before s2e)
+            (s2s :contains s2c2)
+            (s2c2 :before s2e2)
+            (s2s3 :before s2c2))
+    :modal ((root :modal author)
+            (author :full-affirmative s2s)
+            (author :full-affirmative s2p)
+            (s2p :full-affirmative s2e)
+            (s2p :full-affirmative s2r2)
+            (s2p :full-affirmative s2e2)
+            (s2p :neutral-affirmative s2s3)
+            (s2p :full-affirmative s2c2)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.3
+# :: snt3
+Index: 1           2           3           4           5           6           7           8           9           10          11          12          13          14          15          16          17          18          19          20          21          22          23          24          25          26          27          28          
+Words: Lorillard   Inc.        ,           the         unit        of          New         York        -           based       Loews       Corp.       that        makes       Kent        cigarettes  ,           stopped     using       crocidolite in          its         Micronite   cigarette   filters     in          1956        .           
+
+# sentence level graph:
+(s3s2 / stop-01
+    :ARG0 (s3c / company :wiki "Lorillard_Tobacco_Company"
+        :name (s3n / name :op1 "Lorillard" :op2 "Inc.")
+        :ARG1-of (s3h / have-org-role-92
+            :ARG2 (s3c3 / company :wiki "Loews_Corporation"
+                :name (s3n2 / name :op1 "Loews" :op2 "Corp.")
+                :ARG1-of (s3b / base-01
+                    :place (s3h2 / human-settlement :wiki "New_York_City"
+                        :name (s3n3 / name :op1 "New" :op2 "York"))))
+            :ARG3 (s3u / unit 
+                :ARG0-of (s3m2 / make-01
+                    :ARG1 (s3p / product :wiki "Kent_(cigarette)"
+                        :refer-number plural
+                        :name (s3n4 / name :op1 "Kent" :op2 "cigarettes"))
+                    :aspect habitual))))
+    :ARG1 (s3u2 / use-01
+        :ARG0 s3c
+        :ARG1 (s3c5 / crocidolite)
+        :ARG2 (s3t / thing 
+            :refer-number plural
+            :material (s3p2 / product :wiki -
+                :name (s3n5 / name :op1 "Micronite"))
+            :instrument-of (s3f / filter-02)
+            :part-of (s3c6 / cigarette
+                :refer-number plural)
+            :possessor s3c)
+        :aspect habitual)
+    :temporal (s3d / date-entity :year 1956)
+    :aspect performance)
+
+# alignment:
+s3s2: 18-18
+s3c: 1-2
+s3n: 1-2
+s3h: 0-0
+s3c3: 11-12
+s3n2: 11-12
+s3b: 10-10
+s3h2: 7-8
+s3n3: 7-8
+s3u: 5-5
+s3m2: 14-14
+s3p: 15-16
+s3n4: 15-16
+s3u2: 19-19
+s3c5: 20-20
+s3t: 25-25
+s3p2: 23-23
+s3n5: 23-23
+s3f: 25-25
+s3c6: 24-24
+s3d: 27-27
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3m2 :subset-of s1m)
+            (s3t :same-entity s1t2)
+            (s3c5 :same-entity s2c)
+            (s3p :same-entity s1c2)
+            (s3p :subset-of s3c6))
+    :temporal ((root :depends-on s3d)
+            (document-creation-time :contains s3m2)
+            (s3s2 :contains s3d)
+            (s3u2 :after s3s2))
+    :modal ((root :modal author)
+            (author :full-affirmative s3s2)
+            (author :full-affirmative s3u2)
+            (author :full-affirmative s3m2)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.4
+# :: snt4
+Index: 1           2           3           4           5           6           7           8           9           10          11          12          13          14          15          16          17          18          19          20          21          22          23          24          25          26          27          28          29          30          31          32          33          34          35          
+Words: Although    preliminary findings    were        reported    more        than        a           year        ago         ,           the         latest      results     appear      in          today       's          New         England     Journal     of          Medicine    ,           a           forum       likely      to          bring       new         attention   to          the         problem     .           
+
+# sentence level graph:
+(s4a / appear-01
+    :ARG1 (s4t4 / thing
+        :ARG2-of (s4r3 / result-01
+            :mod (s4l / last)))
+    :place (s4p3 / publication-91
+        :ARG4 (s4j / journal :wiki "The_New_England_Journal_of_Medicine" 
+            :name (s4n / name :op1 "New" :op2 "England" :op3 "Journal" :op4 "of" :op5 "Medicine")
+            :ARG1-of (s4h / have-role-91 
+                :ARG3 (s4f / forum
+                    :ARG0-of (s4b / bring-01
+                        :ARG1 (s4a2 / attend-02
+                        :ARG1 (s4p / problem)
+                        :ARG1-of (s4n2 / new-02
+                            :ARG2 s4p))
+                        :ARG2 s4p
+                        :aspect activity)))
+        :ARG6 (s4t / today)))
+    :concession (s4r2 / report-01
+        :ARG1 (s4t2 / thing
+            :refer-number plural
+            :ARG1-of (s4f2 / find-01)
+            :mod (s4p2 / preliminary))
+        :temporal (s4b2 / before
+            :op1 (s4n3 / now)
+            :quant (s4m3 / more-than
+                :op1 (s4t3 / temporal-quantity :quant 1
+                :unit (s4y / year))))
+        :aspect performance)
+    :aspect state)
+
+# alignment:
+s4a: 14-14
+s4t4: 13-13
+s4r3: 13-13
+s4l: 12-12
+s4p3: 0-0
+s4j: 18-22
+s4n: 18-22
+s4h: 0-0
+s4f: 25-25
+s4b: 28-28
+s4a2: 30-30
+s4n2: 29-29
+s4p: 33-33
+s4t: 16-16
+s4r2: 5-5
+s4t2: 3-3
+s4f2: 3-3
+s4p2: 2-2
+s4b2: 10-10
+s4n3: 10-10
+s4m3: 6-7
+s4t3: 8-9
+s4y: 9-9
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t4 :subset-of s4a2)
+            (s4p :same-entity s3c5))
+    :temporal ((document-creation-time :before s4r2)
+            (document-creation-time :contains s4a)
+            (document-creation-time :depends-on s4b2)
+            (document-creation-time :after s4b)
+            (document-creation-time :depends-on s4t))
+    :modal ((root :modal author)
+            (author :full-affirmative s4a)
+            (author :full-affirmative s4r2)
+            (author :partial-affirmative s4b)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.5
+# :: snt5
+Index: 1          2          3          4          5          6          7          8          9          10         11         12         
+Words: A          Lorillard  spokewoman said       ,          ``         This       is         an         old        story      .          
+
+# sentence level graph:
+(s5s / say-01
+    :ARG0 (s5p / person
+        :ARG1-of (s5h / have-org-role-92
+            :ARG2 (s5c / company :wiki "Lorillard_Tobacco_Company"
+                :name (s5n / name :op1 "Lorillard"))
+            :ARG3 (s5s2 / spokeswoman)))
+    :ARG1 (s5o / old-01
+        :ARG1 (s5s3 / story
+            :mod (s5t / this))
+        :aspect state
+        :quote s5s)
+    :aspect performance)
+
+# alignment:
+s5s: 4-4
+s5p: 3-3
+s5h: 3-3
+s5c: 2-2
+s5n: 2-2
+s5s2: 3-3
+s5o: 10-10
+s5s3: 11-11
+s5t: 7-7
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s3c :same-entity s5c)
+            (s4p :same-entity s5s3))
+    :temporal ((document-creation-time :before s5s)
+            (s5s :contains s5o))
+    :modal ((root :modal author)
+            (author :full-affirmative s5s)
+            (author :full-affirmative s5p)
+            (s5p :full-affirmative s5o)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.6
+# :: snt6
+Index: 1            2            3            4            5            6            7            8            9            10           11           12           13           14           15           16           
+Words: We           're          talking      about        years        ago          before       anyone       heard        of           asbestos     having       any          questionable properties   .            
+
+# sentence level graph:
+(s6s / say-91
+    :ARG0 (s6p2 / person)
+    :ARG1 (s6t / talk-01
+        :ARG0 (s6p3 / person
+            :refer-person 1st
+            :refer-number plural)
+        :ARG1 (s6e / event
+            :temporal (s6b2 / before
+                :op1 (s6n / now)
+                :quant (s6m / multiple
+                    :op1 (s6t2 / temporal-quantity :quant 1
+                        :unit (s6y2 / year))))
+            :temporal (s6b / before
+                :op1 (s6h / hear-01
+                    :ARG0 (s6p4 / person 
+                        :refer-person 3rd
+                        :mod (s6a / any))
+                    :ARG1 (s6h2 / have-mod-91
+                        :ARG1 (s6a3 / asbestos)
+                        :ARG2 (s6p / property
+                            :mod (s6a4 / any)
+                            :ARG1-of (s6q2 / question-03))
+                        :aspect state)
+                    :aspect state)))
+        :aspect activity
+        :quote s6s))
+
+# alignment:
+s6s: 0-0
+s6p2: 0-0
+s6t: 3-3
+s6p3: 1-1
+s6e: 0-0
+s6b2: 6-6
+s6n: 6-6
+s6m: 5-5
+s6t2: 5-5
+s6y2: 5-5
+s6b: 7-7
+s6h: 9-9
+s6p4: 8-8
+s6a: 8-8
+s6h2: 12-12,15-15
+s6a3: 11-11
+s6p: 15-15
+s6a4: 13-13
+s6q2: 14-14
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p2 :same-entity s5p)
+            (s6p3 :subset-of s6p2)
+            (s6e :same-entity s4t2)
+            (s6a3 :same-entity s2a)
+            (s6p :subset-of s5p)
+            (s6p :subset-of s5c))
+    :temporal ((document-creation-time :depends-on s6b2)
+            (document-creation-time :contains s6t)
+            (document-creation-time :before s6h)
+            (document-creation-time :contains s6h2)
+            (s6e :contains s6h2)
+            (s6s :before s5s))
+    :modal ((root :modal author)
+            (author :full-affirmative s6s)
+            (author :full-affirmative s6p2)
+            (s6p2 :full-affirmative s6t)
+            (s6p2 :full-affirmative s6h)
+            (s6p2 :full-affirmative s6p4)
+            (s6p4 :partial-affirmative s6h2)
+            (s6p4 :neutral-affirmative s6q2)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.7
+# :: snt7
+Index: 1        2        3        4        5        6        7        8        9        10       
+Words: There    is       no       asbestos in       our      products now      .        ''       
+
+# sentence level graph:
+(s7s / say-91
+    :ARG0 (s7p / person)
+    :ARG1 (s7h / have-material-91
+        :polarity -
+        :ARG1 (s7t / thing
+            :refer-number plural
+            :ARG1-of (s7p2 / produce-01
+                :ARG0 (s7c / company
+                    :refer-person 1st
+                    :refer-number plural)
+                :aspect habitual))
+        :ARG2 (s7a / asbestos)
+        :temporal (s7n / now)
+        :aspect state
+        :quote s7s))
+
+# alignment:
+s7s: 0-0
+s7p: 0-0
+s7h: 2-2
+s7t: 7-7
+s7p2: 7-7
+s7c: 6-6
+s7a: 4-4
+s7n: 8-8
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p :same-entity s6p2)
+            (s7c :same-entity s5c)
+            (s7t :subset-of s6p)
+            (s7a :same-entity s6a3))
+    :temporal ((document-creation-time :before s7s)
+            (document-creation-time :depends-on s7n)
+            (s7s :before s6s)
+            (s7s :contains s7h)
+            (s7s :contains s7t))
+    :modal ((root :modal author)
+            (author :full-affirmative s7s)
+            (author :full-affirmative s7p)
+            (s7p :full-negative s7h)
+            (s7p :full-affirmative s7p2)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.8
+# :: snt8
+Index: 1           2           3           4           5           6           7           8           9           10          11          12          13          14          15          16          17          18          19          20          21          
+Words: Neither     Lorillard   nor         the         researchers who         studied     the         workers     were        aware       of          any         research    on          smokers     of          the         Kent        cigarettes  .           
+
+# sentence level graph:
+(s8a / aware-01 
+    :polarity -
+    :ARG0 (s8a2 / and
+        :op1 (s8c / company :wiki "Lorillard_Tobacco_Company"
+            :name (s8n / name :op1 "Lorillard"))
+        :op2 (s8p2 / person
+            :refer-number plural
+            :ARG0-of (s8r2 / research-01)
+            :ARG0-of (s8s2 / study-01
+                :ARG1 (s8p3 / person
+                    :ARG0-of (s8w / work-01))
+                :aspect activity)))
+    :ARG1 (s8r3 / research-01
+        :ARG1 (s8p4 / person
+            :refer-number plural
+            :ARG0-of (s8s / smoke-02
+                :ARG1 (s8p / product :wiki "Kent_(cigarette)"
+                    :name (s8n2 / name :op1 "Kent" :op2 "cigarette")
+                    :refer-number plural)))
+        :mod (s8a3 / any)
+        :aspect process)
+    :aspect state)
+
+# alignment:
+s8a: 11-11
+s8a2: 1-1,3-3
+s8c: 2-2
+s8n: 2-2
+s8p2: 5-5
+s8r2: 5-5
+s8s2: 7-7
+s8p3: 9-9
+s8w: 9-9
+s8r3: 14-14
+s8p4: 16-16
+s8s: 16-16
+s8p: 19-20
+s8n2: 19-20
+s8a3: 13-13
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8c :same-entity s5c)
+            (s8p2 :same-entity s1p4)
+            (s8p3 :same-entity s1p6))
+    :temporal ((document-creation-time :before s8a)
+            (document-creation-time :before s8s2)
+            (s8a :before s8r3))
+    :modal ((root :modal author)
+            (author :full-negative s8a)
+            (author :full-affirmative s8a2)
+            (s8a2 :neutral-affirmative s8r3)
+            (s8a2 :full-affirmative s8s2)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.9
+# :: snt9
+Index: 1           2           3           4           5           6           7           8           9           10          11          12          13          14          15          16          17          18          19          20          21          22          23          24          25          26          27          
+Words: ``          We          have        no          useful      information on          whether     users       are         at          risk        ,           ''          said        James       A.          Talcott     of          Boston      's          Dana        -           Farber      Cancer      Institute   .           
+
+# sentence level graph:
+(s9s / say-01
+    :ARG0 (s9p / person :wiki - 
+        :name (s9n / name :op1 "James" :op2 "A." :op3 "Talcott")
+        :ARG1-of (s9h2 / have-org-role-92
+            :ARG2 (s9a / academic-organization :wiki "Dana–Farber_Cancer_Institute" 
+                :name (s9n2 / name :op1 "Dana-Farber" :op2 "Cancer" :op3 "Institute")
+                :place (s9h3 / human-settlement :wiki "Boston" 
+                    :name (s9n3 / name :op1 "Boston")))))
+    :ARG1 (s9i / inform-01
+        :polarity -
+        :ARG1 s9a
+        :ARG2 (s9t2 / thing
+            :ARG1-of (s9u / useful-05)
+            :topic (s9t / truth-value
+                :polarity-of (s9r / risk-01
+                    :ARG0 (s9p3 / person
+                        :refer-number plural
+                        :ARG0-of (s9u2 / use-01
+                            :ARG1 (s9p2 / product)))
+                    :ARG1 (s9e / event)
+                    :aspect state)))
+        :aspect state
+        :quote s9s)
+    :aspect performance)
+
+# alignment:
+s9s: 14-14
+s9p: 15-17
+s9n: 15-17
+s9h2: 0-0
+s9a: 21-25
+s9n2: 21-25
+s9h3: 19-19
+s9n3: 19-19
+s9i: 3-3,6-6
+s9t2: 6-6
+s9u: 5-5
+s9t: 8-8
+s9r: 11-12
+s9p3: 9-9
+s9u2: 9-9
+s9p2: 0-0
+s9e: 0-0
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p2 :same-entity s8p)
+            (s9p3 :same-entity s8p4)
+            (s9e :same-event s1d))
+    :temporal ((document-creation-time :before s9s)
+            (s9s :contains s9i)
+            (s9s :contains s9r))
+    :modal ((root :modal author)
+            (author :full-affirmative s9s)
+            (author :full-affirmative s9p)
+            (s9p :full-negative s9i)
+            (s9p :neutral-affirmative s9r)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.10
+# :: snt10
+Index: 1           2           3           4           5           6           7           8           9           10          11          12          13          14          15          16          17          18          19          20          21          22          23          
+Words: Dr.         Talcott     led         a           team        of          researchers from        the         National    Cancer      Institute   and         the         medical     schools     of          Harvard     University  and         Boston      University  .           
+
+# sentence level graph:
+(s10l / lead-02
+    :ARG0 (s10p / person :wiki - 
+        :name (s10n / name :op1 "Dr." :op2 "Talcott"))
+    :ARG1 (s10t3 / team
+        :group-of (s10a / and
+            :op1 (s10p7 / person 
+                :refer-number plural
+                :ARG1-of (s10h / have-rel-role-92
+                    :ARG2 (s10a2 / academic-organization :wiki "National_Cancer_Institute" 
+                        :name (s10n2 / name :op1 "National" :op2 "Cancer" :op3 "Institute"))
+                    :ARG3 (s10p2 / person
+                        :ARG0-of (s10r / research-01))))
+            :op2 (s10p3 / person 
+                :refer-number plural
+                :ARG1-of (s10h2 / have-rel-role-92
+                    :ARG2 (s10s / school
+                        :mod (s10m / medicine)
+                        :part-of (s10a3 / academic-organization :wiki "Harvard_University" 
+                            :name (s10n3 / name :op1 "Harvard" :op2 "University")))
+                    :ARG3 (s10p4 / person
+                        :ARG0-of (s10r2 / research-01))))
+            :op3 (s10p5 / person 
+                :refer-number plural
+                :ARG1-of (s10h3 / have-rel-role-92
+                    :ARG2 (s10s2 / school
+                        :mod (s10m2 / medicine)
+                        :part-of (s10a4 / academic-organization :wiki "Boston_University" 
+                            :name (s10n4 / name :op1 "Boston" :op2 "University")))
+                    :ARG3 (s10p6 / person
+                        :ARG0-of (s10r3 / research-01))))))
+    :aspect activity)
+
+# alignment:
+s10l: 3-3
+s10p: 1-2
+s10t3: 1-2
+s10a: 0-0
+s10p7: 7-7
+s10h: 0-0
+s10a2: 10-12
+s10n2: 10-12
+s10p2: 7-7
+s10r: 7-7
+s10p3: 7-7
+s10h2: 0-0
+s10s: 16-16
+s10m: 15-15
+s10a3: 18-19
+s10n3: 18-19
+s10p4: 7-7
+s10r2: 7-7
+s10p5: 7-7
+s10h3: 0-0
+s10s2: 16-16
+s10m2: 15-15
+s10a4: 21-22
+s10n4: 21-22
+s10p6: 7-7
+s10r3: 7-7
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10p :same-entity s9p)
+            (s8p2 :subset-of s10t3))
+    :temporal ((document-creation-time :before s10l))
+    :modal ((root :modal author)
+            (author :full-affirmative s10l)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.11
+# :: snt11
+Index: 1           2           3           4           5           6           7           8           9           10          11          12          13          14          15          16          17          18          19          20          21          22          23          24          25          26          27          28          29          30          31          32          33          34          
+Words: The         Lorillard   spokeswoman said        asbestos    was         used        in          ``          very        modest      amounts     ''          in          making      paper       for         the         filters     in          the         early       1950s       and         replaced    with        a           different   type        of          filter      in          1956        .           
+
+# sentence level graph:
+(s11s / say-01
+    :ARG0 (s11p4 / person
+        :ARG1-of (s11h / have-org-role-92
+            :ARG2 (s11c / company :wiki "Lorillard_Tobacco_Company"
+                :name (s11n / name :op1 "Lorillard"))
+            :ARG3 (s11s2 / spokeswoman)))
+    :ARG1 (s11c2 / consecutive
+        :op1 (s11u / use-01
+            :ARG1 (s11a / asbestos
+                :quant (s11a2 / amount
+                    :mod (s11m / modest
+                        :degree intensifier)))
+            :ARG2 (s11m2 / make-01
+                :ARG1 (s11p / paper)
+                :temporal (s11e2 / early-01
+                    :ARG2 (s11d3 / date-entity :decade 1950))
+                :purpose (s11h2 / have-part-91
+                    :ARG1 (s11t / thing
+                        :refer-number plural
+                        :instrument-of (s11f / filter-02))
+                    :ARG2 s11p)
+                :aspect activity)
+            :aspect habitual)
+        :op2 (s11r / replace-01
+            :ARG1 s11a
+            :ARG2 (s11t2 / thing
+                :instrument-of (s11f2 / filter-02)
+                :mod (s11t3 / type
+                    :ARG1-of (s11d2 / differ-02
+                        :ARG2 s11a)))
+            :temporal (s11d / date-entity :year 1956)
+            :aspect performance)
+        :quote s11s)
+    :aspect performance)
+
+# alignment:
+s11s: 4-4
+s11p4: 3-3
+s11h: 0-0
+s11c: 2-2
+s11n: 2-2
+s11s2: 3-3
+s11c2: 24-24
+s11u: 7-7
+s11a: 5-5
+s11a2: 12-12
+s11m: 11-11
+s11m2: 15-15
+s11p: 16-16
+s11e2: 22-22
+s11d3: 23-23
+s11h2: 0-0
+s11t: 19-19
+s11f: 19-19
+s11r: 25-25
+s11t2: 31-31
+s11f2: 31-31
+s11t3: 29-29
+s11d2: 28-28
+s11d: 33-33
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11p4 :same-entity s5p)
+            (s11a :same-entity s6a3)
+            (s1m :subset-of s11m2))
+    :temporal ((document-creation-time :before s11s)
+            (root :depends-on s11d3)
+            (root :depends-on s11d)
+            (s11e2 :contains s11d3)
+            (s11u :contains s11e2)
+            (s11r :before s3s2)
+            (s11m2 :contains s11e2))
+    :modal ((root :modal author)
+            (author :full-affirmative s11s)
+            (author :full-affirmative s11p4)
+            (s11p4 :full-affirmative s11u)
+            (s11p4 :full-affirmative s11r)
+            (s11p4 :full-affirmative s11m2)
+            (s11p :partial-affirmative purpose)
+            (purpose :full-affirmative s11h2)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.12
+# :: snt12
+Index: 1          2          3          4          5          6          7          8          9          10         11         12         13         14         15         16         17         18         19         
+Words: From       1953       to         1955       ,          9.8        billion    Kent       cigarettes with       the        filters    were       sold       ,          the        company    said       .          
+
+# sentence level graph:
+(s12s / say-01
+    :ARG0 (s12c / company)
+    :ARG1 (s12s2 / sell-01
+        :ARG1 (s12p / product :wiki "Kent_(cigarette)"
+            :quant 9800000000 
+            :name (s12n / name :op1 "Kent" :op2 "cigarette")
+            :part (s12t / thing
+                :refer-number plural
+                :instrument-of (s12f / filter-02)))
+        :temporal (s12d / date-interval
+            :op1 (s12d2 / date-entity :year 1953)
+            :op2 (s12d3 / date-entity :year 1955))
+        :aspect performance
+        :quote s12s)
+    :aspect performance)
+
+# alignment:
+s12s: 18-18
+s12c: 17-17
+s12s2: 14-14
+s12p: 8-9
+s12n: 8-9
+s12t: 12-12
+s12f: 12-12
+s12d: 1-1
+s12d2: 2-2
+s12d3: 4-4
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12t :same-entity s11t)
+            (s8p :subset-of s12p)
+            (s12c :same-entity s11c))
+    :temporal ((document-creation-time :before s12s)
+            (s12s2 :after s12s)
+            (root :depends-on s12d2)
+            (root :depends-on s12d3)
+            (s12s2 :overlap s12d2)
+            (s12s2 :overlap s12d3))
+    :modal ((root :modal author)
+            (author :full-affirmative s12s)
+            (author :full-affirmative s12c)
+            (s12c :full-affirmative s12s2)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.13
+# :: snt13
+Index: 1         2         3         4         5         6         7         8         9         10        11        12        13        14        15        16        17        18        19        20        21        22        
+Words: Among     33        men       who       worked    closely   with      the       substance ,         28        have      died      --        more      than      three     times     the       expected  number    .         
+
+# sentence level graph:
+(s13d / die-01
+    :ARG1 (s13m / man 
+        :quant 28
+        :quant (s13m4 / more-than
+            :op1 (s13p / product-of 
+                :op1 3
+                :op2 (s13n2 / number
+                    :ARG1-of (s13e2 / expect-01
+                        :aspect state))))
+        :ARG1-of (s13i / include-91
+            :ARG2 (s13m2 / man 
+                :quant 33
+                :ARG0-of (s13w / work-01
+                    :ARG1 (s13s / substance)
+                    :manner (s13c / close-10)
+                    :aspect activity))))
+    :aspect performance)
+
+# alignment:
+s13d: 13-13
+s13m: 3-3
+s13m4: 15-16
+s13p: 18-18
+s13n2: 21-21
+s13e2: 20-20
+s13i: 1-1
+s13m2: 3-3
+s13w: 5-5
+s13s: 9-9
+s13c: 6-6
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13m2 :same-entity s1p6)
+            (s13m :same-entity s1p7)
+            (s13s :same-entity s11a))
+    :temporal ((document-creation-time :before s13d)
+            (document-creation-time :before s13e2)
+            (s13w :after s13d)
+            (s1e :overlap s13w))
+    :modal ((root :modal author)
+            (author :full-affirmative s13d)
+            (author :full-affirmative s13w)
+            (author :full-affirmative s13e2)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.14
+# :: snt14
+Index: 1         2         3         4         5         6         7         8         9         10        11        12        13        14        15        16        17        18        19        
+Words: Four      of        the       five      surviving workers   have      asbestos  -         related   diseases  ,         including three     with      recently  diagnosed cancer    .         
+
+# sentence level graph:
+(s14h / have-03
+    :ARG0 (s14p4 / person :quant 4
+        :ARG1-of (s14i / include-91
+            :ARG2 (s14p2 / person :quant 5
+                :ARG0-of (s14w / work-01)
+                :ARG0-of (s14s / survive-01
+                    :aspect state)))
+        :ARG2-of (s14i2 / include-91
+            :ARG1 (s14p3 / person :quant 3
+                :ARG1-of (s14d3 / diagnose-01
+                    :ARG2 (s14d2 / disease :wiki "Cancer"
+                        :name (s14n / name :op1 "cancer"))
+                    :temporal (s14r3 / recent)
+                    :aspect performance))))
+    :ARG1 (s14d / disease
+        :ARG1-of (s14r / relate-01
+            :ARG2 (s14a / asbestos)))
+    :aspect state)
+
+# alignment:
+s14h: 7-7
+s14p4: 6-6
+s14i: 0-0
+s14p2: 6-6
+s14w: 6-6
+s14s: 5-5
+s14i2: 13-13
+s14p3: 14-14
+s14d3: 17-17
+s14d2: 18-18
+s14n: 18-18
+s14r3: 16-16
+s14d: 11-11
+s14r: 10-10
+s14a: 8-8
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s13m2 :subset-of s14p2)
+            (s14a :same-entity s13s))
+    :temporal ((document-creation-time :contains s14h)
+            (document-creation-time :contains s14s)
+            (document-creation-time :before s14d3)
+            (past-reference :depends-on s14r))
+    :modal ((root :modal author)
+            (author :full-affirmative s14h)
+            (author :full-affirmative s14d3)
+            (author :full-affirmative s14s)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.15
+# :: snt15
+Index: 1            2            3            4            5            6            7            8            9            10           11           12           13           14           15           16           17           18           19           20           21           22           23           
+Words: The          total        of           18           deaths       from         malignant    mesothelioma ,            lung         cancer       and          asbestosis   was          far          higher       than         expected     ,            the          researchers  said         .            
+
+# sentence level graph:
+(s15s / say-01
+    :ARG0 (s15p / person
+        :ARG0-of (s15r / research-01))
+    :ARG1 (s15h2 / have-degree-91
+        :ARG1 (s15q / quantity :quant 18
+            :ARG2-of (s15h3 / have-quant-91 
+                :ARG1 (s15s2 / sum-of 
+                    :op1 (s15d / die-01
+                        :cause (s15d4 / disease :wiki "Mesothelioma" 
+                            :name (s15n / name :op1 "malignant" :op2 "mesothelioma"))
+                        :aspect performance)
+                    :op2 (s15d5 / die-01
+                        :cause (s15d2 / disease :wiki "Lung_cancer" 
+                            :name (s15n2 / name :op1 "lung" :op2 "cancer"))
+                        :aspect performance)
+                    :op3 (s15d6 / die-01
+                        :cause (s15d3 / disease :wiki "Asbestosis" 
+                            :name (s15n3 / name :op1 "asbestosis"))
+                        :aspect performance))))
+        :ARG2 (s15h / high-02)
+        :ARG3 (s15m / more
+            :degree intensifier)
+        :ARG4 (s15q2 / quantity
+            :ARG1-of (s15e / expect-01
+                :ARG0 s15p
+                :aspect state))
+        :aspect state
+        :quote s15s)
+    :aspect performance)
+
+# alignment:
+s15s: 22-22
+s15p: 21-21
+s15r: 21-21
+s15h2: 16-16
+s15q: 2-2
+s15h3: 0-0
+s15s2: 2-2
+s15d: 5-5
+s15d4: 7-8
+s15n: 7-8
+s15d5: 5-5
+s15d2: 10-11
+s15n2: 10-11
+s15d6: 5-5
+s15d3: 13-13
+s15n3: 13-13
+s15h: 16-16
+s15m: 16-16
+s15q2: 0-0
+s15e: 18-18
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s13d :subset-of s15d)
+            (s13d :subset-of s15d5)
+            (s13d :subset-of s15d6)
+            (s15p :same-entity s10t3)
+            (s14d :subset-of s15d4)
+            (s14d :subset-of s15d3)
+            (s14d :subset-of s15d2))
+    :temporal ((document-creation-time :before s15s)
+            (s15s :contains s15e)
+            (s15s :before s15d)
+            (s15s :before s15d5)
+            (s15s :before s15d6)
+            (s15h :before s15e))
+    :modal ((root :modal author)
+            (author :full-affirmative s15s)
+            (author :full-affirmative s15p)
+            (s15p :full-affirmative s15h2)
+            (s15p :full-affirmative s15e)
+            (s15p :full-affirmative s15d)
+            (s15p :full-affirmative s15d5)
+            (s15p :full-affirmative s15d6)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.16
+# :: snt16
+Index: 1         2         3         4         5         6         7         8         9         10        11        12        13        14        15        16        17        18        19        20        21        22        23        24        
+Words: ``        The       morbidity rate      is        a         striking  finding   among     those     of        us        who       study     asbestos  -         related   diseases  ,         ''        said      Dr.       Talcott   .         
+
+# sentence level graph:
+(s16s / say-01
+    :ARG0 (s16p / person :wiki - 
+        :name (s16n / name :op1 "Dr." :op2 "Talcott"))
+    :ARG1 (s16s4 / strike-04
+        :ARG1 (s16r2 / rate
+            :frequency-of (s16m / morbidity-03
+                :aspect process)
+            :ARG1-of (s16f / find-01
+                :ARG0 (s16p2 / person
+                        :ARG0-of (s16s3 / study-01
+                            :ARG1 (s16d / disease
+                                :refer-number plural
+                                :ARG1-of (s16r / relate-01
+                                    :ARG2 (s16a / asbestos)))
+                            :aspect habitual)
+                        :ARG1-of (s16i / include-91
+                            :ARG2 (s16p3 / person
+                                :refer-person 1st
+                                :refer-number plural))
+                        :mod (s16t2 / that))
+                :aspect process))
+        :ARG3 s16p2
+        :aspect state
+        :quote s16s)
+    :aspect performance)
+
+# alignment:
+s16s: 21-21
+s16p: 22-23
+s16n: 22-23
+s16s4: 7-7
+s16r2: 4-4
+s16m: 3-3
+s16f: 8-8
+s16p2: 13-13
+s16s3: 14-14
+s16d: 18-18
+s16r: 17-17
+s16a: 15-15
+s16i: 0-0
+s16p3: 12-12
+s16t2: 10-10
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16p :same-entity s10p)
+            (s16p3 :subset-of s16p)
+            (s16d :same-entity s14d2)
+            (s16a :same-entity s14a)
+            (s16m :same-event s13d)
+            (s16r2 :same-entity s13i))
+    :temporal ((document-creation-time :before s16s)
+            (s16s4 :after s16s)
+            (s16s4 :before s16f)
+            (s16f :contains s16s3)
+            (s16m :after s16f))
+    :modal ((root :modal author)
+            (author :full-affirmative s16s)
+            (author :full-affirmative s16p)
+            (s16p :full-affirmative s16s4)
+            (s16p :full-affirmative s16m)
+            (s16p :full-affirmative s16f)
+            (s16p :full-affirmative s16s3)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.17
+# :: snt17
+Index: 1              2              3              4              5              6              7              8              9              10             11             12             13             14             15             16             17             18             19             20             21             22             23             24             25             26             27             28             29             30             31             32             33             34             35             36             
+Words: The            percentage     of             lung           cancer         deaths         among          the            workers        at             the            West           Groton         ,              Mass.          ,              paper          factory        appears        to             be             the            highest        for            any            asbestos       workers        studied        in             Western        industrialized countries      ,              he             said           .              
+
+# sentence level graph:
+(s17s3 / say-01
+    :ARG0 (s17p6 / person
+        :refer-person 3rd
+        :refer-number singular)
+    :ARG1 (s17a3 / appear-02
+        :ARG1 (s17h3 / have-degree-91
+            :ARG1 (s17p2 / percentage
+                :ARG3-of (s17i2 / include-91
+                    :ARG1 (s17p5 / person
+                        :refer-number plural
+                        :ARG1-of (s17d2 / die-01
+                            :cause (s17d / disease :wiki "Lung_cancer" 
+                                :name (s17n / name :op1 "lung" :op2 "cancer"))
+                            :aspect performance))
+                    :ARG2 (s17p3 / person
+                        :refer-number plural
+                        :ARG0-of (s17w4 / work-01
+                            :place (s17f / factory
+                                :mod (s17p4 / paper)
+                                :place (s17h4 / human-settlement :wiki - 
+                                    :name (s17n2 / name :op1 "West" :op2 "Groton")
+                                    :place (s17c2 / country-partition :wiki "Massachusetts" 
+                                        :name (s17n3 / name :op1 "Massachusetts"))))))))
+            :ARG2 (s17h / high-02)
+            :ARG3 (s17m2 / most)
+            :ARG5 (s17p / person
+                :refer-number plural
+                :ARG0-of (s17w2 / work-01
+                    :ARG1 (s17a2 / asbestos))
+                :ARG1-of (s17s2 / study-01
+                    :ARG0 (s17p7 / person)
+                    :aspect activity)
+                :place (s17c / country
+                    :ARG1-of (s17i / industrialize-01)
+                    :place (s17w5 / world-region :wiki "Western_world" 
+                        :name (s17n4 / name :op1 "West")))
+                :mod (s17a / any))
+            :aspect state)
+        :ARG2 s17p7
+        :aspect state
+        :quote s17s3)
+    :aspect performance)
+
+# alignment:
+s17s3: 35-35
+s17p6: 34-34
+s17a3: 19-19
+s17h3: 0-0
+s17p2: 2-2
+s17i2: 7-7
+s17p5: 0-0
+s17d2: 6-6
+s17d: 4-5
+s17n: 4-5
+s17p3: 9-9
+s17w4: 9-9
+s17f: 18-18
+s17p4: 17-17
+s17h4: 12-13
+s17n2: 12-13
+s17c2: 15-15
+s17n3: 15-15
+s17h: 23-23
+s17m2: 23-23
+s17p: 27-27
+s17w2: 27-27
+s17a2: 26-26
+s17s2: 28-28
+s17c: 32-32
+s17i: 31-31
+s17w5: 30-30
+s17n4: 30-30
+s17a: 25-25
+s17p7: 0-0
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s16m :subset-of s17d2)
+            (s8p3 :subset-of s17p3)
+            (s17p :subset-of s8p3)
+            (s17a2 :same-entity s16a)
+            (s17p6 :same-entity s16p)
+            (s17p7 :same-entity s16p2))
+    :temporal ((document-creation-time :before s17s3)
+            (s17s3 :contains s17a3)
+            (s17s3 :contains s17h3)
+            (s17s2 :after s17a3)
+            (s17d2 :after s17s2))
+    :modal ((root :modal author)
+            (author :full-affirmative s17s3)
+            (author :full-affirmative s17p6)
+            (s17p6 :full-affirmative s17a3)
+            (s17p6 :full-affirmative s17p7)
+            (s17p7 :partial-affirmative s17h3)
+            (s17p6 :full-affirmative s17s2)
+            (s17p6 :full-affirmative s17d2)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.18
+# :: snt18
+Index: 1             2             3             4             5             6             7             8             9             10            11            12            13            14            15            16            17            18            19            20            21            22            23            
+Words: The           plant         ,             which         is            owned         by            Hollingsworth &             Vose          Co.           ,             was           under         contract      with          Lorillard     to            make          the           cigarette     filters       .             
+
+# sentence level graph:
+(s18c / contract-02
+    :ARG0 (s18c3 / company :wiki "Lorillard_Tobacco_Company"
+        :name (s18n2 / name :op1 "Lorillard"))
+    :ARG1 (s18m / make-01
+        :ARG0 (s18p / plant
+                :ARG1-of (s18o / own-01
+                    :ARG0 (s18c2 / company :wiki -
+                        :name (s18n / name :op1 "Hollingsworth" :op2 "&" :op3 "Vose" :op4 "Co."))
+                    :aspect state))
+        :ARG1 (s18t / thing
+            :refer-number plural
+            :instrument-of (s18f / filter-02)
+            :part-of (s18c4 / cigarette
+                :refer-number plural))
+        :aspect performance)
+    :ARG2 s18p
+    :aspect state)
+
+# alignment:
+s18c: 14-15
+s18c3: 17-17
+s18n2: 17-17
+s18m: 19-19
+s18t: 22-22
+s18f: 22-22
+s18c4: 21-21
+s18p: 2-2
+s18o: 6-6
+s18c2: 8-11
+s18n: 8-11
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18c3 :same-entity s11c)
+            (s18t :same-entity s12t))
+    :temporal ((document-creation-time :before s18c)
+            (s13w :contains s18c)
+            (s18m :contains s18c)
+            (document-creation-time :contains s18o))
+    :modal ((root :modal author)
+            (author :full-affirmative s18m)
+            (author :full-affirmative s18o)
+            (author :full-affirmative s18c)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.19
+# :: snt19
+Index: 1           2           3           4           5           6           7           8           9           10          11          12          13          14          15          16          17          18          19          20          21          22          23          24          25          26          27          28          29          30          31          32          33          34          35          36          37          38          39          40          41          42          
+Words: The         finding     probably    will        support     those       who         argue       that        the         U.S.        should      regulate    the         class       of          asbestos    including   crocidolite more        stringently than        the         common      kind        of          asbestos    ,           chrysotile  ,           found       in          most        schools     and         other       buildings   ,           Dr.         Talcott     said        .           
+
+# sentence level graph:
+(s19s / say-01
+    :ARG0 (s19p / person :wiki - 
+        :name (s19n / name :op1 "Dr." :op2 "Talcott"))
+    :ARG1 (s19s2 / support-01
+        :ARG0 (s19t2 / thing
+            :ARG1-of (s19f / find-01))
+        :ARG1 (s19p2 / person
+            :refer-number plural
+            :mod (s19t / that)
+            :ARG0-of (s19a / argue-01
+                :ARG1 (s19r / regulate-01
+                    :ARG0 (s19c / country :wiki "United_States" 
+                        :name (s19n2 / name :op1 "U.S."))
+                    :ARG1 (s19a5 / asbestos
+                        :ARG2-of (s19i / include-91
+                            :ARG1 (s19c3 / crocidolite))
+                        :mod (s19c2 / class))
+                    :manner (s19s3 / stringent
+                        :ARG2-of (s19h / have-degree-91
+                            :ARG1 s19r
+                            :ARG3 (s19m / more)
+                            :ARG4 (s19c4 / chrysotile
+                                :ARG1-of (s19f2 / find-01
+                                    :place (s19a4 / and
+                                        :op1 (s19s4 / school
+                                            :refer-number plural
+                                            :quant (s19m2 / most))
+                                        :op2 (s19b / building
+                                            :refer-number plural
+                                            :ARG1-of (s19o / other-01
+                                                :ARG2 s19s4)))
+                                    :aspect state)
+                                :mod (s19a3 / asbestos
+                                    :mod (s19k / kind
+                                        :mod (s19c5 / common))))))
+                    :aspect activity
+                    :quote s19a)
+                :aspect habitual))
+        :aspect state
+        :quote s19s)
+    :aspect performance)
+
+# alignment:
+s19s: 41-41
+s19p: 39-40
+s19n: 39-40
+s19s2: 5-5
+s19t2: 2-2
+s19f: 2-2
+s19p2: 6-6
+s19t: 6-6
+s19a: 8-8
+s19r: 13-13
+s19c: 11-11
+s19n2: 11-11
+s19a5: 17-17
+s19i: 18-18
+s19c3: 19-19
+s19c2: 15-15
+s19s3: 21-21
+s19h: 0-0
+s19m: 20-20
+s19c4: 29-29
+s19f2: 31-31
+s19a4: 35-35
+s19s4: 34-34
+s19m2: 33-33
+s19b: 37-37
+s19o: 36-36
+s19a3: 27-27
+s19k: 25-25
+s19c5: 24-24
+
+# document level annotation:
+(s19s0 / sentence
+    :coref ((s19p :same-entity s17p6)
+            (s19t2 :same-entity s15h2)
+            (s14a :subset-of s19a5)
+            (s14a :subset-of s19a3)
+            (s19c3 :same-entity s5c))
+    :temporal ((document-creation-time :before s19s)
+            (document-creation-time :after s19s2)
+            (document-creation-time :contains s19a)
+            (s19a :after s19r)
+            (document-creation-time :contains s19f2))
+    :modal ((root :modal author)
+            (author :full-affirmative s19s)
+            (author :full-affirmative s19p)
+            (s19p :partial-affirmative s19s2)
+            (s19p :full-affirmative s19a)
+            (s19p :full-affirmative s19p2)
+            (s19p2 :partial-affirmative s19r)
+            (author :full-affirmative s19f2)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.20
+# :: snt20
+Index: 1              2              3              4              5              6              7              8              9              10             11             12             13             14             15             16             17             18             19             20             21             22             23             24             25             26             27             28             29             30             31             32             33             34             35             36             37             38             39             40             41             42             43             44             45             46             47             48             49             50             51             52             53             54             
+Words: The            U.S.           is             one            of             the            few            industrialized nations        that           does           n't            have           a              higher         standard       of             regulation     for            the            smooth         ,              needle         -              like           fibers         such           as             crocidolite    that           are            classified     as             amphobiles     ,              according      to             Brooke         T.             Mossman        ,              a              professor      of             pathlogy       at             the            University     of             Vermont        College        of             Medicine       .              
+
+# sentence level graph:
+(s20s / say-91
+    :ARG0 (s20p2 / person :wiki - 
+        :name (s20n / name :op1 "Brooke" :op2 "T." :op3 "Mossman")
+        :ARG1-of (s20h3 / have-org-role-92
+            :ARG2 (s20a2 / academic-organization
+                :name (s20n2 / name :op1 "College" :op2 "of" :op3 "Medicine")
+                :part-of (s20a3 / academic-organization :wiki "University_of_Vermont" 
+                    :name (s20n3 / name :op1 "University" :op2 "of" :op3 "Vermont")))
+            :ARG3 (s20p3 / professor
+                :topic (s20p / pathology))))
+    :ARG1 (s20i2 / include-91
+        :ARG1 (s20c / country :wiki "United_States" 
+            :name (s20n4 / name :op1 "U.S."))
+        :ARG2 (s20n5 / nation
+            :refer-number plural
+            :ARG1-of (s20i3 / include-91
+                :ARG2 (s20n6 / nation
+                    :refer-number plural
+                    :ARG1-of (s20i / industrialize-01)))
+            :ARG0-of (s20r / regulate-01 
+                :polarity -
+                :ARG1 (s20f2 / fiber
+                    :refer-number plural
+                    :ARG1-of (s20s3 / smooth-06)
+                    :ARG2-of (s20r2 / resemble-91
+                        :ARG1 (s20n7 / needle))
+                    :ARG1-of (s20c4 / classify-01
+                        :ARG2 (s20a / amphibole))
+                    :example (s20c3 / crocidolite))
+                :ARG1-of (s20s2 / standardize-01
+                    :ARG1-of (s20h / have-degree-91
+                        :ARG2 (s20h2 / high-02
+                            :ARG1 s20s2)
+                        :ARG3 (s20m2 / more)))
+                :aspect state)
+            :ARG3 (s20f / few))
+        :aspect state
+        :quote s20s)
+    :aspect state)
+
+# alignment:
+s20s: 36-37
+s20p2: 38-40
+s20n: 38-40
+s20h3: 0-0
+s20a2: 51-53
+s20n2: 51-53
+s20a3: 48-50
+s20n3: 48-50
+s20p3: 43-43
+s20p: 45-45
+s20i2: 0-0
+s20c: 2-2
+s20n4: 2-2
+s20n5: 9-9
+s20i3: 0-0
+s20n6: 9-9
+s20i: 8-8
+s20r: 18-18
+s20f2: 26-26
+s20s3: 21-21
+s20r2: 25-25
+s20n7: 23-23
+s20c4: 32-32
+s20a: 34-34
+s20c3: 29-29
+s20s2: 13-13,16-16
+s20h: 0-0
+s20h2: 15-15
+s20m2: 15-15
+s20f: 7-7
+
+# document level annotation:
+(s20s0 / sentence
+    :coref ((s20c3 :same-entity s19c3))
+    :temporal ((document-creation-time :contains s20s)
+            (s20s :contains s20i2)
+            (s20s :contains s20r))
+    :modal ((root :modal author)
+            (author :full-affirmative s20s)
+            (author :full-affirmative s20p2)
+            (s20p2 :full-negative s20r)
+            (s20p2 :full-affirmative s20i2)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.21
+# :: snt21
+Index: 1          2          3          4          5          6          7          8          9          10         11         12         13         14         15         16         17         18         19         
+Words: More       common     chrysotile fibers     are        curly      and        are        more       easily     rejected   by         the        body       ,          Dr.        Mossman    explained  .          
+
+# sentence level graph:
+(s21e / explain-01
+    :ARG0 (s21p / person :wiki - 
+        :name (s21n / name :op1 "Dr." :op2 "Mossman"))
+    :ARG1 (s21a / and
+        :op1 (s21c / curl-01
+            :ARG1 (s21f / fiber
+                :refer-number plural
+                :material (s21c2 / chrysotile)
+                :ARG1-of (s21c3 / common-01
+                    :ARG2-of (s21h2 / have-degree-91
+                        :ARG3 (s21m2 / more))))
+            :aspect state)
+        :op2 (s21r / reject-01
+            :ARG0 (s21b / body)
+            :ARG1 s21f
+            :ARG1-of (s21h / have-degree-91
+                :ARG2 (s21e2 / easy-05)
+                :ARG3 (s21m3 / more))
+            :aspect performance)
+        :quote s21e)
+    :aspect performance)
+
+# alignment:
+s21e: 18-18
+s21p: 16-17
+s21n: 16-17
+s21a: 7-7
+s21c: 6-6
+s21f: 4-4
+s21c2: 3-3
+s21c3: 2-2
+s21h2: 0-0
+s21m2: 1-1
+s21r: 11-11
+s21b: 14-14
+s21h: 0-0
+s21e2: 10-10
+s21m3: 9-9
+
+# document level annotation:
+(s21s0 / sentence
+    :coref ((s21c2 :same-entity s19c4)
+            (s21p :same-entity s20p2))
+    :temporal ((document-creation-time :before s21e)
+            (s21e :contains s21c)
+            (s21e :contains s21r))
+    :modal ((root :modal author)
+            (author :full-affirmative s21e)
+            (author :full-affirmative s21p)
+            (s21p :full-affirmative s21c)
+            (s21p :partial-affirmative s21r)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.22
+# :: snt22
+Index: 1             2             3             4             5             6             7             8             9             10            11            12            13            14            15            16            17            18            
+Words: In            July          ,             the           Environmental Protection    Agency        imposed       a             gradual       ban           on            virtually     all           uses          of            asbestos      .             
+
+# sentence level graph:
+(s22b2 / ban-01
+    :ARG0 (s22g2 / government-organization :wiki "United_States_Environmental_Protection_Agency" 
+        :name (s22n / name :op1 "Environmental" :op2 "Protection" :op3 "Agency"))
+    :ARG1 (s22t2 / thing
+        :refer-number plural
+        :mod (s22a6 / all
+            :degree downtoner)
+        :ARG2-of (s22u3 / use-01
+            :ARG1 (s22a5 / asbestos)
+            :aspect process))
+    :manner (s22g3 / gradual)
+    :temporal (s22d / date-entity :month 7)
+    :aspect performance)
+
+# alignment:
+s22b2: 8-8,11-11
+s22g2: 5-7
+s22n: 5-7
+s22t2: 15-15
+s22a6: 14-14
+s22u3: 15-15
+s22a5: 17-17
+s22g3: 10-10
+s22d: 2-2
+
+# document level annotation:
+(s22s0 / sentence
+    :coref ((s22a5 :same-entity s19a5))
+    :temporal ((root :depends-on s22d)
+            (document-creation-time :before s22b2)
+            (s22u3 :before s22b2))
+    :modal ((root :modal author)
+            (author :full-affirmative s22b2)
+            (author :full-affirmative s22u3)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.23
+# :: snt23
+Index: 1         2         3         4         5         6         7         8         9         10        11        12        13        14        15        16        
+Words: By        1997      ,         almost    all       remaining uses      of        cancer    -         causing   asbestos  will      be        outlawed  .         
+
+# sentence level graph:
+(s23o / outlaw-01
+    :ARG1 (s23t / thing
+        :refer-number plural
+        :mod (s23a2 / all
+            :degree downtoner)
+        :ARG1-of (s23r2 / remain-01)
+        :ARG2-of (s23u / use-01
+            :ARG1 (s23a / asbestos
+                :ARG0-of (s23c / cause-01
+                    :ARG1 (s23d2 / disease :wiki "Cancer" 
+                        :name (s23n / name :op1 "cancer"))
+                    :aspect habitual))
+            :aspect process))
+    :temporal (s23b / before
+        :op1 (s23d / date-entity :year 1997))
+    :aspect performance)
+
+# alignment:
+s23o: 15-15
+s23t: 7-7
+s23a2: 5-5
+s23r2: 6-6
+s23u: 7-7
+s23a: 12-12
+s23c: 11-11
+s23d2: 9-9
+s23n: 9-9
+s23b: 1-1
+s23d: 2-2
+
+# document level annotation:
+(s23s0 / sentence
+    :coref ((s23a :same-entity s22a5)
+            (s22b2 :same-event s23o))
+    :temporal ((root :depends-on s23d)
+            (document-creation-time :after s23d)
+            (document-creation-time :after s23o)
+            (s23u :before s23o)
+            (document-creation-time :contains s23c))
+    :modal ((root :modal author)
+            (author :full-affirmative s23o)
+            (author :full-affirmative s23u)
+            (author :neutral-affirmative s23c)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.24
+# :: snt24
+Index: 1        2        3        4        5        6        7        8        9        10       11       12       13       14       15       16       17       18       19       20       21       
+Words: About    160      workers  at       a        factory  that     made     paper    for      the      Kent     filters  were     exposed  to       asbestos in       the      1950s    .        
+
+# sentence level graph:
+(s24e / expose-01
+    :ARG1 (s24p2 / person
+        :quant (s24a2 / about :op1 160)
+        :ARG1-of (s24h / have-org-role-92
+            :ARG2 (s24f / factory
+                :ARG0-of (s24m / make-01
+                    :ARG1 (s24p3 / paper
+                        :part-of (s24t / thing
+                            :refer-number plural
+                            :instrument-of (s24f2 / filter-02)
+                            :part-of (s24p4 / product :wiki "Kent_(cigarette)"
+                                :name (s24n / name :op1 "Kent"))))
+                    :aspect activity))
+            :ARG3 (s24p / person
+                :ARG0-of (s24w / work-01))))
+    :ARG2 (s24a / asbestos)
+    :temporal (s24d / date-entity :decade 1950)
+    :aspect activity)
+
+# alignment:
+s24e: 15-15
+s24p2: 3-3
+s24a2: 1-2
+s24h: 0-0
+s24f: 6-6
+s24m: 8-8
+s24p3: 9-9
+s24t: 13-13
+s24f2: 13-13
+s24p4: 12-12
+s24n: 12-12
+s24p: 3-3
+s24w: 3-3
+s24a: 17-17
+s24d: 20-20
+
+# document level annotation:
+(s24s0 / sentence
+    :coref ((s24p2 :same-entity s17p3)
+            (s24f :same-entity s18p)
+            (s24m :same-event s18m)
+            (s24e :same-event s2e2)
+            (s24a :same-entity s11a))
+    :temporal ((document-creation-time :before s24e)
+            (root :depends-on s24d)
+            (s24e :contains s24d)
+            (s24e :contains s24m))
+    :modal ((root :modal author)
+            (author :full-affirmative s24e)
+            (author :full-affirmative s24m)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.25
+# :: snt25
+Index: 1            2            3            4            5            6            7            8            9            10           11           12           13           
+Words: Areas        of           the          factory      were         particularly dusty        where        the          crocidolite  was          used         .            
+
+# sentence level graph:
+(s25e / exist-91
+    :ARG1 (s25a / area
+        :refer-number plural
+        :part-of (s25f / factory)
+        :place-of (s25u / use-01
+            :ARG1 (s25c / crocidolite)
+            :aspect habitual))
+    :ARG2 (s25d / dust
+        :material s25c
+        :degree intensifier)
+    :aspect state)
+
+# alignment:
+s25e: 5-5
+s25a: 1-1
+s25f: 4-4
+s25u: 12-12
+s25c: 10-10
+s25d: 7-7
+
+# document level annotation:
+(s25s0 / sentence
+    :coref ((s25f :same-entity s24f)
+            (s25f :same-entity s24a)
+            (s25u :same-event s11u))
+    :temporal ((document-creation-time :before s25e)
+            (document-creation-time :before s25u)
+            (s25e :overlap s25u))
+    :modal ((root :modal author)
+            (author :full-affirmative s25e)
+            (author :full-affirmative s25u)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.26
+# :: snt26
+Index: 1            2            3            4            5            6            7            8            9            10           11           12           13           14           15           16           17           18           19           20           21           22           23           24           25           26           27           28           29           30           31           32           33           34           
+Words: Workers      dumped       large        burlap       sacks        of           the          imported     material     into         a            huge         bin          ,            poured       in           cotton       and          acetate      fibers       and          mechanically mixed        the          dry          fibers       in           a            process      used         to           make         filters      .            
+
+# sentence level graph:
+(s26p3 / process-02
+    :ARG0 (s26p2 / person
+            :ARG0-of (s26w / work-01))
+    :ARG1 (s26c2 / consecutive
+        :op1 (s26d / dump-01
+            :ARG0 s26p2
+            :ARG1 (s26m2 / material
+                :ARG1-of (s26i / import-01)
+                :unit (s26s / sack
+                    :refer-number plural
+                    :material (s26b / burlap)
+                    :ARG1-of (s26l / large-01)))
+            :goal (s26b2 / bin
+                :refer-number singular
+                :ARG1-of (s26h / huge-01))
+            :aspect performance)
+        :op2 (s26p / pour-01
+            :ARG0 s26p2
+            :ARG1 (s26a2 / and
+                :op1 (s26f / fiber
+                    :refer-number plural
+                    :material (s26c / cotton))
+                :op2 (s26f2 / fiber
+                    :refer-number plural
+                    :material (s26a3 / acetate)))
+            :ARG3 s26b2
+            :aspect performance)
+        :op3 (s26m / mix-01
+            :ARG0 s26p2
+            :ARG1 (s26f3 / fiber
+                :refer-number plural
+                :ARG1-of (s26d2 / dry-08)
+                :ARG2-of (s26i2 / include-91
+                    :ARG1 (s26a / and
+                        :op1 s26m2
+                        :op2 s26f
+                        :op3 s26f2)))
+            :manner (s26m3 / mechanical)
+            :aspect performance))
+    :purpose (s26m4 / make-01
+        :ARG1 (s26t / thing
+            :refer-number plural
+            :instrument-of (s26f4 / filter-02))
+        :aspect activity)
+    :aspect process)
+
+# alignment:
+s26p3: 29-29
+s26c2: 21-21
+s26d: 2-2
+s26p2: 1-1
+s26w: 1-1
+s26m2: 9-9
+s26i: 8-8
+s26s: 5-5
+s26b: 4-4
+s26l: 3-3
+s26b2: 13-13
+s26h: 12-12
+s26p: 15-15
+s26a2: 18-18
+s26f: 20-20
+s26c: 17-17
+s26f2: 20-20
+s26a3: 19-19
+s26m: 23-23
+s26f3: 26-26
+s26d2: 25-25
+s26i2: 0-0
+s26a: 0-0
+s26m3: 22-22
+s26m4: 32-32
+s26t: 33-33
+s26f4: 33-33
+
+# document level annotation:
+(s26s0 / sentence
+    :coref ((s24a2 :subset-of s26p2)
+            (s26m2 :same-entity s25c)
+            (s26m4 :same-event s24m)
+            (s26t :same-entity s24t))
+    :temporal ((document-creation-time :before s24p3)
+            (s26d :contains s24p3)
+            (s26p :contains s24p3)
+            (s26m :contains s24p3)
+            (s24p3 :contains s26m4))
+    :modal ((root :modal author)
+            (author :full-affirmative s26m)
+            (author :full-affirmative s26p3)
+            (author :full-affirmative s26m4)
+            (author :full-affirmative s26p)
+            (author :full-affirmative s26d)
+            (s26p2 :partial-affirmative purpose)
+            (purpose :full-affirmative s26m4)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.27
+# :: snt27
+Index: 1          2          3          4          5          6          7          8          9          10         11         12         13         14         15         16         17         18         19         20         21         22         23         24         
+Words: Workers    described  ``         clouds     of         blue       dust       ''         that       hung       over       parts      of         the        factory    ,          even       though     exhaust    fans       ventilated the        area       .          
+
+# sentence level graph:
+(s27d / describe-01
+    :ARG0 (s27p / person
+        :refer-number plural
+        :ARG0-of (s27w / work-01))
+    :ARG1 (s27c3 / cloud
+        :refer-number plural
+        :material (s27d3 / dust
+            :mod (s27b2 / blue))
+        :ARG1-of (s27h / hang-01
+            :place (s27o / over
+                :op1 (s27p2 / part
+                    :refer-number plural
+                    :part-of (s27f / factory)))
+            :concession (s27v / ventilate-01
+                :ARG0 (s27f2 / fan
+                    :refer-number plural
+                    :mod (s27e / exhaust))
+                :ARG1 (s27a / area
+                    :ARG1-of (s27i / identity-91
+                        :ARG2 s27p2))
+                :aspect activity)
+            :aspect state)
+        :quote s27d)
+    :aspect performance)
+
+# alignment:
+s27d: 2-2
+s27p: 1-1
+s27w: 1-1
+s27c3: 4-4
+s27d3: 7-7
+s27b2: 6-6
+s27h: 10-10
+s27o: 11-11
+s27p2: 12-12
+s27f: 15-15
+s27v: 21-21
+s27f2: 20-20
+s27e: 19-19
+s27a: 23-23
+s27i: 0-0
+
+# document level annotation:
+(s27s0 / sentence
+    :coref ((s26p2 :subset-of s27p)
+            (s27f :same-entity s25f)
+            (s26f3 :subset-of s27d3)
+            (s27d3 :same-entity s25d))
+    :temporal ((document-creation-time :before s27d)
+            (s27h :after s27d)
+            (s27h :overlap s26p3))
+    :modal ((root :modal author)
+            (author :full-affirmative s27d)
+            (author :full-affirmative s27p)
+            (s27p :full-affirmative s27v)
+            (s27p :full-affirmative s27h)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.28
+# :: snt28
+Index: 1             2             3             4             5             6             7             8             9             10            11            12            13            14            15            16            17            18            19            20            21            22            23            24            25            26            27            28            29            30            31            32            33            
+Words: ``            There         's            no            question      that          some          of            those         workers       and           managers      contracted    asbestos      -             related       diseases      ,             ''            said          Darrell       Phillips      ,             vice          president     of            human         resources     for           Hollingsworth &             Vose          .             
+
+# sentence level graph:
+(s28s / say-01
+    :ARG0 (s28p / person :wiki -
+        :name (s28n / name :op1 "Darrell" :op2 "Phillips")
+        :ARG1-of (s28h / have-org-role-92
+            :ARG2 (s28c2 / company :wiki - 
+                :name (s28n2 / name :op1 "Hollingsworth" :op2 "&" :op3 "Vose"))
+            :ARG3 (s28p5 / president
+                :mod (s28v / vice)
+                :topic (s28r2 / resource
+                    :refer-number plural
+                    :mod (s28h3 / human)))))
+    :ARG1 (s28c / contract-04
+        :ARG1 (s28p4 / person
+            :quant (s28s2 / some)
+            :ARG1-of (s28i / include-91
+                :ARG2 (s28a / and
+                    :op1 (s28p2 / person
+                        :refer-number plural
+                        :mod (s28t / that)
+                        :ARG0-of (s28w / work-01))
+                    :op2 (s28p3 / person
+                        :refer-number plural
+                        :mod (s28t2 / that)
+                        :ARG0-of (s28m / manage-01)))))
+        :ARG2 (s28d2 / disease
+            :refer-number plural
+            :ARG1-of (s28r / relate-01
+                :ARG2 (s28a2 / asbestos)))
+        :aspect performance
+        :quote s28s)
+    :aspect performance)
+
+# alignment:
+s28s: 20-20
+s28p: 21-22
+s28n: 21-22
+s28h: 0-0
+s28c2: 30-32
+s28n2: 30-32
+s28p5: 25-25
+s28v: 24-24
+s28r2: 28-28
+s28h3: 27-27
+s28c: 13-13
+s28p4: 0-0
+s28s2: 7-7
+s28i: 0-0
+s28a: 11-11
+s28p2: 10-10
+s28t: 9-9
+s28w: 10-10
+s28p3: 12-12
+s28t2: 9-9
+s28m: 12-12
+s28d2: 17-17
+s28r: 16-16
+s28a2: 14-14
+
+# document level annotation:
+(s28s0 / sentence
+    :coref ((s28c2 :same-entity s18c2)
+            (s26p2 :subset-of s28p2)
+            (s26p2 :subset-of s28p2)
+            (s16d :subset-of s28d2)
+            (s28a2 :same-entity s26m2))
+    :temporal ((document-creation-time :before s28s)
+            (s28s :before s28c)
+            (s28c :before s26p3))
+    :modal ((root :modal author)
+            (author :full-affirmative s28s)
+            (author :full-affirmative s28p)
+            (s28p :full-affirmative s28c)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.29
+# :: snt29
+Index: 1         2         3         4         5         6         7         8         9         10        11        12        13        14        15        
+Words: ``        But       you       have      to        recognize that      these     events    took      place     35        years     ago       .         
+
+# sentence level graph:
+(s29s / say-91
+    :ARG0 (s29p / person)
+    :ARG1 (s29c / contrast-91
+        :ARG1 (s29e2 / event)
+        :ARG2 (s29r / recognize-02
+            :ARG0 (s29p2 / person
+                :refer-person 2nd
+                :refer-number singular)
+            :ARG1 (s29e / event
+                :refer-number plural
+                :mod (s29t / this)
+                :temporal (s29b / before
+                    :op1 (s29n / now)
+                    :quant (s29t2 / temporal-quantity :quant 35
+                        :unit (s29y2 / year)))
+                :aspect process)
+            :aspect state)
+        :quote s29s))
+
+# alignment:
+s29s: 0-0
+s29p: 0-0
+s29c: 2-2
+s29e2: 0-0
+s29r: 6-6
+s29p2: 3-3
+s29e: 9-9
+s29t: 8-8
+s29b: 14-14
+s29n: 14-14
+s29t2: 12-12
+s29y2: 13-13
+
+# document level annotation:
+(s29s0 / sentence
+    :coref ((s29p :same-entity s28p)
+            (s29e2 :same-event s28c)
+            (s29e :subset-of s27h)
+            (s29e :subset-of s26p3)
+            (s29e :subset-of s24e))
+    :temporal ((s29s :before s28s)
+            (s29r :before s29s)
+            (s29s :depends-on s29n)
+            (document-creation-time :contains s29s))
+    :modal ((root :modal author)
+            (author :full-affirmative s29s)
+            (author :full-affirmative s29p)
+            (s29p :partial-affirmative s29r)
+            (s29p :full-affirmative s29e)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0003.30
+# :: snt30
+Index: 1       2       3       4       5       6       7       8       9       10      
+Words: It      has     no      bearing on      our     work    force   today   .       
+
+# sentence level graph:
+(s30s / say-91
+    :ARG0 (s30p / person)
+    :ARG1 (s30b / bear-06 
+        :polarity -
+        :ARG1 (s30e / event
+            :refer-person 3rd
+            :refer-number singular)
+        :ARG2 (s30f / force
+            :ARG0-of (s30w / work-01)
+            :possessor (s30p2 / person
+                :refer-person 1st
+                :refer-number plural))
+        :temporal (s30t / today)
+        :aspect state
+        :quote s30s))
+
+# alignment:
+s30s: 0-0
+s30p: 0-0
+s30b: 4-4
+s30e: 1-1
+s30f: 8-8
+s30w: 7-7
+s30p2: 6-6
+s30t: 9-9
+
+# document level annotation:
+(s30s0 / sentence
+    :coref ((s30p :same-entity s29p)
+            (s30e :same-event s29e))
+    :temporal ((s30s :before s29s)
+            (s29s :contains s30b))
+    :modal ((root :modal author)
+            (author :full-affirmative s30s)
+            (author :full-affirmative s30p)
+            (s30p :full-negative s30b)))
+
+

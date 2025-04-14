@@ -460,18 +460,18 @@ release_folder_path = Path(root) / f'{lang}/release_data/'
 
 # step 1:
 # copy_folder_structure(original_folder_path, formatted_folder_path)
-# step 2: add separator
+# # step 2: add separator
 # batch_pre_format(original_folder_path)
 
 
 # step 3:
 # copy_folder_structure(formatted_folder_path, jsons_folder_path)
-# step 4: save to json files
+# # step 4: save to json files
 # batch_process_file(formatted_folder_path)
 
 # step 5: flatten copy document_level_conversion and partial_conversion
 # flatten_copy_directory(source_folder=jsons_folder_path, destination_folder=merged_jsons_folder_path)
-# step 6: merge full conversion into partial conversion files
+# # step 6: merge full conversion into partial conversion files
 # merge_full_conversion_into_partial_conversion_jsons()
 
 #todo: running above: Error: The file '/Users/jinzhao/schoolwork/UMR_Release_2_0/english/jsons/partial_conversion/ldc/dfb/bolt-eng-DF-170-181103-8883028_0147.json' was not found.

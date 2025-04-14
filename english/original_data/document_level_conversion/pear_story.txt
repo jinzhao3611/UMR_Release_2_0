@@ -43,8 +43,8 @@ s2t2: 13-13
   :temporal ((document-creation-time :overlap s2o2)
              (s2o2 :overlap s2s4))
   :modal ((root :modal author)
-          (author :full-affirmative s2s4)
-          (author :full-affirmative s2o2)))
+          (author :full-affirmative s2o2)
+          (author :full-affirmative s2s4)))
 
 
 # ::id pear_story.3
@@ -53,22 +53,17 @@ Index:       1      2      3
 Words:   k  kay  ?
 
 # sentence level graph:
-(s3o / okay-04
-  :ARG2-of (s3r / request-confirmation-91
-             :ARG1 (s3e / event))
-  :aspect state)
+(s3r / request-confirmation-91
+  :ARG1(s3e / event))
 
 # alignment:
+s3r: 2-2
 s3e: 0-0
-s3o: 2-2
-s3r: 0-0
 
 # document level annotation:
 (s3s0 / sentence
-  :temporal ((s2o2 :overlap s3o))
-  :modal ((root :modal author)
-          (author :neutral-affirmative s3o))
-  :coref ((s2o2 :same-event s3e)))
+  :modal ((root :modal author))
+  :coref ((s3e :same-event s2o2)))
 
 
 # ::id pear_story.4
@@ -194,27 +189,21 @@ Words:   and  you  see  him  ,
   :ARG0 (s8p / person
           :refer-person 2nd
           :refer-definiteness class)
-  :ARG1 (s8e / event
-          :ARG0 (s8p2 / person
-                  :refer-person 3rd
-                  :refer-number singular))
+  :ARG1 (s8p2 / person
+          :refer-person 3rd
+          :refer-number singular)
   :aspect state)
 
 # alignment:
 s8s: 3-3
-s8e: 0-0
 s8p: 2-2
 s8p2: 4-4
 
 # document level annotation:
 (s8s0 / sentence
-  :temporal ((s7s :after s8s)
-             (s8s :overlap s8e))
+  :temporal ((s7s :after s8s))
   :modal ((root :modal author)
-          (author :full-affirmative s8s)
-          (s8p :affirmative s8s)
-          (s8s :unspecified s8e)
-          (author :full-affirmative s8p))
+          (author :full-affirmative s8s))
   :coref ((s6p :same-entity s8p)
           (s6p2 :same-entity s8p2)))
 
@@ -241,10 +230,9 @@ s9t: 6-6
 
 # document level annotation:
 (s9s0 / sentence
-        :modal ((root :modal author)
-                (author :full-affirmative s9p))
-  :coref ((s8e :same-event s9p)
-          (s8p2 :same-entity s9p2)
+  :modal ((root :modal author)
+          (author :full-affirmative s9p))
+  :coref ((s8p2 :same-entity s9p2)
           (s4t :same-entity s9t)))
 
 
@@ -277,7 +265,7 @@ s10w: 3-3
 
 # document level annotation:
 (s10s0 / sentence
-  :temporal ((s8e :after s10w)
+  :temporal ((s9p :after s10w)
              (s10w :overlap s10p2))
   :modal ((root :modal author)
           (author :full-affirmative s10w)
@@ -433,9 +421,7 @@ s14t3: 0-0
 (s14s0 / sentence
   :temporal ((s13s :overlap s14k))
   :modal ((root :modal author)
-          (author :full-affirmative s14p)
-          (s14p :full-negative s14k)
-          (s14p :full-negative s14i))
+          (author :unspecified s14i))
   :coref ((s13s :same-event s14t)))
 
 
@@ -523,7 +509,8 @@ s17t: 0-0
 
 # document level annotation:
 (s17s0 / sentence
-  :modal ((root :modal author))
+  :modal ((root :modal author)
+	  (author :full-affirmative s17f))
   :coref ((s16b :same-entity s17b)
 	  (s16p2 :same-entity s17t)))
 
@@ -683,8 +670,8 @@ s22t2: 0-0
   :temporal ((s21w :after s22p)
           (s22p :overlap s22f))
   :modal ((root :modal author)
-          (author :full-affirmative s22f)
-          (author :full-affirmative s22p))
+          (author :full-affirmative s22p)
+          (author :full-affirmative s22f))
   :coref ((s21p :same-entity s22p2)
           (s21t :same-entity s22t)
           (s17b :same-entity s22b)
@@ -875,8 +862,7 @@ s27e2: 0-0
 (s27s0 / sentence
   :modal ((root :modal author)
           (author :neutral-affirmative s27h)
-          (author :full-affirmative s27u2)
-          (author :partial-affirmative s27s))
+          (author :full-affirmative s27u2))
   :coref ((s27p :subset-of s14p)
           (s26p :same-entity s27p2)
           (s26l :same-entity s27l)
@@ -1027,8 +1013,7 @@ s32e: 10-10
 (s32s0 / sentence
   :temporal ((s30c :overlap s32l))
   :modal ((root :modal author)
-          (author :partial-affirmative s32t)
-	  (author :full-negative s32l))
+	  (author :neutral-negative s32l))
   :coref ((s31p :same-entity s32p)
 	  (s14p :same-entity s32p3)))
 
@@ -1068,25 +1053,20 @@ Words:   And  you  watch  the  goat  ,
   :ARG0 (s34p / person
           :refer-person 2nd
           :refer-definiteness class)
-  :ARG1 (s34e / event
-          :undergoer (s34g / goat
-                  :refer-number singular))
+  :ARG1 (s34g / goat
+          :refer-number singular)
   :aspect state)
 
 # alignment:
-s34e: 0-0
 s34g: 5-5
 s34p: 2-2
 s34w: 3-3
 
 # document level annotation:
 (s34s0 / sentence
-  :temporal ((s33w :overlap s34w)
-             (s34w :overlap s34e))
+  :temporal ((s33w :overlap s34w))
   :modal ((root :modal author)
-          (author :full-affirmative s34p)
-          (s34p :affirmative s34w)
-          (s34w :unspecified s34e))
+          (author :full-affirmative s34w))
   :coref ((s13p2 :same-entity s34p)
           (s31g :same-entity s34g)))
 
@@ -1111,8 +1091,7 @@ s35d: 1-1
 (s35s0 / sentence
         :modal ((root :modal author)
                 (author :full-affirmative s35d))
-        :coref ((s34e :same-event s35d)
-                (s34g :same-entity s35a)))
+        :coref ((s34g :same-entity s35a)))
 
 
 # ::id pear_story.36
@@ -1125,27 +1104,24 @@ Words:   ?  and  then  then  you're  back  to  the  man  in  the  tree  .
         :ARG1 (s36p / person
                 :refer-person 2nd
                 :refer-definiteness class)
-        :ARG2 (s36h / have-experience-91
-                :ARG1 s36p
-                :ARG2 (s36m / man
-                        :place (s36t / tree
-                                :refer-number singular)))
+        :ARG2 (s36m / man
+                :place (s36t / tree
+                	:refer-number singular))
         :temporal (s36t2 / then)
         :aspect state)
 
 # alignment:
 s36b: 6-6
 s36p: 5-5
-s36h: 0-0
 s36m: 9-9
 s36t: 12-12
 s36t2: 4-4
 
 # document level annotation:
 (s36s0 / sentence
-  :temporal ((s35d :after s36h))
+  :temporal ((s35d :after s36b))
   :modal ((root :modal author)
-          (author :full-affirmative s36h))
+          (author :full-affirmative s36b))
   :coref ((s34p :same-entity s36p)
           (s27p2 :same-entity s36m)
           (s15t :same-entity s36t)))
@@ -1282,19 +1258,16 @@ Index:       1      2
 Words:   okay  ?
 
 # sentence level graph:
-(s41o / okay-04
-        :ARG2-of (s41r / request-confirmation-91
-                :ARG1 (s41e / event)))
+(s41r / request-confirmation-91
+	:ARG1 (s41e / event))
 
 # alignment:
 s41r: 0-0
-s41o: 1-1
+s41e: 0-0
 
 # document level annotation:
 (s41s0 / sentence
-  :temporal ((s41e :overlap s41o))
-  :modal ((root :modal author)
-          (author :neutral-affirmative s41o)))
+  :modal ((root :modal author)))
 
 
 # ::id pear_story.42
@@ -1398,14 +1371,12 @@ s44w: 6-6
 # document level annotation:
 (s44s0 / sentence
   :temporal ((s43g :overlap s44k)
-                    (s44k :overlap s44w))
+             (s44k :overlap s44w))
   :modal ((root :modal author)
-                    (s44p :affirmative s44k)
-                    (s44k :unspecified s44w)
-                    (author :full-negative s44p))
+          (author :unspecified s44w))
   :coref ((s43p :same-entity s44p)
-                    (s43p2 :same-entity s44p2)
-                    (s43d :same-entity s44t2)))
+          (s43p2 :same-entity s44p2)
+          (s43d :same-entity s44t2)))
 
 
 # ::id pear_story.45
@@ -1451,8 +1422,7 @@ s45m: 22-22
              (s45k :overlap s45p3))
   :modal ((root :modal author)
           (author :full-affirmative s45g)
-          (s45g :affirmative s45k)
-          (author :affirmative s45p3))
+          (author :unspecified s45p3))
   :coref ((s43g :same-event s45g)
           (s44p :same-entity s45p)
           (s44p2 :same-entity s45p2)
@@ -1466,21 +1436,14 @@ Index:       1
 Words:   Okay?
 
 # sentence level graph:
-(s46o / okay-04
-        :ARG2-of (s46r / request-confirmation-91
-	        :ARG1 (s46e / event)))
+(s46o / okay-04)
 
 # alignment:
-s46e: 0-0
 s46o: 1-1
-s46r: 0-0
 
 # document level annotation:
 (s46s0 / sentence
-  :temporal ((s46e :overlap s46o))
-  :modal ((root :modal author)
-          (author :neutral-affirmative s46o))
-  :coref ((s45h :same-event s46e)))
+  :modal ((root :modal author)))
 
 
 # ::id pear_story.47
@@ -1518,8 +1481,8 @@ s47s2: 0-0
   :temporal ((s45g :overlap s47s)
              (s45g :before s47p2))
   :modal ((root :modal author)
-          (author :full-negative s47s2)
-          (author :neutral-affirmative s47s))
+          (author :neutral-affirmative s47s)
+          (author :full-negative s47s2))
   :coref ((s45p2 :same-entity s47p)
           (s45p :same-entity s47p2)))
 
@@ -1530,20 +1493,14 @@ Index:       1
 Words:   Okay?
 
 # sentence level graph:
-(s48o / okay-04
-  :ARG2-of (s48r / request-confirmation-91
-	  :ARG1 (s48e / event)))
+(s48o / okay-04)
 
 # alignment:
-s48e: 0-0
 s48o: 1-1
 
 # document level annotation:
 (s48s0 / sentence
-  :temporal ((s48e :overlap s48o))
-  :modal ((root :modal author)
-          (author :neutral-affirmative s48o))
-  :coref ((s47s :same-event s48e)))
+  :modal ((root :modal author)))
 
 
 # ::id pear_story.49
@@ -2012,27 +1969,22 @@ Words:   A--nd  you  see  him  ,
         :ARG0 (s66p / person
                 :refer-person 2nd
                 :refer-definiteness class)
-        :ARG1 (s66e / event
-                :actor (s66p2 / person
-                        :refer-person 3rd
-                        :refer-number singular))
+        :ARG1 (s66p2 / person
+                :refer-person 3rd
+                :refer-number singular)
         :aspect state)
 
 # alignment:
 s66s: 3-3
 s66p: 2-2
-s66e: 0-0
 s66p2: 4-4
 
 # document level annotation:
 (s66s0 / sentence
-  :temporal ((s66e :overlap s66s))
+  :temporal ((s65r :after s66s))
   :modal ((root :modal author)
-          (s66p :affirmative s66s)
-          (s66s :unspecified s66e)
-          (author :full-affirmative s66p))
-  :coref ((s65r :same-event s66e)
-          (s56p :same-entity s66p)
+          (author :full-affirmative s66s))
+  :coref ((s56p :same-entity s66p)
           (s65p :same-entity s66p2)))
 
 
@@ -2072,9 +2024,9 @@ s67n: 5-5
 (s67s0 / sentence
   :temporal ((s67r :after s67s))
   :modal ((root :modal author)
+          (author :full-affirmative s67r)
           (author :full-affirmative s67s))
-  :coref ((s66e :same-event s67r)
-          (s66p2 :same-entity s67p)
+  :coref ((s66p2 :same-entity s67p)
           (s66p :same-entity s67p2)))
 
 
@@ -2189,7 +2141,8 @@ s71p3: 6-6
 (s71s0 / sentence
   :temporal ((s71r :contained s71c))
   :modal ((root :modal author)
-          (author :full-affirmative s71r))
+          (author :full-affirmative s71r)
+          (author :full-affirmative s71c))
   :coref ((s70r :same-event s71r)
           (s70p :same-entity s71p)
           (s64t :same-entity s71b)
@@ -2250,9 +2203,7 @@ s73b: 8-8
              (s73w :overlap s73g))
   :modal ((root :modal author)
           (author :full-affirmative s73w)
-          (s73p :affirmative s73w)
-          (s73w :unspecified s73g)
-          (author :full-affirmative s73p))
+          (author :full-affirmative s73g))
   :coref ((s71p :same-entity s73p)
           (s71p3 :subset-of s73p2)))
 
@@ -2335,21 +2286,14 @@ Index:       1      2
 Words:   Okay  ?
 
 # sentence level graph:
-(s76o / okay-04
-        :ARG2-of (s76r / request-confirmation-91
-                :ARG1 (s76e / event)))
+(s76o / okay-04)
 
 # alignment:
-s76e: 0-0
 s76o: 1-1
-s76r: 0-0
 
 # document level annotation:
 (s76s0 / sentence
-  :temporal ((s76e :overlap s76o))
-  :modal ((root :modal author)
-          (author :neutral-affirmative s76o))
-  :coref ((s75f :same-event s76e)))
+  :modal ((root :modal author)))
 
 
 # ::id pear_story.77
@@ -2375,7 +2319,6 @@ s77t: 2-2
 
 # document level annotation:
 (s77s0 / sentence
-  :temporal ((s76e :after s77b))
   :modal ((root :modal author)
           (author :full-affirmative s77b))
   :coref ((s75p :same-entity s77p)))
@@ -2467,10 +2410,7 @@ s80t: 4-4
   :temporal ((s80f :overlap s80s))
   :modal ((root :modal author)
         (author :full-affirmative s80s)
-        (author :full-affirmative s80f)
-        (s80p :affirmative s80s)
-        (s80s :unspecified s80f)
-        (author :full-affirmative s80p))
+        (author :full-affirmative s80f))
   :coref ((s78f :same-event s80f)
         (s78p :same-entity s80p2)
         (s67p2 :same-entity s80p)))
@@ -2574,11 +2514,11 @@ s83t3: 13-13
 (s83s0 / sentence
   :temporal ((s83g :after s83s))
   :modal ((root :modal author)
-                    (author :full-affirmative s83g)
-                    (author :full-affirmative s83s))
+       	  (author :full-affirmative s83g)
+          (author :full-affirmative s83s))
   :coref ((s82b :same-event s83g)
-                    (s82p :same-entity s83p)
-                    (s80p :same-entity s83p2)))
+          (s82p :same-entity s83p)
+          (s80p :same-entity s83p2)))
 
 
 # ::id pear_story.84
@@ -2617,7 +2557,7 @@ Words:   ten  or  something  ?
         :op1 (s85t4 / temporal-quantity
                 :unit (s85y3 / year)
                 :quant 10)
-        :op3 (s85t / temporal-quantity
+        :op2 (s85t / temporal-quantity
                 :mod (s85s / some)
                 :refer-person 3rd
                 :refer-number singular))
@@ -2896,8 +2836,8 @@ s94b2: 14-14
   :temporal ((s90c :after s94h)
         (s94h :overlap s94p2))
   :modal ((root :modal author)
-        (author :full-affirmative s94p2)
-        (author :full-affirmative s94h))
+        (author :full-affirmative s94h)
+        (author :full-affirmative s94p2))
   :coref ((s93p :same-entity s94p)
         (s93e :same-event s94h)
         (s79p :same-entity s94p4)
@@ -3038,8 +2978,8 @@ s98b: 7-7
   :temporal ((s97p :after s98h)
         (s98h :overlap s98g))
   :modal ((root :modal author)
-        (author :full-affirmative s98g)
-        (author :full-affirmative s98h))
+        (author :full-affirmative s98h)
+        (author :full-affirmative s98g))
   :coref ((s97p2 :same-entity s98p)
         (s94p3 :same-entity s98p2)
         (s71b :same-entity s98b)))
@@ -3091,8 +3031,8 @@ s99o: 15-15
         (s99t :after s99t3)
         (s99t :before s99t2))
   :modal ((root :modal author)
-        (author :full-affirmative s99t2)
         (author :full-affirmative s99t)
+        (author :full-affirmative s99t2)
         (author :full-affirmative s99t3))
   :coref ((s98p :subset-of s99k)
         (s77r :same-entity s99r)
@@ -3388,9 +3328,9 @@ s107s: 24-24
         (s107g :before s107r)
         (s107g :after s107s))
   :modal ((root :modal author)
+        (author :full-affirmative s107g)
         (author :full-affirmative s107r)
-        (author :full-affirmative s107s)
-        (author :full-affirmative s107g))
+        (author :full-affirmative s107s))
   :coref ((s106p2 :same-entity s107g2)
         (s105b :same-entity s107b)
         (s97t :subset-of s107p)
@@ -3763,7 +3703,7 @@ Words:   one  of  them  has  a  .  .  what  do  you  call  those  little  [l.l?]
                                                 :refer-number plural
                                                 :mod (s120t2 / that)
                                                 :ARG1-of (s120l / little-01))
-                                        :ARG2 
+                                        :ARG2 s120p4
                                         :mode interrogative
                                         :aspect habitual))))
         :aspect state)           
@@ -3787,7 +3727,8 @@ s120u: 8-8
   :temporal ((s119w2 :overlap s120h)
         (s120h :overlap s120c))
   :modal ((root :modal author)
-        (author :full-affirmative s120h))
+        (author :full-affirmative s120h)
+        (author :full-affirmative s120c))
   :coref ((s119k2 :same-entity s120p2)
         (s120p2 :subset-of s120p)))
 
@@ -4028,7 +3969,7 @@ s128u: 6-6
                     (s128l :overlap s128h))
   :modal ((root :modal author)
                     (author :full-affirmative s128l)
-                    (author :neutral-affirmative s128h))
+                    (author :neutral-affirmative s128i2))
   :coref ((s127p :same-entity s128p)))
 
 
@@ -4195,7 +4136,7 @@ s134c: 6-6
   :modal ((root :modal author)
         (author :full-affirmative s134g)
         (author :full-affirmative s134p)
-        (s134p :affirmative s134g2))
+        (s134p :unspecified s134g2))
   :coref ((s130p :same-entity s134p)))
 
 
@@ -4239,9 +4180,8 @@ s135w: 6-6
         (s135w :overlap s135e))
   :modal ((root :modal author)
         (author :full-affirmative s135s)
-        (s135p :affirmative s135s)
-        (s135s :unspecified s135e)
-        (author :full-affirmative s135p))
+        (author :full-affirmative s135w)
+        (author :full-affirmative s135e))
   :coref ((s134p :same-entity s135p)
         (s127p :same-entity s135k)
         (s127w :same-event s135w)
