@@ -1,5 +1,6 @@
 # Usage
-The English UMR 2.0 dataset is a subset of the English AMR dataset selected for conversion; a list of included sentences along with their corresponding filenames can be found in `directory_by_sentence.tsv`. The corpus is split into three categories based on the completeness of conversion:
+The English UMR 2.0 dataset is a subset of the English AMR dataset selected for conversion into UMR graphs. A list of included sentences along with their corresponding filenames can be found in `directory_by_sentence.tsv`. Not all sentences have been fully converted, the three levels of completeness are:
+
 - <strong>Document Level Conversion:</strong> Sentence level graph fully converted based on current UMR guidelines with document level annotation also provided.
 - <strong>Full Conversion:</strong> Sentence level graph fully converted based on current UMR guidelines but no document level annotation.
 - <strong>Partial Conversion:</strong> Sentence level graphs with roleset conversions detailed below: 
@@ -44,9 +45,9 @@ The English UMR 2.0 dataset is a subset of the English AMR dataset selected for 
 | realize-01                         | aware-01              | mixed         | 2                     |
 | except-01                          | have-subtraction-91   | mixed         | 65                    |
 
-# Acknowledgments (Copied from 1.0)
+# Acknowledgments
 
-The creators of the English UMRs wish to express their gratitude to Matt Buchholz, Skatje Myers, Alexis Palmer, Martha Palmer, Jin Zhao, Claire Bonial, Jens E. Van Gysel, Meagan Vigus, (Kristin, Benet, Carlos, Loden, ) Tim O’Gorman for their assistance.
+The creators of the English UMRs wish to express their gratitude to Matt Buchholz, Skatje Myers, Alexis Palmer, Martha Palmer, Jin Zhao, Claire Bonial, Tim O’Gorman, Kristin Wright-Bettner, Benét Post, Alvin Chen, Marie MacGregor, Ahmed Elsayed, Carlos Gomez, Loden Havenmeier, and Ath Kilgore for their assistance.
 
 
 <pre>
