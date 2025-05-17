@@ -1,12 +1,16 @@
-import os, re, json
+import os, sys, re, json
 from pathlib import Path
 from tabulate import tabulate
 import penman
 from penman.exceptions import DecodeError
+
+# Import the tab_format module for consistent formatting
+from tab_format import format_doc_annotation, format_graph, format_alignment
+
 current_script_dir = Path(__file__).parent
 root = current_script_dir.parent
 
-with open(Path(root) / 'chinese/role_mappings.json', 'r') as file:
+with open(Path(root) / 'umr_2_0/chinese/role_mappings.json', 'r') as file:
     replacements = json.load(file)
 
 def add_modal_triple(doc_text, new_triple="(author :full-affirmative s3z)"):
@@ -497,8 +501,8 @@ def umr_writer_txt2json(input_file_path, output_file_path):
     print(f"Parsed data saved to {output_file_path}")
 
 def folder_umr_writer_txt2json():
-    input_folder_path = Path(root) / 'chinese/original_data/'
-    output_folder_path = Path(root) / 'chinese/jsons/'
+    input_folder_path = Path(root) / 'umr_2_0/chinese/original_data/'
+    output_folder_path = Path(root) / 'umr_2_0/chinese/jsons/'
     for file_path in input_folder_path.iterdir():
         if file_path.suffix == '.txt':  # Ensure the file has a .txt extension
             umr_writer_txt2json(file_path, Path.joinpath(output_folder_path, file_path.name.replace(".txt", ".json")))
@@ -597,14 +601,25 @@ def json2txt(json_file_path, output_file_path):
                     out_file.write(words_str + "\n")
                     out_file.write("\n")
 
-                out_file.write(f"# sentence level graph:\n{sent_annot}\n\n")
-                out_file.write(f"# alignment:\n")
+                # Format the sentence level graph with consistent tab indentation
+                graph_section = f"# sentence level graph:\n{sent_annot}"
+                formatted_graph = format_graph(graph_section)
+                out_file.write(f"{formatted_graph}\n\n")
+                
+                # Format the alignment section with consistent spacing
+                alignment_lines = ["# alignment:"]
                 if alignments:
                     # Sort alignments by variable name for consistent output
                     for var in sorted(alignments.keys()):
-                        out_file.write(f"{var}: {alignments[var]}\n")
-                out_file.write(f"\n")
-                out_file.write(f"# document level annotation:\n{doc_annot}\n\n\n")
+                        alignment_lines.append(f"{var}: {alignments[var]}")
+                alignment_section = "\n".join(alignment_lines)
+                formatted_alignment = format_alignment(alignment_section)
+                out_file.write(f"{formatted_alignment}\n\n")
+                
+                # Format the document level annotation with consistent tab indentation
+                doc_section = f"# document level annotation:\n{doc_annot}"
+                formatted_doc = format_doc_annotation(doc_section)
+                out_file.write(f"{formatted_doc}\n\n\n")
     print(f"Entries have been written to {output_file_path}")
 
 if __name__ == '__main__':

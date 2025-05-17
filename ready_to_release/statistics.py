@@ -3,13 +3,24 @@ import penman
 from penman.exceptions import DecodeError
 from tabulate import tabulate
 from pathlib import Path
+import sys
+from datetime import datetime
 
 
 # Get the directory of the current script
 current_script_dir = Path(__file__).parent
 
 # Construct the path to the file
-root = current_script_dir.parent
+root = current_script_dir
+
+# Setup output file
+output_file_path = current_script_dir / f"umr_statistics_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+output_file = open(output_file_path, 'w', encoding='utf-8')
+
+# Custom print function to output to both terminal and file
+def dual_print(text):
+    print(text)
+    output_file.write(text + '\n')
 
 def parse_blocks_from_file(file_path):
     """
@@ -233,14 +244,34 @@ def analyze_folder(folder_path):
         ["Concepts (Sentence-level)", nonpartial_concepts],
         ["Relations (Document-level)", nonpartial_doc_relations],
     ]
-    print("=== Stats for ALL ===")
-    print(tabulate(all_data, headers=["Metric", "Count"], tablefmt="grid"))
+    dual_print("=== Stats for ALL ===")
+    dual_print(tabulate(all_data, headers=["Metric", "Count"], tablefmt="grid"))
 
-    print("\n=== Stats for PARTIAL-CONVERSION ===")
-    print(tabulate(partial_data, headers=["Metric", "Count"], tablefmt="grid"))
+    dual_print("\n=== Stats for PARTIAL-CONVERSION ===")
+    dual_print(tabulate(partial_data, headers=["Metric", "Count"], tablefmt="grid"))
 
-    print("\n=== Stats for NON-PARTIAL-CONVERSION Blocks ===")
-    print(tabulate(nonpartial_data, headers=["Metric", "Count"], tablefmt="grid"))
+    dual_print("\n=== Stats for NON-PARTIAL-CONVERSION Blocks ===")
+    dual_print(tabulate(nonpartial_data, headers=["Metric", "Count"], tablefmt="grid"))
+    
+    return {
+        "all_docs": all_docs,
+        "partial_docs": partial_docs,
+        "partial_sentences": partial_sentences,
+        "partial_words": partial_words,
+        "partial_sentence_graphs": partial_sentence_graphs,
+        "partial_doc_graphs": partial_doc_graphs,
+        "partial_relations": partial_relations,
+        "partial_concepts": partial_concepts,
+        "partial_doc_relations": partial_doc_relations,
+        "nonpartial_docs": nonpartial_docs,
+        "nonpartial_sentences": nonpartial_sentences,
+        "nonpartial_words": nonpartial_words,
+        "nonpartial_sentence_graphs": nonpartial_sentence_graphs,
+        "nonpartial_doc_graphs": nonpartial_doc_graphs,
+        "nonpartial_relations": nonpartial_relations,
+        "nonpartial_concepts": nonpartial_concepts,
+        "nonpartial_doc_relations": nonpartial_doc_relations
+    }
 
 def print_explanation():
 
@@ -281,16 +312,90 @@ def print_explanation():
 
 
 if __name__ == "__main__":
-    lang = 'english'
-    folder_path = Path(root) / f'umr_2_0/{lang}/error_corrected/'
-    analyze_folder(folder_path)
-
-    # lang = 'czech'
-    # folder_path = Path(root) / f'umr_2_0/{lang}/original_data/'
-    # analyze_folder(folder_path)
-
-    # lang = 'chinese'
-    # folder_path = Path(root) / f'umr_2_0/{lang}/formatted_data/'
-    # analyze_folder(folder_path)
-
-    # print_explanation()
+    try:
+        # Find all language folders in ready_to_release directory
+        languages = [d for d in os.listdir(root) if os.path.isdir(os.path.join(root, d)) and not d.startswith('.')]
+        dual_print(f"Detected language folders: {languages}")
+        
+        # Store statistics for each language
+        language_stats = {}
+        
+        for lang in languages:
+            dual_print(f"\n\n======== STATISTICS FOR {lang.upper()} ========")
+            # Check if umr_data subfolder exists
+            umr_data_path = Path(root) / lang / "umr_data"
+            if umr_data_path.exists() and umr_data_path.is_dir():
+                language_stats[lang] = analyze_folder(umr_data_path)
+            else:
+                dual_print(f"No umr_data folder found for {lang}")
+                language_stats[lang] = {
+                    "all_docs": 0, "partial_docs": 0, "partial_sentences": 0, 
+                    "partial_words": 0, "partial_sentence_graphs": 0, "partial_doc_graphs": 0,
+                    "partial_relations": 0, "partial_concepts": 0, "partial_doc_relations": 0,
+                    "nonpartial_docs": 0, "nonpartial_sentences": 0, "nonpartial_words": 0,
+                    "nonpartial_sentence_graphs": 0, "nonpartial_doc_graphs": 0, 
+                    "nonpartial_relations": 0, "nonpartial_concepts": 0, "nonpartial_doc_relations": 0
+                }
+        
+        # Print summary table
+        dual_print("\n\n======== SUMMARY ACROSS ALL LANGUAGES ========")
+        summary_headers = ["Language", "Documents", "Sentences", "Words", "Sentence Graphs", "Doc Graphs", "Relations", "Concepts"]
+        summary_rows = []
+        
+        # Calculate totals
+        totals = {
+            "all_docs": 0, "sentences": 0, "words": 0, 
+            "sentence_graphs": 0, "doc_graphs": 0,
+            "relations": 0, "concepts": 0
+        }
+        
+        for lang, stats in language_stats.items():
+            sentences = stats["partial_sentences"] + stats["nonpartial_sentences"]
+            words = stats["partial_words"] + stats["nonpartial_words"]
+            sentence_graphs = stats["partial_sentence_graphs"] + stats["nonpartial_sentence_graphs"]
+            doc_graphs = stats["partial_doc_graphs"] + stats["nonpartial_doc_graphs"]
+            relations = stats["partial_relations"] + stats["nonpartial_relations"] + stats["partial_doc_relations"] + stats["nonpartial_doc_relations"]
+            concepts = stats["partial_concepts"] + stats["nonpartial_concepts"]
+            
+            summary_rows.append([
+                lang, 
+                stats["all_docs"], 
+                sentences,
+                words,
+                sentence_graphs,
+                doc_graphs,
+                relations,
+                concepts
+            ])
+            
+            # Update totals
+            totals["all_docs"] += stats["all_docs"]
+            totals["sentences"] += sentences
+            totals["words"] += words
+            totals["sentence_graphs"] += sentence_graphs
+            totals["doc_graphs"] += doc_graphs
+            totals["relations"] += relations
+            totals["concepts"] += concepts
+        
+        # Sort summary rows by document count (descending)
+        summary_rows.sort(key=lambda x: x[1], reverse=True)
+        
+        # Add totals row
+        summary_rows.append([
+            "TOTAL", 
+            totals["all_docs"], 
+            totals["sentences"],
+            totals["words"],
+            totals["sentence_graphs"],
+            totals["doc_graphs"],
+            totals["relations"],
+            totals["concepts"]
+        ])
+        
+        dual_print(tabulate(summary_rows, headers=summary_headers, tablefmt="grid"))
+        
+        dual_print(f"\nStatistics have been saved to: {output_file_path}")
+        
+    finally:
+        # Close the output file
+        output_file.close()
