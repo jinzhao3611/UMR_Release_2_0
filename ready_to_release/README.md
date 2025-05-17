@@ -159,19 +159,19 @@ This section may include the following fields:
 
 This dataset includes annotated data from the following languages:
 
-#### Included in UMR 1.0 Release
+#### Unchanged from UMR 1.0 Release
 
 - Arapaho  
 - Kukama  
 - Navajo  
 - Sanapaná  
 
-#### Included in Both UMR 1.0 and UMR 2.0 Releases
+#### Extended from UMR 1.0 Release
 
 - English  
 - Chinese  
 
-#### New in UMR 2.0 Release
+#### Newly Added in UMR 2.0 Release
 
 - Czech  
 - Latin  
