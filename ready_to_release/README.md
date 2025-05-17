@@ -1,16 +1,23 @@
-# UMR 2.0 Data Parser Tool
+# UMR 2.0 Data Release
 
 ## Table of Contents
-- [UMR 2.0 Data Parser Tool](#umr-20-data-parser-tool)
-  - [Usage](#usage)
-  - [Options](#options)
-  - [Examples](#examples)
-  - [Output Format](#output-format)
-- [UMR 2.0 Data format Description](#umr-annotated-sentences-dataset)
-  - [Block Structure](#block-structure)
-  - [Language Coverage](#language-coverage)
-  - [Notes](#notes)
-- [UMR 2.0 Data statistics](#run-statisticspy)
+- [UMR 2.0 Data Release](#umr-20-data-release)
+  - [UMR 2.0 Data Parser Tool](#umr-20-data-parser-tool)
+    - [Usage](#usage)
+    - [Options](#options)
+    - [Examples](#examples)
+    - [Output Format](#output-format)
+  - [UMR 2.0 Data format Description](#umr-20-data-format-description)
+    - [Block Structure](#block-structure)
+    - [Meta Information](#1-meta-information)
+    - [Sentence Information](#2-sentence-information)
+    - [Sentence-Level UMR Annotation](#3-sentence-level-umr-annotation)
+    - [Alignment Information](#4-alignment-information)
+    - [Document-Level Annotation](#5-document-level-annotation)
+    - [Language Coverage](#language-coverage)
+  - [Statistics](#statistics)
+
+## UMR 2.0 Data Parser Tool
 
 The `parse_umr_to_json.py` script extracts content from UMR files and converts it to JSON format. It properly handles the block structure of UMR files, where:
 
@@ -91,18 +98,18 @@ The script outputs a JSON file containing an array of UMR documents. Each docume
 }
 ```
 
-# UMR 2.0 Data format Description
+## UMR 2.0 Data format Description
 
 This dataset is organized in **blocks**, each corresponding to a single sentence.  
 Blocks are separated by a line of 80 hash signs:
 
-## Block Structure
+### Block Structure
 
 Within each block, there are **five parts**, separated by a single hash sign (`#`):
 
 ---
 
-## 1. Meta Information
+### 1. Meta Information
 
 - Entries are separated by two colons (`::`).
 - Example entries:
@@ -111,7 +118,7 @@ Within each block, there are **five parts**, separated by a single hash sign (`#
 
 ---
 
-## 2. Sentence Information
+### 2. Sentence Information
 
 This section may include the following fields:
 
@@ -129,19 +136,19 @@ This section may include the following fields:
 
 ---
 
-## 3. Sentence-Level UMR Annotation
+### 3. Sentence-Level UMR Annotation
 
 - UMR structure is represented in **Penman notation**.
 
 ---
 
-## 4. Alignment Information
+### 4. Alignment Information
 
 - Alignments between UMR concepts and token indices.
 
 ---
 
-## 5. Document-Level Annotation
+### 5. Document-Level Annotation
 
 - If no annotation is available, it is represented as:
 
@@ -149,38 +156,42 @@ This section may include the following fields:
 
 ---
 
-## Language Coverage
+### Language Coverage
 
 This dataset includes annotated data from the following languages:
 
-### Included in UMR 1.0 Release
+#### Included in UMR 1.0 Release
 
 - Arapaho  
 - Kukama  
 - Navajo  
 - Sanapaná  
 
-### Included in Both UMR 1.0 and UMR 2.0 Releases
+#### Included in Both UMR 1.0 and UMR 2.0 Releases
 
 - English  
 - Chinese  
 
-### New in UMR 2.0 Release
+#### New in UMR 2.0 Release
 
 - Czech  
 - Latin  
 
 ---
 
-## Notes
+### Notes
 
 For detailed mapping between the current file names and their original workset names, refer to the provided **name_mappings.txt**.
 
-# Statistics 
-Run statistics.py to get umr_statistics file containing tables
--  following is the description of what each item means in the three types of tables
--  partial-conversion data means data that are partially converted from amr (english and chinese has this type).
--  non-partial-conversion data includes data that are annotated from scratch or data that are fully converted from amr.
+## Statistics
+
+Run `statistics.py` to generate the `umr_statistics` file, which contains summary tables.
+
+### Notes:
+- The following descriptions explain the metrics used in the three types of tables.
+- **Partial-conversion data** refers to data that have been partially converted from AMR.
+- **Non-partial-conversion data** includes data that were manually annotated.
+
 
 ### Stats for ALL
 
