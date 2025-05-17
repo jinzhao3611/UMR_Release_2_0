@@ -150,8 +150,7 @@ This section may include the following fields:
 
 ### 5. Document-Level Annotation
 
-- If no annotation is available, it is represented as:
-
+- UMR structure is represented by temporal/model/coreference relation triples 
 
 
 ---
