@@ -1,0 +1,522 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2    3       4  5       6
+Words: Mladí lidé nechodí do divadel často
+
+# sentence level graph:
+(s1c1 / chodit-006
+        :ARG0 (s1c2 / člověk
+            :mod (s1m1 / mladý
+                :refer-number plural)
+            :refer-number plural)
+        :goal (s1d1 / divadlo
+            :refer-number plural)
+        :frequency (s1c3 / často)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s1c1: 3-3
+s1c2: 2-2
+s1m1: 1-1
+s1d1: 4-5
+s1c3: 6-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2   3  4       5     6    7    8     9        10      11   12 13    14        15
+Words: Návštěvy kin a  divadel patří mezi méně časté aktivity mladých lidí v  České republice .
+
+# sentence level graph:
+(s3p1 / patřit-003
+        :ARG0 (s3n1 / návštěva
+            :ARG1 (s3a1 / and
+                :op1 (s3k1 / kino
+                    :refer-number plural)
+                :op2 (s3d1 / divadlo
+                    :refer-number plural))
+            :refer-number plural)
+        :goal (s3a2 / aktivita
+            :mod (s3c1 / častý
+                :extent (s3m1 / málo)
+                :refer-number plural)
+            :ARG0 (s3c2 / člověk
+                :mod (s3m2 / mladý
+                    :refer-number plural)
+                :place (s3r1 / republika
+                    :mod (s3c3 / Český
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s3p1: 5-5
+s3n1: 1-1
+s3a1: 3-3
+s3k1: 2-2
+s3d1: 4-4
+s3a2: 6-6,9-9
+s3c1: 8-8
+s3m1: 7-7
+s3c2: 11-11
+s3m2: 10-10
+s3r1: 12-12,14-14
+s3c3: 13-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3d1 :same-entity s1d1)
+            (s3c2 :same-entity s1c2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1         2  3  4         5  6          7       8         9    10 11      12           13       14 15      16 17          18 19    20       21 22  23          24 25   26 27 28 29  30
+Words: Vyplynulo to z  únorového a  květnového výzkumu Institutu dětí a  mládeže ministerstva školství ,  mládeže a  tělovýchovy ,  který pracoval s  758 respondenty ve věku 15 až 29 let .
+
+# sentence level graph:
+(s4v1 / vyplynout-001
+        :ARG0 (s4t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s4v2 / výzkum
+            :ARG0 (s4i1 / Institut
+                :possessor (s4a1 / and
+                    :op1 (s4d1 / dítě
+                        :refer-number plural)
+                    :op2 (s4m1 / mládež
+                        :refer-number singular))
+                :possessor (s4m2 / ministerstvo
+                    :possessor (s4a2 / and
+                        :op1 (s4s1 / školství
+                            :refer-number singular)
+                        :op2 (s4m3 / mládež
+                            :refer-number singular)
+                        :op3 (s4t2 / tělovýchova
+                            :refer-number singular))
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s4a3 / and
+                :op1 (s4u1 / únorový
+                    :refer-number singular)
+                :op2 (s4k1 / květnový
+                    :refer-number singular))
+            :ARG0-of (s4p1 / pracovat-003
+                :ARG1 (s4r1 / respondent
+                    :mod (s4x1 / 758)
+                    :mod (s4v3 / věk
+                        :mod (s4r2 / rok
+                            :mod (s4m4 / math
+                                :op1 (s4x2 / 15)
+                                :op2 (s4x3 / 29))
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4v1: 1-1
+s4t1: 2-2
+s4v2: 3-3,7-7,19-19
+s4i1: 8-8
+s4a1: 10-10
+s4d1: 9-9
+s4m1: 11-11
+s4m2: 12-12
+s4a2: 16-16
+s4s1: 13-13
+s4m3: 15-15
+s4t2: 17-17
+s4a3: 5-5
+s4u1: 4-4
+s4k1: 6-6
+s4p1: 20-20
+s4r1: 21-21,23-23
+s4x1: 22-22
+s4v3: 24-25
+s4r2: 29-29
+s4m4: 27-27
+s4x2: 26-26
+s4x3: 28-28
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2       3     4       5  6       7       8    9  10 11   12 13      14
+Words: Do divadla vůbec nechodí 46 procent mladých lidí ,  do kina 12 procent .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5c1 / chodit-006
+            :goal (s5d1 / divadlo
+                :refer-number singular)
+            :extent (s5v1 / vůbec)
+            :ARG0 (s5p1 / procento
+                :mod (s5c2 / člověk
+                    :mod (s5m1 / mladý
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s5x1 / 46)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :op2 (s5c3 / chodit-006
+            :goal (s5k1 / kino
+                :refer-number singular)
+            :ARG0 (s5p2 / procento
+                :mod (s5x2 / 12)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -))
+
+# alignment:
+s5a1: 9-9
+s5c1: 4-4
+s5d1: 1-2
+s5v1: 3-3
+s5p1: 6-6
+s5c2: 8-8
+s5m1: 7-7
+s5x1: 5-5
+s5c3: 0-0
+s5k1: 10-11
+s5p2: 13-13
+s5x2: 12-12
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5d1 :same-entity s3d1)
+            (s5c2 :same-entity s3c2)
+            (s5k1 :same-entity s3k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2    3       4      5     6        7       8  9        10       11 12    13   14 15 16   17 18    19    20      21 22      23 24  25
+Words: Oproti tomu alespoň jednou týdně navštíví divadlo 1  procento populace v  tomto věku ,  do kina se takto často vypraví 17 mladých ze sta .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6n1 / navštívit-001
+            :comparison (s6t1 / ten
+                :refer-number singular)
+            :clausal-marker (s6a2 / alespoň)
+            :frequency (s6j1 / jednou
+                :temporal (s6t2 / týdně))
+            :ARG1 (s6d1 / divadlo
+                :refer-number singular)
+            :ARG0 (s6p1 / procento
+                :mod (s6p2 / populace
+                    :mod (s6v1 / věk
+                        :mod (s6t3 / tento
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s6x1 / 1)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :op2 (s6v2 / vypravit-se-001
+            :goal (s6k1 / kino
+                :refer-number singular)
+            :frequency (s6c1 / často
+                :manner (s6t4 / takto))
+            :ARG0 (s6m1 / mladý
+                :mod (s6x2 / 17)
+                :start (s6s1 / sto
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance))
+
+# alignment:
+s6a1: 14-14
+s6n1: 6-6
+s6t1: 1-2
+s6a2: 3-3
+s6j1: 4-4
+s6t2: 5-5
+s6d1: 7-7
+s6p1: 9-9
+s6p2: 10-10
+s6v1: 11-11,13-13
+s6t3: 12-12
+s6x1: 8-8
+s6v2: 17-17,20-20
+s6k1: 15-16
+s6c1: 19-19
+s6t4: 18-18
+s6m1: 22-22
+s6x2: 21-21
+s6s1: 23-24
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6t1 :same-entity s5a1)
+            (s6d1 :same-entity s5d1)
+            (s6p2 :same-entity s5c2)
+            (s6v1 :same-entity s4v3)
+            (s6k1 :same-entity s5k1)
+            (s6c1 :same-entity s6j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1          2  3     4           5      6     7  8    9     10 11   12 13 14 15 16  17 18     19   20 21   22 23 24 25 26  27 28   29     30   31    32  33     34    35   36
+Words: Nejčastěji ze všech sledovaných skupin chodí do kina dívky ve věku od 18 do 22 let ,  naopak ženy ve věku od 27 do 29 let do kina zajdou méně často než stejně staří muži .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7c1 / chodit-006
+            :frequency (s7c2 / častě
+                :start (s7s1 / skupina
+                    :mod (s7s2 / sledovaný
+                        :refer-number plural)
+                    :mod (s7v1 / všechen
+                        :refer-number plural)
+                    :refer-number plural))
+            :goal (s7k1 / kino
+                :refer-number singular)
+            :ARG0 (s7d1 / dívka
+                :mod (s7v2 / věk
+                    :mod (s7r1 / rok
+                        :mod (s7m1 / math
+                            :op1 (s7x1 / 18)
+                            :op2 (s7x2 / 22))
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s7z1 / zajít-001
+            :clausal-marker (s7n1 / naopak)
+            :ARG0 (s7z2 / žena
+                :mod (s7v3 / věk
+                    :mod (s7r2 / rok
+                        :mod (s7m2 / math
+                            :op1 (s7x3 / 27)
+                            :op2 (s7x4 / 29))
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number plural)
+            :goal (s7k2 / kino
+                :refer-number singular)
+            :frequency (s7c3 / často
+                :extent (s7m3 / málo
+                    :comparison (s7z3 / zajít-001
+                        :goal (s7e1 / entity)
+                        :ARG0 (s7m4 / muž
+                            :mod (s7s3 / starý
+                                :manner (s7s4 / stejně)
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number plural
+                        :refer-person 3rd
+                        :aspect performance)))
+            :refer-number plural
+            :refer-person 3rd
+            :aspect performance))
+
+# alignment:
+s7a1: 17-17
+s7c1: 6-6
+s7c2: 1-1
+s7s1: 2-2,5-5
+s7s2: 4-4
+s7v1: 3-3
+s7k1: 7-8
+s7d1: 9-9
+s7v2: 10-11
+s7r1: 16-16
+s7m1: 12-12,14-14
+s7x1: 13-13
+s7x2: 15-15
+s7z1: 29-29
+s7n1: 18-18
+s7z2: 19-19
+s7v3: 20-21
+s7r2: 26-26
+s7m2: 22-22,24-24
+s7x3: 23-23
+s7x4: 25-25
+s7k2: 27-28
+s7c3: 31-31
+s7m3: 30-30
+s7z3: 0-0
+s7e1: 0-0
+s7m4: 35-35
+s7s3: 34-34
+s7s4: 33-33
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7k1 :same-entity s6k1)
+            (s7k2 :same-entity s7k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1           2       3    4          5     6  7        8    9  10            11 12            13       14 15        16
+Words: Návštěvníky divadel jsou pravidelně dívky ,  svobodné ženy ,  středoškolští i  vysokoškolští studenti a  studentky .
+
+# sentence level graph:
+(s8b1 / být-007
+        :ARG1 (s8n1 / návštěvník
+            :ARG1 (s8d1 / divadlo
+                :refer-number plural)
+            :refer-number plural)
+        :frequency (s8p1 / pravidelně)
+        :ARG0 (s8a1 / and
+            :op1 (s8d2 / dívka
+                :refer-number plural)
+            :op2 (s8z1 / žena
+                :mod (s8s1 / svobodný
+                    :refer-number plural)
+                :refer-number plural)
+            :op3 (s8a2 / and
+                :op1 (s8s2 / student
+                    :mod (s8a3 / and
+                        :op1 (s8s3 / středoškolský
+                            :refer-number plural)
+                        :op2 (s8v1 / vysokoškolský
+                            :refer-number plural))
+                    :refer-number plural)
+                :op2 (s8s4 / studentka
+                    :mod s8a3
+                    :refer-number plural)))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s8b1: 3-3
+s8n1: 1-1
+s8d1: 2-2
+s8p1: 4-4
+s8a1: 9-9
+s8d2: 5-5
+s8z1: 8-8
+s8s1: 7-7
+s8a2: 14-14
+s8s2: 13-13
+s8a3: 11-11
+s8s3: 10-10
+s8v1: 12-12
+s8s4: 15-15
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8d1 :same-entity s6d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1        2       3     4  5       6       7       8    9  10      11 12   13 14       15 16    17       18
+Words: Institut sleduje kolem 50 způsobů trávení volného času ,  divadlo a  kino se umísťují na konci žebříčku .
+
+# sentence level graph:
+(s9a1 / and
+        :op1 (s9s1 / sledovat-004
+            :ARG0 (s9i1 / Institut
+                :refer-number singular)
+            :ARG1 (s9z1 / způsob
+                :possessor (s9t1 / trávení
+                    :ARG0 (s9e1 / entity)
+                    :ARG1 (s9c1 / čas
+                        :mod (s9v1 / volný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s9x1 / 50)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s9u1 / umísťovat-se-001
+            :ARG0 (s9a2 / and
+                :op1 (s9d1 / divadlo
+                    :refer-number singular)
+                :op2 (s9k1 / kino
+                    :refer-number singular))
+            :place (s9k2 / konec
+                :possessor (s9z2 / žebříček
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s9a1: 9-9
+s9s1: 2-2
+s9i1: 1-1
+s9z1: 5-5
+s9t1: 6-6
+s9e1: 0-0
+s9c1: 8-8
+s9v1: 7-7
+s9x1: 3-4
+s9u1: 13-14
+s9a2: 11-11
+s9d1: 10-10
+s9k1: 12-12
+s9k2: 15-16
+s9z2: 17-17
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9i1 :same-entity s4i1)
+            (s9d1 :same-entity s8d1)
+            (s9k1 :same-entity s7k2)))
+
+

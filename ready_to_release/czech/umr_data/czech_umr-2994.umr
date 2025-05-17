@@ -1,0 +1,236 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2 3
+Words: víkend v pohybu
+
+# sentence level graph:
+(s1v1 / víkend
+        :mod (s1p1 / pohyb
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1v1: 1-1
+s1p1: 2-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1  2         3  4      5
+Words: Za rozhledem na Praděd .
+
+# sentence level graph:
+(s2e1 / event
+        :goal (s2r1 / rozhled
+            :refer-number singular)
+        :goal (s2p1 / Praděd
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s2e1: 0-0
+s2r1: 1-2
+s2p1: 3-4
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2     3   4  5  6  7  8     9  10     11  12 13       14 15       16      17
+Words: V  pátek 100 km od 20 do 22.30 od budovy ČSD v  Olomouci ,  hlavního nádraží .
+
+# sentence level graph:
+(s3e1 / event
+        :temporal (s3p1 / pátek
+            :refer-number singular)
+        :ARG1 (s3k1 / km
+            :mod (s3x1 / 100))
+        :temporal (s3x2 / 20)
+        :temporal (s3x3 / 22.30)
+        :start (s3i1 / identity-91
+            :ARG1 (s3b1 / budova
+                :possessor (s3c1 / ČSD
+                    :refer-number plural)
+                :place (s3o1 / Olomouc
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s3n1 / nádraží
+                :mod (s3h1 / hlavní
+                    :refer-number singular)
+                :refer-number singular))
+        :aspect state)
+
+# alignment:
+s3e1: 0-0
+s3p1: 1-2
+s3k1: 4-4
+s3x1: 3-3
+s3x2: 5-6
+s3x3: 7-8
+s3i1: 14-14
+s3b1: 9-10
+s3c1: 11-11
+s3o1: 12-13
+s3n1: 9-9,16-16
+s3h1: 15-15
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1   2  3       4       5
+Words: Cíl na vrcholu Pradědu .
+
+# sentence level graph:
+(s4e1 / event
+        :ARG1 (s4c1 / cíl
+            :refer-number singular)
+        :place (s4v1 / vrchol
+            :possessor (s4p1 / Praděd
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s4e1: 0-0
+s4c1: 1-1
+s4v1: 2-3
+s4p1: 4-4
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4p1 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2  3     4  5      6  7  8  9  10       11 12      13 14 15 16 17  18
+Words: SOBOTA :  Pěšky na Praděd ,  38 km z  Rýmařova -  náměstí ,  7  až 9  hod .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5e1 / event
+            :parenthesis (s5s1 / sobota
+                :refer-number singular)
+            :manner (s5p1 / pěšky)
+            :goal (s5p2 / Praděd
+                :refer-number singular)
+            :aspect state)
+        :op2 (s5e2 / event
+            :parenthesis s5s1
+            :extent (s5k1 / km
+                :mod (s5x2 / 38))
+            :start (s5r1 / Rýmařov
+                :mod (s5n1 / náměstí
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect state)
+        :op3 (s5e3 / event
+            :parenthesis s5s1
+            :duration (s5h1 / hodina
+                :mod (s5m1 / math
+                    :op1 (s5x4 / 7)
+                    :op2 (s5x5 / 9)))
+            :aspect state))
+
+# alignment:
+s5a1: 13-13
+s5e1: 0-0
+s5p1: 3-3
+s5p2: 4-5
+s5s1: 1-1
+s5e2: 0-0
+s5k1: 8-8
+s5x2: 7-7
+s5r1: 9-10
+s5n1: 12-12
+s5e3: 0-0
+s5h1: 17-17
+s5m1: 15-15
+s5x4: 14-14
+s5x5: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p2 :same-entity s4p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2      3        4
+Words: Krajem malířů Vysočiny .
+
+# sentence level graph:
+(s6e1 / event
+        :path (s6k1 / kraj
+            :possessor (s6m1 / malíř
+                :ARG1 (s6v1 / vysočina
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s6e1: 0-0
+s6k1: 1-1
+s6m1: 2-2
+s6v1: 3-3
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2  3  4  5  6  7  8          9  10      11 12 13 14  15
+Words: 50 ,  35 ,  20 km od tělocvičny v  Hlinsku 6  až 9  hod .
+
+# sentence level graph:
+(s7e1 / event
+        :ARG1 (s7k1 / km
+            :mod (s7m1 / math
+                :op1 (s7x1 / 50)
+                :op2 (s7x2 / 35)
+                :op3 (s7x3 / 20)))
+        :start (s7t1 / tělocvična
+            :place (s7h1 / Hlinsko
+                :refer-number singular)
+            :refer-number singular)
+        :duration (s7h2 / hodina
+            :mod (s7m2 / math
+                :op1 (s7x4 / 6)
+                :op2 (s7x5 / 9)))
+        :aspect state)
+
+# alignment:
+s7e1: 0-0
+s7k1: 6-6
+s7m1: 4-4
+s7x1: 1-1
+s7x2: 3-3
+s7x3: 5-5
+s7t1: 7-8
+s7h1: 9-10
+s7h2: 14-14
+s7m2: 12-12
+s7x4: 11-11
+s7x5: 13-13
+
+# document level annotation:
+(s7s0 / sentence)
+
+

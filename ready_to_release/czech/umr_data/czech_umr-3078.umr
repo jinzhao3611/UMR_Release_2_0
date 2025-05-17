@@ -1,0 +1,300 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2 3
+Words: Boxer u výslechu
+
+# sentence level graph:
+(s1b1 / boxer
+        :place (s1v1 / výslech
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1b1: 1-1
+s1v1: 2-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1   2    3
+Words: New York -
+
+# sentence level graph:
+(s2y1 / York
+        :mod (s2n1 / New)
+        :refer-number singular)
+
+# alignment:
+s2y1: 2-2
+s2n1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2     3      4  5        6  7      8  9        10      11        12 13 14       15       16
+Words: Americký boxer Mercer ,  obviněný z  pokusu o  uplácení soupeře Fergusona ,  se podrobil výslechu .
+
+# sentence level graph:
+(s3p1 / podrobit-se-001
+        :ARG0 (s3m1 / Mercer
+            :mod (s3b1 / boxer
+                :mod (s3a1 / americký
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3o1 / obviněný
+                :ARG1 (s3p2 / pokus
+                    :ARG1 (s3u1 / uplácení
+                        :ARG0 (s3e1 / entity)
+                        :ARG1 (s3f1 / Ferguson
+                            :mod (s3s1 / soupeř
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3v1 / výslech
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3p1: 13-14
+s3m1: 3-3
+s3b1: 2-2
+s3a1: 1-1
+s3o1: 5-5
+s3p2: 6-7
+s3u1: 8-9
+s3e1: 0-0
+s3f1: 11-11
+s3s1: 10-10
+s3v1: 15-15
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3m1 :same-entity s1b1)
+            (s3v1 :same-entity s1v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2   3    4  5  6  7  8     9      10          11     12     13 14       15  16    17     18
+Words: Žaloba jej viní ,  že 6  .  února nabídl Fergusonovi 100000 dolarů ,  jestliže jej nechá vyhrát .
+
+# sentence level graph:
+(s4v1 / vinit-001
+        :ARG0 (s4z1 / žaloba
+            :refer-number singular)
+        :ARG2 (s4e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s4n1 / nabídnout-001
+            :temporal (s4u1 / únor
+                :mod (s4x1 / 6)
+                :refer-number singular)
+            :ARG0 s4e1
+            :ARG2 (s4f1 / Ferguson
+                :refer-number singular)
+            :ARG1 (s4d1 / dolar
+                :mod (s4x3 / 100000)
+                :refer-number plural)
+            :condition (s4n2 / nechat-005
+                :ARG0 s4f1
+                :ARG1 s4e1
+                :effect (s4v2 / vyhrát-002
+                    :ARG0 s4e1
+                    :ARG1 (s4e2 / entity)
+                    :aspect performance)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4v1: 3-3
+s4z1: 1-1
+s4e1: 2-2,15-15
+s4n1: 5-5,9-9
+s4u1: 8-8
+s4x1: 6-6
+s4f1: 10-10
+s4d1: 12-12
+s4x3: 11-11
+s4n2: 14-14,16-16
+s4v2: 17-17
+s4e2: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3m1)
+            (s4f1 :same-entity s3f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1        2         3  4       5           6  7       8  9       10    11    12
+Words: Případné vítězství by Mercera opravňovalo k  souboji s  mistrem světa Bowem .
+
+# sentence level graph:
+(s5o1 / opravňovat-001
+        :ARG0 (s5v1 / vítězství
+            :mod (s5p1 / případný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s5m1 / Mercer
+            :refer-number singular)
+        :ARG1 (s5s1 / souboj
+            :ARG1 (s5b1 / Bowe
+                :mod (s5m2 / mistr
+                    :possessor (s5s2 / svět
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s5o1: 3-3,5-5
+s5v1: 2-2
+s5p1: 1-1
+s5m1: 4-4
+s5s1: 6-7
+s5b1: 8-8,11-11
+s5m2: 9-9
+s5s2: 10-10
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5m1 :same-entity s4e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2       3      4        5     6  7    8
+Words: Zápas nakonec vyhrál Ferguson jasně na body .
+
+# sentence level graph:
+(s6v1 / vyhrát-002
+        :ARG1 (s6z1 / zápas
+            :refer-number singular)
+        :temporal (s6n1 / nakonec)
+        :ARG0 (s6f1 / Ferguson
+            :refer-number singular
+            :refer-person 3rd)
+        :manner (s6j1 / jasně)
+        :manner (s6b1 / bod
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6v1: 3-3
+s6z1: 1-1
+s6n1: 2-2
+s6f1: 4-4
+s6j1: 5-5
+s6b1: 6-7
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6f1 :same-entity s4f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2       3      4  5           6  7  8     9      10     11         12        13 14  15        16 17 18     19 20      21   22     23      24       25      26
+Words: Hlavním důkazem žaloby je videozáznam ,  z  něhož soudní znalec ovládající odečítání ze rtů rozpoznal ,  že Mercer v  průběhu boje učinil soupeři zmíněnou nabídku .
+
+# sentence level graph:
+(s7b1 / být-007
+        :ARG1 (s7d1 / důkaz
+            :ARG1 (s7z1 / žaloba
+                :refer-number singular)
+            :mod (s7h1 / hlavní
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7v1 / videozáznam
+            :start-of (s7r1 / rozpoznat-002
+                :ARG0 (s7z2 / znalec
+                    :mod (s7s1 / soudní
+                        :refer-number singular)
+                    :mod (s7o1 / ovládající
+                        :ARG1 (s7o2 / odečítání
+                            :ARG0 (s7e1 / entity)
+                            :start (s7r2 / ret
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s7u1 / učinit-007
+                    :ARG0 (s7m1 / Mercer
+                        :refer-number singular)
+                    :temporal (s7b2 / boj
+                        :refer-number singular)
+                    :ARG2 (s7s2 / soupeř
+                        :refer-number singular)
+                    :predicative-noun (s7n1 / nabídka
+                        :mod (s7z3 / zmíněný
+                            :refer-number singular)
+                        :ARG0 s7m1
+                        :ARG1 (s7e2 / entity)
+                        :ARG2 s7s2
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7b1: 4-4
+s7d1: 2-2
+s7z1: 3-3
+s7h1: 1-1
+s7v1: 5-5,7-8
+s7r1: 15-15
+s7z2: 10-10
+s7s1: 9-9
+s7o1: 11-11
+s7o2: 12-12
+s7e1: 0-0
+s7r2: 13-14
+s7u1: 17-17,22-22
+s7m1: 18-18
+s7b2: 19-21
+s7s2: 23-23
+s7n1: 25-25
+s7z3: 24-24
+s7e2: 0-0
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7z1 :same-entity s4z1)
+            (s7m1 :same-entity s5m1)
+            (s7b2 :same-entity s6z1)
+            (s7s2 :same-entity s6f1)
+            (s7n1 :same-event s4n1)))
+
+

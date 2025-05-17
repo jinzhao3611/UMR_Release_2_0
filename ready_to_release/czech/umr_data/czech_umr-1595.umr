@@ -1,0 +1,356 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2        3  4
+Words: Papež nepojede do Sarajeva
+
+# sentence level graph:
+(s1j1 / jet-004
+        :ARG0 (s1p1 / papež
+            :refer-number singular)
+        :goal (s1s1 / Sarajevo
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s1j1: 2-2
+s1p1: 1-1
+s1s1: 3-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2
+Words: Vatikán -
+
+# sentence level graph:
+(s2v1 / Vatikán
+        :refer-number singular)
+
+# alignment:
+s2v1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2      3          4        5            6      7  8      9     10  11    12 13 14       15       16         17 18    19      20
+Words: Protože nebyly poskytnuty nezbytné bezpečnostní záruky ,  zrušil papež Jan Pavel II .  návštěvu Sarajeva plánovanou na tento čtvrtek .
+
+# sentence level graph:
+(s3z1 / zrušit-001
+        :cause (s3p1 / poskytnout-002
+            :ARG0 (s3e1 / entity)
+            :ARG2 (s3e2 / entity)
+            :predicative-noun (s3z2 / záruka
+                :ARG0 s3e1
+                :ARG1 (s3e3 / entity)
+                :mod (s3b1 / bezpečnostní
+                    :refer-number plural)
+                :mod (s3z3 / zbytný
+                    :refer-number plural
+                    :polarity -)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance)
+        :ARG0 (s3p2 / Pavel
+            :mod (s3j1 / Jan
+                :refer-number singular)
+            :mod (s3i1 / II)
+            :mod (s3p3 / papež
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3n1 / návštěva
+            :ARG1 (s3s1 / Sarajevo
+                :refer-number singular)
+            :mod (s3p4 / plánovaný
+                :temporal (s3c1 / čtvrtek
+                    :mod (s3t1 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3z1: 8-8
+s3p1: 1-3
+s3e1: 0-0
+s3e2: 0-0
+s3z2: 6-6
+s3e3: 0-0
+s3b1: 5-5
+s3z3: 4-4
+s3p2: 11-11
+s3j1: 10-10
+s3i1: 12-12
+s3p3: 9-9
+s3n1: 14-14
+s3s1: 15-15
+s3p4: 16-16
+s3c1: 17-17,19-19
+s3t1: 18-18
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p2 :same-entity s1p1)
+            (s3s1 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2     3  4  5     6    7           8  9  10   11     12         13     14  15           16 17 18   19 20 21    22 23       24     25
+Words: Vatikán uvedl ,  že papež vždy zdůrazňoval ,  že musí dostat dostatečné záruky pro obyvatelstvo ,  s  nímž by se chtěl v  Sarajevě setkat .
+
+# sentence level graph:
+(s4u1 / uvést-007
+        :ARG0 (s4v1 / Vatikán
+            :refer-number singular)
+        :effect (s4z1 / zdůrazňovat-001
+            :ARG0 (s4p1 / papež
+                :refer-number singular)
+            :frequency (s4v2 / vždy)
+            :ARG1 (s4d1 / dostat-001
+                :ARG0 s4p1
+                :ARG1 (s4z2 / záruka
+                    :mod (s4d2 / dostatečný
+                        :refer-number plural)
+                    :refer-number plural)
+                :affectee (s4o1 / obyvatelstvo
+                    :ARG1-of (s4s1 / setkat-se-001
+                        :ARG0 (s4e1 / entity)
+                        :place (s4s2 / Sarajevo
+                            :refer-number singular)
+                        :aspect performance)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4u1: 2-2
+s4v1: 1-1
+s4z1: 4-4,7-7
+s4p1: 5-5
+s4v2: 6-6
+s4d1: 9-11
+s4z2: 13-13
+s4d2: 12-12
+s4o1: 14-15,17-18
+s4s1: 19-21,24-24
+s4e1: 0-0
+s4s2: 22-23
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4v1 :same-entity s2v1)
+            (s4p1 :same-entity s3p2)
+            (s4s2 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2      3        4   5         6      7            8
+Words: Papež vykoná návštěvu při nejbližší vhodné příležitosti .
+
+# sentence level graph:
+(s5v1 / vykonat-002
+        :ARG0 (s5p1 / papež
+            :refer-number singular
+            :refer-person 3rd)
+        :predicative-noun (s5n1 / návštěva
+            :ARG0 s5p1
+            :ARG1 (s5e1 / entity)
+            :refer-number singular)
+        :temporal (s5p2 / příležitost
+            :mod (s5v2 / vhodný
+                :refer-number singular)
+            :mod (s5b1 / blízký
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s5v1: 2-2
+s5p1: 1-1
+s5n1: 3-3
+s5e1: 0-0
+s5p2: 4-4,7-7
+s5v2: 6-6
+s5b1: 5-5
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p1 :same-entity s4p1)
+            (s5n1 :same-entity s3n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2     3     4           5        6   7           8        9          10
+Words: Prezident Bosny Alija Izetbegović vyjádřil nad rozhodnutím Vatikánu politování .
+
+# sentence level graph:
+(s6v1 / vyjádřit-003
+        :ARG0 (s6i1 / Izetbegovič
+            :mod (s6a1 / Alija
+                :refer-number singular)
+            :mod (s6p1 / prezident
+                :possessor (s6b1 / Bosna
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :predicative-noun (s6p2 / politování
+            :ARG1 (s6r1 / rozhodnutí
+                :ARG0 (s6v2 / Vatikán
+                    :refer-number singular)
+                :ARG1 (s6e1 / entity)
+                :refer-number singular)
+            :ARG0 s6i1
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6v1: 5-5
+s6i1: 4-4
+s6a1: 3-3
+s6p1: 1-1
+s6b1: 2-2
+s6p2: 9-9
+s6r1: 6-7
+s6v2: 8-8
+s6e1: 0-0
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6v2 :same-entity s4v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2    3       4       5     6         7   8       9  10       11   12     13
+Words: Za jeho příčinu označil dopis zmocněnce OSN Akašiho ,  varující před cestou .
+
+# sentence level graph:
+(s7o1 / označit-001
+        :effect (s7p1 / příčina
+            :ARG1 (s7e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :ARG0 (s7e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s7d1 / dopis
+            :ARG0 (s7a1 / Akaši
+                :mod (s7z1 / zmocněnec
+                    :possessor (s7o2 / OSN)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s7v1 / varující
+                :ARG1 (s7c1 / cesta
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7o1: 4-4
+s7p1: 1-1,3-3
+s7e1: 2-2
+s7e2: 0-0
+s7d1: 5-5
+s7a1: 8-8
+s7z1: 6-6
+s7o2: 7-7
+s7v1: 10-10
+s7c1: 11-12
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6r1)
+            (s7e2 :same-entity s6i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2         3   4    5  6        7     8        9   10      11  12 13          14      15 16  17   18 19      20      21      22 23      24
+Words: Podle informací OSN byla v  minulých dnech zasažena dvě letadla OSN na sarajevském letišti ,  kde mělo ve čtvrtek přistát letadlo s  papežem .
+
+# sentence level graph:
+(s8z1 / zasáhnout-001
+        :regard (s8i1 / informace
+            :ARG0 (s8o1 / OSN)
+            :refer-number plural)
+        :ARG0 (s8e1 / entity)
+        :temporal (s8d1 / den
+            :mod (s8m1 / minulý
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s8l1 / letadlo
+            :possessor (s8o2 / OSN)
+            :mod (s8d2 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :place (s8l2 / letiště
+            :mod (s8s1 / sarajevský
+                :refer-number singular)
+            :place-of (s8p1 / přistát-001
+                :temporal (s8c1 / čtvrtek
+                    :refer-number singular)
+                :ARG0 (s8l3 / letadlo
+                    :companion (s8p2 / papež
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s8z1: 4-4,8-8
+s8i1: 1-2
+s8o1: 3-3
+s8e1: 0-0
+s8d1: 5-5,7-7
+s8m1: 6-6
+s8l1: 10-10
+s8o2: 11-11
+s8d2: 9-9
+s8l2: 12-12,14-14,16-16
+s8s1: 13-13
+s8p1: 17-17,20-20
+s8c1: 18-19
+s8l3: 21-21
+s8p2: 22-23
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8o1 :same-entity s7o2)
+            (s8o2 :same-entity s8o1)
+            (s8s1 :same-entity s4s2)
+            (s8c1 :same-entity s3c1)
+            (s8p2 :same-entity s5p1)))
+
+

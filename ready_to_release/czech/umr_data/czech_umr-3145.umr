@@ -1,0 +1,664 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2  3        4      5      6    7      8  9        10 11
+Words: Vojáci v  základní službě musejí opět chodit na vycházky ve stejnokrojích
+
+# sentence level graph:
+(s1c1 / chodit-006
+        :ARG0 (s1v1 / voják
+            :mod (s1s1 / služba
+                :mod (s1z1 / základní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :temporal (s1o1 / opět)
+        :goal (s1v2 / vycházka
+            :refer-number plural)
+        :manner (s1s2 / stejnokroj
+            :refer-number plural)
+        :aspect activity)
+
+# alignment:
+s1c1: 5-5,7-7
+s1v1: 1-1
+s1s1: 2-2,4-4
+s1z1: 3-3
+s1o1: 6-6
+s1v2: 8-9
+s1s2: 10-11
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5  6 7
+Words: Praha ( jkl , jh ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2a1 / and
+            :op1 (s2j1 / jkl)
+            :op2 (s2j2 / jh))
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2a1: 4-4
+s2j1: 3-3
+s2j2: 5-5
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2  3        4      5     6     7  8  9  10       11     12 13       14   15 16          17
+Words: Vojáci v  základní službě budou muset od 29 .  července chodit na vycházky opět ve stejnokroji .
+
+# sentence level graph:
+(s3c1 / chodit-006
+        :ARG0 (s3v1 / voják
+            :mod (s3s1 / služba
+                :mod (s3z1 / základní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :temporal (s3c2 / červenec
+            :mod (s3x1 / 29)
+            :refer-number singular)
+        :goal (s3v2 / vycházka
+            :refer-number plural)
+        :temporal (s3o1 / opět)
+        :manner (s3s2 / stejnokroj
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s3c1: 5-6,11-11
+s3v1: 1-1
+s3s1: 2-2,4-4
+s3z1: 3-3
+s3c2: 7-7,10-10
+s3x1: 8-8
+s3v2: 12-13
+s3o1: 14-14
+s3s2: 15-16
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3v1 :same-entity s1v1)
+            (s3s1 :same-entity s3v1)
+            (s3v2 :same-entity s1v2)
+            (s3s2 :same-entity s1s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2    3     4     5   6  7        8  9  10 11    12 13        14       15     16
+Words: Civilní oděv smějí nosit jen na dovolené ,  a  to ještě se souhlasem velitele útvaru .
+
+# sentence level graph:
+(s4n1 / nosit-002
+        :ARG1 (s4o1 / oděv
+            :mod (s4c1 / civilní
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :clausal-marker (s4j1 / jen)
+        :companion (s4i1 / identity-91
+            :ARG1 (s4d1 / dovolená
+                :refer-number singular)
+            :clausal-marker (s4j2 / ještě)
+            :ARG2 (s4s1 / souhlas
+                :ARG0 (s4v1 / velitel
+                    :ARG1 (s4u1 / útvar
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular))
+        :aspect activity)
+
+# alignment:
+s4n1: 3-4
+s4o1: 2-2
+s4c1: 1-1
+s4e1: 0-0
+s4j1: 5-5
+s4i1: 9-10
+s4d1: 6-7
+s4j2: 11-11
+s4s1: 12-13
+s4v1: 14-14
+s4u1: 15-15
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2  3  4       5  6     7        8         9         10   11     12      13          14  15 16    17       18       19  20
+Words: Vyplývá to z  rozkazu ,  který podepsal prezident republiky jako vrchní velitel ozbrojených sil a  který doplňuje základní řád .
+
+# sentence level graph:
+(s5v1 / vyplývat-001
+        :ARG0 (s5t1 / ten
+            :refer-number singular)
+        :ARG1 (s5r1 / rozkaz
+            :mod (s5a1 / and
+                :op1 (s5p1 / podepsat-001
+                    :ARG1 s5r1
+                    :ARG0 (s5p2 / prezident
+                        :possessor (s5r2 / republika
+                            :refer-number singular)
+                        :refer-number singular)
+                    :manner (s5v2 / velitel
+                        :mod-of s5p2
+                        :ARG1 (s5s1 / síla
+                            :mod (s5o1 / ozbrojený
+                                :refer-number plural)
+                            :refer-number plural)
+                        :mod (s5v3 / vrchní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance)
+                :op2 (s5d1 / doplňovat-001
+                    :ARG0 s5r1
+                    :ARG1 (s5r3 / řád
+                        :mod (s5z1 / základní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity))
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5v1: 1-1
+s5t1: 2-2
+s5r1: 3-4,6-6,16-16
+s5a1: 15-15
+s5p1: 7-7
+s5p2: 8-8
+s5r2: 9-9
+s5v2: 10-10,12-12
+s5s1: 14-14
+s5o1: 13-13
+s5v3: 11-11
+s5d1: 17-17
+s5r3: 19-19
+s5z1: 18-18
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5t1 :same-entity s4i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2     3          4  5  6        7  8      9      10 11     12         13 14      15
+Words: Povinnost nosit stejnokroj i  na vycházce se netýká vojáků v  záloze povolaných na cvičení .
+
+# sentence level graph:
+(s6t1 / týkat-se-001
+        :ARG0 (s6p1 / povinnost
+            :ARG0 (s6e1 / entity)
+            :ARG1 (s6n1 / nosit-002
+                :ARG1 (s6s1 / stejnokroj
+                    :refer-number singular)
+                :ARG0 s6e1
+                :clausal-marker (s6i1 / i)
+                :place (s6v1 / vycházka
+                    :refer-number singular)
+                :aspect activity)
+            :refer-number singular)
+        :ARG1 (s6v2 / voják
+            :mod (s6z1 / záloha
+                :refer-number singular)
+            :mod (s6p2 / povolaný
+                :goal (s6c1 / cvičení
+                    :ARG0 (s6e2 / entity)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s6t1: 7-8
+s6p1: 1-1
+s6e1: 0-0
+s6n1: 2-2
+s6s1: 3-3
+s6i1: 4-4
+s6v1: 5-6
+s6v2: 9-9
+s6z1: 10-11
+s6p2: 12-12
+s6c1: 13-14
+s6e2: 0-0
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p1 :same-event s3c1)
+            (s6s1 :same-entity s3s2)
+            (s6v1 :same-entity s3v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2  3    4  5   6      7  8        9    10      11 12         13 14     15           16     17       18   19 20   21 22  23       24     25    26 27 28   29       30      31
+Words: Podněty k  tomu ,  aby vojáci na vycházce opět chodili v  uniformách ,  dávali ministerstvu obrany zástupci měst a  obcí ,  kde vojenské útvary sídlí ,  a  také Vojenská policie .
+
+# sentence level graph:
+(s7d1 / dávat-020
+        :predicative-noun (s7p1 / podnět
+            :ARG1 (s7c1 / chodit-007
+                :ARG0 (s7v1 / voják
+                    :place (s7v2 / vycházka
+                        :refer-number singular)
+                    :refer-number plural
+                    :refer-person 3rd)
+                :temporal (s7o1 / opět)
+                :manner (s7u1 / uniforma
+                    :refer-number plural)
+                :refer-number plural
+                :aspect activity)
+            :ARG0 s7a1
+            :refer-number plural)
+        :ARG2 (s7m1 / ministerstvo
+            :possessor (s7o2 / obrana
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7a1 / and
+            :op1 (s7z1 / zástupce
+                :ARG1 (s7a2 / and
+                    :op1 (s7m2 / město
+                        :place-of (s7s1 / sídlit-001
+                            :ARG0 (s7u2 / útvar
+                                :mod (s7v3 / vojenský
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :refer-number plural
+                            :refer-person 3rd
+                            :aspect activity)
+                        :refer-number plural)
+                    :op2 (s7o3 / obec
+                        :place-of s7s1
+                        :refer-number plural))
+                :refer-number plural)
+            :clausal-marker (s7t1 / také)
+            :op2 (s7p2 / policie
+                :mod (s7v4 / vojenský
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s7d1: 14-14
+s7p1: 1-1
+s7c1: 2-3,5-5,10-10
+s7v1: 6-6
+s7v2: 7-8
+s7o1: 9-9
+s7u1: 11-12
+s7m1: 15-15
+s7o2: 16-16
+s7a1: 27-27
+s7z1: 17-17
+s7a2: 19-19,22-22
+s7m2: 18-18
+s7s1: 25-25
+s7u2: 24-24
+s7v3: 23-23
+s7o3: 20-20
+s7t1: 28-28
+s7p2: 30-30
+s7v4: 29-29
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7v1 :same-entity s4e1)
+            (s7v2 :same-entity s6v1)
+            (s7u1 :same-entity s6s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1      2  3      4     5      6         7         8    9  10          11
+Words: Vojáci v  civilu totiž mnohdy využívali anonymity davu k  výtržnostem .
+
+# sentence level graph:
+(s8v1 / využívat-001
+        :clausal-marker (s8t1 / totiž)
+        :ARG0 (s8v2 / voják
+            :mod (s8c1 / civil
+                :refer-number singular)
+            :refer-number plural)
+        :frequency (s8m1 / mnohdy)
+        :ARG1 (s8a1 / anonymita
+            :possessor (s8d1 / dav
+                :refer-number singular)
+            :refer-number singular)
+        :purpose (s8v3 / výtržnost
+            :refer-number plural)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s8v1: 6-6
+s8t1: 4-4
+s8v2: 1-1
+s8c1: 2-3
+s8m1: 5-5
+s8a1: 7-7
+s8d1: 8-8
+s8v3: 9-10
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8c1 :same-entity s4o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1             2        3       4       5  6  7     8         9   10    11      12 13       14
+Words: Představitelé Vojenské policie uváděli ,  že mohou zasahovat jen proti vojákům v  uniformě .
+
+# sentence level graph:
+(s9u1 / uvádět-008
+        :ARG0 (s9p1 / představitel
+            :possessor (s9p2 / policie
+                :mod (s9v1 / vojenský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :effect (s9z1 / zasahovat-003
+            :ARG0 s9p1
+            :ARG1 (s9v2 / voják
+                :clausal-marker (s9j1 / jen)
+                :mod (s9u2 / uniforma
+                    :refer-number singular)
+                :refer-number plural)
+            :aspect activity)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s9u1: 4-4
+s9p1: 1-1
+s9p2: 3-3
+s9v1: 2-2
+s9z1: 6-8
+s9v2: 10-11
+s9j1: 9-9
+s9u2: 12-13
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p2 :same-entity s7p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1       2    3  4       5         6     7    8        9          10 11    12     13 14  15     16  17     18       19       20     21 22 23     24       25 26          27      28        29    30 31      32 33       34 35        36      37     38
+Words: Městský úřad ve Vyškově například dosud řeší následky výtržnosti z  konce června ,  kdy vojáci při oslavě zkrácení základní služby na 12 měsíců povalili a  zdemolovali jedinou telefonní budku na náměstí v  Dědicích a  poškodili vzácnou sakuru .
+
+# sentence level graph:
+(s10r1 / řešit-001
+        :clausal-marker (s10n1 / například)
+        :ARG0 (s10u1 / úřad
+            :mod (s10m1 / městský
+                :refer-number singular)
+            :place (s10v1 / Vyškov
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s10d1 / dosud)
+        :ARG1 (s10n2 / následek
+            :possessor (s10v2 / výtržnost
+                :temporal (s10k1 / konec
+                    :possessor (s10c1 / červen
+                        :refer-number singular)
+                    :refer-number singular)
+                :temporal-of (s10a1 / and
+                    :op1 (s10a2 / and
+                        :op1 (s10p1 / povalit-001
+                            :ARG0 s10v3
+                            :ARG1 (s10b1 / budka
+                                :mod (s10t1 / telefonní
+                                    :refer-number singular)
+                                :mod (s10j1 / jediný
+                                    :refer-number singular)
+                                :place (s10n3 / náměstí
+                                    :place (s10d2 / dědic
+                                        :refer-number plural)
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number plural
+                            :aspect performance)
+                        :op2 (s10z1 / zdemolovat-001
+                            :ARG1 s10b1
+                            :ARG0 s10v3
+                            :refer-number plural
+                            :aspect performance))
+                    :op2 (s10p2 / poškodit-001
+                        :ARG0 (s10v3 / voják
+                            :refer-number plural)
+                        :temporal (s10o1 / oslava
+                            :ARG1 (s10z2 / zkrácení
+                                :ARG0 (s10e1 / entity)
+                                :ARG1 (s10s1 / služba
+                                    :mod (s10z3 / základní
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :effect (s10m2 / měsíc
+                                    :mod (s10x4 / 12)
+                                    :refer-number plural)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG1 (s10s2 / sakura
+                            :mod (s10v4 / vzácný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural
+                        :aspect performance))
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s10r1: 7-7
+s10n1: 5-5
+s10u1: 2-2
+s10m1: 1-1
+s10v1: 3-4
+s10d1: 6-6
+s10n2: 8-8
+s10v2: 9-9,14-14
+s10k1: 10-11
+s10c1: 12-12
+s10a1: 34-34
+s10a2: 25-25
+s10p1: 24-24
+s10b1: 29-29
+s10t1: 28-28
+s10j1: 27-27
+s10n3: 30-31
+s10d2: 32-33
+s10z1: 26-26
+s10p2: 35-35
+s10s2: 37-37
+s10v4: 36-36
+s10v3: 15-15
+s10o1: 16-17
+s10z2: 18-18
+s10e1: 0-0
+s10s1: 20-20
+s10z3: 19-19
+s10m2: 21-21,23-23
+s10x4: 22-22
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10s1 :same-entity s7v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1       2        3    4       5 6          7       8
+Words: Podobné problémy měla nedávno i pardubická radnice .
+
+# sentence level graph:
+(s11m1 / mít-038
+        :predicative-noun (s11p1 / problém
+            :ARG0 s11r1
+            :mod (s11p2 / podobný
+                :refer-number plural)
+            :refer-number plural)
+        :temporal (s11d1 / dávno
+            :polarity -)
+        :ARG0 (s11r1 / radnice
+            :clausal-marker (s11i1 / i)
+            :mod (s11p3 / pardubický
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s11m1: 3-3
+s11p1: 2-2
+s11p2: 1-1
+s11d1: 4-4
+s11r1: 7-7
+s11i1: 5-5
+s11p3: 6-6
+
+# document level annotation:
+(s11s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1      2         3  4       5      6       7      8      9         10    11       12
+Words: Místní obyvatelé si dokonce chtěli založit jakési oddíly domobrany proti vandalům .
+
+# sentence level graph:
+(s12z1 / založit-001
+        :ARG0 (s12o1 / obyvatel
+            :mod (s12m1 / místní
+                :refer-number plural)
+            :refer-number plural)
+        :affectee s12o1
+        :clausal-marker (s12d1 / dokonce)
+        :ARG1 (s12o2 / oddíl
+            :possessor (s12d2 / domobrana
+                :affectee (s12v1 / vandal
+                    :refer-number plural)
+                :refer-number singular)
+            :mod (s12j1 / jakýsi
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s12z1: 5-6
+s12o1: 2-3
+s12m1: 1-1
+s12d1: 4-4
+s12o2: 8-8
+s12d2: 9-9
+s12v1: 10-11
+s12j1: 7-7
+
+# document level annotation:
+(s12s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1      2  3        4  5         6      7       8        9             10     11       12     13 14    15 16         17       18     19
+Words: Chodit na vycházky v  civilních šatech vojákům umožnila polistopadová novela branného zákona a  snahy o  humanizaci vojenské služby .
+
+# sentence level graph:
+(s13u1 / umožnit-001
+        :ARG1 (s13c1 / chodit-006
+            :manner (s13s1 / šat
+                :mod (s13c2 / civilní
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 s13v1
+            :goal (s13v2 / vycházka
+                :refer-number plural)
+            :aspect activity)
+        :ARG2 (s13v1 / voják
+            :refer-number plural)
+        :ARG0 (s13a1 / and
+            :op1 (s13n1 / novela
+                :ARG1 (s13z1 / zákon
+                    :mod (s13b1 / branný
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s13p1 / polistopadový
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s13s2 / snaha
+                :ARG1 (s13h1 / humanizace
+                    :ARG1 (s13s3 / služba
+                        :mod (s13v3 / vojenský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural))
+        :aspect performance)
+
+# alignment:
+s13u1: 8-8
+s13c1: 1-1
+s13s1: 4-4,6-6
+s13c2: 5-5
+s13v2: 2-3
+s13v1: 7-7
+s13a1: 13-13
+s13n1: 10-10
+s13z1: 12-12
+s13b1: 11-11
+s13p1: 9-9
+s13s2: 14-14
+s13h1: 15-16
+s13s3: 18-18
+s13v3: 17-17
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13s1 :same-entity s8c1)
+            (s13v2 :same-entity s7v2)
+            (s13v1 :same-entity s10s1)))
+
+

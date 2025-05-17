@@ -1,0 +1,102 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1                 2      3      4  5       6  7       8    9    10        11      12  13 14 15        16
+Words: Jednašedesátiletý Pierre Vinken se připojí ke správní radě jako nevýkonný ředitel dne 29 .  listopadu .
+
+# sentence level graph:
+(s1p1 / připojit-se-002
+        :ARG0 (s1v1 / Vinken
+            :mod (s1p2 / Pierre
+                :mod (s1j1 / jednašedesátiletý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :goal (s1r1 / rada
+            :mod (s1s1 / správní
+                :refer-number singular)
+            :refer-number singular)
+        :manner (s1r2 / ředitel
+            :mod-of s1v1
+            :mod (s1v2 / výkonný
+                :refer-number singular
+                :polarity -)
+            :refer-number singular)
+        :temporal (s1d1 / den
+            :mod (s1l1 / listopad
+                :mod (s1x2 / 29)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1p1: 4-5
+s1v1: 3-3
+s1p2: 2-2
+s1j1: 1-1
+s1r1: 6-6,8-8
+s1s1: 7-7
+s1r2: 9-9,11-11
+s1v2: 10-10
+s1d1: 12-12
+s1l1: 15-15
+s1x2: 13-14
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2  3           4           5        6  7  8  9  10 11        12           13      14
+Words: Vinken je prezidentem společnosti Elsevier N  .  V  .  ,  holandské vydavatelské skupiny .
+
+# sentence level graph:
+(s2b1 / být-007
+        :ARG0 (s2v1 / Vinken
+            :refer-number singular)
+        :ARG1 (s2p1 / prezident
+            :mod (s2i1 / identity-91
+                :ARG1 (s2s1 / společnost
+                    :name (s2x1 / #Forn
+                        :FPHR (s2e1 / Elsevier)
+                        :FPHR (s2n1 / N)
+                        :FPHR (s2x2 / .)
+                        :FPHR (s2v2 / V)
+                        :FPHR (s2x3 / .))
+                    :refer-number singular)
+                :ARG2 (s2s2 / skupina
+                    :mod (s2h1 / holandský
+                        :refer-number singular)
+                    :mod (s2v3 / vydavatelský
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2b1: 2-2
+s2v1: 1-1
+s2p1: 3-3
+s2i1: 10-10
+s2s1: 4-4
+s2x1: 0-0
+s2e1: 5-5
+s2n1: 6-6
+s2x2: 7-7
+s2v2: 8-8
+s2x3: 9-9
+s2s2: 13-13
+s2h1: 11-11
+s2v3: 12-12
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2v1 :same-entity s1v1)))
+
+

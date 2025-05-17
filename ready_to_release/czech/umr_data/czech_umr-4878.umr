@@ -1,0 +1,87 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2        3      4     5    6  7         8      9  10    11             12 13         14 15 16       17     18             19      20   21
+Words: V  důsledku ediční chyby byla ve včerejším vydání v  listě šéfredaktorovi od Fredericka H  .  Halletta špatně identifikována zkratka NRDC .
+
+# sentence level graph:
+(s1i1 / identifikovat-002
+        :ARG0 (s1e1 / entity)
+        :cause (s1c1 / chyba
+            :mod (s1e2 / ediční
+                :refer-number singular)
+            :refer-number singular)
+        :place (s1v1 / vydání
+            :temporal (s1v2 / včerejší
+                :refer-number singular)
+            :place (s1l1 / list
+                :mod (s1s1 / šéfredaktor
+                    :refer-number singular)
+                :mod (s1h1 / Hallett
+                    :mod (s1f1 / Frederick
+                        :refer-number singular)
+                    :mod (s1h2 / H)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :manner (s1s2 / špatně)
+        :ARG1 (s1z1 / zkratka
+            :name (s1n1 / NRDC)
+            :refer-number singular)
+        :aspect process)
+
+# alignment:
+s1i1: 5-5,18-18
+s1e1: 0-0
+s1c1: 1-2,4-4
+s1e2: 3-3
+s1v1: 6-6,8-8
+s1v2: 7-7
+s1l1: 9-10
+s1s1: 11-11
+s1h1: 12-12,16-16
+s1f1: 13-13
+s1h2: 14-14
+s1s2: 17-17
+s1z1: 19-19
+s1n1: 20-20
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2  3   4    5  6       7          8      9
+Words: Měla to být Rada na ochranu přírodních zdrojů .
+
+# sentence level graph:
+(s2b1 / být-007
+        :ARG0 (s2t1 / ten
+            :refer-number singular)
+        :ARG1 (s2x1 / #Idph
+            :name (s2r1 / rada
+                :purpose (s2o1 / ochrana
+                    :mod (s2z1 / zdroj
+                        :mod (s2p1 / přírodní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular))
+        :aspect activity)
+
+# alignment:
+s2b1: 1-1,3-3
+s2t1: 2-2
+s2x1: 0-0
+s2r1: 4-4
+s2o1: 5-6
+s2z1: 8-8
+s2p1: 7-7
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2t1 :same-entity s1z1)))
+
+

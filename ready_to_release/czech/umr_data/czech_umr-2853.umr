@@ -1,0 +1,368 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2 3
+Words: Fotbal s nadváhou
+
+# sentence level graph:
+(s1f1 / fotbal
+        :companion (s1n1 / nadváha
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1f1: 1-1
+s1n1: 2-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1   2       3  4           5           6     7  8        9           10       11     12       13 14   15   16    17   18  19  20        21
+Words: Pro přijetí do amatérského fotbalového klubu v  německém Blaufeldenu existuje jediná podmínka :  hráč musí vážit více než sto kilogramů .
+
+# sentence level graph:
+(s2e1 / existovat-001
+        :purpose (s2p1 / přijetí
+            :ARG0 (s2e2 / entity)
+            :ARG1 (s2e3 / entity)
+            :goal (s2k1 / klub
+                :mod (s2f1 / fotbalový
+                    :refer-number singular)
+                :mod (s2a1 / amatérský
+                    :refer-number singular)
+                :place (s2b1 / Blaufelden
+                    :mod (s2n1 / německý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s2p2 / podmínka
+            :mod (s2j1 / jediný
+                :refer-number singular)
+            :ARG1 (s2v1 / vážit-004
+                :ARG0 (s2h1 / hráč
+                    :refer-number singular)
+                :extent (s2h2 / hodně
+                    :comparison (s2s1 / sto
+                        :mod (s2k2 / kilogram
+                            :refer-number plural)
+                        :refer-number singular))
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2e1: 10-10
+s2p1: 1-2
+s2e2: 0-0
+s2e3: 0-0
+s2k1: 3-3,6-6
+s2f1: 5-5
+s2a1: 4-4
+s2b1: 7-7,9-9
+s2n1: 8-8
+s2p2: 12-12
+s2j1: 11-11
+s2v1: 15-16
+s2h1: 14-14
+s2h2: 17-17
+s2s1: 18-19
+s2k2: 20-20
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2  3     4       5     6  7  8     9     10    11   12   13 14    15    16    17
+Words: Tým má zatím třináct členů ,  z  nichž každý svoji váhu nosí na dresu místo čísla .
+
+# sentence level graph:
+(s3m1 / mít-009
+        :ARG0 (s3t1 / tým
+            :refer-number singular)
+        :temporal (s3z1 / zatím)
+        :ARG1 (s3c1 / člen
+            :mod (s3t2 / třináct
+                :refer-number singular)
+            :mod (s3n1 / nosit-002
+                :ARG0 (s3k1 / každý
+                    :start s3c1
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG1 (s3v1 / váha
+                    :possessor s3k1
+                    :refer-number singular)
+                :place (s3d1 / dres
+                    :refer-number singular)
+                :substitute (s3c2 / číslo
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s3m1: 2-2
+s3t1: 1-1
+s3z1: 3-3
+s3c1: 5-5,7-8
+s3t2: 4-4
+s3n1: 12-12
+s3k1: 9-10
+s3v1: 11-11
+s3d1: 13-14
+s3c2: 15-16
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3t1 :same-entity s2k1)
+            (s3k1 :same-entity s3c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1         2         3  4       5 6       7   8
+Words: Absolutní jedničkou je brankář s číslicí 146 .
+
+# sentence level graph:
+(s4b1 / být-007
+        :ARG1 (s4j1 / jednička
+            :mod (s4a1 / absolutní
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4b2 / brankář
+            :companion (s4c1 / číslice
+                :name (s4x1 / 146)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4b1: 3-3
+s4j1: 2-2
+s4a1: 1-1
+s4b2: 4-4
+s4c1: 5-6
+s4x1: 7-7
+
+# document level annotation:
+(s4s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2    3       4   5    6
+Words: Dohromady váží mužstvo 1.3 tuny .
+
+# sentence level graph:
+(s5v1 / vážit-004
+        :manner (s5d1 / dohromady)
+        :ARG0 (s5m1 / mužstvo
+            :refer-number singular)
+        :extent (s5t1 / tuna
+            :mod (s5x1 / 1.3)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5v1: 2-2
+s5d1: 1-1
+s5m1: 3-3
+s5t1: 5-5
+s5x1: 4-4
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5m1 :same-entity s3k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2    3        4      5   6   7  8  9     10 11       12
+Words: Jakmile něčí hmotnost klesne pod 100 kg ,  dojde k  vyřazení .
+
+# sentence level graph:
+(s6d1 / dojít-009
+        :temporal (s6k1 / klesnout-001
+            :ARG0 (s6h1 / hmotnost
+                :mod (s6n1 / něčí
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular)
+            :goal (s6k2 / kg
+                :mod (s6x1 / 100)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :ARG0 (s6v1 / vyřazení
+            :ARG0 (s6e1 / entity)
+            :ARG1 (s6e2 / entity)
+            :start (s6e3 / entity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s6d1: 9-9
+s6k1: 1-1,4-4
+s6h1: 3-3
+s6n1: 2-2
+s6k2: 5-5,7-7
+s6x1: 6-6
+s6v1: 10-11
+s6e1: 0-0
+s6e2: 0-0
+s6e3: 0-0
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6k2 :same-entity s2s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2       3      4       5  6     7    8  9   10 11 12 13 14  15  16  17 18               19     20
+Words: Jedinou výjimku dostal manažer ,  který váží "  jen "  91 kg ,  ale pro tým je nepostradatelnou oporou .
+
+# sentence level graph:
+(s7d1 / dostat-001
+        :ARG1 (s7v1 / výjimka
+            :mod (s7j1 / jediný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7m1 / manažer
+            :ARG0-of (s7b1 / but-91
+                :ARG1 (s7v2 / vážit-004
+                    :extent (s7k1 / kg
+                        :clausal-marker (s7j2 / jen)
+                        :mod (s7x1 / 91))
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :ARG2 (s7b2 / být-007
+                    :affectee (s7t1 / tým
+                        :refer-number singular)
+                    :ARG1 (s7o1 / opora
+                        :mod (s7p1 / postradatelný
+                            :refer-number singular
+                            :polarity -)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity))
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7d1: 3-3
+s7v1: 2-2
+s7j1: 1-1
+s7m1: 4-4,6-6
+s7b1: 14-14
+s7v2: 7-7
+s7k1: 12-12
+s7j2: 9-9
+s7x1: 11-11
+s7b2: 17-17
+s7t1: 15-16
+s7o1: 19-19
+s7p1: 18-18
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7t1 :same-entity s3t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2   3       4   5  6      7   8      9       10        11     12          13 14     15        16 17       18      19
+Words: Má dva životní sny -  získat pro fotbal všechny stokilové občany Blaufeldenu a  sehrát střetnutí s  Bayernem Mnichov .
+
+# sentence level graph:
+(s8m1 / mít-009
+        :ARG0 (s8e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s8s1 / sen
+            :mod (s8z1 / životní
+                :refer-number plural)
+            :mod (s8d1 / dva
+                :refer-number plural)
+            :ARG1 (s8a1 / and
+                :op1 (s8z2 / získat-004
+                    :ARG0 s8e1
+                    :purpose (s8f1 / fotbal
+                        :refer-number singular)
+                    :ARG1 (s8o1 / občan
+                        :mod (s8s2 / stokilový
+                            :refer-number plural)
+                        :possessor (s8b1 / Blaufelden
+                            :refer-number singular)
+                        :mod (s8v1 / všechen
+                            :refer-number plural)
+                        :refer-number plural)
+                    :aspect performance)
+                :op2 (s8s3 / sehrát-001
+                    :ARG0 s8e1
+                    :ARG1 (s8s4 / střetnutí
+                        :ARG0 (s8e2 / entity)
+                        :ARG1 (s8b2 / Bayern
+                            :mod (s8m2 / Mnichov
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect performance))
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s8m1: 1-1
+s8e1: 0-0
+s8s1: 4-4
+s8z1: 3-3
+s8d1: 2-2
+s8a1: 13-13
+s8z2: 6-6
+s8f1: 7-8
+s8o1: 11-11
+s8s2: 10-10
+s8b1: 12-12
+s8v1: 9-9
+s8s3: 14-14
+s8s4: 15-15
+s8e2: 0-0
+s8b2: 16-17
+s8m2: 18-18
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8e1 :same-entity s7m1)
+            (s8b1 :same-entity s2b1)))
+
+

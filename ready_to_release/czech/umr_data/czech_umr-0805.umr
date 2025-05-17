@@ -1,0 +1,158 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2
+Words: Zastřelený lesník
+
+# sentence level graph:
+(s1l1 / lesník
+        :mod (s1z1 / zastřelený
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1l1: 2-2
+s1z1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2 3   4 5
+Words: Kladruby ( vet ) -
+
+# sentence level graph:
+(s2k1 / Kladruby
+        :parenthesis (s2v1 / vet)
+        :refer-number singular)
+
+# alignment:
+s2k1: 1-1
+s2v1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2  3            4      5   6       7  8          9  10        11
+Words: Lesník s  prostřelenou hlavou byl nalezen v  Kladrubech na Tachovsku .
+
+# sentence level graph:
+(s3n1 / naleznout-001
+        :ARG1 (s3l1 / lesník
+            :companion (s3h1 / hlava
+                :mod (s3p1 / prostřelený
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3e1 / entity)
+        :place (s3k1 / Kladruby
+            :place (s3t1 / Tachovsko
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3n1: 5-6
+s3l1: 1-1
+s3h1: 2-2,4-4
+s3p1: 3-3
+s3e1: 0-0
+s3k1: 7-8
+s3t1: 9-10
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3l1 :same-entity s1l1)
+            (s3k1 :same-entity s2k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1           2   3        4 5     6           7       8
+Words: Dvacetiletý muž pracoval u Lesní společnosti Stříbro .
+
+# sentence level graph:
+(s4p1 / pracovat-004
+        :ARG0 (s4m1 / muž
+            :mod (s4d1 / dvacetiletý
+                :refer-number singular)
+            :refer-number singular)
+        :place (s4s1 / společnost
+            :name (s4s2 / Stříbro
+                :refer-number singular)
+            :mod (s4l1 / lesní
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s4p1: 3-3
+s4m1: 2-2
+s4d1: 1-1
+s4s1: 4-4,6-6
+s4s2: 7-7
+s4l1: 5-5
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4m1 :same-entity s3l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2         3  4  5  6       7      8         9       10      11   12  13
+Words: Policisté prokázali ,  že z  legálně držené kulovnice vypálil osudnou ránu sám .
+
+# sentence level graph:
+(s5p1 / prokázat-001
+        :ARG0 (s5p2 / policista
+            :refer-number plural)
+        :ARG1 (s5v1 / vypálit-001
+            :start (s5k1 / kulovnice
+                :mod (s5d1 / držený
+                    :manner (s5l1 / legálně)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s5e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s5r1 / rána
+                :mod (s5o1 / osudný
+                    :refer-number singular)
+                :refer-number singular)
+            :manner (s5s1 / sám
+                :mod-of s5e1
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s5p1: 2-2
+s5p2: 1-1
+s5v1: 4-4,9-9
+s5k1: 5-5,8-8
+s5d1: 7-7
+s5l1: 6-6
+s5e1: 0-0
+s5r1: 11-11
+s5o1: 10-10
+s5s1: 12-12
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4m1)))
+
+

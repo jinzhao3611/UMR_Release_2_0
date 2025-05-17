@@ -1,4 +1,4 @@
-# UMR Parser Tool
+# UMR data Parser Tool
 
 The `parse_umr_to_json.py` script extracts content from UMR files and converts it to JSON format. It properly handles the block structure of UMR files, where:
 

@@ -1,0 +1,448 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2  3
+Words: Šmicer se neožení
+
+# sentence level graph:
+(s1o1 / oženit-se-001
+        :ARG0 (s1s1 / Šmicer
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s1o1: 2-3
+s1s1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3  4 5
+Words: Praha ( šv ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2s1 / šv)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2s1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1            2     3      4   5     6  7  8  9       10   11       12 13      14 15      16       17       18     19 20    21 22 23      24       25          26      27      28
+Words: Šestigólovou výhru Slavie nad Brnem ve 24 .  ligovém kole sledoval z  tribuny i  útočník domácích Vladimír Šmicer ,  který se ve čtvrtek podrobil půlhodinové operaci menisku .
+
+# sentence level graph:
+(s3s1 / sledovat-003
+        :ARG1 (s3v1 / výhra
+            :possessor (s3s2 / Slavia
+                :refer-number singular)
+            :place (s3b1 / Brno
+                :refer-number singular)
+            :place (s3k1 / kolo
+                :mod (s3l1 / ligový
+                    :refer-number singular)
+                :mod (s3x1 / 24)
+                :refer-number singular)
+            :mod (s3s3 / šestigólový
+                :refer-number singular)
+            :refer-number singular)
+        :start (s3t1 / tribuna
+            :refer-number singular)
+        :clausal-marker (s3i1 / i)
+        :ARG0 (s3s4 / Šmicer
+            :mod (s3v2 / Vladimír
+                :refer-number singular)
+            :mod (s3u1 / útočník
+                :mod (s3d1 / domácí
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG0-of (s3p1 / podrobit-se-001
+                :temporal (s3c1 / čtvrtek
+                    :refer-number singular)
+                :ARG1 (s3o1 / operace
+                    :ARG1 (s3m1 / meniskus
+                        :refer-number singular)
+                    :mod (s3p2 / půlhodinový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s3s1: 11-11
+s3v1: 2-2
+s3s2: 3-3
+s3b1: 4-5
+s3k1: 6-6,10-10
+s3l1: 9-9
+s3x1: 7-7
+s3s3: 1-1
+s3t1: 12-13
+s3i1: 14-14
+s3s4: 18-18,20-20
+s3v2: 17-17
+s3u1: 15-15
+s3d1: 16-16
+s3p1: 21-21,24-24
+s3c1: 22-23
+s3o1: 26-26
+s3m1: 27-27
+s3p2: 25-25
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s4 :same-entity s1s1)
+            (s3d1 :same-entity s3s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2   3    4  5  6  7       8  9         10 11     12 13 14       15    16           17 18    19 20  21          22      23        24 25       26
+Words: "  Byl jsem na ní v  Berlíně a  zaplatila ji Slavia ,  "  vyprávěl český reprezentant ,  který se bez jakéhokoliv kulhání procházel po stadionu .
+
+# sentence level graph:
+(s4v1 / vyprávět-002
+        :ARG0 (s4r1 / reprezentant
+            :mod (s4c1 / český
+                :refer-number singular)
+            :ARG0-of (s4p1 / procházet-se-001
+                :companion (s4k1 / kulhání
+                    :ARG0 s4r1
+                    :manner (s4j1 / jakýkoliv
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :refer-number singular)
+                :place (s4s1 / stadión
+                    :refer-number singular)
+                :refer-number singular
+                :aspect activity)
+            :refer-number singular
+            :refer-person 1st)
+        :ARG2 (s4e1 / entity)
+        :effect (s4a1 / and
+            :op1 (s4b1 / být-011
+                :ARG0 (s4e2 / entity
+                    :refer-number singular
+                    :refer-person 1st)
+                :place (s4e3 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :place (s4b2 / Berlín
+                    :refer-number singular)
+                :refer-number singular
+                :aspect activity)
+            :op2 (s4z1 / zaplatit-001
+                :ARG1 s4e3
+                :ARG0 (s4s2 / Slavia
+                    :refer-number singular)
+                :aspect performance))
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s4v1: 14-14
+s4r1: 16-16,18-18
+s4c1: 15-15
+s4p1: 19-19,23-23
+s4k1: 20-20,22-22
+s4j1: 21-21
+s4s1: 24-25
+s4e1: 0-0
+s4a1: 8-8
+s4b1: 2-3
+s4e2: 0-0
+s4e3: 4-5,10-10
+s4b2: 6-7
+s4z1: 9-9
+s4s2: 11-11
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4r1 :same-entity s4e2)
+            (s4e2 :same-entity s3s4)
+            (s4e3 :same-entity s3o1)
+            (s4s2 :same-entity s3d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2  3     4   5    6  7       8  9       10 11      12 13    14   15 16     17     18     19
+Words: "  Už druhý den ráno po operaci mě vyhnali z  postele a  musel jsem na příkaz lékařů chodit .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5v1 / vyhnat-003
+            :temporal (s5d1 / den
+                :clausal-marker (s5u1 / už)
+                :mod (s5d2 / druhý
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s5r1 / ráno)
+            :temporal (s5o1 / operace
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG0 (s5e1 / entity)
+            :ARG1 (s5e2 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :start (s5p1 / postel
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance)
+        :op2 (s5c1 / chodit-007
+            :cause (s5p2 / příkaz
+                :ARG0 (s5l1 / lékař
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG0 s5e2
+            :aspect activity))
+
+# alignment:
+s5a1: 12-12
+s5v1: 9-9
+s5d1: 4-4
+s5u1: 2-2
+s5d2: 3-3
+s5r1: 5-5
+s5o1: 6-7
+s5e1: 0-0
+s5e2: 8-8
+s5p1: 10-11
+s5c1: 13-14,18-18
+s5p2: 15-16
+s5l1: 17-17
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5o1 :same-entity s4e3)
+            (s5e2 :same-entity s4r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2    3       4    5            6  7  8     9       10 11   12    13 14        15 16 17    18  19     20    21 22 23       24 25      26
+Words: "  Nyní Šmicera čeká rehabilitace ,  po třech týdnech by mohl začít s  tréninkem a  za další tři neděle možná už s  návratem na trávník .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6c1 / čekat-003
+            :temporal (s6n1 / nyní)
+            :ARG1 (s6s1 / Šmicer
+                :refer-number singular
+                :refer-person 1st)
+            :ARG0 (s6r1 / rehabilitace
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s6z1 / začít-001
+            :duration (s6t1 / týden
+                :mod (s6t2 / tři
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 s6s1
+            :ARG1 (s6t3 / trénink
+                :refer-number singular)
+            :aspect performance)
+        :op3 (s6z2 / začít-001
+            :duration (s6n2 / neděle
+                :mod (s6t4 / tři
+                    :refer-number plural)
+                :mod (s6d1 / další
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 s6s1
+            :clausal-marker (s6m1 / možná)
+            :clausal-marker (s6u1 / už)
+            :ARG1 (s6n3 / návrat
+                :goal (s6t5 / trávník
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance))
+
+# alignment:
+s6a1: 15-15
+s6c1: 4-4
+s6n1: 2-2
+s6s1: 3-3
+s6r1: 5-5
+s6z1: 10-12
+s6t1: 7-7,9-9
+s6t2: 8-8
+s6t3: 13-14
+s6z2: 0-0
+s6n2: 16-16,19-19
+s6t4: 18-18
+s6d1: 17-17
+s6m1: 20-20
+s6u1: 21-21
+s6n3: 22-23
+s6t5: 24-25
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s1 :same-entity s5e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2  3    4  5       6  7  8      9  10  11  12      13  14      15 16      17 18         19 20    21             22    23 24   25 26  27 28 29
+Words: "  V  lize se objevím až na podzim ,  tak mám alespoň čas věnovat se pořádně mé přítelkyni (  dcera internacionála Vízka -  pozn .  red .  )  .
+
+# sentence level graph:
+(s7h1 / have-result-91
+        :ARG1 (s7o1 / objevit-se-001
+            :ARG0 (s7e1 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :place (s7l1 / liga
+                :refer-number singular)
+            :clausal-marker (s7a1 / až)
+            :temporal (s7p1 / podzim
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 1st
+            :aspect performance)
+        :clausal-marker (s7t1 / tak)
+        :ARG2 (s7m1 / mít-028
+            :ARG0 s7e1
+            :clausal-marker (s7a2 / alespoň)
+            :predicative-noun (s7c1 / čas
+                :ARG0 s7e1
+                :ARG1 (s7v1 / věnovat-se-001
+                    :ARG0 s7e1
+                    :manner (s7p2 / pořádně)
+                    :ARG1 (s7p3 / přítelkyně
+                        :possessor s7e1
+                        :parenthesis (s7d1 / dcera
+                            :possessor (s7v2 / Vízek
+                                :mod (s7i1 / internacionál
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :parenthesis (s7p4 / poznámka
+                                :possessor (s7r1 / redakce))
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect process)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 1st
+            :aspect state))
+
+# alignment:
+s7h1: 9-9
+s7o1: 4-5
+s7l1: 2-3
+s7a1: 6-6
+s7p1: 7-8
+s7e1: 17-17
+s7t1: 10-10
+s7m1: 11-11
+s7a2: 12-12
+s7c1: 13-13
+s7v1: 14-15
+s7p2: 16-16
+s7p3: 18-18
+s7d1: 20-20
+s7v2: 22-22
+s7i1: 21-21
+s7p4: 24-24
+s7r1: 26-26
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2   3   4      5     6  7       8     9         10   11   12        13     14 15 16     17 18  19   20 21 22
+Words: "  Jak ale Šmicer dodal ,  nucenou pauzu nevyužije jako jeho spoluhráč Berger -  na ženění je prý brzy .  .  .
+
+# sentence level graph:
+(s8a1 / and
+        :op1 (s8v1 / využít-001
+            :parenthesis (s8d1 / dodat-005
+                :clausal-marker (s8a2 / ale)
+                :ARG0 (s8s1 / Šmicer
+                    :refer-number singular
+                    :refer-person 1st)
+                :effect s8v1
+                :refer-number singular
+                :aspect performance)
+            :ARG1 (s8p1 / pauza
+                :mod (s8n1 / nucený
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s8s1
+            :manner (s8x3 / #Equal
+                :comparison (s8v2 / využít-001
+                    :ARG1 s8p1
+                    :ARG0 (s8b1 / Berger
+                        :mod (s8s2 / spoluhráč
+                            :possessor s8s1
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect performance))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance
+            :polarity -)
+        :op2 (s8b2 / být-014
+            :clausal-marker (s8p2 / prý)
+            :temporal (s8b3 / brzy
+                :purpose (s8z1 / ženění
+                    :ARG0 (s8e1 / entity)
+                    :refer-number singular))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s8a1: 14-14
+s8v1: 9-9
+s8d1: 2-2,5-5
+s8a2: 3-3
+s8s1: 4-4,11-11
+s8p1: 8-8
+s8n1: 7-7
+s8x3: 0-0
+s8v2: 0-0
+s8b1: 13-13
+s8s2: 12-12
+s8b2: 17-17
+s8p2: 18-18
+s8b3: 19-19
+s8z1: 15-16
+s8e1: 0-0
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8s1 :same-entity s7e1)))
+
+

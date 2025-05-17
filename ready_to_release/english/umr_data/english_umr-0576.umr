@@ -1,0 +1,82 @@
+################################################################################
+# meta-info :: sent_id = nw.wsj_0001.1
+# :: snt1
+Index: 1            2            3            4            5            6            7            8            9            10           11           12           13           14           15           16           17           18           
+Words: Pierre       Vinken       ,            61           years        old          ,            will         join         the          board        as           a            nonexecutive director     Nov.         29           .            
+
+# sentence level graph:
+(s1j / join-04
+    :ARG0 (s1p / person :wiki -
+        :name (s1n / name :op1 "Pierre" :op2 "Vinken")
+        :age (s1t / temporal-quantity :quant 61
+            :unit (s1y / year)))
+    :ARG1 (s1b / board)
+    :ARG2 (s1h / have-org-role-92
+        :ARG1 s1p
+        :ARG2 s1b
+        :ARG3 (s1d2 / director
+            :mod (s1e / executive :polarity -)))
+    :temporal (s1d / date-entity :month 11 :day 29)
+    :aspect performance)
+
+# alignment:
+s1j: 9-9
+s1p: 1-2
+s1n: 1-2
+s1t: 4-6
+s1y: 5-5
+s1b: 11-11
+s1h: 0-0
+s1d2: 15-15
+s1e: 14-14
+s1d: 16-17
+
+# document level annotation:
+(s1s0 / sentence
+    :temporal ((document-creation-time :after s1j)
+        (root :depends-on s1d))
+    :modal ((root :modal author)
+            (author :full-affirmative s1j)))
+
+
+################################################################################
+# meta-info :: sent_id = nw.wsj_0001.2
+# :: snt2
+Index: 1          2          3          4          5          6          7          8          9          10         11         12         13         
+Words: Mr.        Vinken     is         chairman   of         Elsevier   N.V.       ,          the        Dutch      publishing group      .          
+
+# sentence level graph:
+(s2h / have-org-role-92
+    :ARG1 (s2p / person :wiki - 
+        :name (s2n / name :op1 "Mr." :op2 "Vinken"))
+    :ARG2 (s2o / organization :wiki "RELX_Group#Elsevier_NV" 
+        :name (s2n2 / name :op1 "Elsevier" :op2 "N.V.")
+        :ARG1-of (s2i / identity-91
+            :ARG2 (s2g / group 
+                :ARG0-of (s2p2 / publish-01)
+                :mod (s2c / country :wiki "Netherlands" 
+                    :name (s2n3 / name :op1 "Netherlands")))))
+    :ARG3 (s2c2 / chairman)
+    :aspect state)
+
+# alignment:
+s2h: 0-0
+s2p: 1-2
+s2n: 1-2
+s2o: 6-7
+s2n2: 6-7
+s2i: 0-0
+s2g: 12-12
+s2p2: 11-11
+s2c: 10-10
+s2n3: 10-10
+s2c2: 4-4
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p :same-entity s1p))
+    :temporal ((document-creation-time :overlap s2h))
+    :modal ((root :modal author)
+            (author :full-affirmative s2h)))
+
+

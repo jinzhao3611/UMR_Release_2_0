@@ -1,0 +1,173 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Krátce
+
+# sentence level graph:
+(s1e1 / event
+        :manner (s1k1 / krátce)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1k1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2           3       4         5  6     7        8       9  10            11      12 13    14    15    16       17 18       19        20   21
+Words: Ropné společnosti British Petroleum a  Shell objevily západně od Shetlandských ostrovů ,  které patří Velké Británii ,  rozsáhlá naleziště ropy .
+
+# sentence level graph:
+(s2o1 / objevit-001
+        :ARG0 (s2s1 / společnost
+            :mod (s2r1 / ropný
+                :refer-number plural)
+            :name (s2a1 / and
+                :op1 (s2x1 / #Forn
+                    :FPHR (s2b1 / British)
+                    :FPHR (s2p1 / Petroleum))
+                :op2 (s2s2 / Shell
+                    :refer-number singular))
+            :refer-number plural)
+        :place (s2z1 / západně
+            :start (s2o2 / ostrov
+                :mod (s2s3 / Shetlandský
+                    :refer-number plural)
+                :ARG0-of (s2p2 / patřit-001
+                    :ARG1 (s2b2 / Británie
+                        :mod (s2v1 / Velký
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect state)
+                :refer-number plural))
+        :ARG1 (s2n1 / naleziště
+            :possessor (s2r2 / ropa
+                :refer-number singular)
+            :mod (s2r3 / rozsáhlý
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s2o1: 7-7
+s2s1: 2-2
+s2r1: 1-1
+s2a1: 5-5
+s2x1: 0-0
+s2b1: 3-3
+s2p1: 4-4
+s2s2: 6-6
+s2z1: 8-8
+s2o2: 9-9,11-11,13-13
+s2s3: 10-10
+s2p2: 14-14
+s2b2: 16-16
+s2v1: 15-15
+s2n1: 19-19
+s2r2: 20-20
+s2r3: 18-18
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2      3       4     5   6    7         8        9   10 11    12      13     14   15          16       17
+Words: Podle odhadu expertů mohou mít tato naleziště kapacitu pět až deset miliard barelů této strategické suroviny .
+
+# sentence level graph:
+(s3m1 / mít-008
+        :ARG0 (s3n1 / naleziště
+            :mod (s3t1 / tento
+                :refer-number plural)
+            :refer-number plural)
+        :regard (s3o1 / odhad
+            :ARG0 (s3e1 / expert
+                :refer-number plural)
+            :refer-number singular)
+        :ARG1 (s3k1 / kapacita
+            :mod (s3m2 / miliarda
+                :mod (s3b1 / barel
+                    :mod (s3s1 / surovina
+                        :mod (s3t2 / tento
+                            :refer-number singular)
+                        :mod (s3s2 / strategický
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :mod (s3m3 / math
+                    :op1 (s3p1 / pět
+                        :refer-number singular)
+                    :op2 (s3d1 / deset
+                        :refer-number singular))
+                :refer-number plural)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s3m1: 4-5
+s3n1: 7-7
+s3t1: 6-6
+s3o1: 1-2
+s3e1: 3-3
+s3k1: 8-8
+s3m2: 12-12
+s3b1: 13-13
+s3s1: 16-16
+s3t2: 14-14
+s3s2: 15-15
+s3m3: 10-10
+s3p1: 9-9
+s3d1: 11-11
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3n1 :same-entity s2n1)
+            (s3s1 :same-entity s2r2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1           2       3  4         5             6  7         8       9
+Words: Shetlandské ostrovy se nacházejí severozápadně od skotského pobřeží .
+
+# sentence level graph:
+(s4n1 / nacházet-se-002
+        :ARG0 (s4o1 / ostrov
+            :mod (s4s1 / Shetlandský
+                :refer-number plural)
+            :refer-number plural)
+        :place (s4s2 / severozápadně
+            :start (s4p1 / pobřeží
+                :mod (s4s3 / skotský
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4n1: 3-4
+s4o1: 2-2
+s4s1: 1-1
+s4s2: 5-5
+s4p1: 6-6,8-8
+s4s3: 7-7
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4o1 :same-entity s2o2)))
+
+

@@ -1,0 +1,295 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2  3       4   5  6   7
+Words: Žaloba na Liznera asi do tří týdnů
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1z1 / žaloba
+            :ARG1 (s1l1 / Lizner
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s1t1 / týden
+            :mod (s1t2 / tři
+                :extent (s1a1 / asi)
+                :refer-number plural)
+            :refer-number plural)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1z1: 1-1
+s1l1: 2-3
+s1t1: 5-5,7-7
+s1t2: 6-6
+s1a1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2        3    4   5         6       7      8     9  10      11 12     13       14  15      16  17        18      19           20     21         22  23    24 25        26      27
+Words: Případ bývalého šéfa CKP Jaroslava Liznera předal včera s  návrhem na podání obžaloby pro trestný čin přijímání úplatku vyšetřovatel státní zástupkyni pro Prahu 7  Jaroslavě Vaclové .
+
+# sentence level graph:
+(s3p1 / předat-001
+        :ARG1 (s3p2 / případ
+            :possessor (s3l1 / Lizner
+                :mod (s3j1 / Jaroslav
+                    :refer-number singular)
+                :mod (s3s1 / šéf
+                    :ARG1 (s3c1 / CKP)
+                    :mod (s3b1 / bývalý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3v1 / včera)
+        :companion (s3n1 / návrh
+            :ARG1 (s3p3 / podání
+                :ARG0 (s3e1 / entity)
+                :ARG1 (s3o1 / obžaloba
+                    :cause (s3c2 / čin
+                        :mod (s3t1 / trestný
+                            :refer-number singular)
+                        :name (s3p4 / přijímání
+                            :ARG0 (s3e2 / entity)
+                            :ARG1 (s3u1 / úplatek
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3v2 / vyšetřovatel
+            :refer-number singular)
+        :ARG2 (s3v3 / Vaclová
+            :mod (s3j2 / Jaroslava
+                :refer-number singular)
+            :mod (s3z1 / zástupkyně
+                :mod (s3s2 / státní
+                    :refer-number singular)
+                :affectee (s3p5 / Praha
+                    :mod (s3x1 / 7)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3p1: 7-7
+s3p2: 1-1
+s3l1: 6-6
+s3j1: 5-5
+s3s1: 3-3
+s3c1: 4-4
+s3b1: 2-2
+s3v1: 8-8
+s3n1: 9-10
+s3p3: 11-12
+s3e1: 0-0
+s3o1: 13-13
+s3c2: 14-14,16-16
+s3t1: 15-15
+s3p4: 17-17
+s3e2: 0-0
+s3u1: 18-18
+s3v2: 19-19
+s3v3: 26-26
+s3j2: 25-25
+s3z1: 21-21
+s3s2: 20-20
+s3p5: 22-23
+s3x1: 24-24
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3l1 :same-entity s1l1)
+            (s3o1 :same-entity s1z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2           3  4  5  6        7        8        9     10   11 12  13    14
+Words: Ta předpokládá ,  že o  případné obžalobě rozhodne během dvou až tří týdnů .
+
+# sentence level graph:
+(s4p1 / předpokládat-001
+        :ARG0 (s4t1 / ten
+            :refer-number singular)
+        :ARG1 (s4r1 / rozhodnout-002
+            :ARG1 (s4o1 / obžaloba
+                :mod (s4p2 / případný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s4t1
+            :temporal (s4t2 / týden
+                :mod (s4m1 / math
+                    :op1 (s4d1 / dva
+                        :refer-number plural)
+                    :op2 (s4t3 / tři
+                        :refer-number plural))
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4p1: 2-2
+s4t1: 1-1
+s4r1: 4-4,8-8
+s4o1: 5-5,7-7
+s4p2: 6-6
+s4t2: 9-9,13-13
+s4m1: 11-11
+s4d1: 10-10
+s4t3: 12-12
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-entity s3v3)
+            (s4o1 :same-entity s3o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1            2         3      4         5        6  7          8  9     10 11 12      13     14 15        16        17          18       19
+Words: Vyšetřovatel nevyhověl návrhu Liznerova advokáta na propuštění a  tvrdí ,  že policie důkazů o  Liznerově provinění shromáždila dostatek .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5v1 / vyhovět-001
+            :ARG0 (s5v2 / vyšetřovatel
+                :refer-number singular)
+            :ARG1 (s5n1 / návrh
+                :ARG0 (s5a2 / advokát
+                    :possessor (s5l1 / Lizner
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s5p1 / propuštění
+                    :ARG0 (s5e1 / entity)
+                    :ARG1 (s5e2 / entity)
+                    :start (s5e3 / entity)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance
+            :polarity -)
+        :op2 (s5t1 / tvrdit-002
+            :ARG0 s5v2
+            :effect (s5s1 / shromáždit-001
+                :ARG0 (s5p2 / policie
+                    :refer-number singular)
+                :ARG1 (s5d1 / dostatek
+                    :mod (s5d2 / důkaz
+                        :ARG1 (s5p3 / provinění
+                            :ARG0 (s5l2 / Lizner
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s5a1: 8-8
+s5v1: 2-2
+s5n1: 3-3
+s5a2: 5-5
+s5l1: 4-4
+s5p1: 6-7
+s5e1: 0-0
+s5e2: 0-0
+s5e3: 0-0
+s5v2: 1-1
+s5t1: 9-9
+s5s1: 11-11,17-17
+s5p2: 12-12
+s5d1: 18-18
+s5d2: 13-13
+s5p3: 14-14,16-16
+s5l2: 15-15
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5l1 :same-entity s3l1)
+            (s5v2 :same-entity s3v2)
+            (s5p3 :same-entity s3c2)
+            (s5l2 :same-entity s5l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2      3    4       5      6  7     8  9  10  11   12     13
+Words: Pokud shledá soud Liznera vinným ,  hrozí mu až tři roky vězení .
+
+# sentence level graph:
+(s6h1 / hrozit-002
+        :condition (s6s1 / shledat-001
+            :ARG0 (s6s2 / soud
+                :refer-number singular)
+            :ARG1 (s6l1 / Lizner
+                :refer-number singular)
+            :effect (s6v1 / vinný
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :ARG1 s6l1
+        :ARG0 (s6r1 / rok
+            :mod (s6v2 / vězení
+                :refer-number singular)
+            :mod (s6t1 / tři
+                :extent (s6a1 / až)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6h1: 7-7
+s6s1: 1-2
+s6s2: 3-3
+s6l1: 4-4,8-8
+s6v1: 5-5
+s6r1: 11-11
+s6v2: 12-12
+s6t1: 10-10
+s6a1: 9-9
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6l1 :same-entity s5l2)))
+
+

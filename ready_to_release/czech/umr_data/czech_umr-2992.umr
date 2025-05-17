@@ -1,0 +1,269 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2       3
+Words: Zakouřil mistrem světa
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1z1 / Zakouřil
+            :refer-number singular)
+        :ARG1 (s1m1 / mistr
+            :possessor (s1s1 / svět
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1z1: 1-1
+s1m1: 2-2
+s1s1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2     3  4      5
+Words: ČESKOU HYMNU MU MUSELI ZAZPÍVAT
+
+# sentence level graph:
+(s2z1 / zazpívat-001
+        :ARG1 (s2h1 / hymna
+            :mod (s2c1 / český
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s2e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG2 (s2e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :aspect performance)
+
+# alignment:
+s2z1: 4-5
+s2h1: 2-2
+s2c1: 1-1
+s2e1: 0-0
+s2e2: 3-3
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2e2 :same-entity s1z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1           2 3  4      5               6 7
+Words: Castelrotto ( Od našeho spolupracovníka ) -
+
+# sentence level graph:
+(s3c1 / Castelrotto
+        :parenthesis (s3e1 / event
+            :source (s3s1 / spolupracovník
+                :possessor (s3e2 / entity
+                    :refer-number plural
+                    :refer-person 1st)
+                :refer-number singular)
+            :aspect state)
+        :refer-number singular)
+
+# alignment:
+s3c1: 1-1
+s3e1: 0-0
+s3s1: 3-3,5-5
+s3e2: 4-4
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2          3  4  5           6    7  8    9            10     11       12      13     14 15     16    17
+Words: Na juniorském MS v  orientačním běhu se stal osmnáctiletý Václav Zakouřil vítězem závodu na krátké trati .
+
+# sentence level graph:
+(s4s1 / stát-se-001
+        :place (s4m1 / MS
+            :ARG1 (s4b1 / běh
+                :mod (s4o1 / orientační
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s4j1 / juniorský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4z1 / Zakouřil
+            :mod (s4v1 / Václav
+                :refer-number singular)
+            :mod (s4o2 / osmnáctiletý
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s4v2 / vítěz
+            :possessor (s4z2 / závod
+                :place (s4t1 / trať
+                    :mod (s4k1 / krátký
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4s1: 7-8
+s4m1: 1-1,3-3
+s4b1: 4-4,6-6
+s4o1: 5-5
+s4j1: 2-2
+s4z1: 11-11
+s4v1: 10-10
+s4o2: 9-9
+s4v2: 12-12
+s4z2: 13-13
+s4t1: 14-14,16-16
+s4k1: 15-15
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4z1 :same-entity s2e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1             2          3    4         5         6  7       8      9  10        11     12    13
+Words: Severoitalské pořadatele jeho vítězství zaskočilo ,  protože neměli k  dispozici českou hymnu .
+
+# sentence level graph:
+(s5z1 / zaskočit-001
+        :ARG1 (s5p1 / pořadatel
+            :mod (s5s1 / severoitalský
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s5v1 / vítězství
+            :possessor (s5e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :cause (s5m1 / mít-064
+            :ARG0 s5p1
+            :part-of-phraseme (s5k1 / k_dispozici
+                :refer-number singular)
+            :ARG1 (s5h1 / hymna
+                :mod (s5c1 / český
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :aspect state
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5z1: 5-5
+s5p1: 2-2
+s5s1: 1-1
+s5v1: 4-4
+s5e1: 3-3
+s5m1: 7-8
+s5k1: 9-10
+s5h1: 12-12
+s5c1: 11-11
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5v1 :same-event s4s1)
+            (s5e1 :same-entity s4z1)
+            (s5h1 :same-entity s2h1)
+            (s5c1 :same-entity s2c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2    3       4       5     6          7            8  9       10    11         12    13          14 15  16    17  18 19        20   21
+Words: Vedení naší výpravy odmítlo hymnu Evropského společenství a  všichni čeští orientační běžci Zakouřilovi "  Kde domov můj "  zazpívali sami .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6o1 / odmítnout-003
+            :ARG0 (s6v1 / vedení
+                :possessor (s6v2 / výprava
+                    :possessor (s6e1 / entity
+                        :refer-number plural
+                        :refer-person 1st)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s6h1 / hymna
+                :possessor (s6s1 / společenství
+                    :mod (s6e2 / Evropský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s6z1 / zazpívat-001
+            :ARG0 (s6b1 / běžec
+                :mod (s6o2 / orientační
+                    :refer-number plural)
+                :mod (s6c1 / český
+                    :refer-number plural
+                    :refer-person 1st)
+                :mod (s6v3 / všechen
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG2 (s6z2 / Zakouřil
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s6x1 / #Idph
+                :name (s6d1 / domov
+                    :possessor (s6e3 / entity
+                        :refer-number singular
+                        :refer-person 1st)
+                    :refer-number singular)
+                :name (s6k1 / kde)
+                :refer-number singular)
+            :manner (s6s2 / sám
+                :mod-of s6b1
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s6a1: 8-8
+s6o1: 4-4
+s6v1: 1-1
+s6v2: 3-3
+s6e1: 2-2
+s6h1: 5-5
+s6s1: 7-7
+s6e2: 6-6
+s6z1: 19-19
+s6b1: 12-12
+s6o2: 11-11
+s6c1: 10-10
+s6v3: 9-9
+s6z2: 13-13
+s6x1: 0-0
+s6d1: 16-16
+s6e3: 17-17
+s6k1: 15-15
+s6s2: 20-20
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5c1)
+            (s6b1 :same-entity s2e1)
+            (s6c1 :same-entity s6e1)
+            (s6z2 :same-entity s5e1)
+            (s6x1 :same-entity s5h1)))
+
+

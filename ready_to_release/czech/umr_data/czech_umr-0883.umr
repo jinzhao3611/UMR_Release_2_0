@@ -1,0 +1,593 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2      3    4
+Words: ČSOB vydala nové obligace
+
+# sentence level graph:
+(s1v1 / vydat-006
+        :ARG0 (s1c1 / ČSOB)
+        :ARG1 (s1o1 / obligace
+            :mod (s1n1 / nový
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s1v1: 2-2
+s1c1: 1-1
+s1o1: 4-4
+s1n1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3  4 5
+Words: Praha ( ip ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2i1 / ip)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2i1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2        3  4    5       6     7      8  9        10    11             12       13    14 15   16 17
+Words: Tříleté obligace za šest miliard korun vydala v  minulých dnech Československá obchodní banka (  ČSOB )  .
+
+# sentence level graph:
+(s3v1 / vydat-006
+        :ARG1 (s3o1 / obligace
+            :substitute (s3m1 / miliarda
+                :mod (s3k1 / koruna
+                    :refer-number plural)
+                :mod (s3s1 / šest
+                    :refer-number singular)
+                :refer-number plural)
+            :mod (s3t1 / tříletý
+                :refer-number plural)
+            :refer-number plural)
+        :temporal (s3d1 / den
+            :mod (s3m2 / minulý
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s3i1 / identity-91
+            :ARG1 (s3b1 / banka
+                :mod (s3o2 / obchodní
+                    :refer-number singular)
+                :mod (s3c1 / Československý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s3c2 / ČSOB))
+        :aspect performance)
+
+# alignment:
+s3v1: 7-7
+s3o1: 2-2
+s3m1: 3-3,5-5
+s3k1: 6-6
+s3s1: 4-4
+s3t1: 1-1
+s3d1: 8-8,10-10
+s3m2: 9-9
+s3i1: 14-14
+s3b1: 13-13
+s3o2: 12-12
+s3c1: 11-11
+s3c2: 15-15
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3o1 :same-entity s1o1)
+            (s3i1 :same-entity s1c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2  3     4      5       6      7       8      9     10  11    12
+Words: LN to včera sdělil ředitel odboru cenných papírů banky Jan Pešek .
+
+# sentence level graph:
+(s4s1 / sdělit-002
+        :ARG2 (s4l1 / LN
+            :refer-number plural)
+        :effect (s4t1 / ten
+            :refer-number singular)
+        :temporal (s4v1 / včera)
+        :ARG0 (s4p1 / Pešek
+            :mod (s4j1 / Jan
+                :refer-number singular)
+            :mod (s4r1 / ředitel
+                :possessor (s4o1 / odbor
+                    :possessor (s4b1 / banka
+                        :refer-number singular)
+                    :possessor (s4p2 / papír
+                        :mod (s4c1 / cenný
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4s1: 4-4
+s4l1: 1-1
+s4t1: 2-2
+s4v1: 3-3
+s4p1: 11-11
+s4j1: 10-10
+s4r1: 5-5
+s4o1: 6-6
+s4b1: 9-9
+s4p2: 8-8
+s4c1: 7-7
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3v1)
+            (s4b1 :same-entity s3i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2        3   4       5     6  7         8    9   10      11 12        13
+Words: Na kótovaný trh pražské burzy by dluhopisy měly být uvedeny v  listopadu .
+
+# sentence level graph:
+(s5u1 / uvést-003
+        :goal (s5t1 / trh
+            :possessor (s5b1 / burza
+                :mod (s5p1 / pražský
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s5k1 / kótovaný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s5d1 / dluhopis
+            :refer-number plural)
+        :ARG0 (s5e1 / entity)
+        :temporal (s5l1 / listopad
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s5u1: 6-6,8-10
+s5t1: 1-1,3-3
+s5b1: 5-5
+s5p1: 4-4
+s5k1: 2-2
+s5d1: 7-7
+s5e1: 0-0
+s5l1: 11-12
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p1 :same-entity s2p1)
+            (s5d1 :same-entity s3o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1   2   3     4     5  6    7        8   9          10    11 12  13 14        15   16       17        18
+Words: Jak Jan Pešek uvedl ,  byly obligace při neveřejném úpisu na tzv .  primárním trhu okamžitě rozebrány .
+
+# sentence level graph:
+(s6r1 / rozebrat-002
+        :parenthesis (s6u1 / uvést-007
+            :ARG0 (s6p1 / Pešek
+                :mod (s6j1 / Jan
+                    :refer-number singular)
+                :refer-number singular)
+            :effect s6r1
+            :refer-number singular
+            :aspect performance)
+        :ARG1 (s6o1 / obligace
+            :refer-number plural)
+        :ARG0 (s6e1 / entity)
+        :temporal (s6u2 / úpis
+            :mod (s6v1 / veřejný
+                :refer-number singular
+                :polarity -)
+            :refer-number singular)
+        :place (s6t1 / trh
+            :clausal-marker (s6t2 / takzvaný)
+            :mod (s6p2 / primární
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s6o2 / okamžitě)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s6r1: 6-6,17-17
+s6u1: 1-1,4-4
+s6p1: 3-3
+s6j1: 2-2
+s6o1: 7-7
+s6e1: 0-0
+s6u2: 8-8,10-10
+s6v1: 9-9
+s6t1: 11-11,15-15
+s6t2: 12-12
+s6p2: 14-14
+s6o2: 16-16
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p1 :same-entity s4p1)
+            (s6o1 :same-entity s5d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2     3      4  5        6         7        8     9  10    11         12 13   14        15   16    17         18 19         20 21       22    23 24            25      26 27        28    29
+Words: Největší podíl upsaly z  domácích investorů Komerční banka a  Česká spořitelna ,  část nakoupila také Česká pojišťovna ,  Investiční a  poštovní banka a  Českomoravská záruční a  rozvojová banka .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7u1 / upsat-001
+            :ARG1 (s7p1 / podíl
+                :mod (s7v1 / velký
+                    :refer-number singular)
+                :refer-number singular)
+            :start (s7i1 / investor
+                :mod (s7d1 / domácí
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 (s7a2 / and
+                :op1 (s7b1 / banka
+                    :mod (s7k1 / Komerční
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s7s1 / spořitelna
+                    :mod (s7c1 / Český
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number plural
+            :aspect performance)
+        :op2 (s7n1 / nakoupit-001
+            :ARG1 (s7c2 / část
+                :refer-number singular)
+            :clausal-marker (s7t1 / také)
+            :ARG0 (s7a3 / and
+                :op1 (s7p2 / pojišťovna
+                    :mod (s7c3 / Český
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s7b2 / banka
+                    :mod (s7a4 / and
+                        :op1 (s7i2 / investiční
+                            :refer-number singular)
+                        :op2 (s7p3 / poštovní
+                            :refer-number singular))
+                    :refer-number singular)
+                :op3 (s7b3 / banka
+                    :mod (s7c4 / českomoravský
+                        :refer-number singular)
+                    :mod (s7a5 / and
+                        :op1 (s7z1 / záruční
+                            :refer-number singular)
+                        :op2 (s7r1 / rozvojový
+                            :refer-number singular))
+                    :refer-number singular))
+            :aspect performance))
+
+# alignment:
+s7a1: 12-12
+s7u1: 3-3
+s7p1: 2-2
+s7v1: 1-1
+s7i1: 4-4,6-6
+s7d1: 5-5
+s7a2: 9-9
+s7b1: 8-8
+s7k1: 7-7
+s7s1: 11-11
+s7c1: 10-10
+s7n1: 14-14
+s7c2: 13-13
+s7t1: 15-15
+s7a3: 23-23
+s7p2: 17-17
+s7c3: 16-16
+s7b2: 22-22
+s7a4: 20-20
+s7i2: 19-19
+s7p3: 21-21
+s7b3: 28-28
+s7c4: 24-24
+s7a5: 26-26
+s7z1: 25-25
+s7r1: 27-27
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2            3          4    5        6     7       8       9    10 11         12
+Words: Ze zahraničních bankovních domů významný podíl koupila Deutche Bank a  Comerzbank .
+
+# sentence level graph:
+(s8k1 / koupit-001
+        :start (s8d1 / dům
+            :mod (s8b1 / bankovní
+                :refer-number plural)
+            :mod (s8z1 / zahraniční
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s8p1 / podíl
+            :mod (s8v1 / významný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s8a1 / and
+            :op1 (s8x1 / #Forn
+                :FPHR (s8d2 / Deutche)
+                :FPHR (s8b2 / Bank))
+            :op2 (s8c1 / Comerzbank))
+        :aspect performance)
+
+# alignment:
+s8k1: 7-7
+s8d1: 1-1,4-4
+s8b1: 3-3
+s8z1: 2-2
+s8p1: 6-6
+s8v1: 5-5
+s8a1: 10-10
+s8x1: 0-0
+s8d2: 8-8
+s8b2: 9-9
+s8c1: 11-11
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1         2    3     4        5  6     7     8
+Words: Nominální cena jedné obligace je 20000 korun .
+
+# sentence level graph:
+(s9b1 / být-007
+        :ARG0 (s9c1 / cena
+            :ARG1 (s9o1 / obligace
+                :mod (s9j1 / jeden
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s9n1 / nominální
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s9k1 / koruna
+            :mod (s9x1 / 20000)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9b1: 5-5
+s9c1: 2-2
+s9o1: 4-4
+s9j1: 3-3
+s9n1: 1-1
+s9k1: 7-7
+s9x1: 6-6
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1     2         3    4     5  6        7         8  9         10      11 12    13      14    15   16 17 18 19 20       21
+Words: Podle informace Jana Peška se obligace prodávaly za nominální hodnotu ,  roční úrokový výnos činí 11 1  /  8  procenta .
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10p1 / prodávat-001
+            :ARG1 (s10o1 / obligace
+                :refer-number plural)
+            :regard (s10i1 / informace
+                :ARG0 (s10p2 / Pešek
+                    :mod (s10j1 / Jan
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s10e1 / entity)
+            :ARG2 (s10e2 / entity)
+            :extent (s10h1 / hodnota
+                :mod (s10n1 / nominální
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :aspect habitual)
+        :op2 (s10c1 / činit-007
+            :ARG0 (s10v1 / výnos
+                :mod (s10u1 / úrokový
+                    :refer-number singular)
+                :mod (s10r1 / roční
+                    :refer-number singular)
+                :refer-number singular)
+            :extent (s10p3 / procento
+                :mod (s10x1 / 11)
+                :mod (s10x2 / 8
+                    :mod (s10x3 / 1))
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s10a1: 11-11
+s10p1: 5-5,7-7
+s10o1: 6-6
+s10i1: 1-2
+s10p2: 4-4
+s10j1: 3-3
+s10e1: 0-0
+s10e2: 0-0
+s10h1: 8-8,10-10
+s10n1: 9-9
+s10c1: 15-15
+s10v1: 14-14
+s10u1: 13-13
+s10r1: 12-12
+s10p3: 20-20
+s10x1: 16-16
+s10x2: 19-19
+s10x3: 17-17
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10o1 :same-entity s6o1)
+            (s10p2 :same-entity s6p1)
+            (s10h1 :same-entity s9c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1   2   3     4    5  6      7              8        9     10    11    12 13    14         15       16 17   18 19   20      21    22
+Words: Jak Jan Pešek řekl ,  počítá Československá obchodní banka letos ještě s  emisí pětiletých obligací ,  opět za šest miliard korun .
+
+# sentence level graph:
+(s11p1 / počítat-007
+        :parenthesis (s11r1 / říci-008
+            :ARG0 (s11p2 / Pešek
+                :mod (s11j1 / Jan
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s11e1 / entity)
+            :effect s11p1
+            :refer-number singular
+            :aspect performance)
+        :ARG0 (s11b1 / banka
+            :mod (s11c1 / československý
+                :refer-number singular)
+            :mod (s11o1 / obchodní
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s11l1 / letos)
+        :clausal-marker (s11j2 / ještě)
+        :ARG1 (s11e2 / emise
+            :ARG1 (s11o2 / obligace
+                :mod (s11p3 / pětiletý
+                    :refer-number plural)
+                :refer-number plural)
+            :parenthesis (s11e3 / event
+                :temporal (s11o3 / opět)
+                :substitute (s11m1 / miliarda
+                    :mod (s11k1 / koruna
+                        :refer-number plural)
+                    :mod (s11s1 / šest
+                        :refer-number singular)
+                    :refer-number plural)
+                :aspect state)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s11p1: 6-6
+s11r1: 1-1,4-4
+s11p2: 3-3
+s11j1: 2-2
+s11e1: 0-0
+s11b1: 9-9
+s11c1: 7-7
+s11o1: 8-8
+s11l1: 10-10
+s11j2: 11-11
+s11e2: 12-13
+s11o2: 15-15
+s11p3: 14-14
+s11e3: 0-0
+s11o3: 17-17
+s11m1: 18-18,20-20
+s11k1: 21-21
+s11s1: 19-19
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11p2 :same-entity s10p2)
+            (s11b1 :same-entity s4b1)
+            (s11m1 :same-entity s3m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1       2     3    4     5  6     7    8    9       10            11      12
+Words: Hlavním cílem obou emisí je podle jeho slov získání střednědobých depozit .
+
+# sentence level graph:
+(s12b1 / být-007
+        :ARG1 (s12c1 / cíl
+            :possessor (s12e1 / emise
+                :mod (s12o1 / oba
+                    :refer-number plural)
+                :refer-number plural)
+            :mod (s12h1 / hlavní
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s12s1 / slovo
+            :ARG0 (s12e2 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number plural)
+        :ARG0 (s12z1 / získání
+            :ARG0 (s12e3 / entity)
+            :ARG1 (s12d1 / depozitum
+                :mod (s12s2 / střednědobý
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s12b1: 5-5
+s12c1: 2-2
+s12e1: 4-4
+s12o1: 3-3
+s12h1: 1-1
+s12s1: 6-6,8-8
+s12e2: 7-7
+s12z1: 9-9
+s12e3: 0-0
+s12d1: 11-11
+s12s2: 10-10
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12e2 :same-entity s11p2)))
+
+

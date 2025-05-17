@@ -1,0 +1,158 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Krátce
+
+# sentence level graph:
+(s1e1 / event
+        :manner (s1k1 / krátce)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1k1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2      3    4  5   6      7     8  9        10       11     12    13  14
+Words: Objem dovozu ropy do USA dosáhl letos v  červenci nejvyšší úrovně všech dob .
+
+# sentence level graph:
+(s2d1 / dosáhnout-002
+        :ARG0 (s2o1 / objem
+            :possessor (s2d2 / dovoz
+                :ARG1 (s2r1 / ropa
+                    :refer-number singular)
+                :goal (s2u1 / USA
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s2l1 / letos)
+        :temporal (s2c1 / červenec
+            :refer-number singular)
+        :ARG1 (s2u2 / úroveň
+            :mod (s2v1 / vysoký
+                :possessor (s2d3 / doba
+                    :mod (s2v2 / všechen
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s2d1: 6-6
+s2o1: 1-1
+s2d2: 2-2
+s2r1: 3-3
+s2u1: 4-5
+s2l1: 7-7
+s2c1: 8-9
+s2u2: 11-11
+s2v1: 10-10
+s2d3: 13-13
+s2v2: 12-12
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2       3       4      5      6     7   8  9      10
+Words: Průměrná hodnota denního dovozu činila 10059 mil .  barelů .
+
+# sentence level graph:
+(s3c1 / činit-007
+        :ARG0 (s3h1 / hodnota
+            :mod (s3p1 / průměrný
+                :refer-number singular)
+            :possessor (s3d1 / dovoz
+                :mod (s3d2 / denní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s3m1 / milión
+            :mod (s3b1 / barel
+                :refer-number plural)
+            :mod (s3x1 / 10059))
+        :aspect activity)
+
+# alignment:
+s3c1: 5-5
+s3h1: 2-2
+s3p1: 1-1
+s3d1: 4-4
+s3d2: 3-3
+s3m1: 7-7
+s3b1: 9-9
+s3x1: 6-6
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1         2       3      4   5       6  7    8    9    10 11  12  13    14       15    16 17  18 19     20
+Words: Dosavadní měsíční rekord byl dosažen na jaře roku 1977 ,  kdy USA denně dovážely okolo 10 mil .  barelů .
+
+# sentence level graph:
+(s4d1 / dosáhnout-002
+        :ARG1 (s4r1 / rekord
+            :mod (s4d2 / dosavadní
+                :refer-number singular)
+            :mod (s4m1 / měsíční
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4e1 / entity)
+        :temporal (s4j1 / jaro
+            :possessor (s4r2 / rok
+                :mod (s4x1 / 1977)
+                :refer-number singular)
+            :temporal-of (s4d3 / dovážet-002
+                :ARG0 (s4u1 / USA
+                    :refer-number plural)
+                :goal (s4e2 / entity)
+                :frequency (s4d4 / denně)
+                :ARG1 (s4m2 / milión
+                    :mod (s4b1 / barel
+                        :refer-number plural)
+                    :mod (s4x2 / 10))
+                :refer-number plural
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4d1: 4-5
+s4r1: 3-3
+s4d2: 1-1
+s4m1: 2-2
+s4e1: 0-0
+s4j1: 6-7,11-11
+s4r2: 8-8
+s4x1: 9-9
+s4d3: 14-14
+s4u1: 12-12
+s4e2: 0-0
+s4d4: 13-13
+s4m2: 15-15,17-17
+s4b1: 19-19
+s4x2: 16-16
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4u1 :same-entity s2u1)))
+
+

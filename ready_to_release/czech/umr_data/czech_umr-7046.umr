@@ -1,0 +1,291 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2       3     4       5     6       7             8      9            10    11    12          13 14    15  16       17       18
+Words: Následuje týdenní výpis čistých aktiv veřejně obchodovaných podílů investičních fondů podle společností ve stavu při pátečním uzavření .
+
+# sentence level graph:
+(s1n1 / následovat-001
+        :ARG1 (s1e1 / entity)
+        :ARG0 (s1v1 / výpis
+            :mod (s1t1 / týdenní
+                :refer-number singular)
+            :mod (s1a1 / aktivum
+                :mod (s1c1 / čistý
+                    :refer-number plural)
+                :mod (s1p1 / podíl
+                    :mod (s1o1 / obchodovaný
+                        :manner (s1v2 / veřejně)
+                        :refer-number plural)
+                    :mod (s1f1 / fond
+                        :mod (s1i1 / investiční
+                            :refer-number plural)
+                        :refer-number plural)
+                    :place (s1s1 / stav
+                        :temporal (s1u1 / uzavření
+                            :ARG1 (s1e2 / entity)
+                            :ARG0 (s1e3 / entity)
+                            :temporal (s1p2 / páteční
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural)
+            :regard (s1s2 / společnost
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1n1: 1-1
+s1e1: 0-0
+s1v1: 3-3
+s1t1: 2-2
+s1a1: 5-5
+s1c1: 4-4
+s1p1: 8-8
+s1o1: 7-7
+s1v2: 6-6
+s1f1: 10-10
+s1i1: 9-9
+s1s1: 13-14
+s1u1: 15-15,17-17
+s1e2: 0-0
+s1e3: 0-0
+s1p2: 16-16
+s1s2: 11-12
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2  3     4         5    6    7         8    9       10     11    12    13 14            15       16
+Words: Také je udána závěrečná cena nebo dohodnutá cena každého podílu fondů spolu s  percentuálním rozdílem .
+
+# sentence level graph:
+(s2u1 / udat-002
+        :ARG0 (s2e1 / entity)
+        :clausal-marker (s2t1 / také)
+        :ARG1 (s2o1 / or
+            :op1 (s2c1 / cena
+                :mod (s2z1 / závěrečný
+                    :refer-number singular)
+                :mod (s2p1 / podíl
+                    :mod (s2k1 / každý
+                        :refer-number singular)
+                    :mod (s2f1 / fond
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s2c2 / cena
+                :mod s2p1
+                :mod (s2d1 / dohodnutý
+                    :refer-number singular)
+                :refer-number singular))
+        :companion (s2r1 / rozdíl
+            :mod (s2p2 / percentuální
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s2u1: 2-3
+s2e1: 0-0
+s2t1: 1-1
+s2o1: 6-6
+s2c1: 5-5
+s2z1: 4-4
+s2p1: 10-10
+s2k1: 9-9
+s2f1: 11-11
+s2c2: 8-8
+s2d1: 7-7
+s2r1: 12-13,15-15
+s2p2: 14-14
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p1 :same-entity s1p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1 2 3   4          5        6
+Words: b ) Při čtvrtečním uzavření .
+
+# sentence level graph:
+(s3e1 / event
+        :ARG0 (s3e2 / entity)
+        :clausal-marker (s3b1 / b)
+        :temporal (s3u1 / uzavření
+            :ARG1 (s3e3 / entity)
+            :ARG0 (s3e4 / entity)
+            :temporal (s3c1 / čtvrteční
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s3e1: 0-0
+s3e2: 0-0
+s3b1: 1-1
+s3u1: 3-3,5-5
+s3e3: 0-0
+s3e4: 0-0
+s3c1: 4-4
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1 2 3           4     5     6          7    8
+Words: c ) Přepočítaná podle kurzu Commercial Rand .
+
+# sentence level graph:
+(s4e1 / event
+        :ARG0 (s4e2 / entity
+            :mod (s4p1 / přepočítaný
+                :regard (s4k1 / kurs
+                    :name (s4x1 / #Forn
+                        :FPHR (s4c1 / Commercial)
+                        :FPHR (s4r1 / Rand))
+                    :refer-number singular)
+                :refer-number singular))
+        :clausal-marker (s4c2 / c)
+        :aspect state)
+
+# alignment:
+s4e1: 0-0
+s4e2: 0-0
+s4p1: 3-3
+s4k1: 4-5
+s4x1: 0-0
+s4c1: 6-6
+s4r1: 7-7
+s4c2: 1-1
+
+# document level annotation:
+(s4s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1 2 3 4          5        6
+Words: e ) V kanadských dolarech .
+
+# sentence level graph:
+(s5e1 / event
+        :clausal-marker (s5e2 / e)
+        :manner (s5d1 / dolar
+            :mod (s5k1 / kanadský
+                :refer-number plural)
+            :refer-number plural)
+        :aspect state)
+
+# alignment:
+s5e1: 0-0
+s5e2: 1-1
+s5d1: 3-3,5-5
+s5k1: 4-4
+
+# document level annotation:
+(s5s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1 2 3   4          5        6
+Words: f ) Při středečním uzavření .
+
+# sentence level graph:
+(s6e1 / event
+        :clausal-marker (s6f1 / f)
+        :temporal (s6u1 / uzavření
+            :ARG1 (s6e2 / entity)
+            :ARG0 (s6e3 / entity)
+            :temporal (s6s1 / středeční
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s6e1: 0-0
+s6f1: 1-1
+s6u1: 3-3,5-5
+s6e2: 0-0
+s6e3: 0-0
+s6s1: 4-4
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1 2 3     4 5  6   7 8     9
+Words: g ) 10.06 . 89 NAV : 22.15 .
+
+# sentence level graph:
+(s7e1 / event
+        :clausal-marker (s7g1 / g)
+        :ARG0 (s7x1 / #Forn
+            :FPHR (s7x2 / 10.06)
+            :FPHR (s7x3 / 89)
+            :FPHR (s7n1 / NAV)
+            :FPHR (s7x4 / colon)
+            :FPHR (s7x5 / 22.15))
+        :aspect state)
+
+# alignment:
+s7e1: 0-0
+s7g1: 1-1
+s7x1: 0-0
+s7x2: 3-3
+s7x3: 5-5
+s7n1: 6-6
+s7x4: 7-7
+s7x5: 8-8
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1 2 3    4        5
+Words: z ) Není dostupno .
+
+# sentence level graph:
+(s8b1 / být-007
+        :clausal-marker (s8z1 / z)
+        :ARG0 (s8e1 / entity)
+        :ARG1 (s8d1 / dostupný
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s8b1: 3-3
+s8z1: 1-1
+s8e1: 0-0
+s8d1: 4-4
+
+# document level annotation:
+(s8s0 / sentence)
+
+

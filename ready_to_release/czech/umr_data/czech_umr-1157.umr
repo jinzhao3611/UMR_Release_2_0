@@ -1,0 +1,508 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2      3      4 5
+Words: Zeman vyzývá Klause k duelu
+
+# sentence level graph:
+(s1v1 / vyzývat-001
+        :ARG0 (s1z1 / Zeman
+            :refer-number singular)
+        :ARG2 (s1k1 / Klaus
+            :refer-number singular)
+        :ARG1 (s1d1 / duel
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1v1: 2-2
+s1z1: 1-1
+s1k1: 3-3
+s1d1: 4-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3  4 5
+Words: Praha ( em ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2e1 / em)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2e1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2    3        4         5       6  7    8       9     10 11         12      13       14     15       16      17     18       19   20    21    22
+Words: K  živě vysílané televizní diskusi na téma ústavní zákon o  vyrovnaném státním rozpočtu vyzývá premiéra Václava Klause předseda ČSSD Miloš Zeman .
+
+# sentence level graph:
+(s3v1 / vyzývat-001
+        :ARG1 (s3d1 / diskuse
+            :mod (s3t1 / televizní
+                :refer-number singular)
+            :mod (s3v2 / vysílaný
+                :manner (s3z1 / živě)
+                :refer-number singular)
+            :ARG1 (s3z2 / zákon
+                :mod (s3u1 / ústavní
+                    :refer-number singular)
+                :ARG1 (s3r1 / rozpočet
+                    :mod (s3s1 / státní
+                        :refer-number singular)
+                    :mod (s3v3 / vyrovnaný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s3k1 / Klaus
+            :mod (s3v4 / Václav
+                :refer-number singular)
+            :mod (s3p1 / premiér
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3z3 / Zeman
+            :mod (s3m1 / Miloš
+                :refer-number singular)
+            :mod (s3p2 / předseda
+                :possessor (s3c1 / ČSSD)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3v1: 14-14
+s3d1: 1-1,5-5
+s3t1: 4-4
+s3v2: 3-3
+s3z1: 2-2
+s3z2: 6-7,9-9
+s3u1: 8-8
+s3r1: 10-10,13-13
+s3s1: 12-12
+s3v3: 11-11
+s3k1: 17-17
+s3v4: 16-16
+s3p1: 15-15
+s3z3: 21-21
+s3m1: 20-20
+s3p2: 18-18
+s3c1: 19-19
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3d1 :same-entity s1d1)
+            (s3k1 :same-entity s1k1)
+            (s3z3 :same-entity s1z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2        3       4          5      6      7      8  9          10       11           12   13         14 15 16    17 18       19        20    21          22     23  24
+Words: Na včerejší tiskové konferenci ocenil osobní odvahu a  statečnost ministra zahraničních věcí Zieleniece ,  s  jakou v  televizi vystoupil proti nesmyslnému návrhu ODS .
+
+# sentence level graph:
+(s4o1 / ocenit-002
+        :place (s4k1 / konference
+            :mod (s4v1 / včerejší
+                :refer-number singular)
+            :mod (s4t1 / tiskový
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s4a1 / and
+            :op1 (s4o2 / odvaha
+                :mod (s4o3 / osobní
+                    :refer-number singular)
+                :ARG0 (s4z1 / Zieleniec
+                    :mod (s4m1 / ministr
+                        :possessor (s4v2 / věc
+                            :mod (s4z2 / zahraniční
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :companion-of (s4v3 / vystoupit-001
+                    :ARG0 s4z1
+                    :place (s4t2 / televize
+                        :refer-number singular)
+                    :ARG1 (s4n1 / návrh
+                        :ARG0 (s4o4 / ODS)
+                        :mod (s4n2 / nesmyslný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance)
+                :refer-number singular)
+            :op2 (s4s1 / statečnost
+                :ARG0 s4z1
+                :companion-of s4v3
+                :refer-number singular))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4o1: 5-5
+s4k1: 1-1,4-4
+s4v1: 2-2
+s4t1: 3-3
+s4e1: 0-0
+s4a1: 8-8,15-16
+s4o2: 7-7
+s4o3: 6-6
+s4z1: 13-13
+s4m1: 10-10
+s4v2: 12-12
+s4z2: 11-11
+s4v3: 19-19
+s4t2: 17-18
+s4n1: 20-20,22-22
+s4o4: 23-23
+s4n2: 21-21
+s4s1: 9-9
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3z3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2     3  4  5     6         7    8     9  10 11      12     13    14 15     16       17 18    19          20      21        22  23 24    25 26         27 28     29     30 31     32
+Words: Miloš Zeman si je podle vlastních slov vědom ,  že premiér Václav Klaus si vybírá partnery do svých televizních diskusí nejraději sám a  pokud mu nevyhovují ,  raději odejde ze studia .
+
+# sentence level graph:
+(s5b1 / být-007
+        :ARG0 (s5z1 / Zeman
+            :mod (s5m1 / Miloš
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd)
+        :affectee s5z1
+        :regard (s5s1 / slovo
+            :mod (s5v1 / vlastní
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s5v2 / vědomý
+            :ARG1 (s5a1 / and
+                :op1 (s5v3 / vybírat-003
+                    :clausal-marker (s5r1 / raději)
+                    :ARG0 (s5k1 / Klaus
+                        :mod (s5p1 / premiér
+                            :refer-number singular)
+                        :mod (s5v4 / Václav
+                            :refer-number singular)
+                        :refer-number singular)
+                    :start (s5e1 / entity)
+                    :affectee s5k1
+                    :ARG1 (s5p2 / partner
+                        :goal (s5d1 / diskuse
+                            :mod (s5t1 / televizní
+                                :refer-number plural)
+                            :ARG0 s5k1
+                            :refer-number plural)
+                        :refer-number plural)
+                    :manner (s5s2 / sám
+                        :mod-of s5k1
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :op2 (s5o1 / odejít-001
+                    :clausal-marker (s5r2 / raději)
+                    :condition (s5v5 / vyhovovat-001
+                        :ARG0 s5p2
+                        :ARG1 s5k1
+                        :refer-number plural
+                        :refer-person 3rd
+                        :aspect activity
+                        :polarity -)
+                    :ARG0 s5k1
+                    :start (s5s3 / studio
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect performance))
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5b1: 4-4
+s5z1: 2-3
+s5m1: 1-1
+s5s1: 5-5,7-7
+s5v1: 6-6
+s5v2: 8-8
+s5a1: 23-23
+s5v3: 10-10,15-15
+s5r1: 21-21
+s5k1: 13-14,18-18,25-25
+s5p1: 11-11
+s5v4: 12-12
+s5e1: 0-0
+s5p2: 16-16
+s5d1: 17-17,20-20
+s5t1: 19-19
+s5s2: 22-22
+s5o1: 10-10,29-29
+s5r2: 28-28
+s5v5: 24-24,26-26
+s5s3: 30-31
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5z1 :same-entity s4e1)
+            (s5k1 :same-entity s3k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2       3  4   5   6         7        8     9      10   11 12 13     14     15 16     17 18      19 20   21 22 23   24       25     26 27        28
+Words: Uvedl příklad ,  kdy byl televizní redaktor Milan Adámek poté ,  co pozval Zemana i  Klause k  dialogu ,  aniž by o  sobě vzájemně věděli ,  propuštěn .
+
+# sentence level graph:
+(s6u1 / uvést-001
+        :ARG0 (s6e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s6p1 / příklad
+            :temporal-of (s6p2 / propustit-001
+                :ARG1 (s6a1 / Adámek
+                    :mod (s6m1 / Milan
+                        :refer-number singular)
+                    :mod (s6r1 / redaktor
+                        :mod (s6t1 / televizní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s6e2 / entity)
+                :start (s6e3 / entity)
+                :temporal (s6a2 / and
+                    :op1 (s6p3 / pozvat-001
+                        :ARG1 (s6a3 / and
+                            :op1 (s6z1 / Zeman
+                                :refer-number singular
+                                :refer-person 3rd)
+                            :op2 (s6k1 / Klaus
+                                :refer-number singular))
+                        :ARG0 s6a1
+                        :purpose (s6d1 / dialog
+                            :refer-number singular)
+                        :refer-number singular
+                        :aspect performance)
+                    :op2 (s6v1 / vědět-001
+                        :ARG0 s6a3
+                        :ARG1 s6a3
+                        :manner (s6v2 / vzájemně)
+                        :refer-number plural
+                        :aspect state
+                        :polarity -))
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6u1: 1-1
+s6e1: 0-0
+s6p1: 2-2,4-4
+s6p2: 5-5,27-27
+s6a1: 9-9
+s6m1: 8-8
+s6r1: 7-7
+s6t1: 6-6
+s6e2: 0-0
+s6e3: 0-0
+s6a2: 20-20
+s6p3: 10-10,12-13
+s6a3: 15-15,22-23
+s6z1: 14-14
+s6k1: 16-16
+s6d1: 17-18
+s6v1: 21-21,25-25
+s6v2: 24-24
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5z1)
+            (s6z1 :same-entity s6e1)
+            (s6k1 :same-entity s5k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2     3        4   5    6           7  8  9       10 11     12      13 14     15   16        17     18 19  20          21 22 23 24  25      26       27 28          29 30  31        32
+Words: V  České televizi nám sice nevyvrátili ,  že premiér v  jednom případě ze studia před vysíláním odešel ,  ale nepotvrdili ,  že by byl dotyčný redaktor v  souvislosti s  tím propuštěn .
+
+# sentence level graph:
+(s7b1 / but-91
+        :clausal-marker (s7s1 / sice)
+        :ARG1 (s7v1 / vyvrátit-001
+            :place (s7t1 / televize
+                :mod (s7c1 / český
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s7e1 / entity)
+            :affectee (s7e2 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :ARG1 (s7o1 / odejít-001
+                :ARG0 (s7p1 / premiér
+                    :refer-number singular)
+                :condition (s7p2 / případ
+                    :mod (s7j1 / jeden
+                        :refer-number singular)
+                    :refer-number singular)
+                :start (s7s2 / studio
+                    :refer-number singular)
+                :temporal (s7v2 / vysílání
+                    :ARG0 (s7e3 / entity)
+                    :ARG1 (s7e4 / entity)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number plural
+            :aspect performance
+            :polarity -)
+        :ARG2 (s7p3 / potvrdit-001
+            :place s7t1
+            :ARG0 s7e1
+            :ARG1 (s7p4 / propustit-001
+                :ARG1 (s7r1 / redaktor
+                    :mod (s7d1 / dotyčný
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd)
+                :regard (s7t2 / ten
+                    :refer-number singular)
+                :ARG0 (s7e5 / entity)
+                :start (s7e6 / entity)
+                :refer-number singular
+                :aspect performance)
+            :refer-number plural
+            :aspect performance
+            :polarity -))
+
+# alignment:
+s7b1: 19-19
+s7s1: 5-5
+s7v1: 6-6
+s7e2: 4-4
+s7o1: 8-8,17-17
+s7p1: 9-9
+s7p2: 10-10,12-12
+s7j1: 11-11
+s7s2: 13-14
+s7v2: 15-16
+s7e3: 0-0
+s7e4: 0-0
+s7t1: 1-1,3-3
+s7c1: 2-2
+s7e1: 0-0
+s7p3: 20-20
+s7p4: 22-24,31-31
+s7r1: 26-26
+s7d1: 25-25
+s7t2: 27-30
+s7e5: 0-0
+s7e6: 0-0
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p1 :same-entity s6k1)
+            (s7r1 :same-entity s6a1)
+            (s7t2 :same-event s7o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1        2      3     4     5  6        7  8    9       10          11   12      13      14          15   16      17 18       19   20          21
+Words: Redaktor Adámek nebyl včera k  dosažení ,  jeho rodinní příslušníci však Zemanem uváděné souvislosti jeho odchodu z  televize také nepotvrdili .
+
+# sentence level graph:
+(s8b1 / but-91
+        :ARG1 (s8b2 / být-042
+            :ARG0 (s8a1 / Adámek
+                :mod (s8r1 / redaktor
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s8v1 / včera)
+            :part-of-phraseme (s8k1 / k_dosažení
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity
+            :polarity -)
+        :ARG2 (s8p1 / potvrdit-001
+            :ARG0 (s8p2 / příslušník
+                :possessor s8a1
+                :mod (s8r2 / rodinný
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s8s1 / souvislost
+                :mod (s8u1 / uváděný
+                    :ARG0 (s8z1 / Zeman
+                        :refer-number singular)
+                    :refer-number plural)
+                :possessor (s8o1 / odchod
+                    :start (s8t1 / televize
+                        :refer-number singular)
+                    :ARG0 s8a1
+                    :refer-number singular)
+                :refer-number plural)
+            :clausal-marker (s8t2 / také)
+            :refer-number plural
+            :aspect performance
+            :polarity -))
+
+# alignment:
+s8b1: 11-11
+s8b2: 3-3
+s8a1: 2-2,8-8,15-15
+s8r1: 1-1
+s8v1: 4-4
+s8k1: 5-6
+s8p1: 20-20
+s8p2: 10-10
+s8r2: 9-9
+s8s1: 14-14
+s8u1: 13-13
+s8z1: 12-12
+s8o1: 16-16
+s8t1: 17-18
+s8t2: 19-19
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8a1 :same-entity s7r1)
+            (s8z1 :same-entity s6z1)
+            (s8o1 :same-event s6p2)
+            (s8t1 :same-entity s7t1)))
+
+

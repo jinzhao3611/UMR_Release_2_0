@@ -1,0 +1,307 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2 3    4
+Words: Stock - list KB
+
+# sentence level graph:
+(s1x1 / #Idph
+        :name (s1s1 / stock
+            :refer-number singular)
+        :name (s1l1 / list
+            :refer-number singular)
+        :possessor (s1k1 / KB))
+
+# alignment:
+s1x1: 0-0
+s1s1: 1-1
+s1l1: 3-3
+s1k1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1         2       3   4  5   6  7
+Words: Nominální hodnota YSE je 800 Kč .
+
+# sentence level graph:
+(s2b1 / být-007
+        :ARG0 (s2h1 / hodnota
+            :mod (s2n1 / nominální
+                :refer-number singular)
+            :possessor (s2y1 / YSE)
+            :refer-number singular)
+        :ARG1 (s2k1 / Kč
+            :mod (s2x1 / 800))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2b1: 4-4
+s2h1: 2-2
+s2n1: 1-1
+s2y1: 3-3
+s2k1: 6-6
+s2x1: 5-5
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2        3  4  5  6  7    8  9  10       11    12      13   14        15      16    17 18
+Words: U  obligací KB 2  ,  KB 14.5 %  a  obligace město Liberec činí nominální hodnota 10000 Kč .
+
+# sentence level graph:
+(s3c1 / činit-007
+        :regard (s3a1 / and
+            :op1 (s3o1 / obligace
+                :mod (s3a2 / and
+                    :op1 (s3k1 / KB
+                        :mod (s3x1 / 2))
+                    :op2 (s3k2 / KB
+                        :mod (s3x2 / #Percnt
+                            :mod (s3x3 / 14.5))))
+                :refer-number plural)
+            :op2 (s3o2 / obligace
+                :mod (s3m1 / město
+                    :name (s3l1 / Liberec
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural))
+        :ARG0 (s3h1 / hodnota
+            :mod (s3n1 / nominální
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s3k3 / Kč
+            :mod (s3x4 / 10000))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3c1: 13-13
+s3a1: 9-9
+s3o1: 1-2
+s3a2: 5-5
+s3k1: 3-3
+s3x1: 4-4
+s3k2: 6-6
+s3x2: 8-8
+s3x3: 7-7
+s3o2: 10-10
+s3m1: 11-11
+s3l1: 12-12
+s3h1: 15-15
+s3n1: 14-14
+s3k3: 17-17
+s3x4: 16-16
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3k3 :same-entity s2k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2    3        4  5  6  7           8         9       10    11 12  13 14  15 16 17 18
+Words: K  ceně obligace KB 2  se připočítává alikvotní úrokový výnos (  AÚV )  302 Kč /  ks .
+
+# sentence level graph:
+(s4p1 / připočítávat-001
+        :goal (s4c1 / cena
+            :possessor (s4o1 / obligace
+                :mod (s4k1 / KB
+                    :mod (s4x1 / 2))
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4e1 / entity)
+        :ARG1 (s4i1 / identity-91
+            :ARG1 (s4v1 / výnos
+                :mod (s4u1 / úrokový
+                    :refer-number singular)
+                :mod (s4a1 / alikvótní
+                    :refer-number singular)
+                :mod (s4k2 / Kč
+                    :substitute (s4k3 / kus)
+                    :mod (s4x2 / 302))
+                :refer-number singular)
+            :ARG2 (s4a2 / AÚV
+                :mod s4k2))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect habitual)
+
+# alignment:
+s4p1: 6-7
+s4c1: 1-2
+s4o1: 3-3
+s4k1: 4-4
+s4x1: 5-5
+s4e1: 0-0
+s4i1: 11-11
+s4v1: 10-10
+s4u1: 9-9
+s4a1: 8-8
+s4k2: 15-15
+s4k3: 17-17
+s4x2: 14-14
+s4a2: 12-12
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4k1 :same-entity s3k1)
+            (s4k2 :same-entity s3k3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2        3  4    5  6  7        8     9       10 11  12   13 14   15 16  17 18
+Words: U  obligace KB 14.5 %  a  obligace město Liberec je AÚV 1309 ,  resp .  867 Kč .
+
+# sentence level graph:
+(s5b1 / být-007
+        :regard (s5a1 / and
+            :op1 (s5o1 / obligace
+                :mod (s5k1 / KB
+                    :mod (s5x1 / #Percnt
+                        :mod (s5x2 / 14.5)))
+                :refer-number singular)
+            :op2 (s5o2 / obligace
+                :mod (s5m1 / město
+                    :name (s5l1 / Liberec
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular))
+        :ARG0 (s5a2 / AÚV
+            :refer-number singular)
+        :ARG1 (s5a3 / and
+            :op1 (s5k2 / Kč
+                :mod (s5x3 / 1309))
+            :clausal-marker (s5r1 / respektive)
+            :op2 (s5k3 / Kč
+                :mod (s5x4 / 867)))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5b1: 10-10
+s5a1: 6-6
+s5o1: 1-2
+s5k1: 3-3
+s5x1: 5-5
+s5x2: 4-4
+s5o2: 1-1,7-7
+s5m1: 8-8
+s5l1: 9-9
+s5a2: 11-11
+s5a3: 13-13
+s5k2: 0-0
+s5x3: 12-12
+s5r1: 14-14
+s5k3: 17-17
+s5x4: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5k1 :same-entity s3k2)
+            (s5o2 :same-entity s3o2)
+            (s5a2 :same-entity s4v1)
+            (s5k3 :same-entity s4k2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2    3   4   5  6  7     8  9        10    11      12 13     14     15 16 17 18 19 20 21   22 23 24       25    26      27     28 29      30 31     32 33
+Words: Na BCPP byl AÚV 23 .  srpna (  poslední datum obchodu s  těmito tituly )  u  KB 2  ,  KB 14.5 %  a  obligace město Liberec 312.81 ,  1325.14 a  882.71 Kč .
+
+# sentence level graph:
+(s6b1 / být-007
+        :place (s6b2 / BCPP)
+        :ARG0 (s6a1 / AÚV
+            :refer-number singular)
+        :regard (s6a2 / and
+            :op1 (s6k1 / KB
+                :mod (s6x1 / 2))
+            :op2 (s6k2 / KB
+                :mod (s6x2 / #Percnt
+                    :mod (s6x3 / 14.5)))
+            :op3 (s6o1 / obligace
+                :mod (s6m1 / město
+                    :name (s6l1 / Liberec
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :temporal (s6s1 / srpen
+            :mod (s6x4 / 23)
+            :parenthesis (s6d1 / datum
+                :possessor (s6o2 / obchod
+                    :ARG1 (s6t1 / titul
+                        :mod (s6t2 / tento
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :mod (s6p1 / poslední
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s6a3 / and
+            :op1 (s6k3 / Kč
+                :mod (s6x5 / 312.81))
+            :op2 (s6k4 / Kč
+                :mod (s6x6 / 1325.14))
+            :op3 (s6k5 / Kč
+                :mod (s6x7 / 882.71)))
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s6b1: 3-3
+s6b2: 1-2
+s6a1: 4-4
+s6a2: 23-23
+s6k1: 16-17
+s6x1: 18-18
+s6k2: 20-20
+s6x2: 22-22
+s6x3: 21-21
+s6o1: 24-24
+s6m1: 25-25
+s6l1: 26-26
+s6s1: 7-7
+s6x4: 5-5
+s6d1: 10-10
+s6o2: 11-11
+s6t1: 12-12,14-14
+s6t2: 13-13
+s6p1: 9-9
+s6a3: 30-30
+s6k3: 0-0
+s6x5: 27-27
+s6k4: 0-0
+s6x6: 29-29
+s6k5: 32-32
+s6x7: 31-31
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6a1 :same-entity s5a2)
+            (s6a2 :same-entity s6t1)
+            (s6k1 :same-entity s4k1)
+            (s6k2 :same-entity s5k1)
+            (s6o1 :same-entity s5o2)
+            (s6k5 :same-entity s5k3)))
+
+

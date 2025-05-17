@@ -1,0 +1,230 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2 3
+Words: Pramen : FSÚ
+
+# sentence level graph:
+(s1x1 / #Colon
+        :ARG1 (s1p1 / pramen
+            :refer-number singular)
+        :ARG0 (s1f1 / FSÚ))
+
+# alignment:
+s1x1: 2-2
+s1p1: 1-1
+s1f1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2 3  4
+Words: GRAF : MF DNES
+
+# sentence level graph:
+(s2i1 / identity-91
+        :ARG1 (s2g1 / graf
+            :refer-number singular)
+        :ARG2 (s2m1 / MF
+            :mod (s2d1 / dnes)))
+
+# alignment:
+s2i1: 2-2
+s2g1: 1-1
+s2m1: 3-3
+s2d1: 4-4
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2            3       4    5          6  7        8  9            10 11         12      13
+Words: Ceny zemědělských výrobků jsou zjišťovány u  státních ,  družstevních a  soukromých výrobců .
+
+# sentence level graph:
+(s3z1 / zjišťovat-002
+        :ARG1 (s3c1 / cena
+            :ARG1 (s3v1 / výrobek
+                :mod (s3z2 / zemědělský
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s3e1 / entity)
+        :place (s3a1 / and
+            :op1 (s3v2 / výrobce
+                :mod (s3s1 / státní
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s3v3 / výrobce
+                :mod (s3d1 / družstevní
+                    :refer-number plural)
+                :refer-number plural)
+            :op3 (s3v4 / výrobce
+                :mod (s3s2 / soukromý
+                    :refer-number plural)
+                :refer-number plural))
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s3z1: 4-5
+s3c1: 1-1
+s3v1: 3-3
+s3z2: 2-2
+s3e1: 0-0
+s3a1: 10-10
+s3v2: 0-0
+s3s1: 7-7
+s3v3: 0-0
+s3d1: 9-9
+s3v4: 6-6,12-12
+s3s2: 11-11
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1   2  3        4         5         6   7  8     9    10      11      12 13   14      15
+Words: Jde o  dřívější kategorii nákupních cen ,  které jsou placeny výrobci za jeho výrobky .
+
+# sentence level graph:
+(s4j1 / jít-035
+        :ARG0 (s4k1 / kategorie
+            :mod (s4b1 / brzký
+                :refer-number singular)
+            :possessor (s4c1 / cena
+                :mod (s4n1 / nákupní
+                    :refer-number plural)
+                :ARG1-of (s4p1 / platit-001
+                    :ARG0 (s4e1 / entity)
+                    :ARG2 (s4v1 / výrobce
+                        :refer-number singular)
+                    :effect (s4v2 / výrobek
+                        :ARG0 s4v1
+                        :refer-number plural)
+                    :refer-number plural
+                    :aspect activity)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4j1: 1-1
+s4k1: 2-2,4-4
+s4b1: 3-3
+s4c1: 6-6,8-8
+s4n1: 5-5
+s4p1: 9-10
+s4e1: 0-0
+s4v1: 11-11,13-13
+s4v2: 12-12,14-14
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4c1 :same-entity s3c1)
+            (s4v2 :same-entity s3v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2         3       4  5       6        7    8  9       10       11           12
+Words: Nejsou sledovány prodeje ve vlastní obchodní síti a  prodeje vlastním zaměstnancům .
+
+# sentence level graph:
+(s5s1 / sledovat-004
+        :ARG0 (s5e1 / entity)
+        :ARG1 (s5a1 / and
+            :op1 (s5p1 / prodej
+                :place (s5s2 / síť
+                    :mod (s5o1 / obchodní
+                        :refer-number singular)
+                    :mod (s5v1 / vlastní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :op2 (s5p2 / prodej
+                :ARG2 (s5z1 / zaměstnanec
+                    :mod (s5v2 / vlastní
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural))
+        :refer-number plural
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s5s1: 1-2
+s5e1: 0-0
+s5a1: 8-8
+s5p1: 3-3
+s5s2: 4-4,7-7
+s5o1: 6-6
+s5v1: 5-5
+s5p2: 9-9
+s5z1: 11-11
+s5v2: 10-10
+
+# document level annotation:
+(s5s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1   2 3      4   5        6             7
+Words: Jde o soubor 130 cenových reprezentantů .
+
+# sentence level graph:
+(s6j1 / jít-035
+        :ARG0 (s6s1 / soubor
+            :mod (s6r1 / reprezentant
+                :mod (s6c1 / cenový
+                    :refer-number plural)
+                :mod (s6x1 / 130)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6j1: 1-1
+s6s1: 2-3
+s6r1: 6-6
+s6c1: 5-5
+s6x1: 4-4
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6r1 :same-entity s4v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1 2  3
+Words: ( jš )
+
+# sentence level graph:
+(s7j1 / jš)
+
+# alignment:
+s7j1: 2-2
+
+# document level annotation:
+(s7s0 / sentence)
+
+

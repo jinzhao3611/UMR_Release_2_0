@@ -1,0 +1,853 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2     3   4     5
+Words: Do Prahy dvě opery patří
+
+# sentence level graph:
+(s1p1 / patřit-003
+        :goal (s1p2 / Praha
+            :refer-number singular)
+        :ARG0 (s1o1 / opera
+            :mod (s1d1 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s1p1: 5-5
+s1p2: 1-2
+s1o1: 4-4
+s1d1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2     3 4       5
+Words: Petr Veber , Hudební kritik
+
+# sentence level graph:
+(s2i1 / identity-91
+        :ARG1 (s2v1 / Veber
+            :mod (s2p1 / Petr
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s2k1 / kritik
+            :mod (s2h1 / hudební
+                :refer-number singular)
+            :refer-number singular))
+
+# alignment:
+s2i1: 3-3
+s2v1: 2-2
+s2p1: 1-1
+s2k1: 5-5
+s2h1: 4-4
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2     3     4   5  6        7     8        9           10         11   12           13  14 15     16 17 18     19 20 21     22 23 24     25
+Words: Státní opera Praha již v  polovině srpna zahájila verdiovským festivalem svůj neustávající boj o  diváka ,  o  pověst ,  o  přízeň ,  o  peníze .
+
+# sentence level graph:
+(s3z1 / zahájit-001
+        :ARG0 (s3o1 / opera
+            :mod (s3s1 / státní
+                :refer-number singular)
+            :mod (s3p1 / Praha
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s3j1 / již)
+        :temporal (s3p2 / polovina
+            :possessor (s3s2 / srpen
+                :refer-number singular)
+            :refer-number singular)
+        :instrument (s3f1 / festival
+            :mod (s3v1 / verdiovský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3b1 / boj
+            :ARG0 s3o1
+            :mod (s3u1 / ustávající
+                :refer-number singular
+                :polarity -)
+            :ARG1 (s3a1 / and
+                :op1 (s3d1 / divák
+                    :refer-number singular)
+                :op2 (s3p3 / pověst
+                    :refer-number singular)
+                :op3 (s3p4 / přízeň
+                    :refer-number singular)
+                :op4 (s3p5 / peníze
+                    :refer-number plural))
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3z1: 8-8
+s3o1: 2-2,11-11
+s3s1: 1-1
+s3p1: 3-3
+s3j1: 4-4
+s3p2: 5-6
+s3s2: 7-7
+s3f1: 10-10
+s3v1: 9-9
+s3b1: 13-13
+s3u1: 12-12
+s3a1: 22-22
+s3d1: 14-15
+s3p3: 17-18
+s3p4: 20-21
+s3p5: 23-24
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s1p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2       3      4        5  6   7     8   9       10 11      12     13   14 15  16   17  18    19 20        21       22   23    24        25 26          27 28  29     30              31     32
+Words: S  napětím budeme sledovat ,  jak tento boj dopadne -  zvláště koncem roku ,  kdy může být druhá z  pražských operních scén zcela odstavena od dosavadních ,  byť stejně nepostačujících dotací .
+
+# sentence level graph:
+(s4s1 / sledovat-002
+        :companion (s4n1 / napětí
+            :refer-number singular)
+        :ARG0 (s4e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :ARG1 (s4d1 / dopadnout-005
+            :ARG0 (s4b1 / boj
+                :mod (s4t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :manner (s4j1 / jak)
+            :clausal-marker (s4z1 / zvláště)
+            :temporal (s4r1 / rok
+                :temporal (s4o1 / odstavit-001
+                    :temporal s4r1
+                    :ARG1 (s4d2 / druhý
+                        :start (s4s2 / scéna
+                            :mod (s4p1 / pražský
+                                :refer-number plural)
+                            :mod (s4o2 / operní
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :ARG0 (s4e2 / entity)
+                    :extent (s4z2 / zcela)
+                    :start (s4d3 / dotace
+                        :mod (s4d4 / dosavadní
+                            :refer-number plural)
+                        :mod (s4p2 / postačující
+                            :clausal-marker (s4s3 / stejně)
+                            :refer-number plural
+                            :polarity -)
+                        :refer-number plural)
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :aspect activity)
+
+# alignment:
+s4s1: 3-4
+s4n1: 1-2
+s4e1: 0-0
+s4d1: 9-9
+s4b1: 8-8
+s4t1: 7-7
+s4j1: 6-6
+s4z1: 11-11
+s4r1: 12-13,15-15
+s4o1: 16-17,24-24
+s4d2: 18-18
+s4s2: 19-19,22-22
+s4p1: 20-20
+s4o2: 21-21
+s4e2: 0-0
+s4z2: 23-23
+s4d3: 25-25,31-31
+s4d4: 26-26
+s4p2: 28-28,30-30
+s4s3: 29-29
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4b1 :same-entity s3b1)
+            (s4d2 :same-entity s3o1)
+            (s4s2 :same-entity s1o1)
+            (s4p1 :same-entity s3p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2      3      4  5  6    7       8     9       10 11       12         13 14 15 16  17     18    19 20     21 22 23       24       25            26        27    28      29
+Words: Není přitom pochyb (  i  přes všechny možné výhrady k  některým inscenacím )  ,  že boj Státní opery o  diváka a  o  procenta finanční soběstačnosti nedopadal zatím nejhůře .
+
+# sentence level graph:
+(s5b1 / but-91
+        :ARG1 (s5b2 / být-011
+            :clausal-marker (s5p1 / přitom)
+            :clausal-marker (s5i1 / i)
+            :ARG0 (s5p2 / pochyba
+                :ARG1 (s5d1 / dopadat-003
+                    :ARG0 (s5b3 / boj
+                        :ARG0 (s5o1 / opera
+                            :mod (s5s1 / státní
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG1 (s5a1 / and
+                            :op1 (s5d2 / divák
+                                :refer-number singular)
+                            :op2 (s5p3 / procento
+                                :mod (s5s2 / soběstačnost
+                                    :mod (s5f1 / finanční
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :refer-number plural))
+                        :refer-number singular)
+                    :temporal (s5z1 / zatím)
+                    :manner (s5h1 / hůře)
+                    :refer-number singular
+                    :aspect activity
+                    :polarity -)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :ARG2 (s5v1 / výhrada
+            :ARG1 (s5i2 / inscenace
+                :mod (s5n1 / některý
+                    :refer-number plural)
+                :refer-number plural)
+            :mod (s5v2 / všechen
+                :refer-number plural)
+            :mod (s5m1 / možný
+                :refer-number plural)
+            :refer-number plural))
+
+# alignment:
+s5b1: 0-0
+s5b2: 1-1
+s5p1: 2-2
+s5i1: 5-5
+s5p2: 3-3
+s5d1: 15-15,26-26
+s5b3: 16-16
+s5o1: 18-18
+s5s1: 17-17
+s5a1: 21-21
+s5d2: 19-20
+s5p3: 22-23
+s5s2: 25-25
+s5f1: 24-24
+s5z1: 27-27
+s5h1: 28-28
+s5v1: 6-6,9-9
+s5i2: 10-10,12-12
+s5n1: 11-11
+s5v2: 7-7
+s5m1: 8-8
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5b3 :same-entity s4b1)
+            (s5o1 :same-entity s4d2)
+            (s5d2 :same-entity s3d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1        2    3  4  5  6        7        8     9  10   11    12 13    14      15       16           17       18        19 20         21 22           23     24     25
+Words: Nesporné také je ,  že umělecké výsledky scény by byly lepší ,  kdyby omezený rozpočet nepodvazoval možnosti hostování a  spolupráce s  vynikajícími umělci zvenčí .
+
+# sentence level graph:
+(s6b1 / být-007
+        :ARG1 (s6s1 / sporný
+            :refer-number singular
+            :polarity -)
+        :clausal-marker (s6t1 / také)
+        :ARG0 (s6b2 / být-007
+            :ARG0 (s6v1 / výsledek
+                :possessor (s6s2 / scéna
+                    :refer-number singular)
+                :mod (s6u1 / umělecký
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s6d1 / dobrý
+                :refer-number plural)
+            :condition (s6p1 / podvazovat-001
+                :ARG0 (s6r1 / rozpočet
+                    :mod (s6o1 / omezený
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s6m1 / možnost
+                    :ARG1 (s6a1 / and
+                        :op1 (s6h1 / hostování
+                            :ARG0 (s6e1 / entity)
+                            :place (s6e2 / entity)
+                            :refer-number singular)
+                        :op2 (s6s3 / spolupráce
+                            :ARG1 (s6u2 / umělec
+                                :start (s6z1 / zvenčí)
+                                :mod (s6v2 / vynikající
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :refer-number singular))
+                    :refer-number plural)
+                :refer-number singular
+                :aspect activity
+                :polarity -)
+            :refer-number plural
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 3-3
+s6s1: 1-1
+s6t1: 2-2
+s6b2: 5-5,9-10
+s6v1: 7-7
+s6s2: 8-8
+s6u1: 6-6
+s6d1: 11-11
+s6p1: 13-13,16-16
+s6r1: 15-15
+s6o1: 14-14
+s6m1: 17-17
+s6a1: 19-19
+s6h1: 18-18
+s6e1: 0-0
+s6e2: 0-0
+s6s3: 20-20
+s6u2: 21-21,23-23
+s6z1: 24-24
+s6v2: 22-22
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s2 :same-entity s5o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2   3    4     5    6      7  8    9     10      11 12     13          14   15        16       17   18 19     20        21     22        23      24 25 26    27     28 29 30    31     32     33    34    35           36       37    38          39       40 41        42       43  44          45 46    47 48 49  50 51       52    53 54          55 56      57         58      59
+Words: O  čem však vůbec není pochyb ,  jsou dávné tradice :  jednak koexistence dvou pražských operních domů a  jednak samotného Nového německého divadla ,  v  jehož budově a  na jehož profil Státní opera stále programověji navazuje nejen konkrétními projekty (  například uvedením děl Zemlinského či Krásy )  ,  ale i  operními plesy a  vstřícností k  německy hovořícímu publiku .
+
+# sentence level graph:
+(s7b1 / být-007
+        :ARG1 (s7b2 / být-011
+            :clausal-marker (s7v1 / však)
+            :extent (s7v2 / vůbec)
+            :ARG0 (s7p1 / pochyba
+                :ARG1 (s7c1 / co
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :ARG0 (s7i1 / identity-91
+            :ARG1 (s7t1 / tradice
+                :mod (s7d1 / dávný
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG2 (s7a1 / and
+                :clausal-marker (s7j1 / jednak)
+                :op1 (s7k1 / koexistence
+                    :ARG1 (s7x1 / #Rcp
+                        :refer-number plural)
+                    :ARG0 (s7d2 / dům
+                        :mod (s7o1 / operní
+                            :refer-number plural)
+                        :mod (s7p2 / pražský
+                            :refer-number plural)
+                        :mod (s7d3 / dva
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :clausal-marker (s7j2 / jednak)
+                :op2 (s7k2 / koexistence
+                    :ARG1 (s7x2 / #Rcp
+                        :refer-number singular)
+                    :ARG0 (s7d4 / divadlo
+                        :mod (s7n1 / německý
+                            :refer-number singular)
+                        :mod (s7n2 / Nový
+                            :refer-number singular)
+                        :mod (s7s1 / samotný
+                            :refer-number singular)
+                        :mod (s7a2 / and
+                            :op1 (s7n3 / navazovat-002
+                                :ARG0 (s7o2 / opera
+                                    :mod (s7s2 / Státní
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :place (s7b3 / budova
+                                    :possessor s7d4
+                                    :refer-number singular)
+                                :ARG1 s7p3
+                                :refer-number singular
+                                :refer-person 3rd
+                                :aspect activity)
+                            :op2 (s7n4 / navazovat-002
+                                :ARG0 s7o2
+                                :ARG1 (s7p3 / profil
+                                    :possessor s7d4
+                                    :refer-number singular)
+                                :manner (s7p4 / programově
+                                    :extent (s7s3 / stále))
+                                :instrument (s7g1 / gradation
+                                    :clausal-marker (s7n5 / nejen)
+                                    :op1 (s7i2 / identity-91
+                                        :ARG1 (s7p5 / projekt
+                                            :mod (s7k3 / konkrétní
+                                                :refer-number plural)
+                                            :refer-number plural)
+                                        :clausal-marker (s7n6 / například)
+                                        :ARG2 (s7u1 / uvedení
+                                            :ARG0 (s7e1 / entity)
+                                            :ARG1 (s7d5 / dílo
+                                                :source (s7a3 / and
+                                                    :op1 (s7z1 / Zemlinský
+                                                        :refer-number singular)
+                                                    :op2 (s7k4 / Krása
+                                                        :refer-number singular))
+                                                :refer-number plural)
+                                            :refer-number singular))
+                                    :clausal-marker (s7i3 / i)
+                                    :op2 (s7a4 / and
+                                        :op1 (s7p6 / ples
+                                            :mod (s7o3 / operní
+                                                :refer-number plural)
+                                            :refer-number plural)
+                                        :op2 (s7v3 / vstřícnost
+                                            :ARG1 (s7p7 / publikum
+                                                :mod (s7h1 / hovořící
+                                                    :manner (s7n7 / německy
+                                                        :refer-number singular)
+                                                    :refer-number singular)
+                                                :refer-number singular)
+                                            :refer-number singular)))
+                                :refer-number singular
+                                :refer-person 3rd
+                                :aspect activity))
+                        :refer-number singular)
+                    :refer-number singular)))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7b1: 8-8
+s7b2: 5-5
+s7v1: 3-3
+s7v2: 4-4
+s7p1: 6-6
+s7c1: 1-2
+s7i1: 11-11
+s7t1: 10-10
+s7d1: 9-9
+s7a1: 18-18
+s7j1: 12-12
+s7k1: 13-13
+s7x1: 0-0
+s7d2: 17-17
+s7o1: 16-16
+s7p2: 15-15
+s7d3: 14-14
+s7j2: 19-19
+s7k2: 0-0
+s7x2: 0-0
+s7d4: 23-23,26-26,30-30
+s7n1: 22-22
+s7n2: 21-21
+s7s1: 20-20
+s7a2: 28-28
+s7n3: 0-0
+s7b3: 25-25,27-27
+s7o2: 33-33
+s7s2: 32-32
+s7n4: 36-36
+s7p3: 29-29,31-31
+s7p4: 35-35
+s7s3: 34-34
+s7g1: 49-49
+s7n5: 37-37
+s7i2: 40-40
+s7p5: 39-39
+s7k3: 38-38
+s7n6: 41-41
+s7u1: 42-42
+s7e1: 0-0
+s7d5: 43-43
+s7a3: 45-45
+s7z1: 44-44
+s7k4: 46-46
+s7i3: 50-50
+s7a4: 53-53
+s7p6: 52-52
+s7o3: 51-51
+s7v3: 54-54
+s7p7: 55-55,58-58
+s7h1: 57-57
+s7n7: 56-56
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p1 :same-entity s5p2)
+            (s7x1 :same-entity s7d2)
+            (s7d2 :same-entity s4s2)
+            (s7p2 :same-entity s4p1)
+            (s7x2 :same-entity s7d4)
+            (s7o2 :same-entity s6s2)
+            (s7n7 :same-entity s7n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2       3  4   5  6    7    8      9        10    11      12 13 14     15  16 17     18         19     20    21  22 23 24     25 26        27        28          29 30         31 32     33        34   35        36 37      38
+Words: Národní divadlo (  kde se přes léto naopak usídlila opera rocková )  se nemusí ani v  sezoně konkurence Státní opery bát ,  ba naopak -  tematické rozdělení dramaturgie a  repertoáru je stejně prospěšné jako soutěžení v  kvalitě .
+
+# sentence level graph:
+(s8g1 / gradation
+        :op1 (s8b1 / bát-se-002
+            :ARG0 (s8d1 / divadlo
+                :mod (s8n1 / národní
+                    :refer-number singular)
+                :place-of (s8u1 / usídlit-se-001
+                    :clausal-marker (s8n2 / naopak)
+                    :temporal (s8l1 / léto
+                        :refer-number singular)
+                    :ARG0 (s8o1 / opera
+                        :mod (s8r1 / rockový
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect performance)
+                :refer-number singular)
+            :clausal-marker (s8a1 / ani)
+            :temporal (s8s1 / sezona
+                :refer-number singular)
+            :ARG1 (s8k1 / konkurence
+                :ARG0 (s8o2 / opera
+                    :mod (s8s2 / státní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity
+            :polarity -)
+        :op2 (s8b2 / být-007
+            :clausal-marker (s8n3 / naopak)
+            :ARG0 (s8r2 / rozdělení
+                :ARG0 (s8e1 / entity)
+                :ARG1 (s8a2 / and
+                    :op1 (s8d2 / dramaturgie
+                        :refer-number singular)
+                    :op2 (s8r3 / repertoár
+                        :refer-number singular))
+                :regard (s8t1 / tematický
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s8p1 / prospěšný
+                :manner (s8s3 / stejně
+                    :comparison (s8b3 / být-007
+                        :ARG1 (s8p2 / prospěšný
+                            :refer-number singular)
+                        :ARG0 (s8s4 / soutěžení
+                            :ARG0 (s8e2 / entity)
+                            :ARG2 (s8e3 / entity)
+                            :regard (s8k2 / kvalita
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity))
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s8g1: 23-23
+s8b1: 13-14,21-21
+s8d1: 2-2,4-4
+s8n1: 1-1
+s8u1: 5-5,9-9
+s8n2: 8-8
+s8l1: 6-7
+s8o1: 10-10
+s8r1: 11-11
+s8a1: 15-15
+s8s1: 16-17
+s8k1: 18-18
+s8o2: 20-20
+s8s2: 19-19
+s8b2: 31-31
+s8n3: 24-24
+s8r2: 27-27
+s8e1: 0-0
+s8a2: 29-29
+s8d2: 28-28
+s8r3: 30-30
+s8t1: 26-26
+s8p1: 33-33
+s8s3: 32-32
+s8b3: 0-0
+s8p2: 0-0
+s8s4: 35-35
+s8e2: 0-0
+s8e3: 0-0
+s8k2: 36-37
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8o2 :same-entity s7o2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1    2    3    4     5  6      7        8           9  10       11         12 13  14     15   16 17  18     19    20       21  22           23         24           25      26 27   28      29           30
+Words: Snad tedy stát spolu s  městem naleznou organizační a  finanční východisko ,  jak koncem roku ,  kdy Státní opera přestane být příspěvkovou organizací ministerstva kultury ,  její situaci stabilizovat .
+
+# sentence level graph:
+(s9n1 / naleznout-001
+        :clausal-marker (s9t1 / tedy)
+        :ARG0 (s9s1 / stát
+            :companion (s9m1 / město
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s9s2 / snad)
+        :ARG1 (s9v1 / východisko
+            :mod (s9a1 / and
+                :op1 (s9o1 / organizační
+                    :refer-number singular)
+                :op2 (s9f1 / finanční
+                    :refer-number singular))
+            :ARG1 (s9s3 / stabilizovat-001
+                :temporal (s9r1 / rok
+                    :temporal (s9p1 / přestat-001
+                        :temporal s9r1
+                        :ARG0 (s9o2 / opera
+                            :mod (s9s4 / státní
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG1 (s9b1 / být-007
+                            :ARG0 s9o2
+                            :ARG1 (s9o3 / organizace
+                                :mod (s9p2 / příspěvkový
+                                    :refer-number singular)
+                                :possessor (s9m2 / ministerstvo
+                                    :possessor (s9k1 / kultura
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :aspect activity)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect performance)
+                    :refer-number singular)
+                :ARG1 (s9s5 / situace
+                    :possessor s9o2
+                    :refer-number singular)
+                :manner (s9j1 / jak)
+                :ARG0 (s9e1 / entity)
+                :aspect process)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s9n1: 7-7
+s9t1: 2-2
+s9s1: 3-3
+s9m1: 4-6
+s9s2: 1-1
+s9v1: 11-11
+s9a1: 9-9
+s9o1: 8-8
+s9f1: 10-10
+s9s3: 29-29
+s9r1: 14-15,17-17
+s9p1: 20-20
+s9o2: 19-19,27-27
+s9s4: 18-18
+s9b1: 21-21
+s9o3: 23-23
+s9p2: 22-22
+s9m2: 24-24
+s9k1: 25-25
+s9s5: 28-28
+s9j1: 13-13
+s9e1: 0-0
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9m1 :same-entity s7p2)
+            (s9o2 :same-entity s8o2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1   2  3   4       5      6  7    8             9      10 11     12 13  14    15 16        17 18    19      20 21     22        23 24     25         26        27 28      29        30      31 32       33         34       35          36  37         38         39   40
+Words: Tak ,  aby nemusel přijít na řadu katastrofický scénář :  dotace -  byť načas -  zastaveny ,  opera zrušena ,  soubor rozpuštěn a  budova někdejšího německého a  později Smetanova divadla v  konkurzu poskytnuta soukromé společnosti pro rentabilní muzikálové show .
+
+# sentence level graph:
+(s10s1 / stabilizovat-001
+        :ARG0 (s10e1 / entity)
+        :ARG1 (s10e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :manner (s10p1 / přijít-031
+            :part-of-phraseme (s10n1 / na_řadu
+                :refer-number singular)
+            :ARG0 (s10s2 / scénář
+                :mod (s10k1 / katastrofický
+                    :refer-number singular)
+                :name (s10a1 / and
+                    :op1 (s10b1 / but-91
+                        :ARG2 (s10n2 / načas)
+                        :ARG1 (s10z1 / zastavit-001
+                            :ARG0 (s10e3 / entity)
+                            :ARG1 (s10d1 / dotace
+                                :refer-number plural)
+                            :refer-number plural
+                            :aspect performance))
+                    :op2 (s10z2 / zrušit-001
+                        :ARG0 s10e3
+                        :ARG1 (s10o1 / opera
+                            :refer-number singular
+                            :refer-person 3rd)
+                        :aspect performance)
+                    :op3 (s10r1 / rozpustit-001
+                        :ARG0 s10e3
+                        :ARG1 (s10s3 / soubor
+                            :refer-number singular)
+                        :refer-number singular
+                        :aspect performance)
+                    :op4 (s10p2 / poskytnout-001
+                        :ARG0 s10e3
+                        :ARG1 (s10b2 / budova
+                            :possessor (s10a2 / and
+                                :op1 (s10d2 / divadlo
+                                    :mod (s10n3 / německý
+                                        :refer-number singular)
+                                    :mod (s10n4 / někdejší
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :op2 (s10d3 / divadlo
+                                    :mod (s10s4 / Smetana
+                                        :refer-number singular)
+                                    :temporal (s10p3 / pozdě)
+                                    :refer-number singular))
+                            :refer-number singular)
+                        :manner (s10k2 / konkurs
+                            :refer-number singular)
+                        :ARG2 (s10s5 / společnost
+                            :mod (s10s6 / soukromý
+                                :refer-number singular)
+                            :refer-number singular)
+                        :purpose (s10s7 / show
+                            :mod (s10m1 / muzikálový
+                                :refer-number plural)
+                            :mod (s10r2 / rentabilní
+                                :refer-number plural)
+                            :refer-number plural)
+                        :aspect performance))
+                :refer-number singular)
+            :aspect performance
+            :polarity -)
+        :aspect process)
+
+# alignment:
+s10s1: 0-0
+s10e1: 0-0
+s10e2: 0-0
+s10p1: 1-1,3-5
+s10n1: 6-7
+s10s2: 9-9
+s10k1: 8-8
+s10a1: 23-23
+s10z2: 19-19
+s10o1: 18-18
+s10r1: 22-22
+s10s3: 21-21
+s10p2: 33-33
+s10b2: 24-24
+s10a2: 27-27
+s10d2: 30-30
+s10n3: 26-26
+s10n4: 25-25
+s10d3: 0-0
+s10s4: 29-29
+s10p3: 28-28
+s10k2: 31-32
+s10s5: 35-35
+s10s6: 34-34
+s10s7: 36-36,39-39
+s10m1: 38-38
+s10r2: 37-37
+s10b1: 13-13
+s10z1: 16-16
+s10d1: 11-11
+s10e3: 0-0
+s10n2: 14-14
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10e2 :same-entity s9s5)
+            (s10o1 :same-entity s9o2)
+            (s10b2 :same-entity s7b3)
+            (s10d2 :same-entity s7d4)
+            (s10n3 :same-entity s7n7)
+            (s10d1 :same-entity s4d3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1    2   3       4
+Words: Nebo pro kabaret .
+
+# sentence level graph:
+(s11e1 / event
+        :clausal-marker (s11n1 / nebo)
+        :purpose (s11k1 / kabaret
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s11e1: 0-0
+s11n1: 1-1
+s11k1: 2-3
+
+# document level annotation:
+(s11s0 / sentence)
+
+

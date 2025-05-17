@@ -1,0 +1,221 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1   2     3         4  5    6      7  8    9       10    11
+Words: Byl tehdy zagitován do Rudé armády ,  když vypukla válka .
+
+# sentence level graph:
+(s1z1 / zagitovat-001
+        :temporal (s1t1 / tehdy)
+        :ARG0 (s1e1 / entity)
+        :ARG1 (s1e2 / entity)
+        :goal (s1a1 / armáda
+            :mod (s1r1 / Rudý
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s1v1 / vypuknout-001
+            :ARG0 (s1v2 / válka
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1z1: 1-1,3-3
+s1t1: 2-2
+s1e1: 0-0
+s1e2: 0-0
+s1a1: 4-4,6-6
+s1r1: 5-5
+s1v1: 8-9
+s1v2: 10-10
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1  2  3  4        5  6  7    8    9  10     11        12
+Words: Mě se to netýkalo ,  já jsem tady v  armádě nesloužil .
+
+# sentence level graph:
+(s2a1 / and
+        :op1 (s2t1 / týkat-se-001
+            :ARG1 (s2e1 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :ARG0 (s2t2 / ten
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :op2 (s2s1 / sloužit-004
+            :ARG0 s2e1
+            :place (s2t3 / tady)
+            :place (s2a2 / armáda
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 1st
+            :aspect activity
+            :polarity -))
+
+# alignment:
+s2a1: 5-5
+s2t1: 2-2,4-4
+s2e1: 1-1,6-6
+s2t2: 3-3
+s2s1: 7-7,11-11
+s2t3: 8-8
+s2a2: 9-10
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2t2 :same-event s1z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2         3  4    5      6  7      8  9    10     11   12
+Words: Byl zagitován do Rudé armády ,  prošel s  nimi nějaké akce .
+
+# sentence level graph:
+(s3a1 / and
+        :op1 (s3z1 / zagitovat-001
+            :ARG0 (s3e1 / entity)
+            :ARG1 (s3e2 / entity)
+            :goal (s3a2 / armáda
+                :mod (s3r1 / Rudý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :op2 (s3p1 / projít-003
+            :companion s3a2
+            :ARG0 s3e2
+            :companion s3e1
+            :ARG1 (s3a3 / akce
+                :mod (s3n1 / nějaký
+                    :refer-number plural
+                    :refer-person 3rd)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect performance))
+
+# alignment:
+s3a1: 6-6
+s3z1: 1-2
+s3e1: 8-9
+s3e2: 0-0
+s3a2: 3-3,5-5
+s3r1: 4-4
+s3p1: 7-7
+s3a3: 11-11
+s3n1: 10-10
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s1e1)
+            (s3e2 :same-entity s1e2)
+            (s3a2 :same-entity s1a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2  3    4  5       6    7        8  9   10 11      12 13        14 15   16       17 18      19    20   21 22       23
+Words: Potom ,  když se tvořila naše jednotka ,  tak si zažádal o  přeložení do naší jednotky a  skončil potom taky v  Buzuluku .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4z1 / zažádat-002
+            :temporal (s4p1 / potom
+                :temporal (s4t1 / tvořit-001
+                    :ARG0 (s4e1 / entity)
+                    :ARG1 (s4j1 / jednotka
+                        :mod (s4e2 / entity
+                            :refer-number plural
+                            :refer-person 1st)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity))
+            :clausal-marker (s4t2 / tak)
+            :affectee s4e3
+            :ARG1 (s4p2 / přeložení
+                :ARG0 (s4e4 / entity)
+                :start (s4e5 / entity)
+                :ARG1 s4e3
+                :goal (s4j2 / jednotka
+                    :mod s4e2
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s4e3 / entity)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :op2 (s4s1 / skončit-004
+            :temporal s4p1
+            :ARG0 s4e3
+            :temporal (s4p3 / potom)
+            :clausal-marker (s4t3 / taky)
+            :place (s4b1 / Buzuluk
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance))
+
+# alignment:
+s4a1: 17-17
+s4z1: 11-11
+s4t2: 9-9
+s4p2: 12-13
+s4e4: 0-0
+s4e5: 0-0
+s4j2: 14-14,16-16
+s4p1: 1-1
+s4t1: 3-5
+s4e1: 0-0
+s4j1: 7-7
+s4e2: 6-6,15-15
+s4e3: 10-10
+s4s1: 18-18
+s4p3: 19-19
+s4t3: 20-20
+s4b1: 21-22
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4j2 :same-entity s4j1)
+            (s4e3 :same-entity s3e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2      3
+Words: Konec kazety .
+
+# sentence level graph:
+(s5k1 / konec
+        :mod (s5k2 / kazeta
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s5k1: 1-1
+s5k2: 2-2
+
+# document level annotation:
+(s5s0 / sentence)
+
+

@@ -1,0 +1,930 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2     3
+Words: Peškova pocta katedrále
+
+# sentence level graph:
+(s1p1 / pocta
+        :ARG0 (s1p2 / Pešek
+            :refer-number singular)
+        :ARG1 (s1k1 / katedrála
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1p1: 2-2
+s1p2: 1-1
+s1k1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1
+Words: Hudba
+
+# sentence level graph:
+(s2h1 / hudba
+        :refer-number singular)
+
+# alignment:
+s2h1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2
+Words: Petr Veber
+
+# sentence level graph:
+(s3v1 / Veber
+        :mod (s3p1 / Petr
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s3v1: 2-2
+s3p1: 1-1
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2        3     4     5  6      7        8     9         10 11    12         13      14        15       16        17         18  19 20     21       22     23      24   25
+Words: Na Pražském hradě začal v  sobotu festival Pocta katedrále ,  který pořádající světské instituce věnovaly letošnímu podzimnímu 650 .  výročí založení chrámu svatého Víta .
+
+# sentence level graph:
+(s4z1 / začít-002
+        :place (s4h1 / hrad
+            :mod (s4p1 / pražský
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s4s1 / sobota
+            :refer-number singular)
+        :ARG0 (s4f1 / festival
+            :name (s4p2 / pocta
+                :ARG1 (s4k1 / katedrála
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1-of (s4v1 / věnovat-001
+                :ARG0 (s4i1 / instituce
+                    :mod (s4p3 / pořádající
+                        :refer-number plural)
+                    :mod (s4s2 / světský
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG2 (s4v2 / výročí
+                    :mod (s4l1 / letošní
+                        :refer-number singular)
+                    :mod (s4p4 / podzimní
+                        :refer-number singular)
+                    :mod (s4x1 / 650)
+                    :possessor (s4z2 / založení
+                        :ARG0 (s4e1 / entity)
+                        :ARG1 (s4c1 / chrám
+                            :possessor (s4v3 / Vít
+                                :mod (s4s3 / svatý
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :aspect process)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4z1: 4-4
+s4h1: 1-1,3-3
+s4p1: 2-2
+s4s1: 5-6
+s4f1: 7-7,11-11
+s4p2: 8-8
+s4k1: 9-9
+s4v1: 15-15
+s4i1: 14-14
+s4p3: 12-12
+s4s2: 13-13
+s4v2: 20-20
+s4l1: 16-16
+s4p4: 17-17
+s4x1: 18-18
+s4z2: 21-21
+s4e1: 0-0
+s4c1: 22-22
+s4v3: 24-24
+s4s3: 23-23
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4f1 :same-entity s1p1)
+            (s4k1 :same-entity s1k1)
+            (s4c1 :same-entity s4k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2       3  4  5    6      7  8         9           10 11      12    13 14      15    16 17     18       19  20
+Words: Úvodní koncert se -  jako jediný z  jedenácti plánovaných -  odehrál přímo na slavném místě a  poctou skutečně byl .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5o1 / odehrát-se-001
+            :ARG0 (s5k1 / koncert
+                :mod (s5u1 / úvodní
+                    :refer-number singular)
+                :refer-number singular)
+            :manner (s5j1 / jediný
+                :mod-of s5k1
+                :path (s5k2 / koncert
+                    :mod (s5j2 / jedenáct
+                        :refer-number plural)
+                    :mod (s5p1 / plánovaný
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s5p2 / přímo)
+            :place (s5m1 / místo
+                :mod (s5s1 / slavný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s5b1 / být-007
+            :ARG0 s5k1
+            :COMPL s5j1
+            :clausal-marker (s5s2 / skutečně)
+            :ARG1 (s5p3 / pocta
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity))
+
+# alignment:
+s5a1: 16-16
+s5o1: 3-3,11-11
+s5p2: 12-12
+s5m1: 13-13,15-15
+s5s1: 14-14
+s5k1: 2-2
+s5u1: 1-1
+s5j1: 5-6
+s5k2: 0-0
+s5j2: 8-8
+s5p1: 9-9
+s5b1: 19-19
+s5s2: 18-18
+s5p3: 17-17
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5m1 :same-entity s4c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1   2         3      4     5        6         7         8  9       10            11   12 13         14          15 16      17        18         19      20      21        22       23     24  25     26
+Words: Pod taktovkou Libora Peška orchestr Pražských symfoniků a  Pražský filharmonický sbor s  Magdalenou Hajóssyovou a  Peterem Mikulášem rozezvučel vznosný prostor nádhernou duchovní hudbou tří autorů .
+
+# sentence level graph:
+(s6r1 / rozezvučet-001
+        :ARG0 (s6a1 / and
+            :op1 (s6o1 / orchestr
+                :possessor (s6s1 / symfonik
+                    :mod (s6p1 / Pražský
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :op2 (s6s2 / sbor
+                :mod (s6p2 / Pražský
+                    :refer-number singular)
+                :mod (s6f1 / filharmonický
+                    :refer-number singular)
+                :companion (s6a2 / and
+                    :op1 (s6h1 / Hajóssyová
+                        :mod (s6m1 / Magdalena
+                            :refer-number singular)
+                        :refer-number singular)
+                    :op2 (s6m2 / Mikuláš
+                        :mod (s6p3 / Peter
+                            :refer-number singular)
+                        :refer-number singular))
+                :refer-number singular))
+        :manner (s6t1 / taktovka
+            :possessor (s6p4 / Pešek
+                :mod (s6l1 / Libor
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s6p5 / prostor
+            :mod (s6v1 / vznosný
+                :refer-number singular)
+            :refer-number singular)
+        :instrument (s6h2 / hudba
+            :mod (s6n1 / nádherný
+                :refer-number singular)
+            :mod (s6d1 / duchovní
+                :refer-number singular)
+            :source (s6a3 / autor
+                :mod (s6t2 / tři
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6r1: 18-18
+s6a1: 8-8
+s6o1: 5-5
+s6s1: 7-7
+s6p1: 6-6
+s6s2: 11-11
+s6p2: 9-9
+s6f1: 10-10
+s6a2: 15-15
+s6h1: 12-12,14-14
+s6m1: 13-13
+s6m2: 12-12,17-17
+s6p3: 16-16
+s6t1: 1-2
+s6p4: 4-4
+s6l1: 3-3
+s6p5: 20-20
+s6v1: 19-19
+s6h2: 23-23
+s6n1: 21-21
+s6d1: 22-22
+s6a3: 25-25
+s6t2: 24-24
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p1 :same-entity s4p1)
+            (s6p2 :same-entity s6p1)
+            (s6p4 :same-entity s1p2)
+            (s6p5 :same-entity s5m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2  3    4  5  6  7    8     9      10         11       12          13      14
+Words: Verdiho Te Deum je i  na malé ploše blízké kontrastně stavěným romantickým freskám .
+
+# sentence level graph:
+(s7b1 / být-007
+        :ARG0 (s7x1 / #Idph
+            :source (s7v1 / Verdi
+                :refer-number singular)
+            :name (s7t1 / Te)
+            :name (s7d1 / Deum
+                :refer-number singular))
+        :clausal-marker (s7i1 / i)
+        :place (s7p1 / plocha
+            :mod (s7m1 / malý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s7b2 / blízký
+            :ARG1 (s7f1 / freska
+                :mod (s7s1 / stavěný
+                    :manner (s7k1 / kontrastně)
+                    :refer-number plural)
+                :mod (s7r1 / romantický
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7b1: 4-4
+s7x1: 0-0
+s7v1: 1-1
+s7t1: 2-2
+s7d1: 3-3
+s7i1: 5-5
+s7p1: 6-6,8-8
+s7m1: 7-7
+s7b2: 9-9
+s7f1: 13-13
+s7s1: 11-11
+s7k1: 10-10
+s7r1: 12-12
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1            2           3     4      5       6       7       8       9    10              11   12  13         14     15    16      17       18 19        20        21 22        23       24       25     26
+Words: Nedoceňovaný francouzský autor našeho století Francis Poulenc obdařil před čtyřiačtyřiceti lety své zpracování Stabat Mater apartní harmonií ,  kouzelnou melodikou i  přehledně členěným hudebním tvarem .
+
+# sentence level graph:
+(s8o1 / obdařit-001
+        :ARG0 (s8p1 / Poulenc
+            :mod (s8a1 / autor
+                :mod (s8d1 / doceňovaný
+                    :refer-number singular
+                    :polarity -)
+                :mod (s8f1 / francouzský
+                    :refer-number singular)
+                :possessor (s8s1 / století
+                    :possessor (s8e1 / entity
+                        :refer-number plural
+                        :refer-person 1st)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s8f2 / Francis
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s8r1 / rok
+            :mod (s8c1 / čtyřiačtyřicet
+                :refer-number plural)
+            :refer-number plural)
+        :ARG2 (s8z1 / zpracování
+            :ARG0 s8p1
+            :ARG1 (s8x2 / #Idph
+                :name (s8s2 / Stabat)
+                :name (s8m1 / Mater))
+            :refer-number singular)
+        :ARG1 (s8a2 / and
+            :op1 (s8h1 / harmonie
+                :mod (s8a3 / apartní
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s8m2 / melodika
+                :mod (s8k1 / kouzelný
+                    :refer-number singular)
+                :refer-number singular)
+            :op3 (s8t1 / tvar
+                :mod (s8c2 / členěný
+                    :manner (s8p2 / přehledně)
+                    :refer-number singular)
+                :mod (s8h2 / hudební
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8o1: 8-8
+s8p1: 7-7,12-12
+s8a1: 3-3
+s8d1: 1-1
+s8f1: 2-2
+s8s1: 5-5
+s8e1: 4-4
+s8f2: 6-6
+s8r1: 9-9,11-11
+s8c1: 10-10
+s8z1: 13-13
+s8x2: 0-0
+s8s2: 14-14
+s8m1: 15-15
+s8a2: 21-21
+s8h1: 17-17
+s8a3: 16-16
+s8m2: 20-20
+s8k1: 19-19
+s8t1: 25-25
+s8c2: 23-23
+s8p2: 22-22
+s8h2: 24-24
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1     2    3        4     5     6      7       8          9       10       11        12
+Words: Vždyť také dirigent Libor Pešek nechal kvality Poulencovy skladby náležitě vyniknout .
+
+# sentence level graph:
+(s9n1 / nechat-005
+        :clausal-marker (s9v1 / vždyť)
+        :clausal-marker (s9t1 / také)
+        :ARG0 (s9p1 / Pešek
+            :mod (s9d1 / dirigent
+                :refer-number singular)
+            :mod (s9l1 / Libor
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s9k1 / kvalita
+            :possessor (s9s1 / skladba
+                :source (s9p2 / Poulenc
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :effect (s9v2 / vyniknout-001
+            :ARG0 s9k1
+            :extent (s9n2 / náležitě)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s9n1: 6-6
+s9v1: 1-1
+s9t1: 2-2
+s9p1: 5-5
+s9d1: 3-3
+s9l1: 4-4
+s9k1: 7-7
+s9s1: 9-9
+s9p2: 8-8
+s9v2: 11-11
+s9n2: 10-10
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p1 :same-entity s6p4)
+            (s9s1 :same-entity s8z1)
+            (s9p2 :same-entity s8p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1         2  3    4  5   6       7  8        9      10         11       12 13    14 15 16 17   18 19       20   21      22   23 24             25      26
+Words: Dvořákovo Te Deum je pak skvělou ,  neomylně českou slavnostní skladbou ,  která u  sv .  Víta v  poslední době zaznívá vždy po prezidentských volbách .
+
+# sentence level graph:
+(s10b1 / být-007
+        :clausal-marker (s10p1 / pak)
+        :ARG0 (s10x1 / #Idph
+            :source (s10d1 / Dvořák
+                :refer-number singular)
+            :name (s10t1 / Te)
+            :name (s10d2 / Deum
+                :refer-number singular))
+        :ARG1 (s10s1 / skladba
+            :mod (s10s2 / slavnostní
+                :refer-number singular)
+            :mod (s10a1 / and
+                :op1 (s10s3 / skvělý
+                    :refer-number singular)
+                :op2 (s10c1 / český
+                    :manner (s10n1 / neomylně)
+                    :refer-number singular))
+            :ARG0-of (s10z1 / zaznívat-001
+                :place (s10v1 / Vít
+                    :mod (s10s4 / svatý)
+                    :refer-number singular)
+                :temporal (s10d3 / doba
+                    :mod (s10p2 / poslední
+                        :refer-number singular)
+                    :refer-number singular)
+                :frequency (s10v2 / vždy)
+                :temporal (s10v3 / volba
+                    :mod (s10p3 / prezidentský
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s10b1: 4-4
+s10p1: 5-5
+s10x1: 0-0
+s10d1: 1-1
+s10t1: 2-2
+s10d2: 3-3
+s10s1: 11-11,13-13
+s10s2: 10-10
+s10a1: 7-7
+s10s3: 6-6
+s10c1: 9-9
+s10n1: 8-8
+s10z1: 21-21
+s10v1: 14-14,17-17
+s10s4: 15-15
+s10d3: 18-18,20-20
+s10p2: 19-19
+s10v2: 22-22
+s10v3: 23-23,25-25
+s10p3: 24-24
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10v1 :same-entity s6p5)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1  2  3   4  5         6    7  8              9     10
+Words: A  co nás na festivalu čeká v  nadcházejících dnech ?
+
+# sentence level graph:
+(s11c1 / čekat-003
+        :clausal-marker (s11a1 / a)
+        :ARG0 (s11c2 / co
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s11e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :place (s11f1 / festival
+            :refer-number singular)
+        :temporal (s11d1 / den
+            :mod (s11n1 / nadcházející
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s11c1: 6-6
+s11a1: 1-1
+s11c2: 2-2
+s11e1: 3-3
+s11f1: 4-5
+s11d1: 7-7,9-9
+s11n1: 8-8
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11e1 :same-entity s8e1)
+            (s11f1 :same-entity s4f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1  2         3          4       5       6         7  8       9       10         11 12  13    14 15          16    17 18          19        20    21   22   23
+Words: V  zítřejším vystoupení souboru Duodena Cantitans a  souboru Capella Rudolphina se lze těšit na autentickou hudbu ze Svatovítské katedrály kolem roku 1600 .
+
+# sentence level graph:
+(s12l1 / lze-001
+        :place (s12v1 / vystoupení
+            :mod (s12z1 / zítřejší
+                :refer-number singular)
+            :ARG0 (s12a1 / and
+                :op1 (s12s1 / soubor
+                    :name (s12x1 / #Forn
+                        :FPHR (s12d1 / Duodena)
+                        :FPHR (s12c1 / Cantitans))
+                    :refer-number singular)
+                :op2 (s12s2 / soubor
+                    :name (s12x2 / #Forn
+                        :FPHR (s12c2 / Capella)
+                        :FPHR (s12r1 / Rudolphina))
+                    :refer-number singular))
+            :refer-number singular)
+        :affectee (s12e1 / entity)
+        :ARG0 (s12t1 / těšit-se-002
+            :ARG0 s12e1
+            :ARG1 (s12h1 / hudba
+                :mod (s12a2 / autentický
+                    :refer-number singular)
+                :start (s12k1 / katedrála
+                    :mod (s12s3 / Svatovítský
+                        :refer-number singular)
+                    :mod (s12r2 / rok
+                        :mod (s12x4 / 1600)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s12l1: 12-12
+s12v1: 1-1,3-3
+s12z1: 2-2
+s12a1: 7-7
+s12s1: 4-4
+s12x1: 0-0
+s12d1: 5-5
+s12c1: 6-6
+s12s2: 8-8
+s12x2: 0-0
+s12c2: 9-9
+s12r1: 10-10
+s12e1: 0-0
+s12t1: 11-11,13-13
+s12h1: 14-14,16-16
+s12a2: 15-15
+s12k1: 17-17,19-19
+s12s3: 18-18
+s12r2: 20-21
+s12x4: 22-22
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12k1 :same-entity s10v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1   2         3         4       5        6  7     8        9      10 11 12         13 14     15    16 17         18      19   20
+Words: Nad programem některých dalších koncertů se ovšem vynořuje otázka ,  co společného má jejich náplň s  katedrálou svatého Víta .
+
+# sentence level graph:
+(s13v1 / vynořovat-se-002
+        :clausal-marker (s13o1 / ovšem)
+        :place (s13p1 / program
+            :possessor (s13k1 / koncert
+                :mod (s13d1 / další
+                    :refer-number plural)
+                :mod (s13n1 / některý
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG0 (s13o2 / otázka
+            :ARG1 (s13m1 / mít-005
+                :ARG0 (s13n2 / náplň
+                    :possessor s13k1
+                    :refer-number singular)
+                :ARG1 (s13c1 / co
+                    :refer-number singular
+                    :refer-person 3rd)
+                :effect (s13s1 / společný
+                    :ARG1 (s13k2 / katedrála
+                        :possessor (s13v2 / Vít
+                            :mod (s13s2 / svatý
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect state)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s13v1: 6-6,8-8
+s13o1: 7-7
+s13p1: 1-2
+s13k1: 5-5,14-14
+s13d1: 4-4
+s13n1: 3-3
+s13o2: 9-9
+s13m1: 13-13
+s13n2: 15-15
+s13c1: 11-11
+s13s1: 12-12
+s13k2: 16-17
+s13v2: 19-19
+s13s2: 18-18
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13k2 :same-entity s12k1)
+            (s13v2 :same-entity s4v3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1  2       3          4        5  6            7  8  9     10    11 12        13      14 15       16     17 18    19 20          21      22          23
+Words: V  případě varhanních koncertů je pochopitelné ,  že volba padla na vhodnější nástroj v  nedaleké Loretě ,  jemuž se svatovítské varhany nevyrovnají .
+
+# sentence level graph:
+(s14b1 / být-007
+        :regard (s14k1 / koncert
+            :mod (s14v1 / varhanní
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s14p1 / pochopitelný
+            :refer-number singular)
+        :ARG0 (s14p2 / padnout-004
+            :ARG0 (s14v2 / volba
+                :refer-number singular)
+            :ARG1 (s14n1 / nástroj
+                :mod (s14v3 / vhodný
+                    :refer-number singular)
+                :place (s14l1 / Loreta
+                    :mod (s14d1 / daleký
+                        :refer-number singular
+                        :polarity -)
+                    :refer-number singular)
+                :ARG1-of (s14v4 / vyrovnat-se-001
+                    :ARG0 (s14v5 / varhany
+                        :mod (s14s1 / svatovítský
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect performance
+                    :polarity -)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s14b1: 5-5
+s14k1: 1-2,4-4
+s14v1: 3-3
+s14p1: 6-6
+s14p2: 8-8,10-10
+s14v2: 9-9
+s14n1: 11-11,13-13,18-18
+s14v3: 12-12
+s14l1: 14-14,16-16
+s14d1: 15-15
+s14v4: 19-19,22-22
+s14v5: 21-21
+s14s1: 20-20
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14s1 :same-entity s13k2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1  2        3         4    5       6     7         8       9              10    11          12 13 14 15   16 17      18           19
+Words: V  programu festivalu však výrazně chybí například vokálně instrumentální hudba provozovaná u  sv .  Víta ve století devatenáctém .
+
+# sentence level graph:
+(s15c1 / chybět-003
+        :clausal-marker (s15v1 / však)
+        :place (s15p1 / program
+            :possessor (s15f1 / festival
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s15v2 / výrazně)
+        :clausal-marker (s15n1 / například)
+        :ARG0 (s15h1 / hudba
+            :mod (s15i1 / instrumentální
+                :manner (s15v3 / vokálně)
+                :refer-number singular)
+            :mod (s15p2 / provozovaný
+                :place (s15v4 / Vít
+                    :mod (s15s1 / svatý)
+                    :refer-number singular)
+                :temporal (s15s2 / století
+                    :mod (s15d1 / devatenáctý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s15c1: 6-6
+s15v1: 4-4
+s15p1: 1-2
+s15f1: 3-3
+s15v2: 5-5
+s15n1: 7-7
+s15h1: 10-10
+s15i1: 9-9
+s15v3: 8-8
+s15p2: 11-11
+s15v4: 12-12,15-15
+s15s1: 13-13
+s15s2: 16-17
+s15d1: 18-18
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15f1 :same-entity s11f1)
+            (s15v4 :same-entity s14s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1     2    3        4        5     6         7  8         9         10       11 12 13    14      15    16 17             18       19 20 21
+Words: Místo toho uslyšíme světskou hudbu minulosti ,  Dvořákovu smyčcovou serenádu a  na závěr dokonce jednu z  Beethovenových symfonií .  .  .
+
+# sentence level graph:
+(s16i1 / identity-91
+        :ARG1 (s16u1 / uslyšet-003
+            :substitute (s16t1 / ten
+                :refer-number singular)
+            :ARG0 (s16e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :ARG1 (s16h1 / hudba
+                :mod (s16s1 / světský
+                    :refer-number singular)
+                :possessor (s16m1 / minulost
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 1st
+            :aspect performance)
+        :ARG2 (s16a1 / and
+            :op1 (s16u2 / uslyšet-003
+                :substitute s16t1
+                :ARG0 s16e1
+                :ARG1 (s16s2 / serenáda
+                    :source (s16d1 / Dvořák
+                        :refer-number singular)
+                    :mod (s16s3 / smyčcový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 1st
+                :aspect performance)
+            :op2 (s16u3 / uslyšet-003
+                :substitute s16t1
+                :ARG0 s16e1
+                :temporal (s16z1 / závěr
+                    :refer-number singular)
+                :ARG1 (s16j1 / jeden
+                    :clausal-marker (s16d2 / dokonce)
+                    :start (s16s4 / symfonie
+                        :source (s16b1 / Beethoven
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 1st
+                :aspect performance)))
+
+# alignment:
+s16i1: 7-7
+s16u1: 3-3
+s16h1: 5-5
+s16s1: 4-4
+s16m1: 6-6
+s16t1: 1-2
+s16e1: 0-0
+s16a1: 11-11
+s16u2: 0-0
+s16s2: 10-10
+s16d1: 8-8
+s16s3: 9-9
+s16u3: 0-0
+s16z1: 12-13
+s16j1: 15-15
+s16d2: 14-14
+s16s4: 16-16,18-18
+s16b1: 17-17
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16s1 :same-entity s4s2)
+            (s16t1 :same-entity s15h1)
+            (s16e1 :same-entity s11e1)
+            (s16d1 :same-entity s10d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1     2    3     4       5
+Words: Takže spíš letní nabídka ?
+
+# sentence level graph:
+(s17e1 / event
+        :clausal-marker (s17t1 / takže)
+        :extent (s17s1 / spíše)
+        :ARG0 (s17n1 / nabídka
+            :mod (s17l1 / letní
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s17e1: 0-0
+s17t1: 1-1
+s17s1: 2-2
+s17n1: 4-4
+s17l1: 3-3
+
+# document level annotation:
+(s17s0 / sentence)
+
+

@@ -1,0 +1,816 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2    3 4   5       6       7  8
+Words: Soud řeší , zda zvířata patřila do zásob
+
+# sentence level graph:
+(s1r1 / řešit-001
+        :ARG0 (s1s1 / soud
+            :refer-number singular)
+        :ARG1 (s1p1 / patřit-003
+            :ARG0 (s1z1 / zvíře
+                :refer-number plural)
+            :goal (s1z2 / zásoba
+                :refer-number plural)
+            :aspect state)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1r1: 2-2
+s1s1: 1-1
+s1p1: 4-4,6-6
+s1z1: 5-5
+s1z2: 7-8
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: Soudní síň
+
+# sentence level graph:
+(s2s1 / síň
+        :mod (s2s2 / soudní
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s2s1: 2-2
+s2s2: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2 3   4 5
+Words: Plzeň ( vet ) -
+
+# sentence level graph:
+(s3p1 / Plzeň
+        :parenthesis (s3v1 / vet)
+        :refer-number singular)
+
+# alignment:
+s3p1: 1-1
+s3v1: 3-3
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1         2        3      4           5  6      7  8         9     10     11 12      13   14 15    16 17 18 19    20 21   22         23         24        25 26         27   28  29  30      31    32
+Words: Výslechem soudních znalců pokračovalo ve středu u  Krajského soudu líčení v  případu JUDr .  Karla H  .  ,  který je jako zemědělský podnikatel obžalován ze zpronevěry více než 9.1 milionu korun .
+
+# sentence level graph:
+(s4p1 / pokračovat-004
+        :instrument (s4v1 / výslech
+            :ARG1 (s4z1 / znalec
+                :mod (s4s1 / soudní
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :temporal (s4s2 / středa
+            :refer-number singular)
+        :place (s4s3 / soud
+            :mod (s4k1 / krajský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4l1 / líčení
+            :ARG0 (s4e1 / entity)
+            :ARG1 (s4e2 / entity)
+            :regard (s4p2 / případ
+                :possessor (s4h1 / H
+                    :mod (s4k2 / Karel
+                        :refer-number singular)
+                    :mod (s4j1 / JUDr)
+                    :ARG1-of (s4o1 / obžalovat-001
+                        :manner (s4p3 / podnikatel
+                            :mod (s4z2 / zemědělský
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG0 (s4e3 / entity)
+                        :cause (s4z3 / zpronevěra
+                            :ARG1 (s4h2 / hodně
+                                :comparison (s4m1 / milión
+                                    :mod (s4k3 / koruna
+                                        :refer-number plural)
+                                    :mod (s4x1 / 9.1)
+                                    :refer-number singular))
+                            :refer-number singular)
+                        :refer-number singular
+                        :aspect performance))
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s4p1: 4-4
+s4v1: 1-1
+s4z1: 3-3
+s4s1: 2-2
+s4s2: 5-6
+s4s3: 7-7,9-9
+s4k1: 8-8
+s4l1: 10-10
+s4e1: 0-0
+s4e2: 0-0
+s4p2: 11-12
+s4h1: 16-16,19-19
+s4k2: 15-15
+s4j1: 13-13
+s4o1: 20-20,24-24
+s4p3: 21-21,23-23
+s4z2: 22-22
+s4e3: 0-0
+s4z3: 25-26
+s4h2: 27-27
+s4m1: 28-28,30-30
+s4k3: 31-31
+s4x1: 29-29
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s3 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2      3  4   5  6          7        8            9        10            11     12
+Words: Tohoto skutku se měl na Sokolovsku dopustit neoprávněným prodejem hospodářských zvířat .
+
+# sentence level graph:
+(s5d1 / dopustit-se-001
+        :ARG1 (s5s1 / skutek
+            :mod (s5t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :place (s5s2 / Sokolovsko
+            :refer-number singular)
+        :instrument (s5p1 / prodej
+            :ARG1 (s5z1 / zvíře
+                :mod (s5h1 / hospodářský
+                    :refer-number plural)
+                :refer-number plural)
+            :mod (s5o1 / oprávněný
+                :refer-number singular
+                :polarity -)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s5d1: 3-4,7-7
+s5s1: 2-2
+s5t1: 1-1
+s5e1: 0-0
+s5s2: 5-6
+s5p1: 9-9
+s5z1: 11-11
+s5h1: 10-10
+s5o1: 8-8
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s1 :same-entity s4z3)
+            (s5e1 :same-entity s4h1)
+            (s5z1 :same-entity s1z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2    3  4  5  6        7      8    9    10     11   12    13 14 15       16       17        18        19   20     21       22
+Words: Obhájkyně JUDr .  J  .  Fišerová stejně jako její klient však tvrdí ,  že skutková podstata uvedeného trestného činu nebyla naplněna .
+
+# sentence level graph:
+(s6t1 / tvrdit-002
+        :clausal-marker (s6v1 / však)
+        :ARG0 (s6a1 / and
+            :op1 (s6f1 / Fišerová
+                :mod (s6j1 / J)
+                :mod (s6j2 / JUDr)
+                :mod (s6o1 / obhájkyně
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s6s1 / stejně)
+            :op2 (s6k1 / klient
+                :possessor s6f1
+                :refer-number singular
+                :refer-person 3rd))
+        :effect (s6n1 / naplnit-002
+            :ARG1 (s6p1 / podstata
+                :ARG1 (s6c1 / čin
+                    :mod (s6u1 / uvedený
+                        :refer-number singular)
+                    :mod (s6t2 / trestný
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s6s2 / skutkový
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s6e1 / entity)
+            :aspect performance
+            :polarity -)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6t1: 12-12
+s6v1: 11-11
+s6a1: 8-8
+s6f1: 6-6,9-9
+s6j1: 4-4
+s6j2: 2-2
+s6o1: 1-1
+s6s1: 7-7
+s6k1: 10-10
+s6n1: 14-14,20-21
+s6p1: 16-16
+s6c1: 19-19
+s6u1: 17-17
+s6t2: 18-18
+s6s2: 15-15
+s6e1: 0-0
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6k1 :same-entity s5e1)
+            (s6c1 :same-entity s5s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1    2  3     4  5  6          7  8        9  10    11 12       13 14       15      16         17
+Words: JUDr .  Karel H  .  hospodařil s  majetkem ,  který si pronajal od státního podniku Agropodnik .
+
+# sentence level graph:
+(s7h1 / hospodařit-001
+        :ARG0 (s7h2 / H
+            :mod (s7j1 / JUDr)
+            :mod (s7k1 / Karel
+                :refer-number singular)
+            :refer-number singular)
+        :manner (s7e1 / entity)
+        :ARG1 (s7m1 / majetek
+            :ARG1-of (s7p1 / pronajmout-002
+                :ARG0 s7h2
+                :affectee s7h2
+                :source (s7p2 / podnik
+                    :mod (s7s1 / státní
+                        :refer-number singular)
+                    :name (s7a1 / Agropodnik
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s7h1: 6-6
+s7h2: 4-4,11-11
+s7j1: 1-1
+s7k1: 3-3
+s7e1: 0-0
+s7m1: 7-8,10-10
+s7p1: 12-12
+s7p2: 13-13,15-15
+s7s1: 14-14
+s7a1: 16-16
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7h2 :same-entity s6k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2    3     4    5       6  7         8     9  10 11    12   13       14    15         16 17      18 19         20         21
+Words: Zvířata však podle nich patřila do kategorie zásob ,  s  nimiž mohl nájemník volně disponovat ,  nikoliv do základních prostředků .
+
+# sentence level graph:
+(s8p1 / patřit-003
+        :clausal-marker (s8v1 / však)
+        :ARG0 (s8z1 / zvíře
+            :refer-number plural)
+        :regard (s8e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :goal (s8b1 / but-91
+            :ARG1 (s8k1 / kategorie
+                :name (s8z2 / zásoba
+                    :ARG1-of (s8d1 / disponovat-002
+                        :ARG0 (s8n1 / nájemník
+                            :refer-number singular)
+                        :manner (s8v2 / volně)
+                        :aspect activity)
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG2 (s8p2 / prostředek
+                :mod (s8z3 / základní
+                    :refer-number plural)
+                :refer-number plural
+                :polarity -))
+        :aspect state)
+
+# alignment:
+s8p1: 5-5
+s8v1: 2-2
+s8z1: 1-1
+s8e1: 3-4
+s8b1: 16-16
+s8k1: 6-7
+s8z2: 8-8,10-11
+s8d1: 12-12,15-15
+s8n1: 13-13
+s8v2: 14-14
+s8p2: 17-18,20-20
+s8z3: 19-19
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8z1 :same-entity s5z1)
+            (s8k1 :same-entity s1z2)
+            (s8n1 :same-entity s7h2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1     2    3  4    5           6     7   8      9      10
+Words: Jasno měli do celé záležitosti vnést dva soudní znalci .
+
+# sentence level graph:
+(s9v1 / vnést-001
+        :ARG1 (s9j1 / jasno
+            :refer-number singular)
+        :goal (s9z1 / záležitost
+            :mod (s9c1 / celý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s9z2 / znalec
+            :mod (s9s1 / soudní
+                :refer-number plural)
+            :mod (s9d1 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s9v1: 2-2,6-6
+s9j1: 1-1
+s9z1: 3-3,5-5
+s9c1: 4-4
+s9z2: 9-9
+s9s1: 8-8
+s9d1: 7-7
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9z2 :same-entity s4z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1       2  3   4
+Words: Nestalo se tak .
+
+# sentence level graph:
+(s10s1 / stát-se-005
+        :ARG0 (s10t1 / tak)
+        :refer-number singular
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s10s1: 1-2
+s10t1: 3-3
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10t1 :same-event s9v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1    2        3      4  5     6     7         8     9       10        11      12
+Words: Před Krajským soudem v  Plzni pouze potvrdili tržní hodnotu prodaného dobytka .
+
+# sentence level graph:
+(s11p1 / potvrdit-001
+        :place (s11s1 / soud
+            :mod (s11k1 / krajský
+                :refer-number singular)
+            :place (s11p2 / Plzeň
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s11e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :clausal-marker (s11p3 / pouze)
+        :ARG1 (s11h1 / hodnota
+            :possessor (s11d1 / dobytek
+                :mod (s11p4 / prodaný
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s11t1 / tržní
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s11p1: 7-7
+s11s1: 1-1,3-3
+s11k1: 2-2
+s11p2: 4-5
+s11e1: 0-0
+s11p3: 6-6
+s11h1: 9-9
+s11d1: 11-11
+s11p4: 10-10
+s11t1: 8-8
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11s1 :same-entity s4s3)
+            (s11p2 :same-entity s3p1)
+            (s11e1 :same-entity s9z2)
+            (s11d1 :same-entity s8z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1   2  3     4        5          6  7  8    9         10 11   12 13     14     15 16      17 18   19         20
+Words: Oba na dotaz obhajoby připustili ,  že jsou odborníky na ceny a  odhady zvířat ,  nikoliv na obor účetnictví .
+
+# sentence level graph:
+(s12p1 / připustit-004
+        :ARG0 (s12o1 / oba
+            :refer-number plural
+            :refer-person 3rd)
+        :condition (s12d1 / dotaz
+            :ARG0 (s12o2 / obhajoba
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :ARG1 (s12b1 / být-007
+            :ARG0 s12o1
+            :ARG1 (s12o3 / odborník
+                :ARG1 (s12b2 / but-91
+                    :ARG1 (s12a1 / and
+                        :op1 (s12c1 / cena
+                            :ARG1 (s12z1 / zvíře
+                                :refer-number plural)
+                            :refer-number plural)
+                        :op2 (s12o4 / odhad
+                            :ARG1 s12z1
+                            :refer-number plural))
+                    :ARG2 (s12o5 / obor
+                        :name (s12u1 / účetnictví
+                            :refer-number singular)
+                        :refer-number singular
+                        :polarity -))
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s12p1: 5-5
+s12o1: 1-1
+s12d1: 2-3
+s12o2: 4-4
+s12b1: 7-8
+s12o3: 9-9
+s12b2: 15-15
+s12a1: 12-12
+s12c1: 10-11
+s12z1: 14-14
+s12o4: 10-10,13-13
+s12o5: 16-18
+s12u1: 19-19
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12o1 :same-entity s11e1)
+            (s12o2 :same-entity s6f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1         2        3           4  5        6       7  8             9  10      11     12 13     14
+Words: Obhájkyně označila specialisty v  potřebné oblasti za nekompetentní a  dalších dotazů se vzdala .
+
+# sentence level graph:
+(s13a1 / and
+        :op1 (s13o1 / označit-001
+            :ARG0 (s13o2 / obhájkyně
+                :refer-number singular)
+            :ARG1 (s13s1 / specialista
+                :place (s13o3 / oblast
+                    :mod (s13p1 / potřebný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd)
+            :effect (s13k1 / kompetentní
+                :refer-number plural
+                :polarity -)
+            :aspect performance)
+        :op2 (s13v1 / vzdát-se-001
+            :ARG0 s13o2
+            :ARG1 (s13d1 / dotaz
+                :mod (s13d2 / další
+                    :refer-number plural)
+                :refer-number plural)
+            :aspect performance))
+
+# alignment:
+s13a1: 9-9
+s13o1: 2-2
+s13s1: 3-3
+s13o3: 4-4,6-6
+s13p1: 5-5
+s13k1: 7-8
+s13o2: 1-1
+s13v1: 12-13
+s13d1: 11-11
+s13d2: 10-10
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13s1 :same-entity s12o1)
+            (s13o3 :same-entity s12o5)
+            (s13o2 :same-entity s12o2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1  2        3            4      5      6      7  8        9  10     11     12  13          14         15 16    17 18   19   20      21
+Words: Ve prospěch obžalovaného hovoří účtová osnova a  směrnice k  účtové osnově pro hospodářské organizace ,  která do roku 1992 platila .
+
+# sentence level graph:
+(s14h1 / hovořit-006
+        :ARG1 (s14o1 / obžalovaný
+            :refer-number singular)
+        :ARG0 (s14a1 / and
+            :op1 (s14o2 / osnova
+                :mod (s14u1 / účtový
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s14s1 / směrnice
+                :ARG1 (s14o3 / osnova
+                    :mod (s14u2 / účtový
+                        :refer-number singular)
+                    :refer-number singular)
+                :affectee (s14o4 / organizace
+                    :mod (s14h2 / hospodářský
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG0-of (s14p1 / platit-009
+                    :temporal (s14r1 / rok
+                        :mod (s14x1 / 1992)
+                        :refer-number singular)
+                    :aspect activity)
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s14h1: 4-4
+s14o1: 1-3
+s14a1: 7-7
+s14o2: 6-6
+s14u1: 5-5
+s14s1: 8-8,16-16
+s14o3: 9-9,11-11
+s14u2: 10-10
+s14o4: 12-12,14-14
+s14h2: 13-13
+s14p1: 20-20
+s14r1: 17-18
+s14x1: 19-19
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14o1 :same-entity s8n1)
+            (s14o3 :same-entity s14o2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1       2  3  4      5  6   7     8    9  10    11 12 13      14       15
+Words: Jednalo se o  období ,  kdy právě JUDr .  Karel H  .  dobytek prodával .
+
+# sentence level graph:
+(s15j1 / jednat-se-002
+        :ARG0 (s15o1 / období
+            :temporal-of (s15p1 / prodávat-001
+                :ARG0 (s15h1 / H
+                    :mod (s15j2 / JUDr)
+                    :mod (s15k1 / Karel
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s15d1 / dobytek
+                    :refer-number singular)
+                :ARG2 (s15e1 / entity)
+                :temporal (s15p2 / právě)
+                :refer-number singular
+                :aspect habitual)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s15j1: 1-2
+s15o1: 3-4,6-6
+s15p1: 14-14
+s15h1: 11-11
+s15j2: 8-8
+s15k1: 10-10
+s15d1: 13-13
+s15e1: 0-0
+s15p2: 7-7
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15o1 :same-entity s14r1)
+            (s15h1 :same-entity s14o1)
+            (s15d1 :same-entity s11d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1     2    3  4  5  6        7   8      9    10          11         12     13       14
+Words: Podle JUDr .  J  .  Fišerové pro způsob jeho hospodaření existovaly právní předpisy .
+
+# sentence level graph:
+(s16e1 / existovat-001
+        :regard (s16f1 / Fišerová
+            :mod (s16j1 / JUDr)
+            :mod (s16j2 / J)
+            :refer-number singular)
+        :ARG0 (s16p1 / předpis
+            :affectee (s16z1 / způsob
+                :possessor (s16h1 / hospodaření
+                    :ARG0 (s16e2 / entity
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s16p2 / právní
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s16e1: 11-11
+s16f1: 1-1,6-6
+s16j1: 2-2
+s16j2: 4-4
+s16p1: 13-13
+s16z1: 7-8
+s16h1: 10-10
+s16e2: 9-9
+s16p2: 12-12
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16f1 :same-entity s13o2)
+            (s16e2 :same-entity s15h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1  2  3    4     5 6          7      8
+Words: Ty by měly soudu k rozhodnutí stačit .
+
+# sentence level graph:
+(s17s1 / stačit-005
+        :ARG1 (s17s2 / soud
+            :refer-number singular)
+        :ARG0 (s17t1 / ten
+            :refer-number plural)
+        :purpose (s17r1 / rozhodnutí
+            :ARG0 (s17e1 / entity)
+            :ARG1 (s17e2 / entity)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s17s1: 2-3,7-7
+s17s2: 4-4
+s17t1: 1-1
+s17r1: 5-6
+s17e1: 0-0
+s17e2: 0-0
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17s2 :same-entity s11s1)
+            (s17t1 :same-entity s16p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1     2        3      4           5      6       7         8
+Words: Proto obhajoba nebude vypracování nových posudků požadovat .
+
+# sentence level graph:
+(s18p1 / požadovat-001
+        :clausal-marker (s18p2 / proto)
+        :ARG0 (s18o1 / obhajoba
+            :refer-number singular)
+        :ARG1 (s18v1 / vypracování
+            :ARG0 (s18e1 / entity)
+            :ARG1 (s18p3 / posudek
+                :mod (s18n1 / nový
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s18p1: 3-3,7-7
+s18p2: 1-1
+s18o1: 2-2
+s18v1: 4-4
+s18e1: 0-0
+s18p3: 6-6
+s18n1: 5-5
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18o1 :same-entity s16f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s19-root
+# :: snt19
+Index: 1        2  3   4       5     6      7     8     9
+Words: Rozsudek by měl krajský senát vynést tento pátek .
+
+# sentence level graph:
+(s19v1 / vynést-006
+        :predicative-noun (s19r1 / rozsudek
+            :ARG0 s19s1
+            :refer-number singular)
+        :ARG0 (s19s1 / senát
+            :mod (s19k1 / krajský
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s19p1 / pátek
+            :mod (s19t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s19v1: 2-3,6-6
+s19r1: 1-1
+s19s1: 5-5
+s19k1: 4-4
+s19p1: 8-8
+s19t1: 7-7
+
+# document level annotation:
+(s19s0 / sentence
+    :coref ((s19r1 :same-entity s17r1)))
+
+

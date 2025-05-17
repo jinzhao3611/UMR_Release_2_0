@@ -1,0 +1,433 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2      3     4 5     6      7
+Words: Kalvoda odmítá změnu " nutné obrany "
+
+# sentence level graph:
+(s1o1 / odmítat-002
+        :ARG0 (s1k1 / Kalvoda
+            :refer-number singular)
+        :ARG1 (s1z1 / změna
+            :ARG1 (s1o2 / obrana
+                :mod (s1n1 / nutný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1o1: 2-2
+s1k1: 1-1
+s1z1: 3-3
+s1o2: 6-6
+s1n1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( mrk ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2m1 / mrk)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2m1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2   3   4       5        6  7  8     9     10 11     12  13 14    15     16 17    18     19
+Words: Předseda ODA Jan Kalvoda považuje za "  velmi liché "  návrhy KDS na změnu zákona o  nutné obraně .
+
+# sentence level graph:
+(s3p1 / považovat-001
+        :ARG0 (s3k1 / Kalvoda
+            :mod (s3j1 / Jan
+                :refer-number singular)
+            :mod (s3p2 / předseda
+                :possessor (s3o1 / ODA)
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s3l1 / lichý
+            :extent (s3v1 / velmi)
+            :refer-number plural)
+        :ARG1 (s3n1 / návrh
+            :ARG0 (s3k2 / KDS)
+            :ARG1 (s3z1 / změna
+                :ARG1 (s3z2 / zákon
+                    :ARG1 (s3o2 / obrana
+                        :mod (s3n2 / nutný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3p1: 5-5
+s3k1: 4-4
+s3j1: 3-3
+s3p2: 1-1
+s3o1: 2-2
+s3l1: 6-6,9-9
+s3v1: 8-8
+s3n1: 11-11
+s3k2: 12-12
+s3z1: 13-14
+s3z2: 15-15
+s3o2: 16-16,18-18
+s3n2: 17-17
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3k1 :same-entity s1k1)
+            (s3z1 :same-entity s1z1)
+            (s3z2 :same-entity s1o2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2  3     4   5    6       7  8   9  10    11       12    13   14          15     16         17
+Words: Změna by podle KDS měla umožnit ,  aby se každý napadený občan mohl efektivněji bránit útočníkovi .
+
+# sentence level graph:
+(s4u1 / umožnit-002
+        :ARG0 (s4z1 / změna
+            :refer-number singular)
+        :regard (s4k1 / KDS)
+        :ARG1 (s4b1 / bránit-se-001
+            :ARG0 (s4o1 / občan
+                :mod (s4n1 / napadený
+                    :refer-number singular)
+                :mod (s4k2 / každý
+                    :refer-number singular)
+                :refer-number singular)
+            :manner (s4e1 / efektivně)
+            :ARG1 (s4u2 / útočník
+                :refer-number singular)
+            :aspect activity)
+        :aspect performance)
+
+# alignment:
+s4u1: 2-2,5-6
+s4z1: 1-1
+s4k1: 3-4
+s4b1: 8-9,13-13,15-15
+s4o1: 12-12
+s4n1: 11-11
+s4k2: 10-10
+s4e1: 14-14
+s4u2: 16-16
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4z1 :same-entity s3z1)
+            (s4k1 :same-entity s3k2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2  3        4     5  6  7  8    9  10  11      12   13   14  15   16   17 18 19    20      21
+Words: "  Je falešnou fikcí ,  že má dnes u  nás útočník více práv než jeho oběť ,  "  tvrdí Kalvoda .
+
+# sentence level graph:
+(s5t1 / tvrdit-002
+        :ARG0 (s5k1 / Kalvoda
+            :refer-number singular)
+        :effect (s5b1 / být-007
+            :ARG1 (s5f1 / fikce
+                :mod (s5f2 / falešný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s5m1 / mít-028
+                :temporal (s5d1 / dnes)
+                :place (s5e1 / entity
+                    :refer-number plural
+                    :refer-person 1st)
+                :ARG0 (s5u1 / útočník
+                    :refer-number singular)
+                :predicative-noun (s5p1 / právo
+                    :ARG0 s5u1
+                    :ARG1 (s5e2 / entity)
+                    :mod (s5h1 / hodně
+                        :comparison (s5m2 / mít-028
+                            :predicative-noun (s5p2 / právo
+                                :ARG0 s5o1
+                                :ARG1 (s5e3 / entity)
+                                :refer-number plural)
+                            :ARG0 (s5o1 / oběť
+                                :possessor s5u1
+                                :refer-number singular)
+                            :refer-number singular
+                            :refer-person 3rd
+                            :aspect state))
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect state)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5t1: 19-19
+s5k1: 20-20
+s5b1: 2-2
+s5f1: 4-4
+s5f2: 3-3
+s5m1: 6-7
+s5d1: 8-8
+s5e1: 9-10
+s5u1: 11-11,15-15
+s5p1: 13-13
+s5e2: 0-0
+s5h1: 12-12
+s5m2: 0-0
+s5p2: 0-0
+s5e3: 0-0
+s5o1: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5k1 :same-entity s3k1)
+            (s5u1 :same-entity s4u2)
+            (s5o1 :same-entity s4o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2          3    4   5      6  7  8   9    10         11          12    13          14
+Words: Práva napadeného jsou prý naopak v  ČR již celá desetiletí formulována velmi progresívně .
+
+# sentence level graph:
+(s6f1 / formulovat-001
+        :ARG1 (s6p1 / právo
+            :possessor (s6n1 / napadený
+                :refer-number singular)
+            :refer-number plural)
+        :clausal-marker (s6n2 / naopak)
+        :clausal-marker (s6p2 / prý)
+        :ARG0 (s6e1 / entity)
+        :place (s6c1 / ČR
+            :refer-number singular
+            :refer-person 1st)
+        :clausal-marker (s6j1 / již)
+        :duration (s6d1 / desetiletí
+            :mod (s6c2 / celý
+                :refer-number plural)
+            :refer-number plural)
+        :manner (s6p3 / progresívně
+            :extent (s6v1 / velmi))
+        :aspect process)
+
+# alignment:
+s6f1: 3-3,11-11
+s6p1: 1-1
+s6n1: 2-2
+s6n2: 5-5
+s6p2: 4-4
+s6e1: 0-0
+s6c1: 6-7
+s6j1: 8-8
+s6d1: 10-10
+s6c2: 9-9
+s6p3: 13-13
+s6v1: 12-12
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p1 :same-entity s5p2)
+            (s6n1 :same-entity s5o1)
+            (s6c1 :same-entity s5e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1     2    3  4     5           6  7   8  9      10         11       12        13  14       15 16        17   18     19
+Words: Nejde tedy o  chybu legislativy ,  ale o  nízkou efektivitu státních institucí při vymáhání a  garancích práv občanů .
+
+# sentence level graph:
+(s7j1 / jít-035
+        :clausal-marker (s7t1 / tedy)
+        :ARG0 (s7b1 / but-91
+            :ARG1 (s7c1 / chyba
+                :possessor (s7l1 / legislativa
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s7e1 / efektivita
+                :possessor (s7i1 / instituce
+                    :mod (s7s1 / státní
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s7n1 / nízký
+                    :refer-number singular)
+                :temporal (s7a1 / and
+                    :op1 (s7v1 / vymáhání
+                        :ARG0 s7i1
+                        :ARG1 (s7p1 / právo
+                            :possessor (s7o1 / občan
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :op2 (s7g1 / garance
+                        :ARG1 s7p1
+                        :refer-number plural))
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s7j1: 1-1
+s7t1: 2-2
+s7b1: 7-7
+s7c1: 3-4
+s7l1: 5-5
+s7e1: 8-8,10-10
+s7i1: 12-12
+s7s1: 11-11
+s7n1: 9-9
+s7a1: 15-15
+s7v1: 13-14
+s7p1: 17-17
+s7o1: 18-18
+s7g1: 13-13,16-16
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2          3       4       5  6    7           8  9         10    11    12 13 14 15  16  17     18   19 20
+Words: Za povážlivou označil Kalvoda v  této souvislosti i  průměrnou délku vazby v  ČR (  asi tři čtvrtě roku )  .
+
+# sentence level graph:
+(s8o1 / označit-001
+        :effect (s8p1 / povážlivý
+            :refer-number singular)
+        :ARG0 (s8k1 / Kalvoda
+            :refer-number singular)
+        :temporal (s8s1 / souvislost
+            :mod (s8t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s8i1 / i)
+        :ARG1 (s8d1 / délka
+            :possessor (s8v1 / vazba
+                :place (s8c1 / ČR
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s8p2 / průměrný
+                :refer-number singular)
+            :mod (s8c2 / čtvrt
+                :mod (s8r1 / rok
+                    :refer-number singular)
+                :mod (s8t2 / tři
+                    :refer-number plural)
+                :extent (s8a1 / asi)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8o1: 3-3
+s8p1: 1-2
+s8k1: 4-4
+s8s1: 5-5,7-7
+s8t1: 6-6
+s8i1: 8-8
+s8d1: 10-10
+s8v1: 11-11
+s8c1: 12-13
+s8p2: 9-9
+s8c2: 17-17
+s8r1: 18-18
+s8t2: 16-16
+s8a1: 15-15
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8k1 :same-entity s5k1)
+            (s8c1 :same-entity s6c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2  3   4        5    6  7   8        9      10   11      12    13  14    15
+Words: Je to prý dokladem toho ,  jak justiční aparát není schopen plnit své úkoly .
+
+# sentence level graph:
+(s9b1 / být-007
+        :ARG0 (s9t1 / ten
+            :refer-number singular)
+        :clausal-marker (s9p1 / prý)
+        :ARG1 (s9d1 / doklad
+            :ARG1 (s9b2 / být-007
+                :ARG0 (s9a1 / aparát
+                    :mod (s9j1 / justiční
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s9s1 / schopný
+                    :ARG1 (s9p2 / plnit-002
+                        :ARG0 s9a1
+                        :ARG1 (s9u1 / úkol
+                            :possessor s9a1
+                            :refer-number plural)
+                        :aspect activity)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity
+                :polarity -)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9b1: 1-1
+s9t1: 2-2
+s9p1: 3-3
+s9d1: 4-4
+s9b2: 5-5,7-7,10-10
+s9a1: 9-9,13-13
+s9j1: 8-8
+s9s1: 11-11
+s9p2: 12-12
+s9u1: 14-14
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9t1 :same-entity s8d1)))
+
+

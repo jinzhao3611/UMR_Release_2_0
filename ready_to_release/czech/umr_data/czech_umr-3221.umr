@@ -1,0 +1,762 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2 3       4
+Words: Skrýš v ponožce nepomohla
+
+# sentence level graph:
+(s1p1 / pomoci-002
+        :ARG0 (s1s1 / skrýš
+            :place (s1p2 / ponožka
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s1e1 / entity)
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s1p1: 4-4
+s1s1: 1-1
+s1p2: 2-3
+s1e1: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2 3   4 5
+Words: Ostrava ( les ) -
+
+# sentence level graph:
+(s2o1 / Ostrava
+        :parenthesis (s2l1 / les)
+        :refer-number singular)
+
+# alignment:
+s2o1: 1-1
+s2l1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2       3  4       5   6  7   8      9     10            11  12 13      14
+Words: Do ponožky si schoval tři a  půl tisíce korun čtyřicetiletý muž z  Ostravy .
+
+# sentence level graph:
+(s3s1 / schovat-001
+        :goal (s3p1 / ponožka
+            :refer-number singular)
+        :affectee s3m1
+        :ARG1 (s3t1 / tisíc
+            :mod (s3k1 / koruna
+                :refer-number plural)
+            :mod (s3a1 / and
+                :op1 (s3t2 / tři
+                    :refer-number plural)
+                :op2 (s3p2 / půl
+                    :refer-number singular))
+            :refer-number singular)
+        :ARG0 (s3m1 / muž
+            :mod (s3c1 / čtyřicetiletý
+                :refer-number singular)
+            :start (s3o1 / Ostrava
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3s1: 4-4
+s3p1: 1-2
+s3t1: 8-8
+s3k1: 9-9
+s3a1: 6-6
+s3t2: 5-5
+s3p2: 7-7
+s3m1: 3-3,11-11
+s3c1: 10-10
+s3o1: 12-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s1p2)
+            (s3o1 :same-entity s2o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2 3      4      5
+Words: Přesto o peníze přišel .
+
+# sentence level graph:
+(s4p1 / přijít-006
+        :clausal-marker (s4p2 / přesto)
+        :ARG1 (s4p3 / peníze
+            :refer-number plural)
+        :ARG0 (s4e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4p1: 4-4
+s4p2: 1-1
+s4p3: 2-3
+s4e1: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4p3 :same-entity s3t1)
+            (s4e1 :same-entity s3m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2      3  4   5      6  7    8  9  10      11 12          13     14     15      16       17
+Words: V  neděli ve dvě hodiny v  noci ho v  Ostravě -  Mariánských Horách napadl neznámý pachatel .
+
+# sentence level graph:
+(s5n1 / napadnout-001
+        :temporal (s5n2 / neděle
+            :refer-number singular)
+        :temporal (s5h1 / hodina
+            :mod (s5d1 / dva
+                :refer-number plural)
+            :temporal (s5n3 / noc
+                :refer-number singular)
+            :refer-number plural)
+        :place (s5o1 / Ostrava
+            :mod (s5h2 / Hora
+                :mod (s5m1 / Mariánský
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG1 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s5p1 / pachatel
+            :mod (s5z1 / známý
+                :refer-number singular
+                :polarity -)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5n1: 14-14
+s5n2: 1-2
+s5h1: 3-3,5-5
+s5d1: 4-4
+s5n3: 6-7
+s5o1: 9-10
+s5h2: 13-13
+s5m1: 12-12
+s5e1: 8-8
+s5p1: 16-16
+s5z1: 15-15
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2      3           4  5   6      7  8    9  10    11 12  13 14    15 16     17
+Words: Podle líčení poškozeného ho muž srazil k  zemi ,  kopal do něj a  potom ho okradl .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6s1 / srazit-003
+            :ARG0 (s6m1 / muž
+                :refer-number singular)
+            :regard (s6l1 / líčení
+                :ARG0 (s6p1 / poškozený
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG1 (s6e1 / entity)
+                :refer-number singular)
+            :ARG1 s6p1
+            :goal (s6z1 / země
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s6k1 / kopat-003
+            :ARG0 s6m1
+            :goal s6p1
+            :refer-number singular
+            :aspect activity)
+        :op3 (s6o1 / okrást-001
+            :ARG0 s6m1
+            :temporal (s6p2 / potom)
+            :ARG2 s6p1
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s6a1: 13-13
+s6s1: 6-6
+s6l1: 1-2
+s6p1: 3-4,11-12,15-15
+s6e1: 0-0
+s6z1: 7-8
+s6m1: 5-5
+s6k1: 10-10
+s6o1: 16-16
+s6p2: 14-14
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p1 :same-entity s5e1)
+            (s6m1 :same-entity s5p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1          2        3
+Words: Prodavačka odhalila podvodníka
+
+# sentence level graph:
+(s7o1 / odhalit-001
+        :ARG0 (s7p1 / prodavačka
+            :refer-number singular)
+        :ARG1 (s7p2 / podvodník
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s7o1: 2-2
+s7p1: 1-1
+s7p2: 3-3
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2 3   4 5
+Words: Ostrava ( les ) -
+
+# sentence level graph:
+(s8o1 / Ostrava
+        :parenthesis (s8l1 / les)
+        :refer-number singular)
+
+# alignment:
+s8o1: 1-1
+s8l1: 3-3
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8o1 :same-entity s3o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2      3         4    5       6  7         8                 9   10 11      12  13        14
+Words: Z  pokusu trestného činu podvodu je podezřelý jedenadvacetiletý muž z  Rožnova pod Radhoštěm .
+
+# sentence level graph:
+(s9b1 / být-007
+        :ARG1 (s9p1 / podezřelý
+            :ARG1 (s9p2 / pokus
+                :ARG1 (s9c1 / čin
+                    :mod (s9t1 / trestný
+                        :refer-number singular)
+                    :name (s9p3 / podvod
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s9m1 / muž
+            :mod (s9j1 / jedenadvacetiletý
+                :refer-number singular)
+            :start (s9r1 / Rožnov
+                :mod (s9r2 / Radhošť
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9b1: 6-6
+s9p1: 7-7
+s9p2: 1-2
+s9c1: 4-4
+s9t1: 3-3
+s9p3: 5-5
+s9m1: 9-9
+s9j1: 8-8
+s9r1: 10-11
+s9r2: 12-13
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9m1 :same-entity s7p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1  2          3         4    5    6     7  8       9        10          11 12   13  14  15  16    17    18
+Words: V  ostravském obchodním domě Laso chtěl na fakturu nakoupit elektroniku za více než dvě stě tisíc korun .
+
+# sentence level graph:
+(s10n1 / nakoupit-001
+        :place (s10d1 / dům
+            :mod (s10o1 / obchodní
+                :refer-number singular)
+            :name (s10l1 / Laso
+                :refer-number singular)
+            :mod (s10o2 / ostravský
+                :refer-number singular)
+            :refer-number singular)
+        :instrument (s10f1 / faktura
+            :refer-number singular)
+        :ARG0 (s10e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s10e2 / elektronika
+            :refer-number singular)
+        :extent (s10h1 / hodně
+            :comparison (s10t1 / tisíc
+                :mod (s10k1 / koruna
+                    :refer-number plural)
+                :mod (s10s1 / sto
+                    :refer-number plural)
+                :mod (s10d2 / dva
+                    :refer-number plural)
+                :refer-number singular))
+        :aspect performance)
+
+# alignment:
+s10n1: 6-6,9-9
+s10d1: 1-1,4-4
+s10o1: 3-3
+s10l1: 5-5
+s10o2: 2-2
+s10f1: 7-8
+s10e1: 0-0
+s10e2: 10-10
+s10h1: 11-12
+s10t1: 13-13,16-16
+s10k1: 17-17
+s10s1: 15-15
+s10d2: 14-14
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10o2 :same-entity s8o1)
+            (s10e1 :same-entity s9m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1   2    3            4    5  6          7    8        9             10 11   12        13      14
+Words: Měl sice živnostenský list ,  prodavačka však odhalila nesrovnalosti v  jeho občanském průkazu .
+
+# sentence level graph:
+(s11b1 / but-91
+        :clausal-marker (s11s1 / sice)
+        :ARG1 (s11m1 / mít-002
+            :ARG0 (s11e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s11l1 / list
+                :mod (s11z1 / živnostenský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect state)
+        :ARG2 (s11o1 / odhalit-001
+            :ARG0 (s11p1 / prodavačka
+                :refer-number singular)
+            :ARG1 (s11n1 / nesrovnalost
+                :place (s11p2 / průkaz
+                    :possessor s11e1
+                    :mod (s11o2 / občanský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :aspect performance))
+
+# alignment:
+s11b1: 7-7
+s11s1: 2-2
+s11m1: 1-1
+s11e1: 11-11
+s11l1: 4-4
+s11z1: 3-3
+s11o1: 8-8
+s11p1: 6-6
+s11n1: 9-9
+s11p2: 10-10,13-13
+s11o2: 12-12
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11e1 :same-entity s10e1)
+            (s11p1 :same-entity s7p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1      2       3  4         5       6  7       8  9     10 11    12
+Words: Mladík skončil v  ostravské věznici s  návrhem na vzetí do vazby .
+
+# sentence level graph:
+(s12s1 / skončit-004
+        :ARG0 (s12m1 / mladík
+            :refer-number singular
+            :refer-person 3rd)
+        :place (s12v1 / věznice
+            :mod (s12o1 / ostravský
+                :refer-number singular)
+            :refer-number singular)
+        :companion (s12n1 / návrh
+            :ARG1 (s12v2 / vzetí
+                :ARG0 (s12e1 / entity)
+                :ARG1 (s12e2 / entity)
+                :part-of-phraseme (s12d1 / do_vazby
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s12s1: 2-2
+s12m1: 1-1
+s12v1: 3-3,5-5
+s12o1: 4-4
+s12n1: 6-7
+s12v2: 8-9
+s12e1: 0-0
+s12e2: 0-0
+s12d1: 10-11
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12m1 :same-entity s11e1)
+            (s12o1 :same-entity s10o2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1     2     3        4  5     6
+Words: Místo práce nakradli za čtvrt milionu
+
+# sentence level graph:
+(s13n1 / nakrást-001
+        :substitute (s13p1 / práce
+            :refer-number singular)
+        :ARG0 (s13e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s13e2 / entity)
+        :extent (s13c1 / čtvrt
+            :mod (s13m1 / milión
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s13n1: 3-3
+s13p1: 1-2
+s13e1: 0-0
+s13e2: 0-0
+s13c1: 4-5
+s13m1: 6-6
+
+# document level annotation:
+(s13s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1       2 3   4 5
+Words: Olomouc ( les ) -
+
+# sentence level graph:
+(s14o1 / Olomouc
+        :parenthesis (s14l1 / les)
+        :refer-number singular)
+
+# alignment:
+s14o1: 1-1
+s14l1: 3-3
+
+# document level annotation:
+(s14s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1   2     3          4    5  6    7  8  9  10  11 12       13   14   15 16         17        18    19 20    21
+Words: Dva dosud netrestaní muži ve věku 24 a  25 let z  Olomouce jsou nyní z  rozhodnutí okresního soudu ve vazbě .
+
+# sentence level graph:
+(s15b1 / být-011
+        :ARG0 (s15m1 / muž
+            :mod (s15t1 / trestaný
+                :temporal (s15d1 / dosud)
+                :refer-number plural
+                :polarity -)
+            :mod (s15a1 / and
+                :op1 (s15v1 / věk
+                    :mod (s15r1 / rok
+                        :mod (s15x1 / 24)
+                        :refer-number plural)
+                    :refer-number singular)
+                :op2 (s15v2 / věk
+                    :mod (s15r2 / rok
+                        :mod (s15x2 / 25)
+                        :refer-number plural)
+                    :refer-number singular))
+            :mod (s15d2 / dva
+                :refer-number plural)
+            :start (s15o1 / Olomouc
+                :refer-number singular)
+            :refer-number plural)
+        :temporal (s15n1 / nyní)
+        :cause (s15r3 / rozhodnutí
+            :ARG1 (s15e1 / entity)
+            :ARG0 (s15s1 / soud
+                :mod (s15o2 / okresní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :place (s15v3 / vazba
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s15b1: 13-13
+s15m1: 4-4
+s15t1: 3-3
+s15d1: 2-2
+s15a1: 8-8
+s15v1: 5-6
+s15r1: 10-10
+s15x1: 7-7
+s15v2: 0-0
+s15r2: 0-0
+s15x2: 9-9
+s15d2: 1-1
+s15o1: 11-12
+s15n1: 14-14
+s15r3: 15-16
+s15e1: 0-0
+s15s1: 18-18
+s15o2: 17-17
+s15v3: 19-20
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15m1 :same-entity s13e1)
+            (s15o1 :same-entity s14o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1     2             3        4  5         6        7  8    9    10 11        12      13       14      15
+Words: Oběma nezaměstnaným mladíkům je prokázáno vloupání do dvou bytů a  kanceláře podniku Drogerie Olomouc .
+
+# sentence level graph:
+(s16p1 / prokázat-001
+        :ARG2 (s16m1 / mladík
+            :mod (s16o1 / oba
+                :refer-number plural)
+            :mod (s16z1 / zaměstnaný
+                :refer-number plural
+                :polarity -)
+            :refer-number plural)
+        :ARG0 (s16e1 / entity)
+        :ARG1 (s16v1 / vloupání
+            :ARG0 (s16e2 / entity)
+            :goal (s16a1 / and
+                :op1 (s16b1 / byt
+                    :mod (s16d1 / dva
+                        :refer-number plural)
+                    :refer-number plural)
+                :op2 (s16k1 / kancelář
+                    :possessor (s16p2 / podnik
+                        :name (s16d2 / Drogerie
+                            :mod (s16o2 / Olomouc
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s16p1: 4-5
+s16m1: 3-3
+s16o1: 1-1
+s16z1: 2-2
+s16e1: 0-0
+s16v1: 6-6
+s16e2: 0-0
+s16a1: 10-10
+s16b1: 7-7,9-9
+s16d1: 8-8
+s16k1: 7-7,11-11
+s16p2: 12-12
+s16d2: 13-13
+s16o2: 14-14
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16m1 :same-entity s15m1)
+            (s16o2 :same-entity s15o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1    2         3 4 5       6       7
+Words: Jsou podezřelí i z dalších krádeží .
+
+# sentence level graph:
+(s17b1 / být-007
+        :ARG0 (s17e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s17p1 / podezřelý
+            :ARG1 (s17k1 / krádež
+                :clausal-marker (s17i1 / i)
+                :mod (s17d1 / další
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s17b1: 1-1
+s17e1: 0-0
+s17p1: 2-2
+s17k1: 4-4,6-6
+s17i1: 3-3
+s17d1: 5-5
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17e1 :same-entity s16m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1         2     3   4  5     6       7     8
+Words: Způsobili škodu asi za čtvrt milionu korun .
+
+# sentence level graph:
+(s18z1 / způsobit-002
+        :ARG0 (s18e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s18s1 / škoda
+            :mod (s18c1 / čtvrt
+                :mod (s18m1 / milión
+                    :mod (s18k1 / koruna
+                        :refer-number plural)
+                    :refer-number singular)
+                :extent (s18a1 / asi)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s18z1: 1-1
+s18e1: 0-0
+s18s1: 2-2
+s18c1: 4-5
+s18m1: 6-6
+s18k1: 7-7
+s18a1: 3-3
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18e1 :same-entity s17e1)
+            (s18c1 :same-entity s13c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s19-root
+# :: snt19
+Index: 1         2  3    4     5     6       7  8              9  10    11      12  13  14       15   16
+Words: Policisté u  nich našli pouze počítač s  příslušenstvím ,  který ukradli při své poslední akci .
+
+# sentence level graph:
+(s19n1 / najít-002
+        :ARG0 (s19p1 / policista
+            :refer-number plural)
+        :place (s19e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :clausal-marker (s19p2 / pouze)
+        :ARG1 (s19p3 / počítač
+            :companion (s19p4 / příslušenství
+                :refer-number singular)
+            :ARG1-of (s19u1 / ukrást-001
+                :ARG0 s19e1
+                :ARG2 (s19e2 / entity)
+                :temporal (s19a1 / akce
+                    :ARG0 s19e1
+                    :mod (s19p5 / poslední
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :aspect performance)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s19n1: 4-4
+s19p1: 1-1
+s19e1: 2-3,13-13
+s19p2: 5-5
+s19p3: 6-6,10-10
+s19p4: 7-8
+s19u1: 11-11
+s19e2: 0-0
+s19a1: 12-12,15-15
+s19p5: 14-14
+
+# document level annotation:
+(s19s0 / sentence
+    :coref ((s19e1 :same-entity s18e1)))
+
+

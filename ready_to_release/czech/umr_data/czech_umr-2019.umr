@@ -1,0 +1,212 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2  3       4
+Words: Průzkum na zakázku odborů
+
+# sentence level graph:
+(s1p1 / průzkum
+        :purpose (s1z1 / zakázka
+            :ARG0 (s1o1 / odbory
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1p1: 1-1
+s1z1: 2-3
+s1o1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2      3  4  5       6  7          8  9            10     11      12      13 14      15
+Words: Většina občanů (  83 procent )  nesouhlasí s  prodloužením věkové hranice odchodu do důchodu .
+
+# sentence level graph:
+(s3s1 / souhlasit-003
+        :ARG0 (s3i1 / identity-91
+            :ARG1 (s3v1 / většina
+                :mod (s3o1 / občan
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG2 (s3p1 / procento
+                :mod (s3x1 / 83)
+                :refer-number plural))
+        :ARG1 (s3p2 / prodloužení
+            :ARG0 (s3e1 / entity)
+            :ARG1 (s3h1 / hranice
+                :mod (s3v2 / věkový
+                    :refer-number singular)
+                :possessor (s3o2 / odchod
+                    :goal (s3d1 / důchod
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state
+        :polarity -)
+
+# alignment:
+s3s1: 7-7
+s3i1: 3-3
+s3v1: 1-1
+s3o1: 2-2
+s3p1: 5-5
+s3x1: 4-4
+s3p2: 8-9
+s3e1: 0-0
+s3h1: 11-11
+s3v2: 10-10
+s3o2: 12-12
+s3d1: 13-14
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1         2  3  4        5  6     7         8           9       10     11            12     13         14    15
+Words: Vyplynulo to z  průzkumu ,  který Středisku empirických výzkumů zadala Českomoravská komora odborových svazů .
+
+# sentence level graph:
+(s4v1 / vyplynout-001
+        :ARG0 (s4t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s4p1 / průzkum
+            :ARG1-of (s4z1 / zadat-001
+                :ARG2 (s4s1 / Středisko
+                    :possessor (s4v2 / výzkum
+                        :mod (s4e1 / empirický
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :ARG0 (s4k1 / komora
+                    :mod (s4c1 / Českomoravský
+                        :refer-number singular)
+                    :possessor (s4s2 / svaz
+                        :mod (s4o1 / odborový
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4v1: 1-1
+s4t1: 2-2
+s4p1: 3-4,6-6
+s4z1: 10-10
+s4s1: 7-7
+s4v2: 9-9
+s4e1: 8-8
+s4k1: 12-12
+s4c1: 11-11
+s4s2: 14-14
+s4o1: 13-13
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3s1)
+            (s4p1 :same-entity s1p1)
+            (s4k1 :same-entity s1o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2      3    4           5       6    7       8  9  10 11      12         13     14      15     16  17 18    19 20 21 22     23   24      25 26       27          28     29
+Words: Na vzorku 1617 respondentů průzkum dále zjistil ,  že 85 procent dotázaných včetně většiny voličů ODS si myslí ,  že se odbory mají podílet na přípravě důchodového zákona .
+
+# sentence level graph:
+(s5z1 / zjistit-002
+        :clausal-marker (s5d1 / dále)
+        :place (s5v1 / vzorek
+            :possessor (s5r1 / respondent
+                :mod (s5x1 / 1617)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG0 (s5p1 / průzkum
+            :refer-number singular)
+        :ARG1 (s5m1 / myslit-si-003
+            :ARG0 (s5p2 / procento
+                :mod (s5d2 / dotázaný
+                    :companion (s5v2 / většina
+                        :mod (s5v3 / volič
+                            :possessor (s5o1 / ODS)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number plural)
+                :mod (s5x2 / 85)
+                :refer-number plural)
+            :effect (s5p3 / podílet-se-001
+                :ARG0 (s5o2 / odbory
+                    :refer-number plural)
+                :ARG1 (s5p4 / příprava
+                    :ARG1 (s5z2 / zákon
+                        :mod (s5d3 / důchodový
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect activity)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5z1: 7-7
+s5d1: 6-6
+s5v1: 1-2
+s5r1: 4-4
+s5x1: 3-3
+s5p1: 5-5
+s5m1: 9-9,17-18
+s5p2: 11-11
+s5d2: 12-12
+s5v2: 13-14
+s5v3: 15-15
+s5o1: 16-16
+s5x2: 10-10
+s5p3: 20-21,23-24
+s5o2: 22-22
+s5p4: 25-26
+s5z2: 28-28
+s5d3: 27-27
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p1 :same-entity s4p1)
+            (s5d2 :same-entity s5r1)
+            (s5o2 :same-entity s4k1)))
+
+

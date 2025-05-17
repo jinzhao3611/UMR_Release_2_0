@@ -1,0 +1,521 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1   2       3 4        5
+Words: USA nestojí o Castrovu hlavu
+
+# sentence level graph:
+(s1s1 / stát-006
+        :ARG0 (s1u1 / USA
+            :refer-number plural)
+        :ARG1 (s1h1 / hlava
+            :possessor (s1c1 / Castro
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s1s1: 2-2
+s1u1: 1-1
+s1h1: 3-3,5-5
+s1c1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1          2
+Words: Washington -
+
+# sentence level graph:
+(s2w1 / Washington
+        :refer-number singular)
+
+# alignment:
+s2w1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2      3      4  5        6           7            8       9  10   11
+Words: USA kladně odpoví na jakékoli jednoznačně demokratické reformy na Kubě .
+
+# sentence level graph:
+(s3o1 / odpovědět-001
+        :ARG0 (s3u1 / USA
+            :refer-number plural)
+        :manner (s3k1 / kladně)
+        :ARG1 (s3r1 / reforma
+            :mod (s3d1 / demokratický
+                :manner (s3j1 / jednoznačně)
+                :refer-number plural)
+            :mod (s3j2 / jakýkoli
+                :refer-number plural)
+            :place (s3k2 / Kuba
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s3o1: 3-3
+s3u1: 1-1
+s3k1: 2-2
+s3r1: 4-4,8-8
+s3d1: 7-7
+s3j1: 6-6
+s3j2: 5-5
+s3k2: 9-10
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3u1 :same-entity s1u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2  3  4      5        6       7         8      9           10
+Words: Řekl to v  neděli americký ministr zahraničí Warren Christopher .
+
+# sentence level graph:
+(s4r1 / říci-008
+        :effect (s4t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s4e1 / entity)
+        :temporal (s4n1 / neděle
+            :refer-number singular)
+        :ARG0 (s4c1 / Christopher
+            :mod (s4w1 / Warren
+                :refer-number singular)
+            :mod (s4m1 / ministr
+                :mod (s4a1 / americký
+                    :refer-number singular)
+                :possessor (s4z1 / zahraničí
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4r1: 1-1
+s4t1: 2-2
+s4e1: 0-0
+s4n1: 3-4
+s4c1: 9-9
+s4w1: 8-8
+s4m1: 6-6
+s4a1: 5-5
+s4z1: 7-7
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3o1)
+            (s4a1 :same-entity s3u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2         3  4  5   6       7  8      9  10           11    12
+Words: Ujistil veřejnost ,  že USA usilují o  mírové a  demokratické změny .
+
+# sentence level graph:
+(s5u1 / ujistit-001
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s5v1 / veřejnost
+            :refer-number singular)
+        :ARG1 (s5u2 / usilovat-001
+            :ARG0 (s5u3 / USA
+                :refer-number plural)
+            :ARG1 (s5z1 / změna
+                :mod (s5a1 / and
+                    :op1 (s5m1 / mírový
+                        :refer-number plural)
+                    :op2 (s5d1 / demokratický
+                        :refer-number plural))
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5u1: 1-1
+s5e1: 0-0
+s5v1: 2-2
+s5u2: 4-4,6-6
+s5u3: 5-5
+s5z1: 7-7,11-11
+s5a1: 9-9
+s5m1: 8-8
+s5d1: 10-10
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4c1)
+            (s5u3 :same-entity s4a1)
+            (s5z1 :same-entity s3r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2    3       4       5  6   7  8  9        10
+Words: Nepoužijí tedy námořní blokádu ,  aby si je vynutily .
+
+# sentence level graph:
+(s6p1 / použít-001
+        :clausal-marker (s6t1 / tedy)
+        :ARG0 (s6e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s6b1 / blokáda
+            :mod (s6n1 / námořní
+                :refer-number singular)
+            :refer-number singular)
+        :purpose (s6v1 / vynutit-si-001
+            :ARG0 s6e1
+            :ARG1 (s6e2 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :refer-number plural
+            :aspect performance)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s6p1: 1-1
+s6t1: 2-2
+s6e1: 0-0
+s6b1: 4-4
+s6n1: 3-3
+s6v1: 6-7,9-9
+s6e2: 8-8
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5u3)
+            (s6e2 :same-entity s5z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1   2  3  4       5      6  7     8      9    10 11 12 13     14      15  16 17  18 19    20          21 22    23 24 25  26        27 28         29     30         31    32
+Words: Zda se do reforem zapojí i  Fidel Castro nebo ne ,  to záleží opravdu jen na něm ,  uvedl Christopher a  dodal ,  že USA neusilují o  odstranění nějaké jednotlivé osoby .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7u1 / uvést-007
+            :ARG0 (s7c1 / Christopher
+                :refer-number singular
+                :refer-person 3rd)
+            :effect (s7z1 / záležet-001
+                :ARG0 (s7o1 / or
+                    :op1 (s7z2 / zapojit-se-001
+                        :ARG1 (s7r1 / reforma
+                            :refer-number plural
+                            :refer-person 3rd)
+                        :clausal-marker (s7i1 / i)
+                        :ARG0 (s7c2 / Castro
+                            :mod (s7f1 / Fidel
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect performance)
+                    :op2 (s7z3 / zapojit-se-001
+                        :ARG1 s7r1
+                        :ARG0 s7c2
+                        :clausal-marker (s7n1 / ne)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect performance))
+                :INTF (s7t1 / to)
+                :clausal-marker (s7o2 / opravdu)
+                :clausal-marker (s7j1 / jen)
+                :ARG1 s7c2
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s7d1 / dodat-005
+            :ARG0 s7c1
+            :effect (s7u2 / usilovat-001
+                :ARG0 (s7u3 / USA
+                    :refer-number plural
+                    :refer-person 3rd)
+                :ARG1 (s7o3 / odstranění
+                    :ARG0 (s7e1 / entity)
+                    :start (s7e2 / entity)
+                    :ARG1 (s7o4 / osoba
+                        :mod (s7j2 / jednotlivý
+                            :refer-number singular)
+                        :mod (s7n2 / nějaký
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity
+                :polarity -)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s7a1: 21-21
+s7u1: 19-19
+s7z1: 13-13
+s7o1: 9-9
+s7z2: 1-2,5-5
+s7i1: 6-6
+s7c2: 8-8,16-17
+s7f1: 7-7
+s7r1: 3-4
+s7z3: 0-0
+s7n1: 10-10
+s7t1: 12-12
+s7o2: 14-14
+s7j1: 15-15
+s7c1: 20-20
+s7d1: 22-22
+s7u2: 24-24,26-26
+s7u3: 25-25
+s7o3: 27-28
+s7e1: 0-0
+s7e2: 0-0
+s7o4: 31-31
+s7j2: 30-30
+s7n2: 29-29
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7c2 :same-entity s1c1)
+            (s7r1 :same-entity s6e2)
+            (s7c1 :same-entity s5e1)
+            (s7u3 :same-entity s6e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1        2     3     4      5        6  7      8       9  10       11     12 13  14        15 16      17   18 19  20 21     22      23   24 25    26
+Words: Kubánský vůdce Fidel Castro přikázal v  neděli policii a  Pobřežní stráži ,  aby zabránila v  odjezdu všem ,  kdo by chtěli opustit Kubu s  dětmi .
+
+# sentence level graph:
+(s8p1 / přikázat-001
+        :ARG0 (s8c1 / Castro
+            :mod (s8f1 / Fidel
+                :refer-number singular)
+            :mod (s8v1 / vůdce
+                :mod (s8k1 / kubánský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s8n1 / neděle
+            :refer-number singular)
+        :ARG2 (s8a1 / and
+            :op1 (s8p2 / policie
+                :refer-number singular)
+            :op2 (s8s1 / stráž
+                :mod (s8p3 / pobřežní
+                    :refer-number singular)
+                :refer-number singular))
+        :ARG1 (s8z1 / zabránit-001
+            :ARG0 s8a1
+            :ARG1 (s8o1 / odjezd
+                :refer-number singular)
+            :ARG2 (s8v2 / všechen
+                :mod (s8o2 / opustit-001
+                    :ARG0 (s8k2 / kdo
+                        :refer-number plural
+                        :refer-person 3rd)
+                    :ARG1 (s8k3 / Kuba
+                        :refer-number singular)
+                    :companion (s8d1 / dítě
+                        :refer-number plural)
+                    :aspect performance)
+                :refer-number plural
+                :refer-person 3rd)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8p1: 5-5
+s8c1: 4-4
+s8f1: 3-3
+s8v1: 2-2
+s8k1: 1-1
+s8n1: 6-7
+s8a1: 9-9
+s8p2: 8-8
+s8s1: 11-11
+s8p3: 10-10
+s8z1: 13-14
+s8o1: 15-16
+s8v2: 17-17
+s8o2: 20-22
+s8k2: 19-19
+s8k3: 23-23
+s8d1: 24-25
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8c1 :same-entity s7c2)
+            (s8k1 :same-entity s3k2)
+            (s8n1 :same-entity s4n1)
+            (s8k2 :same-entity s8v2)
+            (s8k3 :same-entity s8k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1   2   3       4      5        6         7         8  9        10      11 12        13       14    15
+Words: Týž den vyzvali Castra kubánští katoličtí biskupové k  zahájení dialogu o  příčinách masového exodu .
+
+# sentence level graph:
+(s9v1 / vyzvat-001
+        :temporal (s9d1 / den
+            :mod (s9t1 / týž
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s9c1 / Castro
+            :refer-number singular)
+        :ARG0 (s9b1 / biskup
+            :mod (s9k1 / kubánský
+                :refer-number plural)
+            :mod (s9k2 / katolický
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s9z1 / zahájení
+            :ARG0 s9c1
+            :ARG1 (s9d2 / dialog
+                :ARG1 (s9p1 / příčina
+                    :ARG1 (s9e1 / exodus
+                        :mod (s9m1 / masový
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s9v1: 3-3
+s9d1: 2-2
+s9t1: 1-1
+s9c1: 4-4
+s9b1: 7-7
+s9k1: 5-5
+s9k2: 6-6
+s9z1: 8-9
+s9d2: 10-10
+s9p1: 11-12
+s9e1: 14-14
+s9m1: 13-13
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9k1 :same-entity s8k3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1        2        3         4   5    6       7       8         9     10 11    12   13        14 15 16    17       18    19    20  21      22    23        24      25 26    27
+Words: Náměstek ministra zahraničí USA Paul Tarnoff varoval vojenskou vládu na Haiti před domněnkou ,  že kvůli kubánské krizi budou USA věnovat menší pozornost situaci na Haiti .
+
+# sentence level graph:
+(s10v1 / varovat-001
+        :ARG0 (s10t1 / Tarnoff
+            :mod (s10p1 / Paul
+                :refer-number singular)
+            :mod (s10n1 / náměstek
+                :possessor (s10m1 / ministr
+                    :possessor (s10z1 / zahraničí
+                        :refer-number singular)
+                    :possessor (s10u1 / USA
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s10v2 / vláda
+            :mod (s10v3 / vojenský
+                :refer-number singular)
+            :place (s10h1 / Haiti)
+            :refer-number singular)
+        :ARG1 (s10d1 / domněnka
+            :ARG1 (s10v4 / věnovat-003
+                :cause (s10k1 / krize
+                    :mod (s10k2 / kubánský
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s10u2 / USA
+                    :refer-number plural)
+                :predicative-noun (s10p2 / pozornost
+                    :ARG0 s10u2
+                    :mod (s10m2 / malý
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG2 (s10s1 / situace
+                    :place (s10h2 / Haiti)
+                    :refer-number singular)
+                :aspect process)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s10v1: 7-7
+s10t1: 6-6
+s10p1: 5-5
+s10n1: 1-1
+s10m1: 2-2
+s10z1: 3-3
+s10u1: 4-4
+s10v2: 9-9
+s10v3: 8-8
+s10h1: 10-11
+s10d1: 12-13
+s10v4: 15-15,19-19,21-21
+s10k1: 16-16,18-18
+s10k2: 17-17
+s10u2: 20-20
+s10p2: 23-23
+s10m2: 22-22
+s10s1: 24-24
+s10h2: 25-26
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10m1 :same-entity s7c1)
+            (s10u1 :same-entity s7u3)
+            (s10k2 :same-entity s9k1)
+            (s10u2 :same-entity s10u1)
+            (s10h2 :same-entity s10h1)))
+
+

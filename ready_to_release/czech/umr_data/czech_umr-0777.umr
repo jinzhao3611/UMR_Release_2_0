@@ -1,0 +1,456 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2
+Words: Odolnější botičky
+
+# sentence level graph:
+(s1b1 / botička
+        :mod (s1o1 / odolný
+            :refer-number plural)
+        :refer-number plural)
+
+# alignment:
+s1b1: 2-2
+s1o1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2 3  4 5
+Words: Vsetín ( ce ) -
+
+# sentence level graph:
+(s2v1 / Vsetín
+        :parenthesis (s2c1 / ce)
+        :refer-number singular)
+
+# alignment:
+s2v1: 1-1
+s2c1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2  3     4          5     6  7     8  9       10      11        12            13         14 15      16      17        18 19      20
+Words: Zařízení od firmy Proconsult Praha ,  které má zamezit odjezdu nesprávně zaparkovaného automobilu ,  oceňují městští policisté ve Vsetíně .
+
+# sentence level graph:
+(s3o1 / oceňovat-001
+        :ARG1 (s3z1 / zařízení
+            :source (s3f1 / firma
+                :name (s3p1 / Proconsult
+                    :mod (s3p2 / Praha
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0-of (s3z2 / zamezit-002
+                :ARG1 (s3o2 / odjezd
+                    :ARG0 (s3a1 / automobil
+                        :mod (s3z3 / zaparkovaný
+                            :manner (s3s1 / správně
+                                :polarity -)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :ARG0 (s3p3 / policista
+            :mod (s3m1 / městský
+                :refer-number plural)
+            :place (s3v1 / Vsetín
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3o1: 15-15
+s3z1: 1-1,7-7
+s3f1: 2-3
+s3p1: 4-4
+s3p2: 5-5
+s3z2: 8-9
+s3o2: 10-10
+s3a1: 13-13
+s3z3: 12-12
+s3s1: 11-11
+s3p3: 17-17
+s3m1: 16-16
+s3v1: 18-19
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3z1 :same-entity s1b1)
+            (s3v1 :same-entity s2v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2      3    4   5         6  7     8  9     10      11 12     13       14  15        16
+Words: Botičky nového typu zde používají od srpna a  zatím nedošlo k  jejich odcizení ani poškození .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4p1 / používat-001
+            :ARG1 (s4b1 / botička
+                :mod (s4t1 / typ
+                    :mod (s4n1 / nový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :ARG0 (s4e1 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :place (s4z1 / zde
+                :refer-number singular)
+            :temporal (s4s1 / srpen
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s4d1 / dojít-009
+            :temporal (s4z2 / zatím)
+            :ARG0 (s4a2 / and
+                :op1 (s4o1 / odcizení
+                    :ARG0 (s4e2 / entity)
+                    :ARG1 s4b1
+                    :refer-number singular)
+                :op2 (s4p2 / poškození
+                    :ARG0 s4e2
+                    :ARG1 s4b1
+                    :refer-number singular))
+            :refer-number singular
+            :aspect performance
+            :polarity -))
+
+# alignment:
+s4a1: 8-8
+s4p1: 5-5
+s4b1: 1-1,12-12
+s4t1: 3-3
+s4n1: 2-2
+s4e1: 0-0
+s4z1: 4-4
+s4s1: 6-7
+s4d1: 10-10
+s4z2: 9-9
+s4a2: 14-14
+s4o1: 11-11,13-13
+s4e2: 0-0
+s4p2: 11-11,15-15
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4b1 :same-entity s3z1)
+            (s4e1 :same-entity s3p3)
+            (s4z1 :same-entity s3v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2       3       4  5       6      7   8      9  10    11   12   13 14 15 16       17      18        19      20    21      22       23  24 25       26         27       28    29 30             31 32      33 34  35      36 37        38     39
+Words: Městská policie pracuje ve Vsetíně teprve tři měsíce a  během této doby už se jí podařilo zadržet pachatele většího počtu krádeží horských kol ,  zadržela celostátně hledanou osobu ,  spolupracovala s  Policií ČR při pátrání po pachateli vraždy .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5p1 / pracovat-005
+            :ARG0 (s5p2 / policie
+                :mod (s5m1 / městský
+                    :refer-number singular)
+                :refer-number singular)
+            :place (s5v1 / Vsetín
+                :refer-number singular)
+            :duration (s5m2 / měsíc
+                :clausal-marker (s5t1 / teprve)
+                :mod (s5t2 / tři
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s5a2 / and
+            :op1 (s5p3 / podařit-se-001
+                :temporal (s5d1 / doba
+                    :mod (s5t3 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 s5p2
+                :temporal (s5u1 / už)
+                :ARG1 (s5z1 / zadržet-002
+                    :ARG0 s5p2
+                    :ARG1 (s5p4 / pachatel
+                        :ARG1 (s5p5 / počet
+                            :mod (s5k1 / krádež
+                                :ARG1 (s5k2 / kolo
+                                    :mod (s5h1 / horský
+                                        :refer-number plural)
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :mod (s5v2 / velký
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect performance)
+                :refer-number singular
+                :aspect performance)
+            :op2 (s5z2 / zadržet-002
+                :ARG0 s5p2
+                :ARG1 (s5o1 / osoba
+                    :mod (s5h2 / hledaný
+                        :extent (s5c1 / celostátně)
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :op3 (s5s1 / spolupracovat-001
+                :ARG0 s5p2
+                :ARG2 (s5p6 / policie
+                    :possessor (s5c2 / ČR
+                        :refer-number singular)
+                    :refer-number singular)
+                :temporal (s5p7 / pátrání
+                    :ARG0 (s5e1 / entity)
+                    :ARG1 (s5p8 / pachatel
+                        :ARG1 (s5v3 / vražda
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect activity)))
+
+# alignment:
+s5a1: 9-9
+s5p1: 3-3
+s5p2: 2-2,15-15
+s5m1: 1-1
+s5v1: 4-5
+s5m2: 8-8
+s5t1: 6-6
+s5t2: 7-7
+s5a2: 29-29
+s5p3: 14-14,16-16
+s5d1: 10-10,12-12
+s5t3: 11-11
+s5u1: 13-13
+s5z1: 17-17
+s5p4: 18-18
+s5p5: 20-20
+s5k1: 21-21
+s5k2: 23-23
+s5h1: 22-22
+s5v2: 19-19
+s5z2: 25-25
+s5o1: 28-28
+s5h2: 27-27
+s5c1: 26-26
+s5s1: 30-30
+s5p6: 31-32
+s5c2: 33-33
+s5p7: 34-35
+s5e1: 0-0
+s5p8: 36-37
+s5v3: 38-38
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5v1 :same-entity s4z1)
+            (s5d1 :same-entity s5m2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2       3     4  5        6  7            8         9  10  11   12  13    14         15         16      17        18
+Words: V  minulém týdnu se podílela na prohledávání nemocnice ,  kde měla být podle anonymního telefonátu uložena výbušnina .
+
+# sentence level graph:
+(s6p1 / podílet-se-001
+        :temporal (s6t1 / týden
+            :mod (s6m1 / minulý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s6e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s6p2 / prohledávání
+            :ARG0 (s6e2 / entity)
+            :ARG1 (s6n1 / nemocnice
+                :place-of (s6u1 / uložit-002
+                    :regard (s6t2 / telefonát
+                        :mod (s6a1 / anonymní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0 (s6e3 / entity)
+                    :ARG1 (s6v1 / výbušnina
+                        :refer-number singular)
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s6p1: 4-5
+s6t1: 1-1,3-3
+s6m1: 2-2
+s6e1: 0-0
+s6p2: 6-7
+s6e2: 0-0
+s6n1: 8-8,10-10
+s6u1: 11-12,16-16
+s6t2: 13-13,15-15
+s6a1: 14-14
+s6e3: 0-0
+s6v1: 17-17
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1   2    3  4       5         6       7       8     9     10 11     12    13 14         15        16      17   18     19          20
+Words: Jak řekl LN velitel vsetínské městské policie Josef Jirků ,  značný podíl na narušování veřejného pořádku mají romští spoluobčané .
+
+# sentence level graph:
+(s7m1 / mít-046
+        :parenthesis (s7r1 / říci-008
+            :effect s7m1
+            :ARG2 (s7l1 / LN
+                :refer-number plural)
+            :ARG0 (s7j1 / Jirků
+                :mod (s7j2 / Josef
+                    :refer-number singular)
+                :mod (s7v1 / velitel
+                    :possessor (s7p1 / policie
+                        :mod (s7v2 / vsetínský
+                            :refer-number singular)
+                        :mod (s7m2 / městský
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :predicative-noun (s7p2 / podíl
+            :ARG0 s7s1
+            :ARG1 (s7n1 / narušování
+                :ARG0 (s7e1 / entity)
+                :ARG1 (s7p3 / pořádek
+                    :mod (s7v3 / veřejný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s7z1 / značný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7s1 / spoluobčan
+            :mod (s7r2 / romský
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s7m1: 17-17
+s7r1: 1-2
+s7l1: 3-3
+s7j1: 9-9
+s7j2: 8-8
+s7v1: 4-4
+s7p1: 7-7
+s7v2: 5-5
+s7m2: 6-6
+s7p2: 12-12
+s7n1: 13-14
+s7e1: 0-0
+s7p3: 16-16
+s7v3: 15-15
+s7z1: 11-11
+s7s1: 19-19
+s7r2: 18-18
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p1 :same-entity s6e1)
+            (s7v2 :same-entity s5v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2       3           4   5   6   7        8  9     10       11 12  13      14 15      16        17        18   19
+Words: Ve Vsetíně představují jen asi 1.5 procenta z  počtu obyvatel ,  ale páchají 55 procent veškerých trestných činů .
+
+# sentence level graph:
+(s8b1 / but-91
+        :ARG1 (s8p1 / představovat-003
+            :ARG0 (s8e1 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :place (s8v1 / Vsetín
+                :refer-number singular)
+            :clausal-marker (s8j1 / jen)
+            :ARG1 (s8p2 / procento
+                :start (s8p3 / počet
+                    :mod (s8o1 / obyvatel
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s8x1 / 1.5
+                    :extent (s8a1 / asi))
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :ARG2 (s8p4 / páchat-001
+            :ARG0 s8e1
+            :ARG1 (s8p5 / procento
+                :mod (s8c1 / čin
+                    :mod (s8t1 / trestný
+                        :refer-number plural)
+                    :mod (s8v2 / veškerý
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s8x3 / 55)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s8b1: 12-12
+s8p1: 3-3
+s8v1: 1-2
+s8j1: 4-4
+s8p2: 7-7
+s8p3: 8-9
+s8o1: 10-10
+s8x1: 6-6
+s8a1: 5-5
+s8e1: 0-0
+s8p4: 13-13
+s8p5: 15-15
+s8c1: 18-18
+s8t1: 17-17
+s8v2: 16-16
+s8x3: 14-14
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8v1 :same-entity s7v2)
+            (s8e1 :same-entity s7s1)))
+
+

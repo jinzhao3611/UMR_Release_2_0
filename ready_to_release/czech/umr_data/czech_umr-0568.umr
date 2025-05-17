@@ -1,0 +1,101 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2  3      4           5          6         7     8     9       10         11
+Words: V  ČR bývají prostitutky zadržovány zpravidla jenom kvůli ověření totožnosti .
+
+# sentence level graph:
+(s1z1 / zadržovat-001
+        :place (s1c1 / ČR
+            :refer-number singular)
+        :ARG1 (s1p1 / prostitutka
+            :refer-number plural)
+        :ARG0 (s1e1 / entity)
+        :extent (s1z2 / zpravidla)
+        :clausal-marker (s1j1 / jenom)
+        :cause (s1o1 / ověření
+            :ARG0 (s1e2 / entity)
+            :ARG1 (s1t1 / totožnost
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s1z1: 3-3,5-5
+s1c1: 1-2
+s1p1: 4-4
+s1e1: 0-0
+s1z2: 6-6
+s1j1: 7-7
+s1o1: 8-9
+s1e2: 0-0
+s1t1: 10-10
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3          4  5 6   7      8          9
+Words: Zákon o prostituci se u nás teprve připravuje .
+
+# sentence level graph:
+(s2p1 / připravovat-003
+        :ARG1 (s2z1 / zákon
+            :ARG1 (s2p2 / prostituce
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s2e1 / entity)
+        :place (s2e2 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :clausal-marker (s2t1 / teprve)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2p1: 4-4,8-8
+s2z1: 1-1
+s2p2: 2-3
+s2e1: 0-0
+s2e2: 5-6
+s2t1: 7-7
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2e2 :same-entity s1c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2       3     4 5
+Words: Foto Lubomír Kotek - LN
+
+# sentence level graph:
+(s3e1 / event
+        :ARG1 (s3f1 / foto
+            :refer-number singular)
+        :ARG0 (s3k1 / Kotek
+            :mod (s3l1 / Lubomír
+                :refer-number singular)
+            :parenthesis (s3l2 / LN
+                :refer-number plural)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s3e1: 0-0
+s3f1: 1-1
+s3k1: 3-3
+s3l1: 2-2
+s3l2: 5-5
+
+# document level annotation:
+(s3s0 / sentence)
+
+

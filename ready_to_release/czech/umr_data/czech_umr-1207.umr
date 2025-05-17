@@ -1,0 +1,416 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2        3
+Words: Alibismus Komerční banky
+
+# sentence level graph:
+(s1a1 / alibizmus
+        :possessor (s1b1 / banka
+            :mod (s1k1 / Komerční
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1a1: 1-1
+s1b1: 3-3
+s1k1: 2-2
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2  3    4              5     6      7            8         9           10     11    12      13 14       15 16 17           18     19          20
+Words: Jestliže si naše nejvýznamnější banka dovolí jednostranně vypovědět termínované vklady svých klientů ,  nesvědčí to o  prozíravosti jejího managementu .
+
+# sentence level graph:
+(s2s1 / svědčit-002
+        :condition (s2d1 / dovolit-si-001
+            :ARG0 (s2b1 / banka
+                :possessor (s2e1 / entity
+                    :refer-number plural
+                    :refer-person 1st)
+                :mod (s2v1 / významný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s2v2 / vypovědět-002
+                :ARG0 s2b1
+                :manner (s2j1 / jednostranně)
+                :ARG1 (s2v3 / vklad
+                    :ARG0 (s2k1 / klient
+                        :possessor s2b1
+                        :refer-number plural)
+                    :mod (s2t1 / termínovaný
+                        :refer-number plural)
+                    :refer-number plural)
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :ARG0 (s2t2 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s2p1 / prozíravost
+            :possessor (s2m1 / management
+                :possessor s2b1
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s2s1: 14-14
+s2d1: 1-2,6-6
+s2b1: 5-5,11-11,18-18
+s2e1: 3-3
+s2v1: 4-4
+s2v2: 8-8
+s2j1: 7-7
+s2v3: 10-10
+s2k1: 12-12
+s2t1: 9-9
+s2t2: 15-15
+s2p1: 16-17
+s2m1: 19-19
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2b1 :same-entity s1b1)
+            (s2t2 :same-event s2d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2  3     4  5  6        7           8       9          10
+Words: Zdá se totiž ,  že neovládá elementární základy matematiky .
+
+# sentence level graph:
+(s3z1 / zdát-se-004
+        :clausal-marker (s3t1 / totiž)
+        :ARG0 (s3e1 / entity)
+        :ARG1 (s3o1 / ovládat-001
+            :ARG0 (s3e2 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s3z2 / základ
+                :possessor (s3m1 / matematika
+                    :refer-number singular)
+                :mod (s3e3 / elementární
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s3z1: 1-2
+s3t1: 3-3
+s3e1: 0-0
+s3o1: 5-6
+s3e2: 0-0
+s3z2: 8-8
+s3m1: 9-9
+s3e3: 7-7
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e2 :same-entity s2b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2  3     4    5        6        7           8       9  10  11   12       13     14 15 16      17      18     19     20 21      22 23        24    25       26 27         28 29   30     31          32     33     34     35    36 37     38      39 40  41 42 43   44 45         46         47 48 49  50   51      52 53       54       55    56 57       58   59    60
+Words: Musí si totiž umět sestavit základní jednoduchou rovnici ,  zda léta budované renomé ,  do kterého vložila nemalé částky na reklamu ,  zvelebení svých úřadoven a  sponzoring ,  bude stačit kompenzovat prudký pokles důvěry nejen u  jejích klientů ,  ale i  u  naší a  zahraniční veřejnosti ,  a  zda tato rovnice v  konečném výsledku vyzní ve prospěch této banky .
+
+# sentence level graph:
+(s4s1 / sestavit-001
+        :clausal-marker (s4t1 / totiž)
+        :ARG0 (s4e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :affectee s4e1
+        :ARG1 (s4r1 / rovnice
+            :mod (s4j1 / jednoduchý
+                :refer-number singular)
+            :mod (s4z1 / základní
+                :refer-number singular)
+            :mod (s4a1 / and
+                :op1 (s4s2 / stačit-003
+                    :ARG0 (s4r2 / renomé
+                        :mod (s4b1 / budovaný
+                            :duration (s4r3 / rok
+                                :refer-number plural)
+                            :refer-number singular)
+                        :goal-of (s4v1 / vložit-001
+                            :ARG0 s4e1
+                            :ARG1 (s4c1 / částka
+                                :mod (s4m1 / malý
+                                    :refer-number plural
+                                    :polarity -)
+                                :purpose (s4a2 / and
+                                    :op1 (s4r4 / reklama
+                                        :refer-number singular)
+                                    :op2 (s4z2 / zvelebení
+                                        :ARG0 s4e1
+                                        :ARG1 (s4u1 / úřadovna
+                                            :possessor s4e1
+                                            :refer-number plural)
+                                        :refer-number singular)
+                                    :op3 (s4s3 / sponzoring
+                                        :refer-number singular))
+                                :refer-number plural)
+                            :aspect performance)
+                        :refer-number singular)
+                    :ARG1 (s4k1 / kompenzovat-001
+                        :ARG0 s4r2
+                        :ARG1 (s4p1 / pokles
+                            :ARG0 (s4d1 / důvěra
+                                :refer-number singular)
+                            :mod (s4p2 / prudký
+                                :refer-number singular)
+                            :place (s4g1 / gradation
+                                :clausal-marker (s4n1 / nejen)
+                                :op1 (s4k2 / klient
+                                    :possessor s4e1
+                                    :refer-number plural)
+                                :clausal-marker (s4i1 / i)
+                                :op2 (s4a3 / and
+                                    :op1 (s4v2 / veřejnost
+                                        :possessor (s4e2 / entity
+                                            :refer-number plural
+                                            :refer-person 1st)
+                                        :refer-number singular)
+                                    :op2 (s4v3 / veřejnost
+                                        :mod (s4z3 / zahraniční
+                                            :refer-number singular)
+                                        :refer-number singular)))
+                            :refer-number singular)
+                        :aspect process)
+                    :aspect activity)
+                :op2 (s4v4 / vyznít-001
+                    :ARG0 (s4r5 / rovnice
+                        :mod (s4t2 / tento
+                            :refer-number singular)
+                        :refer-number singular)
+                    :regard (s4v5 / výsledek
+                        :mod (s4k3 / konečný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :affectee (s4b2 / banka
+                        :mod (s4t3 / tento
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect performance))
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s4s1: 1-1,4-5
+s4t1: 3-3
+s4e1: 2-2,24-24,37-37
+s4r1: 8-8
+s4j1: 7-7
+s4z1: 6-6
+s4a1: 48-48
+s4s2: 10-10,29-30
+s4r2: 13-13,15-16
+s4b1: 12-12
+s4r3: 11-11
+s4v1: 17-17
+s4c1: 19-19
+s4m1: 18-18
+s4a2: 26-26
+s4r4: 20-21
+s4z2: 20-20,23-23
+s4u1: 25-25
+s4s3: 20-20,27-27
+s4k1: 31-31
+s4p1: 33-33
+s4d1: 34-34
+s4p2: 32-32
+s4g1: 40-40
+s4n1: 35-35
+s4k2: 36-36,38-38
+s4i1: 41-41
+s4a3: 44-44
+s4v2: 0-0
+s4e2: 43-43
+s4v3: 42-42,46-46
+s4z3: 45-45
+s4v4: 49-49,55-55
+s4r5: 51-51
+s4t2: 50-50
+s4v5: 52-52,54-54
+s4k3: 53-53
+s4b2: 56-57,59-59
+s4t3: 58-58
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3e2)
+            (s4k2 :same-entity s2k1)
+            (s4e2 :same-entity s2e1)
+            (s4r5 :same-entity s4r1)
+            (s4b2 :same-entity s4e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2         3  4             5      6        7       8          9  10 11 12 13 14  15       16      17       18 19       20         21       22      23
+Words: Její alibismus i  neerudovanost jejího právního aparátu dosvědčuje i  to ,  že si své počínání nechala požehnat u  jakýchsi anonymních právních expertů .
+
+# sentence level graph:
+(s5d1 / dosvědčovat-001
+        :ARG1 (s5a1 / and
+            :op1 (s5a2 / alibizmus
+                :possessor (s5e1 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular)
+            :op2 (s5e2 / erudovanost
+                :possessor (s5a3 / aparát
+                    :possessor s5e1
+                    :mod (s5p1 / právní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :polarity -))
+        :ARG2 (s5e3 / entity)
+        :clausal-marker (s5i1 / i)
+        :ARG0 (s5n1 / nechat-009
+            :ARG0 s5e1
+            :ARG1 (s5p2 / požehnat-002
+                :ARG1 (s5p3 / počínání
+                    :ARG0 s5e1
+                    :refer-number singular)
+                :ARG0 (s5e4 / entity)
+                :affectee s5e1
+                :place (s5e5 / expert
+                    :mod (s5p4 / právní
+                        :refer-number plural)
+                    :mod (s5a4 / anonymní
+                        :refer-number plural)
+                    :mod (s5j1 / jakýsi
+                        :refer-number plural)
+                    :refer-number plural)
+                :aspect performance)
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5d1: 8-8
+s5a1: 3-3
+s5a2: 2-2
+s5e1: 1-1,5-5,13-14
+s5e2: 4-4
+s5a3: 7-7
+s5p1: 6-6
+s5e3: 0-0
+s5i1: 9-9
+s5n1: 10-10,12-12,16-16
+s5p2: 17-17
+s5p3: 15-15
+s5e4: 0-0
+s5e5: 18-18,22-22
+s5p4: 21-21
+s5a4: 20-20
+s5j1: 19-19
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5a2 :same-entity s1a1)
+            (s5e1 :same-entity s4b2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2   3  4   5  6   7     8         9          10         11      12 13     14        15         16
+Words: Ze dne na den se tak svými podivnými finančními praktikami dostala na úroveň provinční kampeličky .
+
+# sentence level graph:
+(s6d1 / dostat-se-008
+        :manner (s6t1 / tak)
+        :temporal (s6d2 / den
+            :refer-number singular)
+        :temporal (s6d3 / den
+            :refer-number singular)
+        :instrument (s6p1 / praktika
+            :ARG0 s6e1
+            :mod (s6p2 / podivný
+                :refer-number plural)
+            :mod (s6f1 / finanční
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s6e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :goal (s6u1 / úroveň
+            :possessor (s6k1 / kampelička
+                :mod (s6p3 / provinční
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s6d1: 5-5,11-11
+s6t1: 6-6
+s6d2: 1-2
+s6d3: 3-4
+s6p1: 10-10
+s6p2: 8-8
+s6f1: 9-9
+s6e1: 7-7
+s6u1: 12-13
+s6k1: 15-15
+s6p3: 14-14
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1     2     3 4
+Words: Miloň Olšák , Opava
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7o1 / Olšák
+            :mod (s7m1 / Miloň
+                :refer-number singular)
+            :refer-number singular)
+        :op2 (s7o2 / Opava
+            :refer-number singular))
+
+# alignment:
+s7a1: 3-3
+s7o1: 2-2
+s7m1: 1-1
+s7o2: 4-4
+
+# document level annotation:
+(s7s0 / sentence)
+
+

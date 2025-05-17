@@ -1,0 +1,108 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Oznámení
+
+# sentence level graph:
+(s1o1 / oznámení
+        :ARG0 (s1e1 / entity)
+        :ARG1 (s1e2 / entity)
+        :ARG2 (s1e3 / entity)
+        :refer-number singular)
+
+# alignment:
+s1o1: 1-1
+s1e1: 0-0
+s1e2: 0-0
+s1e3: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1         2          3   4     5  6    7            8  9        10         11 12      13        14
+Words: Strážníci překvapili dvě dívky ,  když manipulovaly s  injekční stříkačkou na náměstí Republiky .
+
+# sentence level graph:
+(s2p1 / překvapit-002
+        :ARG0 (s2s1 / strážník
+            :refer-number plural)
+        :ARG1 (s2d1 / dívka
+            :mod (s2d2 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :temporal (s2m1 / manipulovat-001
+            :ARG0 s2d1
+            :ARG1 (s2s2 / stříkačka
+                :mod (s2i1 / injekční
+                    :refer-number singular)
+                :refer-number singular)
+            :place (s2n1 / náměstí
+                :mod (s2r1 / republika
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :aspect activity)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s2p1: 2-2
+s2s1: 1-1
+s2d1: 4-4
+s2d2: 3-3
+s2m1: 6-7
+s2s2: 8-8,10-10
+s2i1: 9-9
+s2n1: 11-12
+s2r1: 13-13
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2     3  4      5          6 7           8      9
+Words: Měly ještě 15 tablet Bromhexinu a dezinfekční roztok .
+
+# sentence level graph:
+(s3m1 / mít-002
+        :ARG0 (s3e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :clausal-marker (s3j1 / ještě)
+        :ARG1 (s3a1 / and
+            :op1 (s3t1 / tableta
+                :mod (s3b1 / Bromhexin
+                    :refer-number singular)
+                :mod (s3x1 / 15)
+                :refer-number plural)
+            :op2 (s3r1 / roztok
+                :mod (s3d1 / dezinfekční
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number plural
+        :aspect state)
+
+# alignment:
+s3m1: 1-1
+s3e1: 0-0
+s3j1: 2-2
+s3a1: 6-6
+s3t1: 4-4
+s3b1: 5-5
+s3x1: 3-3
+s3r1: 8-8
+s3d1: 7-7
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2d1)))
+
+

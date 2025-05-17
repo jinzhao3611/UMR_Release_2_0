@@ -1,0 +1,146 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2            3        4    5  6      7  8  9     10         11   12 13     14 15
+Words: Společnost Westinghouse Electric Corp .  uvedla ,  že koupí společnost Shaw -  Walker Co .
+
+# sentence level graph:
+(s1u1 / uvést-007
+        :ARG0 (s1s1 / společnost
+            :name (s1x1 / #Forn
+                :FPHR (s1w1 / Westinghouse)
+                :FPHR (s1e1 / Electric)
+                :FPHR (s1c1 / Corp)
+                :FPHR (s1x2 / .))
+            :refer-number singular)
+        :effect (s1k1 / koupit-001
+            :ARG0 s1s1
+            :ARG1 (s1s2 / společnost
+                :name (s1x4 / #Forn
+                    :FPHR (s1s3 / Shaw)
+                    :FPHR (s1x5 / -)
+                    :FPHR (s1w2 / Walker)
+                    :FPHR (s1c2 / Co))
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s1u1: 6-6
+s1s1: 1-1
+s1x1: 0-0
+s1w1: 2-2
+s1e1: 3-3
+s1c1: 4-4
+s1x2: 5-5
+s1k1: 8-9
+s1s2: 10-10
+s1x4: 0-0
+s1s3: 11-11
+s1x5: 12-12
+s1w2: 13-13
+s1c2: 14-14
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2       3      4          5
+Words: Podmínky prodeje nebyly zveřejněny .
+
+# sentence level graph:
+(s2z1 / zveřejnit-001
+        :ARG0 (s2e1 / entity)
+        :ARG1 (s2p1 / podmínka
+            :mod (s2p2 / prodej
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s2z1: 3-4
+s2e1: 0-0
+s2p1: 1-1
+s2p2: 2-2
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p2 :same-event s1k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2    3  4      5       6  7         8  9     10       11     12     13        14 15    16 17     18 19          20      21
+Words: Společnost Shaw -  Walker sídlící v  Muskegonu ve státě Michigan vyrábí kovové kartotéky a  stoly a  sedací a  kancelářský nábytek .
+
+# sentence level graph:
+(s3v1 / vyrábět-001
+        :ARG0 (s3s1 / společnost
+            :name (s3x1 / #Forn
+                :FPHR (s3s2 / Shaw)
+                :FPHR (s3x2 / -)
+                :FPHR (s3w1 / Walker))
+            :mod (s3s3 / sídlící
+                :place (s3m1 / Muskegon
+                    :place (s3s4 / stát
+                        :name (s3m2 / Michigan
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3a1 / and
+            :op1 (s3a2 / and
+                :op1 (s3k1 / kartotéka
+                    :mod (s3k2 / kovový
+                        :refer-number plural)
+                    :refer-number plural)
+                :op2 (s3s5 / stůl
+                    :mod s3k2
+                    :refer-number plural))
+            :op2 (s3n1 / nábytek
+                :mod (s3a3 / and
+                    :op1 (s3s6 / sedací
+                        :refer-number plural)
+                    :op2 (s3k3 / kancelářský
+                        :refer-number singular))
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3v1: 11-11
+s3s1: 1-1
+s3x1: 0-0
+s3s2: 2-2
+s3x2: 3-3
+s3w1: 4-4
+s3s3: 5-5
+s3m1: 6-7
+s3s4: 8-9
+s3m2: 10-10
+s3a1: 16-16
+s3a2: 14-14
+s3k1: 13-13
+s3k2: 12-12
+s3s5: 15-15
+s3n1: 20-20
+s3a3: 18-18
+s3s6: 17-17
+s3k3: 19-19
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s1 :same-entity s1s2)))
+
+

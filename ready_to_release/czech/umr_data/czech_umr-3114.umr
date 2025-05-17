@@ -1,0 +1,996 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2   3       4 5         6
+Words: Malíř bez ústupků v Malovaném domě
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1m1 / malíř
+            :companion (s1u1 / ústupek
+                :refer-number plural)
+            :refer-number singular)
+        :place (s1d1 / dům
+            :mod (s1m2 / Malovaný
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1m1: 1-1
+s1u1: 2-3
+s1d1: 4-4,6-6
+s1m2: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1  2   3     4        5   6     7  8     9  10  11   12     13
+Words: "  Jan Kotík nemaluje jen očima a  rukou ,  ale také mozkem .
+
+# sentence level graph:
+(s2m1 / malovat-001
+        :ARG0 (s2k1 / Kotík
+            :mod (s2j1 / Jan
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2e1 / entity)
+        :instrument (s2g1 / gradation
+            :clausal-marker (s2j2 / jen
+                :polarity -)
+            :op1 (s2a1 / and
+                :op1 (s2o1 / oko
+                    :refer-number singular)
+                :op2 (s2r1 / ruka
+                    :refer-number singular))
+            :clausal-marker (s2t1 / také)
+            :op2 (s2m2 / mozek
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2m1: 4-4
+s2k1: 3-3
+s2j1: 2-2
+s2e1: 0-0
+s2g1: 10-10
+s2j2: 5-5
+s2a1: 7-7
+s2o1: 6-6
+s2r1: 8-8
+s2t1: 11-11
+s2m2: 12-12
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2k1 :same-entity s1m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2      3    4        5     6         7  8         9  10  11   12         13 14
+Words: Jeho obrazy tedy vyžadují nejen citlivost a  vnímavost ,  ale také přemýšlení .  "
+
+# sentence level graph:
+(s3v1 / vyžadovat-001
+        :ARG0 (s3o1 / obraz
+            :source (s3e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number plural)
+        :clausal-marker (s3t1 / tedy)
+        :ARG1 (s3g1 / gradation
+            :clausal-marker (s3n1 / nejen)
+            :op1 (s3a1 / and
+                :op1 (s3c1 / citlivost
+                    :refer-number singular)
+                :op2 (s3v2 / vnímavost
+                    :refer-number singular))
+            :clausal-marker (s3t2 / také)
+            :op2 (s3p1 / přemýšlení
+                :ARG0 (s3e2 / entity)
+                :ARG1 (s3e3 / entity)
+                :refer-number singular))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3v1: 4-4
+s3o1: 2-2
+s3e1: 1-1
+s3t1: 3-3
+s3g1: 10-10
+s3n1: 5-5
+s3a1: 7-7
+s3c1: 6-6
+s3v2: 8-8
+s3t2: 11-11
+s3p1: 12-12
+s3e2: 0-0
+s3e3: 0-0
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2     3               4  5    6       7  8         9        10    11     12           13      14     15 16    17        18      19           20      21         22 23        24   25 26      27
+Words: Těmito slovy charakterizoval ve svém projevu na vernisáži Ladislav Novák tvorbu vynikajícího českého malíře ,  jehož mimořádně poutavě koncipovanou výstavu uspořádali v  Malovaném domě v  Třebíči .
+
+# sentence level graph:
+(s4c1 / charakterizovat-001
+        :instrument (s4s1 / slovo
+            :mod (s4t1 / tento
+                :refer-number plural)
+            :refer-number plural)
+        :place (s4p1 / projev
+            :ARG0 s4n1
+            :place (s4v1 / vernisáž
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4n1 / Novák
+            :mod (s4l1 / Ladislav
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s4t2 / tvorba
+            :possessor (s4m1 / malíř
+                :mod (s4c2 / český
+                    :refer-number singular)
+                :mod (s4v2 / vynikající
+                    :refer-number singular)
+                :mod (s4u1 / uspořádat-001
+                    :ARG1 (s4v3 / výstava
+                        :ARG1 s4m1
+                        :mod (s4k1 / koncipovaný
+                            :manner (s4p2 / poutavě
+                                :extent (s4m2 / mimořádně))
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0 (s4e1 / entity)
+                    :place (s4d1 / dům
+                        :mod (s4m3 / Malovaný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :place (s4t3 / Třebíč
+                        :refer-number singular)
+                    :refer-number plural
+                    :aspect performance)
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :refer-number singular
+        :aspect process)
+
+# alignment:
+s4c1: 3-3
+s4s1: 2-2
+s4t1: 1-1
+s4p1: 4-4,6-6
+s4v1: 7-8
+s4n1: 5-5,10-10
+s4l1: 9-9
+s4t2: 11-11
+s4m1: 14-14,16-16
+s4c2: 13-13
+s4v2: 12-12
+s4u1: 21-21
+s4v3: 20-20
+s4k1: 19-19
+s4p2: 18-18
+s4m2: 17-17
+s4e1: 0-0
+s4d1: 22-22,24-24
+s4m3: 23-23
+s4t3: 25-26
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4m1 :same-entity s3e1)
+            (s4d1 :same-entity s1d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2        3    4     5       6  7       8  9     10 11 12    13     14 15 16      17 18  19   20           21    22         23    24 25       26       27      28              29   30    31
+Words: Její součástí bylo nejen setkání s  autorem ,  který i  s  chotí přijel až z  Berlína ,  ale také autogramiáda knihy Kotíkových textů ,  pohotově vydaných místním nakladatelstvím Arca Jimfa .
+
+# sentence level graph:
+(s5b1 / být-007
+        :ARG1 (s5s1 / součást
+            :mod (s5e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :ARG0 (s5g1 / gradation
+            :clausal-marker (s5n1 / nejen)
+            :op1 (s5s2 / setkání
+                :ARG0 (s5e2 / entity)
+                :ARG1 (s5a1 / autor
+                    :ARG0-of (s5p1 / přijet-001
+                        :clausal-marker (s5i1 / i)
+                        :companion (s5c1 / choť
+                            :refer-number singular)
+                        :goal (s5e3 / entity)
+                        :clausal-marker (s5a2 / až)
+                        :start (s5b2 / Berlín
+                            :refer-number singular)
+                        :refer-number singular
+                        :aspect performance)
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s5t1 / také)
+            :op2 (s5a3 / autogramiáda
+                :possessor (s5k1 / kniha
+                    :possessor (s5t2 / text
+                        :source (s5k2 / Kotík
+                            :refer-number singular)
+                        :mod (s5v1 / vydaný
+                            :manner (s5p2 / pohotově)
+                            :ARG0 (s5n2 / nakladatelství
+                                :mod (s5m1 / místní
+                                    :refer-number singular)
+                                :name (s5x1 / #Forn
+                                    :FPHR (s5a4 / Arca
+                                        :refer-number singular)
+                                    :FPHR (s5j1 / Jimfa
+                                        :refer-number singular))
+                                :refer-number singular)
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s5b1: 3-3
+s5s1: 2-2
+s5e1: 1-1
+s5g1: 18-18
+s5n1: 4-4
+s5s2: 5-5
+s5e2: 0-0
+s5a1: 6-7,9-9
+s5p1: 13-13
+s5i1: 10-10
+s5c1: 11-12
+s5e3: 0-0
+s5a2: 14-14
+s5b2: 15-16
+s5t1: 19-19
+s5a3: 20-20
+s5k1: 21-21
+s5t2: 23-23
+s5k2: 22-22
+s5v1: 26-26
+s5p2: 25-25
+s5n2: 28-28
+s5m1: 27-27
+s5x1: 0-0
+s5a4: 29-29
+s5j1: 30-30
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4v1)
+            (s5a1 :same-entity s4m1)
+            (s5k2 :same-entity s5a1)
+            (s5m1 :same-entity s4t3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1        2  3           4        5       6  7       8  9  10         11       12          13     14         15   16 17     18      19    20     21 22 23   24   25 26    27       28 29       30       31
+Words: Hodnotná a  okouzlující kulturní událost je důkazem ,  že dlouhodobě kvalitní dramaturgie výstav Malovaného domu ,  kterou vytváří Luboš Kressa ,  na sebe váže i  další umělecké a  kulturní aktivity .
+
+# sentence level graph:
+(s6b1 / být-007
+        :ARG0 (s6u1 / událost
+            :mod (s6k1 / kulturní
+                :refer-number singular)
+            :mod (s6a1 / and
+                :op1 (s6h1 / hodnotný
+                    :refer-number singular)
+                :op2 (s6o1 / okouzlující
+                    :refer-number singular))
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s6d1 / důkaz
+            :ARG1 (s6v1 / vázat-003
+                :ARG0 (s6d2 / dramaturgie
+                    :possessor (s6v2 / výstava
+                        :possessor (s6d3 / dům
+                            :mod (s6m1 / Malovaný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :mod (s6k2 / kvalitní
+                        :duration (s6d4 / dlouhodobě)
+                        :refer-number singular)
+                    :ARG1-of (s6v3 / vytvářet-003
+                        :ARG0 (s6k3 / Kressa
+                            :mod (s6l1 / Luboš
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :refer-number singular)
+                :goal s6d2
+                :ARG1 (s6a2 / aktivita
+                    :mod (s6a3 / and
+                        :op1 (s6u2 / umělecký
+                            :refer-number plural)
+                        :op2 (s6k4 / kulturní
+                            :refer-number plural))
+                    :clausal-marker (s6i1 / i)
+                    :mod (s6d5 / další
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 6-6
+s6u1: 5-5
+s6k1: 4-4
+s6a1: 2-2
+s6h1: 1-1
+s6o1: 3-3
+s6d1: 7-7
+s6v1: 9-9,24-24
+s6d2: 12-12,17-17,22-23
+s6v2: 13-13
+s6d3: 15-15
+s6m1: 14-14
+s6k2: 11-11
+s6d4: 10-10
+s6v3: 18-18
+s6k3: 20-20
+s6l1: 19-19
+s6a2: 30-30
+s6a3: 28-28
+s6u2: 27-27
+s6k4: 29-29
+s6i1: 25-25
+s6d5: 26-26
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6u1 :same-entity s5e1)
+            (s6d3 :same-entity s4d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1    2       3           4  5        6      7        8        9     10       11     12 13 14 15  16 17  18   19    20 21    22   23 24         25      26 27         28     29        30          31    32 33 34 35    36        37             38      39  40    41 42     43          44
+Words: Sama výstava představuje ve výtečném výběru důležité vývojové etapy Kotíkovy tvorby od 40 .  let ,  kdy jako jeden z  členů dnes už legendární Skupiny 42 zobrazoval motivy technikou přeplněného města ,  až po hojné využívání nepravidelných formátů pro malbu v  letech osmdesátých .
+
+# sentence level graph:
+(s7p1 / představovat-003
+        :ARG0 (s7v1 / výstava
+            :mod (s7s1 / sám
+                :refer-number singular)
+            :refer-number singular)
+        :place (s7v2 / výběr
+            :mod (s7v3 / výtečný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s7e1 / etapa
+            :possessor (s7t1 / tvorba
+                :source (s7k1 / Kotík
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s7v4 / vývojový
+                :refer-number plural)
+            :mod (s7d1 / důležitý
+                :refer-number plural)
+            :temporal (s7r1 / rok
+                :mod (s7x1 / 40)
+                :temporal-of (s7z1 / zobrazovat-001
+                    :manner (s7j1 / jeden
+                        :mod-of s7k1
+                        :start (s7c1 / člen
+                            :possessor (s7s2 / skupina
+                                :mod (s7x3 / 42)
+                                :clausal-marker (s7u1 / už)
+                                :mod (s7l1 / legendární
+                                    :temporal (s7d2 / dnes)
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :ARG0 s7k1
+                    :ARG1 (s7m1 / motiv
+                        :possessor (s7m2 / město
+                            :mod (s7p2 / přeplněný
+                                :ARG0 (s7t2 / technika
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular
+                    :aspect activity)
+                :refer-number plural)
+            :clausal-marker (s7a1 / až)
+            :temporal (s7v5 / využívání
+                :ARG0 (s7e2 / entity)
+                :manner (s7h1 / hojný
+                    :refer-number singular)
+                :ARG1 (s7f1 / formát
+                    :purpose (s7m3 / malba
+                        :refer-number singular)
+                    :mod (s7p3 / pravidelný
+                        :refer-number plural
+                        :polarity -)
+                    :refer-number plural)
+                :temporal (s7r2 / rok
+                    :mod (s7o1 / osmdesátý
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7p1: 3-3
+s7v1: 2-2
+s7s1: 1-1
+s7v2: 4-4,6-6
+s7v3: 5-5
+s7e1: 9-9
+s7t1: 11-11
+s7k1: 10-10
+s7v4: 8-8
+s7d1: 7-7
+s7r1: 12-12,15-15,17-17
+s7x1: 13-13
+s7z1: 27-27
+s7j1: 18-19
+s7c1: 20-21
+s7s2: 25-25
+s7x3: 26-26
+s7u1: 23-23
+s7l1: 24-24
+s7d2: 22-22
+s7m1: 28-28
+s7m2: 31-31
+s7p2: 30-30
+s7t2: 29-29
+s7a1: 33-33
+s7v5: 34-34,36-36
+s7e2: 0-0
+s7h1: 35-35
+s7f1: 38-38
+s7m3: 39-40
+s7p3: 37-37
+s7r2: 41-42
+s7o1: 43-43
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7v1 :same-entity s4v3)
+            (s7k1 :same-entity s5k2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1          2       3  4           5     6     7  8      9      10 11   12   13 14 15  16       17    18 19  20         21 22          23     24            25     26      27
+Words: Nejstarším obrazem je zelenožlutá malba Dívka u  šicího stroje z  roku 1942 ,  na niž navazují malby z  let padesátých ,  rozvíjející tvůrčí modernistické záměry Skupiny .
+
+# sentence level graph:
+(s8b1 / být-007
+        :ARG1 (s8o1 / obraz
+            :mod (s8s1 / starý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s8m1 / malba
+            :name (s8d1 / dívka
+                :place (s8s2 / stroj
+                    :mod (s8s3 / šicí
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s8z1 / zelenožlutý
+                :refer-number singular)
+            :temporal (s8r1 / rok
+                :mod (s8x1 / 1942)
+                :refer-number singular)
+            :ARG1-of (s8n1 / navazovat-002
+                :ARG0 (s8m2 / malba
+                    :temporal (s8r2 / rok
+                        :mod (s8p1 / padesátý
+                            :refer-number plural)
+                        :refer-number plural)
+                    :mod (s8r3 / rozvíjející
+                        :ARG1 (s8z2 / záměr
+                            :possessor (s8s4 / skupina
+                                :refer-number singular)
+                            :mod (s8m3 / modernistický
+                                :refer-number plural)
+                            :mod (s8t1 / tvůrčí
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s8b1: 3-3
+s8o1: 2-2
+s8s1: 1-1
+s8m1: 5-5,14-15
+s8d1: 6-6
+s8s2: 7-7,9-9
+s8s3: 8-8
+s8z1: 4-4
+s8r1: 10-11
+s8x1: 12-12
+s8n1: 16-16
+s8m2: 17-17
+s8r2: 18-19
+s8p1: 20-20
+s8r3: 22-22
+s8z2: 25-25
+s8s4: 26-26
+s8m3: 24-24
+s8t1: 23-23
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8s4 :same-entity s7s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2      3     4        5  6  7  8        9          10        11      12         13    14 15  16 17  18          19    20    21  22    23 24 25 26   27 28  29      30      31     32     33  34  35 36   37 38 39     40 41   42 43
+Words: Ve druhém Kotík dokazuje ,  že je skutečně dominantní osobností počátků abstraktní malby u  nás ,  což dokumentuje černá malba Bez názvu z  r  .  1959 a  pak zejména klíčové obrazy Plocha pro hru (  1961 )  a  Tabule (  1962 )  .
+
+# sentence level graph:
+(s9a1 / and
+        :op1 (s9d1 / dokazovat-002
+            :place (s9o1 / obraz
+                :mod (s9d2 / druhý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s9k1 / Kotík
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s9b1 / být-007
+                :clausal-marker (s9s1 / skutečně)
+                :ARG0 s9k1
+                :ARG1 (s9o2 / osobnost
+                    :mod (s9d3 / dominantní
+                        :refer-number singular)
+                    :mod (s9p1 / počátek
+                        :possessor (s9m1 / malba
+                            :mod (s9a2 / abstraktní
+                                :refer-number singular)
+                            :place (s9e1 / entity
+                                :refer-number plural
+                                :refer-person 1st)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s9a3 / and
+            :op1 (s9d4 / dokumentovat-001
+                :ARG1 (s9c1 / což
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG0 (s9m2 / malba
+                    :name (s9n1 / název
+                        :refer-number singular)
+                    :mod (s9c2 / černý
+                        :refer-number singular)
+                    :temporal (s9r1 / rok
+                        :mod (s9x2 / 1959))
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect process)
+            :clausal-marker (s9p2 / pak)
+            :op2 (s9d5 / dokumentovat-001
+                :ARG1 s9c1
+                :ARG0 (s9o3 / obraz
+                    :clausal-marker (s9z1 / zejména)
+                    :name (s9a4 / and
+                        :op1 (s9p3 / plocha
+                            :purpose (s9h1 / hra
+                                :refer-number singular)
+                            :parenthesis (s9x4 / 1961)
+                            :refer-number singular)
+                        :op2 (s9t1 / tabule
+                            :parenthesis (s9x5 / 1962)
+                            :refer-number singular))
+                    :mod (s9k2 / klíčový
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect process)))
+
+# alignment:
+s9a1: 16-16
+s9d1: 4-4
+s9o1: 0-0
+s9d2: 2-2
+s9k1: 3-3
+s9b1: 6-7
+s9s1: 8-8
+s9o2: 10-10
+s9d3: 9-9
+s9p1: 11-11
+s9m1: 13-13
+s9a2: 12-12
+s9e1: 14-15
+s9a3: 27-27
+s9d4: 18-18
+s9m2: 20-20
+s9n1: 21-22
+s9c2: 19-19
+s9r1: 23-24
+s9x2: 26-26
+s9c1: 17-17
+s9p2: 28-28
+s9d5: 0-0
+s9o3: 31-31
+s9z1: 29-29
+s9a4: 38-38
+s9p3: 32-32
+s9h1: 33-34
+s9x4: 36-36
+s9t1: 39-39
+s9x5: 41-41
+s9k2: 30-30
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9k1 :same-entity s7k1)
+            (s9e1 :same-entity s4c2)
+            (s9c1 :same-event s9d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1  2     3        4          5   6  7  8    9        10        11       12         13    14 15             16        17 18    19      20 21       22        23         24   25        26   27       28
+Words: Ze druhé poloviny šedesátých let a  z  doby pozdější pocházejí Kotíkovy specifické malby na nepravidelných formátech ,  které zvláště v  členitém interiéru Malovaného domu uplatňují svou dynamiku .
+
+# sentence level graph:
+(s10p1 / pocházet-003
+        :temporal (s10a1 / and
+            :op1 (s10p2 / polovina
+                :possessor (s10r1 / rok
+                    :mod (s10s1 / šedesátý
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s10d1 / druhý
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s10d2 / doba
+                :mod (s10p3 / pozdní
+                    :refer-number singular)
+                :refer-number singular))
+        :ARG0 (s10m1 / malba
+            :source (s10k1 / Kotík
+                :refer-number singular
+                :refer-person 3rd)
+            :place (s10f1 / formát
+                :mod (s10p4 / pravidelný
+                    :refer-number plural
+                    :polarity -)
+                :refer-number plural)
+            :mod (s10s2 / specifický
+                :refer-number plural)
+            :ARG0-of (s10u1 / uplatňovat-002
+                :clausal-marker (s10z1 / zvláště)
+                :place (s10i1 / interiér
+                    :possessor (s10d3 / dům
+                        :mod (s10m2 / Malovaný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s10c1 / členitý
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s10d4 / dynamika
+                    :possessor s10m1
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s10p1: 10-10
+s10a1: 6-6
+s10p2: 1-1,3-3
+s10r1: 5-5
+s10s1: 4-4
+s10d1: 2-2
+s10d2: 7-8
+s10p3: 9-9
+s10m1: 13-13,18-18,26-26
+s10k1: 11-11
+s10f1: 14-14,16-16
+s10p4: 15-15
+s10s2: 12-12
+s10u1: 25-25
+s10z1: 19-19
+s10i1: 20-20,22-22
+s10d3: 24-24
+s10m2: 23-23
+s10c1: 21-21
+s10d4: 27-27
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10k1 :same-entity s9k1)
+            (s10f1 :same-entity s7f1)
+            (s10d3 :same-entity s6d3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1         2         3     4  5        6         7  8              9      10       11     12 13 14   15           16 17        18      19    20
+Words: Znamenitě provedený výběr je kvalitní informací o  nekompromisním vývoji Kotíkovy tvorby ,  o  jeho neústupnosti od požadavků moderní malby .
+
+# sentence level graph:
+(s11b1 / být-007
+        :ARG0 (s11v1 / výběr
+            :mod (s11p1 / provedený
+                :manner (s11z1 / znamenitě)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s11i1 / informace
+            :mod (s11k1 / kvalitní
+                :refer-number singular)
+            :ARG1 (s11a1 / and
+                :op1 (s11v2 / vývoj
+                    :ARG0 (s11t1 / tvorba
+                        :source (s11k2 / Kotík
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s11k3 / kompromisní
+                        :refer-number singular
+                        :polarity -)
+                    :refer-number singular)
+                :op2 (s11u1 / ústupnost
+                    :ARG0 s11k2
+                    :ARG1 (s11p2 / požadavek
+                        :ARG0 (s11m1 / malba
+                            :mod (s11m2 / moderní
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular
+                    :polarity -))
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s11b1: 4-4
+s11v1: 3-3
+s11p1: 2-2
+s11z1: 1-1
+s11i1: 6-6
+s11k1: 5-5
+s11a1: 12-12
+s11v2: 7-7,9-9
+s11t1: 11-11
+s11k2: 10-10,14-14
+s11k3: 8-8
+s11u1: 13-13,15-15
+s11p2: 16-17
+s11m1: 19-19
+s11m2: 18-18
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11v1 :same-entity s7v2)
+            (s11t1 :same-entity s7t1)
+            (s11k2 :same-entity s10k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1  2  3    4    5  6     7       8       9  10 11 12      13        14 15    16   17 18 19   20    21 22        23
+Words: "  Na řadě těch ,  kteří udělali ústupky ,  se to později projevilo v  celém díle ,  "  řekl autor na vernisáži .
+
+# sentence level graph:
+(s12r1 / říci-008
+        :ARG0 (s12a1 / autor
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s12e1 / entity)
+        :place (s12v1 / vernisáž
+            :refer-number singular)
+        :effect (s12p1 / projevit-se-002
+            :place (s12r2 / řada
+                :mod (s12t1 / ten
+                    :ARG0-of (s12u1 / udělat-013
+                        :predicative-noun (s12u2 / ústupek
+                            :ARG0 s12t1
+                            :ARG1 (s12e2 / entity)
+                            :refer-number plural)
+                        :refer-number plural
+                        :aspect performance)
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG0 (s12t2 / ten
+                :refer-number singular)
+            :temporal (s12p2 / pozdě)
+            :place (s12d1 / dílo
+                :mod (s12c1 / celý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s12r1: 19-19
+s12a1: 20-20
+s12e1: 0-0
+s12v1: 21-22
+s12p1: 10-10,13-13
+s12r2: 2-3
+s12t1: 4-4,6-6
+s12u1: 7-7
+s12u2: 8-8
+s12e2: 0-0
+s12t2: 11-11
+s12p2: 12-12
+s12d1: 14-14,16-16
+s12c1: 15-15
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12a1 :same-entity s11k2)
+            (s12v1 :same-entity s6u1)
+            (s12t2 :same-event s12u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1       2    3      4    5   6          7     8        9      10      11        12 13  14   15          16       17 18   19      20 21       22 23 24    25 26     27         28 29 30    31    32    33
+Words: Výstava Jana Kotíka není jen dokumentem jedné důležité epochy českého malířství ,  ale také symbolickým poučením o  síle vytrvat v  záměrech ,  o  nichž je člověk přesvědčen a  za nimiž pevně stojí .
+
+# sentence level graph:
+(s13b1 / být-007
+        :ARG0 (s13v1 / výstava
+            :ARG0 (s13k1 / Kotík
+                :mod (s13j1 / Jan
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s13g1 / gradation
+            :clausal-marker (s13j2 / jen
+                :polarity -)
+            :op1 (s13d1 / dokument
+                :possessor (s13e1 / epocha
+                    :possessor (s13m1 / malířství
+                        :mod (s13c1 / český
+                            :refer-number singular
+                            :refer-person 1st)
+                        :refer-number singular)
+                    :mod (s13d2 / důležitý
+                        :refer-number singular)
+                    :mod (s13j3 / jeden
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s13t1 / také)
+            :op2 (s13p1 / poučení
+                :ARG0 (s13e2 / entity)
+                :ARG1 (s13s1 / síla
+                    :ARG0 (s13e3 / entity)
+                    :ARG1 (s13v2 / vytrvat-001
+                        :ARG0 s13e3
+                        :ARG1 (s13z1 / záměr
+                            :mod (s13a1 / and
+                                :op1 (s13b2 / být-007
+                                    :ARG0 (s13c2 / člověk
+                                        :refer-number singular)
+                                    :ARG1 (s13p2 / přesvědčený
+                                        :ARG1 s13z1
+                                        :refer-number singular)
+                                    :refer-number singular
+                                    :refer-person 3rd
+                                    :aspect activity)
+                                :op2 (s13s2 / stát-009
+                                    :ARG0 s13c2
+                                    :ARG1 s13z1
+                                    :manner (s13p3 / pevně)
+                                    :refer-number singular
+                                    :refer-person 3rd
+                                    :aspect activity))
+                            :refer-number plural)
+                        :aspect performance)
+                    :refer-number singular)
+                :manner (s13s3 / symbolický
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s13b1: 4-4
+s13v1: 1-1
+s13k1: 3-3
+s13j1: 2-2
+s13g1: 13-13
+s13j2: 5-5
+s13d1: 6-6
+s13e1: 9-9
+s13m1: 11-11
+s13c1: 10-10
+s13d2: 8-8
+s13j3: 7-7
+s13t1: 14-14
+s13p1: 16-16
+s13e2: 0-0
+s13s1: 17-18
+s13e3: 0-0
+s13v2: 19-19
+s13z1: 20-21,23-24,29-30
+s13a1: 28-28
+s13b2: 25-25
+s13p2: 27-27
+s13c2: 26-26
+s13s2: 32-32
+s13p3: 31-31
+s13s3: 15-15
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13v1 :same-entity s7v1)
+            (s13k1 :same-entity s12a1)
+            (s13c1 :same-entity s9e1)))
+
+

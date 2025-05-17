@@ -1,0 +1,426 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2      3  4   5    6
+Words: Navrhnout adepty na řád může každý
+
+# sentence level graph:
+(s1n1 / navrhnout-002
+        :ARG1 (s1a1 / adept
+            :ARG1 (s1r1 / řád
+                :refer-number singular)
+            :refer-number plural)
+        :ARG0 (s1k1 / každý
+            :refer-number singular
+            :refer-person 3rd)
+        :aspect performance)
+
+# alignment:
+s1n1: 1-1,5-5
+s1a1: 2-2
+s1r1: 3-4
+s1k1: 6-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2      3      4    5  6  7  8  9        10    11         12          13       14         15        16
+Words: Výtvarnou podobu nového Řádu T  .  G  .  Masaryka včera veřejnosti představila Kancelář prezidenta republiky .
+
+# sentence level graph:
+(s3p1 / představit-001
+        :ARG1 (s3p2 / podoba
+            :possessor (s3r1 / řád
+                :mod (s3m1 / Masaryk
+                    :mod (s3t1 / T)
+                    :mod (s3g1 / G)
+                    :refer-number singular)
+                :mod (s3n1 / nový
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3v1 / výtvarný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s3v2 / veřejnost
+            :refer-number singular)
+        :temporal (s3v3 / včera)
+        :ARG0 (s3k1 / kancelář
+            :possessor (s3p3 / prezident
+                :possessor (s3r2 / republika
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3p1: 12-12
+s3p2: 2-2
+s3r1: 4-4
+s3m1: 9-9
+s3t1: 5-5
+s3g1: 7-7
+s3n1: 3-3
+s3v1: 1-1
+s3v2: 11-11
+s3v3: 10-10
+s3k1: 13-13
+s3p3: 14-14
+s3r2: 15-15
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3r1 :same-entity s1r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2       3  4        5    6
+Words: Jejím autorem je Vladimír Oppl .
+
+# sentence level graph:
+(s4b1 / být-007
+        :ARG1 (s4a1 / autor
+            :ARG1 (s4e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :ARG0 (s4o1 / Oppl
+            :mod (s4v1 / Vladimír
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4b1: 3-3
+s4a1: 2-2
+s4e1: 1-1
+s4o1: 5-5
+s4v1: 4-4
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2         3  4     5         6     7      8           9     10    11          12     13         14 15 16 17     18        19   20              21       22 23     24
+Words: Návrhy kandidátů na první udělovaná česká státní vyznamenání mohou stálé parlamentní komisi předkládat do 31 .  března letošního roku prostřednictvím poslanců i  občané .
+
+# sentence level graph:
+(s5p1 / předkládat-001
+        :ARG1 (s5n1 / návrh
+            :ARG1 (s5k1 / kandidát
+                :ARG1 (s5v1 / vyznamenání
+                    :mod (s5s1 / státní
+                        :refer-number plural)
+                    :mod (s5c1 / český
+                        :refer-number plural)
+                    :mod (s5u1 / udělovaný
+                        :refer-number plural)
+                    :mod (s5p2 / první
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :ARG2 (s5k2 / komise
+            :mod (s5p3 / parlamentní
+                :refer-number singular)
+            :mod (s5s2 / stálý
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s5b1 / březen
+            :possessor (s5r1 / rok
+                :mod (s5l1 / letošní
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s5x1 / 31)
+            :refer-number singular)
+        :instrument (s5p4 / poslanec
+            :refer-number plural)
+        :clausal-marker (s5i1 / i)
+        :ARG0 (s5o1 / občan
+            :refer-number plural)
+        :aspect activity)
+
+# alignment:
+s5p1: 9-9,13-13
+s5n1: 1-1
+s5k1: 2-2
+s5v1: 3-3,8-8
+s5s1: 7-7
+s5c1: 6-6
+s5u1: 5-5
+s5p2: 4-4
+s5k2: 12-12
+s5p3: 11-11
+s5s2: 10-10
+s5b1: 14-14,17-17
+s5r1: 19-19
+s5l1: 18-18
+s5x1: 15-15
+s5p4: 20-21
+s5i1: 22-22
+s5o1: 23-23
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5k1 :same-entity s1a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2    3         4     5  6        7         8  9    10     11 12        13 14     15    16 17    18      19 20     21 22   23          24 25    26 27     28
+Words: Návrh musí obsahovat jméno a  příjmení kandidáta ,  jeho tituly ,  životopis ,  osobní údaje a  důvod ocenění ,  rovněž i  druh vyznamenání ,  třídu a  stupeň .
+
+# sentence level graph:
+(s6o1 / obsahovat-001
+        :ARG0 (s6n1 / návrh
+            :refer-number singular)
+        :ARG1 (s6a1 / and
+            :op1 (s6a2 / and
+                :op1 (s6j1 / jméno
+                    :possessor (s6k1 / kandidát
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s6p1 / příjmení
+                    :possessor s6k1
+                    :refer-number singular))
+            :op2 (s6t1 / titul
+                :possessor s6k1
+                :refer-number plural)
+            :op3 (s6z1 / životopis
+                :refer-number singular)
+            :op4 (s6u1 / údaj
+                :mod (s6o2 / osobní
+                    :refer-number plural)
+                :refer-number plural)
+            :op5 (s6d1 / důvod
+                :ARG1 (s6o3 / ocenění
+                    :ARG0 (s6e1 / entity)
+                    :ARG1 s6k1
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s6r1 / rovněž)
+            :clausal-marker (s6i1 / i)
+            :op6 (s6a3 / and
+                :op1 (s6d2 / druh
+                    :possessor (s6v1 / vyznamenání
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s6t2 / třída
+                    :refer-number singular)
+                :op3 (s6s1 / stupeň
+                    :refer-number singular)))
+        :aspect activity)
+
+# alignment:
+s6o1: 2-3
+s6n1: 1-1
+s6a1: 16-16
+s6a2: 5-5
+s6j1: 4-4
+s6k1: 7-7,9-9
+s6p1: 6-6
+s6t1: 10-10
+s6z1: 12-12
+s6u1: 15-15
+s6o2: 14-14
+s6d1: 17-17
+s6o3: 18-18
+s6e1: 0-0
+s6r1: 20-20
+s6i1: 21-21
+s6a3: 26-26
+s6d2: 22-22
+s6v1: 23-23
+s6t2: 25-25
+s6s1: 27-27
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6n1 :same-entity s5n1)
+            (s6k1 :same-entity s5k1)
+            (s6v1 :same-entity s5v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2             3  4        5  6      7      8     9     10        11 12          13    14 15    16 17    18   19          20       21
+Words: U  vyznamenaných in memoriam by nemělo chybět datum úmrtí dotyčného a  příbuzenský vztah k  osobě ,  která bude vyznamenání přejímat .
+
+# sentence level graph:
+(s7c1 / chybět-003
+        :regard (s7v1 / vyznamenaný
+            :manner (s7x1 / #Forn
+                :FPHR (s7i1 / in)
+                :FPHR (s7m1 / memoriam))
+            :refer-number plural)
+        :place (s7e1 / entity)
+        :ARG0 (s7a1 / and
+            :op1 (s7d1 / datum
+                :possessor (s7u1 / úmrtí
+                    :ARG0 (s7d2 / dotyčný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s7v2 / vztah
+                :ARG1 (s7o1 / osoba
+                    :ARG0-of (s7p1 / přejímat-001
+                        :ARG1 (s7v3 / vyznamenání
+                            :refer-number singular)
+                        :aspect activity)
+                    :refer-number singular)
+                :mod (s7p2 / příbuzenský
+                    :refer-number singular)
+                :refer-number singular))
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s7c1: 5-7
+s7v1: 1-2
+s7x1: 0-0
+s7i1: 3-3
+s7m1: 4-4
+s7e1: 0-0
+s7a1: 11-11
+s7d1: 8-8
+s7u1: 9-9
+s7d2: 10-10
+s7v2: 13-13
+s7o1: 14-15,17-17
+s7p1: 18-18,20-20
+s7v3: 19-19
+s7p2: 12-12
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7d2 :same-entity s7v1)
+            (s7v3 :same-entity s6v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2        3   4  5        6      7  8     9      10 11    12  13   14   15      16          17
+Words: Do dnešního dne do sněmovny přišlo na deset návrhů ,  chybí jim však výše uvedené náležitosti .
+
+# sentence level graph:
+(s8b1 / but-91
+        :ARG1 (s8p1 / přijít-010
+            :temporal (s8d1 / den
+                :mod (s8d2 / dnešní
+                    :refer-number singular)
+                :refer-number singular)
+            :goal (s8s1 / sněmovna
+                :refer-number singular)
+            :ARG0 (s8n1 / návrh
+                :mod (s8d3 / deset
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular
+            :aspect performance)
+        :ARG2 (s8c1 / chybět-001
+            :ARG1 s8n1
+            :ARG0 (s8n2 / náležitost
+                :mod (s8u1 / uvedený
+                    :place (s8v1 / vysoko)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s8b1: 13-13
+s8p1: 6-6
+s8d1: 1-1,3-3
+s8d2: 2-2
+s8s1: 4-5
+s8n1: 7-7,9-9,12-12
+s8d3: 8-8
+s8c1: 11-11
+s8n2: 16-16
+s8u1: 15-15
+s8v1: 14-14
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8s1 :same-entity s5p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1           2        3   4    5  6  7     8  9  10 11    12       13   14
+Words: Nejbližšími řádovými dny jsou 28 .  říjen a  1  .  leden příštího roku .
+
+# sentence level graph:
+(s9b1 / být-007
+        :ARG1 (s9d1 / den
+            :mod (s9r1 / řádový
+                :refer-number plural)
+            :mod (s9b2 / blízký
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s9a1 / and
+            :op1 (s9r2 / říjen
+                :mod (s9x1 / 28)
+                :refer-number singular)
+            :op2 (s9l1 / leden
+                :mod (s9x2 / 1)
+                :possessor (s9r3 / rok
+                    :mod (s9p1 / příští
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9b1: 4-4
+s9d1: 3-3
+s9r1: 2-2
+s9b2: 1-1
+s9a1: 8-8
+s9r2: 7-7
+s9x1: 5-5
+s9l1: 11-11
+s9x2: 9-9
+s9r3: 13-13
+s9p1: 12-12
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9r1 :same-entity s7v3)))
+
+

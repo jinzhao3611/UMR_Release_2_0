@@ -1,0 +1,379 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2     3       4
+Words: Budou Doksy lázněmi ?
+
+# sentence level graph:
+(s1b1 / být-007
+        :ARG0 (s1d1 / Doksy
+            :refer-number singular)
+        :ARG1 (s1l1 / lázně
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1b1: 1-1
+s1d1: 2-2
+s1l1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Doksy ( mag ) -
+
+# sentence level graph:
+(s2d1 / Doksy
+        :parenthesis (s2m1 / mag)
+        :refer-number singular)
+
+# alignment:
+s2d1: 1-1
+s2m1: 3-3
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2d1 :same-entity s1d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2           3     4     5            6  7         8        9       10             11 12      13
+Words: Vytvoření společnosti Lázně Doksy odsouhlasilo na posledním zasedání městské zastupitelstvo v  Doksech .
+
+# sentence level graph:
+(s3o1 / odsouhlasit-001
+        :ARG1 (s3v1 / vytvoření
+            :ARG0 (s3e1 / entity)
+            :ARG1 (s3s1 / společnost
+                :name (s3l1 / Lázně
+                    :mod (s3d1 / Doksy
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :place (s3z1 / zasedání
+            :ARG0 (s3e2 / entity)
+            :mod (s3p1 / poslední
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3z2 / zastupitelstvo
+            :mod (s3m1 / městský
+                :refer-number singular)
+            :place (s3d2 / Doksy
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3o1: 5-5
+s3v1: 1-1
+s3e1: 0-0
+s3s1: 2-2
+s3l1: 3-3
+s3d1: 4-4
+s3z1: 6-6,8-8
+s3e2: 0-0
+s3p1: 7-7
+s3z2: 10-10
+s3m1: 9-9
+s3d2: 11-12
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3m1 :same-entity s2d1)
+            (s3d2 :same-entity s3m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2          3    4       5          6        7        8      9  10    11   12  13      14 15 16 17            18      19 20   21         22   23  24  25 26    27
+Words: Tato společnost bude zároveň investorem výstavby lázeňské čtvrti ,  která bude mít rozlohu 16 ha a  předpokládané náklady na její vybudování jsou 750 mil .  korun .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4b1 / být-007
+            :ARG0 (s4s1 / společnost
+                :mod (s4t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s4z1 / zároveň)
+            :ARG1 (s4i1 / investor
+                :possessor (s4v1 / výstavba
+                    :possessor (s4c1 / čtvrť
+                        :mod (s4l1 / lázeňský
+                            :refer-number singular)
+                        :ARG0-of (s4m1 / mít-008
+                            :ARG1 (s4r1 / rozloha
+                                :mod (s4h1 / ha
+                                    :mod (s4x1 / 16))
+                                :refer-number singular)
+                            :aspect state)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s4b2 / být-007
+            :ARG0 (s4n1 / náklad
+                :ARG1 (s4v2 / vybudování
+                    :ARG0 (s4e1 / entity)
+                    :ARG1 s4c1
+                    :refer-number singular)
+                :mod (s4p1 / předpokládaný
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s4m2 / milión
+                :mod (s4k1 / koruna
+                    :refer-number plural)
+                :mod (s4x3 / 750))
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s4a1: 16-16
+s4b1: 3-3
+s4s1: 2-2
+s4t1: 1-1
+s4z1: 4-4
+s4i1: 5-5
+s4v1: 6-6
+s4c1: 8-8,10-10,20-20
+s4l1: 7-7
+s4m1: 11-12
+s4r1: 13-13
+s4h1: 15-15
+s4x1: 14-14
+s4b2: 22-22
+s4n1: 18-18
+s4v2: 19-19,21-21
+s4e1: 0-0
+s4p1: 17-17
+s4m2: 24-24
+s4k1: 26-26
+s4x3: 23-23
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s1 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1               2    3           4  5       6        7    8     9  10    11  12       13 14    15     16   17 18      19        20       21        22    23       24 25    26        27     28         29 30 31          32       33       34  35                   36      37
+Words: Spolupodílníkem této společnosti s  ručením omezeným bude město a  další tři partneři -  firma Ekotes Most ,  pražská projekční kancelář profesora Emila Hlaváčka (  která lázeňskou studii zpracovala )  a  českolipská Soukromá kancelář pro zprostředkovatelskou činnost .
+
+# sentence level graph:
+(s5b1 / být-007
+        :ARG1 (s5s1 / spolupodílník
+            :possessor (s5s2 / společnost
+                :mod (s5t1 / tento
+                    :refer-number singular)
+                :companion (s5r1 / ručení
+                    :mod (s5o1 / omezený
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5a1 / and
+            :op1 (s5m1 / město
+                :refer-number singular)
+            :op2 (s5i1 / identity-91
+                :ARG1 (s5p1 / partner
+                    :mod (s5t2 / tři
+                        :refer-number plural)
+                    :mod (s5d1 / další
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG2 (s5a2 / and
+                    :op1 (s5f1 / firma
+                        :name (s5e1 / Ekotes
+                            :mod (s5m2 / Most
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :op2 (s5k1 / kancelář
+                        :possessor (s5h1 / Hlaváček
+                            :mod (s5p2 / profesor
+                                :refer-number singular)
+                            :mod (s5e2 / Emil
+                                :refer-number singular)
+                            :refer-number singular)
+                        :mod (s5p3 / projekční
+                            :refer-number singular)
+                        :mod (s5p4 / pražský
+                            :refer-number singular)
+                        :ARG0-of (s5z1 / zpracovat-001
+                            :ARG1 (s5s3 / studie
+                                :mod (s5l1 / lázeňský
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :aspect performance)
+                        :refer-number singular)
+                    :op3 (s5k2 / kancelář
+                        :mod (s5c1 / českolipský
+                            :refer-number singular)
+                        :mod (s5s4 / Soukromý
+                            :refer-number singular)
+                        :purpose (s5c2 / činnost
+                            :mod (s5z2 / zprostředkovatelský
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular))))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5b1: 7-7
+s5s1: 1-1
+s5s2: 3-3
+s5t1: 2-2
+s5r1: 4-5
+s5o1: 6-6
+s5a1: 9-9
+s5m1: 8-8
+s5i1: 13-13
+s5p1: 12-12
+s5t2: 11-11
+s5d1: 10-10
+s5a2: 30-30
+s5f1: 14-14
+s5e1: 15-15
+s5m2: 16-16
+s5k1: 20-20,25-25
+s5h1: 23-23
+s5p2: 21-21
+s5e2: 22-22
+s5p3: 19-19
+s5p4: 18-18
+s5z1: 28-28
+s5s3: 27-27
+s5l1: 26-26
+s5k2: 33-33
+s5c1: 31-31
+s5s4: 32-32
+s5c2: 34-34,36-36
+s5z2: 35-35
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s2 :same-entity s4s1)
+            (s5m1 :same-entity s3d2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1        2    3      4    5   6        7    8  9       10 11    12 13   14 15       16
+Words: Součástí nové čtvrti mají být lázeňské domy ,  obchody ,  banka ,  park a  kolonáda .
+
+# sentence level graph:
+(s6b1 / být-007
+        :ARG1 (s6s1 / součást
+            :mod (s6c1 / čtvrť
+                :mod (s6n1 / nový
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :ARG0 (s6a1 / and
+            :op1 (s6d1 / dům
+                :mod (s6l1 / lázeňský
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s6o1 / obchod
+                :refer-number plural)
+            :op3 (s6b2 / banka
+                :refer-number singular)
+            :op4 (s6p1 / park
+                :refer-number singular)
+            :op5 (s6k1 / kolonáda
+                :refer-number singular))
+        :aspect activity)
+
+# alignment:
+s6b1: 4-5
+s6s1: 1-1
+s6c1: 3-3
+s6n1: 2-2
+s6a1: 14-14
+s6d1: 7-7
+s6l1: 6-6
+s6o1: 9-9
+s6b2: 11-11
+s6p1: 13-13
+s6k1: 15-15
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6c1 :same-entity s4c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2  3       4     5           6  7    8     9     10     11 12 13          14 15       16    17
+Words: Až se projekt stane skutečností ,  mají Doksy šanci změnit se z  rekreačního na lázeňské město .
+
+# sentence level graph:
+(s7m1 / mít-043
+        :temporal (s7s1 / stát-se-001
+            :ARG0 (s7p1 / projekt
+                :refer-number singular)
+            :ARG1 (s7s2 / skutečnost
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :ARG0 (s7d1 / Doksy
+            :refer-number singular)
+        :predicative-noun (s7s3 / šance
+            :ARG0 s7d1
+            :ARG1 (s7z1 / změnit-se-001
+                :ARG0 s7d1
+                :source (s7m2 / město
+                    :mod (s7r1 / rekreační
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s7m3 / město
+                    :mod (s7l1 / lázeňský
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s7m1: 7-7
+s7s1: 1-2,4-4
+s7p1: 3-3
+s7s2: 5-5
+s7d1: 8-8
+s7s3: 9-9
+s7z1: 10-11
+s7m2: 0-0
+s7r1: 13-13
+s7m3: 14-14,16-16
+s7l1: 15-15
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7d1 :same-entity s5m1)))
+
+

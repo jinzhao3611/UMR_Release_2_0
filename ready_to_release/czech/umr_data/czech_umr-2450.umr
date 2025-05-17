@@ -1,0 +1,444 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2         3          4 5    6
+Words: Ortman vystřídal Stiborovou v čele LB
+
+# sentence level graph:
+(s1v1 / vystřídat-002
+        :ARG0 (s1o1 / Ortman
+            :refer-number singular)
+        :ARG1 (s1s1 / Stiborová
+            :refer-number singular)
+        :place (s1c1 / čelo
+            :possessor (s1l1 / LB)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s1v1: 2-2
+s1o1: 1-1
+s1s1: 3-3
+s1c1: 4-5
+s1l1: 6-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2 3   4 5
+Words: Ostrava ( mot ) -
+
+# sentence level graph:
+(s2o1 / Ostrava
+        :parenthesis (s2m1 / mot)
+        :refer-number singular)
+
+# alignment:
+s2o1: 1-1
+s2m1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2      3     4    5       6  7      8      9         10     11 12   13         14 15     16
+Words: Programem Levého bloku jako volební ,  nikoli masové politické strany je úzká spolupráce s  levicí .
+
+# sentence level graph:
+(s3b1 / být-007
+        :ARG1 (s3p1 / program
+            :possessor (s3b2 / blok
+                :mod (s3l1 / levý
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3s1 / strana
+                :mod-of s3b2
+                :mod (s3p2 / politický
+                    :refer-number singular)
+                :mod (s3b3 / but-91
+                    :ARG1 (s3v1 / volební
+                        :refer-number singular)
+                    :ARG2 (s3m1 / masový
+                        :refer-number singular
+                        :polarity -))
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3s2 / spolupráce
+            :ARG1 (s3l2 / levice
+                :refer-number singular)
+            :mod (s3u1 / úzký
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3b1: 11-11
+s3p1: 1-1
+s3b2: 3-3
+s3l1: 2-2
+s3s1: 4-4,10-10
+s3p2: 9-9
+s3b3: 6-6
+s3v1: 5-5
+s3m1: 7-8
+s3s2: 13-13
+s3l2: 14-15
+s3u1: 12-12
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3b2 :same-entity s1l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2        3  4  5      6      7  8    9    10   11      12       13       14     15
+Words: Po skončení 1  .  sjezdu strany to řekl jeho nově zvolený předseda Jaroslav Ortman .
+
+# sentence level graph:
+(s4r1 / říci-008
+        :temporal (s4s1 / skončení
+            :ARG0 (s4s2 / sjezd
+                :ARG0 (s4s3 / strana
+                    :refer-number singular)
+                :mod (s4x1 / 1)
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s4t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s4e1 / entity)
+        :ARG0 (s4o1 / Ortman
+            :mod (s4j1 / Jaroslav
+                :refer-number singular)
+            :mod (s4p1 / předseda
+                :possessor s4s3
+                :mod (s4z1 / zvolený
+                    :manner (s4n1 / nově)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4r1: 8-8
+s4s1: 1-2
+s4s2: 5-5
+s4s3: 6-6,9-9
+s4x1: 3-3
+s4t1: 7-7
+s4e1: 0-0
+s4o1: 14-14
+s4j1: 13-13
+s4p1: 12-12
+s4z1: 11-11
+s4n1: 10-10
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s3 :same-entity s3b2)
+            (s4t1 :same-event s3b1)
+            (s4o1 :same-entity s1o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2  3    4    5     6  7  8        9  10         11
+Words: LB má dnes 2934 členů a  24 poslanců v  parlamentu .
+
+# sentence level graph:
+(s5m1 / mít-009
+        :ARG0 (s5l1 / LB
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s5d1 / dnes)
+        :ARG1 (s5a1 / and
+            :op1 (s5c1 / člen
+                :mod (s5x1 / 2934)
+                :refer-number plural)
+            :op2 (s5p1 / poslanec
+                :mod (s5x2 / 24)
+                :place (s5p2 / parlament
+                    :refer-number singular)
+                :refer-number plural))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s5m1: 2-2
+s5l1: 1-1
+s5d1: 3-3
+s5a1: 6-6
+s5c1: 5-5
+s5x1: 4-4
+s5p1: 8-8
+s5x2: 7-7
+s5p2: 9-10
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5l1 :same-entity s4s3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2        3             4     5      6  7        8       9  10   11  12   13      14 15         16    17 18  19    20         21
+Words: Do příštích parlamentních voleb chystá LB celistvý program ,  jímž prý chce oslovit ne jednotlivé třídy ,  ale celou společnost .
+
+# sentence level graph:
+(s6c1 / chystat-001
+        :temporal (s6v1 / volba
+            :mod (s6p1 / parlamentní
+                :refer-number plural)
+            :mod (s6p2 / příští
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s6l1 / LB
+            :refer-number singular)
+        :ARG1 (s6p3 / program
+            :mod (s6c2 / celistvý
+                :refer-number singular)
+            :instrument-of (s6o1 / oslovit-002
+                :clausal-marker (s6p4 / prý)
+                :ARG0 s6l1
+                :ARG1 (s6b1 / but-91
+                    :ARG1 (s6t1 / třída
+                        :mod (s6j1 / jednotlivý
+                            :refer-number plural)
+                        :refer-number plural
+                        :polarity -)
+                    :ARG2 (s6s1 / společnost
+                        :mod (s6c3 / celý
+                            :refer-number singular)
+                        :refer-number singular))
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6c1: 5-5
+s6v1: 1-1,4-4
+s6p1: 3-3
+s6p2: 2-2
+s6l1: 6-6
+s6p3: 8-8,10-10
+s6c2: 7-7
+s6o1: 12-13
+s6p4: 11-11
+s6b1: 18-18
+s6t1: 14-14,16-16
+s6j1: 15-15
+s6s1: 20-20
+s6c3: 19-19
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6l1 :same-entity s5l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2       3    4  5          6        7  8       9            10     11
+Words: Ve volbách chce LB kandidovat společně se Stranou demokratické levice .
+
+# sentence level graph:
+(s7k1 / kandidovat-002
+        :place (s7v1 / volba
+            :refer-number plural)
+        :ARG0 (s7l1 / LB
+            :refer-number singular
+            :refer-person 3rd)
+        :companion (s7s1 / strana
+            :possessor (s7l2 / levice
+                :mod (s7d1 / demokratický
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s7k1: 3-3,5-5
+s7v1: 1-2
+s7l1: 4-4
+s7s1: 6-8
+s7l2: 10-10
+s7d1: 9-9
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7v1 :same-entity s6v1)
+            (s7l1 :same-entity s6l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2      3      4  5         6  7        8      9        10
+Words: Na sjezdu zazněl i  požadavek na sloučení těchto subjektů .
+
+# sentence level graph:
+(s8z1 / zaznít-001
+        :place (s8s1 / sjezd
+            :refer-number singular)
+        :clausal-marker (s8i1 / i)
+        :ARG0 (s8p1 / požadavek
+            :ARG1 (s8s2 / sloučení
+                :ARG1 (s8x1 / #Rcp
+                    :refer-number plural)
+                :ARG0 (s8s3 / subjekt
+                    :mod (s8t1 / tento
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8z1: 3-3
+s8s1: 1-2
+s8i1: 4-4
+s8p1: 5-5
+s8s2: 6-7
+s8x1: 0-0
+s8s3: 9-9
+s8t1: 8-8
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8s1 :same-entity s4s2)
+            (s8x1 :same-entity s8s3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1      2    3         4  5  6      7      8       9        10 11   12 13         14    15
+Words: Ortman dále zopakoval ,  že strana odmítá placení školného a  trvá na restituční tečce .
+
+# sentence level graph:
+(s9z1 / zopakovat-003
+        :ARG0 (s9o1 / Ortman
+            :refer-number singular)
+        :duration (s9d1 / dále)
+        :effect (s9a1 / and
+            :op1 (s9o2 / odmítat-003
+                :ARG0 (s9s1 / strana
+                    :refer-number singular)
+                :ARG1 (s9p1 / placení
+                    :ARG0 (s9e1 / entity)
+                    :ARG1 (s9s2 / školné
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :op2 (s9t1 / trvat-002
+                :ARG0 s9s1
+                :ARG1 (s9t2 / tečka
+                    :mod (s9r1 / restituční
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s9z1: 3-3
+s9o1: 1-1
+s9d1: 2-2
+s9a1: 10-10
+s9o2: 5-5,7-7
+s9p1: 8-8
+s9e1: 0-0
+s9s2: 9-9
+s9s1: 6-6
+s9t1: 11-11
+s9t2: 12-12,14-14
+s9r1: 13-13
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9o1 :same-entity s4o1)
+            (s9s1 :same-entity s7l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1         2           3      4     5         6  7   8           9  10            11     12     13 14  15 16 17 18    19       20   21      22 23      24    25
+Words: Dosavadní předsedkyně strany Marie Stiborová se své kandidatury na předsednickou funkci vzdala s  tím ,  že se vedle politiky chce věnovat i  vědecké práci .
+
+# sentence level graph:
+(s10v1 / vzdát-se-001
+        :ARG0 (s10s1 / Stiborová
+            :mod (s10m1 / Marie
+                :refer-number singular)
+            :mod (s10p1 / předsedkyně
+                :possessor (s10s2 / strana
+                    :refer-number singular)
+                :mod (s10d1 / dosavadní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s10k1 / kandidatura
+            :ARG0 s10s1
+            :ARG1 (s10f1 / funkce
+                :mod (s10p2 / předsednický
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s10v2 / věnovat-se-001
+            :subtraction (s10p3 / politika
+                :refer-number singular)
+            :ARG0 s10s1
+            :clausal-marker (s10i1 / i)
+            :ARG1 (s10p4 / práce
+                :mod (s10v3 / vědecký
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect process)
+        :aspect performance)
+
+# alignment:
+s10v1: 6-6,12-12
+s10s1: 5-5,7-7
+s10m1: 4-4
+s10p1: 2-2
+s10s2: 3-3
+s10d1: 1-1
+s10k1: 8-8
+s10f1: 9-9,11-11
+s10p2: 10-10
+s10v2: 13-14,16-17,20-21
+s10p3: 18-19
+s10i1: 22-22
+s10p4: 24-24
+s10v3: 23-23
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10s1 :same-entity s1s1)
+            (s10s2 :same-entity s9s1)))
+
+

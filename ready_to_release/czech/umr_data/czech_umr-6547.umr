@@ -1,0 +1,104 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2     3  4        5       6  7        8            9            10
+Words: PRINC HENRI je korunním princem a  dědičným velkovévodou lucemburským .
+
+# sentence level graph:
+(s1b1 / být-007
+        :ARG0 (s1h1 / Henri
+            :mod (s1p1 / princ
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1a1 / and
+            :op1 (s1p2 / princ
+                :mod (s1k1 / korunní
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s1v1 / velkovévoda
+                :mod (s1d1 / dědičný
+                    :refer-number singular)
+                :mod (s1l1 / lucemburský
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1b1: 3-3
+s1h1: 2-2
+s1p1: 1-1
+s1a1: 6-6
+s1p2: 5-5
+s1k1: 4-4
+s1v1: 8-8
+s1d1: 7-7
+s1l1: 9-9
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2  3      4     5        6      7  8  9    10     11       12   13        14     15   16   17 18          19    20
+Words: Článek ve zprávě World Business Report 22 .  září chybně zmiňoval jako korunního prince jeho otce ,  velkovévodu Jeana .
+
+# sentence level graph:
+(s2z1 / zmiňovat-001
+        :ARG0 (s2c1 / článek
+            :place (s2z2 / zpráva
+                :mod (s2x1 / #Forn
+                    :FPHR (s2w1 / World)
+                    :FPHR (s2b1 / Business)
+                    :FPHR (s2r1 / Report))
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s2z3 / září
+            :mod (s2x2 / 22)
+            :refer-number singular)
+        :result (s2c2 / chybně)
+        :manner (s2p1 / princ
+            :mod-of s2a1
+            :mod (s2k1 / korunní
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2a1 / and
+            :op1 (s2o1 / otec
+                :mod (s2e1 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular)
+            :op2 (s2j1 / Jean
+                :mod (s2v1 / velkovévoda
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s2z1: 11-11
+s2c1: 1-1
+s2z2: 2-3
+s2x1: 0-0
+s2w1: 4-4
+s2b1: 5-5
+s2r1: 6-6
+s2z3: 9-9
+s2x2: 7-8
+s2c2: 10-10
+s2p1: 12-12,14-14
+s2k1: 13-13
+s2a1: 17-17
+s2o1: 16-16
+s2e1: 15-15
+s2j1: 19-19
+s2v1: 18-18
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2e1 :same-entity s1h1)))
+
+

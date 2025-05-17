@@ -1,0 +1,378 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2        3
+Words: Klid zařídili Francouzi
+
+# sentence level graph:
+(s1z1 / zařídit-001
+        :ARG1 (s1k1 / klid
+            :refer-number singular)
+        :ARG0 (s1f1 / Francouz
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s1z1: 2-2
+s1k1: 1-1
+s1f1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2 3      4 5 6
+Words: Francie - Norsko 4 : 1
+
+# sentence level graph:
+(s2e1 / event
+        :ARG0 (s2c1 / contra-entity
+            :op1 (s2f1 / Francie
+                :refer-number singular)
+            :op2 (s2n1 / Norsko
+                :refer-number singular))
+        :extent (s2m1 / math
+            :op1 (s2x1 / 4)
+            :op2 (s2x2 / 1))
+        :aspect state)
+
+# alignment:
+s2e1: 0-0
+s2c1: 2-2
+s2f1: 1-1
+s2n1: 3-3
+s2m1: 5-5
+s2x1: 4-4
+s2x2: 6-6
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2f1 :same-entity s1f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2         3  4     5          6  7   8       9  10 11 12    13   14 15      16 17 18 19      20 21
+Words: Norští hokejisté ,  kteří připravili o  bod Švédsko a  ČR ,  budou hrát o  udržení v  A  -  skupině MS .
+
+# sentence level graph:
+(s3h1 / hrát-001
+        :ARG0 (s3h2 / hokejista
+            :mod (s3n1 / norský
+                :refer-number plural)
+            :ARG0-of (s3p1 / připravit-001
+                :ARG1 (s3b1 / bod
+                    :refer-number singular)
+                :ARG2 (s3a1 / and
+                    :op1 (s3s1 / Švédsko
+                        :refer-number singular)
+                    :op2 (s3c1 / ČR
+                        :refer-number singular))
+                :refer-number plural
+                :aspect performance)
+            :refer-number plural)
+        :ARG1 (s3e1 / entity)
+        :effect (s3u1 / udržení
+            :ARG0 s3h2
+            :place (s3s2 / skupina
+                :mod (s3a2 / a)
+                :possessor (s3m1 / MS)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s3h1: 12-13
+s3h2: 2-2,4-4
+s3n1: 1-1
+s3p1: 5-5
+s3b1: 6-7
+s3a1: 9-9
+s3s1: 8-8
+s3c1: 10-10
+s3e1: 0-0
+s3u1: 14-15
+s3s2: 16-16,19-19
+s3a2: 17-17
+s3m1: 20-20
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3n1 :same-entity s2n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2  3   4      5      6  7         8  9     10 11      12         13         14   15       16     17
+Words: Rozhodla o  tom jejich prohra s  Francouzi ,  kteří se jediným vítězstvím zachránili mezi světovou elitou .
+
+# sentence level graph:
+(s4r1 / rozhodnout-002
+        :ARG1 (s4t1 / ten
+            :refer-number singular)
+        :ARG0 (s4p1 / prohra
+            :ARG0 (s4e1 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :ARG2 (s4f1 / Francouz
+                :ARG0-of (s4z1 / zachránit-001
+                    :instrument (s4v1 / vítězství
+                        :mod (s4j1 / jediný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG1 s4f1
+                    :place (s4e2 / elita
+                        :mod (s4s1 / světový
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural
+                    :aspect performance)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s4r1: 1-1
+s4t1: 2-3
+s4p1: 5-5
+s4e1: 4-4
+s4f1: 6-7,9-10
+s4z1: 13-13
+s4v1: 12-12
+s4j1: 11-11
+s4e2: 14-14,16-16
+s4s1: 15-15
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3h1)
+            (s4p1 :same-entity s2m1)
+            (s4e1 :same-entity s3h2)
+            (s4f1 :same-entity s2f1)
+            (s4v1 :same-entity s4p1)
+            (s4e2 :same-entity s3s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1        2        3     4    5       6    7    8        9       10  11 12    13 14       15   16 17   18       19     20     21      22 23 24      25      26         27      28     29 30             31    32
+Words: Výsledek současně dodal klid českému týmu před večerním měřením sil se Švédy (  výsledek jsme v  době uzávěrky tohoto vydání neznali )  ,  protože nemohli jakoukoliv prohrou přijít o  čtvrtfinálovou účast .
+
+# sentence level graph:
+(s5d1 / dodat-001
+        :clausal-marker (s5s1 / současně)
+        :ARG0 (s5v1 / výsledek
+            :refer-number singular)
+        :ARG1 (s5k1 / klid
+            :refer-number singular)
+        :ARG2 (s5t1 / tým
+            :mod (s5c1 / český
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s5m1 / měření
+            :ARG0 (s5e1 / entity)
+            :ARG1 (s5s2 / síla
+                :refer-number plural)
+            :effect (s5s3 / Švéd
+                :refer-number plural)
+            :temporal (s5v2 / večerní
+                :refer-number singular)
+            :refer-number singular)
+        :parenthesis (s5z1 / znát-001
+            :ARG1 (s5v3 / výsledek
+                :refer-number singular)
+            :ARG0 (s5e2 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :temporal (s5u1 / uzávěrka
+                :ARG1 (s5v4 / vydání
+                    :mod (s5t2 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :aspect state
+            :polarity -)
+        :cause (s5p1 / přijít-006
+            :instrument (s5p2 / prohra
+                :mod (s5j1 / jakýkoliv
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s5t1
+            :ARG1 (s5u2 / účast
+                :mod (s5c2 / čtvrtfinálový
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5d1: 3-3
+s5s1: 2-2
+s5v1: 1-1
+s5k1: 4-4
+s5t1: 6-6
+s5c1: 5-5
+s5m1: 7-7,9-9
+s5e1: 0-0
+s5s2: 10-10
+s5s3: 11-12
+s5v2: 8-8
+s5z1: 15-15,21-21
+s5v3: 14-14
+s5e2: 0-0
+s5u1: 16-18
+s5v4: 20-20
+s5t2: 19-19
+s5p1: 24-25,28-28
+s5p2: 27-27
+s5j1: 26-26
+s5u2: 29-29,31-31
+s5c2: 30-30
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5v1 :same-entity s4v1)
+            (s5k1 :same-entity s1k1)
+            (s5t1 :same-entity s3c1)
+            (s5s3 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2 3 4
+Words: Branky : 2 .
+
+# sentence level graph:
+(s6x1 / #Colon
+        :ARG0 (s6b1 / branka
+            :refer-number plural)
+        :ARG1 (s6x2 / 2))
+
+# alignment:
+s6x1: 2-2
+s6b1: 1-1
+s6x2: 3-3
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2 3  4
+Words: Orsolini , 34 .
+
+# sentence level graph:
+(s7x1 / #Comma
+        :ARG0 (s7o1 / Orsolini
+            :refer-number singular)
+        :temporal (s7e1 / entity
+            :mod (s7x2 / 34)))
+
+# alignment:
+s7x1: 2-2
+s7o1: 1-1
+s7e1: 0-0
+s7x2: 3-3
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1      2 3  4
+Words: Briand , 45 .
+
+# sentence level graph:
+(s8x1 / #Comma
+        :ARG0 (s8b1 / Briand
+            :refer-number singular)
+        :temporal (s8e1 / entity
+            :mod (s8x2 / 45)))
+
+# alignment:
+s8x1: 2-2
+s8b1: 1-1
+s8e1: 0-0
+s8x2: 3-3
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1        2
+Words: Thoresen .
+
+# sentence level graph:
+(s9t1 / Thoresen
+        :refer-number singular)
+
+# alignment:
+s9t1: 1-1
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1        2  3           4  5     6  7   8   9  10 11 12     13 14   15 16 17
+Words: Rozhodčí :  Galinovskij -  Nosov (  oba Rus .  )  ,  Murray (  Brit .  )  .
+
+# sentence level graph:
+(s10x1 / #Colon
+        :ARG1 (s10r1 / rozhodčí
+            :refer-number plural)
+        :ARG0 (s10a1 / and
+            :op1 (s10a2 / and
+                :op1 (s10g1 / Galinovský
+                    :parenthesis (s10e1 / event
+                        :ARG0 (s10o1 / oba
+                            :refer-number plural)
+                        :ARG1 (s10r2 / Rus
+                            :refer-number singular)
+                        :aspect state)
+                    :refer-number singular)
+                :op2 (s10n1 / Nosov
+                    :parenthesis s10e1
+                    :refer-number singular))
+            :op2 (s10m1 / Murray
+                :parenthesis (s10b1 / Brit
+                    :refer-number singular)
+                :refer-number singular)))
+
+# alignment:
+s10x1: 2-2
+s10r1: 1-1
+s10a1: 11-11
+s10a2: 4-4
+s10g1: 3-3
+s10e1: 0-0
+s10o1: 7-7
+s10r2: 8-8
+s10n1: 5-5
+s10m1: 12-12
+s10b1: 14-14
+
+# document level annotation:
+(s10s0 / sentence)
+
+

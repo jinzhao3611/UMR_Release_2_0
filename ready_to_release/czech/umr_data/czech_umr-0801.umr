@@ -1,0 +1,423 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1              2       3   4     5 6         7
+Words: Sebevražedkyně vyvázla bez šrámů , policisté nikoliv
+
+# sentence level graph:
+(s1a1 / and
+        :op1 (s1v1 / vyváznout-001
+            :start (s1e1 / entity)
+            :ARG0 (s1s1 / sebevražedkyně
+                :refer-number singular)
+            :companion (s1s2 / šrám
+                :refer-number plural)
+            :aspect performance)
+        :op2 (s1v2 / vyváznout-001
+            :start s1e1
+            :companion s1s2
+            :ARG0 (s1p1 / policista
+                :refer-number plural)
+            :clausal-marker (s1n1 / nikoliv)
+            :aspect performance))
+
+# alignment:
+s1a1: 5-5
+s1v1: 2-2
+s1s1: 1-1
+s1e1: 0-0
+s1s2: 3-4
+s1v2: 0-0
+s1p1: 6-6
+s1n1: 7-7
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2 3   4 5
+Words: Brno ( luč ) -
+
+# sentence level graph:
+(s2b1 / Brno
+        :parenthesis (s2l1 / luč)
+        :refer-number singular)
+
+# alignment:
+s2b1: 1-1
+s2l1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2           3        4                   5       6  7  8  9     10     11     12      13         14     15 16   17   18 19     20       21 22     23    24 25   26
+Words: Na psychiatrii skončila jedenačtyřicetiletá Ludmila Š  .  ,  která údajně chtěla spáchat sebevraždu skokem z  okna bytu v  prvním poschodí ve Vlkově ulici v  Brně .
+
+# sentence level graph:
+(s3s1 / skončit-004
+        :place (s3p1 / psychiatrie
+            :refer-number singular)
+        :ARG0 (s3s2 / Š
+            :mod (s3l1 / Ludmila
+                :refer-number singular)
+            :mod (s3j1 / jedenačtyřicetiletý
+                :refer-number singular)
+            :ARG0-of (s3s3 / spáchat-002
+                :clausal-marker (s3u1 / údajně)
+                :manner (s3s4 / skok
+                    :start (s3o1 / okno
+                        :possessor (s3b1 / byt
+                            :place (s3p2 / poschodí
+                                :mod (s3p3 / první
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :place (s3u2 / ulice
+                                :mod (s3v1 / Vlk
+                                    :refer-number singular)
+                                :place (s3b2 / Brno
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s3s5 / sebevražda
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3s1: 3-3
+s3p1: 1-2
+s3s2: 6-6,9-9
+s3l1: 5-5
+s3j1: 4-4
+s3s3: 11-12
+s3u1: 10-10
+s3s4: 14-14
+s3o1: 15-16
+s3b1: 17-17
+s3p2: 18-18,20-20
+s3p3: 19-19
+s3u2: 21-21,23-23
+s3v1: 22-22
+s3b2: 24-25
+s3s5: 13-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s2 :same-entity s1s1)
+            (s3b2 :same-entity s2b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2  3       4        5    6        7  8     9  10 11   12     13     14 15  16 17       18       19    20
+Words: Skoku se snažila zabránit její příbuzná ,  která ji v  okně držela zezadu a  jíž se podařilo přivolat pomoc .
+
+# sentence level graph:
+(s4s1 / snažit-se-001
+        :ARG1 (s4z1 / zabránit-002
+            :ARG1 (s4s2 / skok
+                :refer-number singular)
+            :ARG0 s4p1
+            :aspect performance)
+        :ARG0 (s4p1 / příbuzná
+            :possessor (s4e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :mod (s4a1 / and
+                :op1 (s4d1 / držet-003
+                    :ARG0 s4p1
+                    :ARG1 s4e1
+                    :place (s4o1 / okno
+                        :refer-number singular)
+                    :manner (s4z2 / zezadu)
+                    :aspect activity)
+                :op2 (s4p2 / podařit-se-001
+                    :ARG0 s4p1
+                    :ARG1 (s4p3 / přivolat-001
+                        :ARG0 s4p1
+                        :ARG1 (s4p4 / pomoc
+                            :refer-number singular)
+                        :aspect performance)
+                    :refer-number singular
+                    :aspect performance))
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s4s1: 2-3
+s4z1: 4-4
+s4s2: 1-1
+s4p1: 6-6,8-8,15-15
+s4e1: 5-5,9-9
+s4a1: 14-14
+s4d1: 12-12
+s4o1: 10-11
+s4z2: 13-13
+s4p2: 16-17
+s4p3: 18-18
+s4p4: 19-19
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s2 :same-entity s3s4)
+            (s4e1 :same-entity s3s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2    3  4              5      6       7       8   9       10 11   12      13  14        15           16           17       18 19    20 21      22        23
+Words: Zatímco žena se sebevražednými sklony nakonec vyvázla bez zranění ,  hůře dopadli dva policisté pohotovostní motorizované jednotky ,  kteří ji přijeli zachránit .
+
+# sentence level graph:
+(s5c1 / contrast-91
+        :ARG2 (s5v1 / vyváznout-001
+            :ARG0 (s5z1 / žena
+                :companion (s5s1 / sklon
+                    :mod (s5s2 / sebevražedný
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd)
+            :start (s5e1 / entity)
+            :temporal (s5n1 / nakonec)
+            :companion (s5z2 / zranění
+                :ARG0 (s5e2 / entity)
+                :refer-number singular)
+            :aspect performance)
+        :ARG1 (s5d1 / dopadnout-005
+            :manner (s5h1 / hůře)
+            :ARG0 (s5p1 / policista
+                :possessor (s5j1 / jednotka
+                    :mod (s5m1 / motorizovaný
+                        :refer-number singular)
+                    :mod (s5p2 / pohotovostní
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s5d2 / dva
+                    :refer-number plural)
+                :ARG0-of (s5p3 / přijet-001
+                    :goal (s5e3 / entity)
+                    :purpose (s5z3 / zachránit-001
+                        :ARG0 s5p1
+                        :ARG1 s5z1
+                        :aspect performance)
+                    :refer-number plural
+                    :aspect performance)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s5c1: 1-1
+s5d1: 12-12
+s5h1: 11-11
+s5p1: 14-14,19-19
+s5j1: 17-17
+s5m1: 16-16
+s5p2: 15-15
+s5d2: 13-13
+s5p3: 21-21
+s5e3: 0-0
+s5z3: 22-22
+s5v1: 7-7
+s5z1: 2-2,20-20
+s5s1: 3-3,5-5
+s5s2: 4-4
+s5e1: 0-0
+s5n1: 6-6
+s5z2: 8-9
+s5e2: 0-0
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p1 :same-entity s1p1)
+            (s5z1 :same-entity s4e1)
+            (s5z2 :same-entity s1s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2  3    4  5       6    7  8  9          10     11        12 13        14     15 16     17   18 19   20
+Words: Jeden z  nich se poranil poté ,  co skleněnými dveřmi proskočil do zamčeného pokoje a  sundal ženu z  okna .
+
+# sentence level graph:
+(s6p1 / poranit-se-001
+        :ARG0 (s6j1 / jeden
+            :start (s6e1 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :refer-number singular)
+        :temporal (s6a1 / and
+            :op1 (s6p2 / proskočit-002
+                :ARG0 s6j1
+                :path (s6d1 / dveře
+                    :mod (s6s1 / skleněný
+                        :refer-number plural)
+                    :refer-number singular)
+                :goal (s6p3 / pokoj
+                    :mod (s6z1 / zamčený
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :op2 (s6s2 / sundat-001
+                :ARG0 s6j1
+                :ARG1 (s6z2 / žena
+                    :refer-number singular
+                    :refer-person 3rd)
+                :start (s6o1 / okno
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6p1: 4-5
+s6j1: 1-1
+s6e1: 2-3
+s6a1: 15-15
+s6p2: 6-6,8-8,11-11
+s6d1: 10-10
+s6s1: 9-9
+s6p3: 12-12,14-14
+s6z1: 13-13
+s6s2: 6-6,8-8,16-16
+s6z2: 17-17
+s6o1: 18-19
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5p1)
+            (s6z2 :same-entity s5z1)
+            (s6o1 :same-entity s3o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2         3  4        5    6        7   8
+Words: Druhého policistu na schodech domu pokousal pes .
+
+# sentence level graph:
+(s7p1 / pokousat-001
+        :ARG1 (s7p2 / policista
+            :mod (s7d1 / druhý
+                :refer-number singular)
+            :refer-number singular)
+        :place (s7s1 / schod
+            :possessor (s7d2 / dům
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7p3 / pes
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7p1: 6-6
+s7p2: 2-2
+s7d1: 1-1
+s7s1: 3-4
+s7d2: 5-5
+s7p3: 7-7
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2    3         4    5        6     7  8      9   10       11 12    13    14
+Words: Zranění obou zachránců není nikterak vážné a  nebude jim překážet v  další práci .
+
+# sentence level graph:
+(s8a1 / and
+        :op1 (s8b1 / být-007
+            :ARG0 (s8z1 / zranění
+                :possessor (s8z2 / zachránce
+                    :mod (s8o1 / oba
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd)
+                :refer-number singular)
+            :ARG1 (s8v1 / vážný
+                :extent (s8n1 / nikterak)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :op2 (s8p1 / překážet-001
+            :ARG0 s8z1
+            :ARG2 s8z2
+            :ARG1 (s8p2 / práce
+                :mod (s8d1 / další
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity
+            :polarity -))
+
+# alignment:
+s8a1: 7-7
+s8b1: 4-4
+s8v1: 6-6
+s8n1: 5-5
+s8z1: 1-1
+s8z2: 3-3,9-9
+s8o1: 2-2
+s8p1: 8-8,10-10
+s8p2: 11-11,13-13
+s8d1: 12-12
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8z2 :same-entity s6e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1     2      3 4          5  6         7
+Words: Motiv pokusu o sebevraždu se vyšetřuje .
+
+# sentence level graph:
+(s9v1 / vyšetřovat-001
+        :ARG1 (s9m1 / motiv
+            :possessor (s9p1 / pokus
+                :ARG1 (s9s1 / sebevražda
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s9e1 / entity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9v1: 5-6
+s9m1: 1-1
+s9p1: 2-2
+s9s1: 3-4
+s9e1: 0-0
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p1 :same-event s3s3)
+            (s9s1 :same-entity s3s5)))
+
+

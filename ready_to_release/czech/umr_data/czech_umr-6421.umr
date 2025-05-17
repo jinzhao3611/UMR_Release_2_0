@@ -1,0 +1,94 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2    3           4     5           6    7  8       9  10     11       12     13         14     15 16 17 18
+Words: Čistý zisk společnosti LOTUS DEVELOPMENT Corp .  vzrostl ve třetím kvartálu oproti dřívějšímu období o  61 %  .
+
+# sentence level graph:
+(s1v1 / vzrůst-001
+        :ARG0 (s1z1 / zisk
+            :mod (s1c1 / čistý
+                :refer-number singular)
+            :mod (s1s1 / společnost
+                :name (s1x1 / #Forn
+                    :FPHR (s1l1 / LOTUS)
+                    :FPHR (s1d1 / DEVELOPMENT)
+                    :FPHR (s1c2 / Corp)
+                    :FPHR (s1x2 / .))
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s1k1 / kvartál
+            :mod (s1t1 / třetí
+                :refer-number singular)
+            :refer-number singular)
+        :comparison (s1o1 / období
+            :mod (s1b1 / brzký
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s1x3 / #Percnt
+            :mod (s1x4 / 61))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s1v1: 8-8
+s1z1: 2-2
+s1c1: 1-1
+s1s1: 3-3
+s1x1: 0-0
+s1l1: 4-4
+s1d1: 5-5
+s1c2: 6-6
+s1x2: 7-7
+s1k1: 9-9,11-11
+s1t1: 10-10
+s1o1: 12-12,14-14
+s1b1: 13-13
+s1x3: 15-15,17-17
+s1x4: 16-16
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2      3     4         5     6       7           8  9          10
+Words: Včerejší vydání udalo nesprávné údaje nárůstu vyjádřeného v  procentech .
+
+# sentence level graph:
+(s2u1 / udat-002
+        :ARG0 (s2v1 / vydání
+            :mod (s2v2 / včerejší
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2u2 / údaj
+            :mod (s2s1 / správný
+                :refer-number plural
+                :polarity -)
+            :mod (s2n1 / nárůst
+                :mod (s2v3 / vyjádřený
+                    :regard (s2p1 / procento
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s2u1: 3-3
+s2v1: 2-2
+s2v2: 1-1
+s2u2: 5-5
+s2s1: 4-4
+s2n1: 6-6
+s2v3: 7-7
+s2p1: 8-9
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2n1 :same-event s1v1)))
+
+

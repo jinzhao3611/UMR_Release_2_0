@@ -1,0 +1,611 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2   3      4
+Words: Pasqua prý nabídl demisi
+
+# sentence level graph:
+(s1n1 / nabídnout-001
+        :ARG0 (s1p1 / Pasqua
+            :refer-number singular)
+        :ARG2 (s1e1 / entity)
+        :clausal-marker (s1p2 / prý)
+        :ARG1 (s1d1 / demise
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s1n1: 3-3
+s1p1: 1-1
+s1e1: 0-0
+s1p2: 2-2
+s1d1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Paříž -
+
+# sentence level graph:
+(s2p1 / Paříž
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1           2       3      4  5        6         7       8      9      10 11      12         13          14   15     16
+Words: Francouzský ministr vnitra a  územního plánování Charles Pasqua nabídl v  pondělí premiérovi Balladurovi svou demisi .
+
+# sentence level graph:
+(s3n1 / nabídnout-001
+        :ARG0 (s3p1 / Pasqua
+            :mod (s3c1 / Charles
+                :refer-number singular)
+            :mod (s3m1 / ministr
+                :mod (s3f1 / francouzský
+                    :refer-number singular)
+                :possessor (s3a1 / and
+                    :op1 (s3v1 / vnitro
+                        :refer-number singular)
+                    :op2 (s3p2 / plánování
+                        :ARG0 (s3e1 / entity)
+                        :ARG1 (s3e2 / entity)
+                        :mod (s3u1 / územní
+                            :refer-number singular)
+                        :refer-number singular))
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3p3 / pondělí
+            :refer-number singular)
+        :ARG2 (s3b1 / Balladur
+            :mod (s3p4 / premiér
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3d1 / demise
+            :possessor s3p1
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3n1: 9-9
+s3p1: 8-8,14-14
+s3c1: 7-7
+s3m1: 2-2
+s3f1: 1-1
+s3a1: 4-4
+s3v1: 3-3
+s3p2: 6-6
+s3e1: 0-0
+s3e2: 0-0
+s3u1: 5-5
+s3p3: 10-11
+s3b1: 13-13
+s3p4: 12-12
+s3d1: 15-15
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s1p1)
+            (s3d1 :same-entity s1d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2       3      4  5     6      7  8   9     10  11       12
+Words: Balladur Pasquův odchod z  vlády odmítl ,  ale možná jen prozatím .
+
+# sentence level graph:
+(s4b1 / but-91
+        :ARG1 (s4o1 / odmítnout-003
+            :ARG0 (s4b2 / Balladur
+                :refer-number singular)
+            :ARG1 (s4o2 / odchod
+                :ARG0 (s4p1 / Pasqua
+                    :refer-number singular)
+                :start (s4v1 / vláda
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :ARG2 (s4o3 / odmítnout-003
+            :ARG0 s4b2
+            :ARG1 s4o2
+            :clausal-marker (s4m1 / možná)
+            :clausal-marker (s4j1 / jen)
+            :duration (s4p2 / prozatím)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s4b1: 8-8
+s4o1: 6-6
+s4b2: 1-1
+s4o2: 3-3
+s4p1: 2-2
+s4v1: 4-5
+s4o3: 0-0
+s4m1: 9-9
+s4j1: 10-10
+s4p2: 11-11
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4b2 :same-entity s3b1)
+            (s4o2 :same-entity s3d1)
+            (s4p1 :same-entity s3p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2  3     4           5         6       7  8      9        10 11    12     13   14        15    16         17
+Words: Napsal to včera francouzský satirický týdeník Le Canard enchainé ,  jehož zdroje jsou zpravidla velmi spolehlivé .
+
+# sentence level graph:
+(s5n1 / napsat-006
+        :ARG1 (s5t1 / ten
+            :refer-number singular)
+        :temporal (s5v1 / včera)
+        :ARG0 (s5t2 / týdeník
+            :mod (s5s1 / satirický
+                :refer-number singular)
+            :mod (s5f1 / francouzský
+                :refer-number singular)
+            :name (s5x1 / #Forn
+                :FPHR (s5l1 / Le)
+                :FPHR (s5c1 / Canard)
+                :FPHR (s5e1 / enchainé))
+            :mod (s5b1 / být-007
+                :ARG0 (s5z1 / zdroj
+                    :possessor s5t2
+                    :refer-number plural)
+                :frequency (s5z2 / zpravidla)
+                :ARG1 (s5s2 / spolehlivý
+                    :extent (s5v2 / velmi)
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5n1: 1-1
+s5t1: 2-2
+s5v1: 3-3
+s5t2: 6-6,11-11
+s5s1: 5-5
+s5f1: 4-4
+s5x1: 0-0
+s5l1: 7-7
+s5c1: 8-8
+s5e1: 9-9
+s5b1: 13-13
+s5z1: 12-12
+s5z2: 14-14
+s5s2: 16-16
+s5v2: 15-15
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5f1 :same-entity s3f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2  3     4     5  6         7         8          9           10 11            12         13 14 15    16    17    18       19     20     21      22         23     24
+Words: Pasqua ,  který patří k  rozhodným zastáncům premiérovy kandidatury na francouzského prezidenta ,  si podle listu chtěl nabídkou demise ověřit nynější Balladurův postoj .
+
+# sentence level graph:
+(s6o1 / ověřit-001
+        :ARG0 (s6p1 / Pasqua
+            :ARG0-of (s6p2 / patřit-003
+                :goal (s6z1 / zastánce
+                    :mod (s6r1 / rozhodný
+                        :refer-number plural)
+                    :ARG1 (s6k1 / kandidatura
+                        :possessor (s6p3 / premiér
+                            :refer-number singular)
+                        :ARG1 (s6p4 / prezident
+                            :mod (s6f1 / francouzský
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect state)
+            :refer-number singular)
+        :regard (s6l1 / list
+            :refer-number singular)
+        :instrument (s6n1 / nabídka
+            :ARG1 (s6d1 / demise
+                :refer-number singular)
+            :refer-number singular)
+        :affectee s6p1
+        :ARG1 (s6p5 / postoj
+            :ARG0 (s6b1 / Balladur
+                :refer-number singular)
+            :mod (s6n2 / nynější
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s6o1: 17-17,20-20
+s6p1: 1-1,3-3,14-14
+s6p2: 4-4
+s6z1: 5-5,7-7
+s6r1: 6-6
+s6k1: 9-9
+s6p3: 8-8
+s6p4: 10-10,12-12
+s6f1: 11-11
+s6l1: 15-16
+s6n1: 18-18
+s6d1: 19-19
+s6p5: 23-23
+s6b1: 22-22
+s6n2: 21-21
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p1 :same-entity s4p1)
+            (s6p3 :same-entity s4b2)
+            (s6f1 :same-entity s5f1)
+            (s6l1 :same-entity s5t2)
+            (s6n1 :same-event s3n1)
+            (s6d1 :same-entity s4o2)
+            (s6b1 :same-entity s6p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2     3     4       5      6    7       8       9  10      11         12          13        14       15 16       17 18    19 20     21         22   23    24    25        26     27 28 29         30      31     32      33 34          35
+Words: V  úterý totiž premiér změnil svůj původní přístup k  případu odposlechu telefonních rozhovorů Schuller -  Maréchal ,  který mu značně pošramotil jeho dosud čistý politický profil ,  a  překvapivě označil postup policie za protiprávní .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7z1 / změnit-001
+            :temporal (s7u1 / úterý
+                :refer-number singular)
+            :ARG0 (s7p1 / premiér
+                :refer-number singular)
+            :clausal-marker (s7t1 / totiž)
+            :ARG1 (s7p2 / přístup
+                :ARG0 s7p1
+                :mod (s7p3 / původní
+                    :refer-number singular)
+                :ARG1 (s7p4 / případ
+                    :name (s7o1 / odposlech
+                        :ARG1 (s7r1 / rozhovor
+                            :ARG2 (s7x2 / #Rcp)
+                            :mod (s7t2 / telefonní
+                                :refer-number plural)
+                            :ARG0 (s7a2 / and
+                                :op1 (s7s1 / Schuller
+                                    :refer-number singular)
+                                :op2 (s7m1 / Maréchal
+                                    :refer-number singular))
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0-of (s7p5 / pošramotit-001
+                    :affectee s7p1
+                    :extent (s7z2 / značně)
+                    :ARG1 (s7p6 / profil
+                        :possessor s7p1
+                        :mod (s7p7 / politický
+                            :refer-number singular)
+                        :mod (s7c1 / čistý
+                            :temporal (s7d1 / dosud)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s7o2 / označit-001
+            :temporal s7u1
+            :ARG0 s7p1
+            :ARG1 (s7p8 / postup
+                :ARG0 (s7p9 / policie
+                    :refer-number singular)
+                :refer-number singular)
+            :manner (s7p10 / překvapivě)
+            :effect (s7p11 / protiprávní
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s7a1: 28-28
+s7z1: 5-5
+s7t1: 3-3
+s7p2: 8-8,18-18
+s7p3: 7-7
+s7p4: 9-10
+s7o1: 11-11
+s7r1: 13-13
+s7x2: 0-0
+s7t2: 12-12
+s7a2: 15-15
+s7s1: 14-14
+s7m1: 16-16
+s7p5: 21-21
+s7z2: 20-20
+s7p6: 26-26
+s7p7: 25-25
+s7c1: 24-24
+s7d1: 23-23
+s7u1: 1-2
+s7p1: 4-4,6-6,19-19,22-22
+s7o2: 30-30
+s7p8: 31-31
+s7p9: 32-32
+s7p10: 29-29
+s7p11: 33-34
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7x2 :same-entity s7a2)
+            (s7p1 :same-entity s6b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2       3  4      5  6  7    8  9        10  11 12            13     14 15 16     17   18 19       20 21       22        23 24 25 26      27          28             29        30      31  32 33     34       35    36
+Words: "  Charlie (  Pasqua )  má blíž k  vyhazovu než k  Matignonskému paláci ,  "  napsal list s  narážkou na Pasquovu představu ,  že v  případě Balladurova prezidentského vítězství zasedne sám do křesla předsedy vlády .
+
+# sentence level graph:
+(s8n1 / napsat-007
+        :ARG0 (s8l1 / list
+            :refer-number singular)
+        :effect (s8m1 / mít-014
+            :ARG0 (s8i1 / identity-91
+                :ARG1 (s8c1 / Charlie
+                    :refer-number singular)
+                :ARG2 (s8p1 / Pasqua
+                    :refer-number singular))
+            :extent (s8b1 / blízko
+                :comparison (s8m2 / mít-014
+                    :ARG0 s8i1
+                    :extent (s8b2 / blízko)
+                    :goal (s8p2 / palác
+                        :mod (s8m3 / matignonský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect state))
+            :goal (s8v1 / vyhazov
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state)
+        :companion (s8n2 / narážka
+            :ARG1 (s8p3 / představa
+                :ARG0 (s8p4 / Pasqua
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG1 (s8z1 / zasednout-002
+                    :condition (s8v2 / vítězství
+                        :ARG0 (s8b3 / Balladur
+                            :refer-number singular
+                            :refer-person 3rd)
+                        :mod (s8p5 / prezidentský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :manner (s8s1 / sám
+                        :mod-of s8p4
+                        :refer-number singular)
+                    :ARG0 s8p4
+                    :goal (s8k1 / křeslo
+                        :possessor (s8p6 / předseda
+                            :possessor (s8v3 / vláda
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8n1: 16-16
+s8l1: 17-17
+s8m1: 6-6
+s8i1: 3-3
+s8c1: 2-2
+s8p1: 4-4
+s8b1: 7-7
+s8m2: 0-0
+s8b2: 0-0
+s8p2: 11-11,13-13
+s8m3: 12-12
+s8v1: 8-9
+s8n2: 18-19
+s8p3: 20-20,22-22
+s8p4: 21-21
+s8z1: 24-24,30-30
+s8v2: 25-26,29-29
+s8b3: 27-27
+s8p5: 28-28
+s8s1: 31-31
+s8k1: 32-33
+s8p6: 34-34
+s8v3: 35-35
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8l1 :same-entity s6l1)
+            (s8i1 :same-entity s6p1)
+            (s8p4 :same-entity s8i1)
+            (s8b3 :same-entity s7p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1        2  3     4       5      6           7        8        9         10 11  12 13    14           15 16 17  18 19   20       21  22       23     24
+Words: Balladur si zatím vynutil demisi policejního ředitele Jacquese Franqueta -  byť je zcela nemyslitelné ,  že ten by něco podnikal bez Pasquova vědomí .
+
+# sentence level graph:
+(s9b1 / but-91
+        :ARG1 (s9v1 / vynutit-si-001
+            :ARG0 (s9b2 / Balladur
+                :refer-number singular)
+            :temporal (s9z1 / zatím)
+            :ARG1 (s9d1 / demise
+                :ARG1 (s9f1 / Franquet
+                    :mod (s9j1 / Jacques
+                        :refer-number singular)
+                    :mod (s9r1 / ředitel
+                        :mod (s9p1 / policejní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :ARG2 (s9b3 / být-007
+            :ARG1 (s9m1 / myslitelný
+                :extent (s9z2 / zcela)
+                :refer-number singular
+                :polarity -)
+            :ARG0 (s9p2 / podnikat-001
+                :ARG0 (s9t1 / ten
+                    :refer-number singular)
+                :ARG1 (s9n1 / něco
+                    :refer-number singular
+                    :refer-person 3rd)
+                :companion (s9v2 / vědomí
+                    :ARG0 (s9p3 / Pasqua
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect activity)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s9b1: 11-11
+s9v1: 2-2,4-4
+s9b2: 1-1
+s9z1: 3-3
+s9d1: 5-5
+s9f1: 9-9
+s9j1: 8-8
+s9r1: 7-7
+s9p1: 6-6
+s9b3: 12-12
+s9m1: 14-14
+s9z2: 13-13
+s9p2: 16-16,18-18,20-20
+s9t1: 17-17
+s9n1: 19-19
+s9v2: 21-21,23-23
+s9p3: 22-22
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9b2 :same-entity s8b3)
+            (s9p1 :same-entity s7p9)
+            (s9t1 :same-entity s9f1)
+            (s9p3 :same-entity s8p4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1       2  3               4   5        6      7  8   9  10 11 12 13       14         15 16    17    18     19        20        21 22   23    24    25        26     27
+Words: Situace je komplikovanější pro ministra vnitra i  tím ,  že ho s  Didierem Schullerem ,  který podle soudců odposlech požadoval ,  pojí velmi těsné přátelské svazky .
+
+# sentence level graph:
+(s10b1 / být-007
+        :ARG0 (s10s1 / situace
+            :refer-number singular)
+        :ARG1 (s10k1 / komplikovaný
+            :affectee (s10m1 / ministr
+                :possessor (s10v1 / vnitro
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s10i1 / i)
+            :cause (s10p1 / pojit-002
+                :effect (s10s2 / Schuller
+                    :mod (s10d1 / Didier
+                        :refer-number singular)
+                    :ARG0-of (s10p2 / požadovat-001
+                        :regard (s10s3 / soudce
+                            :refer-number plural)
+                        :ARG1 (s10o1 / odposlech
+                            :refer-number singular)
+                        :refer-number singular
+                        :aspect activity)
+                    :refer-number singular)
+                :ARG1 s10m1
+                :ARG0 (s10s4 / svazek
+                    :mod (s10p3 / přátelský
+                        :refer-number plural)
+                    :mod (s10t1 / těsný
+                        :extent (s10v2 / velmi)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s10b1: 2-2
+s10s1: 1-1
+s10k1: 3-3
+s10m1: 4-5,11-11
+s10v1: 6-6
+s10i1: 7-7
+s10p1: 8-8,10-10,22-22
+s10s2: 12-12,14-14,16-16
+s10d1: 13-13
+s10p2: 20-20
+s10s3: 17-18
+s10o1: 19-19
+s10s4: 26-26
+s10p3: 25-25
+s10t1: 24-24
+s10v2: 23-23
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10m1 :same-entity s9p3)
+            (s10s2 :same-entity s7s1)
+            (s10o1 :same-entity s7o1)))
+
+

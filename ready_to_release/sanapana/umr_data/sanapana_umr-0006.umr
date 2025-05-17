@@ -1,0 +1,3388 @@
+################################################################################
+# meta-info
+# :: snt1
+Index:               	1	2	3
+Words:               	la     costumbre     cultura
+Morphemes:           	la     costumbre     cultura
+Morpheme Gloss(Spanish):	la.SP  costumbre.SP  cultura.SP
+Morpheme Category:   	cs            cs          cs
+Words(English):      	la  costumbre.SP  cultura.SP
+Translation(Spanish):	Las costumbres, la cultura
+
+# sentence level graph:
+(s1a / and
+	:op1 (s1c / costumbre)
+	:op2 (s1c2 / cultura))
+
+# alignment:
+s1a: 0-0
+s1c: 2-2
+s1c2: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info
+# :: snt2
+Index:               	1	2
+Words:               	anyetnemke'   mokham
+Morphemes:           	an- yetn -em -ke'   mokham
+Morpheme Gloss(Spanish):	2/3F.I existir PST/HAB V1.NFUT  todavía
+Morpheme Category:   	v:Any v v:Any v:Any      prt
+Words(English):      	hay  todavía
+Translation(Spanish):	Todavía existen (algunos)
+
+# sentence level graph:
+(s2e / exist-91
+	:ARG0 (s2p / place)
+	:ARG1 (s2t / thing)
+	:mod (s2m / mokham)
+	:aspect state)
+
+# alignment:
+s2e: 0-0
+s2m: 2-2
+s2t: 0-0
+s2p: 0-0
+
+# document level annotation:
+(s2s0 / sentence
+	:temporal ((present-reference :overlap s2e))
+	:modal ((root :modal author)
+		(author :full-affirmative s2e))
+	:coref ((s2t :same-entity s1a)))
+
+
+################################################################################
+# meta-info
+# :: snt3
+Index:               	1
+Words:               	enyese'savonak
+Morphemes:           	en- yese'sek -ao- =nak
+Morpheme Gloss(Spanish):	1PL.POS medio PL =LOC
+Morpheme Category:   	sus:Any sus sus:Any sus:Any
+Words(English):      	en el medio de
+Translation(Spanish):	Entre nosotros
+
+# sentence level graph:
+(s3e / enyese'savonak
+	:op1 (s3p / person
+		:refer-person 1st
+		:refer-number plural))
+
+# alignment:
+s3e: 1-1
+s3p: 0-0
+
+# document level annotation:
+(s3s0 / sentence
+	:coref ((s2p :same-entity s3e)))
+
+
+################################################################################
+# meta-info
+# :: snt4
+Index:               	1	2	3	4
+Words:               	na           onyetkesek  ennengko'o    angkelvana
+Morphemes:           	na       on- yetkes -ek  ennengko'o  ang- kelvana
+Morpheme Gloss(Spanish):	emm  1PL.II comparar FUT     1PL:PRO  2/3F.I mujer
+Morpheme Category:   	interj        v:Any v v:Any         pro     v:Any sus
+Words(English):      	emm             comparar     nostros         mujer
+Translation(Spanish):	Ponemos por ejemplo una señora
+
+# sentence level graph:
+(s4h / have-example-91
+	:ARG0 (s4a / angkelvana
+		:refer-number singular)
+	:ARG1 (s4t / thing)
+	:causer (s4p / person
+		:refer-person 1st
+		:refer-number plural)
+	:aspect performance)
+
+# alignment:
+s4a: 4-4
+s4h: 0-0
+s4p: 0-0
+s4t: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+	:temporal ((future-reference :overlap s4h))
+	:modal ((root :modal author)
+		(author :full-affirmative s4h))
+	:coref ((s3p :subset-of s4p)
+		(s2t :subset-of s4t)))
+
+
+################################################################################
+# meta-info
+# :: snt5
+Index:               	1	2	3	4
+Words:               	angkelvana        kehlvala                        akteyayam                            ayka
+Morphemes:           	ang- kelvana      kehlva =la                  ak- tey -ay -am                          ay- ka
+Morpheme Gloss(Spanish):	2/3F.I mujer     recién =HYP  2/3F.III caer PST/HAB INF.APPRX  2/3F.III hijo/a (de una mujer)
+Morpheme Category:   	v:Any sus  <Not Sure> prt              v:Any v v:Any v:Any                       v:Any sus
+Words(English):      	mujer          recién                             caer                         su hijo
+Translation(Spanish):	Una señora, si recién ha dado a luz un bebé
+
+# sentence level graph:
+(s5a / angkelvana
+	:source-of (s5e / enteyayam-01
+		:actor (s5p / person
+			:ARG0-of (s5h / have-rel-role-91
+				:ARG1 s5a
+				:ARG2 (s5a2 / ayka))
+			:refer-number singular)
+		:temporal (s5k / kehlvala)
+		:aspect performance))
+
+# alignment:
+s5a: 0-0
+s5e: 3-3
+s5a2: 4-4
+s5p: 0-0
+s5h: 0-0
+s5k: 2-2
+
+# document level annotation:
+(s5s0 / sentence
+	:temporal ((past-reference :depends-on s5k)
+		(s5k :contained s5e))
+	:modal ((root :modal author)
+		(author :full-affirmative s5e))
+	:coref ((s4a :same-entity s5a)))
+
+
+################################################################################
+# meta-info
+# :: snt6
+Index:               	1	2	3
+Words:               	ayasemmahlkahlta            angkotahlnengvomok  yemmen
+Morphemes:           	ay- as -emm -ahlk -a =hlta    angko- tahln -engv -om -ok  yemmen
+Morpheme Gloss(Spanish):	2/3F.III prohibir PST/HAB PAS.F INF =PHOD  2/3F.II entrar LOC APPRX FUT    agua
+Morpheme Category:   	v:Any v v:Any v>v v:Any prt     v:Any v v:Any v:Any v:Any     sus
+Words(English):      	prohibir                        entrar    agua
+Translation(Spanish):	Se la prohibía entrar en el agua
+
+# sentence level graph:
+(s6e / enyasemmahlka'-00
+	:undergoer (s6p / person
+		:refer-person 3rd
+		:refer-number singular)
+	:theme (s6e2 / entahlnema-00
+		:actor s6p
+		:goal (s6o / or
+			:op1 (s6y / yemmen)
+			:op2 (s6t / thing))
+		:aspect performance)
+	:aspect state)
+
+# alignment:
+s6e: 0-0
+s6e2: 2-2
+s6o: 0-0
+s6p: 0-0
+s6t: 0-0
+s6y: 3-3
+
+# document level annotation:
+(s6s0 / sentence
+	:temporal ((s6e :after s6e2)
+		(s5e :after s6e))
+	:modal ((root :modal author)
+		(author :full-affirmative null-conceiver)
+		(null-conceiver :full-affirmative s6e)
+		(s6e :unspecified s6e2))
+	:coref ((s5a :same-entity s6p)))
+
+
+################################################################################
+# meta-info
+# :: snt7
+Index:               	1	2
+Words:               	o         sanga
+Morphemes:           	o         sanga
+Morpheme Gloss(Spanish):	o.SP        laguna
+Morpheme Category:   	cs           sus
+Words(English):      	o  en la laguna
+Translation(Spanish):	O en una laguna
+
+# sentence level graph:
+(s7s / sanga)
+
+# alignment:
+s7s: 2-2
+
+# document level annotation:
+(s7s0 / sentence
+	:coref ((s6t :same-entity s7s)))
+
+
+################################################################################
+# meta-info
+# :: snt8
+Index:               	1	2	3	4	5	6	7	8
+Words:               	ese     es     la     cultura     de     los     pueblo  sanapana
+Morphemes:           	ese     es     la     cultura     de     los     pueblo  sanapana
+Morpheme Gloss(Spanish):	esa.SP  es.SP  la.SP  cultura.SP  de.SP  los.SP  pueblo.SP  sanapaná
+Morpheme Category:   	cs     cs     cs          cs     cs      cs         cs       sus
+Words(English):      	esa  es.SP     la  cultura.SP     de     los  pueblo.SP  sanapaná
+Translation(Spanish):	Eso es la cultura del pueblo sanapaná
+
+# sentence level graph:
+(s8i2 / identity-91
+	:ARG0 (s8e / ese)
+	:ARG1 (s8c / cultura
+		:poss (s8e2 / ethnic-group
+			:name (s8n / name
+				:op1 "sanapana")
+			:wiki "Sanapaná"))
+	:temporal (s8t / time)
+	:aspect state)
+
+# alignment:
+s8c: 4-4
+s8e: 1-1
+s8e2: 8-8
+s8i2: 0-0
+s8n: 0-0
+s8t: 0-0
+
+# document level annotation:
+(s8s0 / sentence
+	:temporal ((s8t :overlap s8i2))
+	:modal ((root :modal author)
+		(author :full-affirmative s8i2))
+	:coref ((s6e :same-event s8e)))
+
+
+################################################################################
+# meta-info
+# :: snt9
+Index:               	1	2
+Words:               	vaya'moho              kehlvoyena
+Morphemes:           	v -ay -a'm -oho          kehlv -oye =na
+Morpheme Gloss(Spanish):	llegar PST/HAB APPRX SUBJ    enseguida INTNS =DEF
+Morpheme Category:   	v v:Any v:Any v:Any  <Not Sure> sus:Any prt
+Words(English):      	llegar                   ahora
+Translation(Spanish):	Hasta hoy en día
+
+# sentence level graph:
+(s9e / elvay'a-00
+	:goal (s9k / kehlvoyena))
+
+# alignment:
+s9e: 1-1
+s9k: 2-2
+
+# document level annotation:
+(s9s0 / sentence
+	:temporal ((document-creation-time :depends-on s9k))
+	:coref ((s8t :same-entity s9e)))
+
+
+################################################################################
+# meta-info
+# :: snt10
+Index:               	1	2	3
+Words:               	se     mantiene     todavía
+Morphemes:           	se     mantiene     todavía
+Morpheme Gloss(Spanish):	se.SP  mantiene.SP  todavía.SP
+Morpheme Category:   	cs           cs          cs
+Words(English):      	se.SP  mantiene.SP  todavía.SP
+Translation(Spanish):	Se mantiene todavía
+
+# sentence level graph:
+(s10m / mantener
+	:undergoer (s10t / thing)
+	:mod (s10t2 / todavía)
+	:aspect activity)
+
+# alignment:
+s10m: 2-2
+s10t: 0-0
+s10t2: 3-3
+
+# document level annotation:
+(s10s0 / sentence
+	:temporal ((present-reference :overlap s10m))
+	:modal ((root :modal author)
+		(author :full-affirmative s10m))
+	:coref ((s8c :same-event s10t)))
+
+
+################################################################################
+# meta-info
+# :: snt11
+Index:               	1	2	3	4	5
+Words:               	onyetkesek  ennengko'o            kehlvoye'                    a'teyayam                            ayka
+Morphemes:           	on- yetkes -ek  ennengko'o          kehlv -oye'              a'- tey -ay -am                          ay- ka
+Morpheme Gloss(Spanish):	1PL.II comparar FUT     1PL:PRO  enseguida INTNS.INF  2/3F.III caer PST/HAB APPRX  2/3F.III hijo/a (de una mujer)
+Morpheme Category:   	v:Any v v:Any         pro     <Not Sure> v:Any          v:Any v v:Any v:Any                       v:Any sus
+Words(English):      	comparar     nostros                ahora                         caer                         su hijo
+Translation(Spanish):	Por ejemplo alguién que recién ha dado a luz un bebé
+
+# sentence level graph:
+(s11h / have-example-91
+	:ARG0 (s11p2 / person
+		:source-of (s11e / enteyayam-00
+			:theme (s11p3 / person
+				:ARG0-of (s11h2 / have-rel-role-91
+					:ARG1 s11p2
+					:ARG2 (s11a / ayka))
+				:refer-number singular)
+			:aspect performance)
+		:refer-number singular)
+	:ARG1 (s11t / thing)
+	:causer (s11p / person
+		:refer-person 1st
+		:refer-number plural)
+	:temporal (s11k / kehlvoye')
+	:aspect performance)
+
+# alignment:
+s11h: 0-0
+s11p: 0-0
+s11p2: 0-0
+s11e: 4-4
+s11p3: 0-0
+s11h2: 0-0
+s11a: 5-5
+s11t: 0-0
+s11k: 3-3
+
+# document level annotation:
+(s11s0 / sentence
+	:temporal ((future-reference :depends-on s11k)
+		(s11k :overlap s11h)
+		(past-reference :contained s11e))
+	:modal ((root :modal author)
+		(author :full-affirmative s11e)
+		(author :full-affirmative s11h))
+	:coref ((s4p :same-entity s11p)
+		(s8c :subset-of s11t)))
+
+
+################################################################################
+# meta-info
+# :: snt12
+Index:               	1	2	3	4	5	6
+Words:               	ma'ala         angkonyakha'      nekha'  yemmen     o  payhavehla'
+Morphemes:           	ma'a =la   angko- ny -akh -a'      nekha'  yemmen     o  payhavehla'
+Morpheme Gloss(Spanish):	querer =HYP   2/3F.II ir REP FUT  al lado de    agua  o.SP    cualquier
+Morpheme Category:   	v prt  v:Any v v:Any v:Any         sus     sus    cs   <Not Sure>
+Words(English):      	si querían                   ir  al lado de    agua     o    cualquier
+Translation(Spanish):	Si se quiere ir al lado del agua, o cualquier cosa
+
+# sentence level graph:
+(s12e / event
+	:condition (s12m / may'a-00
+		:experiencer (s12p / person
+			:refer-person 3rd
+			:refer-number singular)
+		:stimulus (s12e2 / enyekakha'-00
+			:actor s12p
+			:goal (s12o / or
+				:op1 (s12n / nekha'
+					:op1 (s12y / yemmen))
+				:op2 (s12p2 / payhavehla'))
+			:aspect performance)
+		:aspect state))
+
+# alignment:
+s12e: 0-0
+s12m: 1-1
+s12p: 0-0
+s12e2: 2-2
+s12n: 3-3
+s12o: 0-0
+s12y: 4-4
+s12p2: 6-6
+
+# document level annotation:
+(s12s0 / sentence
+	:temporal ((s11e :after s12m)
+		(s12m :after s12e2))
+	:modal ((root :modal author)
+		(author :neutral-affirmative have-condition-91)
+		(have-condition-91 :full-affirmative s12e)
+		(have-condition-91 :full-affirmative s12p)
+		(s12p :full-affirmative s12m)
+		(s12m :unspecified s12e2))
+	:coref ((s11p2 :same-entity s12p)))
+
+
+################################################################################
+# meta-info
+# :: snt13
+Index:               	1
+Words:               	ayasemmahlka'
+Morphemes:           	ay- as -emm -ahlk -a'
+Morpheme Gloss(Spanish):	2/3F.III prohibir PST/HAB PAS.F INF
+Morpheme Category:   	v:Any v v:Any v>v v:Any
+Words(English):      	prohibir
+Translation(Spanish):	Se la prohibe
+
+# sentence level graph:
+(s13e / enyasemmahlka'-00
+	:undergoer (s13p / person
+		:refer-person 3rd
+		:refer-number singular)
+	:theme (s13e2 / event)
+	:condition (s13e3 / event)
+	:aspect state)
+
+# alignment:
+s13e: 0-0
+s13e2: 0-0
+s13e3: 0-0
+s13p: 0-0
+
+# document level annotation:
+(s13s0 / sentence
+	:temporal ((s12m :overlap s13e))
+	:modal ((root :modal author)
+		(author :neutral-affirmative have-condition-91)
+		(have-condition-91 :full-affirmative s13e3)
+		(have-condition-91 :full-affirmative null-conceiver)
+		(null-conceiver :full-affirmative s13e)
+		(s13e :unspecified s13e2))
+	:coref ((s12e :same-event s13e)
+		(s12p :same-entity s13p)
+		(s12e2 :same-event s13e2)
+		(s12m :same-event s13e3)))
+
+
+################################################################################
+# meta-info
+# :: snt14
+Index:               	1	2
+Words:               	no               mangkavanke'
+Morphemes:           	no         m- angk- avan -ke'
+Morpheme Gloss(Spanish):	no.SP  NEG 2/3F.II poder V1.NFUT
+Morpheme Category:   	cs        v:Any v:Any v v:Any
+Words(English):      	no                      poder
+Translation(Spanish):	No, no puede
+
+# sentence level graph:
+(s14e / emmovana-00
+	:experiencer (s14p / person
+		:refer-person 3rd
+		:refer-number singular)
+	:stimulus (s14e2 / event)
+	:aspect state)
+
+# alignment:
+s14e: 0-0
+s14p: 0-0
+s14e2: 0-0
+
+# document level annotation:
+(s14s0 / sentence
+	:temporal ((s12m :overlap s14e)
+		(s14e :after s14e2))
+	:modal ((root :modal author)
+		(s14p :full-affirmative s14e)
+		(s14e :unspecified s14e2)
+		(author :full-negative s14p))
+	:coref ((s13p :same-entity s14p)
+		(s13e2 :same-event s14e2)))
+
+
+################################################################################
+# meta-info
+# :: snt15
+Index:               	1	2	3
+Words:               	mangkavankenhan           angkotok             yavhan
+Morphemes:           	m- angk- avan -ke' =nhan       angko- t -ok             yavhan
+Morpheme Gloss(Spanish):	NEG 2/3F.II poder V1.NFUT =y  2/3F.II comer FUT  miel del "yavhan"
+Morpheme Category:   	v:Any v:Any v v:Any prt      v:Any v v:Any                sus
+Words(English):      	poder              comer               miel
+Translation(Spanish):	Tampoco puede comer miel
+
+# sentence level graph:
+(s15a / and
+	:op1 (s15e / event)
+	:op2 (s15e2 / emmovana-00
+		:experiencer (s15p / person
+			:refer-person 3rd
+			:refer-number singular)
+		:stimulus (s15e3 / entoma-00
+			:actor s15p
+			:undergoer (s15y / yavhan)
+			:aspect performance)
+		:aspect state
+		:temporal (s15t / time)))
+
+# alignment:
+s15a: 0-0
+s15e: 0-0
+s15e2: 0-0
+s15e3: 2-2
+s15p: 0-0
+s15y: 3-3
+s15t: 0-0
+
+# document level annotation:
+(s15s0 / sentence
+	:temporal ((s11e :after s15e2)
+		(s15e2 :after s15e3)
+		(s15t :overlap s15e2))
+	:modal ((root :modal author)
+		(s15p :full-affirmative s15e2)
+		(s15e2 :unspecified s15e3)
+		(author :full-negative s15p))
+	:coref ((s14e :same-event s15e)
+		(s14p :same-entity s15p)))
+
+
+################################################################################
+# meta-info
+# :: snt16
+Index:               	1	2
+Words:               	akvaya'moho              kehlvoyena
+Morphemes:           	ak- v -ay -a'm -oho          kehlv -oye =na
+Morpheme Gloss(Spanish):	2/3F.III llegar PST/HAB APPRX SUBJ    enseguida INTNS =DEF
+Morpheme Category:   	v:Any v v:Any v:Any v:Any  <Not Sure> sus:Any prt
+Words(English):      	llegar                   ahora
+Translation(Spanish):	Hasta ahora
+
+# sentence level graph:
+(s16e / elvay'a-00
+	:goal (s16k / kehlvoyena))
+
+# alignment:
+s16e: 1-1
+s16k: 2-2
+
+# document level annotation:
+(s16s0 / sentence
+	:coref ((s15t :same-entity s16e)))
+
+
+################################################################################
+# meta-info
+# :: snt17
+Index:               	1
+Words:               	tenyo
+Morphemes:           	tenyo
+Morpheme Gloss(Spanish):	entonces
+Morpheme Category:   	prt
+Words(English):      	entonces
+Translation(Spanish):	Entonces...
+
+# sentence level graph:
+(s17t / tenyo)
+
+# alignment:
+s17t: 1-1
+
+# document level annotation:
+(s17s0 / sentence)
+
+
+################################################################################
+# meta-info
+# :: snt18
+Index:               	1	2	3	4	5	6	7	8	9	10	11	12	13
+Words:               	taye'             aktoho     qué     va     a     pasar     si         una      persona     no     sigue     esa     regla
+Morphemes:           	taye'         ak- t -oho     qué     va     a     pasar     si         una      persona     no     sigue     esa     regla
+Morpheme Gloss(Spanish):	INTER  2/3F.III ser SUBJ  qué.SP  va.SP  a.SP  pasar.SP  si.SP      una.SP   persona.SP  no.SP  sigue.SP  esa.SP  regla.SP
+Morpheme Category:   	pro      v:Any v v:Any      cs     cs    cs        cs     cs  <Not Sure>           cs     cs        cs      cs        cs
+Words(English):      	qué?                ser  qué.SP  va.SP     a  pasar.SP  si.SP      una.SP  personas.SP     no  sigue.SP  esa.SP  regla.SP
+Translation(Spanish):	Por qué... qué va a pasar si una persona no sigue esa regla?
+
+# sentence level graph:
+(s18p / pasar
+	:actor (s18u / umr-unknown)
+	:condition (s18s / seguir
+		:actor (s18p2 / person
+			:refer-number singular)
+		:undergoer (s18r / regla
+			:mod (s18e / esa))
+		:aspect activity)
+	:aspect performance
+	:mode interrogative)
+
+# alignment:
+s18p: 6-6
+s18u: 0-0
+s18s: 11-11
+s18p2: 0-0
+s18r: 13-13
+s18e: 12-12
+
+# document level annotation:
+(s18s0 / sentence
+	:temporal ((future-reference :overlap s18p)
+		(s18p :before s18s))
+	:modal ((root :modal author2)
+		(author2 :neutral-affirmative have-condition-91)
+		(have-condition-91 :full-affirmative s18p)
+		(have-condition-91 :full-negative s18s))
+	:coref ((s15e2 :same-event s18r)))
+
+
+################################################################################
+# meta-info
+# :: snt19
+Index:               	1
+Words:               	na
+Morphemes:           	na
+Morpheme Gloss(Spanish):	emm
+Morpheme Category:   	interj
+Words(English):      	emm
+Translation(Spanish):	Emm
+
+# sentence level graph:
+(s19n / na)
+
+# alignment:
+s19n: 1-1
+
+# document level annotation:
+(s19s0 / sentence)
+
+
+################################################################################
+# meta-info
+# :: snt20
+Index:               	1	2	3	4	5	6
+Words:               	tola                     mangkomay'a      le'lavkesek                 temakhana   ennengko'o                       eleyvoma
+Morphemes:           	t -o =la             m- angko- ma -y' -a  le'lav -kes -ek           t -em -akha =na   ennengko'o                 el- eyv -om -a
+Morpheme Gloss(Spanish):	ser SUBJ =HYP  NEG 2/3F.II querer PST/HAB INF  seguir CAUS FUT  ser PST/HAB NOM.LOC =DEF      1PL:PRO  1PL.I vivir (pl.) PST/HAB INF
+Morpheme Category:   	v v:Any prt       v:Any v:Any v v:Any v:Any      v v>v v:Any         v v:Any v:Any prt          pro            v:Any v v:Any v:Any
+Words(English):      	si es que                          querer           seguir                   nostros  vivir (pl.)                           None
+Translation(Spanish):	Si alguién no quiere seguir a nuestra cultura
+
+# sentence level graph:
+(s20e / event
+	:condition (s20m / may'a-00
+		:experiencer (s20p / person
+			:refer-person 3rd
+			:refer-number singular)
+		:stimulus (s20e2 / elle'lavkeskama-00
+			:actor s20p
+			:undergoer (s20t / thing
+				:manner-of (s20e3 / eleyvoma-00
+					:actor (s20p2 / person
+						:refer-person 1st
+						:refer-number plural)
+					:aspect activity))
+			:aspect activity)
+		:aspect state))
+
+# alignment:
+s20e: 0-0
+s20e2: 3-3
+s20m: 0-0
+s20p: 0-0
+s20t: 0-0
+s20e3: 6-6
+s20p2: 0-0
+
+# document level annotation:
+(s20s0 / sentence
+	:temporal ((present-reference :overlap s20m)
+		(s20m :after s20e2)
+		(present-reference :overlap s20e3)
+		(s20e2 :after s20e))
+	:modal ((root :modal author)
+		(author :neutral-affirmative have-condition-91)
+		(have-condition-91 :full-affirmative s20e)
+		(have-condition-91 :full-negative s20p)
+		(s20p :full-affirmative s20m)
+		(s20m :unspecified s20e2)
+		(author :full-affirmative s20e3))
+	:coref ((s3p :same-entity s20p2)
+		(s10t :same-entity s20t)
+		(s18u :same-event s20e)))
+
+
+################################################################################
+# meta-info
+# :: snt21
+Index:               	1	2
+Words:               	kopehlkaye'      na
+Morphemes:           	kopehlkaye'      na
+Morpheme Gloss(Spanish):	posiblemente     emm
+Morpheme Category:   	<Not Sure>  interj
+Words(English):      	posiblemente     emm
+Translation(Spanish):	Posiblemente...
+
+# sentence level graph:
+(s21k / kopehlkaye')
+
+# alignment:
+s21k: 1-1
+
+# document level annotation:
+(s21s0 / sentence)
+
+
+################################################################################
+# meta-info
+# :: snt22
+Index:               	1	2	3
+Words:               	ompahlkangvomok       mo'ona     cultura
+Morphemes:           	om- pahlk -angv -om -ok     mo'o =na     cultura
+Morpheme Gloss(Spanish):	1PL.II mezclarse LOC APPRX FUT  otro.f =DEF  cultura.SP
+Morpheme Category:   	v:Any v v:Any v:Any v:Any      pro prt          cs
+Words(English):      	mezclarse   cultura.SP        None
+Translation(Spanish):	Vamos a entremeternos en otra cultura
+
+# sentence level graph:
+(s22e / empahlkay'a-00
+	:actor (s22p / person
+		:refer-person 1st
+		:refer-number plural)
+	:theme (s22c / cultura
+		:mod (s22m / mo'ona))
+	:goal (s22t / thing)
+	:condition (s22e2 / event)
+	:aspect performance)
+
+# alignment:
+s22c: 3-3
+s22e: 1-1
+s22e2: 0-0
+s22m: 2-2
+s22p: 0-0
+s22t: 0-0
+
+# document level annotation:
+(s22s0 / sentence
+	:modal ((root :modal author)
+		(author :neutral-affirmative have-condition-91)
+		(have-condition-91 :partial-affirmative s22e))
+	:coref ((s20e :same-event s22e)
+		(s20p2 :same-entity s22p)
+		(s20t :same-entity s22t)
+		(s20m :same-event s22e2)))
+
+
+################################################################################
+# meta-info
+# :: snt23
+Index:               	1	2	3
+Words:               	na                 askehltennasohlkek      na
+Morphemes:           	na=       ask- ehl- tenn -as -o =hlkek      na
+Morpheme Gloss(Spanish):	DEF=  1SG.I DISTR hablar APPL SUBJ =HOD     emm
+Morpheme Category:   	prt        v:Any v:Any v v>v v:Any prt  interj
+Words(English):      	emm                                emm    None
+Translation(Spanish):	Como te dije...
+
+# sentence level graph:
+(s23t / thing
+	:theme-of (s23e / ehltennaskama-00
+		:actor (s23p / person
+			:refer-person 1st
+			:refer-number singular)
+		:recipient (s23p2 / person)
+		:aspect performance)
+	:quote s23e)
+
+# alignment:
+s23e: 0-0
+s23p: 0-0
+s23p2: 0-0
+s23t: 0-0
+
+# document level annotation:
+(s23s0 / sentence
+	:temporal ((past-reference :contained s23e))
+	:modal ((root :modal author)
+		(author :full-affirmative s23e)
+		(author :full-affirmative s23p)
+		(s23p :full-affirmative s24p)
+		(s24p :full-affirmative s23t))
+	:coref ((s11p :subset-of s23p)
+		(s11p :subset-of s23p2)))
+
+
+################################################################################
+# meta-info
+# :: snt24
+Index:               	1	2	3	4
+Words:               	kaymahlke'              onyenna'te'sek  ennengko'o    hengka
+Morphemes:           	k- aym -ahlk -e'        on- yenna't -e's -ek  ennengko'o    hengka
+Morpheme Gloss(Spanish):	2/3F.I dejar de sobra PAS.F V1.NFUT  1PL.II ser fuerte CAUS FUT     1PL:PRO  DEM.PROX
+Morpheme Category:   	v:Any v v>v v:Any           v:Any v v>v v:Any         pro       adv
+Words(English):      	dejar de sobra                  ser fuerte     nostros       acá
+Translation(Spanish):	Tenemos que fortalecer esto
+
+# sentence level graph:
+(s24a / ayaymommahlka'-00
+	:experiencer (s24p / person
+		:refer-person 1st
+		:refer-number plural)
+	:stimulus (s24e / enyenna'teskama-00
+		:causer s24p
+		:undergoer (s24h / hengka)
+		:aspect activity)
+	:aspect state)
+
+# alignment:
+s24a: 0-0
+s24p: 0-0
+s24e: 2-2
+s24h: 4-4
+
+# document level annotation:
+(s24s0 / sentence
+	:temporal ((present-reference :overlap s24a)
+		(s24a :after s24e))
+	:modal ((root :modal author)
+		(s24p :full-affirmative s24a)
+		(s24a :unspecified s24e))
+	:coref ((s23t :same-event s24a)
+		(s22p :same-entity s24p)
+		(s22t :same-entity s24h)))
+
+
+################################################################################
+# meta-info
+# :: snt25
+Index:               	1	2	3	4	5	6
+Words:               	lo     pueblo  sanapana            hay     que     mantener
+Morphemes:           	lo     pueblo  sanapana            hay     que     mantener
+Morpheme Gloss(Spanish):	el.SP  pueblo.SP  sanapaná            hay  que.SP  mantener.SP
+Morpheme Category:   	cs         cs       sus             cs      cs           cs
+Words(English):      	los.SP  pueblo.SP  sanapaná  sí, está bien  que.SP  mantener.SP
+Translation(Spanish):	El pueblo sanapaná tiene que mantener
+
+# sentence level graph:
+(s25h / hay-que
+	:experiencer (s25e / ethnic-group
+		:name (s25n / name
+			:op1 "sanapana")
+		:wiki "Sanapaná")
+	:stimulus (s25m / mantener
+		:actor s25e
+		:undergoer (s25t / thing)
+		:aspect activity)
+	:aspect state)
+
+# alignment:
+s25h: 0-0
+s25e: 0-0
+s25n: 0-0
+s25m: 6-6
+s25t: 0-0
+
+# document level annotation:
+(s25s0 / sentence
+	:temporal ((present-reference :overlap s25h)
+		(s25h :after s25m))
+	:modal ((root :modal author)
+		(s25e :full-affirmative s25h)
+		(s25h :unspecified s25m)
+		(author :full-affirmative s25e))
+	:coref ((s8e2 :same-entity s25e)
+		(s24h :same-entity s25t)))
+
+
+################################################################################
+# meta-info
+# :: snt26
+Index:               	1
+Words:               	yenna'te'sek
+Morphemes:           	yenna't -e's -ek
+Morpheme Gloss(Spanish):	ser fuerte CAUS FUT
+Morpheme Category:   	v v>v v:Any
+Words(English):      	ser fuerte
+Translation(Spanish):	Fortalecer
+
+# sentence level graph:
+(s26e / enyenna'teskama-00
+	:causer (s26p / person)
+	:undergoer (s26t / thing)
+	:aspect activity)
+
+# alignment:
+s26e: 1-1
+s26p: 0-0
+s26t: 0-0
+
+# document level annotation:
+(s26s0 / sentence
+	:coref ((s24e :same-event s26e)
+		(s25e :same-entity s26p)
+		(s25t :same-entity s26t)))
+
+
+################################################################################
+# meta-info
+# :: snt27
+Index:               	1	2	3
+Words:               	anyetneye'     mo'ok    anya'a
+Morphemes:           	an- yetn -eye'     mo'ok    anya'a
+Morpheme Gloss(Spanish):	2/3F.I existir V1.NFUT    otro.f  historia
+Morpheme Category:   	v:Any v v:Any       pro       sus
+Words(English):      	otra  historia      None
+Translation(Spanish):	Hay otra historia?
+
+# sentence level graph:
+(s27e / exist-91
+	:ARG1 (s27a / anya'a
+		:mod (s27m / mo'ok))
+	:aspect state)
+
+# alignment:
+s27e: 0-0
+s27a: 3-3
+s27m: 2-2
+
+# document level annotation:
+(s27s0 / sentence
+	:temporal ((present-reference :overlap s27e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s27e)))
+
+
+################################################################################
+# meta-info
+# :: snt28
+Index:               	1	2
+Words:               	asneyay'ahlta      kayvak
+Morphemes:           	as- ney -ay' -a =hlta      kayvak
+Morpheme Gloss(Spanish):	1SG.I oír PST/HAB INF =PHOD  yo también
+Morpheme Category:   	v:Any v v:Any v:Any prt         pro
+Words(English):      	yo también        None
+Translation(Spanish):	Yo también escuché que...
+
+# sentence level graph:
+(s28e / enneyay'a-00
+	:experiencer (s28p / person
+		:refer-person 1st
+		:refer-number singular)
+	:stimulus (s28e2 / event)
+	:aspect state)
+
+# alignment:
+s28e: 0-0
+s28p: 0-0
+
+# document level annotation:
+(s28s0 / sentence
+	:temporal ((past-reference :contained s28e))
+	:modal ((root :modal author3)
+		(s28p :full-affirmative s28e)
+		(s28e :unspecified s28e2)
+		(author3 :full-affirmative s28p))
+	:coref ((s11p :subset-of s28p)))
+
+
+################################################################################
+# meta-info
+# :: snt29
+Index:               	1	2
+Words:               	kehlvoyena               yamakehlvoye'
+Morphemes:           	kehlv -oye =na           yama- kehlv -oye'
+Morpheme Gloss(Spanish):	recién INTNS =DEF            SIM recién INTNS
+Morpheme Category:   	<Not Sure> sus:Any prt  sus>sus <Not Sure> sus:Any
+Words(English):      	ahora                      recién
+Translation(Spanish):	Recién, bastante recién
+
+# sentence level graph:
+(s29e / event
+	:temporal (s29o / or
+		:op1 (s29k / kehlvoyena)
+		:op2 (s29y / yamakehlvoye')))
+
+# alignment:
+s29e: 0-0
+s29o: 0-0
+s29k: 1-1
+s29y: 2-2
+
+# document level annotation:
+(s29s0 / sentence
+	:temporal ((s29o :contained s29e)
+		(past-reference :depends-on s29k)
+		(past-reference :depends-on s29y))
+	:coref ((s28e2 :same-event s29e)))
+
+
+################################################################################
+# meta-info
+# :: snt30
+Index:               	1	2	3
+Words:               	ehltennasekamahlta        tatahlta       memehltanhan
+Morphemes:           	e- hl- tenn -as -ek -am -a =hlta      tata =hlta   meme =hlta =nhan
+Morpheme Gloss(Spanish):	1SG.III DISTR hablar APPL PST/HAB AMBL INF =PHOD  mi padre =PHOD  mi madre =PHOD =y
+Morpheme Category:   	v:Any v:Any v v>v v:Any v:Any v:Any prt         sus prt        sus prt prt
+Words(English):      	hablar            None               None
+Translation(Spanish):	Me contaban mi papá, y mi mamá
+
+# sentence level graph:
+(s30e / ehltennaskama-00
+	:actor (s30a / and
+		:op1 (s30p / person
+			:ARG0-of (s30h / have-rel-role-91
+				:ARG1 (s30p2 / person
+					:refer-person 1st
+					:refer-number singular)
+				:ARG2 (s30t / tatahlta))
+			:refer-number singular)
+		:op2 (s30p3 / person
+			:ARG0-of (s30h2 / have-rel-role-91
+				:ARG1 s30p2
+				:ARG2 (s30m / memehltanhan))
+			:refer-number singular))
+	:recipient s30p2
+	:theme (s30e2 / event
+		:quote s30e)
+	:aspect habitual)
+
+# alignment:
+s30a: 0-0
+s30e: 0-0
+s30e2: 0-0
+s30h: 0-0
+s30h2: 0-0
+s30m: 3-3
+s30p: 0-0
+s30p2: 0-0
+s30p3: 0-0
+s30t: 2-2
+
+# document level annotation:
+(s30s0 / sentence
+	:temporal ((past-reference :contained s30e)
+		(s30e :before s30e2))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s30e)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s30e2))
+	:coref ((s28p :same-entity s30p2)
+		(s29e :same-event s30e2)
+		(s25e :subset-of s30p)
+		(s25e :subset-of s30p3)))
+
+
+################################################################################
+# meta-info
+# :: snt31
+Index:               	1	2
+Words:               	kaha'              aphlenonak
+Morphemes:           	ka- ha'        ap- hlen -o =nak
+Morpheme Gloss(Spanish):	REF DEM.DIST  2/3M.I decir SUBJ =DEF
+Morpheme Category:   	Pro-form pro       v:Any v v:Any prt
+Words(English):      	allá       de lo que dijiste
+Translation(Spanish):	Lo que él comentó
+
+# sentence level graph:
+(s31e / event
+	:theme-of (s31e2 / enhleanma-00
+		:actor (s31p / person
+			:refer-person 2nd
+			:refer-number singular)
+		:aspect performance)
+	:place (s31k / kaha')
+	:quote s31e2)
+
+# alignment:
+s31e: 0-0
+s31e2: 0-0
+s31p: 0-0
+s31k: 1-1
+
+# document level annotation:
+(s31s0 / sentence
+	:temporal ((s31e :after s31e2)
+		(past-reference :contained s31e2))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s31e2)
+		(author3 :full-affirmative s31p)
+		(s31p :full-affirmative s31e))
+	:coref ((s30e2 :same-event s31e)
+		(s23p2 :same-entity s31p)))
+
+
+################################################################################
+# meta-info
+# :: snt32
+Index:               	1	2
+Words:               	aktemana               angkelvanatkok
+Morphemes:           	ak- t -em -a =na           ang- kelvana =tkok
+Morpheme Gloss(Spanish):	2/3F.III ser PST/HAB INF =DEF  2/3F.I mujer =pequeño, -ito
+Morpheme Category:   	v:Any v v:Any v:Any prt                v:Any sus prt
+Words(English):      	tipo                        chica
+Translation(Spanish):	Sobre una chica
+
+# sentence level graph:
+(s32e / event
+	:topic (s32a / angkelvanatkok
+		:mod (s32t / tkok)
+		:refer-number singular))
+
+# alignment:
+s32e: 0-0
+s32a: 2-2
+s32t: 2-2
+
+# document level annotation:
+(s32s0 / sentence
+	:coref ((s31e :same-event s32e)
+		(s25e :subset-of s32a)))
+
+
+################################################################################
+# meta-info
+# :: snt33
+Index:               	1	2
+Words:               	angkelvanatkok                     mangkotoma
+Morphemes:           	ang- kelvana =tkok             m- angko- t -om -a
+Morpheme Gloss(Spanish):	2/3F.I mujer =pequeño, -ito  NEG 2/3F.II comer PST/HAB INF
+Morpheme Category:   	v:Any sus prt      v:Any v:Any v v:Any v:Any
+Words(English):      	chica                          comer
+Translation(Spanish):	Una chica que no puede comer
+
+# sentence level graph:
+(s33a / angkelvanatkok
+	:mod (s33t / tkok)
+	:refer-number singular
+	:actor-of (s33e / entoma-00
+		:aspect activity))
+
+# alignment:
+s33a: 1-1
+s33t: 1-1
+s33e: 2-2
+
+# document level annotation:
+(s33s0 / sentence
+	:temporal ((s32e :overlap s33e))
+	:modal ((root :modal author3)
+		(author3 :full-negative s33e))
+	:coref ((s32a :same-entity s33a)))
+
+
+################################################################################
+# meta-info
+# :: snt34
+Index:               	1	2	3
+Words:               	vos     entendís     eso
+Morphemes:           	vos     entendís     eso
+Morpheme Gloss(Spanish):	vos.SP  entendís.SP  eso.SP
+Morpheme Category:   	cs           cs      cs
+Words(English):      	vos.SP  entendís.SP  esa.SP
+Translation(Spanish):	Vos entendís eso?
+
+# sentence level graph:
+(s34e / entender
+	:experiencer (s34p / person
+		:refer-person 2nd
+		:refer-number singular)
+	:stimulus (s34e2 / eso)
+	:aspect state
+	:mode interrogative
+	:polarity umr-unknown)
+
+# alignment:
+s34e: 2-2
+s34p: 0-0
+s34e2: 3-3
+
+# document level annotation:
+(s34s0 / sentence
+	:temporal ((present-reference :overlap s34e))
+	:modal ((root :modal author3)
+		(author3 :neutral-affirmative s34e))
+	:coref ((s31p :same-entity s34p)
+		(s33a :same-entity s34e2)))
+
+
+################################################################################
+# meta-info
+# :: snt35
+Index:               	1	2
+Words:               	angkelvanatkok                     mangkotoma
+Morphemes:           	ang- kelvana =tkok             m- angko- t -om -a
+Morpheme Gloss(Spanish):	2/3F.I mujer =pequeño, -ito  NEG 2/3F.II comer PST/HAB INF
+Morpheme Category:   	v:Any sus prt      v:Any v:Any v v:Any v:Any
+Words(English):      	chica                          comer
+Translation(Spanish):	Una chica que tiene su menstruación
+
+# sentence level graph:
+(s35a / angkelvanatkok
+	:mod (s35t / tkok)
+	:refer-number singular
+	:actor-of (s35e / entoma-00
+		:aspect activity))
+
+# alignment:
+s35a: 1-1
+s35t: 1-1
+s35e: 2-2
+
+# document level annotation:
+(s35s0 / sentence
+	:modal ((root :modal author3)
+		(author3 :full-negative s35e))
+	:coref ((s34e2 :same-entity s35a)
+		(s33e :same-event s35e)))
+
+
+################################################################################
+# meta-info
+# :: snt36
+Index:               	1	2	3
+Words:               	entendías     eso      he
+Morphemes:           	entendías     eso      he
+Morpheme Gloss(Spanish):	entendías.SP  eso.SP      sí
+Morpheme Category:   	cs      cs  interj
+Words(English):      	entendías.SP  esa.SP      sí
+Translation(Spanish):	Entendías eso, verdad?
+
+# sentence level graph:
+(s36e / entender
+	:experiencer (s36p / person
+		:refer-person 2nd
+		:refer-number singular)
+	:stimulus (s36e2 / eso)
+	:aspect state
+	:mode interrogative
+	:polarity umr-unknown)
+
+# alignment:
+s36e: 1-1
+s36p: 0-0
+s36e2: 2-2
+
+# document level annotation:
+(s36s0 / sentence
+	:modal ((root :modal author3)
+		(author3 :neutral-affirmative s36e))
+	:coref ((s34e :same-event s36e)
+		(s34p :same-entity s36p)
+		(s35a :same-entity s36e2)))
+
+
+################################################################################
+# meta-info
+# :: snt37
+Index:               	1	2
+Words:               	este     cuando
+Morphemes:           	este     cuando
+Morpheme Gloss(Spanish):	este.SP  cuando.SP
+Morpheme Category:   	cs         cs
+Words(English):      	este.SP  cuando.SP
+Translation(Spanish):	Este cuando...
+
+# sentence level graph:
+(s37e / este
+	:temporal (s37t / time))
+
+# alignment:
+s37e: 1-1
+s37t: 0-0
+
+# document level annotation:
+(s37s0 / sentence
+	:temporal ((s37t :overlap s37e))
+	:coref ((s32e :same-event s37e)))
+
+
+################################################################################
+# meta-info
+# :: snt38
+Index:               	1	2
+Words:               	ese     era
+Morphemes:           	ese     era
+Morpheme Gloss(Spanish):	esa.SP  era.SP
+Morpheme Category:   	cs      cs
+Words(English):      	esa  era.SP
+Translation(Spanish):	Eso era...
+
+# sentence level graph:
+(s38e / ese)
+
+# alignment:
+s38e: 1-1
+
+# document level annotation:
+(s38s0 / sentence
+	:coref ((s37e :same-event s38e)))
+
+
+################################################################################
+# meta-info
+# :: snt39
+Index:               	1	2	3	4
+Words:               	tienen     reglamento     la     cultura
+Morphemes:           	tienen     reglamento     la     cultura
+Morpheme Gloss(Spanish):	tienen.SP  reglamento.SP  la.SP  cultura.SP
+Morpheme Category:   	cs             cs     cs          cs
+Words(English):      	tienen.SP  reglamento.SP     la  cultura.SP
+Translation(Spanish):	Tienen reglamento, en la cultura
+
+# sentence level graph:
+(s39h / have-91
+	:ARG0 (s39c / cultura)
+	:ARG1 (s39r / reglamento)
+	:aspect state)
+
+# alignment:
+s39h: 0-0
+s39c: 4-4
+s39r: 2-2
+
+# document level annotation:
+(s39s0 / sentence
+	:temporal ((present-reference :overlap s39h))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s39h))
+	:coref ((s26t :same-entity s39c)))
+
+
+################################################################################
+# meta-info
+# :: snt40
+Index:               	1	2
+Words:               	cuando     la
+Morphemes:           	cuando     la
+Morpheme Gloss(Spanish):	cuando.SP  la.SP
+Morpheme Category:   	cs     cs
+Words(English):      	cuando.SP     la
+Translation(Spanish):	Cuando la...
+
+# sentence level graph:
+(s40e / event
+	:temporal (s40t / time))
+
+# alignment:
+s40e: 0-0
+s40t: 0-0
+
+# document level annotation:
+(s40s0 / sentence
+	:coref ((s38e :same-event s40e)
+		(s37t :same-entity s40t)))
+
+
+################################################################################
+# meta-info
+# :: snt41
+Index:               	1	2	3	4	5
+Words:               	allá     dice     que     pasó     algo
+Morphemes:           	allá     dice     que     pasó     algo
+Morpheme Gloss(Spanish):	allá.SP  dice.SP  que.SP  pasó.SP  algo.SP
+Morpheme Category:   	cs       cs      cs       cs       cs
+Words(English):      	allá.SP  dice.SP  que.SP  pasó.SP  algo.SP
+Translation(Spanish):	Allá dicen que pasó algo
+
+# sentence level graph:
+(s41d / decir
+	:actor (s41p / person)
+	:theme (s41p2 / pasar
+		:actor (s41a / algo
+			:quote s41d)
+		:aspect performance
+		:quote s41d
+		:place (s41a2 / allá))
+	:aspect habitual)
+
+# alignment:
+s41d: 0-0
+s41p: 0-0
+s41p2: 4-4
+s41a: 5-5
+s41a2: 1-1
+
+# document level annotation:
+(s41s0 / sentence
+	:temporal ((present-reference :overlap s41d))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s41d)
+		(author3 :full-affirmative null-conceiver)
+		(null-conceiver :full-affirmative s41a)
+		(null-conceiver :full-affirmative s41p2))
+	:coref ((s40e :same-event s41a)
+		(s31k :same-entity s41a2)))
+
+
+################################################################################
+# meta-info
+# :: snt42
+Index:               	1	2	3	4	5	6
+Words:               	esa     parte     donde     vivían     la     gente
+Morphemes:           	esa     parte     donde     vivían     la     gente
+Morpheme Gloss(Spanish):	esa.SP  parte.SP  donde.SP  vivían.SP  la.SP  gente.SP
+Morpheme Category:   	cs        cs        cs         cs     cs        cs
+Words(English):      	esa.SP  parte.SP  donde.SP     vivían     la     gente
+Translation(Spanish):	En esa parte donde vivía la gente
+
+# sentence level graph:
+(s42p / parte
+	:mod (s42e / esa)
+	:place-of (s42v / vivir
+		:actor (s42g / gente
+			:refer-number plural)
+		:aspect activity))
+
+# alignment:
+s42p: 2-2
+s42e: 1-1
+s42v: 4-4
+s42g: 6-6
+
+# document level annotation:
+(s42s0 / sentence
+	:temporal ((s41a :overlap s42v))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s42v))
+	:coref ((s41a2 :same-entity s42p)
+		(s25e :subset-of s42g)))
+
+
+################################################################################
+# meta-info
+# :: snt43
+Index:               	1	2	3	4	5
+Words:               	y     salieron     en     un     lugar
+Morphemes:           	y     salieron     en     un     lugar
+Morpheme Gloss(Spanish):	y.SP  salieron.SP  en.SP  un.SP  lugar.SP
+Morpheme Category:   	cs           cs     cs     cs        cs
+Words(English):      	y  salieron.SP  en.SP  un.SP  lugar.SP
+Translation(Spanish):	Y salieron en un lugar
+
+# sentence level graph:
+(s43s / salir
+	:actor (s43p / person
+		:refer-person 3rd
+		:refer-number plural)
+	:goal (s43l / lugar)
+	:quote (s43e / event))
+
+# alignment:
+s43s: 2-2
+s43p: 0-0
+s43l: 5-5
+s43e: 0-0
+
+# document level annotation:
+(s43s0 / sentence
+	:temporal ((s41a :contained s43s))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s43e)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s43s))
+	:coref ((s42g :subset-of s43p)
+		(s30e :same-event s43e)))
+
+
+################################################################################
+# meta-info
+# :: snt44
+Index:               	1
+Words:               	angkenmeyakheyehlta
+Morphemes:           	angk- en- mey -akh -eye =hlta
+Morpheme Gloss(Spanish):	2/3F.I DISTR ir REP V1.NFUT =PHOD
+Morpheme Category:   	v:Any v:Any v v:Any v:Any prt
+Words(English):      	None
+Translation(Spanish):	Se fueron
+
+# sentence level graph:
+(s44e / enmeyekakha'-00
+	:actor (s44p / person
+		:refer-person 3rd
+		:refer-number plural)
+	:aspect performance
+	:quote (s44e2 / event))
+
+# alignment:
+s44e: 1-1
+s44p: 0-0
+s44e2: 0-0
+
+# document level annotation:
+(s44s0 / sentence
+	:temporal ((s43s :overlap s44e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s44e2)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s44e))
+	:coref ((s43p :same-entity s44p)
+		(s43e :same-event s44e2)))
+
+
+################################################################################
+# meta-info
+# :: snt45
+Index:               	1	2	3	4	5
+Words:               	may'a           angkohltehek    mayka'a    mo'o  nekha'
+Morphemes:           	ma -y' -a     angko- hl- t -ehek    mayka'a    mo'o  nekha'
+Morpheme Gloss(Spanish):	querer PST/HAB INF  2/3F.II DISTR ser FUT  visitante  otro.f    lado
+Morpheme Category:   	v v:Any v:Any    v:Any v:Any v v:Any        sus     pro     sus
+Words(English):      	querían              visitante       otro    lado    None
+Translation(Spanish):	Querían visitar a otro lugar
+
+# sentence level graph:
+(s45m / may'a-00
+	:experiencer (s45p / person
+		:refer-person 3rd
+		:refer-number plural)
+	:stimulus (s45h / have-role-91
+		:ARG0 s45p
+		:ARG2 (s45m2 / mayka'a)
+		:place (s45n / nekha'
+			:mod (s45m3 / mo'o))
+		:aspect state)
+	:aspect state
+	:quote (s45e / event))
+
+# alignment:
+s45m: 0-0
+s45p: 0-0
+s45h: 0-0
+s45m2: 3-3
+s45n: 5-5
+s45m3: 4-4
+s45e: 0-0
+
+# document level annotation:
+(s45s0 / sentence
+	:temporal ((s43s :overlap s45m)
+		(s45m :after s45h))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s45e)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s45p)
+		(s45p :full-affirmative s45m)
+		(s45m :unspecified s45h))
+	:coref ((s44p :same-entity s45p)
+		(s43l :same-entity s45n)
+		(s44e2 :same-event s45e)))
+
+
+################################################################################
+# meta-info
+# :: snt46
+Index:               	1	2	3
+Words:               	apkeleyvomakhanhan     hlema     grupo
+Morphemes:           	apk- el- eyv -om -akha =nhan     hlema     grupo
+Morpheme Gloss(Spanish):	2/3M.I DISTR vivir (pl.) PST/HAB NOM.LOC =y       uno  grupo.SP
+Morpheme Category:   	v:Any v:Any v v:Any v:Any prt       num        cs
+Words(English):      	un  grupo.SP      None
+Translation(Spanish):	También el lugar de vivencia de un grupo
+
+# sentence level graph:
+(s46p / place
+	:place-of (s46e / eleyvoma-00
+		:actor (s46g / grupo
+			:quant 1)
+		:aspect activity))
+
+# alignment:
+s46p: 0-0
+s46e: 1-1
+s46g: 3-3
+
+# document level annotation:
+(s46s0 / sentence
+	:temporal ((s43s :overlap s46e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s46e))
+	:coref ((s45n :same-entity s46p)
+		(s25e :subset-of s46g)))
+
+
+################################################################################
+# meta-info
+# :: snt47
+Index:               	1
+Words:               	angkehlta'akheyehlta
+Morphemes:           	angk- ehl- ta' -akh -eye =hlta
+Morpheme Gloss(Spanish):	2/3F.I DISTR irse REP V1.NFUT =PHOD
+Morpheme Category:   	v:Any v:Any v v:Any v:Any prt
+Words(English):      	None
+Translation(Spanish):	Se fueron
+
+# sentence level graph:
+(s47e / ehltay'a-00
+	:actor (s47p / person
+		:refer-person 3rd
+		:refer-number plural)
+	:aspect performance
+	:quote (s47e2 / event))
+
+# alignment:
+s47e: 1-1
+s47p: 0-0
+s47e2: 0-0
+
+# document level annotation:
+(s47s0 / sentence
+	:temporal ((s43s :overlap s47e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s47e2)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s47e))
+	:coref ((s45p :same-entity s47p)
+		(s45e :same-event s47e2)))
+
+
+################################################################################
+# meta-info
+# :: snt48
+Index:               	1	2	3
+Words:               	angkelvanatkohltanhan                         akyenyoma                      aktoma
+Morphemes:           	ang- kelvana =tko =hlta =nhan                   ak- yeny -om -a                ak- t -om -a
+Morpheme Gloss(Spanish):	2/3F.I mujer =pequeño, -ito =PHOD =y  2/3F.III dejar (sg.) PST/HAB INF  2/3F.III comer PST/HAB INF
+Morpheme Category:   	v:Any sus prt prt prt               v:Any v v:Any v:Any         v:Any v v:Any v:Any
+Words(English):      	comer                              None                        None
+
+# sentence level graph:
+(s48e / exist-91
+	:ARG1 (s48a / angkelvanatkohltanhan
+		:mod (s48t / tko)
+		:refer-number singular
+		:actor-of (s48e2 / enyenyoma-00
+			:undergoer (s48t2 / thing
+				:undergoer-of (s48e3 / entoma-00
+					:actor s48a))
+			:aspect activity
+			:quote s48e4))
+	:aspect state
+	:quote (s48e4 / event))
+
+# alignment:
+s48a: 0-0
+s48e: 0-0
+s48e2: 2-2
+s48t: 1-1
+s48t2: 0-0
+s48e3: 3-3
+s48e4: 0-0
+
+# document level annotation:
+(s48s0 / sentence
+	:temporal ((s43s :overlap s48e)
+		(s43s :overlap s48e2))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s48e4)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s48e)
+		(s30a :full-affirmative s48e2))
+	:coref ((s35a :same-entity s48a)
+		(s47p :subset-of s48a)
+		(s47e2 :same-event s48e4)))
+
+
+################################################################################
+# meta-info
+# :: snt49
+Index:               	1	2	3
+Words:               	angkehltama'ayehlta  hlema       naymen
+Morphemes:           	angk- ehl- tama -'aye =hlta  hlema     na- ymen
+Morpheme Gloss(Spanish):	2/3F.I DISTR entrar en agua V1.NFUT =PHOD    uno     LOC agua
+Morpheme Category:   	v:Any v:Any v v:Any prt    num  sus:Any sus
+Words(English):      	piola     un         agua
+Translation(Spanish):	Entraron en un lugar con agua
+
+# sentence level graph:
+(s49e / ehltamay'a-01
+	:actor (s49p / person
+		:refer-person 3rd
+		:refer-number plural)
+	:goal (s49n / naymen
+		:quant 1)
+	:aspect performance
+	:quote (s49e2 / event))
+
+# alignment:
+s49e: 1-1
+s49p: 0-0
+s49n: 3-3
+s49h: 2-2
+s49e2: 0-0
+
+# document level annotation:
+(s49s0 / sentence
+	:temporal ((s43s :after s49e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s49e2)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s49e))
+	:coref ((s47p :same-entity s49p)
+		(s48e4 :same-event s49e2)))
+
+
+################################################################################
+# meta-info
+# :: snt50
+Index:               	1
+Words:               	sanga
+Morphemes:           	sanga
+Morpheme Gloss(Spanish):	laguna
+Morpheme Category:   	sus
+Words(English):      	en la laguna
+Translation(Spanish):	Una laguna
+
+# sentence level graph:
+(s50s / sanga)
+
+# alignment:
+s50s: 1-1
+
+# document level annotation:
+(s50s0 / sentence
+	:coref ((s49n :same-entity s50s)))
+
+
+################################################################################
+# meta-info
+# :: snt51
+Index:               	1
+Words:               	yemmenahlta
+Morphemes:           	yemmen =ahlta
+Morpheme Gloss(Spanish):	agua =PHOD
+Morpheme Category:   	sus prt
+Words(English):      	None
+Translation(Spanish):	Un cuerpo de agua
+
+# sentence level graph:
+(s51y / yemmenahlta)
+
+# alignment:
+s51y: 1-1
+
+# document level annotation:
+(s51s0 / sentence
+	:coref ((s50s :same-entity s51y)))
+
+
+################################################################################
+# meta-info
+# :: snt52
+Index:               	1	2	3
+Words:               	antama'ayehltanhan                angkelvanatkohlkek       naymen
+Morphemes:           	an- tama -'aye =hlta =nhan          ang- kelvana =tko =hlkek     na- ymen
+Morpheme Gloss(Spanish):	2/3F.I entrar en agua V1.NFUT =PHOD =y  2/3F.I mujer =pequeño, -ito =HOD     LOC agua
+Morpheme Category:   	v:Any v v:Any prt prt                 v:Any sus prt prt  sus:Any sus
+Words(English):      	entrar en agua                              agua         None
+Translation(Spanish):	Entró también en el agua esta chica
+
+# sentence level graph:
+(s52a / and
+	:op1 (s52e / event)
+	:op2 (s52e2 / ehltamay'a-01
+		:actor (s52a2 / angkelvanatkohlkek
+			:mod (s52t / tko)
+			:refer-number singular)
+		:goal (s52n / naymen)
+		:aspect performance
+		:quote (s52e3 / event)))
+
+# alignment:
+s52a: 0-0
+s52e: 0-0
+s52e2: 1-1
+s52a2: 2-2
+s52t: 2-2
+s52n: 3-3
+s52e3: 0-0
+
+# document level annotation:
+(s52s0 / sentence
+	:temporal ((s52e :contained s52e2))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s52e3)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s52e2))
+	:coref ((s49e :same-event s52e)
+		(s52e :subset-of s52e2)
+		(s48a :same-entity s52a2)
+		(s51y :same-entity s52n)
+		(s49e2 :same-event s52e3)))
+
+
+################################################################################
+# meta-info
+# :: snt53
+Index:               	1	2	3
+Words:               	ayseksehlta                              ahltamay'a       ham'e
+Morphemes:           	ay- sekse =hlta                        ahl- tama -y' -a       ham'e
+Morpheme Gloss(Spanish):	2/3F.POS medio =PHOD  2/3F.PL.III entrar en agua PST/HAB INF  DEM.INTERL
+Morpheme Category:   	sus:Any sus prt                     v:Any v v:Any v:Any         pro
+Words(English):      	en el medio                          entrar en agua         eso
+Translation(Spanish):	Estaba en el medio de cruzar
+
+# sentence level graph:
+(s53h / have-location-91
+	:ARG0 (s53h2 / ham'e)
+	:ARG1 (s53a / ayseksehlta
+		:op1 (s53e / ehltamay'a-01
+			:actor (s53p / person
+				:refer-person 3rd
+				:refer-number plural)
+			:aspect process
+			:quote (s53e2 / event)))
+	:aspect state
+	:quote s53e2)
+
+# alignment:
+s53h: 0-0
+s53h2: 3-3
+s53a: 1-1
+s53e: 2-2
+s53p: 0-0
+s53e2: 0-0
+
+# document level annotation:
+(s53s0 / sentence
+	:temporal ((s53e :overlap s53h))
+	:modal ((root :modal author3)
+		(author :full-affirmative s53e2)
+		(author :full-affirmative s30a)
+		(s30a :full-affirmative s53h)
+		(s30a :full-affirmative s53e))
+	:coref ((s52e :same-event s53e)
+		(s52a2 :same-entity s53h2)
+		(s52e3 :same-event s53e2)))
+
+
+################################################################################
+# meta-info
+# :: snt54
+Index:               	1
+Words:               	netamen
+Morphemes:           	netamen
+Morpheme Gloss(Spanish):	después
+Morpheme Category:   	sus
+Words(English):      	detrás
+Translation(Spanish):	Después
+
+# sentence level graph:
+(s54e / event
+	:temporal (s54n / netamen
+		:op1 (s54e2 / event)))
+
+# alignment:
+s54e: 0-0
+s54n: 1-1
+s54e2: 0-0
+
+# document level annotation:
+(s54s0 / sentence
+	:temporal ((s54e2 :after s54e))
+	:coref ((s53h :same-event s54e2)))
+
+
+################################################################################
+# meta-info
+# :: snt55
+Index:               	1	2	3	4	5	6
+Words:               	anyetneyehlta                     akhlamakma     asek       ham'e       konnenak       naymen
+Morphemes:           	an- yetn -eye =hlta               ak- hlam -akm -a     asek       ham'e     konne =nak     na- ymen
+Morpheme Gloss(Spanish):	2/3F.I existir V1.NFUT =PHOD  2/3F.III ser muchos APPRX INF     cosa  DEM.INTERL   adentro =LOC     LOC agua
+Morpheme Category:   	v:Any v v:Any prt            v:Any v v:Any v:Any      sus         pro  adpos sus:Any  sus:Any sus
+Words(English):      	cosa                            eso  adentro        agua           None         None
+Translation(Spanish):	Había muchas cosas allá, adentro del agua
+
+# sentence level graph:
+(s55e / exist-91
+	:ARG0 (s55a / and
+		:op1 (s55h / ham'e)
+		:op2 (s55k / konnenak
+			:op1 (s55n / naymen)))
+	:ARG1 (s55a2 / asek
+		:quant (s55a3 / akhlamakma))
+	:aspect state
+	:quote (s55e2 / event))
+
+# alignment:
+s55e: 0-0
+s55a: 4-4
+s55h: 4-4
+s55k: 5-5
+s55n: 6-6
+s55a2: 3-3
+s55a3: 2-2
+s55e2: 0-0
+
+# document level annotation:
+(s55s0 / sentence
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s55e2)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s55e))
+	:coref ((s54e :same-event s55e)
+		(s55h :same-entity s55k)
+		(s52n :same-entity s55n)
+		(s53e2 :same-event s55e2)))
+
+
+################################################################################
+# meta-info
+# :: snt56
+Index:               	1
+Words:               	sanga
+Morphemes:           	sanga
+Morpheme Gloss(Spanish):	laguna
+Morpheme Category:   	sus
+Words(English):      	en la laguna
+Translation(Spanish):	En la laguna
+
+# sentence level graph:
+(s56s / sanga)
+
+# alignment:
+s56s: 1-1
+
+# document level annotation:
+(s56s0 / sentence
+	:coref ((s55n :same-entity s56s)))
+
+
+################################################################################
+# meta-info
+# :: snt57
+Index:               	1
+Words:               	yatapeyem
+Morphemes:           	yata- peyem
+Morpheme Gloss(Spanish):	SIM iguana
+Morpheme Category:   	sus>sus sus
+Words(English):      	yacaré
+Translation(Spanish):	Había yacaré
+
+# sentence level graph:
+(s57y / yatapeyem)
+
+# alignment:
+s57y: 1-1
+
+# document level annotation:
+(s57s0 / sentence
+	:coref ((s55a2 :subset-of s57y)))
+
+
+################################################################################
+# meta-info
+# :: snt58
+Index:               	1	2
+Words:               	mo'onhan  asek
+Morphemes:           	mo'o =nhan  asek
+Morpheme Gloss(Spanish):	otro.f =y  cosa
+Morpheme Category:   	pro prt   sus
+Words(English):      	cosa  None
+Translation(Spanish):	Y otras cosas
+
+# sentence level graph:
+(s58a / and
+	:op1 (s58t / thing)
+	:op2 (s58a2 / asek
+		:mod (s58m / mo'onhan)))
+
+# alignment:
+s58a: 0-0
+s58t: 0-0
+s58a2: 2-2
+s58m: 1-1
+
+# document level annotation:
+(s58s0 / sentence
+	:coref ((s57y :same-entity s58t)
+		(s55a2 :subset-of s58a2)))
+
+
+################################################################################
+# meta-info
+# :: snt59
+Index:               	1	2
+Words:               	mo'o                    aktemakha'
+Morphemes:           	mo'o              ak- t -em -akha'
+Morpheme Gloss(Spanish):	otro.f  2/3F.III ser PST/HAB NOM.LOC
+Morpheme Category:   	pro           v:Any v v:Any v:Any
+Words(English):      	otro                          tipo
+Translation(Spanish):	Otra clase
+
+# sentence level graph:
+(s59t / thing
+	:mod (s59m / mo'o-aktemakha'))
+
+# alignment:
+s59t: 0-0
+s59m: 1-2
+
+# document level annotation:
+(s59s0 / sentence
+	:coref ((s58a2 :same-entity s59t)))
+
+
+################################################################################
+# meta-info
+# :: snt60
+Index:               	1
+Words:               	kelamen
+Morphemes:           	kelamen
+Morpheme Gloss(Spanish):	cangrejo
+Morpheme Category:   	sus
+Words(English):      	cangrejo
+Translation(Spanish):	Cangrejos
+
+# sentence level graph:
+(s60k / kelamen)
+
+# alignment:
+s60k: 1-1
+
+# document level annotation:
+(s60s0 / sentence
+	:coref ((s59t :subset-of s60k)))
+
+
+################################################################################
+# meta-info
+# :: snt61
+Index:               	1
+Words:               	apyasangke'
+Morphemes:           	ap- yas -angk -e'
+Morpheme Gloss(Spanish):	2/3M.I saber CPLX V1.NFUT
+Morpheme Category:   	v:Any v v:Any v:Any
+Words(English):      	sabes
+Translation(Spanish):	Conoces?
+
+# sentence level graph:
+(s61e / enyasekamok-00
+	:experiencer (s61p / person
+		:refer-person 2nd
+		:refer-number singular)
+	:stimulus (s61t / thing)
+	:aspect state
+	:polarity umr-unknown
+	:mode interrogative)
+
+# alignment:
+s61e: 1-1
+s61p: 0-0
+s61t: 0-0
+
+# document level annotation:
+(s61s0 / sentence
+	:temporal ((present-reference :overlap s61e))
+	:modal ((root :modal author3)
+		(author3 :neutral-affirmative s61e))
+	:coref ((s36p :same-entity s61p)
+		(s60k :same-entity s61t)))
+
+
+################################################################################
+# meta-info
+# :: snt62
+Index:               	1	2	3
+Words:               	hla'                      nemana      ha'e
+Morphemes:           	hla'                n -em -a =na      ha'e
+Morpheme Gloss(Spanish):	???  sentarse  PST/HAB INF =DEF  DEM.DIST
+Morpheme Category:   	<Not Sure>           v v:Any v:Any prt       pro
+Words(English):      	???                        allá      None
+Translation(Spanish):	Estaba allá
+
+# sentence level graph:
+(s62e / exist-91
+	:ARG0 (s62h / ha'e)
+	:ARG1 (s62t / thing)
+	:aspect state)
+
+# alignment:
+s62e: 0-0
+s62h: 3-3
+s62t: 0-0
+
+# document level annotation:
+(s62s0 / sentence
+	:temporal ((s55e :overlap s62e))
+	:modal ((root :modal author3)
+		(author3 :neutral-affirmative s62e))
+	:coref ((s55e :subset-of s62e)
+		(s56s :same-entity s62h)
+		(s61t :same-entity s62t)))
+
+
+################################################################################
+# meta-info
+# :: snt63
+Index:               	1
+Words:               	kelamen
+Morphemes:           	kelamen
+Morpheme Gloss(Spanish):	cangrejo
+Morpheme Category:   	sus
+Words(English):      	cangrejo
+Translation(Spanish):	Cangrejos
+
+# sentence level graph:
+(s63k / kelamen)
+
+# alignment:
+s63k: 1-1
+
+# document level annotation:
+(s63s0 / sentence
+	:coref ((s62t :same-entity s63k)))
+
+
+################################################################################
+# meta-info
+# :: snt64
+Index:               	1	2	3
+Words:               	angva'mehlta         kam'a    akhlay'ena'ak
+Morphemes:           	ang- v -a'm -e =hlta       ka- m'a  akhlay'e =na'ak
+Morpheme Gloss(Spanish):	2/3F.I llegar APPRX V1.NFUT =PHOD  REF DEM.DIST      orilla =LOC
+Morpheme Category:   	v:Any v v:Any v:Any prt  Pro-form adv      sus sus:Any
+Words(English):      	eso        orilla             None
+Translation(Spanish):	Llegó allá en la orilla
+
+# sentence level graph:
+(s64e / elvay'a-00
+	:actor (s64p / person
+		:refer-person 3rd
+		:refer-number singular)
+	:goal (s64a / and
+		:op1 (s64k / kam'a)
+		:op2 (s64a2 / akhlay'ena'ak
+			:part (s64t / thing)))
+	:aspect performance
+	:quote (s64e2 / event))
+
+# alignment:
+s64a: 0-0
+s64a2: 3-3
+s64e: 1-1
+s64e2: 0-0
+s64k: 2-2
+s64p: 0-0
+s64t: 0-0
+
+# document level annotation:
+(s64s0 / sentence
+	:temporal ((s53h :after s64e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s64e2)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s64e))
+	:coref ((s53h2 :same-entity s64p)
+		(s64k :same-entity s64a2)
+		(s62h :same-entity s64t)
+		(s55e2 :same-event s64e2)))
+
+
+################################################################################
+# meta-info
+# :: snt65
+Index:               	1
+Words:               	naha'e
+Morphemes:           	na- ha'e
+Morpheme Gloss(Spanish):	LOC DEM.DIST
+Morpheme Category:   	sus:Any pro
+Words(English):      	None
+Translation(Spanish):	Allá
+
+# sentence level graph:
+(s65n / naha'e)
+
+# alignment:
+s65n: 1-1
+
+# document level annotation:
+(s65s0 / sentence
+	:coref ((s64a2 :same-entity s65n)))
+
+
+################################################################################
+# meta-info
+# :: snt66
+Index:               	1	2
+Words:               	mo'o  akhlay'e
+Morphemes:           	mo'o  akhlay'e
+Morpheme Gloss(Spanish):	otro.f    orilla
+Morpheme Category:   	pro       sus
+Words(English):      	otro    orilla
+Translation(Spanish):	En la otra orilla
+
+# sentence level graph:
+(s66a / akhlay'e
+	:mod (s66m / mo'o)
+	:part (s66t / thing))
+
+# alignment:
+s66a: 2-2
+s66m: 1-1
+s66t: 0-0
+
+# document level annotation:
+(s66s0 / sentence
+	:coref ((s65n :same-entity s66a)
+		(s64t :same-entity s66t)))
+
+
+################################################################################
+# meta-info
+# :: snt67
+Index:               	1
+Words:               	akyavakhahlma'
+Morphemes:           	ak- yavakhahlma'
+Morpheme Gloss(Spanish):	2/3F.III afuera
+Morpheme Category:   	v:Any <Not Sure>
+Words(English):      	afuera
+Translation(Spanish):	Afuera
+
+# sentence level graph:
+(s67a / akyavakhahlma')
+
+# alignment:
+s67a: 1-1
+
+# document level annotation:
+(s67s0 / sentence
+	:coref ((s67a :subset-of s66a)))
+
+
+################################################################################
+# meta-info
+# :: snt68
+Index:               	1	2	3	4
+Words:               	apkelentepkehlta    yatapeyem                hlamakmahlta    yatapeyem
+Morphemes:           	apk- elen- tep -ke =hlta  yata- peyem          hlam -akm -a =hlta  yata- peyem
+Morpheme Gloss(Spanish):	2/3M.I DISTR salir V1.NFUT =PHOD   SIM iguana  ser muchos APPRX INF =PHOD   SIM iguana
+Morpheme Category:   	v:Any v:Any v v:Any prt  sus>sus sus           v v:Any v:Any prt  sus>sus sus
+Words(English):      	yacaré       yacaré                        None         None
+Translation(Spanish):	Salieron los yacaré, muchos yacaré
+
+# sentence level graph:
+(s68e / elenteyapma-00
+	:actor (s68y / yatapeyem
+		:quant (s68h / hlamakmahlta))
+	:source (s68p / place)
+	:aspect performance
+	:quote (s68e2 / event))
+
+# alignment:
+s68e: 1-1
+s68y: 2-2
+s68h: 3-3
+s68p: 0-0
+s68e2: 0-0
+
+# document level annotation:
+(s68s0 / sentence
+	:temporal ((s64e :after s68e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s68e2)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s68e))
+	:coref ((s57y :same-entity s68y)
+		(s66t :same-entity s68p)
+		(s64e2 :same-event s68e2)))
+
+
+################################################################################
+# meta-info
+# :: snt69
+Index:               	1
+Words:               	apkennayveskehlta
+Morphemes:           	apk- en- nayv -es -ke =hlta
+Morpheme Gloss(Spanish):	2/3M.I DISTR gritar (animales) APPL V1.NFUT =PHOD
+Morpheme Category:   	v:Any v:Any v v>v v:Any prt
+Words(English):      	gritar (animales)
+Translation(Spanish):	Hicieron ruido
+
+# sentence level graph:
+(s69e / ennayveskama-00
+	:actor (s69t / thing
+		:refer-number plural)
+	:aspect endeavor
+	:quote (s69e2 / event))
+
+# alignment:
+s69e: 1-1
+s69t: 0-0
+s69e2: 0-0
+
+# document level annotation:
+(s69s0 / sentence
+	:temporal ((s68e :after s69e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s69e)
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s69e))
+	:coref ((s68y :same-entity s69t)
+		(s68e2 :same-event s69e2)))
+
+
+################################################################################
+# meta-info
+# :: snt70
+Index:               	1	2	3	4	5
+Words:               	apkehlpayveyehlta     yavokhohona  asek                             annaykamona       naymen
+Morphemes:           	apk- ehl- payv -eye =hlta   yavokhoho =na  asek                   an- n -ayk -am -o =na     na- ymen
+Morpheme Gloss(Spanish):	2/3M.I DISTR hablar V1.NFUT =PHOD       todo =DEF  cosa  2/3F.I sentarse  PST/HAB CPLX INF =DEF     LOC agua
+Morpheme Category:   	v:Any v:Any v v:Any prt         pro prt   sus           v:Any v v:Any v:Any v:Any prt  sus:Any sus
+Words(English):      	cosa  sentarse (sg.)  agua                                    None         None
+Translation(Spanish):	Gritaron todas las cosas que estaban en el agua
+
+# sentence level graph:
+(s70e / empayvoma-00
+	:actor (s70a / asek
+		:quant (s70y / yavokhohona)
+		:actor-of (s70e2 / ennema-00
+			:place (s70n / naymen)
+			:aspect state
+			:quote (s70e3 / event)))
+	:aspect endeavor
+	:quote s70e3)
+
+# alignment:
+s70a: 3-3
+s70e: 1-1
+s70y: 2-2
+s70e2: 4-4
+s70n: 5-5
+s70e3: 0-0
+
+# document level annotation:
+(s70s0 / sentence
+	:temporal ((s69e :overlap s70e)
+		(s69e :overlap s70e2))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s70e3)
+		
+		(author3 :full-affirmative s30a)
+		(s30a :full-affirmative s70e)
+		(s30a :full-affirmative s70e2))
+	:coref ((s55a2 :same-entity s70a)
+		(s68p :same-entity s70n)
+		(s69e2 :same-event s70e3)))
+
+
+################################################################################
+# meta-info
+# :: snt71
+Index:               	1	2	3
+Words:               	ahlta                asneyay'ahlta       ham'e
+Morphemes:           	=ahlta        as- ney -ay' -a =hlta       ham'e
+Morpheme Gloss(Spanish):	=PHOD  1SG.I oír PST/HAB INF =PHOD  DEM.INTERL
+Morpheme Category:   	prt      v:Any v v:Any v:Any prt         pro
+Words(English):      	antes                          eso        None
+Translation(Spanish):	Es lo que escuché antes
+
+# sentence level graph:
+(s71e / enneyay'a-00
+	:experiencer (s71p / person
+		:refer-person 1st
+		:refer-number singular)
+	:stimulus (s71h / ham'e)
+	:aspect state)
+
+# alignment:
+s71e: 0-0
+s71p: 0-0
+s71h: 3-3
+
+# document level annotation:
+(s71s0 / sentence
+	:modal ((root :modal author3)
+		(s71p :full-affirmative s71e)
+		(s71e :unspecified s71h)
+		(author3 :full-affirmative s71p))
+	:coref ((s28e :same-event s71e)
+		(s30p2 :same-entity s71p)
+		(s41a :same-event s71h)))
+
+
+################################################################################
+# meta-info
+# :: snt72
+Index:               	1
+Words:               	ehltennaskama
+Morphemes:           	e- hl- tenn -as -kam -a
+Morpheme Gloss(Spanish):	1SG.III DISTR hablar APPL PST/HAB INF
+Morpheme Category:   	v:Any v:Any v v>v v:Any v:Any
+Words(English):      	hablar
+Translation(Spanish):	Lo que me comentaban
+
+# sentence level graph:
+(s72e / ehltennaskama-00
+	:actor (s72p / person
+		:refer-person 3rd
+		:refer-number plural)
+	:theme (s72e2 / event
+		:quote s72e)
+	:recipient (s72p2 / person
+		:refer-person 1st
+		:refer-number singular)
+	:aspect performance)
+
+# alignment:
+s72e: 0-0
+s72p: 0-0
+s72e2: 0-0
+s72p2: 0-0
+
+# document level annotation:
+(s72s0 / sentence
+	:temporal ((s30e :contained s72e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s72e)
+		(author3 :full-affirmative s72p)
+		(s72p :full-affirmative s72e2))
+	:coref ((s30e :subset-of s72e)
+		(s30a :same-entity s72p)
+		(s71p :same-entity s72p2)
+		(s71h :same-event s72e2)))
+
+
+################################################################################
+# meta-info
+# :: snt73
+Index:               	1	2
+Words:               	mo'ok                temakhahlta
+Morphemes:           	mo'ok          t -em -akha =hlta
+Morpheme Gloss(Spanish):	otro.f  ser PST/HAB NOM.LOC =PHOD
+Morpheme Category:   	pro          v v:Any v:Any prt
+Words(English):      	otra                       None
+Translation(Spanish):	Qué cosa era!
+
+# sentence level graph:
+(s73h / have-mod-91
+	:ARG1 (s73t / thing)
+	:ARG2 (s73m / mo'ok-temakhahlta)
+	:aspect state)
+
+# alignment:
+s73h: 0-0
+s73m: 1-2
+s73t: 0-0
+
+# document level annotation:
+(s73s0 / sentence
+	:temporal ((s73t :overlap s73h))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s73h))
+	:coref ((s72e2 :same-event s73t)))
+
+
+################################################################################
+# meta-info
+# :: snt74
+Index:               	1	2	3	4	5	6	7
+Words:               	mahla     cultura         metkohltanne'     permiso                   angkelvanatkona                   angkotama       naymen
+Morphemes:           	mahla     cultura     metko =hlta =nne'     permiso             ang- kelvana =tko =na              angko- tama -ø     na- ymen
+Morpheme Gloss(Spanish):	como  cultura.SP  NEG.EXT =PHOD =FRUST  permiso.SP  2/3F.I mujer =pequeño, -ito =DEF  2/3F.II entrar en agua FUT     LOC agua
+Morpheme Category:   	prt          cs             v prt prt          cs                 v:Any sus prt prt               v:Any v v:Any  sus:Any sus
+Words(English):      	como  cultura.SP               NEG.EXT  permiso.SP                    entrar en agua                        agua         None
+Translation(Spanish):	Parece la cultura, la chica no tenía permiso de entrar el agua
+
+# sentence level graph:
+(s74e / exist-91
+	:ARG1 (s74p / permiso
+		:experiencer (s74a / angkelvanatkona
+			:refer-number singular
+			:mod (s74t / tko))
+		:stimulus (s74e2 / ehltamay'a-01
+			:actor s74a
+			:goal (s74n / naymen)
+			:aspect performance)
+		:source (s74c / cultura
+			:mod (s74m / mahla)))
+	:aspect state)
+
+# alignment:
+s74a: 0-0
+s74e: 0-0
+s74p: 0-0
+s74t: 5-5
+s74e2: 6-6
+s74n: 7-7
+s74c: 2-2
+s74m: 1-1
+
+# document level annotation:
+(s74s0 / sentence
+	:temporal ((past-reference :overlap s74e)
+		(s74e :after s74e2))
+	:modal ((root :modal author3)
+		(author3 :full-negative s74e)
+		(author3 :full-negative null-conceiver)
+		(null-conceiver :full-affirmative s74p)
+		(s74p :unspecified s74e2))
+	:coref ((s39c :same-entity s74c)))
+
+
+################################################################################
+# meta-info
+# :: snt75
+Index:               	1
+Words:               	prohibido
+Morphemes:           	prohibido
+Morpheme Gloss(Spanish):	prohibido.SP
+Morpheme Category:   	cs
+Words(English):      	prohibido.SP
+Translation(Spanish):	Era prohibido
+
+# sentence level graph:
+(s75p / prohibir
+	:undergoer (s75e / event)
+	:aspect state)
+
+# alignment:
+s75p: 0-0
+s75e: 0-0
+
+# document level annotation:
+(s75s0 / sentence
+	:temporal ((past-reference :overlap s75p))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative null-conceiver)
+		(null-conceiver :full-affirmative s75p)
+		(s75p :unspecified s75e))
+	:coref ((s74e2 :same-event s75e)))
+
+
+################################################################################
+# meta-info
+# :: snt76
+Index:               	1	2	3	4
+Words:               	kopmehehlnahlta                       aktemana       ham'e  mahla
+Morphemes:           	ko- pm -ehe =hlna =hlta               ak- t -em -a =na       ham'e  mahla
+Morpheme Gloss(Spanish):	2/3F.II ser FUT =REP =PHOD  2/3F.III ser PST/HAB INF =DEF  DEM.INTERL   como
+Morpheme Category:   	v:Any v v:Any prt prt        v:Any v v:Any v:Any prt         pro    prt
+Words(English):      	ser                           tipo         eso   como
+Translation(Spanish):	Hacer eso (era prohibido), parece...
+
+# sentence level graph:
+(s76h / have-reason-91
+	:ARG1 (s76h2 / ham'e)
+	:ARG2 (s76t / thing)
+	:aspect state)
+
+# alignment:
+s76h: 0-0
+s76h2: 3-3
+s76t: 0-0
+
+# document level annotation:
+(s76s0 / sentence
+	:temporal ((s76h2 :overlap s76h))
+	:modal ((root :modal author3)
+		(author3 :neutral-affirmative s76h))
+	:coref ((s73t :same-event s76h2)))
+
+
+################################################################################
+# meta-info
+# :: snt77
+Index:               	1	2	3	4
+Words:               	mahla     ema  angkok          aymes
+Morphemes:           	mahla     ema  angkok        a- ymes
+Morpheme Gloss(Spanish):	como  sangre     POS  2/3F.POS olor
+Morpheme Category:   	prt     sus     prt    sus:Any sus
+Words(English):      	como  sangre    suya          sudor
+Translation(Spanish):	Parece por el olor de su sangre
+
+# sentence level graph:
+(s77a / aymes
+	:source (s77e / ema
+		:part (s77p / person
+			:refer-person 3rd
+			:refer-number singular)))
+
+# alignment:
+s77a: 4-4
+s77e: 2-2
+s77p: 0-0
+
+# document level annotation:
+(s77s0 / sentence
+	:coref ((s76t :same-entity s77a)
+		(s64p :same-entity s77p)))
+
+
+################################################################################
+# meta-info
+# :: snt78
+Index:               	1	2	3
+Words:               	apkenneng'ayehlta       ham'e      yatapeyemanak
+Morphemes:           	apk- en- neng -'aye =hlta       ham'e  yata- peyem =anak
+Morpheme Gloss(Spanish):	2/3M.I DISTR sentir V1.NFUT =PHOD  DEM.INTERL    SIM iguana =DEF
+Morpheme Category:   	v:Any v:Any v v:Any prt         pro    sus>sus sus prt
+Words(English):      	oír         eso               None
+Translation(Spanish):	Los yacaré sintieron eso
+
+# sentence level graph:
+(s78e / enneyay'a-00
+	:experiencer (s78y / yatapeyemanak
+		:refer-number plural)
+	:stimulus (s78h / ham'e)
+	:aspect state)
+
+# alignment:
+s78e: 1-1
+s78y: 3-3
+s78h: 2-2
+
+# document level annotation:
+(s78s0 / sentence
+	:temporal ((s68e :overlap s78e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s78e))
+	:coref ((s69t :same-entity s78y)
+		(s77a :same-entity s78h)))
+
+
+################################################################################
+# meta-info
+# :: snt79
+Index:               	1	2
+Words:               	annayveskehlta                   annayveskehlta
+Morphemes:           	an- nayv -es -ke =hlta           an- nayv -es -ke =hlta
+Morpheme Gloss(Spanish):	2/3F.I jugar APPL V1.NFUT =PHOD  2/3F.I jugar APPL V1.NFUT =PHOD
+Morpheme Category:   	v:Any v v>v v:Any prt            v:Any v v>v v:Any prt
+Words(English):      	None                             None
+Translation(Spanish):	Gritaron, gritaron
+
+# sentence level graph:
+(s79e / ennayveskama-00
+	:actor (s79t / thing
+		:refer-number plural)
+	:aspect endeavor
+	:degree intensifier
+	:quote (s79e2 / event))
+
+# alignment:
+s79e: 1-1
+s79t: 0-0
+s79e2: 0-0
+
+# document level annotation:
+(s79s0 / sentence
+	:temporal ((s69e :overlap s79e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s79e2)
+		(author3 :full-affirmative s72p)
+		(s72p :full-affirmative s79e))
+	:coref ((s78y :same-entity s79t)
+		(s72e :same-event s79e2)))
+
+
+################################################################################
+# meta-info
+# :: snt80
+Index:               	1
+Words:               	apkelakmaskama
+Morphemes:           	apk- el- akm -as -kam -a
+Morpheme Gloss(Spanish):	2/3M.I DISTR cantar APPL PST/HAB INF
+Morpheme Category:   	v:Any v:Any v v>v v:Any v:Any
+Words(English):      	cantar
+Translation(Spanish):	Cantaron
+
+# sentence level graph:
+(s80e / enya'maskama-00
+	:actor (s80t / thing
+		:refer-number plural)
+	:aspect endeavor
+	:quote (s80e2 / event))
+
+# alignment:
+s80e: 1-1
+s80t: 0-0
+s80e2: 0-0
+
+# document level annotation:
+(s80s0 / sentence
+	:temporal ((s69e :overlap s80e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s80e2)
+		(author3 :full-affirmative s72p)
+		(s72p :full-affirmative s80e))
+	:coref ((s79t :same-entity s80t)
+		(s79e2 :same-event s80e2)))
+
+
+################################################################################
+# meta-info
+# :: snt81
+Index:               	1	2	3	4	5
+Words:               	extraña     extraña     algo     pasa     acá
+Morphemes:           	extraña     extraña     algo     pasa     acá
+Morpheme Gloss(Spanish):	extraña.SP  extraña.SP  algo.SP  pasa.SP  acá.SP
+Morpheme Category:   	cs          cs       cs       cs      cs
+Words(English):      	extraña     extraña  algo.SP  pasa.SP     acá
+Translation(Spanish):	Extraño, algo pasó acá
+
+# sentence level graph:
+(s81h / have-mod-91
+	:ARG1 (s81p / pasar
+		:actor (s81a / algo
+			:quote s81e2)
+		:place (s81a2 / acá)
+		:aspect performance
+		:quote (s81e2 / event))
+	:ARG2 (s81e / extraña
+		:degree intensifier)
+	:aspect state)
+
+# alignment:
+s81a: 3-3
+s81a2: 5-5
+s81e: 1-1
+s81h: 0-0
+s81p: 4-4
+s81e2: 0-0
+
+# document level annotation:
+(s81s0 / sentence
+	:temporal ((s81a :overlap s81h))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s81e2)
+		(author3 :full-affirmative s72p)
+		(s72p :full-affirmative s81p)
+		(s72p :full-affirmative s81a))
+	:coref ((s41p2 :same-event s81p)
+		(s76h2 :same-event s81a)
+		(s80e2 :same-event s81e2)))
+
+
+################################################################################
+# meta-info
+# :: snt82
+Index:               	1
+Words:               	peligro
+Morphemes:           	peligro
+Morpheme Gloss(Spanish):	peligro.SP
+Morpheme Category:   	cs
+Words(English):      	peligro.SP
+Translation(Spanish):	Peligro
+
+# sentence level graph:
+(s82e / exist-91
+	:ARG1 (s82p / peligro)
+	:aspect state)
+
+# alignment:
+s82e: 0-0
+s82p: 1-1
+
+# document level annotation:
+(s82s0 / sentence
+	:temporal ((s81a :overlap s82e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s82e)))
+
+
+################################################################################
+# meta-info
+# :: snt83
+Index:               	1	2
+Words:               	mahla     señal
+Morphemes:           	mahla     señal
+Morpheme Gloss(Spanish):	como  señal.SP
+Morpheme Category:   	prt        cs
+Words(English):      	como     señal
+Translation(Spanish):	Como un señal
+
+# sentence level graph:
+(s83r / resemble-91
+	:ARG1 (s83t / thing)
+	:ARG2 (s83s / señal)
+	:aspect state)
+
+# alignment:
+s83r: 0-0
+s83t: 0-0
+s83s: 2-2
+
+# document level annotation:
+(s83s0 / sentence
+	:temporal ((s81a :overlap s83r))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s83r))
+	:coref ((s78h :same-entity s83t)))
+
+
+################################################################################
+# meta-info
+# :: snt84
+Index:               	1	2	3
+Words:               	netamen              ata'lahlta                   angvaktak
+Morphemes:           	netamen          a- ta'la =hlta             ang- v -akt -ak
+Morpheme Gloss(Spanish):	detrás    2/3F.POS atrás =PHOD  2/3F.I llegar VENT V2.NFUT
+Morpheme Category:   	sus  sus:Any <Not Sure> prt         v:Any v v:Any v:Any
+Words(English):      	detrás                2/3F.POS                        None
+Translation(Spanish):	Después... después vino...
+
+# sentence level graph:
+(s84e / elvay'a-00
+	:actor (s84t / thing)
+	:temporal (s84a / and
+		:op1 (s84n / netamen
+			:op1 (s84e2 / event))
+		:op2 (s84a2 / ata'lahlta))
+	:aspect performance
+	:quote (s84e3 / event))
+
+# alignment:
+s84e: 3-3
+s84t: 0-0
+s84a: 0-0
+s84n: 1-1
+s84e2: 0-0
+s84a2: 2-2
+s85e: 0-0
+
+# document level annotation:
+(s84s0 / sentence
+	:temporal ((s69e :after s84e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s84e3)
+		(author3 :full-affirmative s72p)
+		(s72p :full-affirmative s84e))
+	:coref ((s69e :same-event s84e2)
+		(s81e2 :same-event s84e3)))
+
+
+################################################################################
+# meta-info
+# :: snt85
+Index:               	1	2	3
+Words:               	angvaktehlta  yephopay'a                        akyavay'a
+Morphemes:           	ang- v -akt -e =hlta  yephopay'a                  ak- yav -ay' -a
+Morpheme Gloss(Spanish):	2/3F.I llegar VENT V1.NFUT =PHOD        nube  2/3F.III ser grande PST/HAB INF
+Morpheme Category:   	v:Any v v:Any v:Any prt         sus              v:Any v v:Any v:Any
+Words(English):      	nube      grande                             None
+Translation(Spanish):	Llegó una nube grande
+
+# sentence level graph:
+(s85e / elvay'a-00
+	:actor (s85y / yephopay'a
+		:ARG1-of (s85h / have-mod-91
+			:ARG2 (s85a / akyavay'a))
+		:refer-number singular)
+	:aspect performance
+	:quote (s85e2 / event))
+
+# alignment:
+s85e: 1-1
+s85y: 2-2
+s85h: 0-0
+s85a: 3-3
+s85e2: 0-0
+
+# document level annotation:
+(s85s0 / sentence
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s85e2)
+		(author3 :full-affirmative s72p)
+		(s72p :full-affirmative s85e))
+	:coref ((s84e :same-event s85e)
+		(s84t :same-entity s85y)
+		(s84e3 :same-event s85e2)))
+
+
+################################################################################
+# meta-info
+# :: snt86
+Index:               	1
+Words:               	ahleayam
+Morphemes:           	a- hle -ay -am
+Morpheme Gloss(Spanish):	2/3F.III viajar PST/HAB INF.APPRX
+Morpheme Category:   	v:Any v v:Any v:Any
+Words(English):      	viajar
+Translation(Spanish):	Acercándose
+
+# sentence level graph:
+(s86e / enhleama-00
+	:actor (s86t / thing)
+	:aspect performance
+	:quote (s86e2 / event))
+
+# alignment:
+s86e: 1-1
+s86t: 0-0
+s86e2: 0-0
+
+# document level annotation:
+(s86s0 / sentence
+	:temporal ((s85e :overlap s86e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s86e2)
+		(author3 :full-affirmative s72p)
+		(s72p :full-affirmative s86e))
+	:coref ((s85y :same-entity s86t)
+		(s85e2 :same-event s86e2)))
+
+
+################################################################################
+# meta-info
+# :: snt87
+Index:               	1	2
+Words:               	mahla  tormenta
+Morphemes:           	mahla  tormenta
+Morpheme Gloss(Spanish):	como  tormenta
+Morpheme Category:   	prt        cs
+Words(English):      	como  tormenta
+Translation(Spanish):	Como una tormenta
+
+# sentence level graph:
+(s87r / resemble-91
+	:ARG1 (s87t / thing)
+	:ARG2 (s87t2 / tormenta)
+	:aspect state
+	:quote (s87e / event))
+
+# alignment:
+s87r: 0-0
+s87t: 0-0
+s87t2: 2-2
+s87e: 0-0
+
+# document level annotation:
+(s87s0 / sentence
+	:temporal ((s85e :overlap s87r))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s87e)
+		(author3 :full-affirmative s72p)
+		(s72p :full-affirmative s87r))
+	:coref ((s86t :same-entity s87t)
+		(s86e2 :same-event s87e)))
+
+
+################################################################################
+# meta-info
+# :: snt88
+Index:               	1	2	3
+Words:               	tormenta                              akyavayakta       ham'e
+Morphemes:           	tormenta                      ak- yav -ay -akt -a       ham'e
+Morpheme Gloss(Spanish):	tormenta  2/3F.III acercarse PST/HAB VENT V2.NFUT  DEM.INTERL
+Morpheme Category:   	cs                v:Any v v:Any v:Any v:Any         pro
+Words(English):      	tormenta                                acercarse         eso
+Translation(Spanish):	Una tormenta se acercaba para esto
+
+# sentence level graph:
+(s88e / enyaveyam-00
+	:actor (s88t / tormenta
+		:refer-number singular)
+	:goal (s88h / ham'e)
+	:aspect performance
+	:quote (s88e2 / event))
+
+# alignment:
+s88e: 2-2
+s88t: 1-1
+s88h: 3-3
+s88e2: 0-0
+
+# document level annotation:
+(s88s0 / sentence
+	:temporal ((s85e :overlap s88e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s88e2)
+		(author3 :full-affirmative s72p)
+		(s72p :full-affirmative s88e))
+	:coref ((s66a :same-entity s88h)
+		(s87e :same-event s88e2)))
+
+
+################################################################################
+# meta-info
+# :: snt89
+Index:               	1	2	3	4
+Words:               	mahla          aymes     ema  angkok
+Morphemes:           	mahla        a- ymes     ema  angkok
+Morpheme Gloss(Spanish):	como  2/3F.POS olor  sangre     POS
+Morpheme Category:   	prt    sus:Any sus     sus     prt
+Words(English):      	como          sudor  sangre    suya
+Translation(Spanish):	Parece por el olor de su sangre
+
+# sentence level graph:
+(s89h / have-reason-91
+	:ARG1 (s89e / event)
+	:ARG2 (s89a / aymes
+		:source (s89e2 / ema
+			:part (s89p / person
+				:refer-person 3rd
+				:refer-number singular)))
+	:aspect state)
+
+# alignment:
+s89h: 0-0
+s89e: 0-0
+s89a: 2-2
+s89e2: 3-3
+s89p: 0-0
+
+# document level annotation:
+(s89s0 / sentence
+	:temporal ((s89e :overlap s89h))
+	:modal ((root :modal author3)
+		(author3 :neutral-affirmative s89h))
+	:coref ((s88e :same-event s89e)
+		(s83t :same-entity s89a)
+		(s77e :same-entity s89e2)
+		(s77p :same-entity s89p)))
+
+
+################################################################################
+# meta-info
+# :: snt90
+Index:               	1	2	3
+Words:               	antepkehlta  ahlkayam                     akyenna'tema
+Morphemes:           	an- tep -ke =hlta  ahlkayam               ak- yenna't -em -a
+Morpheme Gloss(Spanish):	2/3F.I salir V1.NFUT =PHOD    viento  2/3F.III ser fuerte PST/HAB INF
+Morpheme Category:   	v:Any v v:Any prt       sus              v:Any v v:Any v:Any
+Words(English):      	viento      None                             None
+Translation(Spanish):	Salió un viento muy fuerte
+
+# sentence level graph:
+(s90e / elenteyapma-00
+	:actor (s90a / ahlkayam
+		:ARG1-of (s90h / have-mod-91
+			:ARG2 (s90a2 / akyenna'tema))
+		:refer-number singular)
+	:aspect performance
+	:quote (s90e2 / event))
+
+# alignment:
+s90e: 1-1
+s90a: 2-2
+s90h: 0-0
+s90a2: 3-3
+s90e2: 0-0
+
+# document level annotation:
+(s90s0 / sentence
+	:temporal ((s85e :overlap s90e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s90e2)
+		(author3 :full-affirmative s72p)
+		(s72p :full-affirmative s90e))
+	:coref ((s88e2 :same-event s90e2)))
+
+
+################################################################################
+# meta-info
+# :: snt91
+Index:               	1	2	3
+Words:               	ahlkayam  mahla          yatapyayam
+Morphemes:           	ahlkayam  mahla        yata- pyayam
+Morpheme Gloss(Spanish):	viento   como             SIM sur
+Morpheme Category:   	sus    prt  sus>sus <Not Sure>
+Words(English):      	viento   como                 sur
+Translation(Spanish):	Un viento como un torbellino
+
+# sentence level graph:
+(s91a / ahlkayam
+	:ARG1-of (s91r / resemble-91
+		:ARG2 (s91y / yatapyayam)))
+
+# alignment:
+s91a: 1-1
+s91r: 0-0
+s91y: 3-3
+
+# document level annotation:
+(s91s0 / sentence
+	:coref ((s90a :same-entity s91a)))
+
+
+################################################################################
+# meta-info
+# :: snt92
+Index:               	1	2
+Words:               	akyepetkay'a  yemmen
+Morphemes:           	ak- yepetk -ay' -a  yemmen
+Morpheme Gloss(Spanish):	2/3F.III mezclar PST/HAB INF    agua
+Morpheme Category:   	v:Any v v:Any v:Any     sus
+Words(English):      	agua    None
+Translation(Spanish):	Junto con lluvia
+
+# sentence level graph:
+(s92e / enyepetkay'a-00
+	:actor (s92t / thing)
+	:theme (s92y / yemmen)
+	:aspect state
+	:quote (s92e2 / event))
+
+# alignment:
+s92e: 1-1
+s92t: 0-0
+s92y: 2-2
+s92e2: 0-0
+
+# document level annotation:
+(s92s0 / sentence
+	:temporal ((s85e :overlap s92e))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s92e2)
+		(author3 :full-affirmative s72p)
+		(s72p :full-affirmative s92e))
+	:coref ((s91a :same-entity s92t)
+		(s90e2 :same-event s92e2)))
+
+
+################################################################################
+# meta-info
+# :: snt93
+Index:               	1
+Words:               	tormenta
+Morphemes:           	tormenta
+Morpheme Gloss(Spanish):	tormenta
+Morpheme Category:   	cs
+Words(English):      	tormenta
+Translation(Spanish):	Una tormenta
+
+# sentence level graph:
+(s93t / tormenta)
+
+# alignment:
+s93t: 1-1
+
+# document level annotation:
+(s93s0 / sentence
+	:coref ((s92t :same-entity s93t)))
+
+
+################################################################################
+# meta-info
+# :: snt94
+Index:               	1	2
+Words:               	tormenta     puro
+Morphemes:           	tormenta     puro
+Morpheme Gloss(Spanish):	tormenta  puro.SP
+Morpheme Category:   	cs       cs
+Words(English):      	tormenta  puro.SP
+Translation(Spanish):	Una tormenta pura
+
+# sentence level graph:
+(s94t / tormenta
+	:mod (s94p / puro))
+
+# alignment:
+s94t: 1-1
+s94p: 2-2
+
+# document level annotation:
+(s94s0 / sentence
+	:coref ((s93t :same-entity s94t)))
+
+
+################################################################################
+# meta-info
+# :: snt95
+Index:               	1	2	3
+Words:               	mahla     motivo       ham'e
+Morphemes:           	mahla     motivo       ham'e
+Morpheme Gloss(Spanish):	como  motivo.SP  DEM.INTERL
+Morpheme Category:   	prt         cs         pro
+Words(English):      	como  motivo.SP         eso
+Translation(Spanish):	Parece que eso era el motivo
+
+# sentence level graph:
+(s95h / have-reason-91
+	:ARG1 (s95e / event)
+	:ARG2 (s95h2 / ham'e)
+	:aspect state)
+
+# alignment:
+s95h: 0-0
+s95e: 0-0
+s95h2: 3-3
+
+# document level annotation:
+(s95s0 / sentence
+	:temporal ((s95e :overlap s95h))
+	:modal ((root :modal author3)
+		(author3 :neutral-affirmative s95h))
+	:coref ((s90e :same-event s95e)
+		(s89a :same-entity s95h2)))
+
+
+################################################################################
+# meta-info
+# :: snt96
+Index:               	1	2	3
+Words:               	nahlta                asneyay'ahlta       ha'
+Morphemes:           	na= =hlta        as- ney -ay' -a =hlta       ha'
+Morpheme Gloss(Spanish):	DEF= =PHOD  1SG.I oír PST/HAB INF =PHOD  DEM.DIST
+Morpheme Category:   	prt prt      v:Any v v:Any v:Any prt       pro
+Words(English):      	DEF                          eso      None
+Translation(Spanish):	Eso es lo que escuché antes
+
+# sentence level graph:
+(s96e / enneyay'a-00
+	:experiencer (s96p / person
+		:refer-person 1st
+		:refer-number singular)
+	:stimulus (s96h / ha')
+	:aspect state)
+
+# alignment:
+s96e: 0-0
+s96p: 0-0
+s96h: 3-3
+
+# document level annotation:
+(s96s0 / sentence
+	:modal ((root :modal author3)
+		(s96p :full-affirmative s96e)
+		(s96e :unspecified s96h)
+		(author3 :full-affirmative s96p))
+	:coref ((s71e :same-event s96e)
+		(s72p2 :same-entity s96p)
+		(s81a :same-event s96h)))
+
+
+################################################################################
+# meta-info
+# :: snt97
+Index:               	1	2
+Words:               	historia     real
+Morphemes:           	historia     real
+Morpheme Gloss(Spanish):	historia.SP  real.SP
+Morpheme Category:   	sus       cs
+Words(English):      	la historia  real.SP
+Translation(Spanish):	ES historia real
+
+# sentence level graph:
+(s97h / have-role-91
+	:ARG0 (s97e / event)
+	:ARG2 (s97h2 / historia
+		:mod (s97r / real))
+	:aspect state)
+
+# alignment:
+s97h: 1-1
+s97r: 2-2
+s97i2: 0-0
+s97e: 0-0
+
+# document level annotation:
+(s97s0 / sentence
+	:temporal ((present-reference :overlap s97h))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s97h))
+	:coref ((s96h :same-event s97e)))
+
+
+################################################################################
+# meta-info
+# :: snt98
+Index:               	1	2
+Words:               	have'  mokvankoho
+Morphemes:           	have'  mokvankoho
+Morpheme Gloss(Spanish):	NEG.PRED     mentira
+Morpheme Category:   	prt  <Not Sure>
+Words(English):      	no     mentira
+Translation(Spanish):	No es mentira
+
+# sentence level graph:
+(s98h / have-role-91
+	:ARG0 (s98e / event)
+	:ARG2 (s98m / mokvankoho)
+	:aspect state)
+
+# alignment:
+s98i2: 0-0
+s98t: 0-0
+s98m: 2-2
+
+# document level annotation:
+(s98s0 / sentence
+	:temporal ((present-reference :overlap s98h))
+	:modal ((root :modal author3)
+		(author3 :full-negative s98h))
+	:coref ((s97e :same-event s98e)))
+
+
+################################################################################
+# meta-info
+# :: snt99
+Index:               	1	2
+Words:               	na'hoyehlta      na'hoyehlnahlta
+Morphemes:           	na'hoye =hlta  na'hoye =hlna =hlta
+Morpheme Gloss(Spanish):	verdad =PHOD    verdad =REP =PHOD
+Morpheme Category:   	adv prt          adv prt prt
+Words(English):      	verdad                 None
+Translation(Spanish):	Era la verdad, se dice que era la verdad
+
+# sentence level graph:
+(s99e / event
+	:actor (s99p / person)
+	:theme (s99h / have-mod-91
+		:ARG1 (s99e2 / event
+			:quote s99e)
+		:ARG2 (s99n / na'hoyehlta)
+		:aspect state
+		:quote s99e))
+
+# alignment:
+s99e: 0-0
+s99p: 0-0
+s99h: 0-0
+s99t: 0-0
+s99n: 1-1
+
+# document level annotation:
+(s99s0 / sentence
+	:temporal ((s99e :overlap s99h))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s99e)
+		(author3 :full-affirmative s99p)
+		(s99p :full-affirmative s99h)
+		(s99p :full-affirmative s99e2))
+	:coref ((s92e2 :same-event s99e)
+		(s72p :same-entity s99p)
+		(s98e :same-event s99e2)))
+
+
+################################################################################
+# meta-info
+# :: snt100
+Index:               	1	2	3
+Words:               	ta             antahak                          ehltennaskama
+Morphemes:           	=ta         an- t -ahak                e- hl- tenn -as -kam -a
+Morpheme Gloss(Spanish):	=PHOD  2/3F.I ser V2.NFUT  1SG.III DISTR hablar APPL PST/HAB INF
+Morpheme Category:   	prt       v:Any v v:Any          v:Any v:Any v v>v v:Any v:Any
+Words(English):      	antes                  es                                 hablar
+Translation(Spanish):	Eso es lo que me contaban
+
+# sentence level graph:
+(s100i2 / identity-91
+	:ARG0 (s100t / thing)
+	:ARG1 (s100t2 / thing
+		:theme-of (s100e / ehltennaskama-00
+			:actor (s100p / person
+				:refer-person 3rd
+				:refer-number plural)
+			:recipient (s100p2 / person
+				:refer-person 1st
+				:refer-number singular)
+			:aspect performance)
+		:quote s100e)
+	:aspect state)
+
+# alignment:
+s100i2: 0-0
+s100t: 0-0
+s100t2: 0-0
+s100e: 0-0
+s100p: 0-0
+s100p2: 0-0
+
+# document level annotation:
+(s100s0 / sentence
+	:temporal ((present-reference :overlap s100i2))
+	:modal ((root :modal author3)
+		(author3 :full-affirmative s100e)
+		(author3 :full-affirmative s100p)
+		(author3 :full-affirmative s100i2)
+		(s100p :full-affirmative s100t2))
+	:coref ((s99e2 :same-event s100t)
+		(s99e :same-event s100e)
+		(s99p :same-entity s100p)
+		(s96p :same-entity s100p2)))
+

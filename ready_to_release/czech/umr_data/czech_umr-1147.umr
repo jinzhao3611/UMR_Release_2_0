@@ -1,0 +1,393 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1 2      3
+Words: Z nových časopisů
+
+# sentence level graph:
+(s1e1 / event
+        :start (s1c1 / časopis
+            :mod (s1n1 / nový
+                :refer-number plural)
+            :refer-number plural)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1c1: 1-1,3-3
+s1n1: 2-2
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2          3  4  5  6  7         8     9       10 11 12    13 14   15 16    17 18
+Words: Revue fotografie 2  /  94 (  vydavatel Pavel Pechatý ,  64 stran ,  cena 40 korun )  .
+
+# sentence level graph:
+(s2r1 / Revue
+        :possessor (s2f1 / fotografie
+            :mod (s2x1 / 2_94)
+            :refer-number singular)
+        :parenthesis (s2a1 / and
+            :op1 (s2e1 / event
+                :ARG1 (s2v1 / vydavatel
+                    :refer-number singular)
+                :ARG0 (s2p1 / Pechatý
+                    :mod (s2p2 / Pavel
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect state)
+            :op2 (s2s1 / strana
+                :mod (s2x2 / 64)
+                :refer-number plural)
+            :op3 (s2e2 / event
+                :ARG0 (s2c1 / cena
+                    :refer-number singular)
+                :ARG1 (s2k1 / koruna
+                    :mod (s2x3 / 40)
+                    :refer-number plural)
+                :aspect state))
+        :refer-number singular)
+
+# alignment:
+s2r1: 1-1
+s2f1: 2-2
+s2x1: 3-3,5-5
+s2a1: 13-13
+s2e1: 0-0
+s2v1: 7-7
+s2p1: 9-9
+s2p2: 8-8
+s2s1: 12-12
+s2x2: 11-11
+s2e2: 0-0
+s2c1: 14-14
+s2k1: 16-16
+s2x3: 15-15
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2       3     4     5          6  7       8        9     10 11            12     13     14       15      16 17            18         19
+Words: Téma druhého čísla Revue fotografie (  vychází šestkrát ročně )  předznamenává úvodní článek Zkoumání možného o  žurnalistické fotografii .
+
+# sentence level graph:
+(s3p1 / předznamenávat-001
+        :ARG1 (s3t1 / téma
+            :possessor (s3c1 / číslo
+                :mod (s3d1 / druhý
+                    :refer-number singular)
+                :possessor (s3r1 / Revue
+                    :mod (s3f1 / fotografie
+                        :refer-number singular)
+                    :parenthesis (s3v1 / vycházet-015
+                        :ARG0 s3r1
+                        :frequency (s3s1 / šestkrát
+                            :temporal (s3r2 / ročně))
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3c2 / článek
+            :name (s3z1 / Zkoumání
+                :ARG0 (s3e1 / entity)
+                :ARG1 (s3m1 / možný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s3f2 / fotografie
+                :mod (s3z2 / žurnalistický
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3u1 / úvodní
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect habitual)
+
+# alignment:
+s3p1: 11-11
+s3t1: 1-1
+s3c1: 3-3
+s3d1: 2-2
+s3r1: 4-4
+s3f1: 5-5
+s3v1: 7-7
+s3s1: 8-8
+s3r2: 9-9
+s3c2: 13-13
+s3z1: 14-14
+s3e1: 0-0
+s3m1: 15-15
+s3f2: 16-16,18-18
+s3z2: 17-17
+s3u1: 12-12
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3c1 :same-entity s2r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2       3       4           5       6          7         8     9        10 11      12            13         14
+Words: V  rubrice Výstava představuje časopis maďarského fotografa André Kertésze ,  pionýra žurnalistické fotografie .
+
+# sentence level graph:
+(s4p1 / představovat-001
+        :place (s4r1 / rubrika
+            :name (s4v1 / Výstava
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4c1 / časopis
+            :refer-number singular)
+        :ARG2 (s4e1 / entity)
+        :ARG1 (s4i1 / identity-91
+            :ARG1 (s4k1 / Kertész
+                :mod (s4a1 / André
+                    :refer-number singular)
+                :mod (s4f1 / fotograf
+                    :mod (s4m1 / maďarský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s4p2 / pionýr
+                :possessor (s4f2 / fotografie
+                    :mod (s4z1 / žurnalistický
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4p1: 4-4
+s4r1: 1-2
+s4v1: 3-3
+s4c1: 5-5
+s4e1: 0-0
+s4i1: 10-10
+s4k1: 9-9
+s4a1: 8-8
+s4f1: 7-7
+s4m1: 6-6
+s4p2: 11-11
+s4f2: 13-13
+s4z1: 12-12
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4c1 :same-entity s3c1)
+            (s4f2 :same-entity s3f2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2       3      4     5       6     7  8     9         10      11   12 13       14       15
+Words: V  Galerii zaujal místo Lubomír Kotek ,  který donedávna působil také v  Lidových novinách .
+
+# sentence level graph:
+(s5z1 / zaujmout-002
+        :place (s5g1 / Galerie
+            :refer-number singular)
+        :ARG1 (s5m1 / místo
+            :refer-number singular)
+        :ARG0 (s5k1 / Kotek
+            :mod (s5l1 / Lubomír
+                :refer-number singular)
+            :ARG0-of (s5p1 / působit-004
+                :temporal (s5d1 / donedávna)
+                :clausal-marker (s5t1 / také)
+                :place (s5n1 / noviny
+                    :mod (s5l2 / Lidový
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5z1: 3-3
+s5g1: 1-2
+s5m1: 4-4
+s5k1: 6-6,8-8
+s5l1: 5-5
+s5p1: 10-10
+s5d1: 9-9
+s5t1: 11-11
+s5n1: 12-12,14-14
+s5l2: 13-13
+
+# document level annotation:
+(s5s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2     3         4  5        6        7          8  9      10    11        12
+Words: S  Danou Kyndrovou ,  autorkou sociální fotografie ,  hovoří Karel Oujezdský .
+
+# sentence level graph:
+(s6h1 / hovořit-001
+        :ARG2 (s6i1 / identity-91
+            :ARG1 (s6k1 / Kyndrová
+                :mod (s6d1 / Dana
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s6a1 / autorka
+                :possessor (s6f1 / fotografie
+                    :mod (s6s1 / sociální
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular))
+        :ARG1 (s6e1 / entity)
+        :ARG0 (s6o1 / Oujezdský
+            :mod (s6k2 / Karel
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6h1: 9-9
+s6i1: 4-4
+s6k1: 1-1,3-3
+s6d1: 2-2
+s6a1: 1-1,5-5
+s6f1: 7-7
+s6s1: 6-6
+s6e1: 0-0
+s6o1: 11-11
+s6k2: 10-10
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2         3     4        5  6    7    8      9  10  11 12 13    14         15        16 17          18 19    20    21
+Words: V  technické části magazínu je mimo jiné anketa o  tom ,  s  jakým technickým vybavením se fotografuje v  našem tisku .
+
+# sentence level graph:
+(s7b1 / být-011
+        :place (s7c1 / část
+            :mod (s7m1 / magazín
+                :refer-number singular)
+            :mod (s7t1 / technický
+                :refer-number singular)
+            :refer-number singular)
+        :subtraction (s7j1 / jiný
+            :refer-number singular)
+        :ARG0 (s7a1 / anketa
+            :ARG1 (s7f1 / fotografovat-001
+                :ARG0 (s7e1 / entity)
+                :ARG1 (s7e2 / entity)
+                :companion (s7v1 / vybavení
+                    :mod (s7j2 / jaký
+                        :refer-number singular)
+                    :mod (s7t2 / technický
+                        :refer-number singular)
+                    :refer-number singular)
+                :place (s7t3 / tisk
+                    :possessor (s7e3 / entity
+                        :refer-number plural
+                        :refer-person 1st)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7b1: 5-5
+s7c1: 1-1,3-3
+s7m1: 4-4
+s7t1: 2-2
+s7j1: 6-7
+s7a1: 8-8
+s7f1: 9-10,16-17
+s7e1: 0-0
+s7e2: 0-0
+s7v1: 12-12,15-15
+s7j2: 13-13
+s7t2: 14-14
+s7t3: 18-18,20-20
+s7e3: 19-19
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7m1 :same-entity s4c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2   3      4  5        6              7     8
+Words: Nechybí ani pohled do historie fotografického média .
+
+# sentence level graph:
+(s8c1 / chybět-004
+        :clausal-marker (s8a1 / ani)
+        :ARG0 (s8p1 / pohled
+            :goal (s8h1 / historie
+                :possessor (s8m1 / médium
+                    :mod (s8f1 / fotografický
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s8c1: 1-1
+s8a1: 2-2
+s8p1: 3-3
+s8h1: 4-5
+s8m1: 7-7
+s8f1: 6-6
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1 2   3
+Words: ( lin )
+
+# sentence level graph:
+(s9l1 / lin)
+
+# alignment:
+s9l1: 2-2
+
+# document level annotation:
+(s9s0 / sentence)
+
+

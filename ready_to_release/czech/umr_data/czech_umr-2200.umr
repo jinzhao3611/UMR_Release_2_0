@@ -1,0 +1,76 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2        3  4     5      6      7
+Words: Schránka vzbuzuje na první pohled důvěru .
+
+# sentence level graph:
+(s1v1 / vzbuzovat-001
+        :ARG0 (s1s1 / schránka
+            :refer-number singular)
+        :place (s1e1 / entity)
+        :temporal (s1p1 / pohled
+            :mod (s1p2 / první
+                :refer-number singular)
+            :refer-number singular)
+        :predicative-noun (s1d1 / důvěra
+            :ARG0 s1e1
+            :ARG1 s1s1
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1v1: 2-2
+s1s1: 1-1
+s1e1: 0-0
+s1p1: 3-3,5-5
+s1p2: 4-4
+s1d1: 6-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2         3    4   5    6   7  8  9  10   11      12  13
+Words: Její nevýhodou může být snad jen to ,  že není kdykoli při ruce
+
+# sentence level graph:
+(s2b1 / být-007
+        :ARG1 (s2n1 / nevýhoda
+            :possessor (s2e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :clausal-marker (s2s1 / snad)
+        :clausal-marker (s2j1 / jen)
+        :ARG0 (s2b2 / být-052
+            :ARG0 s2e1
+            :temporal (s2k1 / kdykoli)
+            :part-of-phraseme (s2p1 / při_ruce
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :aspect activity)
+
+# alignment:
+s2b1: 3-4
+s2n1: 2-2
+s2e1: 1-1
+s2s1: 5-5
+s2j1: 6-6
+s2b2: 7-7,9-10
+s2k1: 11-11
+s2p1: 12-13
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2e1 :same-entity s1s1)))
+
+

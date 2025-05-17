@@ -1,0 +1,948 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2   3
+Words: Střemhlavý let rublu
+
+# sentence level graph:
+(s1l1 / let
+        :mod (s1s1 / střemhlavý
+            :refer-number singular)
+        :ARG0 (s1r1 / rubl
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1l1: 2-2
+s1s1: 1-1
+s1r1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1
+Words: komentář
+
+# sentence level graph:
+(s2k1 / komentář
+        :refer-number singular)
+
+# alignment:
+s2k1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2   3
+Words: Střemhlavý let rublu
+
+# sentence level graph:
+(s3l1 / let
+        :mod (s3s1 / střemhlavý
+            :refer-number singular)
+        :ARG0 (s3r1 / rubl
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s3l1: 2-2
+s3s1: 1-1
+s3r1: 3-3
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3l1 :same-entity s1l1)
+            (s3r1 :same-entity s1r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2   3  4    5    6  7        8        9          10    11       12        13      14      15    16 17     18 19         20    21     22      23 24  25 26     27   28   29     30 31      32
+Words: Když byl v  roce 1990 na pracovní návštěvě Sovětského svazu tehdejší federální ministr financí Klaus ,  snažil se přesvědčit svého kolegu Pavlova ,  aby se změnil kurs mezi rublem a  korunou .
+
+# sentence level graph:
+(s4s1 / snažit-se-001
+        :temporal (s4b1 / být-011
+            :temporal (s4r1 / rok
+                :mod (s4x1 / 1990)
+                :refer-number singular)
+            :place (s4n1 / návštěva
+                :mod (s4p1 / pracovní
+                    :refer-number singular)
+                :ARG1 (s4s2 / svaz
+                    :mod (s4s3 / Sovětský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s4k1 / Klaus
+                :mod (s4m1 / ministr
+                    :mod (s4t1 / tehdejší
+                        :refer-number singular)
+                    :mod (s4f1 / federální
+                        :refer-number singular)
+                    :possessor (s4f2 / finance
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity)
+        :ARG0 s4k1
+        :ARG1 (s4p2 / přesvědčit-001
+            :ARG0 s4k1
+            :ARG2 (s4p3 / Pavlov
+                :mod (s4k2 / kolega
+                    :possessor s4k1
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s4z1 / změnit-001
+                :ARG0 (s4e1 / entity)
+                :ARG1 (s4k3 / kurs
+                    :place (s4a1 / and
+                        :op1 (s4r2 / rubl
+                            :refer-number singular)
+                        :op2 (s4k4 / koruna
+                            :refer-number singular))
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :aspect performance)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s4s1: 17-18
+s4b1: 1-2
+s4r1: 3-4
+s4x1: 5-5
+s4n1: 6-6,8-8
+s4p1: 7-7
+s4s2: 10-10
+s4s3: 9-9
+s4k1: 15-15,20-20
+s4m1: 13-13
+s4t1: 11-11
+s4f1: 12-12
+s4f2: 14-14
+s4p2: 19-19
+s4p3: 22-22
+s4k2: 21-21
+s4z1: 24-26
+s4e1: 0-0
+s4k3: 27-27
+s4a1: 30-30
+s4r2: 28-29
+s4k4: 28-28,31-31
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-entity s4r1)
+            (s4r2 :same-entity s3r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2    3  4    5     6     7  8    9      10     11  12    13 14   15
+Words: Tehdy bylo za rubl deset korun a  naše strana žádala pět korun za rubl .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5b1 / být-011
+            :temporal (s5t1 / tehdy)
+            :substitute (s5r1 / rubl
+                :refer-number singular)
+            :ARG0 (s5k1 / koruna
+                :mod (s5d1 / deset
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular
+            :aspect activity)
+        :op2 (s5z1 / žádat-002
+            :ARG0 (s5s1 / strana
+                :possessor (s5e1 / entity
+                    :refer-number plural
+                    :refer-person 1st)
+                :refer-number singular)
+            :ARG1 (s5k2 / koruna
+                :mod (s5p1 / pět
+                    :refer-number singular)
+                :substitute (s5r2 / rubl
+                    :refer-number singular)
+                :refer-number plural)
+            :aspect activity))
+
+# alignment:
+s5a1: 7-7
+s5b1: 2-2
+s5t1: 1-1
+s5r1: 3-4
+s5k1: 6-6
+s5d1: 5-5
+s5z1: 10-10
+s5s1: 9-9
+s5e1: 8-8
+s5k2: 12-12
+s5p1: 11-11
+s5r2: 13-14
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4f1)
+            (s5r2 :same-entity s5r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2  3      4      5         6   7      8  9  10   11    12           13 14    15       16     17         18       19     20 21   22 23 24 25
+Words: Pavlov se údajně tomuto požadavku jen zasmál ,  my jsme proto jednostranně v  rámci možností daných tehdejšími dohodami přešli na kurs 8  :  1  .
+
+# sentence level graph:
+(s6h1 / have-result-91
+        :ARG1 (s6z1 / zasmát-se-001
+            :ARG0 (s6p1 / Pavlov
+                :refer-number singular)
+            :clausal-marker (s6u1 / údajně)
+            :ARG1 (s6p2 / požadavek
+                :mod (s6t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s6j1 / jen)
+            :refer-number singular
+            :aspect performance)
+        :clausal-marker (s6p3 / proto)
+        :ARG2 (s6p4 / přejít-001
+            :place (s6m1 / možnost
+                :mod (s6d1 / daný
+                    :ARG0 (s6d2 / dohoda
+                        :mod (s6t2 / tehdejší
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 (s6e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :manner (s6j2 / jednostranně)
+            :ARG1 (s6k1 / kurs
+                :mod (s6m2 / math
+                    :op1 (s6x1 / 8)
+                    :op2 (s6x2 / 1))
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s6h1: 8-8
+s6z1: 2-2,7-7
+s6p1: 1-1
+s6u1: 3-3
+s6p2: 5-5
+s6t1: 4-4
+s6j1: 6-6
+s6p3: 11-11
+s6p4: 10-10,19-19
+s6m1: 13-15
+s6d1: 16-16
+s6d2: 18-18
+s6t2: 17-17
+s6e1: 9-9
+s6j2: 12-12
+s6k1: 20-21
+s6m2: 23-23
+s6x1: 22-22
+s6x2: 24-24
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p1 :same-entity s4p3)
+            (s6p2 :same-event s4s1)
+            (s6t2 :same-entity s4t1)
+            (s6e1 :same-entity s5e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2  3   4      5  6       7     8    9    10      11 12     13        14 15     16 17   18    19
+Words: A  za pár měsíců už přestal přímý kurs mezi korunou a  rublem existovat -  počítá se přes dolar .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7p1 / přestat-001
+            :clausal-marker (s7a2 / a)
+            :temporal (s7p2 / pár
+                :mod (s7m1 / měsíc
+                    :refer-number plural)
+                :refer-number singular)
+            :temporal (s7u1 / už)
+            :ARG0 (s7k1 / kurs
+                :mod (s7p3 / přímý
+                    :refer-number singular)
+                :place (s7a3 / and
+                    :op1 (s7k2 / koruna
+                        :refer-number singular)
+                    :op2 (s7r1 / rubl
+                        :refer-number singular))
+                :refer-number singular)
+            :ARG1 (s7e1 / existovat-001
+                :ARG0 s7k1
+                :aspect activity)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s7p4 / počítat-006
+            :clausal-marker s7a2
+            :ARG0 (s7e2 / entity)
+            :ARG1 (s7e3 / entity
+                :refer-person 3rd)
+            :instrument (s7d1 / dolar
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s7a1: 14-14
+s7p1: 6-6
+s7p2: 2-3
+s7m1: 4-4
+s7u1: 5-5
+s7k1: 8-8
+s7p3: 7-7
+s7a3: 11-11
+s7k2: 9-10
+s7r1: 9-9,12-12
+s7e1: 13-13
+s7a2: 1-1
+s7p4: 15-16
+s7e2: 0-0
+s7e3: 0-0
+s7d1: 17-18
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7k2 :same-entity s4k4)
+            (s7r1 :same-entity s4r2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1      2  3   4    5         6     7  8   9  10       11        12      13   14
+Words: Pavlov se pak stal předsedou vlády ,  což se Klausovi přihodilo nakonec také .
+
+# sentence level graph:
+(s8a1 / and
+        :op1 (s8s1 / stát-se-001
+            :ARG0 (s8p1 / Pavlov
+                :refer-number singular)
+            :temporal (s8p2 / pak)
+            :ARG1 (s8p3 / předseda
+                :possessor (s8v1 / vláda
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s8p4 / přihodit-se-001
+            :ARG0 (s8c1 / což
+                :refer-number singular)
+            :ARG1 (s8k1 / Klaus
+                :refer-number singular)
+            :temporal (s8n1 / nakonec)
+            :clausal-marker (s8t1 / také)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s8a1: 7-7
+s8s1: 2-2,4-4
+s8p1: 1-1
+s8p2: 3-3
+s8p3: 5-5
+s8v1: 6-6
+s8p4: 9-9,11-11
+s8c1: 8-8
+s8k1: 10-10
+s8n1: 12-12
+s8t1: 13-13
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8p1 :same-entity s6p1)
+            (s8c1 :same-event s8s1)
+            (s8k1 :same-entity s4k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1     2      3    4    5  6      7    8     9  10           11        12   13 14 15
+Words: Ovšem Pavlov nyní sedí ve vězení jako jeden z  organizátorů srpnového puče .  .  .
+
+# sentence level graph:
+(s9s1 / sedět-002
+        :clausal-marker (s9o1 / ovšem)
+        :ARG0 (s9p1 / Pavlov
+            :refer-number singular)
+        :temporal (s9n1 / nyní)
+        :place (s9v1 / vězení
+            :refer-number singular)
+        :manner (s9j1 / jeden
+            :mod-of s9p1
+            :start (s9o2 / organizátor
+                :ARG1 (s9p2 / puč
+                    :mod (s9s2 / srpnový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9s1: 4-4
+s9o1: 1-1
+s9p1: 2-2
+s9n1: 3-3
+s9v1: 5-6
+s9j1: 7-8
+s9o2: 9-10
+s9p2: 12-12
+s9s2: 11-11
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p1 :same-entity s8p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1 2    3
+Words: A rubl ?
+
+# sentence level graph:
+(s10e1 / event
+        :clausal-marker (s10a1 / a)
+        :ARG0 (s10r1 / rubl
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s10e1: 0-0
+s10a1: 1-1
+s10r1: 2-2
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10r1 :same-entity s7r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1       2  3        4       5  6   7    8       9     10   11     12              13   14    15  16 17   18  19 20 21         22  23
+Words: Zatímco v  minulých týdnech se dal kurs ruského rublu vůči dolaru charakterizovat jako volný pád ,  nyní jde už o  střemhlavý let .
+
+# sentence level graph:
+(s11c1 / contrast-91
+        :ARG2 (s11c2 / charakterizovat-001
+            :temporal (s11t1 / týden
+                :mod (s11m1 / minulý
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s11k1 / kurs
+                :possessor (s11r1 / rubl
+                    :mod (s11r2 / ruský
+                        :refer-number singular)
+                    :refer-number singular)
+                :regard (s11d1 / dolar
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s11e1 / entity)
+            :manner (s11p1 / pád
+                :mod-of s11k1
+                :mod (s11v1 / volný
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect process)
+        :ARG1 (s11j1 / jít-035
+            :temporal (s11n1 / nyní)
+            :clausal-marker (s11u1 / už)
+            :ARG0 (s11l1 / let
+                :mod (s11s1 / střemhlavý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s11c1: 1-1
+s11j1: 18-18
+s11n1: 17-17
+s11u1: 19-19
+s11l1: 20-20,22-22
+s11s1: 21-21
+s11c2: 5-6,12-12
+s11t1: 2-2,4-4
+s11m1: 3-3
+s11k1: 7-7
+s11r1: 9-9
+s11r2: 8-8
+s11d1: 10-11
+s11e1: 0-0
+s11p1: 13-13,15-15
+s11v1: 14-14
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11l1 :same-entity s3l1)
+            (s11r1 :same-entity s10r1)
+            (s11d1 :same-entity s7d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1        2    3  4     5        6  7      8  9  10      11      12   13       14   15     16 17  18    19 20    21 22   23  24 25 26           27    28      29  30    31
+Words: Začátkem léta se dolar prodával v  Moskvě i  na většině dalších míst bývalého SSSR zhruba za sto rublů ,  včera to bylo 248 a  na petrohradské burze dokonce 302 rubly .
+
+# sentence level graph:
+(s12a1 / and
+        :op1 (s12p1 / prodávat-001
+            :temporal (s12l1 / léto
+                :refer-number singular)
+            :ARG1 (s12d1 / dolar
+                :refer-number singular)
+            :ARG0 (s12e1 / entity)
+            :ARG2 (s12e2 / entity)
+            :place (s12a2 / and
+                :op1 (s12m1 / Moskva
+                    :refer-number singular)
+                :op2 (s12v1 / většina
+                    :mod (s12m2 / místo
+                        :mod (s12d2 / další
+                            :refer-number plural)
+                        :possessor (s12s1 / SSSR
+                            :mod (s12b1 / bývalý
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular))
+            :instrument (s12s2 / sto
+                :extent (s12z1 / zhruba)
+                :mod (s12r1 / rubl
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :aspect habitual)
+        :op2 (s12b2 / být-007
+            :temporal (s12v2 / včera)
+            :ARG0 (s12t1 / ten
+                :refer-number singular)
+            :ARG1 (s12x1 / 248)
+            :refer-number singular
+            :aspect activity)
+        :op3 (s12b3 / být-007
+            :place (s12b4 / burza
+                :mod (s12p2 / petrohradský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s12t1
+            :ARG1 (s12r2 / rubl
+                :clausal-marker (s12d3 / dokonce)
+                :mod (s12x3 / 302)
+                :refer-number plural)
+            :refer-number singular
+            :aspect activity))
+
+# alignment:
+s12a1: 24-24
+s12p1: 3-3,5-5
+s12l1: 1-2
+s12d1: 4-4
+s12e1: 0-0
+s12e2: 0-0
+s12a2: 8-8
+s12m1: 6-7
+s12v1: 9-10
+s12m2: 12-12
+s12d2: 11-11
+s12s1: 14-14
+s12b1: 13-13
+s12s2: 16-17
+s12z1: 15-15
+s12r1: 18-18
+s12b2: 22-22
+s12v2: 20-20
+s12t1: 21-21
+s12x1: 23-23
+s12b3: 0-0
+s12b4: 25-25,27-27
+s12p2: 26-26
+s12r2: 30-30
+s12d3: 28-28
+s12x3: 29-29
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12s1 :same-entity s4s2)
+            (s12t1 :same-event s12p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1        2  3    4  5  6     7      8     9  10    11       12 13  14    15 16      17 18 19 20 21    22  23  24    25   26           27        28 29       30
+Words: Vzhledem k  tomu ,  že ještě minulý týden se dolar směňoval za 200 rublů ,  znamená to ,  že se během pár dnů ruská měna znehodnotila prakticky o  čtvrtinu .
+
+# sentence level graph:
+(s13z1 / znamenat-001
+        :regard (s13s1 / směňovat-001
+            :clausal-marker (s13j1 / ještě)
+            :temporal (s13t1 / týden
+                :mod (s13m1 / minulý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s13d1 / dolar
+                :refer-number singular)
+            :ARG0 (s13e1 / entity)
+            :effect (s13r1 / rubl
+                :mod (s13x1 / 200)
+                :refer-number plural)
+            :refer-number singular
+            :aspect activity)
+        :ARG0 (s13t2 / ten
+            :refer-number singular)
+        :ARG1 (s13z2 / znehodnotit-001
+            :temporal (s13d2 / den
+                :mod (s13p1 / pár)
+                :refer-number plural)
+            :ARG1 (s13m2 / měna
+                :mod (s13r2 / ruský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s13e2 / entity)
+            :extent (s13c1 / čtvrtina
+                :clausal-marker (s13p2 / prakticky)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s13z1: 16-16
+s13s1: 1-3,5-5,9-9,11-11
+s13j1: 6-6
+s13t1: 8-8
+s13m1: 7-7
+s13d1: 10-10
+s13e1: 0-0
+s13r1: 12-12,14-14
+s13x1: 13-13
+s13t2: 17-17
+s13z2: 19-20,26-26
+s13d2: 21-21,23-23
+s13p1: 22-22
+s13m2: 25-25
+s13r2: 24-24
+s13e2: 0-0
+s13c1: 28-29
+s13p2: 27-27
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13d1 :same-entity s12d1)
+            (s13t2 :same-entity s12a1)
+            (s13m2 :same-entity s11r1)
+            (s13r2 :same-entity s11r2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1      2  3     4     5  6        7  8        9        10         11       12
+Words: Rublem se stále platí ve čtrnácti z  patnácti bývalých sovětských republik ;
+
+# sentence level graph:
+(s14p1 / platit-001
+        :instrument (s14r1 / rubl
+            :refer-number singular)
+        :ARG0 (s14e1 / entity)
+        :ARG1 (s14e2 / entity)
+        :duration (s14s1 / stále)
+        :place (s14c1 / čtrnáct
+            :start (s14r2 / republika
+                :mod (s14b1 / bývalý
+                    :refer-number plural)
+                :mod (s14s2 / sovětský
+                    :refer-number plural)
+                :mod (s14p2 / patnáct
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s14p1: 2-2,4-4
+s14r1: 1-1
+s14e1: 0-0
+s14e2: 0-0
+s14s1: 3-3
+s14c1: 5-6
+s14r2: 7-7,11-11
+s14b1: 9-9
+s14s2: 10-10
+s14p2: 8-8
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14r1 :same-entity s13m2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1      2        3     4       5         6       7       8
+Words: jedině Estonsko zatím zvládlo skutečnou měnovou reformu .
+
+# sentence level graph:
+(s15z1 / zvládnout-001
+        :clausal-marker (s15j1 / jedině)
+        :ARG0 (s15e1 / Estonsko
+            :refer-number singular)
+        :temporal (s15z2 / zatím)
+        :ARG1 (s15r1 / reforma
+            :mod (s15s1 / skutečný
+                :refer-number singular)
+            :mod (s15m1 / měnový
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s15z1: 4-4
+s15j1: 1-1
+s15e1: 2-2
+s15z2: 3-3
+s15r1: 7-7
+s15s1: 5-5
+s15m1: 6-6
+
+# document level annotation:
+(s15s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1   2   3  4  5     6        7  8       9     10    11 12    13 14    15    16     17 18    19 20     21
+Words: Pro nás je to velmi zajímavé -  původní poměr deset k  jedné se tento týden otočil na jedna k  deseti .
+
+# sentence level graph:
+(s16a1 / and
+        :op1 (s16b1 / být-007
+            :affectee (s16e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :ARG0 (s16t1 / ten
+                :refer-number singular)
+            :ARG1 (s16z1 / zajímavý
+                :extent (s16v1 / velmi)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s16o1 / otočit-se-001
+            :ARG0 (s16p1 / poměr
+                :mod (s16p2 / původní
+                    :refer-number singular)
+                :mod (s16m1 / math
+                    :op1 (s16d1 / deset
+                        :refer-number singular)
+                    :op2 (s16j1 / jeden
+                        :refer-number singular))
+                :refer-number singular)
+            :temporal (s16t2 / týden
+                :mod (s16t3 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s16p3 / poměr
+                :mod (s16m2 / math
+                    :op1 (s16j2 / jeden
+                        :refer-number singular)
+                    :op2 (s16d2 / deset
+                        :refer-number plural))
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s16a1: 7-7
+s16b1: 3-3
+s16e1: 1-2
+s16t1: 4-4
+s16z1: 6-6
+s16v1: 5-5
+s16o1: 13-13,16-16
+s16p1: 9-9
+s16p2: 8-8
+s16m1: 11-11
+s16d1: 10-10
+s16j1: 12-12
+s16t2: 15-15
+s16t3: 14-14
+s16p3: 0-0
+s16m2: 19-19
+s16j2: 18-18
+s16d2: 20-20
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16e1 :same-entity s6e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1     2     3         4  5      6     7         8  9           10      11      12         13  14    15    16        17
+Words: Soudě podle informací o  vývoji ruské ekonomiky ,  překročením magické hranice střemhlavý let rublu ještě neskončil .
+
+# sentence level graph:
+(s17s1 / skončit-005
+        :condition (s17s2 / soudě
+            :regard (s17i1 / informace
+                :ARG1 (s17v1 / vývoj
+                    :ARG0 (s17e1 / ekonomika
+                        :mod (s17r1 / ruský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :instrument (s17p1 / překročení
+            :ARG0 (s17e2 / entity)
+            :ARG1 (s17h1 / hranice
+                :mod (s17m1 / magický
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s17l1 / let
+            :mod (s17s3 / střemhlavý
+                :refer-number singular)
+            :ARG0 (s17r2 / rubl
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s17j1 / ještě)
+        :refer-number singular
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s17s1: 16-16
+s17s2: 1-1
+s17i1: 2-3
+s17v1: 4-5
+s17e1: 7-7
+s17r1: 6-6
+s17p1: 9-9
+s17e2: 0-0
+s17h1: 11-11
+s17m1: 10-10
+s17l1: 13-13
+s17s3: 12-12
+s17r2: 14-14
+s17j1: 15-15
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17r1 :same-entity s13r2)
+            (s17l1 :same-entity s11l1)
+            (s17r2 :same-entity s14r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1  2  3       4  5   6  7    8    9     10   11        12
+Words: A  je otázkou ,  zda se tato měna vůbec může zachránit .
+
+# sentence level graph:
+(s18b1 / být-007
+        :clausal-marker (s18a1 / a)
+        :ARG1 (s18o1 / otázka
+            :refer-number singular)
+        :ARG0 (s18z1 / zachránit-001
+            :ARG1 (s18m1 / měna
+                :mod (s18t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s18e1 / entity)
+            :extent (s18v1 / vůbec)
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s18b1: 2-2
+s18a1: 1-1
+s18o1: 3-3
+s18z1: 5-6,10-11
+s18m1: 8-8
+s18t1: 7-7
+s18e1: 0-0
+s18v1: 9-9
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18m1 :same-entity s17r2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s19-root
+# :: snt19
+Index: 1   2           3    4  5      6       7
+Words: Bez radikálního řezu to zřejmě nepůjde .
+
+# sentence level graph:
+(s19j1 / jít-031
+        :companion (s19r1 / řez
+            :mod (s19r2 / radikální
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s19t1 / ten
+            :refer-number singular)
+        :clausal-marker (s19z1 / zřejmě)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s19j1: 6-6
+s19r1: 1-1,3-3
+s19r2: 2-2
+s19t1: 4-4
+s19z1: 5-5
+
+# document level annotation:
+(s19s0 / sentence
+    :coref ((s19t1 :same-event s18z1)))
+
+

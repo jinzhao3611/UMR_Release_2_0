@@ -1,0 +1,1034 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Krátce
+
+# sentence level graph:
+(s1e1 / event
+        :manner (s1k1 / krátce)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1k1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1  2         3    4  5      6       7     8           9      10   11     12         13        14   15       16   17
+Words: Na Eiffelově věži v  Paříži zavlála včera francouzská vlajka jako symbol osvobození metropole před padesáti lety .
+
+# sentence level graph:
+(s2z1 / zavlát-001
+        :place (s2v1 / věž
+            :possessor (s2e1 / Eiffel
+                :refer-number singular)
+            :place (s2p1 / Paříž
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s2v2 / včera)
+        :ARG0 (s2v3 / vlajka
+            :mod (s2f1 / francouzský
+                :refer-number singular)
+            :refer-number singular)
+        :manner (s2s1 / symbol
+            :mod-of s2v3
+            :possessor (s2o1 / osvobození
+                :ARG1 (s2m1 / metropole
+                    :refer-number singular)
+                :ARG0 (s2e2 / entity)
+                :temporal (s2r1 / rok
+                    :mod (s2p2 / padesát
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s2z1: 6-6
+s2v1: 1-1,3-3
+s2e1: 2-2
+s2p1: 4-5
+s2v2: 7-7
+s2v3: 9-9
+s2f1: 8-8
+s2s1: 10-11
+s2o1: 12-12
+s2m1: 13-13
+s2e2: 0-0
+s2r1: 14-14,16-16
+s2p2: 15-15
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2m1 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2    3   4     5  6       7      8  9     10    11         12 13    14  15      16 17      18 19 20    21   22  23      24        25       26
+Words: Do výše 300 metrů ji vynesli hasiči po vzoru svých předchůdců ,  kteří tak učinili v  poledne 25 .  srpna 1944 pod kulkami německých okupantů .
+
+# sentence level graph:
+(s3v1 / vynést-002
+        :goal (s3v2 / výše
+            :mod (s3m1 / metr
+                :mod (s3x1 / 300)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG1 (s3e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s3h1 / hasič
+            :refer-number plural)
+        :regard (s3p1 / předchůdce
+            :possessor s3h1
+            :ARG0-of (s3u1 / učinit-004
+                :ARG1 (s3t1 / tak)
+                :temporal (s3p2 / poledne
+                    :possessor (s3s1 / srpen
+                        :mod (s3x3 / 25)
+                        :possessor (s3x4 / 1944)
+                        :refer-number singular)
+                    :refer-number singular)
+                :condition (s3k1 / kulka
+                    :mod (s3o1 / okupant
+                        :mod (s3n1 / německý
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :aspect performance)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s3v1: 6-6
+s3v2: 1-2
+s3m1: 4-4
+s3x1: 3-3
+s3e1: 5-5
+s3h1: 7-7,10-10
+s3p1: 8-9,11-11,13-13
+s3u1: 15-15
+s3t1: 14-14
+s3p2: 16-17
+s3s1: 20-20
+s3x3: 18-18
+s3x4: 21-21
+s3k1: 22-23
+s3o1: 25-25
+s3n1: 24-24
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2v3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2       3  4          5           6        7        8          9    10    11 12      13 14          15 16     17   18      19 20     21       22        23 24 25      26      27   28 29  30    31      32           33      34      35
+Words: Během projevu k  účastníkům mezinárodní konvence židovské organizace Bnai Brith v  Chicagu ,  přenášeného z  Bílého domu družicí ,  vyzval americký prezident B  .  Clinton arabské země ,  aby ihned zrušily hospodářskou blokádu Izraele .
+
+# sentence level graph:
+(s4v1 / vyzvat-001
+        :temporal (s4p1 / projev
+            :ARG2 (s4u1 / účastník
+                :possessor (s4k1 / konvence
+                    :mod (s4m1 / mezinárodní
+                        :refer-number singular)
+                    :possessor (s4o1 / organizace
+                        :name (s4x1 / #Forn
+                            :FPHR (s4b1 / Bnai)
+                            :FPHR (s4b2 / Brith))
+                        :mod (s4z1 / židovský
+                            :refer-number singular)
+                        :place (s4c1 / Chicago
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :mod (s4p2 / přenášený
+                :start (s4d1 / dům
+                    :mod (s4b3 / bílý
+                        :refer-number singular)
+                    :refer-number singular)
+                :instrument (s4d2 / družice
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4c2 / Clinton
+            :mod (s4b4 / B)
+            :mod (s4p3 / prezident
+                :mod (s4a1 / americký
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s4z2 / země
+            :mod (s4a2 / arabský
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s4z3 / zrušit-001
+            :temporal (s4i1 / ihned)
+            :ARG0 s4z2
+            :ARG1 (s4b5 / blokáda
+                :mod (s4h1 / hospodářský
+                    :refer-number singular)
+                :ARG1 (s4i2 / Izrael
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4v1: 20-20
+s4p1: 1-2
+s4u1: 3-4
+s4k1: 6-6
+s4m1: 5-5
+s4o1: 8-8
+s4x1: 0-0
+s4b1: 9-9
+s4b2: 10-10
+s4z1: 7-7
+s4c1: 11-12
+s4p2: 14-14
+s4d1: 15-15,17-17
+s4b3: 16-16
+s4d2: 18-18
+s4c2: 25-25
+s4b4: 23-23
+s4p3: 22-22
+s4a1: 21-21
+s4z2: 27-27
+s4a2: 26-26
+s4z3: 29-29,31-31
+s4i1: 30-30
+s4b5: 33-33
+s4h1: 32-32
+s4i2: 34-34
+
+# document level annotation:
+(s4s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2       3       4       5         6       7           8      9       10 11   12     13 14  15  16       17 18   19 20      21      22      23 24    25 26      27      28         29
+Words: Nedělní havárii letadla marocké královské letecké společnosti poblíž Agadiru na jihu Maroka ,  při níž zahynulo 44 osob ,  zavinil velitel posádky ,  který se rozhodl spáchat sebevraždu .
+
+# sentence level graph:
+(s5z1 / zavinit-001
+        :ARG1 (s5h1 / havárie
+            :ARG0 (s5l1 / letadlo
+                :possessor (s5s1 / společnost
+                    :mod (s5l2 / letecký
+                        :refer-number singular)
+                    :mod (s5k1 / královský
+                        :refer-number singular)
+                    :mod (s5m1 / marocký
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal-of (s5z2 / zahynout-001
+                :ARG0 (s5o1 / osoba
+                    :mod (s5x1 / 44)
+                    :refer-number plural)
+                :refer-number singular
+                :aspect performance)
+            :mod (s5n1 / nedělní
+                :refer-number singular)
+            :place (s5a1 / Agadir
+                :place (s5j1 / jih
+                    :possessor (s5m2 / Maroko
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5v1 / velitel
+            :ARG1 (s5p1 / posádka
+                :refer-number singular)
+            :ARG0-of (s5r1 / rozhodnout-se-002
+                :ARG1 (s5s2 / spáchat-002
+                    :ARG0 s5v1
+                    :ARG1 (s5s3 / sebevražda
+                        :refer-number singular)
+                    :aspect performance)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5z1: 20-20
+s5h1: 2-2,14-15
+s5l1: 3-3
+s5s1: 7-7
+s5l2: 6-6
+s5k1: 5-5
+s5m1: 4-4
+s5z2: 16-16
+s5o1: 18-18
+s5x1: 17-17
+s5n1: 1-1
+s5a1: 8-9
+s5j1: 10-11
+s5m2: 12-12
+s5v1: 21-21,24-24
+s5p1: 22-22
+s5r1: 25-26
+s5s2: 27-27
+s5s3: 28-28
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5m2 :same-entity s5m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2  3         4     5
+Words: Oznámil to oficiální zdroj .
+
+# sentence level graph:
+(s6o1 / oznámit-002
+        :effect (s6t1 / ten
+            :refer-number singular)
+        :ARG2 (s6e1 / entity)
+        :ARG0 (s6z1 / zdroj
+            :mod (s6o2 / oficiální
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6o1: 1-1
+s6t1: 2-2
+s6e1: 0-0
+s6z1: 4-4
+s6o2: 3-3
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6t1 :same-event s5z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2         3    4   5  6    7    8   9  10  11 12  13      14   15         16    17  18 19    20        21       22    23   24
+Words: V  Indonésii může být do roku 2000 dva až dva a  půl milionu lidí nakažených virem HIV ,  který způsobuje zhoubnou nemoc AIDS .
+
+# sentence level graph:
+(s7b1 / být-011
+        :place (s7i1 / Indonésie
+            :refer-number singular)
+        :temporal (s7r1 / rok
+            :mod (s7x1 / 2000)
+            :refer-number singular)
+        :ARG0 (s7m1 / milión
+            :mod (s7c1 / člověk
+                :mod (s7n1 / nakažený
+                    :ARG0 (s7v1 / vir
+                        :name (s7h1 / HIV)
+                        :ARG0-of (s7z1 / způsobovat-002
+                            :ARG1 (s7n2 / nemoc
+                                :name (s7a1 / AIDS
+                                    :refer-number singular)
+                                :mod (s7z2 / zhoubný
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular
+                            :refer-person 3rd
+                            :aspect activity)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural)
+            :mod (s7m2 / math
+                :op1 (s7d1 / dva
+                    :refer-number plural)
+                :op2 (s7a2 / and
+                    :op1 (s7d2 / dva
+                        :refer-number plural)
+                    :op2 (s7p1 / půl
+                        :refer-number singular)))
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s7b1: 3-4
+s7i1: 1-2
+s7r1: 5-6
+s7x1: 7-7
+s7m1: 13-13
+s7c1: 14-14
+s7n1: 15-15
+s7v1: 16-16,19-19
+s7h1: 17-17
+s7z1: 20-20
+s7n2: 22-22
+s7a1: 23-23
+s7z2: 21-21
+s7m2: 9-9
+s7d1: 8-8
+s7a2: 11-11
+s7d2: 10-10
+s7p1: 12-12
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2  3      4    5      6  7         8  9          10       11            12
+Words: Oznámil to místní list Kompas s  odvoláním na prohlášení ministra zdravotnictví .
+
+# sentence level graph:
+(s8o1 / oznámit-002
+        :effect (s8t1 / ten
+            :refer-number singular)
+        :ARG2 (s8e1 / entity)
+        :ARG0 (s8l1 / list
+            :name (s8k1 / kompas
+                :refer-number singular)
+            :mod (s8m1 / místní
+                :refer-number singular)
+            :refer-number singular)
+        :companion (s8o2 / odvolání
+            :ARG0 s8l1
+            :ARG1 (s8p1 / prohlášení
+                :ARG1 (s8e2 / entity)
+                :ARG0 (s8m2 / ministr
+                    :possessor (s8z1 / zdravotnictví
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8o1: 1-1
+s8t1: 2-2
+s8e1: 0-0
+s8l1: 4-4
+s8k1: 5-5
+s8m1: 3-3
+s8o2: 6-7
+s8p1: 8-9
+s8e2: 0-0
+s8m2: 10-10
+s8z1: 11-11
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8t1 :same-event s7b1)
+            (s8m1 :same-entity s7i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1           2  3    4   5      6          7        8        9     10     11       12
+Words: Zemětřesení o  síle 5.2 stupně Richterovy stupnice postihlo včera ostrov Hokkaidó .
+
+# sentence level graph:
+(s9p1 / postihnout-002
+        :ARG0 (s9z1 / zemětřesení
+            :mod (s9s1 / síla
+                :mod (s9s2 / stupeň
+                    :possessor (s9s3 / stupnice
+                        :possessor (s9r1 / Richter
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s9x1 / 5.2)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s9v1 / včera)
+        :ARG1 (s9o1 / ostrov
+            :name (s9h1 / Hokkaidó)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s9p1: 8-8
+s9z1: 1-1
+s9s1: 2-3
+s9s2: 5-5
+s9s3: 7-7
+s9r1: 6-6
+s9x1: 4-4
+s9v1: 9-9
+s9o1: 10-10
+s9h1: 11-11
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9v1 :same-entity s2v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1          2  3         4  5       6  7         8   9       10       11  12        13      14 15    16
+Words: Epicentrum se nacházelo v  hloubce 70 kilometrů pod zemským povrchem 900 kilometrů severně od Tokia .
+
+# sentence level graph:
+(s10n1 / nacházet-se-002
+        :ARG0 (s10e1 / epicentrum
+            :refer-number singular)
+        :place (s10h1 / hloubka
+            :mod (s10p1 / povrch
+                :mod (s10z1 / zemský
+                    :refer-number singular)
+                :extent (s10k1 / kilometr
+                    :mod (s10x1 / 70)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :place (s10s1 / severně
+            :start (s10t1 / Tokyo
+                :refer-number singular)
+            :extent (s10k2 / kilometr
+                :mod (s10x2 / 900)
+                :refer-number plural))
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s10n1: 2-3
+s10e1: 1-1
+s10h1: 4-5
+s10p1: 8-8,10-10
+s10z1: 9-9
+s10k1: 7-7
+s10x1: 6-6
+s10s1: 13-13
+s10t1: 14-15
+s10k2: 12-12
+s10x2: 11-11
+
+# document level annotation:
+(s10s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1        2       3  4  5        6        7     8  9      10 11     12 13    14 15   16     17        18 19        20    21 22      23        24     25
+Words: Japonský premiér T  .  Murajama přiletěl včera z  Manily do Hanoje ,  která je jeho druhou zastávkou na osmidenní cestě po čtyřech asijských zemích .
+
+# sentence level graph:
+(s11p1 / přiletět-001
+        :ARG0 (s11m1 / Murajama
+            :mod (s11t1 / T)
+            :mod (s11p2 / premiér
+                :mod (s11j1 / japonský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s11v1 / včera)
+        :start (s11m2 / manila
+            :refer-number singular)
+        :goal (s11h1 / Hanoj
+            :ARG0-of (s11b1 / být-007
+                :ARG1 (s11z1 / zastávka
+                    :possessor s11m1
+                    :mod (s11d1 / druhý
+                        :refer-number singular)
+                    :place (s11c1 / cesta
+                        :mod (s11o1 / osmidenní
+                            :refer-number singular)
+                        :path (s11z2 / země
+                            :mod (s11a1 / asijský
+                                :refer-number plural)
+                            :mod (s11c2 / čtyři
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s11p1: 6-6
+s11m1: 5-5,15-15
+s11t1: 3-3
+s11p2: 2-2
+s11j1: 1-1
+s11v1: 7-7
+s11m2: 8-9
+s11h1: 10-11,13-13
+s11b1: 14-14
+s11z1: 17-17
+s11d1: 16-16
+s11c1: 18-18,20-20
+s11o1: 19-19
+s11z2: 21-21,24-24
+s11a1: 23-23
+s11c2: 22-22
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11v1 :same-entity s9v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1        2  3      4         5         6  7     8      9  10       11 12    13         14    15 16   17   18
+Words: Murajama je prvním japonským premiérem ,  který přijel do Vietnamu od konce vietnamské války v  roce 1975 .
+
+# sentence level graph:
+(s12b1 / být-007
+        :ARG0 (s12m1 / Murajama
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s12p1 / premiér
+            :mod (s12j1 / japonský
+                :refer-number singular)
+            :mod (s12p2 / první
+                :refer-number singular)
+            :ARG0-of (s12p3 / přijet-001
+                :goal (s12v1 / Vietnam
+                    :refer-number singular)
+                :temporal (s12k1 / konec
+                    :possessor (s12v2 / válka
+                        :mod (s12v3 / vietnamský
+                            :refer-number singular)
+                        :temporal (s12r1 / rok
+                            :mod (s12x1 / 1975)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s12b1: 2-2
+s12m1: 1-1
+s12p1: 5-5,7-7
+s12j1: 4-4
+s12p2: 3-3
+s12p3: 8-8
+s12v1: 9-10
+s12k1: 11-12
+s12v2: 14-14
+s12v3: 13-13
+s12r1: 15-16
+s12x1: 17-17
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12m1 :same-entity s11m1)
+            (s12j1 :same-entity s11j1)
+            (s12v3 :same-entity s12v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1   2          3           4      5            6       7      8      9  10 11    12  13    14 15      16        17    18        19        20 21    22        23 24   25        26
+Words: Šéf opozičního pravicového křídla hinduistické Indické lidové strany R  .  Najak byl včera v  Bombaji postřelen dvěma neznámými pachateli ,  kteří zaútočili na jeho automobil .
+
+# sentence level graph:
+(s13p1 / postřelit-001
+        :ARG1 (s13n1 / Najak
+            :mod (s13r1 / R)
+            :mod (s13s1 / šéf
+                :possessor (s13k1 / křídlo
+                    :mod (s13p2 / pravicový
+                        :refer-number singular)
+                    :mod (s13o1 / opoziční
+                        :refer-number singular)
+                    :possessor (s13s2 / strana
+                        :mod (s13l1 / lidový
+                            :refer-number singular)
+                        :mod (s13i1 / indický
+                            :refer-number singular)
+                        :mod (s13h1 / hinduistický
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s13v1 / včera)
+        :place (s13b1 / Bombaj
+            :refer-number singular)
+        :ARG0 (s13p3 / pachatel
+            :mod (s13z1 / známý
+                :refer-number plural
+                :polarity -)
+            :ARG0-of (s13z2 / zaútočit-001
+                :ARG1 (s13a1 / automobil
+                    :possessor s13n1
+                    :refer-number singular)
+                :refer-number plural
+                :aspect performance)
+            :mod (s13d1 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s13p1: 12-12,16-16
+s13n1: 11-11,24-24
+s13r1: 9-9
+s13s1: 1-1
+s13k1: 4-4
+s13p2: 3-3
+s13o1: 2-2
+s13s2: 8-8
+s13l1: 7-7
+s13i1: 6-6
+s13h1: 5-5
+s13v1: 13-13
+s13b1: 14-15
+s13p3: 19-19,21-21
+s13z1: 18-18
+s13z2: 22-22
+s13a1: 23-23,25-25
+s13d1: 17-17
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13v1 :same-entity s11v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1  2       3  4         5      6
+Words: Po převozu do nemocnice zemřel .
+
+# sentence level graph:
+(s14z1 / zemřít-001
+        :temporal (s14p1 / převoz
+            :goal (s14n1 / nemocnice
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s14e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s14z1: 5-5
+s14p1: 1-2
+s14n1: 3-4
+s14e1: 0-0
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14e1 :same-entity s13n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1  2          3              4     5      6  7     8       9     10           11          12         13 14       15        16
+Words: K  odhalování radioaktivních látek vybaví od října německá vláda pohraničníky příslušnými detekčními a  měřicími přístroji .
+
+# sentence level graph:
+(s15v1 / vybavit-001
+        :purpose (s15o1 / odhalování
+            :ARG0 s15p1
+            :ARG1 (s15l1 / látka
+                :mod (s15r1 / radioaktivní
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :temporal (s15r2 / říjen
+            :refer-number singular)
+        :ARG0 (s15v2 / vláda
+            :mod (s15n1 / německý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s15p1 / pohraničník
+            :refer-number plural)
+        :effect (s15a1 / and
+            :op1 (s15p2 / přístroj
+                :mod (s15d1 / detekční
+                    :refer-number plural)
+                :mod (s15p3 / příslušný
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s15p4 / přístroj
+                :mod s15p3
+                :mod (s15m1 / měřicí
+                    :refer-number plural)
+                :refer-number plural))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s15v1: 5-5
+s15o1: 1-2
+s15l1: 4-4
+s15r1: 3-3
+s15r2: 6-7
+s15v2: 9-9
+s15n1: 8-8
+s15p1: 10-10
+s15a1: 13-13
+s15p2: 0-0
+s15d1: 12-12
+s15p3: 11-11
+s15p4: 15-15
+s15m1: 14-14
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15n1 :same-entity s3n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1        2         3  4          5       6        7         8         9  10      11 12         13       14
+Words: Opatření souvisejí s  odhalenými případy pašování jaderných materiálů do Německa v  posledních měsících .
+
+# sentence level graph:
+(s16s1 / souviset-001
+        :ARG0 (s16o1 / opatření
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s16p1 / případ
+            :name (s16p2 / pašování
+                :ARG0 (s16e1 / entity)
+                :ARG1 (s16m1 / materiál
+                    :mod (s16j1 / jaderný
+                        :refer-number plural)
+                    :refer-number plural)
+                :goal (s16n1 / Německo
+                    :refer-number singular)
+                :temporal (s16m2 / měsíc
+                    :mod (s16p3 / poslední
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :mod (s16o2 / odhalený
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s16s1: 2-2
+s16o1: 1-1
+s16p1: 3-3,5-5
+s16p2: 6-6
+s16e1: 0-0
+s16m1: 8-8
+s16j1: 7-7
+s16n1: 9-10
+s16m2: 11-11,13-13
+s16p3: 12-12
+s16o2: 4-4
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16o1 :same-event s15v1)
+            (s16m1 :same-entity s15l1)
+            (s16n1 :same-entity s15n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1        2  3         4  5       6        7      8     9           10  11      12      13 14         15        16 17      18 19   20   21 22    23     24    25       26        27    28
+Words: Letectvo a  zachránci z  britské pobřežní stráže včera uskutečnili dvě úspěšné operace a  evakuovali cestující a  posádky ze dvou lodí ,  které začaly hořet nedaleko britských břehů .
+
+# sentence level graph:
+(s17a1 / and
+        :op1 (s17u1 / uskutečnit-001
+            :ARG0 (s17a2 / and
+                :op1 (s17l1 / letectvo
+                    :refer-number singular)
+                :op2 (s17z1 / zachránce
+                    :start (s17s1 / stráž
+                        :mod (s17p1 / pobřežní
+                            :refer-number singular)
+                        :mod (s17b1 / britský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural))
+            :temporal (s17v1 / včera)
+            :ARG1 (s17o1 / operace
+                :mod (s17u2 / úspěšný
+                    :refer-number plural)
+                :mod (s17d1 / dva
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance)
+        :op2 (s17e1 / evakuovat-001
+            :ARG0 s17a2
+            :ARG1 (s17a3 / and
+                :op1 (s17c1 / cestující
+                    :refer-number plural)
+                :op2 (s17p2 / posádka
+                    :refer-number plural))
+            :start (s17l2 / loď
+                :ARG0-of (s17z2 / začít-001
+                    :ARG1 (s17h1 / hořet-001
+                        :ARG0 s17l2
+                        :place (s17b2 / břeh
+                            :mod (s17b3 / britský
+                                :refer-number plural)
+                            :refer-number plural)
+                        :aspect activity)
+                    :refer-number plural
+                    :aspect performance)
+                :mod (s17d2 / dva
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect process))
+
+# alignment:
+s17a1: 13-13
+s17u1: 9-9
+s17v1: 8-8
+s17o1: 12-12
+s17u2: 11-11
+s17d1: 10-10
+s17a2: 2-2
+s17l1: 1-1
+s17z1: 3-3
+s17s1: 4-4,7-7
+s17p1: 6-6
+s17b1: 5-5
+s17e1: 14-14
+s17a3: 16-16
+s17c1: 15-15
+s17p2: 17-17
+s17l2: 18-18,20-20,22-22
+s17z2: 23-23
+s17h1: 24-24
+s17b2: 25-25,27-27
+s17b3: 26-26
+s17d2: 19-19
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17v1 :same-entity s13v1)
+            (s17b3 :same-entity s17b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1    2   3    4    5          6  7        8     9    10
+Words: Přes 100 lidí bylo zachráněno z  trajektu Sally Star .
+
+# sentence level graph:
+(s18z1 / zachránit-001
+        :ARG1 (s18c1 / člověk
+            :mod (s18x1 / 100)
+            :refer-number plural)
+        :ARG0 (s18e1 / entity
+            :refer-person 3rd)
+        :start (s18t1 / trajekt
+            :name (s18x2 / #Forn
+                :FPHR (s18s1 / Sally)
+                :FPHR (s18s2 / Star))
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s18z1: 4-5
+s18c1: 1-1,3-3
+s18x1: 2-2
+s18e1: 0-0
+s18t1: 6-7
+s18x2: 0-0
+s18s1: 8-8
+s18s2: 9-9
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18e1 :same-entity s17a2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s19-root
+# :: snt19
+Index: 1     2     3   4           5  6    7  8          9   10   11      12  13        14      15
+Words: Další požár byl zlikvidován na lodi na zpracování ryb Seda plující pod litevskou vlajkou .
+
+# sentence level graph:
+(s19z1 / zlikvidovat-001
+        :ARG1 (s19p1 / požár
+            :mod (s19d1 / další
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s19e1 / entity)
+        :place (s19l1 / loď
+            :purpose (s19z2 / zpracování
+                :ARG0 (s19e2 / entity)
+                :ARG1 (s19r1 / ryba
+                    :refer-number plural)
+                :refer-number singular)
+            :name (s19s1 / Seda
+                :refer-number singular)
+            :mod (s19p2 / plující
+                :manner (s19v1 / vlajka
+                    :mod (s19l2 / litevský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s19z1: 3-4
+s19p1: 2-2
+s19d1: 1-1
+s19e1: 0-0
+s19l1: 5-6
+s19z2: 7-8
+s19e2: 0-0
+s19r1: 9-9
+s19s1: 10-10
+s19p2: 11-11
+s19v1: 12-12,14-14
+s19l2: 13-13
+
+# document level annotation:
+(s19s0 / sentence)
+
+

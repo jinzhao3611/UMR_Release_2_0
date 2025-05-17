@@ -1,0 +1,586 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2 3     4
+Words: štoček : VELKÉ MALIČKOSTI
+
+# sentence level graph:
+(s1i1 / identity-91
+        :ARG1 (s1s1 / štoček
+            :refer-number singular)
+        :ARG2 (s1m1 / maličkost
+            :mod (s1v1 / velký
+                :refer-number plural)
+            :refer-number plural))
+
+# alignment:
+s1i1: 2-2
+s1s1: 1-1
+s1m1: 4-4
+s1v1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2 3
+Words: Hračky u lékaře
+
+# sentence level graph:
+(s2h1 / hračka
+        :place (s2l1 / lékař
+            :refer-number singular)
+        :refer-number plural)
+
+# alignment:
+s2h1: 1-1
+s2l1: 2-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2        3        4      5   6  7   8        9      10   11         12 13      14     15  16    17 18    19   20
+Words: Při poslední návštěvě lékaře mne a  mou ratolest čekalo milé překvapení :  Několik hraček pro větší i  menší děti .
+
+# sentence level graph:
+(s3c1 / čekat-002
+        :temporal (s3n1 / návštěva
+            :ARG1 (s3l1 / lékař
+                :refer-number singular)
+            :mod (s3p1 / poslední
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3a1 / and
+            :op1 (s3e1 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :op2 (s3r1 / ratolest
+                :possessor s3e1
+                :refer-number singular))
+        :ARG0 (s3i1 / identity-91
+            :ARG1 (s3p2 / překvapení
+                :mod (s3m1 / milý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s3h1 / hračka
+                :affectee (s3d1 / dítě
+                    :mod (s3a2 / and
+                        :op1 (s3v1 / velký
+                            :refer-number plural)
+                        :op2 (s3m2 / malý
+                            :refer-number plural))
+                    :refer-number plural)
+                :mod (s3n2 / několik)
+                :refer-number plural))
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s3c1: 9-9
+s3n1: 1-1,3-3
+s3l1: 4-4
+s3p1: 2-2
+s3a1: 6-6
+s3e1: 5-5,7-7
+s3r1: 8-8
+s3i1: 12-12
+s3p2: 11-11
+s3m1: 10-10
+s3h1: 14-14
+s3d1: 15-15,19-19
+s3a2: 17-17
+s3v1: 16-16
+s3m2: 18-18
+s3n2: 13-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3l1 :same-entity s2l1)
+            (s3h1 :same-entity s2h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1   2         3  4  5     6  7    8        9     10 11  12      13    14           15 16       17          18 19  20   21    22   23     24 25      26
+Words: Nad stolečkem ,  u  něhož si malí pacienti hráli ,  byl výrazný nápis upozorňující na nedaleké hračkářství ,  kde jsou právě tyto hračky k  dostání .
+
+# sentence level graph:
+(s4b1 / být-011
+        :place (s4s1 / stoleček
+            :place-of (s4h1 / hrát-si-001
+                :ARG0 (s4p1 / pacient
+                    :mod (s4m1 / malý
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :aspect activity)
+            :refer-number singular)
+        :ARG0 (s4n1 / nápis
+            :mod (s4v1 / výrazný
+                :refer-number singular)
+            :mod (s4u1 / upozorňující
+                :ARG1 (s4h2 / hračkářství
+                    :mod (s4d1 / daleký
+                        :refer-number singular
+                        :polarity -)
+                    :place-of (s4b2 / být-011
+                        :ARG0 (s4h3 / hračka
+                            :clausal-marker (s4p2 / právě)
+                            :mod (s4t1 / tento
+                                :refer-number plural)
+                            :refer-number plural)
+                        :result (s4d2 / dostání
+                            :refer-number singular)
+                        :refer-number plural
+                        :refer-person 3rd
+                        :aspect activity)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s4b1: 11-11
+s4s1: 1-2,4-5
+s4h1: 6-6,9-9
+s4p1: 8-8
+s4m1: 7-7
+s4n1: 13-13
+s4v1: 12-12
+s4u1: 14-14
+s4h2: 15-15,17-17,19-19
+s4d1: 16-16
+s4b2: 20-20
+s4h3: 23-23
+s4p2: 21-21
+s4t1: 22-22
+s4d2: 24-25
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4p1 :same-entity s3d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1          2        3  4           5  6       7    8  9        10     11
+Words: Spolupráce pediatra s  obchodníkem je výhodná hned z  několika důvodů .
+
+# sentence level graph:
+(s5b1 / být-007
+        :ARG0 (s5s1 / spolupráce
+            :ARG0 (s5p1 / pediatr
+                :refer-number singular)
+            :ARG2 (s5o1 / obchodník
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s5v1 / výhodný
+            :refer-number singular)
+        :cause (s5d1 / důvod
+            :clausal-marker (s5h1 / hned)
+            :mod (s5n1 / několik)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5b1: 5-5
+s5s1: 1-1
+s5p1: 2-2
+s5o1: 3-4
+s5v1: 6-6
+s5d1: 8-8,10-10
+s5h1: 7-7
+s5n1: 9-9
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p1 :same-entity s3l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2       3            4        5  6          7  8         9          10     11       12
+Words: Hračky zvyšují atraktivnost ordinace a  přispívají k  uklidnění čekajících malých pacientů .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6z1 / zvyšovat-001
+            :ARG0 (s6h1 / hračka
+                :refer-number plural)
+            :ARG1 (s6a2 / atraktivnost
+                :possessor (s6o1 / ordinace
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s6p1 / přispívat-002
+            :ARG0 s6h1
+            :ARG1 (s6u1 / uklidnění
+                :ARG0 (s6e1 / entity)
+                :ARG1 (s6p2 / pacient
+                    :mod (s6m1 / malý
+                        :refer-number plural)
+                    :mod (s6c1 / čekající
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s6a1: 5-5
+s6z1: 2-2
+s6a2: 3-3
+s6o1: 4-4
+s6h1: 1-1
+s6p1: 6-6
+s6u1: 7-8
+s6e1: 0-0
+s6p2: 11-11
+s6m1: 10-10
+s6c1: 9-9
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6h1 :same-entity s3h1)
+            (s6p2 :same-entity s4p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1         2         3    4     5  6        7     8  9     10 11    12  13      14 15     16        17
+Words: Obchodník propaguje svou firmu a  předvádí zboží ,  které by třeba při pohledu do výlohy nezaujalo .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7p1 / propagovat-001
+            :ARG0 (s7o1 / obchodník
+                :refer-number singular)
+            :ARG1 (s7f1 / firma
+                :possessor s7o1
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s7p2 / předvádět-001
+            :ARG0 s7o1
+            :ARG2 (s7e1 / entity)
+            :ARG1 (s7z1 / zboží
+                :ARG0-of (s7z2 / zaujmout-001
+                    :ARG1 (s7e2 / entity)
+                    :temporal (s7p3 / pohled
+                        :goal (s7v1 / výloha
+                            :refer-number singular)
+                        :refer-number singular)
+                    :clausal-marker (s7t1 / třeba)
+                    :refer-number singular
+                    :aspect performance
+                    :polarity -)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s7a1: 5-5
+s7p1: 2-2
+s7f1: 4-4
+s7o1: 1-1,3-3
+s7p2: 6-6
+s7e1: 0-0
+s7z1: 7-7,9-9
+s7z2: 10-10,16-16
+s7e2: 0-0
+s7p3: 12-13
+s7v1: 14-15
+s7t1: 11-11
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7f1 :same-entity s4h2)
+            (s7o1 :same-entity s5o1)
+            (s7z1 :same-entity s4h3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1    2  3      4      5  6  7             8  9  10 11   12   13        14 15     16         17
+Words: Když se hračka zalíbí ,  je pravděpodobné ,  že si děti její zakoupení na rodiči vyškemrají .
+
+# sentence level graph:
+(s8b1 / být-007
+        :condition (s8z1 / zalíbit-se-001
+            :ARG1 (s8h1 / hračka
+                :refer-number singular)
+            :ARG0 (s8e1 / entity)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :ARG1 (s8p1 / pravděpodobný
+            :refer-number singular)
+        :ARG0 (s8v1 / vyškemrat-001
+            :ARG0 (s8d1 / dítě
+                :refer-number plural)
+            :ARG1 (s8z2 / zakoupení
+                :ARG0 s8r1
+                :ARG1 s8h1
+                :refer-number singular)
+            :source (s8r1 / rodič
+                :refer-number singular)
+            :affectee s8d1
+            :refer-number plural
+            :refer-person 3rd
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s8b1: 6-6
+s8z1: 1-2,4-4
+s8h1: 3-3,12-12
+s8e1: 0-0
+s8p1: 7-7
+s8v1: 9-9,16-16
+s8d1: 10-11
+s8z2: 13-13
+s8r1: 14-15
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8d1 :same-entity s6p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1     2   3  4      5  6   7       8  9    10    11   12 13 14 15 16    17 18     19     20      21        22       23 24     25 26      27   28  29         30
+Words: Pokud jde o  rodiče ,  pak většina z  nich jistě vítá ,  že se na cestu k  lékaři nemusí vybavit vlastními hračkami a  čekání s  dítětem není tak stresující .
+
+# sentence level graph:
+(s9v1 / vítat-002
+        :clausal-marker (s9p1 / pak)
+        :condition (s9j1 / jít-035
+            :ARG0 (s9r1 / rodič
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG0 (s9v2 / většina
+            :start s9r1
+            :refer-number singular)
+        :clausal-marker (s9j2 / jistě)
+        :ARG1 (s9a1 / and
+            :op1 (s9v3 / vybavit-001
+                :purpose (s9c1 / cesta
+                    :goal (s9l1 / lékař
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 s9r1
+                :ARG1 s9r1
+                :effect (s9h1 / hračka
+                    :mod (s9v4 / vlastní
+                        :refer-number plural)
+                    :refer-number plural)
+                :aspect performance
+                :polarity -)
+            :op2 (s9b1 / být-007
+                :ARG0 (s9c2 / čekání
+                    :companion (s9d1 / dítě
+                        :refer-number singular)
+                    :ARG0 (s9e1 / entity)
+                    :ARG1 (s9e2 / entity)
+                    :refer-number singular)
+                :ARG1 (s9s1 / stresující
+                    :extent (s9t1 / tak)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity
+                :polarity -))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9v1: 11-11
+s9p1: 6-6
+s9j1: 1-2
+s9r1: 3-4,8-9,14-14
+s9v2: 7-7
+s9j2: 10-10
+s9a1: 23-23
+s9v3: 13-13,19-20
+s9c1: 15-16
+s9l1: 17-18
+s9h1: 22-22
+s9v4: 21-21
+s9b1: 13-13,27-27
+s9c2: 24-24
+s9d1: 25-26
+s9e1: 0-0
+s9e2: 0-0
+s9s1: 29-29
+s9t1: 28-28
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9r1 :same-entity s8r1)
+            (s9l1 :same-entity s5p1)
+            (s9d1 :same-entity s8d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1       2           3 4     5
+Words: Markéta Teuchnerová , Praha 10
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10t1 / Teuchnerová
+            :mod (s10m1 / Markéta
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 1st)
+        :op2 (s10p1 / Praha
+            :mod (s10x1 / 10)
+            :refer-number singular))
+
+# alignment:
+s10a1: 3-3
+s10t1: 2-2
+s10m1: 1-1
+s10p1: 4-4
+s10x1: 5-5
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10t1 :same-entity s3e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1             2      3          4  5    6       7          8     9       10       11 12           13     14
+Words: Podnikatelské nápady zveřejněné v  této rubrice odměňujeme vedle běžného honoráře i  stokorunovou premií .
+
+# sentence level graph:
+(s11o1 / odměňovat-001
+        :ARG1 (s11n1 / nápad
+            :mod (s11p1 / podnikatelský
+                :refer-number plural)
+            :mod (s11z1 / zveřejněný
+                :place (s11r1 / rubrika
+                    :mod (s11t1 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s11e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :subtraction (s11h1 / honorář
+            :mod (s11b1 / běžný
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s11i1 / i)
+        :instrument (s11p2 / prémie
+            :mod (s11s1 / stokorunový
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 1st
+        :aspect activity)
+
+# alignment:
+s11o1: 7-7
+s11n1: 2-2
+s11p1: 1-1
+s11z1: 3-3
+s11r1: 4-4,6-6
+s11t1: 5-5
+s11e1: 0-0
+s11h1: 8-8,10-10
+s11b1: 9-9
+s11i1: 11-11
+s11p2: 13-13
+s11s1: 12-12
+
+# document level annotation:
+(s11s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1       2     3      4  5       6             7     8  9   10 11     12 13 14    15 16      17      18   19           20
+Words: Uvítáme nejen nápady z  vlastní podnikatelské praxe ,  ale i  takové ,  s  nimiž se čtenáři setkali jako spotřebitelé .
+
+# sentence level graph:
+(s12u1 / uvítat-002
+        :ARG0 (s12e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :ARG1 (s12g1 / gradation
+            :clausal-marker (s12n1 / nejen)
+            :op1 (s12n2 / nápad
+                :start (s12p1 / praxe
+                    :mod (s12p2 / podnikatelský
+                        :refer-number singular)
+                    :mod (s12v1 / vlastní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :clausal-marker (s12i1 / i)
+            :op2 (s12n3 / nápad
+                :ARG1-of (s12s1 / setkat-se-002
+                    :ARG0 (s12c1 / čtenář
+                        :refer-number plural)
+                    :manner (s12s2 / spotřebitel
+                        :mod-of s12c1
+                        :refer-number plural)
+                    :refer-number plural
+                    :aspect performance)
+                :refer-number plural))
+        :refer-number plural
+        :refer-person 1st
+        :aspect performance)
+
+# alignment:
+s12u1: 1-1
+s12e1: 0-0
+s12g1: 9-9
+s12n1: 2-2
+s12n2: 3-3
+s12p1: 4-4,7-7
+s12p2: 6-6
+s12v1: 5-5
+s12i1: 10-10
+s12n3: 13-14
+s12s1: 11-11,15-15,17-17
+s12c1: 16-16
+s12s2: 18-19
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12e1 :same-entity s11e1)))
+
+

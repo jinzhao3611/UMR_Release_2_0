@@ -1,0 +1,46 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2       3       4       5    6     7    8       9  10    11   12     13       14
+Words: Dvouletého Honzíka Slezáka utěšuje jeho matka před operací ,  která měla dítěti navrátit sluch
+
+# sentence level graph:
+(s1u1 / utěšovat-001
+        :ARG1 (s1s1 / Slezák
+            :mod (s1h1 / Honzík
+                :refer-number singular)
+            :mod (s1d1 / dvouletý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s1m1 / matka
+            :possessor s1s1
+            :refer-number singular)
+        :temporal (s1o1 / operace
+            :ARG0-of (s1n1 / navrátit-001
+                :ARG2 (s1d2 / dítě
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG1 (s1s2 / sluch
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1u1: 4-4
+s1s1: 3-3,5-5
+s1h1: 2-2
+s1d1: 1-1
+s1m1: 6-6
+s1o1: 7-8,10-10
+s1n1: 11-11,13-13
+s1d2: 12-12
+s1s2: 14-14
+
+# document level annotation:
+(s1s0 / sentence
+    :coref ((s1d2 :same-entity s1s1)))
+
+

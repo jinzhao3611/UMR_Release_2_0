@@ -1,0 +1,137 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2        3           4          5       6  7             8        9  10 11 12 13     14          15      16     17       18 19     20         21            22    23      24      25       26
+Words: Zatímco poslanci federálního parlamentu jednají o  státoprávních otázkách ,  mj .  o  zákonu upravujícím způsoby zániku federace ,  budova nejvyššího zákonodárného sboru doznává nejedno zlepšení .
+
+# sentence level graph:
+(s1d1 / doznávat-001
+        :temporal (s1j1 / jednat-001
+            :ARG0 (s1p1 / poslanec
+                :possessor (s1p2 / parlament
+                    :mod (s1f1 / federální
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :ARG2 (s1x1 / #Rcp
+                :refer-number plural)
+            :ARG1 (s1i1 / identity-91
+                :ARG1 (s1o1 / otázka
+                    :mod (s1s1 / státoprávní
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG2 (s1z1 / zákon
+                    :subtraction (s1m1 / mj)
+                    :mod (s1u1 / upravující
+                        :ARG1 (s1z2 / způsob
+                            :possessor (s1z3 / zánik
+                                :ARG0 (s1f2 / federace
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :ARG0 (s1b1 / budova
+            :possessor (s1s2 / sbor
+                :mod (s1v1 / vysoký
+                    :refer-number singular)
+                :mod (s1z4 / zákonodárný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1z5 / zlepšení
+            :ARG0 (s1e1 / entity)
+            :mod (s1n1 / nejeden
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect habitual)
+
+# alignment:
+s1d1: 23-23
+s1j1: 1-1,5-5
+s1p1: 2-2
+s1p2: 4-4
+s1f1: 3-3
+s1x1: 0-0
+s1i1: 9-9
+s1o1: 6-6,8-8
+s1s1: 7-7
+s1z1: 12-13
+s1m1: 10-10
+s1u1: 14-14
+s1z2: 15-15
+s1z3: 16-16
+s1f2: 17-17
+s1b1: 19-19
+s1s2: 22-22
+s1v1: 20-20
+s1z4: 21-21
+s1z5: 25-25
+s1e1: 0-0
+s1n1: 24-24
+
+# document level annotation:
+(s1s0 / sentence
+    :coref ((s1x1 :same-entity s1p1)
+            (s1f2 :same-entity s1f1)
+            (s1s2 :same-entity s1p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2  3  4    5     6              7     8  9    10 11     12       13      14
+Words: Otázkou je ,  komu takto zmodernizované sídlo FS bude po zániku federace sloužit .
+
+# sentence level graph:
+(s2b1 / být-007
+        :ARG1 (s2o1 / otázka
+            :refer-number singular)
+        :ARG0 (s2s1 / sloužit-001
+            :ARG0 (s2s2 / sídlo
+                :mod (s2z1 / zmodernizovaný
+                    :manner (s2t1 / takto
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :refer-number singular)
+                :possessor (s2f1 / FS
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s2z2 / zánik
+                :ARG0 (s2f2 / federace
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s2k1 / kdo
+                :refer-number singular
+                :refer-person 3rd)
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2b1: 2-2
+s2o1: 1-1
+s2s1: 9-9,13-13
+s2s2: 7-7
+s2z1: 6-6
+s2t1: 5-5
+s2f1: 8-8
+s2z2: 10-11
+s2f2: 12-12
+s2k1: 4-4
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2s2 :same-entity s1b1)
+            (s2t1 :same-event s1d1)
+            (s2f1 :same-entity s1s2)
+            (s2z2 :same-entity s1z3)
+            (s2f2 :same-entity s1f2)))
+
+

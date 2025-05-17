@@ -1,0 +1,567 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2 3   4  5     6
+Words: Většina z nás má hodně cholesterolu
+
+# sentence level graph:
+(s1m1 / mít-008
+        :ARG0 (s1v1 / většina
+            :start (s1e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :refer-number singular)
+        :ARG1 (s1c1 / cholesterol
+            :mod (s1h1 / hodně)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s1m1: 4-4
+s1v1: 1-1
+s1e1: 2-3
+s1c1: 6-6
+s1h1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2          3 4   5 6
+Words: České Budějovice ( dan ) -
+
+# sentence level graph:
+(s2b1 / Budějovice
+        :mod (s2c1 / Český
+            :refer-number plural)
+        :parenthesis (s2d1 / dan)
+        :refer-number plural)
+
+# alignment:
+s2b1: 2-2
+s2c1: 1-1
+s2d1: 4-4
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2   3           4     5       6       7      8  9      10          11 12   13 14     15 16         17   18        19 20      21           22     23      24         25      26
+Words: Asi sto návštěvníků denně využívá možnost nechat si změřit cholesterol v  krvi ,  kterou na agrosalonu Země Živitelka v  Českých Budějovicích nabízí Krajská hygienická stanice .
+
+# sentence level graph:
+(s3v1 / využívat-001
+        :ARG0 (s3s1 / sto
+            :mod (s3n1 / návštěvník
+                :refer-number plural)
+            :extent (s3a1 / asi)
+            :refer-number singular)
+        :frequency (s3d1 / denně)
+        :ARG1 (s3m1 / možnost
+            :ARG0 (s3e1 / entity)
+            :ARG1 (s3n2 / nechat-009
+                :ARG0 s3e1
+                :ARG1 (s3z1 / změřit-002
+                    :ARG0 (s3e2 / entity)
+                    :affectee s3e1
+                    :ARG1 (s3c1 / cholesterol
+                        :place (s3k1 / krev
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect performance)
+                :aspect performance)
+            :ARG1-of (s3n3 / nabízet-001
+                :ARG2 (s3e3 / entity)
+                :place (s3a2 / agrosalon
+                    :name (s3z2 / Země
+                        :mod (s3z3 / Živitelka
+                            :refer-number singular)
+                        :refer-number singular)
+                    :place (s3b1 / Budějovice
+                        :mod (s3c2 / Český
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :ARG0 (s3s2 / stanice
+                    :mod (s3h1 / hygienický
+                        :refer-number singular)
+                    :mod (s3k2 / Krajský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3v1: 5-5
+s3s1: 2-2
+s3n1: 3-3
+s3a1: 1-1
+s3d1: 4-4
+s3m1: 6-6,14-14
+s3e1: 8-8
+s3n2: 7-7
+s3z1: 9-9
+s3e2: 0-0
+s3c1: 10-10
+s3k1: 11-12
+s3n3: 22-22
+s3e3: 0-0
+s3a2: 15-16
+s3z2: 17-17
+s3z3: 18-18
+s3b1: 19-19,21-21
+s3c2: 20-20
+s3s2: 25-25
+s3h1: 24-24
+s3k2: 23-23
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3c1 :same-entity s1c1)
+            (s3b1 :same-entity s2b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1         2  3         4         5  6     7    8   9   10     11 12     13        14     15
+Words: Vyšetření na přístroji Reflotron ,  které trvá asi tři minuty ,  dělají hygienici zdarma .
+
+# sentence level graph:
+(s4d1 / dělat-023
+        :predicative-noun (s4v1 / vyšetření
+            :ARG0 s4h1
+            :ARG1 (s4e1 / entity)
+            :place (s4p1 / přístroj
+                :name (s4r1 / Reflotron
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0-of (s4t1 / trvat-003
+                :duration (s4m1 / minuta
+                    :mod (s4t2 / tři
+                        :extent (s4a1 / asi)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :ARG0 (s4h1 / hygienik
+            :refer-number plural)
+        :manner (s4z1 / zdarma)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4d1: 12-12
+s4v1: 1-1,6-6
+s4e1: 0-0
+s4p1: 2-3
+s4r1: 4-4
+s4t1: 7-7
+s4m1: 10-10
+s4t2: 9-9
+s4a1: 8-8
+s4h1: 13-13
+s4z1: 14-14
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4h1 :same-entity s3s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2   3  4  5  6    7        8       9  10  11     12 13       14        15   16     17    18
+Words: Těší nás ,  že se lidé začínají zajímat o  své zdraví ,  výsledky vyšetření však nejsou dobré .
+
+# sentence level graph:
+(s5b1 / but-91
+        :ARG1 (s5t1 / těšit-002
+            :ARG0 (s5e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :ARG1 (s5z1 / začínat-001
+                :ARG0 (s5c1 / člověk
+                    :refer-number plural
+                    :refer-person 1st)
+                :ARG1 (s5z2 / zajímat-se-001
+                    :ARG0 s5c1
+                    :ARG1 (s5z3 / zdraví
+                        :possessor s5c1
+                        :refer-number singular)
+                    :aspect activity)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG2 (s5b2 / být-007
+            :ARG0 (s5v1 / výsledek
+                :possessor (s5v2 / vyšetření
+                    :ARG0 (s5e2 / entity)
+                    :ARG1 (s5e3 / entity)
+                    :refer-number singular)
+                :refer-number plural)
+            :ARG1 (s5d1 / dobrý
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity
+            :polarity -))
+
+# alignment:
+s5b1: 15-15
+s5t1: 1-1
+s5e1: 2-2
+s5z1: 4-4,7-7
+s5c1: 6-6,10-10
+s5z2: 5-5,8-8
+s5z3: 9-9,11-11
+s5b2: 16-16
+s5v1: 13-13
+s5v2: 14-14
+s5e2: 0-0
+s5e3: 0-0
+s5d1: 17-17
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5c1 :same-entity s1e1)
+            (s5v2 :same-entity s4v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2  3  4    5             6  7       8  9         10        11   12 13       14      15  16 17 18         19      20       21      22     23  24 25 26         27    28    29
+Words: Souvisí to s  naší životosprávou ,  zejména s  nadměrným požíváním tuků ,  omezeným pohybem atd .  ,  vysvětluje vedoucí oddělení hygieny výživy KHS Č  .  Budějovice Peter Horan .
+
+# sentence level graph:
+(s6v1 / vysvětlovat-001
+        :ARG0 (s6h1 / Horan
+            :mod (s6p1 / Peter
+                :refer-number singular)
+            :mod (s6v2 / vedoucí
+                :possessor (s6o1 / oddělení
+                    :possessor (s6k1 / KHS
+                        :mod (s6b1 / Budějovice
+                            :mod (s6c1 / Český)
+                            :refer-number plural)
+                        :refer-number plural)
+                    :possessor (s6h2 / hygiena
+                        :possessor (s6v3 / výživa
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s6e1 / entity)
+        :ARG1 (s6s1 / souviset-001
+            :ARG0 (s6t1 / ten
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s6i1 / identity-91
+                :ARG1 (s6z1 / životospráva
+                    :possessor (s6e2 / entity
+                        :refer-number plural
+                        :refer-person 1st)
+                    :refer-number singular)
+                :clausal-marker (s6z2 / zejména)
+                :ARG2 (s6a1 / and
+                    :op1 (s6p2 / požívání
+                        :ARG0 s6e2
+                        :ARG1 (s6t2 / tuk
+                            :refer-number plural)
+                        :extent (s6n1 / nadměrný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :op2 (s6p3 / pohyb
+                        :mod (s6o2 / omezený
+                            :refer-number singular)
+                        :refer-number singular)
+                    :op3 (s6a2 / atd)))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6v1: 18-18
+s6h1: 28-28
+s6p1: 27-27
+s6v2: 19-19
+s6o1: 20-20
+s6k1: 23-23
+s6b1: 26-26
+s6c1: 24-24
+s6h2: 21-21
+s6v3: 22-22
+s6e1: 0-0
+s6s1: 1-1
+s6t1: 2-2
+s6i1: 6-6
+s6z1: 3-3,5-5
+s6e2: 4-4
+s6z2: 7-7
+s6a1: 12-12
+s6p2: 8-8,10-10
+s6t2: 11-11
+s6n1: 9-9
+s6p3: 8-8,14-14
+s6o2: 13-13
+s6a2: 15-15
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6k1 :same-entity s4h1)
+            (s6t1 :same-event s5b2)
+            (s6e2 :same-entity s5c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1      2  3  4  5       6        7       8            9  10    11    12 13  14       15 16   17 18      19     20 21           22 23       24 25      26 27  28 29 30       31 32   33
+Words: Dodává ,  že u  většiny dosahuje hladina cholesterolu ,  jehož limit je 5.2 milimolu na litr ,  vyšších hodnot ,  pohybujících se převážně v  rozmezí od 5.5 do 7  milimolů na litr .
+
+# sentence level graph:
+(s7d1 / dodávat-004
+        :ARG0 (s7e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :effect (s7d2 / dosahovat-002
+            :place (s7v1 / většina
+                :refer-number singular)
+            :ARG0 (s7h1 / hladina
+                :possessor (s7c1 / cholesterol
+                    :mod (s7b1 / být-011
+                        :ARG0 (s7l1 / limit
+                            :possessor s7c1
+                            :refer-number singular)
+                        :extent (s7m1 / milimol
+                            :regard (s7l2 / l
+                                :refer-number singular)
+                            :mod (s7x2 / 5.2)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s7h2 / hodnota
+                :mod (s7v2 / vysoký
+                    :refer-number plural)
+                :mod (s7p1 / pohybující_se
+                    :place (s7r1 / rozmezí
+                        :mod (s7m2 / milimol
+                            :regard (s7l3 / l
+                                :refer-number singular)
+                            :mod (s7m3 / math
+                                :op1 (s7x3 / 5.5)
+                                :op2 (s7x4 / 7))
+                            :refer-number plural)
+                        :refer-number singular)
+                    :extent (s7p2 / převážně)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect habitual)
+
+# alignment:
+s7d1: 1-1
+s7e1: 0-0
+s7d2: 3-3,6-6
+s7v1: 4-5
+s7h1: 7-7
+s7c1: 8-8,10-10
+s7b1: 12-12
+s7l1: 11-11
+s7m1: 14-14
+s7l2: 15-16
+s7x2: 13-13
+s7h2: 19-19
+s7v2: 18-18
+s7p1: 21-22
+s7r1: 24-25
+s7m2: 30-30
+s7l3: 31-32
+s7m3: 26-26,28-28
+s7x3: 27-27
+s7x4: 29-29
+s7p2: 23-23
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6h1)
+            (s7v1 :same-entity s1v1)
+            (s7c1 :same-entity s3c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2   3     4         5       6           7           8   9  10  11  12 13      14          15      16        17     18       19      20 21       22    23 24           25
+Words: Zájemci pak mohou navštívit poradnu preventivní kardiologie KHS ,  kde jim na základě podrobnější analýzy vyhodnotí hlavní rizikové faktory a  doporučí změny v  životosprávě .
+
+# sentence level graph:
+(s8n1 / navštívit-001
+        :ARG0 (s8z1 / zájemce
+            :refer-number plural)
+        :temporal (s8p1 / pak)
+        :ARG1 (s8p2 / poradna
+            :possessor (s8k1 / KHS)
+            :possessor (s8k2 / kardiologie
+                :mod (s8p3 / preventivní
+                    :refer-number singular)
+                :refer-number singular)
+            :place-of (s8a1 / and
+                :op1 (s8v1 / vyhodnotit-001
+                    :ARG0 (s8e1 / entity)
+                    :regard (s8a2 / analýza
+                        :mod (s8p4 / podrobný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :affectee s8z1
+                    :ARG1 (s8f1 / faktor
+                        :mod (s8r1 / rizikový
+                            :refer-number plural)
+                        :mod (s8h1 / hlavní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect performance)
+                :op2 (s8d1 / doporučit-001
+                    :ARG0 s8e1
+                    :ARG2 s8z1
+                    :ARG1 (s8z2 / změna
+                        :place (s8z3 / životospráva
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect performance))
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s8n1: 3-4
+s8z1: 1-1,11-11
+s8p1: 2-2
+s8p2: 5-5,10-10
+s8k1: 8-8
+s8k2: 7-7
+s8p3: 6-6
+s8a1: 20-20
+s8v1: 16-16
+s8a2: 12-13,15-15
+s8p4: 14-14
+s8f1: 19-19
+s8r1: 18-18
+s8h1: 17-17
+s8e1: 0-0
+s8d1: 21-21
+s8z2: 22-22
+s8z3: 23-24
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8k1 :same-entity s6k1)
+            (s8z3 :same-entity s6z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1   2         3  4  5     6  7       8      9    10     11     12 13    14  15 16      17       18         19            20            21
+Words: Jak upřesňuje P  .  Horan ,  poradna nabízí tyto služby zdarma ,  neboť jde o  součást programu dotovaného ministerstvem zdravotnictví .
+
+# sentence level graph:
+(s9h1 / have-cause-91
+        :ARG1 (s9n1 / nabízet-001
+            :parenthesis (s9u1 / upřesňovat-001
+                :ARG0 (s9h2 / Horan
+                    :mod (s9p1 / P)
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG1 s9h1
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :ARG0 (s9p2 / poradna
+                :refer-number singular)
+            :ARG1 (s9s1 / služba
+                :mod (s9t1 / tento
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG2 (s9e1 / entity)
+            :manner (s9z1 / zdarma)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG2 (s9j1 / jít-017
+            :parenthesis s9u1
+            :ARG0 (s9e2 / entity)
+            :ARG1 (s9s2 / součást
+                :mod (s9p3 / program
+                    :mod (s9d1 / dotovaný
+                        :ARG0 (s9m1 / ministerstvo
+                            :possessor (s9z2 / zdravotnictví
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s9h1: 13-13
+s9n1: 8-8
+s9p2: 7-7
+s9s1: 10-10
+s9t1: 9-9
+s9e1: 0-0
+s9z1: 11-11
+s9u1: 1-2
+s9h2: 5-5
+s9p1: 3-3
+s9j1: 14-14
+s9e2: 0-0
+s9s2: 15-16
+s9p3: 17-17
+s9d1: 18-18
+s9m1: 19-19
+s9z2: 20-20
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p2 :same-entity s8p2)
+            (s9s1 :same-entity s8a1)
+            (s9h2 :same-entity s7e1)))
+
+

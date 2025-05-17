@@ -1,0 +1,132 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Paragrafy
+
+# sentence level graph:
+(s1p1 / paragraf
+        :refer-number plural)
+
+# alignment:
+s1p1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1  2              3       4       5   6      7        8               9          10 11    12       13 14    15 16 17    18    19         20
+Words: V  nakladatelství Olympia odebral již soudně trestaný osmadvacetiletý podnikatel z  Prahy časopisy za 25000 Kč ,  které dosud nezaplatil .
+
+# sentence level graph:
+(s2o1 / odebrat-004
+        :place (s2n1 / nakladatelství
+            :name (s2o2 / Olympia
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s2p1 / podnikatel
+            :mod (s2o3 / osmadvacetiletý
+                :refer-number singular)
+            :mod (s2t1 / trestaný
+                :temporal (s2j1 / již)
+                :instrument (s2s1 / soudně)
+                :refer-number singular)
+            :start (s2p2 / Praha
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2c1 / časopis
+            :substitute (s2k1 / Kč
+                :mod (s2x1 / 25000))
+            :ARG1-of (s2z1 / zaplatit-001
+                :ARG0 s2p1
+                :temporal (s2d1 / dosud)
+                :refer-number singular
+                :aspect performance
+                :polarity -)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s2o1: 4-4
+s2n1: 1-2
+s2o2: 3-3
+s2p1: 9-9
+s2o3: 8-8
+s2t1: 7-7
+s2j1: 5-5
+s2s1: 6-6
+s2p2: 10-11
+s2c1: 12-12,17-17
+s2k1: 13-13,15-15
+s2x1: 14-14
+s2z1: 19-19
+s2d1: 18-18
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1            2        3  4  5       6  7         8         9         10    11 12     13 14  15    16       17 18      19
+Words: Kriminalisté zjistili ,  že nejméně v  jedenácti případech neuhradil zboží za milion a  půl korun odebrané na fakturu .
+
+# sentence level graph:
+(s3z1 / zjistit-002
+        :ARG0 (s3k1 / kriminalista
+            :refer-number plural)
+        :ARG1 (s3u1 / uhradit-001
+            :place (s3p1 / případ
+                :mod (s3j1 / jedenáct
+                    :extent (s3m1 / málo)
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 (s3e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s3z2 / zboží
+                :substitute (s3a1 / and
+                    :op1 (s3m2 / milión
+                        :mod (s3k2 / koruna
+                            :refer-number plural)
+                        :refer-number singular)
+                    :op2 (s3p2 / půl
+                        :mod s3k2
+                        :refer-number singular))
+                :mod (s3o1 / odebraný
+                    :manner (s3f1 / faktura
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance
+            :polarity -)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s3z1: 2-2
+s3k1: 1-1
+s3u1: 4-4,9-9
+s3p1: 6-6,8-8
+s3j1: 7-7
+s3m1: 5-5
+s3e1: 0-0
+s3z2: 10-10
+s3a1: 13-13
+s3m2: 11-12
+s3k2: 15-15
+s3p2: 11-11,14-14
+s3o1: 16-16
+s3f1: 17-18
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2p1)))
+
+

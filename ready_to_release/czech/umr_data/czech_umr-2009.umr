@@ -1,0 +1,173 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Paragrafy
+
+# sentence level graph:
+(s1p1 / paragraf
+        :refer-number plural)
+
+# alignment:
+s1p1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2           3    4        5  6       7        8  9        10      11 12   13   14
+Words: Únos sedmiletého syna oznámila v  pondělí frýdecko -  místecké policii 27 letá žena .
+
+# sentence level graph:
+(s2o1 / oznámit-001
+        :ARG1 (s2u1 / únos
+            :ARG1 (s2s1 / syn
+                :mod (s2s2 / sedmiletý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s2p1 / pondělí
+            :refer-number singular)
+        :ARG2 (s2p2 / policie
+            :mod (s2a1 / and
+                :op1 (s2f1 / frýdecký)
+                :op2 (s2m1 / místecký
+                    :refer-number singular))
+            :refer-number singular)
+        :ARG0 (s2z1 / žena
+            :mod (s2x1 / 27_letý)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s2o1: 4-4
+s2u1: 1-1
+s2s1: 3-3
+s2s2: 2-2
+s2p1: 5-6
+s2p2: 10-10
+s2a1: 8-8
+s2f1: 7-7
+s2m1: 9-9
+s2z1: 13-13
+s2x1: 11-12
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2  3    4       5  6       7  8            9       10
+Words: Dítě jí bylo svěřeno po rozvodu s  jugoslávským občanem .
+
+# sentence level graph:
+(s3s1 / svěřit-003
+        :ARG1 (s3d1 / dítě
+            :refer-number singular)
+        :ARG0 (s3e1 / entity)
+        :ARG2 (s3e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s3r1 / rozvod
+            :ARG1 (s3o1 / občan
+                :mod (s3j1 / jugoslávský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3s1: 3-4
+s3d1: 1-1
+s3e1: 0-0
+s3e2: 2-2
+s3r1: 5-6
+s3o1: 7-7,9-9
+s3j1: 8-8
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3d1 :same-entity s2s1)
+            (s3e2 :same-entity s2z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2             3  4  5    6  7        8     9  10    11
+Words: Matka předpokládala ,  že otec s  chlapcem odjel na výlet .
+
+# sentence level graph:
+(s4p1 / předpokládat-001
+        :ARG0 (s4m1 / matka
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s4o1 / odjet-001
+            :ARG0 (s4o2 / otec
+                :refer-number singular)
+            :companion (s4c1 / chlapec
+                :refer-number singular)
+            :start (s4e1 / entity)
+            :goal (s4v1 / výlet
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :aspect activity)
+
+# alignment:
+s4p1: 2-2
+s4m1: 1-1
+s4o1: 4-4,8-8
+s4o2: 5-5
+s4c1: 6-7
+s4e1: 0-0
+s4v1: 9-10
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4m1 :same-entity s3e2)
+            (s4o2 :same-entity s3o1)
+            (s4c1 :same-entity s3d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1   2  3    4     5  6    7          8
+Words: Ani po pěti dnech se však neobjevili .
+
+# sentence level graph:
+(s5o1 / objevit-se-001
+        :clausal-marker (s5v1 / však)
+        :temporal (s5d1 / den
+            :clausal-marker (s5a1 / ani)
+            :mod (s5p1 / pět
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s5e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :place (s5e2 / entity)
+        :refer-number plural
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s5o1: 5-5,7-7
+s5v1: 6-6
+s5d1: 2-2,4-4
+s5a1: 1-1
+s5p1: 3-3
+s5e1: 0-0
+s5e2: 0-0
+
+# document level annotation:
+(s5s0 / sentence)
+
+

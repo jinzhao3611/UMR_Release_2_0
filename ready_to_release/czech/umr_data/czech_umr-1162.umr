@@ -1,0 +1,448 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2   3       4 5         6
+Words: Ruská loď spojena s komplexem Mir
+
+# sentence level graph:
+(s1s1 / spojit-003
+        :ARG1 (s1l1 / loď
+            :mod (s1r1 / ruský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s1e1 / entity)
+        :effect (s1k1 / komplex
+            :name (s1m1 / Mir
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s1s1: 3-3
+s1l1: 2-2
+s1r1: 1-1
+s1e1: 0-0
+s1k1: 4-5
+s1m1: 6-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: Moskva -
+
+# sentence level graph:
+(s2m1 / Moskva
+        :refer-number singular)
+
+# alignment:
+s2m1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2        3   4        5  6  7  8  9     10      11 12         13        14  15
+Words: Ruská nákladní loď Progress M  -  24 se včera spojila s  orbitálním komplexem Mir .
+
+# sentence level graph:
+(s3s1 / spojit-se-001
+        :ARG0 (s3l1 / loď
+            :name (s3p1 / Progress
+                :mod (s3m1 / M
+                    :mod (s3x1 / 24))
+                :refer-number singular)
+            :mod (s3n1 / nákladní
+                :refer-number singular)
+            :mod (s3r1 / ruský
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3v1 / včera)
+        :ARG1 (s3k1 / komplex
+            :name (s3m2 / Mir
+                :refer-number singular)
+            :mod (s3o1 / orbitální
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3s1: 8-8,10-10
+s3l1: 3-3
+s3p1: 4-4
+s3m1: 5-5
+s3x1: 7-7
+s3n1: 2-2
+s3r1: 1-1
+s3v1: 9-9
+s3k1: 11-11,13-13
+s3m2: 14-14
+s3o1: 12-12
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3l1 :same-entity s1l1)
+            (s3r1 :same-entity s1r1)
+            (s3k1 :same-entity s1k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1   2  3     4     5  6    7           8  9     10       11    12       13      14 15      16       17 18 19 20      21 22      23    24      25       26     27 28       29  30    31      32      33
+Words: Šlo o  třetí pokus po dvou neúspěšných ,  které ohrozily ruský kosmický program ,  protože Progress M  -  24 přiváží na oběžnou dráhu životně důležité zásoby a  zařízení pro další vědecké výzkumy .
+
+# sentence level graph:
+(s4j1 / jít-035
+        :ARG0 (s4p1 / pokus
+            :mod (s4t1 / třetí
+                :refer-number singular)
+            :temporal (s4p2 / pokus
+                :mod (s4u1 / úspěšný
+                    :refer-number plural
+                    :polarity -)
+                :mod (s4d1 / dva
+                    :refer-number plural)
+                :ARG0-of (s4o1 / ohrozit-001
+                    :ARG1 (s4p3 / program
+                        :mod (s4k1 / kosmický
+                            :refer-number singular)
+                        :mod (s4r1 / ruský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :cause (s4p4 / přivážet-001
+                        :ARG0 (s4p5 / Progress
+                            :mod (s4m1 / M
+                                :mod (s4x1 / 24))
+                            :refer-number singular)
+                        :goal (s4d2 / dráha
+                            :mod (s4o2 / oběžný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG1 (s4a1 / and
+                            :op1 (s4z1 / zásoba
+                                :mod (s4d3 / důležitý
+                                    :regard (s4z2 / životně)
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :op2 (s4z3 / zařízení
+                                :purpose (s4v1 / výzkum
+                                    :mod (s4v2 / vědecký
+                                        :refer-number plural)
+                                    :mod (s4d4 / další
+                                        :refer-number plural)
+                                    :refer-number plural)
+                                :refer-number plural))
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :refer-number plural
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s4j1: 1-1
+s4p1: 2-2,4-4
+s4t1: 3-3
+s4p2: 9-9
+s4u1: 7-7
+s4d1: 6-6
+s4o1: 10-10
+s4p3: 13-13
+s4k1: 12-12
+s4r1: 11-11
+s4p4: 15-15,20-20
+s4p5: 16-16
+s4m1: 17-17
+s4x1: 19-19
+s4d2: 21-21,23-23
+s4o2: 22-22
+s4a1: 27-27
+s4z1: 26-26
+s4d3: 25-25
+s4z2: 24-24
+s4z3: 28-28
+s4v1: 29-29,32-32
+s4v2: 31-31
+s4d4: 30-30
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4r1 :same-entity s3r1)
+            (s4p5 :same-entity s3l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2      3  4           5      6  7         8        9   10             11 12           13     14 15  16    17 18      19      20      21  22    23         24
+Words: Na rozdíl od předchozích pokusů se tentokrát nákladní loď nepřibližovala v  automatickém režimu ,  ale řídil ji velitel posádky stanice Mir Jurij Malenčenko .
+
+# sentence level graph:
+(s5b1 / but-91
+        :ARG1 (s5p1 / přibližovat-se-003
+            :comparison (s5p2 / pokus
+                :mod (s5p3 / předchozí
+                    :refer-number plural)
+                :refer-number plural)
+            :temporal (s5t1 / tentokrát)
+            :ARG0 (s5l1 / loď
+                :mod (s5n1 / nákladní
+                    :refer-number singular)
+                :refer-number singular)
+            :goal (s5e1 / entity)
+            :manner (s5r1 / režim
+                :mod (s5a1 / automatický
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity
+            :polarity -)
+        :ARG2 (s5r2 / řídit-002
+            :ARG1 s5l1
+            :ARG0 (s5m1 / Malenčenko
+                :mod (s5j1 / Jurij
+                    :refer-number singular)
+                :mod (s5v1 / velitel
+                    :ARG1 (s5p4 / posádka
+                        :possessor (s5s1 / stanice
+                            :name (s5m2 / Mir
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity))
+
+# alignment:
+s5b1: 15-15
+s5p1: 6-6,10-10
+s5p2: 1-3,5-5
+s5p3: 4-4
+s5t1: 7-7
+s5l1: 9-9,17-17
+s5n1: 8-8
+s5e1: 0-0
+s5r1: 11-11,13-13
+s5a1: 12-12
+s5r2: 16-16
+s5m1: 23-23
+s5j1: 22-22
+s5v1: 18-18
+s5p4: 19-19
+s5s1: 20-20
+s5m2: 21-21
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p2 :same-entity s4p2)
+            (s5l1 :same-entity s4p5)
+            (s5s1 :same-entity s3k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1          2  3      4        5     6  7       8  9        10        11     12 13   14  15    16     17 18      19        20     21     22       23   24 25        26      27
+Words: Rozhodnutí o  ručním navádění padlo ve čtvrtek na zasedání speciální komise ,  když dva marné pokusy o  spojení vyčerpaly zásoby paliva nákladní lodě na kritickou hranici .
+
+# sentence level graph:
+(s6p1 / padnout-015
+        :predicative-noun (s6r1 / rozhodnutí
+            :ARG1 (s6n1 / navádění
+                :manner (s6r2 / ruční
+                    :refer-number singular)
+                :ARG0 (s6e1 / entity)
+                :ARG1 (s6e2 / entity)
+                :goal (s6e3 / entity)
+                :refer-number singular)
+            :ARG0 (s6e4 / entity)
+            :refer-number singular)
+        :temporal (s6c1 / čtvrtek
+            :refer-number singular)
+        :place (s6z1 / zasedání
+            :ARG0 (s6k1 / komise
+                :mod (s6s1 / speciální
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :condition (s6v1 / vyčerpat-002
+            :ARG0 (s6p2 / pokus
+                :ARG1 (s6s2 / spojení
+                    :ARG0 (s6e5 / entity)
+                    :ARG1 (s6e6 / entity)
+                    :refer-number singular)
+                :mod (s6m1 / marný
+                    :refer-number plural)
+                :mod (s6d1 / dva
+                    :refer-number plural)
+                :refer-number plural)
+            :extent (s6h1 / hranice
+                :mod (s6k2 / kritický
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s6z2 / zásoba
+                :possessor (s6p3 / palivo
+                    :possessor (s6l1 / loď
+                        :mod (s6n2 / nákladní
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6p1: 5-5
+s6r1: 1-1
+s6n1: 2-2,4-4
+s6r2: 3-3
+s6e1: 0-0
+s6e2: 0-0
+s6e3: 0-0
+s6e4: 0-0
+s6c1: 6-7
+s6z1: 8-9
+s6k1: 11-11
+s6s1: 10-10
+s6v1: 13-13,19-19
+s6p2: 16-16
+s6s2: 17-18
+s6e5: 0-0
+s6e6: 0-0
+s6m1: 15-15
+s6d1: 14-14
+s6h1: 24-24,26-26
+s6k2: 25-25
+s6z2: 20-20
+s6p3: 21-21
+s6l1: 23-23
+s6n2: 22-22
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6n1 :same-event s5r2)
+            (s6p2 :same-entity s5p2)
+            (s6l1 :same-entity s5l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2   3  4  5      6     7  8    9   10 11    12    13       14  15      16
+Words: Komplex Mir je na oběžné dráze už osmý rok a  zatím nikdy nezůstal bez posádky .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7b1 / být-011
+            :ARG0 (s7k1 / komplex
+                :name (s7m1 / Mir
+                    :refer-number singular)
+                :refer-number singular)
+            :place (s7d1 / dráha
+                :mod (s7o1 / oběžný
+                    :refer-number singular)
+                :refer-number singular)
+            :duration (s7r1 / rok
+                :clausal-marker (s7u1 / už)
+                :mod (s7o2 / osmý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s7z1 / zůstat-006
+            :ARG0 s7k1
+            :temporal (s7z2 / zatím)
+            :temporal (s7n1 / nikdy
+                :polarity -)
+            :companion (s7p1 / posádka
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance
+            :polarity -))
+
+# alignment:
+s7a1: 10-10
+s7b1: 3-3
+s7d1: 4-4,6-6
+s7o1: 5-5
+s7r1: 9-9
+s7u1: 7-7
+s7o2: 8-8
+s7k1: 1-1
+s7m1: 2-2
+s7z1: 13-13
+s7z2: 11-11
+s7n1: 12-12
+s7p1: 14-15
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7d1 :same-entity s4d2)
+            (s7k1 :same-entity s5s1)
+            (s7p1 :same-entity s5p4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1    2  3      4  5  6        7  8  9  10 11      12 13 14       15
+Words: Více na straně 6  -  Progress M  -  24 :  potřetí a  na poslední chvíli
+
+# sentence level graph:
+(s8a1 / and
+        :op1 (s8e1 / event
+            :ARG0 (s8e2 / entity
+                :mod (s8h1 / hodně))
+            :place (s8s1 / strana
+                :mod (s8x1 / 6)
+                :refer-number singular)
+            :aspect state)
+        :op2 (s8x2 / #Idph
+            :name (s8i1 / identity-91
+                :ARG1 (s8p1 / Progress
+                    :mod (s8m1 / M
+                        :mod (s8x3 / 24))
+                    :refer-number singular)
+                :ARG2 (s8a2 / and
+                    :op1 (s8p2 / potřetí)
+                    :op2 (s8c1 / chvíle
+                        :mod (s8p3 / poslední
+                            :refer-number singular)
+                        :refer-number singular)))))
+
+# alignment:
+s8a1: 5-5
+s8e1: 0-0
+s8e2: 0-0
+s8h1: 1-1
+s8s1: 2-3
+s8x1: 4-4
+s8x2: 0-0
+s8i1: 10-10
+s8p1: 6-6
+s8m1: 7-7
+s8x3: 9-9
+s8a2: 12-12
+s8p2: 11-11
+s8c1: 13-13,15-15
+s8p3: 14-14
+
+# document level annotation:
+(s8s0 / sentence)
+
+

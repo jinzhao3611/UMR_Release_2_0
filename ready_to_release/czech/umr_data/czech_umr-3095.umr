@@ -1,0 +1,278 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2       3     4
+Words: Polský pašerák zboží neprovezl
+
+# sentence level graph:
+(s1p1 / provézt-001
+        :ARG0 (s1p2 / pašerák
+            :mod (s1p3 / polský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1z1 / zboží
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s1p1: 4-4
+s1p2: 2-2
+s1p3: 1-1
+s1z1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2 3   4 5
+Words: Liberec ( ouš ) -
+
+# sentence level graph:
+(s2l1 / Liberec
+        :parenthesis (s2o1 / ouš)
+        :refer-number singular)
+
+# alignment:
+s2l1: 1-1
+s2o1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2        3  4  5            6  7     8   9     10    11      12      13 14       15 16        17
+Words: Polského pašeráka i  s  kontrabandem za téměř 300 tisíc korun dopadli celníci z  Habartic na Liberecku .
+
+# sentence level graph:
+(s3d1 / dopadnout-001
+        :ARG1 (s3p1 / pašerák
+            :mod (s3p2 / polský
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s3i1 / i)
+        :companion (s3k1 / kontraband
+            :mod (s3t1 / tisíc
+                :mod (s3k2 / koruna
+                    :refer-number plural)
+                :mod (s3x1 / 300
+                    :extent (s3t2 / téměř))
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3c1 / celník
+            :start (s3h1 / Habartice
+                :place (s3l1 / Liberecko
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s3d1: 11-11
+s3p1: 2-2
+s3p2: 1-1
+s3i1: 3-3
+s3k1: 4-5
+s3t1: 9-9
+s3k2: 10-10
+s3x1: 6-6,8-8
+s3t2: 7-7
+s3c1: 12-12
+s3h1: 13-14
+s3l1: 15-16
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s1p2)
+            (s3p2 :same-entity s1p3)
+            (s3k1 :same-entity s1z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2        3         4            5  6       7          8         9  10         11 12        13
+Words: Vozidla naditého spotřební elektronikou si povšiml pohraniční policista na parkovišti ve Frýdlantě .
+
+# sentence level graph:
+(s4p1 / povšimnout-si-001
+        :ARG1 (s4v1 / vozidlo
+            :mod (s4n1 / naditý
+                :ARG1 (s4e1 / elektronika
+                    :mod (s4s1 / spotřební
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4p2 / policista
+            :mod (s4p3 / pohraniční
+                :refer-number singular)
+            :refer-number singular)
+        :place (s4p4 / parkoviště
+            :place (s4f1 / Frýdlant
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4p1: 5-6
+s4v1: 1-1
+s4n1: 2-2
+s4e1: 4-4
+s4s1: 3-3
+s4p2: 8-8
+s4p3: 7-7
+s4p4: 9-10
+s4f1: 11-12
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2       3        4  5  6     7       8         9  10      11
+Words: Přivolaní celníci zjistili ,  že zboží provezl podloudně z  Německa .
+
+# sentence level graph:
+(s5z1 / zjistit-002
+        :ARG0 (s5c1 / celník
+            :mod (s5p1 / přivolaný
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s5p2 / provézt-001
+            :ARG1 (s5z2 / zboží
+                :refer-number singular)
+            :ARG0 (s5e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :manner (s5p3 / podloudně)
+            :start (s5n1 / Německo
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s5z1: 3-3
+s5c1: 2-2
+s5p1: 1-1
+s5p2: 5-5,7-7
+s5z2: 6-6
+s5e1: 0-0
+s5p3: 8-8
+s5n1: 9-10
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5c1 :same-entity s3c1)
+            (s5z2 :same-entity s4e1)
+            (s5e1 :same-entity s3p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1   2      3  4    5         6  7           8       9       10 11         12    13   14
+Words: Při vjezdu do naší republiky ho nepřihlásil celnímu dohledu a  nezaplatil celní dluh .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6p1 / přihlásit-001
+            :ARG0 (s6e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :temporal (s6v1 / vjezd
+                :goal (s6r1 / republika
+                    :possessor (s6e2 / entity
+                        :refer-number plural
+                        :refer-person 1st)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s6e3 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG2 (s6d1 / dohled
+                :mod (s6c1 / celní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance
+            :polarity -)
+        :op2 (s6z1 / zaplatit-001
+            :ARG0 s6e1
+            :ARG1 (s6d2 / dluh
+                :mod (s6c2 / celní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance
+            :polarity -))
+
+# alignment:
+s6a1: 10-10
+s6p1: 7-7
+s6v1: 1-2
+s6r1: 3-3,5-5
+s6e2: 4-4
+s6e3: 6-6
+s6d1: 9-9
+s6c1: 8-8
+s6e1: 0-0
+s6z1: 11-11
+s6d2: 13-13
+s6c2: 12-12
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e3 :same-entity s5z2)
+            (s6e1 :same-entity s5e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2       3         4           5    6   7      8
+Words: Cílovou stanicí spotřební elektroniky mělo být Polsko .
+
+# sentence level graph:
+(s7b1 / být-007
+        :ARG1 (s7s1 / stanice
+            :possessor (s7e1 / elektronika
+                :mod (s7s2 / spotřební
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :mod (s7c1 / cílový
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7p1 / Polsko
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s7b1: 5-6
+s7s1: 2-2
+s7e1: 4-4
+s7s2: 3-3
+s7c1: 1-1
+s7p1: 7-7
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6e3)
+            (s7p1 :same-entity s3p2)))
+
+

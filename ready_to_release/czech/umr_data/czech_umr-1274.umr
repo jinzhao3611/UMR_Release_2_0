@@ -1,0 +1,172 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2     3     4  5       6              7  8               9     10
+Words: Minulý týden došlo na stránce Automobilismus k  politováníhodné chybě .
+
+# sentence level graph:
+(s1d1 / dojít-009
+        :temporal (s1t1 / týden
+            :mod (s1m1 / minulý
+                :refer-number singular)
+            :refer-number singular)
+        :place (s1s1 / stránka
+            :name (s1a1 / Automobilismus
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s1c1 / chyba
+            :mod (s1p1 / politováníhodný
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s1d1: 3-3
+s1t1: 2-2
+s1m1: 1-1
+s1s1: 4-5
+s1a1: 6-6
+s1c1: 7-7,9-9
+s1p1: 8-8
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1  2      3  4     5      6    7        8          9  10      11  12 13
+Words: U  článku o  Hondě Legend byla zaměněna fotografie s  Roverem 214 i  .
+
+# sentence level graph:
+(s2z1 / zaměnit-001
+        :place (s2c1 / článek
+            :ARG1 (s2h1 / Honda
+                :mod (s2l1 / Legend)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s2e1 / entity)
+        :ARG1 (s2f1 / fotografie
+            :refer-number singular)
+        :effect (s2r1 / Rover
+            :mod (s2i1 / i
+                :mod (s2x1 / 214))
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s2z1: 6-7
+s2c1: 1-2
+s2h1: 3-4
+s2l1: 5-5
+s2e1: 0-0
+s2f1: 8-8
+s2r1: 9-10
+s2i1: 12-12
+s2x1: 11-11
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2z1 :same-event s1c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2  3     4     5         6  7     8   9   10 11        12        13 14 15        16 17   18    19     20          21
+Words: Čtenářům i  Hondě Česká republika ,  která nám vůz k  testování zapůjčila ,  se omlouváme a  auto ještě jednou připomínáme .
+
+# sentence level graph:
+(s3a1 / and
+        :op1 (s3o1 / omlouvat-001
+            :ARG2 (s3a2 / and
+                :op1 (s3c1 / čtenář
+                    :refer-number plural)
+                :op2 (s3h1 / Honda
+                    :name (s3r1 / republika
+                        :mod (s3c2 / Český
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0-of (s3z1 / zapůjčit-001
+                        :ARG1 (s3v1 / vůz
+                            :purpose (s3t1 / testování
+                                :ARG0 s3e1
+                                :ARG1 (s3e2 / entity)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG2 (s3e1 / entity
+                            :refer-number plural
+                            :refer-person 1st)
+                        :aspect performance)
+                    :refer-number singular))
+            :ARG0 s3e1
+            :ARG1 s3e1
+            :refer-number plural
+            :refer-person 1st
+            :aspect activity)
+        :op2 (s3p1 / připomínat-001
+            :ARG2 s3a2
+            :ARG0 s3e1
+            :ARG1 (s3a3 / auto
+                :refer-number singular)
+            :clausal-marker (s3j1 / ještě)
+            :frequency (s3j2 / jednou)
+            :refer-number plural
+            :refer-person 1st
+            :aspect activity))
+
+# alignment:
+s3a1: 16-16
+s3o1: 15-15
+s3a2: 2-2
+s3c1: 1-1
+s3h1: 3-3,7-7
+s3r1: 5-5
+s3c2: 4-4
+s3z1: 12-12
+s3v1: 9-9
+s3t1: 10-11
+s3e2: 0-0
+s3e1: 8-8,14-14
+s3p1: 20-20
+s3a3: 17-17
+s3j1: 18-18
+s3j2: 19-19
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3v1 :same-entity s2h1)
+            (s3a3 :same-entity s3v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2        3    4 5
+Words: Foto Vladimír Šulc - LN
+
+# sentence level graph:
+(s4e1 / event
+        :ARG1 (s4f1 / foto
+            :refer-number singular)
+        :ARG0 (s4s1 / Šulc
+            :mod (s4v1 / Vladimír
+                :refer-number singular)
+            :parenthesis (s4l1 / LN
+                :refer-number plural)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s4e1: 0-0
+s4f1: 1-1
+s4s1: 3-3
+s4v1: 2-2
+s4l1: 5-5
+
+# document level annotation:
+(s4s0 / sentence)
+
+

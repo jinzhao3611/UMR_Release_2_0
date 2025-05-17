@@ -1,0 +1,367 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1   2       3 4       5
+Words: Tři cirkusy v hlavním městě
+
+# sentence level graph:
+(s1c1 / cirkus
+        :mod (s1t1 / tři
+            :refer-number plural)
+        :place (s1m1 / město
+            :mod (s1h1 / hlavní
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural)
+
+# alignment:
+s1c1: 2-2
+s1t1: 1-1
+s1m1: 3-3,5-5
+s1h1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3  4 5
+Words: Praha ( ed ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2e1 / ed)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2e1: 3-3
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p1 :same-entity s1m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2      3        4      5  6  7  8    9   10          11 12    13        14      15    16   17 18     19    20
+Words: Soukromý cirkus Berousek pořádá do 30 .  září svá představení v  těsné blízkosti stanice metra Háje na Jižním Městě .
+
+# sentence level graph:
+(s3p1 / pořádat-001
+        :ARG0 (s3c1 / cirkus
+            :name (s3b1 / Berousek
+                :refer-number singular)
+            :mod (s3s1 / soukromý
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3z1 / září
+            :mod (s3x1 / 30)
+            :refer-number singular)
+        :ARG1 (s3p2 / představení
+            :possessor s3c1
+            :refer-number plural)
+        :place (s3b2 / blízkost
+            :possessor (s3s2 / stanice
+                :possessor (s3m1 / metro
+                    :name (s3h1 / Háj
+                        :refer-number plural)
+                    :refer-number singular)
+                :place (s3m2 / Město
+                    :mod (s3j1 / Jižní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3t1 / těsný
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3p1: 4-4
+s3c1: 2-2,9-9
+s3b1: 3-3
+s3s1: 1-1
+s3z1: 5-5,8-8
+s3x1: 6-6
+s3p2: 10-10
+s3b2: 11-11,13-13
+s3s2: 14-14
+s3m1: 15-15
+s3h1: 16-16
+s3m2: 17-17,19-19
+s3j1: 18-18
+s3t1: 12-12
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2     3  4  5     6    7       8     9   10        11      12 13      14 15     16       17        18 19     20   21
+Words: V  pátek se v  Praze mají objevit další dva kolektivy artistů a  drezérů -  cirkus Bohumila Kludského a  Cirkus King .
+
+# sentence level graph:
+(s4o1 / objevit-se-001
+        :temporal (s4p1 / pátek
+            :refer-number singular)
+        :place (s4p2 / Praha
+            :refer-number singular)
+        :ARG0 (s4i1 / identity-91
+            :ARG1 (s4k1 / kolektiv
+                :mod (s4a1 / and
+                    :op1 (s4a2 / artista
+                        :refer-number plural)
+                    :op2 (s4d1 / drezér
+                        :refer-number plural))
+                :mod (s4d2 / další
+                    :refer-number plural)
+                :mod (s4d3 / dva
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG2 (s4a3 / and
+                :op1 (s4c1 / cirkus
+                    :possessor (s4k2 / Kludský
+                        :mod (s4b1 / Bohumil
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s4c2 / Cirkus
+                    :name (s4k3 / King
+                        :refer-number singular)
+                    :refer-number singular)))
+        :aspect performance)
+
+# alignment:
+s4o1: 3-3,6-7
+s4p1: 1-2
+s4p2: 4-5
+s4i1: 14-14
+s4k1: 10-10
+s4a1: 12-12
+s4a2: 11-11
+s4d1: 13-13
+s4d2: 8-8
+s4d3: 9-9
+s4a3: 18-18
+s4c1: 15-15
+s4k2: 17-17
+s4b1: 16-16
+s4c2: 19-19
+s4k3: 20-20
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4p2 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2        3  4    5          6      7
+Words: Ředitel Berousek se však konkurence nebojí .
+
+# sentence level graph:
+(s5b1 / bát-se-002
+        :clausal-marker (s5v1 / však)
+        :ARG0 (s5b2 / Berousek
+            :mod (s5r1 / ředitel
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s5k1 / konkurence
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s5b1: 3-3,6-6
+s5v1: 4-4
+s5b2: 2-2
+s5r1: 1-1
+s5k1: 5-5
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5k1 :same-entity s4i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2  3  4      5       6      7  8         9       10 11   12 13  14 15
+Words: Sází na 10 drezúr různých zvířat ,  například pštrosů ,  koní ,  koz aj .
+
+# sentence level graph:
+(s6s1 / sázet-005
+        :ARG0 (s6e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s6d1 / drezúra
+            :ARG1 (s6i1 / identity-91
+                :ARG1 (s6z1 / zvíře
+                    :mod (s6r1 / různý
+                        :refer-number plural)
+                    :refer-number plural)
+                :clausal-marker (s6n1 / například)
+                :ARG2 (s6a1 / and
+                    :op1 (s6p1 / pštros
+                        :refer-number plural)
+                    :op2 (s6k1 / kůň
+                        :refer-number plural)
+                    :op3 (s6k2 / koza
+                        :refer-number plural)
+                    :op4 (s6a2 / aj)))
+            :mod (s6x1 / 10)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6s1: 1-1
+s6e1: 0-0
+s6d1: 2-2,4-4
+s6i1: 7-7
+s6z1: 6-6
+s6r1: 5-5
+s6n1: 8-8
+s6a1: 12-12
+s6p1: 9-9
+s6k1: 11-11
+s6k2: 13-13
+s6a2: 14-14
+s6x1: 3-3
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5b2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2       3    4      5          6       7  8       9            10    11   12      13 14       15
+Words: Hlavním tahákem bude zřejmě vystoupení medvědů ,  potomků protagonistů filmu Šest medvědů s  Cibulkou .
+
+# sentence level graph:
+(s7b1 / být-007
+        :ARG1 (s7t1 / tahák
+            :mod (s7h1 / hlavní
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s7z1 / zřejmě)
+        :ARG0 (s7v1 / vystoupení
+            :ARG0 (s7i1 / identity-91
+                :ARG1 (s7m1 / medvěd
+                    :refer-number plural)
+                :ARG2 (s7p1 / potomek
+                    :possessor (s7p2 / protagonista
+                        :possessor (s7f1 / film
+                            :name (s7m2 / medvěd
+                                :mod (s7s1 / šest
+                                    :refer-number singular)
+                                :companion (s7c1 / Cibulka
+                                    :refer-number singular)
+                                :refer-number plural)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number plural))
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7b1: 3-3
+s7t1: 2-2
+s7h1: 1-1
+s7z1: 4-4
+s7v1: 5-5
+s7i1: 7-7
+s7m1: 6-6
+s7p1: 8-8
+s7p2: 9-9
+s7f1: 10-10
+s7m2: 12-12
+s7s1: 11-11
+s7c1: 13-14
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1           2    3     4   5  6     7  8  9  10    11
+Words: Představení jsou každý den od 15.30 a  od 19 hodin .
+
+# sentence level graph:
+(s8b1 / být-011
+        :ARG0 (s8p1 / představení
+            :refer-number plural)
+        :frequency (s8d1 / den
+            :mod (s8k1 / každý
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s8a1 / and
+            :op1 (s8x1 / 15.30)
+            :op2 (s8h1 / hodina
+                :mod (s8x2 / 19)
+                :refer-number plural))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s8b1: 2-2
+s8p1: 1-1
+s8d1: 4-4
+s8k1: 3-3
+s8a1: 7-7
+s8x1: 5-6
+s8h1: 8-8,10-10
+s8x2: 9-9
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8p1 :same-entity s3p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1       2  3  4  5  6  7
+Words: Vstupné od 40 do 55 Kč .
+
+# sentence level graph:
+(s9e1 / event
+        :ARG0 (s9v1 / vstupné
+            :refer-number singular)
+        :ARG1 (s9k1 / Kč
+            :mod (s9m1 / math
+                :op1 (s9x1 / 40)
+                :op2 (s9x2 / 55)))
+        :aspect state)
+
+# alignment:
+s9e1: 0-0
+s9v1: 1-1
+s9k1: 6-6
+s9m1: 2-2,4-4
+s9x1: 3-3
+s9x2: 5-5
+
+# document level annotation:
+(s9s0 / sentence)
+
+

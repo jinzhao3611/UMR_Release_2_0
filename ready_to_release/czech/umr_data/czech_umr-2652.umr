@@ -1,0 +1,402 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2  3      4
+Words: ZLODĚJ SE VRÁTIL .
+
+# sentence level graph:
+(s1v1 / vrátit-se-004
+        :ARG0 (s1z1 / zloděj
+            :refer-number singular)
+        :goal (s1e1 / entity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s1v1: 2-3
+s1z1: 1-1
+s1e1: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1         2      3        4  5      6  7    8    9  10    11 12      13 14         15      16 17   18    19       20
+Words: Policejní hlídka vyrušila v  neděli v  noci muže ,  který se vloupal do restaurace Kukačka v  obci Horní Životice .
+
+# sentence level graph:
+(s2v1 / vyrušit-001
+        :ARG0 (s2h1 / hlídka
+            :mod (s2p1 / policejní
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s2n1 / neděle
+            :refer-number singular)
+        :temporal (s2n2 / noc
+            :refer-number singular)
+        :ARG1 (s2m1 / muž
+            :ARG0-of (s2v2 / vloupat-se-001
+                :goal (s2r1 / restaurace
+                    :name (s2k1 / Kukačka
+                        :refer-number singular)
+                    :place (s2o1 / obec
+                        :name (s2z1 / Životice
+                            :mod (s2h2 / Horní
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s2v1: 3-3
+s2h1: 2-2
+s2p1: 1-1
+s2n1: 4-5
+s2n2: 6-7
+s2m1: 8-8,10-10
+s2v2: 11-12
+s2r1: 13-14
+s2k1: 15-15
+s2o1: 16-17
+s2z1: 19-19
+s2h2: 18-18
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2m1 :same-entity s1z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2  3  4      5  6        7         8       9         10       11 12        13         14  15
+Words: Podařilo se mu zmizet ,  přestože policisté použili varovného výstřelu a  vypustili služebního psa .
+
+# sentence level graph:
+(s3b1 / but-91
+        :ARG1 (s3p1 / podařit-se-001
+            :ARG0 (s3e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s3z1 / zmizet-001
+                :ARG0 s3e1
+                :aspect performance)
+            :refer-number singular
+            :aspect performance)
+        :ARG2 (s3a1 / and
+            :op1 (s3p2 / použít-001
+                :ARG0 (s3p3 / policista
+                    :refer-number plural)
+                :ARG1 (s3v1 / výstřel
+                    :mod (s3v2 / varovný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :aspect performance)
+            :op2 (s3v3 / vypustit-004
+                :ARG0 s3p3
+                :ARG1 (s3p4 / pes
+                    :mod (s3s1 / služební
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :aspect performance)))
+
+# alignment:
+s3b1: 0-0
+s3p1: 1-2
+s3e1: 3-3
+s3z1: 4-4
+s3a1: 11-11
+s3p2: 6-6,8-8
+s3v1: 10-10
+s3v2: 9-9
+s3p3: 7-7
+s3v3: 6-6,12-12
+s3p4: 14-14
+s3s1: 13-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2m1)
+            (s3p3 :same-entity s2h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2    3    4  5      6  7     8    9      10
+Words: Ještě téže noci se zloděj na místo činu vrátil .
+
+# sentence level graph:
+(s4v1 / vrátit-se-004
+        :temporal (s4n1 / noc
+            :clausal-marker (s4j1 / ještě)
+            :mod (s4t1 / týž
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4z1 / zloděj
+            :refer-number singular)
+        :goal (s4m1 / místo
+            :possessor (s4c1 / čin
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4v1: 4-4,9-9
+s4n1: 3-3
+s4j1: 1-1
+s4t1: 2-2
+s4z1: 5-5
+s4m1: 6-7
+s4c1: 8-8
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4n1 :same-entity s2n2)
+            (s4z1 :same-entity s3e1)
+            (s4m1 :same-entity s2r1)
+            (s4c1 :same-event s2v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1 2         3  4   5      6       7
+Words: S policisty se tam setkal podruhé .
+
+# sentence level graph:
+(s5s1 / setkat-se-001
+        :ARG1 (s5p1 / policista
+            :refer-number plural)
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :place (s5t1 / tam
+            :refer-number singular)
+        :frequency (s5p2 / podruhé)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5s1: 3-3,5-5
+s5p1: 1-2
+s5e1: 0-0
+s5t1: 4-4
+s5p2: 6-6
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p1 :same-entity s3p3)
+            (s5e1 :same-entity s4z1)
+            (s5t1 :same-entity s4m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2  3        4
+Words: Tentokrát ho zadrželi .
+
+# sentence level graph:
+(s6z1 / zadržet-002
+        :temporal (s6t1 / tentokrát)
+        :ARG0 (s6e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s6e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s6z1: 3-3
+s6t1: 1-1
+s6e1: 0-0
+s6e2: 2-2
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5p1)
+            (s6e2 :same-entity s5e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1     2  3  4          5          6  7  8  9  10 11      12
+Words: Jedná se o  několikrát trestaného M  .  K  .  z  Ostravy .
+
+# sentence level graph:
+(s7j1 / jednat-se-002
+        :ARG0 (s7k1 / K
+            :mod (s7m1 / M)
+            :mod (s7t1 / trestaný
+                :frequency (s7n1 / několikrát)
+                :refer-number singular)
+            :start (s7o1 / Ostrava
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7j1: 1-2
+s7k1: 3-3,8-8
+s7m1: 6-6
+s7t1: 5-5
+s7n1: 4-4
+s7o1: 10-11
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7k1 :same-entity s6e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1          2   3
+Words: NEDOKONČIL LUP .
+
+# sentence level graph:
+(s8d1 / dokončit-001
+        :ARG0 (s8e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s8l1 / lup
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s8d1: 1-1
+s8e1: 0-0
+s8l1: 2-2
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1        2      3          4       5  6       7  8      9       10   11       12    13     14      15       16 17    18      19    20
+Words: Nedaleko skladu tabákových výrobků v  Zábřehu v  okrese Šumperk bylo nalezeno deset balíků cigaret Marlboro za čtvrt miliónu korun .
+
+# sentence level graph:
+(s9n1 / naleznout-001
+        :place (s9s1 / sklad
+            :ARG1 (s9v1 / výrobek
+                :mod (s9t1 / tabákový
+                    :refer-number plural)
+                :refer-number plural)
+            :place (s9z1 / Zábřeh
+                :place (s9o1 / okres
+                    :name (s9s2 / Šumperk
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s9e1 / entity)
+        :ARG1 (s9b1 / balík
+            :mod (s9c1 / cigareta
+                :name (s9m1 / Marlboro
+                    :refer-number singular)
+                :refer-number plural)
+            :substitute (s9c2 / čtvrt
+                :mod (s9m2 / milión
+                    :mod (s9k1 / koruna
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s9d1 / deset
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s9n1: 10-11
+s9s1: 1-2
+s9v1: 4-4
+s9t1: 3-3
+s9z1: 5-6
+s9o1: 7-8
+s9s2: 9-9
+s9e1: 0-0
+s9b1: 13-13
+s9c1: 14-14
+s9m1: 15-15
+s9c2: 16-17
+s9m2: 18-18
+s9k1: 19-19
+s9d1: 12-12
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1         2  3  4    5     6       7      8  9     10 11       12     13
+Words: Připravil si je tady zatím neznámý zloděj ,  který je nestačil odnést .
+
+# sentence level graph:
+(s10p1 / připravit-002
+        :place (s10t1 / tady
+            :refer-number singular)
+        :ARG1 (s10e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :affectee s10z1
+        :ARG0 (s10z1 / zloděj
+            :mod (s10z2 / známý
+                :temporal (s10z3 / zatím)
+                :refer-number singular
+                :polarity -)
+            :ARG0-of (s10s1 / stačit-003
+                :ARG1 (s10o1 / odnést-002
+                    :ARG0 s10z1
+                    :start (s10e2 / entity)
+                    :ARG1 s10e1
+                    :aspect performance)
+                :refer-number singular
+                :aspect activity
+                :polarity -)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s10p1: 1-1
+s10t1: 4-4
+s10e1: 3-3,10-10
+s10z1: 2-2,7-7,9-9
+s10z2: 6-6
+s10z3: 5-5
+s10s1: 11-11
+s10o1: 12-12
+s10e2: 0-0
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10t1 :same-entity s9s1)
+            (s10e1 :same-entity s9b1)
+            (s10z1 :same-entity s8e1)))
+
+

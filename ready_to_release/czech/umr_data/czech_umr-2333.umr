@@ -1,0 +1,652 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2      3        4
+Words: Samoplátci musejí zaplatit pojišťovnám
+
+# sentence level graph:
+(s1z1 / zaplatit-001
+        :ARG0 (s1s1 / samoplátce
+            :refer-number plural)
+        :ARG1 (s1e1 / entity)
+        :ARG2 (s1p1 / pojišťovna
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s1z1: 2-3
+s1s1: 1-1
+s1e1: 0-0
+s1p1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2  3     4  5         6         7     8    9  10     11   12   13        14         15      16 17    18       19 20       21 22       23 24        25 26     27  28
+Words: Lidé ,  kteří si zdravotní pojištění platí sami ,  musejí nyní svou zdravotní pojišťovnu zpravit o  svých příjmech ,  výdajích a  zálohách na pojištění za loňský rok .
+
+# sentence level graph:
+(s3z1 / zpravit-001
+        :ARG0 (s3c1 / člověk
+            :ARG0-of (s3p1 / platit-001
+                :ARG1 (s3p2 / pojištění
+                    :ARG0 (s3e1 / entity)
+                    :ARG1 (s3e2 / entity)
+                    :regard (s3z2 / zdravotní
+                        :refer-number singular)
+                    :refer-number singular)
+                :affectee s3c1
+                :manner (s3s1 / sám
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number plural)
+        :ARG2 (s3p3 / pojišťovna
+            :mod (s3z3 / zdravotní
+                :refer-number singular)
+            :possessor s3c1
+            :refer-number singular)
+        :temporal (s3n1 / nyní)
+        :ARG1 (s3a1 / and
+            :op1 (s3p4 / příjem
+                :possessor s3c1
+                :refer-number plural)
+            :op2 (s3v1 / výdaj
+                :possessor s3c1
+                :refer-number plural)
+            :op3 (s3z4 / záloha
+                :possessor s3c1
+                :ARG1 (s3p5 / pojištění
+                    :ARG0 (s3e3 / entity)
+                    :ARG1 (s3e4 / entity)
+                    :refer-number singular)
+                :duration (s3r1 / rok
+                    :mod (s3l1 / loňský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural))
+        :aspect performance)
+
+# alignment:
+s3z1: 10-10,15-15
+s3c1: 1-1,3-4,12-12,17-17
+s3p1: 7-7
+s3p2: 6-6
+s3e1: 0-0
+s3e2: 0-0
+s3z2: 5-5
+s3s1: 8-8
+s3p3: 14-14
+s3z3: 13-13
+s3n1: 11-11
+s3a1: 21-21
+s3p4: 16-16,18-18
+s3v1: 16-16,20-20
+s3z4: 16-16,22-22
+s3p5: 23-24
+s3e3: 0-0
+s3e4: 0-0
+s3r1: 25-25,27-27
+s3l1: 26-26
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3c1 :same-entity s1s1)
+            (s3p3 :same-entity s1p1)
+            (s3p5 :same-entity s3p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2   3      4      5  6  7       8       9        10 11      12    13   14          15 16          17        18      19      20 21  22 23    24   25    26    27
+Words: Mluvčí VZP Zimová uvedla ,  že okresní pobočky posílají od začátku ledna svým pojištěncům -  samoplátcům formuláře nazvané Přehled ,  kam je třeba tyto údaje uvést .
+
+# sentence level graph:
+(s4u1 / uvést-007
+        :ARG0 (s4z1 / Zimová
+            :mod (s4m1 / mluvčí
+                :possessor (s4v1 / VZP)
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s4p1 / posílat-001
+            :ARG0 (s4p2 / pobočka
+                :mod (s4o1 / okresní
+                    :refer-number plural)
+                :refer-number plural)
+            :temporal (s4z2 / začátek
+                :possessor (s4l1 / leden
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s4i1 / identity-91
+                :ARG1 (s4p3 / pojištěnec
+                    :possessor s4p2
+                    :refer-number plural)
+                :ARG2 (s4s1 / samoplátce
+                    :refer-number plural))
+            :ARG1 (s4f1 / formulář
+                :mod (s4n1 / nazvaný
+                    :manner (s4p4 / přehled
+                        :refer-number singular)
+                    :refer-number plural)
+                :mod (s4b1 / být-020
+                    :predicative-noun (s4t1 / třeba
+                        :affectee (s4e1 / entity)
+                        :refer-number singular)
+                    :ARG0 (s4u2 / uvést-004
+                        :ARG1 (s4u3 / údaj
+                            :mod (s4t2 / tento
+                                :refer-number plural)
+                            :refer-number plural)
+                        :ARG0 s4e1
+                        :goal s4f1
+                        :aspect performance)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :aspect performance)
+
+# alignment:
+s4u1: 4-4
+s4z1: 3-3
+s4m1: 1-1
+s4v1: 2-2
+s4p1: 6-6,9-9
+s4p2: 8-8,13-13
+s4o1: 7-7
+s4z2: 10-11
+s4l1: 12-12
+s4i1: 15-15
+s4p3: 14-14
+s4s1: 16-16
+s4f1: 17-17,21-21
+s4n1: 18-18
+s4p4: 19-19
+s4b1: 22-22
+s4t1: 23-23
+s4e1: 0-0
+s4u2: 26-26
+s4u3: 25-25
+s4t2: 24-24
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4u3 :same-entity s3a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1          2   3   4      5        6  7    8   9  10      11       12 13    14 15    16    17 18    19     20
+Words: Samoplátci jej pak musejí odevzdat do osmi dnů po daňovém přiznání ,  které je třeba podat do konce března .
+
+# sentence level graph:
+(s5o1 / odevzdat-001
+        :ARG0 (s5s1 / samoplátce
+            :refer-number plural)
+        :ARG2 (s5e1 / entity)
+        :ARG1 (s5e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s5p1 / pak)
+        :temporal (s5d1 / den
+            :mod (s5o2 / osm
+                :refer-number plural)
+            :temporal (s5p2 / přiznání
+                :mod (s5d2 / daňový
+                    :refer-number singular)
+                :mod (s5b1 / být-020
+                    :predicative-noun (s5t1 / třeba
+                        :affectee (s5e3 / entity)
+                        :refer-number singular)
+                    :ARG0 (s5p3 / podat-002
+                        :ARG1 s5p2
+                        :ARG0 s5e3
+                        :ARG2 (s5e4 / entity)
+                        :temporal (s5k1 / konec
+                            :possessor (s5b2 / březen
+                                :refer-number singular)
+                            :refer-number singular)
+                        :aspect performance)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s5o1: 4-5
+s5s1: 1-1
+s5e1: 0-0
+s5e2: 2-2
+s5p1: 3-3
+s5d1: 6-6,8-8
+s5o2: 7-7
+s5p2: 9-9,11-11,13-13
+s5d2: 10-10
+s5b1: 14-14
+s5t1: 15-15
+s5e3: 0-0
+s5p3: 16-16
+s5e4: 0-0
+s5k1: 17-18
+s5b2: 19-19
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s1 :same-entity s4i1)
+            (s5e2 :same-entity s4f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2         3     4     5         6  7       8         9          10
+Words: Podobné formuláře budou muset předložit i  klienti ostatních pojišťoven .
+
+# sentence level graph:
+(s6p1 / předložit-001
+        :ARG1 (s6f1 / formulář
+            :mod (s6p2 / podobný
+                :refer-number plural)
+            :refer-number plural)
+        :ARG2 (s6e1 / entity)
+        :clausal-marker (s6i1 / i)
+        :ARG0 (s6k1 / klient
+            :possessor (s6p3 / pojišťovna
+                :mod (s6o1 / ostatní
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s6p1: 3-5
+s6f1: 2-2
+s6p2: 1-1
+s6e1: 0-0
+s6i1: 6-6
+s6k1: 7-7
+s6p3: 9-9
+s6o1: 8-8
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2  3     4  5    6      7  8    9         10       11    12 13   14
+Words: Ti ,  kteří je loni měnili ,  mají formuláře odevzdat každé z  nich .
+
+# sentence level graph:
+(s7o1 / odevzdat-001
+        :ARG0 (s7t1 / ten
+            :ARG0-of (s7m1 / měnit-001
+                :ARG1 (s7e1 / entity
+                    :refer-number plural
+                    :refer-person 3rd)
+                :temporal (s7v1 / vloni)
+                :refer-number plural
+                :aspect activity)
+            :refer-number plural)
+        :ARG1 (s7f1 / formulář
+            :refer-number plural)
+        :ARG2 (s7k1 / každý
+            :start s7e1
+            :refer-number singular
+            :refer-person 3rd)
+        :aspect performance)
+
+# alignment:
+s7o1: 8-8,10-10
+s7t1: 1-1,3-3
+s7m1: 6-6
+s7e1: 4-4,12-13
+s7v1: 5-5
+s7f1: 9-9
+s7k1: 11-11
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1        2    3          4       5      6          7  8      9  10  11     12       13       14
+Words: Současně jsou samoplátci povinni donést pojišťovně i  doklad o  dni podání daňového přiznání .
+
+# sentence level graph:
+(s8b1 / být-007
+        :ARG0 (s8s1 / samoplátce
+            :refer-number plural)
+        :clausal-marker (s8s2 / současně)
+        :ARG1 (s8p1 / povinný
+            :ARG1 (s8d1 / donést-001
+                :ARG2 (s8p2 / pojišťovna
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG0 s8s1
+                :clausal-marker (s8i1 / i)
+                :ARG1 (s8d2 / doklad
+                    :ARG1 (s8d3 / den
+                        :mod (s8p3 / podání
+                            :ARG0 s8s1
+                            :goal (s8e1 / entity)
+                            :ARG1 (s8p4 / přiznání
+                                :mod (s8d4 / daňový
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s8b1: 2-2
+s8s1: 3-3
+s8s2: 1-1
+s8p1: 4-4
+s8d1: 5-5
+s8p2: 6-6
+s8i1: 7-7
+s8d2: 8-8
+s8d3: 9-10
+s8p3: 11-11
+s8e1: 0-0
+s8p4: 13-13
+s8d4: 12-12
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8s1 :same-entity s3c1)
+            (s8p2 :same-entity s7e1)
+            (s8p3 :same-event s5p3)
+            (s8p4 :same-entity s5p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1      2    3     4  5  6         7  8      9     10       11    12    13    14       15      16
+Words: Zimová dále řekla ,  že Všeobecná v  těchto dnech rozesílá další číslo svého časopisu Jistota .
+
+# sentence level graph:
+(s9r1 / říci-008
+        :ARG0 (s9z1 / Zimová
+            :refer-number singular)
+        :ARG2 (s9e1 / entity)
+        :duration (s9d1 / dále)
+        :effect (s9r2 / rozesílat-001
+            :ARG0 (s9v1 / Všeobecný
+                :refer-number singular)
+            :ARG2 (s9e2 / entity)
+            :temporal (s9d2 / den
+                :mod (s9t1 / tento
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s9c1 / číslo
+                :possessor (s9c2 / časopis
+                    :possessor s9v1
+                    :name (s9j1 / Jistota
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s9d3 / další
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :aspect performance)
+
+# alignment:
+s9r1: 3-3
+s9z1: 1-1
+s9e1: 0-0
+s9d1: 2-2
+s9r2: 5-5,10-10
+s9v1: 6-6,13-13
+s9e2: 0-0
+s9d2: 7-7,9-9
+s9t1: 8-8
+s9c1: 12-12
+s9c2: 14-14
+s9j1: 15-15
+s9d3: 11-11
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9z1 :same-entity s4z1)
+            (s9v1 :same-entity s4v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1          2   3      4        5         6 7        8
+Words: Samoplátci zde najdou podrobné informace o Přehledu .
+
+# sentence level graph:
+(s10n1 / najít-002
+        :ARG0 (s10s1 / samoplátce
+            :refer-number plural
+            :refer-person 3rd)
+        :place (s10z1 / zde
+            :refer-number singular)
+        :ARG1 (s10i1 / informace
+            :ARG1 (s10p1 / Přehled
+                :refer-number singular)
+            :mod (s10p2 / podrobný
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s10n1: 3-3
+s10s1: 1-1
+s10z1: 2-2
+s10i1: 5-5
+s10p1: 6-7
+s10p2: 4-4
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10s1 :same-entity s8s1)
+            (s10z1 :same-entity s9c1)
+            (s10p1 :same-entity s7f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1    2    3   4     5  6         7            8  9            10  11            12
+Words: Dále jsou zde údaje o  cestovním připojištění a  nadstandardu při hospitalizaci .
+
+# sentence level graph:
+(s11b1 / být-011
+        :clausal-marker (s11d1 / dále)
+        :place (s11z1 / zde)
+        :ARG0 (s11u1 / údaj
+            :ARG1 (s11a1 / and
+                :op1 (s11p1 / připojištění
+                    :ARG0 (s11e1 / entity)
+                    :mod (s11c1 / cestovní
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s11n1 / nadstandard
+                    :condition (s11h1 / hospitalizace
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s11b1: 2-2
+s11d1: 1-1
+s11z1: 3-3
+s11u1: 4-4
+s11a1: 8-8
+s11p1: 5-5,7-7
+s11e1: 0-0
+s11c1: 6-6
+s11n1: 5-5,9-9
+s11h1: 10-11
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11z1 :same-entity s10z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1     2    3     4      5   6       7  8       9        10     11     12 13           14          15              16     17      18
+Words: Budou však možná platit jen dočasně ,  protože navržená novela zákonů o  pojišťovnách poskytování nadstandardních služeb omezuje .
+
+# sentence level graph:
+(s12p1 / platit-009
+        :clausal-marker (s12v1 / však)
+        :ARG0 (s12e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :clausal-marker (s12m1 / možná)
+        :clausal-marker (s12j1 / jen)
+        :duration (s12d1 / dočasně)
+        :cause (s12o1 / omezovat-001
+            :ARG0 (s12n1 / novela
+                :ARG1 (s12z1 / zákon
+                    :ARG1 (s12p2 / pojišťovna
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s12n2 / navržený
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s12p3 / poskytování
+                :ARG1 (s12s1 / služba
+                    :mod (s12n3 / nadstandardní
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG0 (s12e2 / entity)
+                :ARG2 (s12e3 / entity)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :aspect activity)
+
+# alignment:
+s12p1: 1-1,4-4
+s12v1: 2-2
+s12e1: 0-0
+s12m1: 3-3
+s12j1: 5-5
+s12d1: 6-6
+s12o1: 8-8,17-17
+s12n1: 10-10
+s12z1: 11-11
+s12p2: 12-13
+s12n2: 9-9
+s12p3: 14-14
+s12s1: 16-16
+s12n3: 15-15
+s12e2: 0-0
+s12e3: 0-0
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12e1 :same-entity s11u1)
+            (s12p2 :same-entity s8p2)
+            (s12s1 :same-entity s11n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1          2    3    4          5         6     7  8  9  10    11   12      13        14     15
+Words: Samoplátci jsou lidé samostatně výdělečně činní a  ti ,  kteří mají vlastní nezdaněné příjmy .
+
+# sentence level graph:
+(s13b1 / být-007
+        :ARG1 (s13s1 / samoplátce
+            :refer-number plural)
+        :ARG0 (s13a1 / and
+            :op1 (s13c1 / člověk
+                :mod (s13c2 / činný
+                    :regard (s13v1 / výdělečně)
+                    :manner (s13s2 / samostatně)
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s13t1 / ten
+                :ARG0-of (s13m1 / mít-002
+                    :ARG1 (s13p1 / příjem
+                        :mod (s13z1 / zdaněný
+                            :refer-number plural
+                            :polarity -)
+                        :mod (s13v2 / vlastní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect state)
+                :refer-number plural))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s13b1: 2-2
+s13s1: 1-1
+s13a1: 7-7
+s13c1: 3-3
+s13c2: 6-6
+s13v1: 5-5
+s13s2: 4-4
+s13t1: 8-8,10-10
+s13m1: 11-11
+s13p1: 14-14
+s13z1: 13-13
+s13v2: 12-12
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13s1 :same-entity s10s1)))
+
+

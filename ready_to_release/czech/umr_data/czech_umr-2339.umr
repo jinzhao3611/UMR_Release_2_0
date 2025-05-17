@@ -1,0 +1,96 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2 3
+Words: Dnes v listě
+
+# sentence level graph:
+(s1e1 / event
+        :temporal (s1d1 / dnes)
+        :place (s1l1 / list
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1d1: 1-1
+s1l1: 2-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1         2  3         4  5   6    7             8  9    10   11  12 13         14        15  16
+Words: Slovensko se dozvědělo za dva roky samostatnosti o  sobě více než za posledních sedmdesát let .
+
+# sentence level graph:
+(s2d1 / dozvědět-se-002
+        :ARG0 (s2s1 / Slovensko
+            :refer-number singular)
+        :duration (s2r1 / rok
+            :possessor (s2s2 / samostatnost
+                :refer-number singular)
+            :mod (s2d2 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 s2s1
+        :effect (s2h1 / hodně
+            :comparison (s2d3 / dozvědět-se-002
+                :ARG0 s2s1
+                :ARG1 s2s1
+                :effect (s2e1 / entity)
+                :duration (s2r2 / rok
+                    :mod (s2s3 / sedmdesát
+                        :refer-number singular)
+                    :mod (s2p1 / poslední
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular
+                :aspect performance))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s2d1: 2-3
+s2s1: 1-1,8-9
+s2r1: 4-4,6-6
+s2s2: 7-7
+s2d2: 5-5
+s2h1: 10-10
+s2d3: 0-0
+s2e1: 0-0
+s2r2: 12-12,15-15
+s2s3: 14-14
+s2p1: 13-13
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2      3
+Words: Nedělní Lidové noviny
+
+# sentence level graph:
+(s3n1 / noviny
+        :mod (s3l1 / lidový
+            :refer-number plural)
+        :mod (s3n2 / nedělní
+            :refer-number plural)
+        :refer-number plural)
+
+# alignment:
+s3n1: 3-3
+s3l1: 2-2
+s3n2: 1-1
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3n1 :same-entity s1l1)))
+
+

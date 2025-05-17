@@ -1,0 +1,289 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2  3
+Words: Marihuana na zahrádce
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1m1 / marihuana
+            :refer-number singular)
+        :place (s1z1 / zahrádka
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1m1: 1-1
+s1z1: 2-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2 3   4 5
+Words: Liberec ( ouš ) -
+
+# sentence level graph:
+(s2l1 / Liberec
+        :parenthesis (s2o1 / ouš)
+        :refer-number singular)
+
+# alignment:
+s2l1: 1-1
+s2o1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2      3       4   5        6  7         8  9        10 11        12        13       14
+Words: Zkušený celník objevil při pochůzce v  pohraničí na zahrádce v  Hejnicích podezřelé rostliny .
+
+# sentence level graph:
+(s3o1 / objevit-001
+        :ARG0 (s3c1 / celník
+            :mod (s3z1 / zkušený
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3p1 / pochůzka
+            :place (s3p2 / pohraničí
+                :refer-number singular)
+            :refer-number singular)
+        :place (s3z2 / zahrádka
+            :place (s3h1 / Hejnice
+                :refer-number plural)
+            :refer-number singular)
+        :ARG1 (s3r1 / rostlina
+            :mod (s3p3 / podezřelý
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3o1: 3-3
+s3c1: 2-2
+s3z1: 1-1
+s3p1: 4-5
+s3p2: 6-7
+s3z2: 8-9
+s3h1: 10-11
+s3r1: 13-13
+s3p3: 12-12
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3z2 :same-entity s1z1)
+            (s3r1 :same-entity s1m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1          2         3     4           5  6   7     8          9  10      11      12 13       14 15 16  17 18        19
+Words: Zanedlouho navštívil záhon specialista na boj proti narkotikům z  celnice Liberec a  potvrdil ,  že jde o  marihuanu .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4n1 / navštívit-001
+            :ARG1 (s4z1 / záhon
+                :refer-number singular)
+            :temporal (s4z2 / zanedlouho)
+            :ARG0 (s4s1 / specialista
+                :ARG1 (s4b1 / boj
+                    :ARG1 (s4n2 / narkotikum
+                        :refer-number plural)
+                    :refer-number singular)
+                :start (s4c1 / celnice
+                    :mod (s4l1 / Liberec
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s4p1 / potvrdit-001
+            :ARG0 s4s1
+            :ARG1 (s4j1 / jít-035
+                :ARG0 (s4m1 / marihuana
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s4a1: 12-12
+s4n1: 2-2
+s4z1: 3-3
+s4z2: 1-1
+s4s1: 4-4
+s4b1: 5-6
+s4n2: 7-8
+s4c1: 9-10
+s4l1: 11-11
+s4p1: 13-13
+s4j1: 15-16
+s4m1: 17-18
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4l1 :same-entity s2l1)
+            (s4m1 :same-entity s3r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2        3      4             5  6     7      8          9       10      11
+Words: Svůj poznatek předal kriminalistům ,  kteří dvacet nalezených rostlin zničili .
+
+# sentence level graph:
+(s5p1 / předat-001
+        :ARG1 (s5p2 / poznatek
+            :possessor s5e1
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s5k1 / kriminalista
+            :ARG0-of (s5z1 / zničit-001
+                :ARG1 (s5r1 / rostlina
+                    :mod (s5n1 / nalezený
+                        :refer-number plural)
+                    :mod (s5d1 / dvacet
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural
+                :aspect performance)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5p1: 3-3
+s5p2: 2-2
+s5e1: 1-1
+s5k1: 4-4,6-6
+s5z1: 10-10
+s5r1: 9-9
+s5n1: 8-8
+s5d1: 7-7
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p2 :same-event s4j1)
+            (s5e1 :same-entity s4s1)
+            (s5r1 :same-entity s4m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2  3      4         5       6            7       8   9           10     11 12     13       14 15             16    17
+Words: Proti 27 letému pěstiteli zahájil vyšetřovatel stíhání pro nedovolenou výrobu a  držení omamných a  psychotropních látek .
+
+# sentence level graph:
+(s6z1 / zahájit-001
+        :affectee (s6p1 / pěstitel
+            :mod (s6x1 / 27_letý)
+            :refer-number singular)
+        :ARG0 (s6v1 / vyšetřovatel
+            :refer-number singular)
+        :ARG1 (s6s1 / stíhání
+            :ARG0 s6v1
+            :ARG1 (s6e1 / entity)
+            :cause (s6a1 / and
+                :op1 (s6v2 / výroba
+                    :ARG0 (s6e2 / entity)
+                    :mod (s6d1 / dovolený
+                        :refer-number singular
+                        :polarity -)
+                    :ARG1 (s6l1 / látka
+                        :mod (s6a2 / and
+                            :op1 (s6o1 / omamný
+                                :refer-number plural)
+                            :op2 (s6p2 / psychotropní
+                                :refer-number plural))
+                        :refer-number plural)
+                    :refer-number singular)
+                :op2 (s6d2 / držení
+                    :ARG0 s6e2
+                    :ARG1 s6l1
+                    :refer-number singular))
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6z1: 5-5
+s6p1: 1-1,4-4
+s6x1: 2-3
+s6v1: 6-6
+s6s1: 7-7
+s6e1: 0-0
+s6a1: 11-11
+s6v2: 8-8,10-10
+s6d1: 9-9
+s6e2: 0-0
+s6l1: 16-16
+s6a2: 14-14
+s6o1: 13-13
+s6p2: 15-15
+s6d2: 8-8,12-12
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1         2    3         4       5         6 7        8       9
+Words: Policisté nyní zajišťují odborná vyjádření a znalecké posudky .
+
+# sentence level graph:
+(s7z1 / zajišťovat-001
+        :ARG0 (s7p1 / policista
+            :refer-number plural)
+        :temporal (s7n1 / nyní)
+        :ARG1 (s7a1 / and
+            :op1 (s7v1 / vyjádření
+                :ARG0 (s7e1 / entity)
+                :ARG1 (s7e2 / entity)
+                :mod (s7o1 / odborný
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s7p2 / posudek
+                :mod (s7z2 / znalecký
+                    :refer-number plural)
+                :refer-number plural))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7z1: 3-3
+s7p1: 1-1
+s7n1: 2-2
+s7a1: 6-6
+s7v1: 5-5
+s7e1: 0-0
+s7e2: 0-0
+s7o1: 4-4
+s7p2: 8-8
+s7z2: 7-7
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p1 :same-entity s5k1)))
+
+

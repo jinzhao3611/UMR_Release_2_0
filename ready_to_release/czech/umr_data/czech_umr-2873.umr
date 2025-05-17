@@ -1,0 +1,401 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2   3
+Words: Nadace pro ráj
+
+# sentence level graph:
+(s1n1 / nadace
+        :affectee (s1r1 / ráj
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1n1: 1-1
+s1r1: 2-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2 3   4 5
+Words: Turnov ( ouš ) -
+
+# sentence level graph:
+(s2t1 / Turnov
+        :parenthesis (s2o1 / ouš)
+        :refer-number singular)
+
+# alignment:
+s2t1: 1-1
+s2o1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2       3         4  5   6       7  8      9    10 11    12 13  14   15     16
+Words: Zlepšit životní prostředí a  ráz krajiny v  Českém ráji si klade za cíl nová nadace .
+
+# sentence level graph:
+(s3k1 / klást-001
+        :ARG1 (s3z1 / zlepšit-001
+            :ARG0 s3n1
+            :ARG1 (s3a1 / and
+                :op1 (s3p1 / prostředí
+                    :mod (s3z2 / životní
+                        :refer-number singular)
+                    :place (s3r1 / ráj
+                        :mod (s3c1 / český
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s3r2 / ráz
+                    :place s3r1
+                    :possessor (s3k2 / krajina
+                        :refer-number singular)
+                    :refer-number singular))
+            :aspect performance)
+        :ARG2 s3n1
+        :effect (s3c2 / cíl
+            :refer-number singular)
+        :ARG0 (s3n1 / nadace
+            :mod (s3n2 / nový
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3k1: 11-11
+s3z1: 1-1
+s3a1: 4-4
+s3p1: 3-3
+s3z2: 2-2
+s3r1: 7-7,9-9
+s3c1: 8-8
+s3r2: 5-5
+s3k2: 6-6
+s3c2: 12-13
+s3n1: 10-10,15-15
+s3n2: 14-14
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3r1 :same-entity s1r1)
+            (s3n1 :same-entity s1n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2  3  4        5     6  7   8        9  10      11      12 13             14      15      16
+Words: Může do ní vstoupit každý ,  kdo přispěje k  rozvoji jednoho z  nejvzácnějších českých regionů .
+
+# sentence level graph:
+(s4v1 / vstoupit-003
+        :goal (s4e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s4k1 / každý
+            :mod (s4p1 / přispět-002
+                :ARG0 (s4k2 / kdo
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG1 (s4r1 / rozvoj
+                    :ARG0 (s4j1 / jeden
+                        :start (s4r2 / region
+                            :mod (s4c1 / český
+                                :refer-number plural)
+                            :mod (s4v2 / vzácný
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd)
+        :aspect performance)
+
+# alignment:
+s4v1: 1-1,4-4
+s4e1: 2-3
+s4k1: 5-5
+s4p1: 8-8
+s4k2: 7-7
+s4r1: 9-10
+s4j1: 11-11
+s4r2: 12-12,15-15
+s4c1: 14-14
+s4v2: 13-13
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3n1)
+            (s4k2 :same-entity s4k1)
+            (s4j1 :same-entity s3r1)
+            (s4c1 :same-entity s3c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2            3      4     5     6  7    8  9     10 11     12      13 14     15    16 17       18          19 20       21
+Words: K  zakládajícím členům patří města a  obce ,  jakož i  spolky svázané s  Českým rájem a  významní jednotlivci -  patrioti .
+
+# sentence level graph:
+(s5p1 / patřit-001
+        :ARG1 (s5c1 / člen
+            :mod (s5z1 / zakládající
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s5a1 / and
+            :op1 (s5a2 / and
+                :op1 (s5m1 / město
+                    :refer-number plural)
+                :op2 (s5o1 / obec
+                    :refer-number plural))
+            :clausal-marker (s5i1 / i)
+            :op2 (s5a3 / and
+                :op1 (s5s1 / spolek
+                    :mod (s5s2 / svázaný
+                        :ARG2 (s5r1 / ráj
+                            :mod (s5c2 / Český
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number plural)
+                :op2 (s5i2 / identity-91
+                    :ARG1 (s5j1 / jednotlivec
+                        :mod (s5v1 / významný
+                            :refer-number plural)
+                        :refer-number plural)
+                    :ARG2 (s5p2 / patriot
+                        :refer-number plural))))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s5p1: 4-4
+s5c1: 1-1,3-3
+s5z1: 2-2
+s5a1: 9-9
+s5a2: 6-6
+s5m1: 5-5
+s5o1: 7-7
+s5i1: 10-10
+s5a3: 16-16
+s5s1: 11-11
+s5s2: 12-12
+s5r1: 13-13,15-15
+s5c2: 14-14
+s5i2: 19-19
+s5j1: 18-18
+s5v1: 17-17
+s5p2: 20-20
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5r1 :same-entity s4j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1        2      3         4      5         6  7        8  9          10      11 12        13       14      15 16      17           18
+Words: Společně chtějí zachránit vzácné živočichy a  rostliny ,  historické památky ,  výjimečné přírodní výtvory a  lidovou architekturu .
+
+# sentence level graph:
+(s6z1 / zachránit-001
+        :ARG0 (s6e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :manner (s6s1 / společně)
+        :ARG1 (s6a1 / and
+            :op1 (s6a2 / and
+                :op1 (s6z2 / živočich
+                    :mod (s6v1 / vzácný
+                        :refer-number plural)
+                    :refer-number plural)
+                :op2 (s6r1 / rostlina
+                    :mod s6v1
+                    :refer-number plural))
+            :op2 (s6p1 / památka
+                :mod (s6h1 / historický
+                    :refer-number plural)
+                :refer-number plural)
+            :op3 (s6v2 / výtvor
+                :mod (s6p2 / přírodní
+                    :refer-number plural)
+                :mod (s6v3 / výjimečný
+                    :refer-number plural)
+                :refer-number plural)
+            :op4 (s6a3 / architektura
+                :mod (s6l1 / lidový
+                    :refer-number singular)
+                :refer-number singular))
+        :aspect performance)
+
+# alignment:
+s6z1: 2-3
+s6e1: 0-0
+s6s1: 1-1
+s6a1: 15-15
+s6a2: 6-6
+s6z2: 5-5
+s6v1: 4-4
+s6r1: 7-7
+s6p1: 10-10
+s6h1: 9-9
+s6v2: 14-14
+s6p2: 13-13
+s6v3: 12-12
+s6a3: 17-17
+s6l1: 16-16
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2         3         4       5      6        7   8     9   10 11 12    13 14        15      16          17
+Words: Hodlají připravit například katalog staveb vhodných pro Český ráj ,  z  něhož by vycházeli všichni projektanti .
+
+# sentence level graph:
+(s7p1 / připravit-003
+        :ARG0 (s7e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :clausal-marker (s7n1 / například)
+        :ARG1 (s7k1 / katalog
+            :possessor (s7s1 / stavba
+                :mod (s7v1 / vhodný
+                    :affectee (s7r1 / ráj
+                        :mod (s7c1 / Český
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1-of (s7v2 / vycházet-007
+                :ARG0 (s7p2 / projektant
+                    :mod (s7v3 / všechen
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :aspect activity)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s7p1: 1-2
+s7e1: 0-0
+s7n1: 3-3
+s7k1: 4-4,11-12
+s7s1: 5-5
+s7v1: 6-6
+s7r1: 7-7,9-9
+s7c1: 8-8
+s7v2: 13-14
+s7p2: 16-16
+s7v3: 15-15
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6e1)
+            (s7r1 :same-entity s5r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1      2       3     4  5    6  7     8        9  10  11   12 13      14        15 16        17      18                19  20  21        22       23  24
+Words: Nadace spoléhá nejen na dary a  pomoc sponzorů ,  ale také na vlastní podnikání ,  například vydáním cykloturistických map pro příznivce horských kol .
+
+# sentence level graph:
+(s8i1 / identity-91
+        :ARG1 (s8s1 / spoléhat-001
+            :ARG0 (s8n1 / nadace
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s8g1 / gradation
+                :clausal-marker (s8n2 / nejen)
+                :op1 (s8a1 / and
+                    :op1 (s8d1 / dar
+                        :ARG0 (s8s2 / sponzor
+                            :refer-number plural)
+                        :refer-number plural)
+                    :op2 (s8p1 / pomoc
+                        :ARG0 s8s2
+                        :refer-number singular))
+                :clausal-marker (s8t1 / také)
+                :op2 (s8p2 / podnikání
+                    :ARG0 (s8e1 / entity)
+                    :manner (s8v1 / vlastní
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :clausal-marker (s8n3 / například)
+        :ARG2 (s8s3 / spoléhat-001
+            :ARG0 s8n1
+            :ARG1 s8g1
+            :instrument (s8v2 / vydání
+                :ARG0 (s8e2 / entity)
+                :ARG1 (s8m1 / mapa
+                    :mod (s8c1 / cykloturistický
+                        :refer-number plural)
+                    :affectee (s8p3 / příznivec
+                        :possessor (s8k1 / kolo
+                            :mod (s8h1 / horský
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s8i1: 15-15
+s8s1: 2-2
+s8n1: 1-1
+s8g1: 10-10
+s8n2: 3-3
+s8a1: 6-6
+s8d1: 4-5
+s8s2: 8-8
+s8p1: 4-4,7-7
+s8t1: 11-11
+s8p2: 12-12,14-14
+s8e1: 0-0
+s8v1: 13-13
+s8n3: 16-16
+s8s3: 0-0
+s8v2: 17-17
+s8e2: 0-0
+s8m1: 19-19
+s8c1: 18-18
+s8p3: 20-21
+s8k1: 23-23
+s8h1: 22-22
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8n1 :same-entity s4e1)))
+
+

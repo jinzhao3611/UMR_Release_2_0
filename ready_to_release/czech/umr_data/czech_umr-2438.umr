@@ -1,0 +1,494 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1           2 3     4   5      6
+Words: Tádžikistán : volby bez účasti opozice
+
+# sentence level graph:
+(s1a1 / and
+        :op1 (s1t1 / Tádžikistán
+            :refer-number singular)
+        :op2 (s1v1 / volba
+            :companion (s1u1 / účast
+                :ARG0 (s1o1 / opozice
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural))
+
+# alignment:
+s1a1: 2-2
+s1t1: 1-1
+s1v1: 3-3
+s1u1: 4-5
+s1o1: 6-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2 3  4 5
+Words: Moskva ( pp ) -
+
+# sentence level graph:
+(s2m1 / Moskva
+        :parenthesis (s2p1 / pp)
+        :refer-number singular)
+
+# alignment:
+s2m1: 1-1
+s2p1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1           2     3     4        5 6            7
+Words: Parlamentní volby včera proběhly v Tádžikistánu .
+
+# sentence level graph:
+(s3p1 / proběhnout-003
+        :ARG0 (s3v1 / volba
+            :mod (s3p2 / parlamentní
+                :refer-number plural)
+            :refer-number plural)
+        :temporal (s3v2 / včera)
+        :place (s3t1 / Tádžikistán
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s3p1: 4-4
+s3v1: 2-2
+s3p2: 1-1
+s3v2: 3-3
+s3t1: 5-6
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3v1 :same-entity s1v1)
+            (s3t1 :same-entity s1t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2          3          4       5          6  7    8     9        10 11           12    13 14   15        16 17      18         19    20
+Words: Podle tádžického prezidenta Emomali Rachmonova to byly první svobodné a  demokratické volby v  této republice od rozpadu Sovětského svazu .
+
+# sentence level graph:
+(s4b1 / být-007
+        :regard (s4r1 / Rachmonov
+            :mod (s4e1 / Emomali)
+            :mod (s4p1 / prezident
+                :mod (s4t1 / tádžický
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4t2 / ten
+            :refer-number singular)
+        :ARG1 (s4v1 / volba
+            :place (s4r2 / republika
+                :mod (s4t3 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s4a1 / and
+                :op1 (s4s1 / svobodný
+                    :refer-number plural)
+                :op2 (s4d1 / demokratický
+                    :refer-number plural))
+            :mod (s4p2 / první
+                :refer-number plural)
+            :refer-number plural)
+        :temporal (s4r3 / rozpad
+            :ARG0 (s4s2 / svaz
+                :mod (s4s3 / sovětský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s4b1: 7-7
+s4r1: 1-1,5-5
+s4e1: 4-4
+s4p1: 3-3
+s4t1: 2-2
+s4t2: 6-6
+s4v1: 12-12
+s4r2: 13-13,15-15
+s4t3: 14-14
+s4a1: 10-10
+s4s1: 9-9
+s4d1: 11-11
+s4p2: 8-8
+s4r3: 16-17
+s4s2: 19-19
+s4s3: 18-18
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-entity s3t1)
+            (s4t2 :same-entity s3v1)
+            (s4r2 :same-entity s4t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1            2     3  4  5    6       7         8    9          10        11            12    13 14           15 16  17 18     19       20     21        22 23      24
+Words: Pozorovatelé soudí ,  že nově zvolený parlament bude podporovat současnou komunistickou vládu v  Tádžikistánu ,  což i  nadále znemožní mírové rozhovory s  opozicí .
+
+# sentence level graph:
+(s5s1 / soudit-002
+        :ARG0 (s5p1 / pozorovatel
+            :refer-number plural)
+        :effect (s5a1 / and
+            :op1 (s5p2 / podporovat-001
+                :ARG0 (s5p3 / parlament
+                    :mod (s5z1 / zvolený
+                        :manner (s5n1 / nově)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s5v1 / vláda
+                    :place (s5t1 / Tádžikistán
+                        :refer-number singular)
+                    :mod (s5k1 / komunistický
+                        :refer-number singular)
+                    :mod (s5s2 / současný
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect activity)
+            :op2 (s5z2 / znemožnit-001
+                :ARG0 (s5c1 / což)
+                :clausal-marker (s5i1 / i)
+                :duration (s5n2 / nadále)
+                :ARG1 (s5r1 / rozhovor
+                    :mod (s5m1 / mírový
+                        :refer-number plural)
+                    :ARG1 (s5o1 / opozice
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5s1: 2-2
+s5p1: 1-1
+s5a1: 15-15
+s5p2: 4-4,8-9
+s5p3: 7-7
+s5z1: 6-6
+s5n1: 5-5
+s5v1: 12-12
+s5t1: 13-14
+s5k1: 11-11
+s5s2: 10-10
+s5z2: 19-19
+s5c1: 16-16
+s5i1: 17-17
+s5n2: 18-18
+s5r1: 21-21
+s5m1: 20-20
+s5o1: 22-23
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p3 :same-entity s3p2)
+            (s5t1 :same-entity s4r2)
+            (s5c1 :same-event s5p2)
+            (s5o1 :same-entity s1o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1           2            3  4   5  6     7  8            9  10      11   12 13    14 15    16         17 18         19 20        21    22              23    24
+Words: Mezinárodní pozorovatelé z  USA ,  Iránu ,  Ázerbájdžánu a  dalších zemí ,  kteří se voleb zúčastnili ,  upozornili na prohřešky proti demokratičnosti voleb .
+
+# sentence level graph:
+(s6u1 / upozornit-001
+        :ARG0 (s6p1 / pozorovatel
+            :mod (s6m1 / mezinárodní
+                :refer-number plural)
+            :start (s6a1 / and
+                :op1 (s6u2 / USA
+                    :refer-number plural)
+                :op2 (s6i1 / Irán
+                    :refer-number singular)
+                :op3 (s6a2 / Ázerbájdžán
+                    :refer-number singular)
+                :op4 (s6z1 / země
+                    :mod (s6d1 / další
+                        :refer-number plural)
+                    :refer-number plural))
+            :ARG0-of (s6z2 / zúčastnit-se-001
+                :ARG1 (s6v1 / volba
+                    :refer-number plural)
+                :refer-number plural
+                :aspect performance)
+            :refer-number plural)
+        :ARG2 (s6e1 / entity)
+        :ARG1 (s6p2 / prohřešek
+            :affectee (s6d2 / demokratičnost
+                :possessor (s6v2 / volba
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s6u1: 18-18
+s6p1: 2-2,13-13
+s6m1: 1-1
+s6a1: 9-9
+s6u2: 3-4
+s6i1: 3-3,6-6
+s6a2: 3-3,8-8
+s6z1: 3-3,11-11
+s6d1: 10-10
+s6z2: 14-14,16-16
+s6v1: 15-15
+s6e1: 0-0
+s6p2: 19-20
+s6d2: 21-22
+s6v2: 23-23
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6v1 :same-entity s4t2)
+            (s6v2 :same-entity s6v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1         2  3  4          5      6         7     8     9        10 11      12        13 14           15     16
+Words: Například ve 40 procentech okruhů kandiduje pouze jeden kandidát ,  nejvíce kandidátů má komunistická strana .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7k1 / kandidovat-002
+            :clausal-marker (s7n1 / například)
+            :place (s7p1 / procento
+                :mod (s7o1 / okruh
+                    :refer-number plural)
+                :mod (s7x1 / 40)
+                :refer-number plural)
+            :ARG0 (s7k2 / kandidát
+                :clausal-marker (s7p2 / pouze)
+                :mod (s7j1 / jeden
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s7m1 / mít-002
+            :ARG1 (s7k3 / kandidát
+                :mod (s7h1 / hodně)
+                :refer-number plural)
+            :ARG0 (s7s1 / strana
+                :mod (s7k4 / komunistický
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state))
+
+# alignment:
+s7a1: 10-10
+s7k1: 6-6
+s7n1: 1-1
+s7p1: 2-2,4-4
+s7o1: 5-5
+s7x1: 3-3
+s7k2: 9-9
+s7p2: 7-7
+s7j1: 8-8
+s7m1: 13-13
+s7k3: 12-12
+s7h1: 11-11
+s7s1: 15-15
+s7k4: 14-14
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7k4 :same-entity s5k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2  3  4       5     6        7  8     9        10       11      12            13 14     15 16    17 18    19
+Words: Včera se k  průběhu voleb vyjádřil i  vůdce tádžické islámské opozice Turadžonzádeh ,  žijící v  exilu v  Iránu .
+
+# sentence level graph:
+(s8v1 / vyjádřit-se-001
+        :temporal (s8v2 / včera)
+        :ARG1 (s8p1 / průběh
+            :ARG0 (s8v3 / volba
+                :refer-number plural)
+            :refer-number singular)
+        :ARG0 (s8t1 / Turadžonzádeh
+            :clausal-marker (s8i1 / i)
+            :mod (s8v4 / vůdce
+                :possessor (s8o1 / opozice
+                    :mod (s8t2 / tádžický
+                        :refer-number singular)
+                    :mod (s8i2 / islámský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s8z1 / žijící
+                :place (s8e1 / exil
+                    :refer-number singular)
+                :place (s8i3 / Irán
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8v1: 2-2,6-6
+s8v2: 1-1
+s8p1: 3-4
+s8v3: 5-5
+s8t1: 12-12
+s8i1: 7-7
+s8v4: 8-8
+s8o1: 11-11
+s8t2: 9-9
+s8i2: 10-10
+s8z1: 14-14
+s8e1: 15-16
+s8i3: 17-18
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8v3 :same-entity s6v2)
+            (s8t2 :same-entity s5t1)
+            (s8i3 :same-entity s6i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2      3      4  5    6    7     8       9        10    11 12           13 14      15    16         17          18    19 20           21 22          23         24    25 26   27 28 29      30          31      32   33      34      35 36   37
+Words: Za hlavní důvody ,  proč není možné označit současné volby za demokratické ,  pokládá zákaz opozičních politických stran v  Tádžikistánu ,  neexistenci svobodného tisku a  fakt ,  že většina příslušníků opozice byla násilně vyhnána ze země .
+
+# sentence level graph:
+(s9p1 / pokládat-002
+        :effect (s9d1 / důvod
+            :mod (s9h1 / hlavní
+                :refer-number plural)
+            :ARG1 (s9b1 / být-159
+                :cause (s9p2 / proč)
+                :ARG1 (s9m1 / možný
+                    :affectee (s9e1 / entity)
+                    :refer-number singular)
+                :ARG0 (s9o1 / označit-001
+                    :ARG1 (s9v1 / volba
+                        :mod (s9s1 / současný
+                            :refer-number plural)
+                        :refer-number plural)
+                    :ARG0 s9e1
+                    :effect (s9d2 / demokratický
+                        :refer-number plural)
+                    :aspect performance)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity
+                :polarity -)
+            :refer-number plural)
+        :ARG0 (s9e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s9a1 / and
+            :op1 (s9z1 / zákaz
+                :place (s9t1 / Tádžikistán
+                    :refer-number singular)
+                :ARG1 (s9s2 / strana
+                    :mod (s9p3 / politický
+                        :refer-number plural)
+                    :mod (s9o2 / opoziční
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :op2 (s9n1 / neexistence
+                :ARG0 (s9t2 / tisk
+                    :mod (s9s3 / svobodný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :op3 (s9f1 / fakt
+                :ARG1 (s9v2 / vyhnat-003
+                    :ARG1 (s9v3 / většina
+                        :mod (s9p4 / příslušník
+                            :possessor (s9o3 / opozice
+                                :refer-number singular)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :ARG0 (s9e3 / entity)
+                    :manner (s9n2 / násilně)
+                    :start (s9z2 / země
+                        :refer-number singular)
+                    :aspect performance)
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9p1: 14-14
+s9d1: 1-1,3-3
+s9h1: 2-2
+s9b1: 6-6
+s9p2: 5-5
+s9m1: 7-7
+s9e1: 0-0
+s9o1: 8-8
+s9v1: 10-10
+s9s1: 9-9
+s9d2: 11-12
+s9e2: 0-0
+s9a1: 25-25
+s9z1: 15-15
+s9t1: 19-20
+s9s2: 18-18
+s9p3: 17-17
+s9o2: 16-16
+s9n1: 22-22
+s9t2: 24-24
+s9s3: 23-23
+s9f1: 26-26
+s9v2: 28-28,32-32,34-34
+s9v3: 29-29
+s9p4: 30-30
+s9o3: 31-31
+s9e3: 0-0
+s9n2: 33-33
+s9z2: 35-36
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9v1 :same-entity s8v3)
+            (s9e2 :same-entity s8t1)
+            (s9t1 :same-entity s8t2)
+            (s9o2 :same-entity s5o1)
+            (s9o3 :same-entity s9o2)
+            (s9z2 :same-entity s9t1)))
+
+

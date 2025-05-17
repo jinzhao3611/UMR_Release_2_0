@@ -1,0 +1,236 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1 2   3    4     5   6
+Words: Z KAN bude možná jen iniciativa
+
+# sentence level graph:
+(s1b1 / být-011
+        :start (s1k1 / KAN)
+        :clausal-marker (s1m1 / možná)
+        :clausal-marker (s1j1 / jen)
+        :ARG0 (s1i1 / iniciativa
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1b1: 3-3
+s1k1: 1-2
+s1m1: 4-4
+s1j1: 5-5
+s1i1: 6-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( jap ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2j1 / jap)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2j1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2           3     4  5  6    7            8          9    10     11 12         13         14
+Words: Z  politického hnutí by se Klub angažovaných nestraníků mohl změnit v  politickou iniciativu .
+
+# sentence level graph:
+(s3z1 / změnit-se-001
+        :source (s3h1 / hnutí
+            :mod (s3p1 / politický
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3k1 / Klub
+            :possessor (s3n1 / nestraník
+                :mod (s3a1 / angažovaný
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG1 (s3i1 / iniciativa
+            :mod (s3p2 / politický
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3z1: 4-5,9-10
+s3h1: 1-1,3-3
+s3p1: 2-2
+s3k1: 6-6
+s3n1: 8-8
+s3a1: 7-7
+s3i1: 11-11,13-13
+s3p2: 12-12
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3k1 :same-entity s1k1)
+            (s3i1 :same-entity s1i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2        3       4          5   6  7     8    9        10 11 12     13
+Words: Na včerejší tiskové konferenci KAN to uvedl jeho předseda E  .  Dejmek .
+
+# sentence level graph:
+(s4u1 / uvést-007
+        :place (s4k1 / konference
+            :ARG0 (s4k2 / KAN
+                :refer-number singular)
+            :mod (s4t1 / tiskový
+                :refer-number singular)
+            :mod (s4v1 / včerejší
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s4t2 / ten
+            :refer-number singular)
+        :ARG0 (s4d1 / Dejmek
+            :mod (s4e1 / E)
+            :mod (s4p1 / předseda
+                :possessor s4k2
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4u1: 7-7
+s4k1: 1-1,4-4
+s4k2: 5-5,8-8
+s4t1: 3-3
+s4v1: 2-2
+s4t2: 6-6
+s4d1: 12-12
+s4e1: 10-10
+s4p1: 9-9
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4k2 :same-entity s3k1)
+            (s4t2 :same-event s3z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2     3         4   5  6  7   8  9   10        11        12        13 14    15       16  17      18         19          20
+Words: Možnou změnu odůvodnil tím ,  že KAN by měl především sdružovat odborníky ,  kteří nechtějí být svázáni stranickou disciplínou .
+
+# sentence level graph:
+(s5o1 / odůvodnit-001
+        :ARG1 (s5z1 / změna
+            :mod (s5m1 / možný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :instrument (s5s1 / sdružovat-001
+            :ARG0 (s5k1 / KAN
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG2 (s5x1 / #Rcp
+                :refer-number plural)
+            :clausal-marker (s5p1 / především)
+            :ARG1 (s5o2 / odborník
+                :ARG1-of (s5s2 / svázat-002
+                    :ARG0 (s5d1 / disciplína
+                        :mod (s5s3 / stranický
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural
+                    :aspect performance
+                    :polarity -)
+                :refer-number plural)
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5o1: 3-3
+s5z1: 2-2
+s5m1: 1-1
+s5e1: 0-0
+s5s1: 4-4,6-6,8-9,11-11
+s5k1: 7-7
+s5x1: 0-0
+s5p1: 10-10
+s5o2: 12-12,14-14
+s5s2: 15-17
+s5d1: 19-19
+s5s3: 18-18
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5z1 :same-entity s4t2)
+            (s5e1 :same-entity s4d1)
+            (s5k1 :same-entity s4k2)
+            (s5x1 :same-entity s5o2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2      3        4  5      6  7        8  9      10  11       12 13   14   15
+Words: To Dejmek považuje za návrat k  politice ,  kterou KAN zastával v  roce 1968 .
+
+# sentence level graph:
+(s6p1 / považovat-001
+        :ARG1 (s6t1 / ten
+            :refer-number singular)
+        :ARG0 (s6d1 / Dejmek
+            :refer-number singular
+            :refer-person 3rd)
+        :effect (s6n1 / návrat
+            :ARG1 (s6p2 / politika
+                :ARG1-of (s6z1 / zastávat-001
+                    :ARG0 (s6k1 / KAN
+                        :refer-number singular)
+                    :temporal (s6r1 / rok
+                        :mod (s6x1 / 1968)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect habitual)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6p1: 3-3
+s6t1: 1-1
+s6d1: 2-2
+s6n1: 4-5
+s6p2: 6-7,9-9
+s6z1: 11-11
+s6k1: 10-10
+s6r1: 12-13
+s6x1: 14-14
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6t1 :same-event s5s1)
+            (s6d1 :same-entity s5e1)
+            (s6k1 :same-entity s5k1)))
+
+

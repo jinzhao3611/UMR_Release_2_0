@@ -1,0 +1,262 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: stíny
+
+# sentence level graph:
+(s1s1 / stín
+        :refer-number plural)
+
+# alignment:
+s1s1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2       3
+Words: PRODAL PŮJČENÉ .
+
+# sentence level graph:
+(s2p1 / prodat-001
+        :ARG0 (s2e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s2e2 / entity)
+        :ARG1 (s2e3 / entity
+            :mod (s2p2 / půjčený
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s2p1: 1-1
+s2e1: 0-0
+s2e2: 0-0
+s2e3: 0-0
+s2p2: 2-2
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1             2       3    4    5  6        7  8    9   10 11    12
+Words: Neoprávněného užívání cizí věci se dopustil 25 letý muž z  Prahy .
+
+# sentence level graph:
+(s3d1 / dopustit-se-001
+        :ARG1 (s3u1 / užívání
+            :ARG0 s3m1
+            :manner (s3o1 / oprávněný
+                :refer-number singular
+                :polarity -)
+            :ARG1 (s3v1 / věc
+                :mod (s3c1 / cizí
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3m1 / muž
+            :mod (s3x2 / 25_letý)
+            :start (s3p1 / Praha
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3d1: 5-6
+s3u1: 2-2
+s3o1: 1-1
+s3v1: 4-4
+s3c1: 3-3
+s3m1: 9-9
+s3x2: 7-8
+s3p1: 10-11
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3v1 :same-entity s2e3)
+            (s3m1 :same-entity s2e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2  3        4  5  6       7  8        9      10  11   12  13 14         15  16 17               18     19
+Words: Letos v  červenci si od známého ve Vrchlabí půjčil vůz Fiat 127 a  zanedlouho jej na Českobudějovicku prodal .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4p1 / půjčit-si-001
+            :ARG0 (s4e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :temporal (s4l1 / letos)
+            :temporal (s4c1 / červenec
+                :refer-number singular)
+            :source (s4z1 / známý
+                :place (s4v1 / Vrchlabí
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s4v2 / vůz
+                :name (s4f1 / Fiat
+                    :mod (s4x1 / 127)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s4p2 / prodat-001
+            :ARG0 s4e1
+            :temporal (s4z2 / zanedlouho)
+            :place (s4c2 / Českobudějovicko
+                :refer-number singular)
+            :ARG2 (s4e2 / entity)
+            :ARG1 s4v2
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s4a1: 13-13
+s4p1: 4-4,9-9
+s4l1: 1-1
+s4c1: 2-3
+s4z1: 5-6
+s4v1: 7-8
+s4v2: 10-10,15-15
+s4f1: 11-11
+s4x1: 12-12
+s4e1: 0-0
+s4p2: 18-18
+s4z2: 14-14
+s4c2: 16-17
+s4e2: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2  3      4  5     6  7     8        9        10 11    12 13       14
+Words: Rifle ,  kazety ,  marky a  další cennosti položené ve fiatu si ponechal .
+
+# sentence level graph:
+(s5p1 / ponechat-002
+        :ARG1 (s5a1 / and
+            :op1 (s5r1 / rifle
+                :mod (s5p2 / položený
+                    :place (s5f1 / Fiat
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s5k1 / kazeta
+                :mod s5p2
+                :refer-number plural)
+            :op3 (s5m1 / marka
+                :mod s5p2
+                :refer-number plural)
+            :op4 (s5c1 / cennost
+                :mod s5p2
+                :mod (s5d1 / další
+                    :refer-number plural)
+                :refer-number plural))
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 s5e1
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5p1: 13-13
+s5a1: 6-6
+s5r1: 1-1
+s5p2: 9-9
+s5f1: 10-11
+s5k1: 3-3
+s5m1: 5-5
+s5c1: 8-8
+s5d1: 7-7
+s5e1: 12-12
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5f1 :same-entity s4v2)
+            (s5e1 :same-entity s4e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1   2         3         4 5         6
+Words: Vůz zajistili policisté v Soběslavi .
+
+# sentence level graph:
+(s6z1 / zajistit-003
+        :ARG1 (s6v1 / vůz
+            :refer-number singular)
+        :ARG0 (s6p1 / policista
+            :refer-number plural)
+        :place (s6s1 / Soběslav
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s6z1: 2-2
+s6v1: 1-1
+s6p1: 3-3
+s6s1: 4-5
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6v1 :same-entity s5f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1     2         3     4       5       6         7 8         9
+Words: Proti pachateli vedou trestní stíhání policisté v Jilemnici .
+
+# sentence level graph:
+(s7v1 / vést-014
+        :predicative-noun (s7s1 / stíhání
+            :ARG1 (s7p1 / pachatel
+                :refer-number singular)
+            :ARG0 s7p2
+            :manner (s7t1 / trestní
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7p2 / policista
+            :place (s7j1 / Jilemnice
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7v1: 3-3
+s7s1: 5-5
+s7p1: 1-2
+s7t1: 4-4
+s7p2: 6-6
+s7j1: 7-8
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p1 :same-entity s5e1)))
+
+

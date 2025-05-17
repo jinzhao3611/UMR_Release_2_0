@@ -1,0 +1,129 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2      3      4  5 6 7 8 9
+Words: kursovní lístek platný od 9 . 7 . 1993
+
+# sentence level graph:
+(s1l1 / lístek
+        :mod (s1k1 / kursovní
+            :refer-number singular)
+        :mod (s1p1 / platný
+            :temporal (s1x1 / 7
+                :mod (s1x2 / 9)
+                :possessor (s1x3 / 1993))
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1l1: 2-2
+s1k1: 1-1
+s1p1: 3-3
+s1x1: 4-4,7-7
+s1x2: 5-5
+s1x3: 9-9
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: DEVIZY VALUTY
+
+# sentence level graph:
+(s2a1 / and
+        :op1 (s2d1 / deviza
+            :refer-number plural)
+        :op2 (s2v1 / valuta
+            :refer-number plural))
+
+# alignment:
+s2a1: 0-0
+s2d1: 1-1
+s2v1: 2-2
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2   3     4      5     6     7      8
+Words: země kód nákup prodej střed nákup prodej střed
+
+# sentence level graph:
+(s3a1 / and
+        :op1 (s3z1 / země
+            :refer-number singular)
+        :op2 (s3k1 / kód
+            :refer-number singular)
+        :op3 (s3n1 / nákup
+            :refer-number singular)
+        :op4 (s3p1 / prodej
+            :refer-number singular)
+        :op5 (s3s1 / střed
+            :refer-number singular)
+        :op6 (s3n2 / nákup
+            :refer-number singular)
+        :op7 (s3p2 / prodej
+            :refer-number singular)
+        :op8 (s3s2 / střed
+            :refer-number singular))
+
+# alignment:
+s3a1: 0-0
+s3z1: 1-1
+s3k1: 2-2
+s3n1: 3-3
+s3p1: 4-4
+s3s1: 5-5
+s3n2: 6-6
+s3p2: 7-7
+s3s2: 8-8
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3n2 :same-entity s3n1)
+            (s3p2 :same-entity s3p1)
+            (s3s2 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2   3  4  5     6  7  8  9    10 11     12  13
+Words: ČR XCU -  -  34.15 Sk (  z  kurs .  lístku NBS )
+
+# sentence level graph:
+(s4e1 / event
+        :ARG0 (s4x1 / #Idph
+            :name (s4c1 / ČR
+                :refer-number singular)
+            :name (s4x2 / XCU))
+        :ARG1 (s4s1 / Sk
+            :mod (s4x3 / 34.15))
+        :start (s4l1 / lístek
+            :mod (s4k1 / kursovní)
+            :possessor (s4n1 / NBS)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s4e1: 0-0
+s4x1: 0-0
+s4c1: 1-1
+s4x2: 2-2
+s4s1: 6-6
+s4x3: 5-5
+s4l1: 8-8,11-11
+s4k1: 9-9
+s4n1: 12-12
+
+# document level annotation:
+(s4s0 / sentence)
+
+

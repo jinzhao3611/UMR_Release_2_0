@@ -1,0 +1,81 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2           3    4    5        6
+Words: Polské zemědělství bylo vždy zaostalé .
+
+# sentence level graph:
+(s1b1 / být-007
+        :ARG0 (s1z1 / zemědělství
+            :mod (s1p1 / polský
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s1v1 / vždy)
+        :ARG1 (s1z2 / zaostalý
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s1b1: 3-3
+s1z1: 2-2
+s1p1: 1-1
+s1v1: 4-4
+s1z2: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1   2  3       4  5     6  7    8           9      10 11    12      13 14 15   16        17
+Words: Jak se ukazuje ,  cesta k  jeho efektivnímu modelu je velmi složitá i  po pádu komunismu .
+
+# sentence level graph:
+(s2b1 / být-007
+        :parenthesis (s2u1 / ukazovat-se-005
+            :ARG0 s2b1
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG0 (s2c1 / cesta
+            :goal (s2m1 / model
+                :possessor (s2e1 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :mod (s2e2 / efektivní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2s1 / složitý
+            :extent (s2v1 / velmi)
+            :refer-number singular)
+        :clausal-marker (s2i1 / i)
+        :temporal (s2p1 / pád
+            :ARG0 (s2k1 / komunismus
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2b1: 10-10
+s2u1: 1-3
+s2c1: 5-5
+s2m1: 6-6,9-9
+s2e1: 7-7
+s2e2: 8-8
+s2s1: 12-12
+s2v1: 11-11
+s2i1: 13-13
+s2p1: 14-15
+s2k1: 16-16
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2e1 :same-entity s1z1)))
+
+

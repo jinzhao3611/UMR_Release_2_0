@@ -1,0 +1,175 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: stíny
+
+# sentence level graph:
+(s1s1 / stín
+        :refer-number plural)
+
+# alignment:
+s1s1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2   3         4
+Words: MARKY PRO POLICISTU .
+
+# sentence level graph:
+(s2m1 / marka
+        :affectee (s2p1 / policista
+            :refer-number singular)
+        :refer-number plural)
+
+# alignment:
+s2m1: 1-1
+s2p1: 2-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2     3      4  5   6  7    8   9           10 11    12          13 14    15      16        17       18       19  20
+Words: Padesát marek nabídl v  Aši 18 letý Rom policistovi ,  který kontroloval v  pravé poledne totožnost několika romských žen .
+
+# sentence level graph:
+(s3n1 / nabídnout-001
+        :ARG1 (s3m1 / marka
+            :mod (s3p1 / padesát
+                :refer-number singular)
+            :refer-number plural)
+        :place (s3a1 / Aš
+            :refer-number singular)
+        :ARG0 (s3r1 / Rom
+            :mod (s3x1 / 18_letý)
+            :refer-number singular)
+        :ARG2 (s3p2 / policista
+            :ARG0-of (s3k1 / kontrolovat-001
+                :temporal (s3p3 / poledne
+                    :mod (s3p4 / pravý
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s3t1 / totožnost
+                    :possessor (s3z1 / žena
+                        :mod (s3r2 / romský
+                            :refer-number plural)
+                        :mod (s3n2 / několik)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3n1: 3-3
+s3m1: 2-2
+s3p1: 1-1
+s3a1: 4-5
+s3r1: 8-8
+s3x1: 6-7
+s3p2: 9-9,11-11
+s3k1: 12-12
+s3p3: 13-13,15-15
+s3p4: 14-14
+s3t1: 16-16
+s3z1: 19-19
+s3r2: 18-18
+s3n2: 17-17
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3m1 :same-entity s2m1)
+            (s3p2 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1   2     3  4   5         6        7        8  9      10
+Words: Rom chtěl ,  aby policista zanechal kontroly a  odešel .
+
+# sentence level graph:
+(s4c1 / chtít-001
+        :ARG0 (s4r1 / Rom
+            :refer-number singular)
+        :ARG1 (s4a1 / and
+            :op1 (s4z1 / zanechat-005
+                :ARG0 (s4p1 / policista
+                    :refer-number singular)
+                :ARG1 (s4k1 / kontrola
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :op2 (s4o1 / odejít-001
+                :ARG0 s4p1
+                :start (s4e1 / entity)
+                :refer-number singular
+                :aspect performance))
+        :refer-number singular
+        :aspect state)
+
+# alignment:
+s4c1: 2-2
+s4r1: 1-1
+s4a1: 8-8
+s4z1: 4-4,6-6
+s4k1: 7-7
+s4p1: 5-5
+s4o1: 4-4,9-9
+s4e1: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4r1 :same-entity s3r1)
+            (s4k1 :same-event s3k1)
+            (s4p1 :same-entity s3p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1   2  3      4   5     6 7          8
+Words: Teď je stíhán pro pokus o podplácení .
+
+# sentence level graph:
+(s5s1 / stíhat-001
+        :temporal (s5t1 / teď)
+        :ARG0 (s5e1 / entity)
+        :ARG1 (s5e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :cause (s5p1 / pokus
+            :ARG1 (s5p2 / podplácení
+                :ARG0 (s5e3 / entity)
+                :ARG1 (s5e4 / entity)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s5s1: 2-3
+s5t1: 1-1
+s5e1: 0-0
+s5e2: 0-0
+s5p1: 4-5
+s5p2: 6-7
+s5e3: 0-0
+s5e4: 0-0
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e2 :same-entity s4r1)))
+
+

@@ -1,0 +1,224 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2          3   4  5        6  7  8       9         10     11 12     13   14       15     16  17      18       19   20
+Words: Trinity Industries Inc .  oznámila ,  že dosáhla předběžné dohody o  výrobě 1000 uhelných vagónů pro Norfolk Southern Corp .
+
+# sentence level graph:
+(s1o1 / oznámit-002
+        :ARG2 (s1e1 / entity)
+        :ARG0 (s1x1 / #Forn
+            :FPHR (s1t1 / Trinity)
+            :FPHR (s1i1 / Industries)
+            :FPHR (s1i2 / Inc)
+            :FPHR (s1x2 / .))
+        :effect (s1d1 / dosáhnout-001
+            :ARG0 s1x1
+            :ARG1 (s1d2 / dohoda
+                :mod (s1p1 / předběžný
+                    :refer-number singular)
+                :mod (s1v1 / výroba
+                    :mod (s1v2 / vagón
+                        :mod (s1x4 / 1000)
+                        :mod (s1u1 / uhelný
+                            :refer-number plural)
+                        :refer-number plural)
+                    :affectee (s1x5 / #Forn
+                        :FPHR (s1n1 / Norfolk)
+                        :FPHR (s1s1 / Southern)
+                        :FPHR (s1c1 / Corp))
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s1o1: 5-5
+s1e1: 0-0
+s1x1: 0-0
+s1t1: 1-1
+s1i1: 2-2
+s1i2: 3-3
+s1x2: 4-4
+s1d1: 7-8
+s1d2: 10-10
+s1p1: 9-9
+s1v1: 11-12
+s1v2: 15-15
+s1x4: 13-13
+s1u1: 14-14
+s1x5: 0-0
+s1n1: 17-17
+s1s1: 18-18
+s1c1: 19-19
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2        3       4       5  6    7   8  9       10     11
+Words: Trinity odhaduje hodnotu smlouvy na více než 40 miliónů dolarů .
+
+# sentence level graph:
+(s2o1 / odhadovat-001
+        :ARG0 (s2t1 / Trinity)
+        :ARG1 (s2h1 / hodnota
+            :mod (s2s1 / smlouva
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s2h2 / hodně
+            :comparison (s2m1 / milión
+                :mod (s2x1 / 40)
+                :mod (s2d1 / dolar
+                    :refer-number plural)
+                :refer-number plural))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2o1: 2-2
+s2t1: 1-1
+s2h1: 3-3
+s2s1: 4-4
+s2h2: 5-6
+s2m1: 7-7,9-9
+s2x1: 8-8
+s2d1: 10-10
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2t1 :same-entity s1x1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2     3  4  5        6       7            8      9       10 11    12        13   14   15
+Words: Trinity řekla ,  že započetí dodávky železničních vagónů plánuje na první čtvrtletí roku 1990 .
+
+# sentence level graph:
+(s3r1 / říci-008
+        :ARG2 (s3e1 / entity)
+        :ARG0 (s3t1 / Trinity)
+        :effect (s3p1 / plánovat-001
+            :ARG1 (s3z1 / započetí
+                :ARG0 s3t1
+                :ARG1 (s3d1 / dodávka
+                    :mod (s3v1 / vagón
+                        :mod (s3z2 / železniční
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s3t1
+            :temporal (s3c1 / čtvrtletí
+                :mod (s3p2 / první
+                    :refer-number singular)
+                :mod (s3r2 / rok
+                    :name (s3x3 / 1990)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :aspect performance)
+
+# alignment:
+s3r1: 2-2
+s3e1: 0-0
+s3t1: 1-1
+s3p1: 4-4,9-9
+s3z1: 5-5
+s3d1: 6-6
+s3v1: 8-8
+s3z2: 7-7
+s3c1: 10-10,12-12
+s3p2: 11-11
+s3r2: 13-13
+s3x3: 14-14
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3t1 :same-entity s2t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2  3  4     5    6      7  8         9    10     11    12         13  14      15       16 17         18      19 20     21 22       23 24       25
+Words: Řekli ,  že oněch 1000 vagónů je navýšením 1450 vagónů právě vyráběných pro Norfolk Southern ,  železniční koncern se sídlem v  Norfolku ve Virginii .
+
+# sentence level graph:
+(s4r1 / říci-008
+        :ARG2 (s4e1 / entity)
+        :ARG0 (s4e2 / entity)
+        :effect (s4b1 / být-007
+            :ARG0 (s4v1 / vagón
+                :mod (s4o1 / onen
+                    :refer-number plural)
+                :mod (s4x1 / 1000)
+                :refer-number plural)
+            :ARG1 (s4n1 / navýšení
+                :ARG0 (s4e3 / entity)
+                :ARG1 (s4v2 / vagón
+                    :mod (s4x2 / 1450)
+                    :mod (s4v3 / vyráběný
+                        :temporal (s4p1 / právě)
+                        :affectee (s4i1 / identity-91
+                            :ARG1 (s4x3 / #Forn
+                                :FPHR (s4n2 / Norfolk)
+                                :FPHR (s4s1 / Southern))
+                            :ARG2 (s4k1 / koncern
+                                :mod (s4z1 / železniční
+                                    :refer-number singular)
+                                :companion (s4s2 / sídlo
+                                    :place (s4n3 / Norfolk
+                                        :place (s4v4 / Virginie
+                                            :refer-number singular)
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :refer-number singular))
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s4r1: 1-1
+s4e1: 0-0
+s4e2: 0-0
+s4b1: 3-3,7-7
+s4v1: 6-6
+s4o1: 4-4
+s4x1: 5-5
+s4n1: 8-8
+s4e3: 0-0
+s4v2: 10-10
+s4x2: 9-9
+s4v3: 12-12
+s4p1: 11-11
+s4i1: 16-16
+s4x3: 0-0
+s4n2: 14-14
+s4s1: 15-15
+s4k1: 13-13,18-18
+s4z1: 17-17
+s4s2: 19-20
+s4n3: 21-22
+s4v4: 23-24
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e2 :same-entity s3t1)
+            (s4v1 :same-entity s1v2)
+            (s4x3 :same-entity s1x5)))
+
+

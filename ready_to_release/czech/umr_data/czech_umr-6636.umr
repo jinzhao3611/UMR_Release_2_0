@@ -1,0 +1,191 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2            3      4   5  6      7  8  9  10 11    12    13  14      15     16 17   18       19 20       21 22     23     24
+Words: Společnost Consolidated Papers Inc .  uvedla ,  že má v  plánu vydat 495 milionů dolarů za nová zařízení a  vybavení na výrobu papíru .
+
+# sentence level graph:
+(s1u1 / uvést-007
+        :ARG0 (s1s1 / společnost
+            :name (s1x1 / #Forn
+                :FPHR (s1c1 / Consolidated)
+                :FPHR (s1p1 / Papers)
+                :FPHR (s1i1 / Inc))
+            :refer-number singular)
+        :effect (s1m1 / mít-080
+            :ARG0 s1s1
+            :part-of-phraseme (s1v1 / v_plánu
+                :refer-number singular)
+            :ARG1 (s1v2 / vydat-010
+                :ARG0 s1s1
+                :extent (s1m2 / milion
+                    :mod (s1x4 / 495)
+                    :mod (s1d1 / dolar
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG1 (s1a1 / and
+                    :op1 (s1z1 / zařízení
+                        :mod (s1n1 / nový
+                            :refer-number plural)
+                        :refer-number plural)
+                    :op2 (s1v3 / vybavení
+                        :purpose (s1v4 / výroba
+                            :mod (s1p2 / papír
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular))
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state)
+        :aspect performance)
+
+# alignment:
+s1u1: 6-6
+s1s1: 1-1
+s1x1: 0-0
+s1c1: 2-2
+s1p1: 3-3
+s1i1: 4-4
+s1m1: 8-9
+s1v1: 10-11
+s1v2: 12-12
+s1m2: 14-14
+s1x4: 13-13
+s1d1: 15-15
+s1a1: 19-19
+s1z1: 16-16,18-18
+s1n1: 17-17
+s1v3: 16-16,20-20
+s1v4: 21-22
+s1p2: 23-23
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2       3      4           5  6          7  8  9          10         11    12 13 14        15 16        17   18    19 20     21        22   23   24
+Words: Tento výrobce papíru používaného v  časopisech a  v  komerčních tiskárnách uvedl ,  že investice do rozšíření mají začít v  prvním čtvrtletí roku 1990 .
+
+# sentence level graph:
+(s2u1 / uvést-007
+        :ARG0 (s2v1 / výrobce
+            :mod (s2t1 / tento
+                :refer-number singular)
+            :mod (s2p1 / papír
+                :mod (s2p2 / používaný
+                    :place (s2a1 / and
+                        :op1 (s2c1 / časopis
+                            :refer-number plural)
+                        :op2 (s2t2 / tiskárna
+                            :mod (s2k1 / komerční
+                                :refer-number plural)
+                            :refer-number plural))
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s2z1 / začít-002
+            :ARG0 (s2i1 / investice
+                :goal (s2r1 / rozšíření
+                    :ARG0 s2v1
+                    :ARG1 s2v1
+                    :refer-number singular)
+                :refer-number plural)
+            :temporal (s2c2 / čtvrtletí
+                :mod (s2p3 / první
+                    :refer-number singular)
+                :mod (s2r2 / rok
+                    :name (s2x3 / 1990)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s2u1: 11-11
+s2v1: 2-2
+s2t1: 1-1
+s2p1: 3-3
+s2p2: 4-4
+s2a1: 7-7
+s2c1: 5-6
+s2t2: 8-8,10-10
+s2k1: 9-9
+s2z1: 13-13,17-18
+s2i1: 14-14
+s2r1: 15-16
+s2c2: 19-19,21-21
+s2p3: 20-20
+s2r2: 22-22
+s2x3: 23-23
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2v1 :same-entity s1s1)
+            (s2i1 :same-event s1v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2         3       4         5          6   7       8         9  10        11     12 13     14    15        16
+Words: Toto rozšíření podléhá schválení regulátorů pro životní prostředí na federální úrovni i  úrovni státu Wisconsin .
+
+# sentence level graph:
+(s3p1 / podléhat-001
+        :ARG0 (s3r1 / rozšíření
+            :ARG0 (s3e1 / entity)
+            :manner (s3t1 / tento
+                :refer-number singular)
+            :ARG1 s3e1
+            :refer-number singular)
+        :ARG1 (s3s1 / schválení
+            :ARG1 s3r1
+            :ARG0 (s3r2 / regulátor
+                :purpose (s3p2 / prostředí
+                    :mod (s3z1 / životní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :manner (s3a1 / and
+                :op1 (s3u1 / úroveň
+                    :mod (s3f1 / federální
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s3u2 / úroveň
+                    :mod (s3s2 / stát
+                        :name (s3w1 / Wisconsin
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3p1: 3-3
+s3r1: 2-2
+s3e1: 0-0
+s3t1: 1-1
+s3s1: 4-4
+s3r2: 5-5
+s3p2: 6-6,8-8
+s3z1: 7-7
+s3a1: 12-12
+s3u1: 9-9,11-11
+s3f1: 10-10
+s3u2: 9-9,13-13
+s3s2: 14-14
+s3w1: 15-15
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3r1 :same-entity s2r1)
+            (s3e1 :same-entity s2v1)))
+
+

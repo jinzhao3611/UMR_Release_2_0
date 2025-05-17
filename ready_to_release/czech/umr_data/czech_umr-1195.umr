@@ -1,0 +1,357 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2  3        4       5
+Words: Francie se zúčastní schůzky NATO
+
+# sentence level graph:
+(s1z1 / zúčastnit-se-001
+        :ARG0 (s1f1 / Francie
+            :refer-number singular)
+        :ARG1 (s1s1 / schůzka
+            :ARG0 (s1n1 / NATO)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1z1: 2-3
+s1f1: 1-1
+s1s1: 4-4
+s1n1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Paříž -
+
+# sentence level graph:
+(s2p1 / Paříž
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2  3      4  5    6    7        8        9        10     11               12      13 14   15 16 17    18 19        20     21   22 23        24
+Words: Francie se poprvé od roku 1966 zúčastní zasedání ministrů obrany Severoatlantické aliance (  NATO )  ,  které se uskuteční koncem září ve Španělsku .
+
+# sentence level graph:
+(s3z1 / zúčastnit-se-001
+        :ARG0 (s3f1 / Francie
+            :refer-number singular)
+        :frequency (s3p1 / poprvé
+            :temporal (s3r1 / rok
+                :mod (s3x1 / 1966)
+                :refer-number singular))
+        :ARG1 (s3z2 / zasedání
+            :ARG0 (s3m1 / ministr
+                :possessor (s3o1 / obrana
+                    :refer-number singular)
+                :possessor (s3i1 / identity-91
+                    :ARG1 (s3a1 / aliance
+                        :mod (s3s1 / Severoatlantický
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG2 (s3n1 / NATO))
+                :refer-number plural)
+            :ARG0-of (s3u1 / uskutečnit-se-001
+                :temporal (s3z3 / září
+                    :refer-number singular)
+                :place (s3s2 / Španělsko
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s3z1: 2-2,7-7
+s3f1: 1-1
+s3p1: 3-3
+s3r1: 4-5
+s3x1: 6-6
+s3z2: 8-8,17-17
+s3m1: 9-9
+s3o1: 10-10
+s3i1: 13-13
+s3a1: 12-12
+s3s1: 11-11
+s3n1: 14-14
+s3u1: 18-19
+s3z3: 20-21
+s3s2: 22-23
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3f1 :same-entity s1f1)
+            (s3z2 :same-entity s1s1)
+            (s3i1 :same-entity s1n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2  3     4        5      6  7         8  9           10     11     12
+Words: Oznámila to včera agentura Reuter s  odvoláním na francouzské vládní zdroje .
+
+# sentence level graph:
+(s4o1 / oznámit-002
+        :effect (s4t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s4e1 / entity)
+        :temporal (s4v1 / včera)
+        :ARG0 (s4a1 / agentura
+            :name (s4r1 / Reuter
+                :refer-number singular)
+            :refer-number singular)
+        :companion (s4o2 / odvolání
+            :ARG0 s4a1
+            :ARG1 (s4z1 / zdroj
+                :mod (s4f1 / francouzský
+                    :refer-number plural)
+                :mod (s4v2 / vládní
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s4o1: 1-1
+s4t1: 2-2
+s4e1: 0-0
+s4v1: 3-3
+s4a1: 4-4
+s4r1: 5-5
+s4o2: 6-7
+s4z1: 8-8,11-11
+s4f1: 9-9
+s4v2: 10-10
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3z1)
+            (s4f1 :same-entity s3f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2  3    4    5          6  7        8     9       10 11      12       13     14 15 16 17   18          19
+Words: Francie v  roce 1966 vystoupila z  vojenské části aliance a  schůzek ministrů obrany se od té doby neúčastnila .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5v1 / vystoupit-004
+            :ARG0 (s5f1 / Francie
+                :refer-number singular)
+            :temporal (s5r1 / rok
+                :mod (s5x1 / 1966)
+                :refer-number singular)
+            :start (s5c1 / část
+                :possessor (s5a2 / aliance
+                    :refer-number singular)
+                :mod (s5v2 / vojenský
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :op2 (s5u1 / účastnit-se-001
+            :ARG0 s5f1
+            :ARG1 (s5s1 / schůzka
+                :ARG0 (s5m1 / ministr
+                    :possessor (s5o1 / obrana
+                        :refer-number singular)
+                    :refer-number plural)
+                :ARG1 (s5x3 / #Rcp
+                    :refer-number plural)
+                :refer-number plural)
+            :temporal (s5d1 / doba
+                :mod (s5t1 / ten
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity
+            :polarity -))
+
+# alignment:
+s5a1: 10-10
+s5v1: 5-5
+s5r1: 2-3
+s5x1: 4-4
+s5c1: 6-6,8-8
+s5a2: 9-9
+s5v2: 7-7
+s5f1: 1-1
+s5u1: 14-14,18-18
+s5s1: 11-11
+s5m1: 12-12
+s5o1: 13-13
+s5x3: 0-0
+s5d1: 15-15,17-17
+s5t1: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5a2 :same-entity s3i1)
+            (s5f1 :same-entity s4f1)
+            (s5m1 :same-entity s3m1)
+            (s5x3 :same-entity s5m1)
+            (s5d1 :same-entity s3r1)
+            (s5d1 :same-entity s5r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2   3  4       5     6            7         8         9     10  11     12             13     14 15      16     17
+Words: Učinila tak na protest proti dominantnímu postavení Spojených států při řešení bezpečnostních otázek v  západní Evropě .
+
+# sentence level graph:
+(s6u1 / učinit-004
+        :ARG1 (s6t1 / tak)
+        :ARG0 (s6e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :purpose (s6p1 / protest
+            :ARG1 (s6p2 / postavení
+                :possessor (s6s1 / stát
+                    :mod (s6s2 / Spojený
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s6d1 / dominantní
+                    :refer-number singular)
+                :temporal (s6r1 / řešení
+                    :ARG0 (s6e2 / entity)
+                    :ARG1 (s6o1 / otázka
+                        :mod (s6b1 / bezpečnostní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :place (s6e3 / Evropa
+                        :mod (s6z1 / západní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s6u1: 1-1
+s6t1: 2-2
+s6e1: 0-0
+s6p1: 3-4
+s6p2: 5-5,7-7
+s6s1: 9-9
+s6s2: 8-8
+s6d1: 6-6
+s6r1: 10-11
+s6e2: 0-0
+s6o1: 13-13
+s6b1: 12-12
+s6e3: 14-14,16-16
+s6z1: 15-15
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6t1 :same-event s5v1)
+            (s6e1 :same-entity s5f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2         3  4       5      6  7  8            9     10            11       12     13        14       15 16      17 18        19      20    21   22     23 24    25      26     27 28      29
+Words: Západní diplomaté se nechali slyšet ,  že nadcházející účast francouzského ministra obrany Francoise Léotarda na schůzce ve Španělsku znamená velký krok směrem k  užším vztahům Paříže s  aliancí .
+
+# sentence level graph:
+(s7n1 / nechat-015
+        :ARG0 (s7d1 / diplomat
+            :mod (s7z1 / západní
+                :refer-number plural)
+            :refer-number plural)
+        :part-of-phraseme (s7s1 / se_slyšet)
+        :ARG1 (s7z2 / znamenat-001
+            :ARG0 (s7u1 / účast
+                :place (s7s2 / schůzka
+                    :place (s7s3 / Španělsko
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s7l1 / Léotard
+                    :mod (s7m1 / ministr
+                        :mod (s7f1 / francouzský
+                            :refer-number singular
+                            :refer-person 3rd)
+                        :possessor (s7o1 / obrana
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s7f2 / Francois
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s7n2 / nadcházející
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s7k1 / krok
+                :mod (s7v1 / velký
+                    :refer-number singular)
+                :goal (s7v2 / vztah
+                    :ARG0 (s7p1 / Paříž
+                        :refer-number singular)
+                    :ARG1 (s7a1 / aliance
+                        :refer-number singular)
+                    :mod (s7u2 / úzký
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s7n1: 4-4
+s7d1: 2-2
+s7z1: 1-1
+s7s1: 3-3,5-5
+s7z2: 7-7,19-19
+s7u1: 9-9
+s7s2: 15-16
+s7s3: 17-18
+s7l1: 14-14
+s7m1: 11-11
+s7f1: 10-10
+s7o1: 12-12
+s7f2: 13-13
+s7n2: 8-8
+s7k1: 21-21
+s7v1: 20-20
+s7v2: 22-23,25-25
+s7p1: 26-26
+s7a1: 27-28
+s7u2: 24-24
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7z1 :same-entity s6e3)
+            (s7u1 :same-entity s4t1)
+            (s7s2 :same-entity s3z2)
+            (s7s3 :same-entity s3s2)
+            (s7f1 :same-entity s6e1)
+            (s7a1 :same-entity s5a2)))
+
+

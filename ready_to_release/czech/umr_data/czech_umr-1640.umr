@@ -1,0 +1,424 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1           2     3      4
+Words: Kriminalita letos začala klesat
+
+# sentence level graph:
+(s1z1 / začít-001
+        :ARG0 (s1k1 / kriminalita
+            :refer-number singular)
+        :temporal (s1l1 / letos)
+        :ARG1 (s1k2 / klesat-001
+            :ARG0 s1k1
+            :aspect activity)
+        :aspect performance)
+
+# alignment:
+s1z1: 3-3
+s1k1: 1-1
+s1l1: 2-2
+s1k2: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( jap ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2j1 / jap)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2j1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2           3  4      5        6  7     8         9    10   11 12       13 14      15      16   17       18
+Words: Policie zaznamenala v  prvním pololetí o  17672 trestných činů méně ve srovnání se stejným obdobím roku loňského .
+
+# sentence level graph:
+(s3z1 / zaznamenat-001
+        :ARG0 (s3p1 / policie
+            :refer-number singular)
+        :temporal (s3p2 / pololetí
+            :mod (s3p3 / první
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3c1 / čin
+            :mod (s3t1 / trestný
+                :refer-number plural)
+            :mod (s3m1 / málo
+                :extent (s3x1 / 17672))
+            :refer-number plural)
+        :comparison (s3o1 / období
+            :mod (s3s1 / stejný
+                :refer-number singular)
+            :possessor (s3r1 / rok
+                :mod (s3l1 / loňský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3z1: 2-2
+s3p1: 1-1
+s3p2: 3-3,5-5
+s3p3: 4-4
+s3c1: 9-9
+s3t1: 8-8
+s3m1: 10-10
+s3x1: 6-7
+s3o1: 11-13,15-15
+s3s1: 14-14
+s3r1: 16-16
+s3l1: 17-17
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2     3         4            5      6        7      8      9        10 11 12 13 14   15       16    17 18  19 20 21
+Words: Celková škoda způsobená kriminalitou oproti loňskému období nadále vzrostla ,  a  to o  13.2 miliardy korun (  223 %  )  .
+
+# sentence level graph:
+(s4i1 / identity-91
+        :ARG1 (s4v1 / vzrůst-001
+            :ARG0 (s4s1 / škoda
+                :mod (s4z1 / způsobený
+                    :ARG0 (s4k1 / kriminalita
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s4c1 / celkový
+                    :refer-number singular)
+                :refer-number singular)
+            :comparison (s4o1 / období
+                :mod (s4l1 / loňský
+                    :refer-number singular)
+                :refer-number singular)
+            :duration (s4n1 / nadále)
+            :aspect performance)
+        :ARG2 (s4v2 / vzrůst-001
+            :ARG0 s4s1
+            :comparison s4o1
+            :extent (s4i2 / identity-91
+                :ARG1 (s4m1 / miliarda
+                    :mod (s4k2 / koruna
+                        :refer-number plural)
+                    :mod (s4x3 / 13.2)
+                    :refer-number singular)
+                :ARG2 (s4x4 / #Percnt
+                    :mod (s4x5 / 223)))
+            :aspect performance))
+
+# alignment:
+s4i1: 11-12
+s4v1: 9-9
+s4n1: 8-8
+s4s1: 2-2
+s4z1: 3-3
+s4k1: 4-4
+s4c1: 1-1
+s4o1: 5-5,7-7
+s4l1: 6-6
+s4v2: 0-0
+s4i2: 17-17
+s4m1: 13-13,15-15
+s4k2: 16-16
+s4x3: 14-14
+s4x4: 13-13,19-19
+s4x5: 18-18
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4k1 :same-entity s1k1)
+            (s4o1 :same-entity s3o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2     3           4  5       6        7       8  9    10 11 12    13          14     15     16 17  18 19
+Words: Zatímco podíl recidivistů na trestné činnosti poklesl o  15.2 %  ,  podíl mladistvých naopak stoupl o  4.5 %  .
+
+# sentence level graph:
+(s5c1 / contrast-91
+        :ARG2 (s5p1 / poklesnout-001
+            :ARG0 (s5p2 / podíl
+                :ARG0 (s5r1 / recidivista
+                    :refer-number plural)
+                :ARG1 (s5c2 / činnost
+                    :mod (s5t1 / trestný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :extent (s5x1 / #Percnt
+                :mod (s5x2 / 15.2))
+            :refer-number singular
+            :aspect performance)
+        :ARG1 (s5s1 / stoupnout-001
+            :clausal-marker (s5n1 / naopak)
+            :ARG0 (s5p3 / podíl
+                :ARG0 (s5m1 / mladistvý
+                    :refer-number plural)
+                :refer-number singular)
+            :extent (s5x3 / #Percnt
+                :mod (s5x4 / 4.5))
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s5c1: 1-1
+s5s1: 15-15
+s5n1: 14-14
+s5p3: 12-12
+s5m1: 13-13
+s5x3: 16-16,18-18
+s5x4: 17-17
+s5p1: 7-7
+s5p2: 2-2
+s5r1: 3-3
+s5c2: 4-4,6-6
+s5t1: 5-5
+s5x1: 8-8,10-10
+s5x2: 9-9
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5c2 :same-entity s4k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2       3  4    5     6    7  8  9   10
+Words: Necelou třetinu z  toho tvoří děti do 15 let .
+
+# sentence level graph:
+(s6t1 / tvořit-003
+        :extent (s6t2 / třetina
+            :start (s6t3 / ten
+                :refer-number singular)
+            :mod (s6c1 / celý
+                :refer-number singular
+                :polarity -)
+            :refer-number singular)
+        :ARG0 (s6d1 / dítě
+            :extent (s6r1 / rok
+                :mod (s6x1 / 15)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6t1: 5-5
+s6t2: 2-2
+s6t3: 3-4
+s6c1: 1-1
+s6d1: 6-6
+s6r1: 7-7,9-9
+s6x1: 8-8
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6t3 :same-entity s5p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1      2           3   4     5        6      7  8  9     10      11       12       13
+Words: Pokles kriminality lze podle ministra vnitra J  .  Rumla připsat několika faktorům .
+
+# sentence level graph:
+(s7l1 / lze-001
+        :affectee (s7e1 / entity)
+        :regard (s7r1 / Ruml
+            :mod (s7j1 / J)
+            :mod (s7m1 / ministr
+                :possessor (s7v1 / vnitro
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7p1 / připsat-001
+            :ARG1 (s7p2 / pokles
+                :ARG0 (s7k1 / kriminalita
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s7e1
+            :ARG2 (s7f1 / faktor
+                :mod (s7n1 / několik)
+                :refer-number plural)
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s7l1: 3-3
+s7e1: 0-0
+s7r1: 4-4,9-9
+s7j1: 7-7
+s7m1: 5-5
+s7v1: 6-6
+s7p1: 10-10
+s7p2: 1-1
+s7k1: 2-2
+s7f1: 12-12
+s7n1: 11-11
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7k1 :same-entity s5c2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2              3        4        5          6        7     8           9
+Words: Za nejdůležitější považuje dočasnou nasycenost určitých druhů kriminality .
+
+# sentence level graph:
+(s8p1 / považovat-001
+        :effect (s8d1 / důležitý
+            :refer-number singular)
+        :ARG0 (s8e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s8n1 / nasycenost
+            :ARG0 (s8d2 / druh
+                :mod (s8k1 / kriminalita
+                    :refer-number singular)
+                :mod (s8u1 / určitý
+                    :refer-number plural)
+                :refer-number plural)
+            :duration (s8d3 / dočasný
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s8p1: 3-3
+s8d1: 1-2
+s8e1: 0-0
+s8n1: 5-5
+s8d2: 7-7
+s8k1: 8-8
+s8u1: 6-6
+s8d3: 4-4
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8e1 :same-entity s7r1)
+            (s8k1 :same-entity s7k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1    2           3  4    5  6      7
+Words: Řada recidivistů je nyní ve vězení .
+
+# sentence level graph:
+(s9b1 / být-011
+        :ARG0 (s9r1 / řada
+            :mod (s9r2 / recidivista
+                :refer-number plural)
+            :refer-number singular)
+        :temporal (s9n1 / nyní)
+        :place (s9v1 / vězení
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9b1: 3-3
+s9r1: 1-1
+s9r2: 2-2
+s9n1: 4-4
+s9v1: 5-6
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9r2 :same-entity s5r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1       2  3        4        5   6             7          8       9  10      11 12   13       14 15     16   17      18       19
+Words: Zvýšila se občanská aktivita při zabezpečování soukromého majetku a  policie se více zaměřila na určité typy trestné činnosti .
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10z1 / zvýšit-se-001
+            :ARG0 (s10a2 / aktivita
+                :mod (s10o1 / občanský
+                    :refer-number singular)
+                :refer-number singular)
+            :condition (s10z2 / zabezpečování
+                :ARG0 (s10e1 / entity)
+                :ARG1 (s10m1 / majetek
+                    :mod (s10s1 / soukromý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :op2 (s10z3 / zaměřit-se-001
+            :ARG0 (s10p1 / policie
+                :refer-number singular)
+            :extent (s10h1 / hodně)
+            :ARG1 (s10t1 / typ
+                :possessor (s10c1 / činnost
+                    :mod (s10t2 / trestný
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s10u1 / určitý
+                    :refer-number plural)
+                :refer-number plural)
+            :aspect performance))
+
+# alignment:
+s10a1: 9-9
+s10z1: 1-2
+s10a2: 4-4
+s10o1: 3-3
+s10z2: 5-6
+s10e1: 0-0
+s10m1: 8-8
+s10s1: 7-7
+s10z3: 11-11,13-13
+s10p1: 10-10
+s10h1: 12-12
+s10t1: 14-14,16-16
+s10c1: 18-18
+s10t2: 17-17
+s10u1: 15-15
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10p1 :same-entity s3p1)
+            (s10c1 :same-entity s8k1)))
+
+

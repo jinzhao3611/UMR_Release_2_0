@@ -1,0 +1,1006 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2      3     4  5     6  7     8        9  10
+Words: Zatímco Jelcin jedná v  Tokiu ,  Ruská federace se atomizuje
+
+# sentence level graph:
+(s1a1 / atomizovat-001
+        :temporal (s1j1 / jednat-001
+            :ARG0 (s1j2 / Jelcin
+                :refer-number singular)
+            :ARG1 (s1e1 / entity)
+            :ARG2 (s1e2 / entity)
+            :place (s1t1 / Tokyo
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG1 (s1f1 / federace
+            :mod (s1r1 / ruský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s1e3 / entity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1a1: 9-10
+s1j1: 1-1,3-3
+s1j2: 2-2
+s1e1: 0-0
+s1e2: 0-0
+s1t1: 4-5
+s1f1: 8-8
+s1r1: 7-7
+s1e3: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1
+Words: komentáře
+
+# sentence level graph:
+(s2k1 / komentář
+        :refer-number plural)
+
+# alignment:
+s2k1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2  3   4  5  6      7    8     9        10       11   12    13       14 15 16       17        18
+Words: Předpovědi o  tom ,  že Jelcin bude čelit stejnému problému jako kdysi Gorbačov ,  se začínají naplňovat .
+
+# sentence level graph:
+(s3z1 / začínat-001
+        :ARG0 (s3p1 / předpověď
+            :ARG1 (s3c1 / čelit-001
+                :ARG0 (s3j1 / Jelcin
+                    :refer-number singular)
+                :ARG1 (s3p2 / problém
+                    :mod (s3s1 / stejný
+                        :comparison (s3c2 / čelit-001
+                            :temporal (s3k1 / kdysi)
+                            :ARG1 (s3e1 / entity
+                                :refer-number singular
+                                :refer-person 3rd)
+                            :ARG0 (s3g1 / Gorbačov
+                                :refer-number singular)
+                            :aspect activity)
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect activity)
+            :refer-number plural)
+        :ARG1 (s3n1 / naplňovat-se-001
+            :ARG0 s3p1
+            :aspect activity)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3z1: 16-16
+s3p1: 1-1
+s3c1: 2-3,5-5,7-8
+s3j1: 6-6
+s3p2: 10-10
+s3s1: 9-9
+s3c2: 0-0
+s3k1: 12-12
+s3e1: 0-0
+s3g1: 13-13
+s3n1: 15-15,17-17
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3j1 :same-entity s1j2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2  3  4       5          6  7          8            9  10  11     12      13       14   15 16      17      18           19 20     21       22    23
+Words: Prvnímu (  a  zároveň poslednímu )  sovětskému prezidentovi se pod rukama rozpadl Sovětský svaz ,  prvnímu ruskému prezidentovi se začíná rozpadat Rusko .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4r1 / rozpadnout-se-002
+            :affectee (s4p1 / prezident
+                :mod (s4s1 / sovětský
+                    :refer-number singular)
+                :mod (s4a2 / and
+                    :op1 (s4p2 / první
+                        :refer-number singular)
+                    :clausal-marker (s4z1 / zároveň)
+                    :op2 (s4p3 / poslední
+                        :refer-number singular))
+                :refer-number singular)
+            :manner (s4r2 / ruka
+                :refer-number singular)
+            :ARG0 (s4s2 / svaz
+                :mod (s4s3 / Sovětský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s4z2 / začínat-001
+            :ARG1 (s4r3 / rozpadat-se-001
+                :affectee (s4p4 / prezident
+                    :mod (s4p5 / první
+                        :refer-number singular)
+                    :mod (s4r4 / ruský
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 s4r5
+                :aspect activity)
+            :ARG0 (s4r5 / Rusko
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s4a1: 15-15
+s4r1: 9-9,12-12
+s4p1: 8-8
+s4s1: 7-7
+s4a2: 3-3
+s4p2: 1-1
+s4z1: 4-4
+s4p3: 5-5
+s4r2: 10-11
+s4s2: 14-14
+s4s3: 13-13
+s4z2: 20-20
+s4r3: 19-19,21-21
+s4p4: 18-18
+s4p5: 16-16
+s4r4: 17-17
+s4r5: 22-22
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4p1 :same-entity s3g1)
+            (s4s2 :same-entity s4s1)
+            (s4p4 :same-entity s3j1)
+            (s4r4 :same-entity s1f1)
+            (s4r5 :same-entity s4r4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2     3  4          5    6          7           8      9  10    11     12      13 14  15  16   17   18     19    20
+Words: Minulý týden se republikou Ural prohlásila Sverdlovská oblast ,  odkud Jelcin pochází a  kde byl před lety prvním mužem .
+
+# sentence level graph:
+(s5p1 / prohlásit-001
+        :temporal (s5t1 / týden
+            :mod (s5m1 / minulý
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s5r1 / republika
+            :name (s5u1 / Ural
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 s5o1
+        :ARG0 (s5o1 / oblast
+            :mod (s5s1 / Sverdlovský
+                :refer-number singular)
+            :mod (s5a1 / and
+                :op1 (s5p2 / pocházet-002
+                    :ARG0 (s5j1 / Jelcin
+                        :refer-number singular)
+                    :start s5o1
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :op2 (s5b1 / být-007
+                    :ARG0 s5j1
+                    :place s5o1
+                    :temporal (s5r2 / rok
+                        :refer-number plural)
+                    :ARG1 (s5m2 / muž
+                        :mod (s5p3 / první
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect activity))
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s5p1: 6-6
+s5t1: 2-2
+s5m1: 1-1
+s5r1: 4-4
+s5u1: 5-5
+s5o1: 3-3,8-8,10-10,14-14
+s5s1: 7-7
+s5a1: 13-13
+s5p2: 12-12
+s5j1: 11-11
+s5b1: 15-15
+s5r2: 16-17
+s5m2: 19-19
+s5p3: 18-18
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5j1 :same-entity s4p4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2  3   4           5  6      7       8  9   10        11        12      13
+Words: Včera to byl Vladivostok na Dálném východě ,  kde vyhlásili republiku Přímoří .
+
+# sentence level graph:
+(s6b1 / být-007
+        :temporal (s6v1 / včera)
+        :ARG0 (s6t1 / ten
+            :refer-number singular)
+        :ARG1 (s6v2 / Vladivostok
+            :place (s6v3 / východ
+                :mod (s6d1 / dálný
+                    :refer-number singular)
+                :refer-number singular)
+            :place-of (s6v4 / vyhlásit-002
+                :ARG0 (s6e1 / entity)
+                :ARG1 (s6r1 / republika
+                    :name (s6p1 / Přímoří
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s6b1: 3-3
+s6v1: 1-1
+s6t1: 2-2
+s6v2: 4-4,9-9
+s6v3: 5-5,7-7
+s6d1: 6-6
+s6v4: 10-10
+s6e1: 0-0
+s6r1: 11-11
+s6p1: 12-12
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2  3      4      5         6  7        8        9  10 11    12    13       14 15      16   17       18 19    20 21     22   23     24     25         26
+Words: Zároveň se ozvala Sašská republika (  někdejší Jakutsko )  ,  které hrozí hladomor ,  ačkoliv její diamanty a  zlato po dlouhé roky plnily ruskou klenotnici .
+
+# sentence level graph:
+(s7o1 / ozvat-se-001
+        :temporal (s7z1 / zároveň)
+        :ARG1 (s7e1 / entity)
+        :ARG0 (s7i1 / identity-91
+            :ARG1 (s7r1 / republika
+                :ARG1-of (s7b1 / but-91
+                    :ARG1 (s7h1 / hrozit-002
+                        :ARG0 (s7h2 / hladomor
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :ARG2 (s7p1 / plnit-002
+                        :ARG0 (s7a1 / and
+                            :op1 (s7d1 / diamant
+                                :possessor s7i1
+                                :refer-number plural)
+                            :op2 (s7z2 / zlato
+                                :refer-number singular))
+                        :duration (s7r2 / rok
+                            :mod (s7d2 / dlouhý
+                                :refer-number plural)
+                            :refer-number plural)
+                        :ARG1 (s7k1 / klenotnice
+                            :mod (s7r3 / ruský
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural
+                        :aspect activity))
+                :mod (s7s1 / Sašský)
+                :refer-number singular)
+            :ARG2 (s7j1 / Jakutsko
+                :ARG1-of s7h1
+                :mod (s7n1 / někdejší
+                    :refer-number singular)
+                :refer-number singular))
+        :aspect performance)
+
+# alignment:
+s7o1: 2-3
+s7z1: 1-1
+s7e1: 0-0
+s7i1: 6-6,11-11,16-16
+s7r1: 5-5
+s7s1: 4-4
+s7b1: 15-15
+s7h1: 12-12
+s7h2: 13-13
+s7p1: 23-23
+s7a1: 18-18
+s7d1: 17-17
+s7z2: 19-19
+s7r2: 20-20,22-22
+s7d2: 21-21
+s7k1: 25-25
+s7r3: 24-24
+s7j1: 8-8
+s7n1: 7-7
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7r3 :same-entity s4r5)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2     3        4    5  6   7      8  9          10 11   12     13        14 15           16 17 18       19           20      21    22      23 24  25      26           27        28
+Words: V  Ruské federaci žije na sto národů a  národností a  přes jejich plánovité "  promíchávání "  v  minulých desetiletích zůstalo mnoho oblastí ,  kde původní obyvatelstvo převažuje .
+
+# sentence level graph:
+(s8a1 / and
+        :op2 (s8b1 / but-91
+            :ARG2 (s8p1 / promíchávání
+                :ARG0 (s8e1 / entity)
+                :ARG1 s8a2
+                :mod (s8p2 / plánovitý
+                    :refer-number singular)
+                :temporal (s8d1 / desetiletí
+                    :mod (s8m1 / minulý
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG1 (s8z1 / zůstat-004
+                :ARG0 (s8o1 / oblast
+                    :place-of (s8p3 / převažovat-002
+                        :ARG0 (s8o2 / obyvatelstvo
+                            :mod (s8p4 / původní
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :mod (s8m2 / mnoho)
+                    :refer-number plural)
+                :refer-number singular
+                :aspect performance))
+        :op1 (s8z2 / žít-005
+            :place (s8f1 / federace
+                :mod (s8r1 / ruský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s8a2 / and
+                :op1 (s8n1 / národ
+                    :mod (s8s1 / sto
+                        :refer-number singular)
+                    :refer-number plural)
+                :op2 (s8n2 / národnost
+                    :mod s8s1
+                    :refer-number plural))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s8a1: 10-10
+s8z2: 4-4
+s8f1: 1-1,3-3
+s8r1: 2-2
+s8a2: 8-8,12-12
+s8n1: 7-7
+s8s1: 5-6
+s8n2: 9-9
+s8b1: 0-0
+s8z1: 20-20
+s8o1: 22-22,24-24
+s8p3: 27-27
+s8o2: 26-26
+s8p4: 25-25
+s8m2: 21-21
+s8p1: 11-11,15-15
+s8e1: 0-0
+s8p2: 13-13
+s8d1: 17-17,19-19
+s8m1: 18-18
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8f1 :same-entity s7r3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1       2  3     4        5  6       7            8         9        10 11        12
+Words: Nejdále ve svých pokusech o  získání nezávislosti pokročilo Čečensko a  Tatarstán .
+
+# sentence level graph:
+(s9p1 / pokročit-002
+        :goal (s9d1 / daleko)
+        :regard (s9p2 / pokus
+            :ARG1 (s9z1 / získání
+                :ARG1 (s9z2 / závislost
+                    :refer-number singular
+                    :polarity -)
+                :ARG0 s9a1
+                :refer-number singular)
+            :ARG0 s9a1
+            :refer-number plural)
+        :ARG0 (s9a1 / and
+            :op1 (s9c1 / Čečensko
+                :refer-number singular)
+            :op2 (s9t1 / Tatarstán
+                :refer-number singular))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s9p1: 8-8
+s9d1: 1-1
+s9p2: 2-2,4-4
+s9z1: 5-6
+s9z2: 7-7
+s9a1: 3-3,10-10
+s9c1: 9-9
+s9t1: 11-11
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1      2  3   4     5       6  7      8   9       10       11 12  13       14   15   16 17    18  19        20       21
+Words: Hlavně v  tom prvém případě má Moskva jen omezené možnosti ,  jak uplatnit svůj vliv ,  natož pak efektivně vládnout .
+
+# sentence level graph:
+(s10m1 / mít-028
+        :regard (s10p1 / případ
+            :clausal-marker (s10h1 / hlavně)
+            :mod (s10p2 / prvý
+                :refer-number singular)
+            :mod (s10t1 / ten
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s10m2 / Moskva
+            :refer-number singular)
+        :clausal-marker (s10j1 / jen)
+        :predicative-noun (s10m3 / možnost
+            :ARG0 s10m2
+            :mod (s10o1 / omezený
+                :refer-number plural)
+            :ARG1 (s10g1 / gradation
+                :op1 (s10u1 / uplatnit-001
+                    :manner (s10j2 / jak)
+                    :ARG0 s10m2
+                    :ARG1 (s10v1 / vliv
+                        :possessor s10m2
+                        :refer-number singular)
+                    :aspect performance)
+                :clausal-marker (s10p3 / pak)
+                :op2 (s10v2 / vládnout-003
+                    :manner s10j2
+                    :ARG0 s10m2
+                    :manner (s10e1 / efektivně)
+                    :aspect activity))
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s10m1: 6-6
+s10p1: 2-2,5-5
+s10h1: 1-1
+s10p2: 4-4
+s10t1: 3-3
+s10m2: 7-7,14-14
+s10j1: 8-8
+s10m3: 10-10
+s10o1: 9-9
+s10g1: 17-17
+s10u1: 13-13
+s10v1: 15-15
+s10j2: 12-12
+s10p3: 18-18
+s10v2: 20-20
+s10e1: 19-19
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10p1 :same-entity s9c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1  2             3  4  5              6  7            8    9         10   11      12 13    14   15 16        17       18        19
+Words: Je symptomatické ,  že nejrozhodnější a  nejhlučnější jsou obyvatelé těch regionů ,  které mají k  dispozici přírodní bohatství .
+
+# sentence level graph:
+(s11b1 / být-007
+        :ARG1 (s11s1 / symptomatický
+            :refer-number singular)
+        :ARG0 (s11b2 / být-007
+            :ARG1 (s11a1 / and
+                :op1 (s11r1 / rozhodný
+                    :refer-number plural)
+                :op2 (s11h1 / hlučný
+                    :refer-number plural))
+            :ARG0 (s11o1 / obyvatel
+                :possessor (s11r2 / region
+                    :mod (s11t1 / ten
+                        :refer-number plural)
+                    :ARG0-of (s11m1 / mít-064
+                        :part-of-phraseme (s11k1 / k_dispozici
+                            :refer-number singular)
+                        :ARG1 (s11b3 / bohatství
+                            :mod (s11p1 / přírodní
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural
+                        :refer-person 3rd
+                        :aspect state)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s11b1: 1-1
+s11s1: 2-2
+s11b2: 4-4,8-8
+s11a1: 6-6
+s11r1: 5-5
+s11h1: 7-7
+s11o1: 9-9
+s11r2: 11-11,13-13
+s11t1: 10-10
+s11m1: 14-14
+s11k1: 15-16
+s11b3: 18-18
+s11p1: 17-17
+
+# document level annotation:
+(s11s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1        2  3    4  5    6   7  8         9    10        11     12    13 14   15   16 17          18     19
+Words: Nechápou ,  proč by měli být s  ostatními méně šťastnými stejně chudí ,  když jsou ve skutečnosti bohatí .
+
+# sentence level graph:
+(s12c1 / chápat-003
+        :ARG0 (s12e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s12b1 / být-007
+            :ARG0 s12e1
+            :cause (s12p1 / proč)
+            :companion (s12o1 / ostatní
+                :mod (s12s1 / šťastný
+                    :extent (s12m1 / málo)
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s12c2 / chudý
+                :manner (s12s2 / stejně)
+                :refer-number plural)
+            :condition (s12b2 / být-007
+                :clausal-marker (s12s3 / skutečnost
+                    :refer-number singular)
+                :ARG0 s12e1
+                :ARG1 (s12b3 / bohatý
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :aspect activity)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s12c1: 1-1
+s12e1: 0-0
+s12b1: 4-6
+s12p1: 3-3
+s12o1: 7-8
+s12s1: 10-10
+s12m1: 9-9
+s12c2: 12-12
+s12s2: 11-11
+s12b2: 14-15
+s12s3: 16-17
+s12b3: 18-18
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12e1 :same-entity s11o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1        2  3             4        5       6           7     8     9  10 11   12    13 14       15 16     17    18 19       20 21    22 23  24       25        26 27      28   29     30   31
+Words: Tendence k  osamostatnění posílila celková hospodářská krize Ruska ,  i  když třeba v  Jakutsku (  dnešní Sacha )  hovořili o  právu na své přírodní bohatství už nejméně před čtyřmi lety .
+
+# sentence level graph:
+(s13b1 / but-91
+        :ARG1 (s13p1 / posílit-004
+            :ARG1 (s13t1 / tendence
+                :ARG1 (s13o1 / osamostatnění
+                    :ARG0 (s13e1 / entity)
+                    :refer-number singular)
+                :refer-number plural)
+            :ARG0 (s13k1 / krize
+                :possessor (s13r1 / Rusko
+                    :refer-number singular)
+                :mod (s13h1 / hospodářský
+                    :refer-number singular)
+                :mod (s13c1 / celkový
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :ARG2 (s13h2 / hovořit-001
+            :clausal-marker (s13t2 / třeba)
+            :place (s13j1 / Jakutsko
+                :parenthesis (s13s1 / Sacha
+                    :mod (s13d1 / dnešní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG0 (s13e2 / entity)
+            :ARG1 (s13p2 / právo
+                :ARG1 (s13b2 / bohatství
+                    :possessor s13e2
+                    :mod (s13p3 / přírodní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s13u1 / už)
+            :temporal (s13r2 / rok
+                :mod (s13c2 / čtyři
+                    :extent (s13m1 / málo)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect activity))
+
+# alignment:
+s13b1: 11-11
+s13p1: 4-4
+s13t1: 1-1
+s13o1: 2-3
+s13e1: 0-0
+s13k1: 7-7
+s13r1: 8-8
+s13h1: 6-6
+s13c1: 5-5
+s13h2: 10-10,19-19
+s13t2: 12-12
+s13j1: 13-14
+s13s1: 17-17
+s13d1: 16-16
+s13e2: 23-23
+s13p2: 20-21
+s13b2: 22-22,25-25
+s13p3: 24-24
+s13u1: 26-26
+s13r2: 28-28,30-30
+s13c2: 29-29
+s13m1: 27-27
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13r1 :same-entity s8f1)
+            (s13j1 :same-entity s7i1)
+            (s13b2 :same-entity s7a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1  2      3      4        5  6     7     8        9        10 11   12 13 14       15      16   17 18    19       20       21    22    23  24    25   26       27        28
+Words: Ke vzniku nových republik v  rámci Ruské federace přispívá i  fakt ,  že důležité oblasti mají z  čistě právního hlediska menší práva než někdy málo významné republiky .
+
+# sentence level graph:
+(s14p1 / přispívat-002
+        :ARG1 (s14v1 / vznik
+            :ARG0 (s14r1 / republika
+                :mod (s14n1 / nový
+                    :refer-number plural)
+                :place (s14f1 / federace
+                    :mod (s14r2 / ruský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :clausal-marker (s14i1 / i)
+        :ARG0 (s14f2 / fakt
+            :ARG1 (s14m1 / mít-028
+                :ARG0 (s14o1 / oblast
+                    :mod (s14d1 / důležitý
+                        :refer-number plural)
+                    :refer-number plural)
+                :regard (s14h1 / hledisko
+                    :mod (s14p2 / právní
+                        :manner (s14c1 / čistě)
+                        :refer-number singular)
+                    :refer-number singular)
+                :predicative-noun (s14p3 / právo
+                    :ARG0 s14o1
+                    :ARG1 (s14e1 / entity)
+                    :mod (s14m2 / malý
+                        :comparison (s14m3 / mít-028
+                            :temporal (s14n2 / někdy)
+                            :predicative-noun (s14p4 / právo
+                                :ARG0 s14r3
+                                :ARG1 (s14e2 / entity)
+                                :refer-number plural)
+                            :ARG0 (s14r3 / republika
+                                :mod (s14v2 / významný
+                                    :extent (s14m4 / málo)
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :refer-number plural
+                            :refer-person 3rd
+                            :aspect state)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect state)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s14p1: 9-9
+s14v1: 1-2
+s14r1: 4-4
+s14n1: 3-3
+s14f1: 5-6,8-8
+s14r2: 7-7
+s14i1: 10-10
+s14f2: 11-11
+s14m1: 13-13,16-16
+s14o1: 15-15
+s14d1: 14-14
+s14h1: 17-17,20-20
+s14p2: 19-19
+s14c1: 18-18
+s14p3: 22-22
+s14e1: 0-0
+s14m2: 21-21
+s14m3: 0-0
+s14n2: 24-24
+s14p4: 0-0
+s14e2: 0-0
+s14r3: 27-27
+s14v2: 26-26
+s14m4: 25-25
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14f1 :same-entity s13r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1  2            3  4      5  6         7  8  9     10     11     12 13     14 15  16 17     18  19
+Words: A  pochopitelně -  místní "  náčelníci "  se snaží získat odstup od Kremlu a  tím si udržet moc .
+
+# sentence level graph:
+(s15s1 / snažit-se-001
+        :clausal-marker (s15a1 / a)
+        :clausal-marker (s15p1 / pochopitelně)
+        :ARG0 (s15n1 / náčelník
+            :mod (s15m1 / místní
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s15a2 / and
+            :op1 (s15z1 / získat-004
+                :ARG0 s15n1
+                :ARG1 (s15o1 / odstup
+                    :start (s15k1 / Kreml
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :op2 (s15u1 / udržet-003
+                :ARG0 s15n1
+                :instrument (s15t1 / ten
+                    :refer-number singular)
+                :affectee s15n1
+                :ARG1 (s15m2 / moc
+                    :refer-number singular)
+                :aspect performance))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s15s1: 8-9
+s15a1: 1-1
+s15p1: 2-2
+s15n1: 6-6,16-16
+s15m1: 4-4
+s15a2: 14-14
+s15z1: 10-10
+s15o1: 11-11
+s15k1: 12-13
+s15u1: 17-17
+s15t1: 15-15
+s15m2: 18-18
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15k1 :same-entity s10m2)
+            (s15t1 :same-event s15z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1     2         3      4  5     6    7    8  9     10 11         12     13       14 15      16 17      18    19          20     21 22   23  24 25   26           27          28   29    30
+Words: Ruský prezident Jelcin ,  který nyní čeká v  Tokiu v  předpokoji bohaté sedmičky na verdikt o  životně nutné hospodářské pomoci ,  bude mít s  nově vznikajícími republikami dost práce .
+
+# sentence level graph:
+(s16m1 / mít-008
+        :ARG0 (s16j1 / Jelcin
+            :mod (s16p1 / prezident
+                :mod (s16r1 / ruský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0-of (s16c1 / čekat-002
+                :temporal (s16n1 / nyní)
+                :place (s16t1 / Tokyo
+                    :refer-number singular)
+                :place (s16p2 / předpokoj
+                    :possessor (s16s1 / sedmička
+                        :mod (s16b1 / bohatý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s16v1 / verdikt
+                    :ARG1 (s16p3 / pomoc
+                        :mod (s16h1 / hospodářský
+                            :refer-number singular)
+                        :mod (s16n2 / nutný
+                            :regard (s16z1 / životně)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :ARG1 (s16p4 / práce
+            :ARG2 (s16r2 / republika
+                :mod (s16v2 / vznikající
+                    :manner (s16n3 / nově)
+                    :refer-number plural)
+                :refer-number plural)
+            :mod (s16d1 / dost)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s16m1: 22-23
+s16j1: 3-3,5-5
+s16p1: 2-2
+s16r1: 1-1
+s16c1: 7-7
+s16n1: 6-6
+s16t1: 8-9
+s16p2: 10-11
+s16s1: 13-13
+s16b1: 12-12
+s16v1: 14-15
+s16p3: 16-16,20-20
+s16h1: 19-19
+s16n2: 18-18
+s16z1: 17-17
+s16p4: 29-29
+s16r2: 24-24,27-27
+s16v2: 26-26
+s16n3: 25-25
+s16d1: 28-28
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16j1 :same-entity s5j1)
+            (s16r1 :same-entity s14f1)
+            (s16t1 :same-entity s1t1)
+            (s16r2 :same-entity s14r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1   2        3    4        5  6       7  8   9          10        11
+Words: Aby nedopadl jako Gorbačov ,  nezbývá mu než promyšleně ustupovat .
+
+# sentence level graph:
+(s17z1 / zbývat-001
+        :purpose (s17d1 / dopadnout-005
+            :ARG0 (s17e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :manner (s17x1 / #Equal
+                :comparison (s17d2 / dopadnout-005
+                    :manner (s17e2 / entity)
+                    :ARG0 (s17g1 / Gorbačov
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance))
+            :refer-number singular
+            :aspect performance
+            :polarity -)
+        :ARG1 s17e1
+        :ARG0 (s17x3 / #Total
+            :subtraction (s17u1 / ustupovat-003
+                :ARG0 s17e1
+                :start (s17e3 / entity)
+                :manner (s17p1 / promyšleně)
+                :aspect activity))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s17z1: 6-6
+s17d1: 1-2
+s17e1: 7-7
+s17x1: 0-0
+s17d2: 0-0
+s17e2: 0-0
+s17g1: 4-4
+s17x3: 0-0
+s17u1: 8-8,10-10
+s17e3: 0-0
+s17p1: 9-9
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17e1 :same-entity s16j1)
+            (s17g1 :same-entity s4p1)))
+
+

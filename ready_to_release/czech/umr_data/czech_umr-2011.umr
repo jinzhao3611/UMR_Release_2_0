@@ -1,0 +1,281 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1            2      3
+Words: Neposlušných řidičů přibývá
+
+# sentence level graph:
+(s1p1 / přibývat-002
+        :ARG0 (s1r1 / řidič
+            :mod (s1p2 / poslušný
+                :refer-number plural
+                :polarity -)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1p1: 3-3
+s1r1: 2-2
+s1p2: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2       3       4  5     6        7    8  9    10           11     12    13          14      15 16 17 18      19 20       21      22    23
+Words: Strážníci Městské policie v  Praze nasadili loni na auta neposlušných řidičů 41779 blokovacích botiček a  za to vybrali na pokutách 5682000 korun .
+
+# sentence level graph:
+(s3a1 / and
+        :op1 (s3n1 / nasadit-004
+            :ARG0 (s3s1 / strážník
+                :possessor (s3p1 / policie
+                    :mod (s3m1 / městský
+                        :refer-number singular)
+                    :place (s3p2 / Praha
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :temporal (s3v1 / vloni)
+            :goal (s3a2 / auto
+                :possessor (s3r1 / řidič
+                    :mod (s3p3 / poslušný
+                        :refer-number plural
+                        :polarity -)
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s3b1 / botička
+                :mod (s3b2 / blokovací
+                    :refer-number plural)
+                :mod (s3x1 / 41779)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance)
+        :op2 (s3v2 / vybrat-002
+            :ARG0 s3s1
+            :cause (s3t1 / ten
+                :refer-number singular)
+            :manner (s3p4 / pokuta
+                :refer-number plural)
+            :ARG1 (s3k1 / koruna
+                :mod (s3x3 / 5682000)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s3a1: 15-15
+s3n1: 6-6
+s3v1: 7-7
+s3a2: 8-9
+s3r1: 11-11
+s3p3: 10-10
+s3b1: 14-14
+s3b2: 13-13
+s3x1: 12-12
+s3s1: 1-1
+s3p1: 3-3
+s3m1: 2-2
+s3p2: 4-5
+s3v2: 18-18
+s3t1: 16-17
+s3p4: 19-20
+s3k1: 22-22
+s3x3: 21-21
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3r1 :same-entity s1r1)
+            (s3p2 :same-entity s2p1)
+            (s3t1 :same-event s3n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2    3    4  5      6     7          8       9  10    11      12
+Words: Proti roku 1993 se zvýšil počet nasazených botiček o  jednu třetinu .
+
+# sentence level graph:
+(s4z1 / zvýšit-se-001
+        :comparison (s4r1 / rok
+            :mod (s4x1 / 1993)
+            :refer-number singular)
+        :ARG0 (s4p1 / počet
+            :mod (s4b1 / botička
+                :mod (s4n1 / nasazený
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :extent (s4t1 / třetina
+            :mod (s4j1 / jeden
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4z1: 4-5
+s4r1: 1-2
+s4x1: 3-3
+s4p1: 6-6
+s4b1: 8-8
+s4n1: 7-7
+s4t1: 9-9,11-11
+s4j1: 10-10
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4b1 :same-entity s3b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2       3          4  5     6        7      8     9  10        11 12    13 14       15 16           17        18         19
+Words: Strážníci blokují automobily ,  které porušují zákazy stání ,  zastavení či stání na trávníku a  nerespektují vyhrazená parkoviště .
+
+# sentence level graph:
+(s5b1 / blokovat-001
+        :ARG0 (s5s1 / strážník
+            :refer-number plural)
+        :ARG1 (s5a1 / automobil
+            :ARG0-of (s5a2 / and
+                :op1 (s5p1 / porušovat-001
+                    :ARG1 (s5o1 / or
+                        :op1 (s5z1 / zákaz
+                            :ARG1 (s5s2 / stání
+                                :ARG0 (s5e1 / entity)
+                                :refer-number singular)
+                            :refer-number plural)
+                        :op2 (s5z2 / zákaz
+                            :ARG1 (s5z3 / zastavení
+                                :ARG0 (s5e2 / entity)
+                                :refer-number singular)
+                            :refer-number plural)
+                        :op3 (s5z4 / zákaz
+                            :ARG1 (s5s3 / stání
+                                :ARG0 (s5e3 / entity)
+                                :place (s5t1 / trávník
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number plural))
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect activity)
+                :op2 (s5r1 / respektovat-001
+                    :ARG1 (s5p2 / parkoviště
+                        :mod (s5v1 / vyhrazený
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect activity
+                    :polarity -))
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect process)
+
+# alignment:
+s5b1: 2-2
+s5s1: 1-1
+s5a1: 3-3,5-5
+s5a2: 15-15
+s5p1: 6-6
+s5o1: 11-11
+s5z1: 7-7
+s5s2: 8-8
+s5e1: 0-0
+s5z2: 0-0
+s5z3: 10-10
+s5e2: 0-0
+s5z4: 0-0
+s5s3: 12-12
+s5e3: 0-0
+s5t1: 13-14
+s5r1: 16-16
+s5p2: 18-18
+s5v1: 17-17
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s1 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1          2      3     4     5  6      7        8     9  10  11 12  13  14       15      16     17
+Words: Kontrolují hlavně rušné ulice v  centru hlavního města ,  kde by měl být zajištěn plynulý provoz .
+
+# sentence level graph:
+(s6k1 / kontrolovat-001
+        :ARG0 (s6e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :clausal-marker (s6h1 / hlavně)
+        :ARG1 (s6u1 / ulice
+            :mod (s6r1 / rušný
+                :refer-number plural)
+            :place (s6c1 / centrum
+                :possessor (s6m1 / město
+                    :mod (s6h2 / hlavní
+                        :refer-number singular)
+                    :refer-number singular)
+                :place-of (s6z1 / zajistit-003
+                    :ARG0 (s6e2 / entity)
+                    :ARG1 (s6p1 / provoz
+                        :mod (s6p2 / plynulý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6k1: 1-1
+s6e1: 0-0
+s6h1: 2-2
+s6u1: 4-4
+s6r1: 3-3
+s6c1: 5-6,10-10
+s6m1: 8-8
+s6h2: 7-7
+s6z1: 11-14
+s6e2: 0-0
+s6p1: 16-16
+s6p2: 15-15
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5s1)
+            (s6m1 :same-entity s3p2)))
+
+

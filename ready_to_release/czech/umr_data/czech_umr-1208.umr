@@ -1,0 +1,119 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2    3     4     5         6    7     8            9      10       11  12
+Words: Milan Uhde včera našel kompromis mezi dvěma znesvářenými křídly brněnské ODS .
+
+# sentence level graph:
+(s1n1 / najít-002
+        :ARG0 (s1u1 / Uhde
+            :mod (s1m1 / Milan
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s1v1 / včera)
+        :ARG1 (s1k1 / kompromis
+            :place (s1k2 / křídlo
+                :possessor (s1o1 / ODS
+                    :mod (s1b1 / brněnský
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s1z1 / znesvářený
+                    :refer-number plural)
+                :mod (s1d1 / dva
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s1n1: 4-4
+s1u1: 2-2
+s1m1: 1-1
+s1v1: 3-3
+s1k1: 5-5
+s1k2: 6-6,9-9
+s1o1: 11-11
+s1b1: 10-10
+s1z1: 8-8
+s1d1: 7-7
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1  2      3  4     5         6   7  8    9       10       11 12    13 14
+Words: Na snímku s  novým předsedou ODS v  Brně Romanem Poláškem (  vlevo )  .
+
+# sentence level graph:
+(s2e1 / event
+        :place (s2s1 / snímek
+            :refer-number singular)
+        :companion (s2p1 / Polášek
+            :mod (s2r1 / Roman
+                :refer-number singular)
+            :mod (s2p2 / předseda
+                :possessor (s2o1 / ODS
+                    :place (s2b1 / Brno
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s2n1 / nový
+                    :refer-number singular)
+                :refer-number singular)
+            :parenthesis (s2e2 / event
+                :place (s2v1 / vlevo)
+                :aspect state)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s2e1: 0-0
+s2s1: 1-2
+s2p1: 3-3,10-10
+s2r1: 9-9
+s2p2: 5-5
+s2o1: 6-6
+s2b1: 7-8
+s2n1: 4-4
+s2e2: 0-0
+s2v1: 12-12
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2o1 :same-entity s1o1)
+            (s2b1 :same-entity s1b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2      3       4 5
+Words: Foto Michal Růžička - LN
+
+# sentence level graph:
+(s3e1 / event
+        :ARG1 (s3f1 / foto
+            :refer-number singular)
+        :ARG0 (s3r1 / Růžička
+            :mod (s3m1 / Michal
+                :refer-number singular)
+            :parenthesis (s3l1 / LN
+                :refer-number plural)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s3e1: 0-0
+s3f1: 1-1
+s3r1: 3-3
+s3m1: 2-2
+s3l1: 5-5
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3f1 :same-entity s2s1)))
+
+

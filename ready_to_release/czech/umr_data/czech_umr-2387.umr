@@ -1,0 +1,319 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2       3
+Words: Další zraněný brankář
+
+# sentence level graph:
+(s1b1 / brankář
+        :mod (s1z1 / zraněný
+            :refer-number singular)
+        :mod (s1d1 / další
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1b1: 3-3
+s1z1: 2-2
+s1d1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: Nantes -
+
+# sentence level graph:
+(s2n1 / Nantes)
+
+# alignment:
+s2n1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2      3  4           5           6          7   8  9      10       11 12        13      14        15   16          17        18   19 20     21   22         23
+Words: Po srážce se spoluhráčem Christianem Karembeuem byl v  sobotu převezen do nemocnice brankář vedoucího týmu francouzské fotbalové ligy FC Nantes Eric Loussouarn .
+
+# sentence level graph:
+(s3p1 / převézt-001
+        :temporal (s3s1 / srážka
+            :ARG1 (s3k1 / Karembeu
+                :mod (s3c1 / Christian
+                    :refer-number singular)
+                :mod (s3s2 / spoluhráč
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3s3 / sobota
+            :refer-number singular)
+        :ARG0 (s3e1 / entity)
+        :start (s3e2 / entity)
+        :goal (s3n1 / nemocnice
+            :refer-number singular)
+        :ARG1 (s3l1 / Loussouarn
+            :mod (s3e3 / Eric
+                :refer-number singular)
+            :mod (s3b1 / brankář
+                :ARG1 (s3t1 / tým
+                    :name (s3f1 / FC
+                        :mod (s3n2 / Nantes))
+                    :possessor (s3l2 / liga
+                        :mod (s3f2 / fotbalový
+                            :refer-number singular)
+                        :mod (s3f3 / francouzský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s3v1 / vedoucí
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3p1: 7-7,10-10
+s3s1: 1-2
+s3k1: 3-3,6-6
+s3c1: 5-5
+s3s2: 4-4
+s3s3: 8-9
+s3e1: 0-0
+s3e2: 0-0
+s3n1: 11-12
+s3l1: 22-22
+s3e3: 21-21
+s3b1: 13-13
+s3t1: 15-15
+s3f1: 19-19
+s3n2: 20-20
+s3l2: 18-18
+s3f2: 17-17
+s3f3: 16-16
+s3v1: 14-14
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3b1 :same-entity s1b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2     3           4      5       6  7           8     9    10    11 12  13     14   15      16        17 18        19        20     21   22 23          24
+Words: Lékaři ještě nestanovili rozsah zranění a  funkcionáři klubu mají obavy ,  zda gólman bude schopen nastoupit v  zítřejším střetnutí Poháru UEFA v  Leverkusenu .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4s1 / stanovit-004
+            :ARG0 (s4l1 / lékař
+                :refer-number plural)
+            :temporal (s4j1 / ještě)
+            :ARG1 (s4r1 / rozsah
+                :possessor (s4z1 / zranění
+                    :ARG0 (s4e1 / entity)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance
+            :polarity -)
+        :op2 (s4m1 / mít-031
+            :ARG0 (s4f1 / funkcionář
+                :possessor (s4k1 / klub
+                    :refer-number singular)
+                :refer-number plural)
+            :predicative-noun (s4o1 / obava
+                :ARG0 s4f1
+                :ARG1 (s4b1 / být-007
+                    :ARG0 (s4g1 / gólman
+                        :refer-number singular)
+                    :ARG1 (s4s2 / schopný
+                        :ARG1 (s4n1 / nastoupit-002
+                            :ARG0 s4g1
+                            :place (s4s3 / střetnutí
+                                :ARG0 (s4e2 / entity)
+                                :ARG1 (s4e3 / entity)
+                                :temporal (s4z2 / zítřejší
+                                    :refer-number singular)
+                                :place (s4p1 / pohár
+                                    :possessor (s4u1 / UEFA)
+                                    :refer-number singular)
+                                :place (s4l2 / Leverkusen
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :aspect performance)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect state))
+
+# alignment:
+s4a1: 6-6
+s4s1: 3-3
+s4l1: 1-1
+s4j1: 2-2
+s4r1: 4-4
+s4z1: 5-5
+s4e1: 0-0
+s4m1: 9-9
+s4f1: 7-7
+s4k1: 8-8
+s4o1: 10-10
+s4b1: 12-12,14-14
+s4g1: 13-13
+s4s2: 15-15
+s4n1: 16-16
+s4s3: 17-17,19-19
+s4e2: 0-0
+s4e3: 0-0
+s4z2: 18-18
+s4p1: 20-20
+s4u1: 21-21
+s4l2: 22-23
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4k1 :same-entity s3t1)
+            (s4g1 :same-entity s3l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2    3  4      5  6        7         8      9  10  11   12 13   14     15 16    17
+Words: Brankář sice po srážce v  tréninku neztratil vědomí ,  při pádu se však udeřil do hlavy .
+
+# sentence level graph:
+(s5b1 / but-91
+        :clausal-marker (s5s1 / sice)
+        :ARG1 (s5z1 / ztratit-003
+            :ARG0 (s5b2 / brankář
+                :refer-number singular)
+            :temporal (s5s2 / srážka
+                :place (s5t1 / trénink
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s5v1 / vědomí
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance
+            :polarity -)
+        :ARG2 (s5u1 / udeřit-se-001
+            :ARG0 s5b2
+            :temporal (s5p1 / pád
+                :refer-number singular)
+            :goal (s5h1 / hlava
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s5b1: 13-13
+s5s1: 2-2
+s5z1: 7-7
+s5s2: 3-4
+s5t1: 5-6
+s5v1: 8-8
+s5b2: 1-1
+s5u1: 12-12,14-14
+s5p1: 10-11
+s5h1: 15-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s2 :same-entity s3s1)
+            (s5b2 :same-entity s4g1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1          2  3      4        5  6       7      8        9  10      11     12
+Words: Loussouarn je třetím gólmanem ,  kterého Nantes ztratilo v  letošní sezóně .
+
+# sentence level graph:
+(s6b1 / být-007
+        :ARG0 (s6l1 / Loussouarn
+            :refer-number singular)
+        :ARG1 (s6g1 / gólman
+            :mod (s6t1 / třetí
+                :refer-number singular)
+            :ARG1-of (s6z1 / ztratit-003
+                :ARG0 (s6n1 / Nantes
+                    :refer-number singular)
+                :temporal (s6s1 / sezóna
+                    :mod (s6l2 / letošní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 2-2
+s6l1: 1-1
+s6g1: 4-4,6-6
+s6t1: 3-3
+s6z1: 8-8
+s6n1: 7-7
+s6s1: 9-9,11-11
+s6l2: 10-10
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6l1 :same-entity s5b2)
+            (s6n1 :same-entity s4k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1   2     3  4       5     6       7  8         9          10
+Words: Již dříve se zranili David Marraud a  Dominique Casagrande .
+
+# sentence level graph:
+(s7z1 / zranit-se-001
+        :clausal-marker (s7j1 / již)
+        :temporal (s7b1 / brzy)
+        :ARG0 (s7a1 / and
+            :op1 (s7m1 / Marraud
+                :mod (s7d1 / David
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s7c1 / Casagrande
+                :mod (s7d2 / Dominique
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s7z1: 3-4
+s7j1: 1-1
+s7b1: 2-2
+s7a1: 7-7
+s7m1: 6-6
+s7d1: 5-5
+s7c1: 9-9
+s7d2: 8-8
+
+# document level annotation:
+(s7s0 / sentence)
+
+

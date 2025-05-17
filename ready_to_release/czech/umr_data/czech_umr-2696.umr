@@ -1,0 +1,227 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2  3      4            5
+Words: Změna ve vedení Elektrických drah
+
+# sentence level graph:
+(s1z1 / změna
+        :place (s1v1 / vedení
+            :possessor (s1d1 / dráha
+                :mod (s1e1 / Elektrický
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1z1: 1-1
+s1v1: 2-3
+s1d1: 5-5
+s1e1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( sob ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2s1 / sob)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2s1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2            3    4   5  6         7        8  9          10    11        12         13      14   15     16        17       18     19     20
+Words: Vedením elektrických drah byl po odvolaném řediteli DP Elektrické dráhy Vladimíru Maršálkovi pověřen jeho bývalý technický náměstek Rudolf Mládek .
+
+# sentence level graph:
+(s3p1 / pověřit-001
+        :ARG1 (s3v1 / vedení
+            :ARG0 s3m1
+            :ARG1 (s3d1 / dráha
+                :mod (s3e1 / elektrický
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG0 (s3e2 / entity)
+        :temporal (s3m2 / Maršálek
+            :mod (s3v2 / Vladimír
+                :refer-number singular)
+            :mod (s3r1 / ředitel
+                :possessor (s3d2 / DP
+                    :name (s3d3 / dráha
+                        :mod (s3e3 / elektrický
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s3o1 / odvolaný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s3m1 / Mládek
+            :mod (s3r2 / Rudolf
+                :refer-number singular)
+            :mod (s3n1 / náměstek
+                :possessor s3m2
+                :mod (s3t1 / technický
+                    :refer-number singular)
+                :mod (s3b1 / bývalý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3p1: 4-4,13-13
+s3v1: 1-1
+s3d1: 3-3
+s3e1: 2-2
+s3e2: 0-0
+s3m2: 5-5,12-12,14-14
+s3v2: 11-11
+s3r1: 7-7
+s3d2: 8-8
+s3d3: 10-10
+s3e3: 9-9
+s3o1: 6-6
+s3m1: 19-19
+s3r2: 18-18
+s3n1: 17-17
+s3t1: 16-16
+s3b1: 15-15
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3d1 :same-entity s1d1)
+            (s3d2 :same-entity s3d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2         3        4         5       6  7         8   9  10 11       12    13    14 15     16 17               18 19  20 21        22            23         24      25
+Words: Odvolání Vladimíra Maršálka generální ředitel DP zdůvodnil tím ,  že nezvládl svoji úlohu ve vztahu ke spolupracovníkům ,  což se projevilo neuspokojivou personální situací .
+
+# sentence level graph:
+(s4z1 / zdůvodnit-001
+        :ARG1 (s4o1 / odvolání
+            :ARG1 (s4m1 / Maršálek
+                :mod (s4v1 / Vladimír
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG0 (s4e1 / entity)
+            :start (s4e2 / entity)
+            :refer-number singular)
+        :ARG0 (s4r1 / ředitel
+            :possessor (s4d1 / DP)
+            :mod (s4g1 / generální
+                :refer-number singular)
+            :refer-number singular)
+        :instrument (s4a1 / and
+            :op1 (s4z2 / zvládnout-001
+                :ARG0 s4m1
+                :ARG1 (s4u1 / úloha
+                    :possessor s4m1
+                    :refer-number singular)
+                :regard (s4s1 / spolupracovník
+                    :refer-number plural)
+                :refer-number singular
+                :aspect performance
+                :polarity -)
+            :op2 (s4p1 / projevit-se-001
+                :ARG0 (s4c1 / což
+                    :refer-number singular)
+                :ARG1 (s4s2 / situace
+                    :mod (s4p2 / personální
+                        :refer-number singular)
+                    :mod (s4u2 / uspokojivý
+                        :refer-number singular
+                        :polarity -)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4z1: 7-7
+s4o1: 1-1
+s4m1: 3-3,12-12
+s4v1: 2-2
+s4e1: 0-0
+s4e2: 0-0
+s4r1: 5-5
+s4d1: 6-6
+s4g1: 4-4
+s4a1: 18-18
+s4z2: 8-8,10-11
+s4u1: 13-13
+s4s1: 14-17
+s4p1: 8-8,10-10,20-21
+s4c1: 19-19
+s4s2: 24-24
+s4p2: 23-23
+s4u2: 22-22
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4m1 :same-entity s3m2)
+            (s4c1 :same-event s4z2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1          2       3      4      5       6       7   8       9  10   11        12
+Words: Tramvajáci hrozili koncem června stávkou zejména pro neshody se svým ředitelem .
+
+# sentence level graph:
+(s5h1 / hrozit-001
+        :ARG0 (s5t1 / tramvaják
+            :refer-number plural)
+        :ARG2 (s5e1 / entity)
+        :temporal (s5c1 / červen
+            :refer-number singular)
+        :ARG1 (s5s1 / stávka
+            :refer-number singular)
+        :clausal-marker (s5z1 / zejména)
+        :cause (s5n1 / neshoda
+            :ARG1 (s5r1 / ředitel
+                :possessor s5t1
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s5h1: 2-2
+s5t1: 1-1,10-10
+s5e1: 0-0
+s5c1: 3-4
+s5s1: 5-5
+s5z1: 6-6
+s5n1: 7-8
+s5r1: 9-9,11-11
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5r1 :same-entity s4m1)))
+
+

@@ -1,0 +1,302 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2
+Words: Vyděrači dopadeni
+
+# sentence level graph:
+(s1d1 / dopadnout-001
+        :ARG1 (s1v1 / vyděrač
+            :refer-number plural)
+        :ARG0 (s1e1 / entity)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s1d1: 2-2
+s1v1: 1-1
+s1e1: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2     3 4   5 6
+Words: Nový Jičín ( mot ) -
+
+# sentence level graph:
+(s2j1 / Jičín
+        :mod (s2n1 / nový
+            :refer-number singular)
+        :parenthesis (s2m1 / mot)
+        :refer-number singular)
+
+# alignment:
+s2j1: 2-2
+s2n1: 1-1
+s2m1: 4-4
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2         3  4     5    6      7  8     9  10         11     12  13          14 15      16 17 18   19 20   21    22
+Words: Dva Ukrajinci a  jeden Čech unesli v  srpnu od plaveckého bazénu dva podnikatele a  zavezli je do lesa u  obce Tichá .
+
+# sentence level graph:
+(s3a1 / and
+        :op1 (s3u1 / unést-002
+            :ARG0 (s3a2 / and
+                :op1 (s3u2 / Ukrajinec
+                    :mod (s3d1 / dva
+                        :refer-number plural)
+                    :refer-number plural)
+                :op2 (s3c1 / Čech
+                    :mod (s3j1 / jeden
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :temporal (s3s1 / srpen
+                :refer-number singular)
+            :start (s3b1 / bazén
+                :mod (s3p1 / plavecký
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s3p2 / podnikatel
+                :mod (s3d2 / dva
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance)
+        :op2 (s3z1 / zavézt-001
+            :ARG0 s3a2
+            :ARG1 s3p2
+            :goal (s3l1 / les
+                :place (s3o1 / obec
+                    :name (s3t1 / Tichá
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s3a1: 14-14
+s3u1: 6-6
+s3s1: 7-8
+s3b1: 9-9,11-11
+s3p1: 10-10
+s3p2: 13-13,16-16
+s3d2: 12-12
+s3a2: 3-3
+s3u2: 2-2
+s3d1: 1-1
+s3c1: 5-5
+s3j1: 4-4
+s3z1: 15-15
+s3l1: 17-18
+s3o1: 19-20
+s3t1: 21-21
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3a2 :same-entity s1v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2        3        4     5  6      7  8       9       10 11        12   13    14 15  16 17       18       19     20   21 22     23 24
+Words: Jednoho upoutali kovovými pouty ke stromu ,  druhého odvezli do kanceláře jeho firmy ,  kde ho donutili podepsat dlužní úpis na 300000 Kč .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4u1 / upoutat-002
+            :ARG0 (s4e1 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :ARG1 (s4j1 / jeden
+                :refer-number singular)
+            :instrument (s4p1 / pouto
+                :mod (s4k1 / kovový
+                    :refer-number plural)
+                :refer-number singular)
+            :goal (s4s1 / strom
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance)
+        :op2 (s4o1 / odvézt-002
+            :ARG0 s4e1
+            :ARG1 (s4p2 / podnikatel
+                :mod (s4d1 / druhý
+                    :refer-number singular)
+                :refer-number plural)
+            :start (s4e2 / entity)
+            :goal (s4k2 / kancelář
+                :possessor (s4f1 / firma
+                    :possessor s4p2
+                    :refer-number singular)
+                :place-of (s4d2 / donutit-001
+                    :ARG0 s4e1
+                    :ARG2 s4p2
+                    :ARG1 (s4p3 / podepsat-001
+                        :ARG0 s4p2
+                        :ARG1 (s4u2 / úpis
+                            :mod (s4d3 / dlužní
+                                :refer-number singular)
+                            :mod (s4k3 / Kč
+                                :mod (s4x6 / 300000))
+                            :refer-number singular)
+                        :aspect performance)
+                    :refer-number plural
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s4a1: 7-7
+s4u1: 2-2
+s4j1: 1-1
+s4p1: 4-4
+s4k1: 3-3
+s4s1: 5-6
+s4e1: 0-0
+s4o1: 9-9
+s4p2: 12-12,16-16
+s4d1: 8-8
+s4e2: 0-0
+s4k2: 10-11,15-15
+s4f1: 13-13
+s4d2: 17-17
+s4p3: 18-18
+s4u2: 20-20
+s4d3: 19-19
+s4k3: 21-21,23-23
+s4x6: 22-22
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3a2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2       3  4            5             6     7
+Words: Jako zástavu si přivlastnili podnikatelovu mazdu .
+
+# sentence level graph:
+(s5p1 / přivlastnit-si-001
+        :manner (s5z1 / zástava
+            :mod-of s5m1
+            :refer-number singular)
+        :ARG0 (s5e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s5m1 / Mazda
+            :possessor (s5p2 / podnikatel
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s5p1: 3-4
+s5z1: 1-2
+s5e1: 0-0
+s5m1: 6-6
+s5p2: 5-5
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4e1)
+            (s5p2 :same-entity s4p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1        2           3  4        5       6  7  8     9            10      11       12      13
+Words: Vydíraní podnikatelé to oznámili Policii ČR ,  jejíž kriminalisté všechny vyděrače dopadli .
+
+# sentence level graph:
+(s6o1 / oznámit-003
+        :ARG0 (s6p1 / podnikatel
+            :mod (s6v1 / vydíraný
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd)
+        :effect (s6t1 / ten
+            :refer-number singular)
+        :ARG2 (s6p2 / policie
+            :possessor (s6c1 / ČR
+                :refer-number singular)
+            :mod (s6d1 / dopadnout-001
+                :ARG0 (s6k1 / kriminalista
+                    :possessor s6p2
+                    :refer-number plural)
+                :ARG1 (s6v2 / vyděrač
+                    :mod (s6v3 / všechen
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd)
+                :refer-number plural
+                :aspect performance)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s6o1: 4-4
+s6p1: 2-2
+s6v1: 1-1
+s6t1: 3-3
+s6p2: 5-5,8-8
+s6c1: 6-6
+s6d1: 12-12
+s6k1: 9-9
+s6v2: 11-11
+s6v3: 10-10
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p1 :same-entity s3p2)
+            (s6v2 :same-entity s5e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1      2  3    4  5     6
+Words: Soudce je vzal do vazby .
+
+# sentence level graph:
+(s7v1 / vzít-023
+        :ARG0 (s7s1 / soudce
+            :refer-number singular)
+        :ARG1 (s7e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :part-of-phraseme (s7d1 / do_vazby
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7v1: 3-3
+s7s1: 1-1
+s7e1: 2-2
+s7d1: 4-5
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6v2)))
+
+

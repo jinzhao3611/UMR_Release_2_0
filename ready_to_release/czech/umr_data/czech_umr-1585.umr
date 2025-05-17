@@ -1,0 +1,1006 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2     3     4
+Words: Hradecké Tesle hrozí likvidace
+
+# sentence level graph:
+(s1h1 / hrozit-002
+        :ARG1 (s1t1 / Tesla
+            :mod (s1h2 / hradecký
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s1l1 / likvidace
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1h1: 3-3
+s1t1: 2-2
+s1h2: 1-1
+s1l1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2  3           4      5        6  7        8  9    10        11   12
+Words: Pokud se společnosti podaří vyrovnat s  věřiteli ,  bude existovat jako holding
+
+# sentence level graph:
+(s2e1 / existovat-001
+        :condition (s2p1 / podařit-se-001
+            :ARG0 (s2s1 / společnost
+                :refer-number singular)
+            :ARG1 (s2v1 / vyrovnat-se-002
+                :ARG0 s2s1
+                :ARG1 (s2v2 / věřitel
+                    :refer-number plural)
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :ARG0 s2s1
+        :manner (s2h1 / holding
+            :mod-of s2s1
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s2e1: 9-10
+s2p1: 1-2,4-4
+s2s1: 3-3
+s2v1: 2-2,5-5
+s2v2: 6-7
+s2h1: 11-12
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2s1 :same-entity s1t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2       3
+Words: Hradec Králové -
+
+# sentence level graph:
+(s3h1 / Hradec
+        :mod (s3k1 / Králové
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s3h1: 1-1
+s3k1: 2-2
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3h1 :same-entity s1h2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2          3         4     5      6       7        8    9         10 11       12       13        14    15      16          17
+Words: O  podmínečné likvidaci Tesly Hradec Králové rozhodli její akcionáři na pondělní náhradní mimořádné valné hromadě společnosti .
+
+# sentence level graph:
+(s4r1 / rozhodnout-002
+        :ARG1 (s4l1 / likvidace
+            :ARG1 (s4t1 / Tesla
+                :mod (s4h1 / Hradec
+                    :mod (s4k1 / Králové
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :manner (s4p1 / podmínečný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4a1 / akcionář
+            :possessor s4t1
+            :refer-number plural)
+        :place (s4h2 / hromada
+            :possessor (s4s1 / společnost
+                :refer-number singular
+                :refer-person 3rd)
+            :mod (s4v1 / valný
+                :refer-number singular)
+            :mod (s4m1 / mimořádný
+                :refer-number singular)
+            :mod (s4n1 / náhradní
+                :refer-number singular)
+            :mod (s4p2 / pondělní
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s4r1: 7-7
+s4l1: 1-1,3-3
+s4t1: 4-4,8-8
+s4h1: 5-5
+s4k1: 6-6
+s4p1: 2-2
+s4a1: 9-9
+s4h2: 10-10,15-15
+s4s1: 16-16
+s4v1: 14-14
+s4m1: 13-13
+s4n1: 12-12
+s4p2: 11-11
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-entity s2s1)
+            (s4h1 :same-entity s3h1)
+            (s4s1 :same-entity s4t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2     3       4  5      6      7  8       9  10     11              12 13    14   15       16        17          18    19 20      21      22          23
+Words: Mimořádná valná hromada ,  konaná rovněž v  pondělí ,  nebyla usnášeníschopná ,  neboť byli přítomni akcionáři zastupující pouze 14 procent majetku společnosti .
+
+# sentence level graph:
+(s5h1 / have-cause-91
+        :ARG1 (s5b1 / být-007
+            :ARG0 (s5h2 / hromada
+                :mod (s5v1 / valný
+                    :refer-number singular)
+                :mod (s5m1 / mimořádný
+                    :refer-number singular)
+                :mod (s5k1 / konaný
+                    :clausal-marker (s5r1 / rovněž)
+                    :temporal (s5p1 / pondělí
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s5u1 / usnášeníschopný
+                :refer-number singular)
+            :aspect activity
+            :polarity -)
+        :ARG2 (s5b2 / být-007
+            :ARG1 (s5p2 / přítomný
+                :refer-number plural)
+            :ARG0 (s5a1 / akcionář
+                :mod (s5z1 / zastupující
+                    :ARG1 (s5p3 / procento
+                        :mod (s5m2 / majetek
+                            :possessor (s5s1 / společnost
+                                :refer-number singular)
+                            :refer-number singular)
+                        :clausal-marker (s5p4 / pouze)
+                        :mod (s5x1 / 14)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect activity))
+
+# alignment:
+s5h1: 13-13
+s5b1: 10-10
+s5h2: 3-3
+s5v1: 2-2
+s5m1: 1-1
+s5k1: 5-5
+s5r1: 6-6
+s5p1: 7-8
+s5u1: 11-11
+s5b2: 14-14
+s5p2: 15-15
+s5a1: 16-16
+s5z1: 17-17
+s5p3: 20-20
+s5m2: 21-21
+s5s1: 22-22
+s5p4: 18-18
+s5x1: 19-19
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p1 :same-entity s4p2)
+            (s5s1 :same-entity s4s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2     3       4  5      6  7       8          9     10    11      12          13 14     15 16    17          18     19       20 21  22   23 24 25    26 27        28         29 30       31     32        33          34
+Words: Mimořádná valná hromada se konala na základě rozhodnutí řádné valné hromady společnosti z  června ,  která schvalovala účetní uzávěrku za rok 1993 a  na které se akcionáři přiklonili k  variantě řízené likvidace společnosti .
+
+# sentence level graph:
+(s6k1 / konat-se-001
+        :ARG0 (s6h1 / hromada
+            :mod (s6m1 / mimořádný
+                :refer-number singular)
+            :mod (s6v1 / valný
+                :refer-number singular)
+            :refer-number singular)
+        :cause (s6r1 / rozhodnutí
+            :ARG1 (s6e1 / entity)
+            :ARG0 (s6h2 / hromada
+                :possessor (s6s1 / společnost
+                    :refer-number singular)
+                :mod (s6v2 / valný
+                    :refer-number singular)
+                :mod (s6r2 / řádný
+                    :refer-number singular)
+                :mod (s6a1 / and
+                    :op1 (s6s2 / schvalovat-002
+                        :ARG0 s6h2
+                        :ARG1 (s6u1 / uzávěrka
+                            :mod (s6u2 / účetní
+                                :refer-number singular)
+                            :duration (s6r3 / rok
+                                :mod (s6x2 / 1993)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :aspect activity)
+                    :op2 (s6p1 / přiklonit-se-001
+                        :ARG0 (s6a2 / akcionář
+                            :refer-number plural)
+                        :place s6h2
+                        :ARG1 (s6v3 / varianta
+                            :possessor (s6l1 / likvidace
+                                :ARG1 (s6s3 / společnost
+                                    :refer-number singular)
+                                :mod (s6r4 / řízený
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural
+                        :aspect performance))
+                :refer-number singular)
+            :temporal (s6c1 / červen
+                :refer-number singular)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s6k1: 4-5
+s6h1: 3-3
+s6m1: 1-1
+s6v1: 2-2
+s6r1: 6-8
+s6e1: 0-0
+s6h2: 11-11,16-16,24-25
+s6s1: 12-12
+s6v2: 10-10
+s6r2: 9-9
+s6a1: 23-23
+s6s2: 17-17
+s6u1: 19-19
+s6u2: 18-18
+s6r3: 20-21
+s6x2: 22-22
+s6p1: 26-26,28-28
+s6a2: 27-27
+s6v3: 29-30
+s6l1: 32-32
+s6s3: 33-33
+s6r4: 31-31
+s6c1: 13-14
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6h1 :same-entity s5h2)
+            (s6s1 :same-entity s5s1)
+            (s6a2 :same-entity s4a1)
+            (s6s3 :same-entity s6s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1   2    3             4              5      6        7  8              9     10 11      12          13    14 15    16    17 18     19 20 21   22    23         24 25       26            27        28          29
+Words: Jak řekl místopředseda představenstva Zdeněk Stuchlík ,  představenstvo došlo na základě přezkoumání aktiv a  pasiv Tesly k  názoru ,  že není třeba přistoupit k  okamžité bezpodmínečné likvidaci společnosti .
+
+# sentence level graph:
+(s7d1 / dojít-003
+        :parenthesis (s7r1 / říci-008
+            :ARG2 (s7e1 / entity)
+            :effect s7d1
+            :ARG0 (s7s1 / Stuchlík
+                :mod (s7z1 / Zdeněk
+                    :refer-number singular)
+                :mod (s7m1 / místopředseda
+                    :possessor (s7p1 / představenstvo
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :ARG0 (s7p2 / představenstvo
+            :refer-number singular)
+        :cause (s7p3 / přezkoumání
+            :ARG0 (s7e2 / entity)
+            :ARG1 (s7a1 / and
+                :op1 (s7a2 / aktiv
+                    :possessor (s7t1 / Tesla
+                        :refer-number singular)
+                    :refer-number plural)
+                :op2 (s7p4 / pasívum
+                    :possessor s7t1
+                    :refer-number plural))
+            :refer-number singular)
+        :ARG1 (s7n1 / názor
+            :mod (s7b1 / být-020
+                :predicative-noun (s7t2 / třeba
+                    :affectee (s7e3 / entity)
+                    :refer-number singular)
+                :ARG0 (s7p5 / přistoupit-005
+                    :ARG0 s7e3
+                    :predicative-noun (s7l1 / likvidace
+                        :ARG1 (s7s2 / společnost
+                            :refer-number singular)
+                        :ARG0 s7e3
+                        :manner (s7b2 / bezpodmínečný
+                            :refer-number singular)
+                        :temporal (s7o1 / okamžitý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect performance)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity
+                :polarity -)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7d1: 9-9
+s7r1: 1-2
+s7e1: 0-0
+s7s1: 6-6
+s7z1: 5-5
+s7m1: 3-3
+s7p1: 4-4
+s7p2: 8-8
+s7p3: 10-12
+s7e2: 0-0
+s7a1: 14-14
+s7a2: 13-13
+s7t1: 16-16
+s7p4: 15-15
+s7n1: 17-18
+s7b1: 20-21
+s7t2: 22-22
+s7e3: 0-0
+s7p5: 23-23
+s7l1: 24-24,27-27
+s7s2: 28-28
+s7b2: 26-26
+s7o1: 25-25
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p2 :same-entity s7p1)
+            (s7t1 :same-entity s6s3)
+            (s7s2 :same-entity s7t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2  3          4      5        6 7        8
+Words: Nejprve se společnost pokusí vyrovnat s věřiteli .
+
+# sentence level graph:
+(s8p1 / pokusit-se-001
+        :ARG0 (s8s1 / společnost
+            :refer-number singular)
+        :temporal (s8n1 / nejprve)
+        :ARG1 (s8v1 / vyrovnat-se-002
+            :ARG0 s8s1
+            :ARG1 (s8v2 / věřitel
+                :refer-number plural)
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s8p1: 2-2,4-4
+s8s1: 3-3
+s8n1: 1-1
+s8v1: 2-2,5-5
+s8v2: 6-7
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8s1 :same-entity s7s2)
+            (s8v2 :same-entity s2v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1     2  3  4  5      6  7    8         9    10   11         12         13        14    15    16        17          18
+Words: Pokud se jí to podaří ,  bude existovat dále jako holdingová společnost vlastnící akcie svých dceřiných společností .
+
+# sentence level graph:
+(s9e1 / existovat-001
+        :condition (s9p1 / podařit-se-001
+            :ARG1 (s9t1 / ten
+                :refer-number singular)
+            :ARG0 (s9e2 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :ARG0 s9e2
+        :duration (s9d1 / dále)
+        :manner (s9s1 / společnost
+            :mod-of s9e2
+            :mod (s9h1 / holdingový
+                :refer-number singular)
+            :mod (s9v1 / vlastnící
+                :ARG1 (s9a1 / akcie
+                    :possessor (s9s2 / společnost
+                        :possessor s9e2
+                        :mod (s9d2 / dceřiný
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s9e1: 7-8
+s9p1: 1-2,5-5
+s9t1: 4-4
+s9e2: 3-3,15-15
+s9d1: 9-9
+s9s1: 10-10,12-12
+s9h1: 11-11
+s9v1: 13-13
+s9a1: 14-14
+s9s2: 17-17
+s9d2: 16-16
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9t1 :same-event s8v1)
+            (s9e2 :same-entity s8s1)
+            (s9s1 :same-entity s2h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1         2 3     4       5       6   7         8     9
+Words: Poškozeni v tomto případě nebudou ani akcionáři Tesly .
+
+# sentence level graph:
+(s10p1 / poškodit-001
+        :condition (s10p2 / případ
+            :mod (s10t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s10e1 / entity)
+        :clausal-marker (s10a1 / ani)
+        :ARG1 (s10a2 / akcionář
+            :possessor (s10t2 / Tesla
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s10p1: 1-1,5-5
+s10p2: 2-2,4-4
+s10t1: 3-3
+s10e1: 0-0
+s10a1: 6-6
+s10a2: 7-7
+s10t2: 8-8
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10p2 :same-event s9e1)
+            (s10a2 :same-entity s6a2)
+            (s10t2 :same-entity s9e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1  2       3           4         5  6        7       8          9  10        11 12 13    14    15      16      17 18          19
+Words: V  případě neúspěšného vyrovnání s  věřiteli vstoupí společnost do likvidace ,  k  čemuž valná hromada zvolila i  likvidátora .
+
+# sentence level graph:
+(s11a1 / and
+        :op1 (s11v1 / vstoupit-002
+            :condition (s11v2 / vyrovnání
+                :ARG1 (s11v3 / věřitel
+                    :refer-number plural)
+                :ARG0 (s11e1 / entity)
+                :result (s11u1 / úspěšný
+                    :refer-number singular
+                    :polarity -)
+                :refer-number singular)
+            :ARG0 (s11s1 / společnost
+                :refer-number singular)
+            :goal (s11l1 / likvidace
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :op2 (s11z1 / zvolit-001
+            :ARG0 (s11h1 / hromada
+                :mod (s11v4 / valný
+                    :refer-number singular)
+                :refer-number singular)
+            :purpose (s11c1 / což
+                :refer-number singular
+                :refer-person 3rd)
+            :clausal-marker (s11i1 / i)
+            :ARG1 (s11l2 / likvidátor
+                :refer-number singular)
+            :aspect performance))
+
+# alignment:
+s11a1: 11-11
+s11v1: 7-7
+s11v2: 1-2,4-4
+s11v3: 5-6
+s11e1: 0-0
+s11u1: 3-3
+s11s1: 8-8
+s11l1: 9-10
+s11z1: 16-16
+s11h1: 15-15
+s11v4: 14-14
+s11c1: 12-13
+s11i1: 17-17
+s11l2: 18-18
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11v3 :same-entity s8v2)
+            (s11s1 :same-entity s10t2)
+            (s11h1 :same-entity s4h2)
+            (s11c1 :same-event s11v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1     2  3     4       5  6      7        8    9   10      11       12 13    14        15          16 17 18       19   20         21 22   23 24          25    26      27
+Words: Tesla ,  která předala v  závěru minulého roku své výrobní aktivity do šesti dceřiných společností ,  v  současné době zaměstnává 16 osob a  neprodukuje žádné výrobky .
+
+# sentence level graph:
+(s12a1 / and
+        :op1 (s12z1 / zaměstnávat-001
+            :ARG0 (s12t1 / Tesla
+                :ARG0-of (s12p1 / předat-002
+                    :temporal (s12r1 / rok
+                        :mod (s12m1 / minulý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG1 (s12a2 / aktivita
+                        :possessor s12t1
+                        :mod (s12v1 / výrobní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :goal (s12s1 / společnost
+                        :mod (s12d1 / dceřiný
+                            :refer-number plural)
+                        :mod (s12s2 / šest
+                            :refer-number plural)
+                        :refer-number plural)
+                    :aspect performance)
+                :refer-number singular)
+            :temporal (s12d2 / doba
+                :mod (s12s3 / současný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s12o1 / osoba
+                :mod (s12x2 / 16)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect habitual)
+        :op2 (s12p2 / produkovat-001
+            :ARG0 s12t1
+            :temporal s12d2
+            :ARG1 (s12v2 / výrobek
+                :mod (s12z2 / žádný
+                    :refer-number plural
+                    :polarity -)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -))
+
+# alignment:
+s12a1: 23-23
+s12z1: 20-20
+s12o1: 22-22
+s12x2: 21-21
+s12t1: 1-1,3-3,9-9
+s12p1: 4-4
+s12r1: 5-6,8-8
+s12m1: 7-7
+s12a2: 11-11
+s12v1: 10-10
+s12s1: 12-12,15-15
+s12d1: 14-14
+s12s2: 13-13
+s12d2: 17-17,19-19
+s12s3: 18-18
+s12p2: 24-24
+s12v2: 26-26
+s12z2: 25-25
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12t1 :same-entity s11s1)
+            (s12r1 :same-entity s6r3)
+            (s12s1 :same-entity s9s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1      2    3      4   5       6  7     8      9      10 11    12       13     14
+Words: Nemůže tedy hradit své závazky ,  které vlivem penále a  úroků neustále rostou .
+
+# sentence level graph:
+(s13h1 / hradit-001
+        :clausal-marker (s13t1 / tedy)
+        :ARG0 (s13e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s13z1 / závazek
+            :possessor s13e1
+            :ARG0-of (s13r1 / růst-002
+                :cause (s13a1 / and
+                    :op1 (s13p1 / penále
+                        :refer-number plural)
+                    :op2 (s13u1 / úrok
+                        :refer-number plural))
+                :duration (s13n1 / neustále)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number plural)
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s13h1: 1-1,3-3
+s13t1: 2-2
+s13e1: 4-4
+s13z1: 5-5,7-7
+s13r1: 13-13
+s13a1: 10-10
+s13p1: 8-9
+s13u1: 8-8,11-11
+s13n1: 12-12
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13e1 :same-entity s12t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1      2          3           4          5       6  7   8      9           10 11   12 13   14   15      16 17    18       19
+Words: Přitom pohledávky společnosti překračují závazky ,  pro jejich nedobytnost se však s  nimi nedá počítat ,  uvedl Stuchlík .
+
+# sentence level graph:
+(s14u1 / uvést-007
+        :ARG0 (s14s1 / Stuchlík
+            :refer-number singular)
+        :effect (s14b1 / but-91
+            :ARG1 (s14p1 / překračovat-001
+                :clausal-marker (s14p2 / přitom)
+                :ARG0 (s14p3 / pohledávka
+                    :possessor (s14s2 / společnost
+                        :refer-number singular)
+                    :refer-number plural)
+                :ARG1 (s14z1 / závazek
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :ARG2 (s14p4 / počítat-007
+                :cause (s14d1 / dobytnost
+                    :possessor s14p3
+                    :refer-number singular
+                    :polarity -)
+                :ARG0 (s14e1 / entity)
+                :ARG1 s14p3
+                :aspect activity
+                :polarity -))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s14u1: 17-17
+s14s1: 18-18
+s14b1: 11-11
+s14p1: 4-4
+s14p2: 1-1
+s14p3: 2-2,8-8,12-13
+s14s2: 3-3
+s14z1: 5-5
+s14p4: 14-15
+s14d1: 7-7,9-9
+s14e1: 0-0
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14s1 :same-entity s7s1)
+            (s14s2 :same-entity s13e1)
+            (s14z1 :same-entity s13z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1   2        3  4    5   6     7  8  9       10    11        12   13 14    15    16        17         18        19 20      21          22 23      24    25    26        27          28 29    30      31       32   33
+Words: Své věřitele ,  mezi něž patří s  50 miliony korun především stát ,  hodlá Tesla uspokojit prostředky získanými z  prodeje nemovitostí a  prodeje akcií svých dceřiných společností ,  které všechny vykazují zisk .
+
+# sentence level graph:
+(s15u1 / uspokojit-001
+        :ARG0 (s15t1 / Tesla
+            :refer-number singular)
+        :ARG1 (s15v1 / věřitel
+            :possessor s15t1
+            :goal-of (s15p1 / patřit-003
+                :companion (s15m1 / milión
+                    :mod (s15k1 / koruna
+                        :refer-number plural)
+                    :mod (s15x2 / 50)
+                    :refer-number plural)
+                :clausal-marker (s15p2 / především)
+                :ARG0 (s15s1 / stát
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect state)
+            :refer-number plural)
+        :instrument (s15p3 / prostředek
+            :mod (s15z1 / získaný
+                :start (s15a1 / and
+                    :op1 (s15p4 / prodej
+                        :ARG1 (s15n1 / nemovitost
+                            :refer-number plural)
+                        :refer-number singular)
+                    :op2 (s15p5 / prodej
+                        :ARG1 (s15a2 / akcie
+                            :possessor (s15s2 / společnost
+                                :possessor s15t1
+                                :mod (s15d1 / dceřiný
+                                    :refer-number plural)
+                                :mod (s15v2 / vykazovat-001
+                                    :ARG0 (s15k2 / který
+                                        :mod (s15v3 / všechen
+                                            :refer-number plural)
+                                        :refer-number plural)
+                                    :ARG1 (s15z2 / zisk
+                                        :refer-number singular)
+                                    :refer-number plural
+                                    :refer-person 3rd
+                                    :aspect activity)
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular))
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s15u1: 14-14,16-16
+s15t1: 1-1,15-15,25-25
+s15v1: 2-2,4-5
+s15p1: 6-6
+s15m1: 7-7,9-9
+s15k1: 10-10
+s15x2: 8-8
+s15p2: 11-11
+s15s1: 12-12
+s15p3: 17-17
+s15z1: 18-18
+s15a1: 22-22
+s15p4: 19-20
+s15n1: 21-21
+s15p5: 19-19,23-23
+s15a2: 24-24
+s15s2: 27-27
+s15d1: 26-26
+s15v2: 31-31
+s15k2: 29-29
+s15v3: 30-30
+s15z2: 32-32
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15t1 :same-entity s14s2)
+            (s15v1 :same-entity s11v3)
+            (s15s2 :same-entity s12s1)
+            (s15k2 :same-entity s15s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1     2  3     4        5     6    7     8       9     10 11   12             13 14    15   16       17          18
+Words: Tesla ,  jejíž základní jmění činí 280.8 milionu korun ,  byla zprivatizována v  první vlně kuponové privatizace .
+
+# sentence level graph:
+(s16z1 / zprivatizovat-001
+        :ARG1 (s16t1 / Tesla
+            :mod (s16c1 / činit-007
+                :ARG0 (s16j1 / jmění
+                    :possessor s16t1
+                    :mod (s16z2 / základní
+                        :refer-number singular)
+                    :refer-number singular)
+                :extent (s16m1 / milión
+                    :mod (s16k1 / koruna
+                        :refer-number plural)
+                    :mod (s16x2 / 280.8)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :ARG0 (s16e1 / entity)
+        :place (s16v1 / vlna
+            :possessor (s16p1 / privatizace
+                :mod (s16k2 / kupónový
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s16p2 / první
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s16z1: 11-12
+s16t1: 1-1,3-3
+s16c1: 6-6
+s16j1: 5-5
+s16z2: 4-4
+s16m1: 8-8
+s16k1: 9-9
+s16x2: 7-7
+s16e1: 0-0
+s16v1: 13-13,15-15
+s16p1: 17-17
+s16k2: 16-16
+s16p2: 14-14
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16t1 :same-entity s15t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1         2  3       4     5       6            7         8  9    10 11  12       13  14 15     16    17          18     19
+Words: Přibližně 77 procent akcií vlastní individuální akcionáři ,  sedm a  půl procenta FNM a  zbytek patří investičním fondům .
+
+# sentence level graph:
+(s17a1 / and
+        :op1 (s17v1 / vlastnit-001
+            :ARG1 (s17p1 / procento
+                :mod (s17a2 / akcie
+                    :refer-number plural)
+                :mod (s17x1 / 77
+                    :extent (s17p2 / přibližně))
+                :refer-number plural)
+            :ARG0 (s17a3 / akcionář
+                :mod (s17i1 / individuální
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect state)
+        :op2 (s17v2 / vlastnit-001
+            :ARG1 (s17p3 / procento
+                :mod (s17a4 / and
+                    :op1 (s17s1 / sedm
+                        :refer-number singular)
+                    :op2 (s17p4 / půl
+                        :refer-number singular))
+                :refer-number singular)
+            :ARG0 (s17f1 / FNM)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect state)
+        :op3 (s17p5 / patřit-001
+            :ARG0 (s17z1 / zbytek
+                :refer-number singular)
+            :ARG1 (s17f2 / fond
+                :mod (s17i2 / investiční
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state))
+
+# alignment:
+s17a1: 14-14
+s17v1: 5-5
+s17p1: 3-3
+s17a2: 4-4
+s17x1: 2-2
+s17p2: 1-1
+s17a3: 7-7
+s17i1: 6-6
+s17v2: 0-0
+s17p3: 12-12
+s17a4: 10-10
+s17s1: 9-9
+s17p4: 11-11
+s17f1: 13-13
+s17p5: 16-16
+s17z1: 15-15
+s17f2: 18-18
+s17i2: 17-17
+
+# document level annotation:
+(s17s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1    2        3      4      5  6       7     8
+Words: Loni vykázala účetní ztrátu 90 milionů korun .
+
+# sentence level graph:
+(s18v1 / vykázat-001
+        :temporal (s18v2 / vloni
+            :refer-number singular)
+        :ARG0 (s18e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s18z1 / ztráta
+            :mod (s18u1 / účetní
+                :refer-number singular)
+            :mod (s18m1 / milión
+                :mod (s18k1 / koruna
+                    :refer-number plural)
+                :mod (s18x1 / 90)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s18v1: 2-2
+s18v2: 1-1
+s18e1: 0-0
+s18z1: 4-4
+s18u1: 3-3
+s18m1: 6-6
+s18k1: 7-7
+s18x1: 5-5
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18v2 :same-entity s12r1)
+            (s18e1 :same-entity s16t1)))
+
+

@@ -1,0 +1,168 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2  3  4       5   6        7        8               9  10        11        12
+Words: Mark Q  .  Huggins byl jmenován výkonným víceprezidentem a  finančním ředitelem .
+
+# sentence level graph:
+(s1j1 / jmenovat-002
+        :ARG0 (s1e1 / entity)
+        :ARG1 (s1h1 / Huggins
+            :mod (s1m1 / Mark
+                :refer-number singular)
+            :mod (s1q1 / Q)
+            :refer-number singular)
+        :effect (s1a1 / and
+            :op1 (s1v1 / viceprezident
+                :mod (s1v2 / výkonný
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s1r1 / ředitel
+                :mod (s1f1 / finanční
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :aspect process)
+
+# alignment:
+s1j1: 5-6
+s1e1: 0-0
+s1h1: 4-4
+s1m1: 1-1
+s1q1: 2-2
+s1a1: 9-9
+s1v1: 8-8
+s1v2: 7-7
+s1r1: 11-11
+s1f1: 10-10
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2  3  4   5  6   7     8          9  10      11        12          13    14 15    16             17  18
+Words: Huggins ,  39 let ,  byl dříve hospodářem a  účetním ředitelem společnosti Harte -  Hanks Communications Inc .
+
+# sentence level graph:
+(s2b1 / být-007
+        :ARG0 (s2h1 / Huggins
+            :parenthesis (s2r1 / rok
+                :mod (s2x1 / 39)
+                :refer-number plural)
+            :refer-number singular)
+        :temporal (s2b2 / brzy)
+        :ARG1 (s2a1 / and
+            :op1 (s2h2 / hospodář
+                :mod (s2s1 / společnost
+                    :name (s2x2 / #Forn
+                        :FPHR (s2h3 / Harte)
+                        :FPHR (s2x3 / -)
+                        :FPHR (s2h4 / Hanks)
+                        :FPHR (s2c1 / Communications)
+                        :FPHR (s2i1 / Inc))
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s2r2 / ředitel
+                :mod s2s1
+                :mod (s2u1 / účetní
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s2b1: 6-6
+s2h1: 1-1
+s2r1: 4-4
+s2x1: 3-3
+s2b2: 7-7
+s2a1: 9-9
+s2h2: 8-8
+s2s1: 12-12
+s2x2: 0-0
+s2h3: 13-13
+s2x3: 14-14
+s2h4: 15-15
+s2c1: 16-16
+s2i1: 17-17
+s2r2: 11-11
+s2u1: 10-10
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2h1 :same-entity s1h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2          3  4  5          6      7  8        9        10 11        12      13   14 15    16 17 18  19 20        21
+Words: Společnost Management Co .  organizuje umělce v  zábavním průmyslu ,  produkuje zábavné akce ,  uvádí je na trh a  financuje .
+
+# sentence level graph:
+(s3a1 / and
+        :op1 (s3o1 / organizovat-002
+            :ARG0 (s3s1 / společnost
+                :name (s3x1 / #Forn
+                    :FPHR (s3m1 / Management)
+                    :FPHR (s3c1 / Co)
+                    :FPHR (s3x2 / .))
+                :refer-number singular)
+            :ARG1 (s3u1 / umělec
+                :place (s3p1 / průmysl
+                    :mod (s3z1 / zábavní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect process)
+        :op2 (s3p2 / produkovat-001
+            :ARG0 s3s1
+            :ARG1 (s3a2 / akce
+                :mod (s3z2 / zábavný
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op3 (s3u2 / uvádět-004
+            :ARG0 s3s1
+            :ARG1 s3a2
+            :goal (s3t1 / trh
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op4 (s3f1 / financovat-001
+            :ARG0 s3s1
+            :ARG1 s3a2
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s3a1: 19-19
+s3o1: 5-5
+s3u1: 6-6
+s3p1: 7-7,9-9
+s3z1: 8-8
+s3s1: 1-1
+s3x1: 0-0
+s3m1: 2-2
+s3c1: 3-3
+s3x2: 4-4
+s3p2: 11-11
+s3a2: 13-13,16-16
+s3z2: 12-12
+s3u2: 15-15
+s3t1: 17-18
+s3f1: 20-20
+
+# document level annotation:
+(s3s0 / sentence)
+
+

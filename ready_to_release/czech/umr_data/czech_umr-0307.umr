@@ -1,0 +1,121 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2       3     4     5  6        7    8  9         10    11  12 13       14    15     16
+Words: Michael Douglas hraje jednu z  hlavních rolí v  americkém filmu Hud ,  oceněném třemi Oscary .
+
+# sentence level graph:
+(s1h1 / hrát-003
+        :ARG0 (s1d1 / Douglas
+            :mod (s1m1 / Michael
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1j1 / jeden
+            :start (s1r1 / role
+                :mod (s1h2 / hlavní
+                    :refer-number plural)
+                :place (s1f1 / film
+                    :name (s1h3 / Hud)
+                    :mod (s1a1 / americký
+                        :refer-number singular)
+                    :mod (s1o1 / oceněný
+                        :instrument (s1o2 / Oscar
+                            :mod (s1t1 / tři
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1h1: 3-3
+s1d1: 2-2
+s1m1: 1-1
+s1j1: 4-4
+s1r1: 5-5,7-7
+s1h2: 6-6
+s1f1: 8-8,10-10
+s1h3: 11-11
+s1a1: 9-9
+s1o1: 13-13
+s1o2: 15-15
+s1t1: 14-14
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1          2      3           4       5  6    7    8  9     10
+Words: Dramatický příběh stárnoucího farmáře ,  jeho syna a  vnuka .
+
+# sentence level graph:
+(s2p1 / příběh
+        :mod (s2d1 / dramatický
+            :refer-number singular)
+        :possessor (s2a1 / and
+            :op1 (s2f1 / farmář
+                :mod (s2s1 / stárnoucí
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s2a2 / and
+                :op1 (s2s2 / syn
+                    :possessor s2f1
+                    :refer-number singular)
+                :op2 (s2v1 / vnuk
+                    :possessor s2f1
+                    :refer-number singular)))
+        :refer-number singular)
+
+# alignment:
+s2p1: 2-2
+s2d1: 1-1
+s2a1: 5-5
+s2f1: 4-4,6-6
+s2s1: 3-3
+s2a2: 8-8
+s2s2: 7-7
+s2v1: 9-9
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p1 :same-entity s1f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1 2      3  4 5  6     7
+Words: ( Vysílá ČT 1 ve 23.55 )
+
+# sentence level graph:
+(s3v1 / vysílat-003
+        :ARG1 (s3e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s3c1 / ČT
+            :mod (s3x1 / 1)
+            :refer-number singular)
+        :temporal (s3x2 / 23.55)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3v1: 2-2
+s3e1: 0-0
+s3c1: 3-3
+s3x1: 4-4
+s3x2: 5-6
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2p1)))
+
+

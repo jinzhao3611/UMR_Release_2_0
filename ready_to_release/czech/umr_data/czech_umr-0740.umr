@@ -1,0 +1,350 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Krátce
+
+# sentence level graph:
+(s1e1 / event
+        :manner (s1k1 / krátce)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1k1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2          3     4           5  6        7       8        9    10  11          12        13 14      15      16     17
+Words: Americká investiční firma Oppenheimer se rozhodla založit zvláštní fond pro portfoliové investice do českých cenných papírů .
+
+# sentence level graph:
+(s2r1 / rozhodnout-se-002
+        :ARG0 (s2f1 / firma
+            :mod (s2i1 / investiční
+                :refer-number singular)
+            :mod (s2a1 / americký
+                :refer-number singular)
+            :name (s2o1 / Oppenheimer
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2z1 / založit-001
+            :ARG0 s2f1
+            :ARG1 (s2f2 / fond
+                :purpose (s2i2 / investice
+                    :mod (s2p1 / portfoliový
+                        :refer-number plural)
+                    :goal (s2p2 / papír
+                        :mod (s2c1 / cenný
+                            :refer-number plural)
+                        :mod (s2c2 / český
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s2z2 / zvláštní
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s2r1: 5-6
+s2f1: 3-3
+s2i1: 2-2
+s2a1: 1-1
+s2o1: 4-4
+s2z1: 7-7
+s2f2: 9-9
+s2i2: 10-10,12-12
+s2p1: 11-11
+s2p2: 13-13,16-16
+s2c1: 15-15
+s2c2: 14-14
+s2z2: 8-8
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2    3  4   5     6        7    8  9   10 11 12 13          14 15         16    17
+Words: Nový fond (  The Czech Republic Fund ,  Inc .  )  je registrován na newyorkské burze .
+
+# sentence level graph:
+(s3r1 / registrovat-002
+        :ARG1 (s3i1 / identity-91
+            :ARG1 (s3f1 / fond
+                :mod (s3n1 / nový
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s3x1 / #Forn
+                :FPHR (s3t1 / The)
+                :FPHR (s3c1 / Czech)
+                :FPHR (s3r2 / Republic)
+                :FPHR (s3f2 / Fund)
+                :FPHR (s3x2 / ,)
+                :FPHR (s3i2 / Inc)
+                :FPHR (s3x3 / .)))
+        :ARG0 (s3e1 / entity)
+        :place (s3b1 / burza
+            :mod (s3n2 / newyorkský
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect process)
+
+# alignment:
+s3r1: 12-13
+s3i1: 3-3
+s3f1: 2-2
+s3n1: 1-1
+s3x1: 0-0
+s3t1: 4-4
+s3c1: 5-5
+s3r2: 6-6
+s3f2: 7-7
+s3x2: 8-8
+s3i2: 9-9
+s3x3: 10-10
+s3e1: 0-0
+s3b1: 14-14,16-16
+s3n2: 15-15
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3f1 :same-entity s2f2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2          3  4    5      6  7     8     9         10        11      12
+Words: Česká spořitelna by měla získat v  České bance přibližně šestinový akciový .
+
+# sentence level graph:
+(s4z1 / získat-001
+        :ARG0 (s4s1 / spořitelna
+            :mod (s4c1 / Český
+                :refer-number singular)
+            :refer-number singular)
+        :place (s4b1 / banka
+            :mod (s4c2 / český
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s4e1 / entity
+            :mod (s4s2 / šestinový
+                :extent (s4p1 / přibližně)
+                :refer-number singular)
+            :mod (s4a1 / akciový
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s4z1: 3-5
+s4s1: 2-2
+s4c1: 1-1
+s4b1: 6-6,8-8
+s4c2: 7-7
+s4e1: 0-0
+s4s2: 10-10
+s4p1: 9-9
+s4a1: 11-11
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4c2 :same-entity s2c2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2  3       4    5     6
+Words: Uvedl to ředitel této banky .
+
+# sentence level graph:
+(s5u1 / uvést-007
+        :effect (s5t1 / ten
+            :refer-number singular)
+        :ARG0 (s5r1 / ředitel
+            :possessor (s5b1 / banka
+                :mod (s5t2 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5u1: 1-1
+s5t1: 2-2
+s5r1: 3-3
+s5b1: 5-5
+s5t2: 4-4
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5t1 :same-event s4z1)
+            (s5b1 :same-entity s4b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1          2       3  4  5       6    7     8    9        10          11     12    13 14  15    16
+Words: Spolchemia očekává i  ve čtvrtém kole druhé vlny kuponové privatizace převis zájmu o  své akcie .
+
+# sentence level graph:
+(s6o1 / očekávat-001
+        :ARG0 (s6s1 / Spolchemia
+            :refer-number singular)
+        :clausal-marker (s6i1 / i)
+        :place (s6k1 / kolo
+            :possessor (s6v1 / vlna
+                :possessor (s6p1 / privatizace
+                    :mod (s6k2 / kuponový
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s6d1 / druhý
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s6c1 / čtvrtý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s6p2 / převis
+            :ARG0 (s6z1 / zájem
+                :ARG1 (s6a1 / akcie
+                    :possessor s6s1
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6o1: 2-2
+s6s1: 1-1,14-14
+s6i1: 3-3
+s6k1: 4-4,6-6
+s6v1: 8-8
+s6p1: 10-10
+s6k2: 9-9
+s6d1: 7-7
+s6c1: 5-5
+s6p2: 11-11
+s6z1: 12-12
+s6a1: 13-13,15-15
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1      2  3        4    5    6  7           8       9        10          11 12 13  14        15 16         17     18 19      20 21       22   23
+Words: Podnik to vyvozuje mimo jiné z  dosavadního průběhu kuponové privatizace a  ze své pozitivně se vyvíjející pozice na domácím i  světovém trhu .
+
+# sentence level graph:
+(s7v1 / vyvozovat-001
+        :ARG0 (s7p1 / podnik
+            :refer-number singular)
+        :ARG1 (s7t1 / ten
+            :refer-number singular)
+        :subtraction (s7j1 / jiný
+            :refer-number singular)
+        :source (s7a1 / and
+            :op1 (s7p2 / průběh
+                :ARG0 (s7p3 / privatizace
+                    :mod (s7k1 / kuponový
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s7d1 / dosavadní
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s7p4 / pozice
+                :possessor s7p1
+                :mod (s7v2 / vyvíjející_se
+                    :manner (s7p5 / pozitivně)
+                    :refer-number singular)
+                :place (s7a2 / and
+                    :op1 (s7t2 / trh
+                        :mod (s7d2 / domácí
+                            :refer-number singular)
+                        :refer-number singular)
+                    :op2 (s7t3 / trh
+                        :mod (s7s1 / světový
+                            :refer-number singular)
+                        :refer-number singular))
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7v1: 3-3
+s7p1: 1-1,13-13
+s7t1: 2-2
+s7j1: 4-5
+s7a1: 11-11
+s7p2: 6-6,8-8
+s7p3: 10-10
+s7k1: 9-9
+s7d1: 7-7
+s7p4: 12-12,17-17
+s7v2: 15-16
+s7p5: 14-14
+s7a2: 20-20
+s7t2: 0-0
+s7d2: 19-19
+s7t3: 18-18,22-22
+s7s1: 21-21
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p1 :same-entity s6s1)
+            (s7t1 :same-entity s6p2)
+            (s7p3 :same-entity s6p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2          3     4       5 6    7       8
+Words: Odbyt Spolchemie letos vzrostl o sedm procent .
+
+# sentence level graph:
+(s8v1 / vzrůst-001
+        :ARG0 (s8o1 / odbyt
+            :possessor (s8s1 / Spolchemie
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s8l1 / letos)
+        :extent (s8p1 / procento
+            :mod (s8s2 / sedm
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8v1: 4-4
+s8o1: 1-1
+s8s1: 2-2
+s8l1: 3-3
+s8p1: 5-5,7-7
+s8s2: 6-6
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8s1 :same-entity s7p1)))
+
+

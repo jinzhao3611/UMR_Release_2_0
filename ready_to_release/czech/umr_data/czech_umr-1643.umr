@@ -1,0 +1,111 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Oznámení
+
+# sentence level graph:
+(s1o1 / oznámení
+        :ARG0 (s1e1 / entity)
+        :ARG1 (s1e2 / entity)
+        :ARG2 (s1e3 / entity)
+        :refer-number singular)
+
+# alignment:
+s1o1: 1-1
+s1e1: 0-0
+s1e2: 0-0
+s1e3: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2       3  4  5    6   7  8        9       10       11 12 13 14   15 16     17     18       19         20      21
+Words: Ředitel Policie ČR v  Brně mjr .  Jaroslav Přikryl jmenoval od 1  .  září do funkce nového komisaře kriminální policie .
+
+# sentence level graph:
+(s2j1 / jmenovat-003
+        :ARG0 (s2p1 / Přikryl
+            :mod (s2j2 / Jaroslav
+                :refer-number singular)
+            :mod (s2m1 / major)
+            :mod (s2r1 / ředitel
+                :possessor (s2p2 / Policie
+                    :possessor (s2c1 / ČR
+                        :refer-number singular)
+                    :place (s2b1 / Brno
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s2z1 / září
+            :mod (s2x1 / 1)
+            :refer-number singular)
+        :goal (s2f1 / funkce
+            :refer-number singular)
+        :ARG1 (s2k1 / komisař
+            :possessor (s2p3 / policie
+                :mod (s2k2 / kriminální
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s2n1 / nový
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect process)
+
+# alignment:
+s2j1: 10-10
+s2p1: 9-9
+s2j2: 8-8
+s2m1: 6-6
+s2r1: 1-1
+s2p2: 2-2
+s2c1: 3-3
+s2b1: 4-5
+s2z1: 11-11,14-14
+s2x1: 12-12
+s2f1: 15-16
+s2k1: 18-18
+s2p3: 20-20
+s2k2: 19-19
+s2n1: 17-17
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2  3   4   5 6 7 8      9
+Words: Stal se jím mjr . A . Brabec .
+
+# sentence level graph:
+(s3s1 / stát-se-001
+        :ARG1 (s3e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s3b1 / Brabec
+            :mod (s3a1 / A)
+            :mod (s3m1 / major)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3s1: 1-2
+s3e1: 3-3
+s3b1: 8-8
+s3a1: 6-6
+s3m1: 4-4
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2k1)))
+
+

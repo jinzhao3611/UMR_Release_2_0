@@ -1,0 +1,447 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2  3     4               5
+Words: ČSSD má návrh územněsprávního zákona
+
+# sentence level graph:
+(s1m1 / mít-009
+        :ARG0 (s1c1 / ČSSD
+            :refer-number singular)
+        :ARG1 (s1n1 / návrh
+            :ARG1 (s1z1 / zákon
+                :mod (s1u1 / územněsprávní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s1m1: 2-2
+s1c1: 1-1
+s1n1: 3-3
+s1z1: 5-5
+s1u1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2
+Words: Liberec -
+
+# sentence level graph:
+(s2l1 / Liberec
+        :refer-number singular)
+
+# alignment:
+s2l1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2  3         4       5     6      7  8         9       10              11    12 13     14         15         16
+Words: ČSSD má připraven vlastní návrh zákona o  vytvoření vyšších územněsprávních celků a  jejich samostatné působnosti .
+
+# sentence level graph:
+(s3p1 / připravit-002
+        :ARG0 (s3c1 / ČSSD
+            :refer-number singular)
+        :ARG1 (s3n1 / návrh
+            :ARG1 (s3z1 / zákon
+                :ARG1 (s3a1 / and
+                    :op1 (s3v1 / vytvoření
+                        :ARG0 (s3e1 / entity)
+                        :ARG1 (s3c2 / celek
+                            :mod (s3u1 / územněsprávní
+                                :refer-number plural)
+                            :mod (s3v2 / vysoký
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :op2 (s3p2 / působnost
+                        :ARG0 s3c2
+                        :mod (s3s1 / samostatný
+                            :refer-number singular)
+                        :refer-number singular))
+                :refer-number singular)
+            :mod (s3v3 / vlastní
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3p1: 2-3
+s3c1: 1-1
+s3n1: 5-5
+s3z1: 6-6
+s3a1: 12-12
+s3v1: 7-8
+s3e1: 0-0
+s3c2: 11-11,13-13
+s3u1: 10-10
+s3v2: 9-9
+s3p2: 7-7,15-15
+s3s1: 14-14
+s3v3: 4-4
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3c1 :same-entity s1c1)
+            (s3n1 :same-entity s1n1)
+            (s3z1 :same-entity s1z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2  3       4        5          6  7    8      9     10   11
+Words: Včera to oznámil poslanec parlamentu za tuto stranu Karel Hrdý .
+
+# sentence level graph:
+(s4o1 / oznámit-001
+        :ARG1 (s4t1 / ten
+            :refer-number singular)
+        :temporal (s4v1 / včera)
+        :ARG0 (s4h1 / Hrdý
+            :mod (s4k1 / Karel
+                :refer-number singular)
+            :mod (s4p1 / poslanec
+                :substitute (s4s1 / strana
+                    :mod (s4t2 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :possessor (s4p2 / parlament
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4o1: 3-3
+s4t1: 2-2
+s4v1: 1-1
+s4h1: 10-10
+s4k1: 9-9
+s4p1: 4-4
+s4s1: 6-6,8-8
+s4t2: 7-7
+s4p2: 5-5
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3p1)
+            (s4s1 :same-entity s3c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2     3      4  5     6           7  8       9     10 11      12 13          14
+Words: Vládní návrh zákona ,  který předpokládá 17 vyšších celků ,  označil za neprůchodný .
+
+# sentence level graph:
+(s5o1 / označit-001
+        :ARG1 (s5n1 / návrh
+            :mod (s5v1 / vládní
+                :refer-number singular)
+            :ARG1 (s5z1 / zákon
+                :ARG0-of (s5p1 / předpokládat-001
+                    :ARG1 (s5c1 / celek
+                        :mod (s5v2 / vysoký
+                            :refer-number plural)
+                        :mod (s5x1 / 17)
+                        :refer-number plural)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :effect (s5p2 / průchodný
+            :refer-number singular
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5o1: 11-11
+s5n1: 2-2
+s5v1: 1-1
+s5z1: 3-3,5-5
+s5p1: 6-6
+s5c1: 9-9
+s5v2: 8-8
+s5x1: 7-7
+s5e1: 0-0
+s5p2: 12-13
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5z1 :same-entity s3z1)
+            (s5e1 :same-entity s4h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2      3    4    5      6         7  8      9      10     11 12 13  14    15 16 17  18 19      20    21 22
+Words: Podle Hrdého bude ČSSD hledat konsenzus v  mezích daných názory LB (  osm celků )  a  ODA (  třináct celků )  .
+
+# sentence level graph:
+(s6h1 / hledat-001
+        :ARG0 (s6c1 / ČSSD
+            :refer-number singular)
+        :regard (s6h2 / Hrdý
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s6k1 / konsens
+            :refer-number singular)
+        :place (s6m1 / mez
+            :mod (s6d1 / daný
+                :instrument (s6n1 / názor
+                    :ARG0 (s6a1 / and
+                        :op1 (s6l1 / LB
+                            :parenthesis (s6c2 / celek
+                                :mod (s6o1 / osm
+                                    :refer-number singular)
+                                :refer-number plural))
+                        :op2 (s6o2 / ODA
+                            :parenthesis (s6c3 / celek
+                                :mod (s6t1 / třináct
+                                    :refer-number singular)
+                                :refer-number plural)))
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :aspect activity)
+
+# alignment:
+s6h1: 3-3,5-5
+s6c1: 4-4
+s6h2: 1-2
+s6k1: 6-6
+s6m1: 7-8
+s6d1: 9-9
+s6n1: 10-10
+s6a1: 16-16
+s6l1: 11-11
+s6c2: 14-14
+s6o1: 13-13
+s6o2: 17-17
+s6c3: 20-20
+s6t1: 19-19
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6c1 :same-entity s4s1)
+            (s6h2 :same-entity s5e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1    2  3  4      5  6     7  8  9  10 11    12 13      14      15              16    17 18 19  20          21       22 23      24 25     26           27
+Words: ČSSD má na rozdíl od vlády za to ,  že zákon o  zřízení vyšších územněsprávních celků by se měl projednávat současně se zákonem o  jejich kompetencích .
+
+# sentence level graph:
+(s7m1 / mít-094
+        :ARG0 (s7c1 / ČSSD
+            :refer-number singular)
+        :comparison (s7v1 / vláda
+            :refer-number singular)
+        :part-of-phraseme (s7z1 / za_to
+            :refer-number singular)
+        :ARG1 (s7p1 / projednávat-002
+            :ARG1 (s7z2 / zákon
+                :ARG1 (s7z3 / zřízení
+                    :ARG1 (s7c2 / celek
+                        :mod (s7v2 / vysoký
+                            :refer-number plural)
+                        :mod (s7u1 / územněsprávní
+                            :refer-number plural)
+                        :refer-number plural
+                        :refer-person 3rd)
+                    :ARG0 (s7e1 / entity)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s7e2 / entity)
+            :temporal (s7z4 / zákon
+                :ARG1 (s7k1 / kompetence
+                    :possessor s7c2
+                    :refer-number plural)
+                :refer-number singular)
+            :aspect habitual)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s7m1: 2-2
+s7c1: 1-1
+s7v1: 3-6
+s7z1: 7-8
+s7p1: 10-10,17-17,19-20
+s7z2: 11-11
+s7z3: 12-13
+s7c2: 16-16,25-25
+s7v2: 14-14
+s7u1: 15-15
+s7e1: 0-0
+s7e2: 0-0
+s7z4: 21-23
+s7k1: 24-24,26-26
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7c1 :same-entity s6c1)
+            (s7v1 :same-entity s5v1)
+            (s7z2 :same-entity s5z1)
+            (s7z3 :same-entity s3v1)
+            (s7c2 :same-entity s3c2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1    2     3  4  5    6  7       8         9     10       11    12 13       14     15     16         17
+Words: Hrdý uvedl ,  že ČSSD je ochotna projednat zákon kdykoliv ještě ve funkčním období tohoto parlamentu .
+
+# sentence level graph:
+(s8u1 / uvést-007
+        :ARG0 (s8h1 / Hrdý
+            :refer-number singular)
+        :effect (s8b1 / být-007
+            :ARG0 (s8c1 / ČSSD
+                :refer-number singular)
+            :ARG1 (s8o1 / ochotný
+                :ARG1 (s8p1 / projednat-002
+                    :ARG1 (s8z1 / zákon
+                        :refer-number singular)
+                    :ARG0 s8c1
+                    :temporal (s8k1 / kdykoliv)
+                    :clausal-marker (s8j1 / ještě)
+                    :temporal (s8o2 / období
+                        :mod (s8f1 / funkční
+                            :refer-number singular)
+                        :possessor (s8p2 / parlament
+                            :mod (s8t1 / tento
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect performance))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8u1: 2-2
+s8h1: 1-1
+s8b1: 4-4,6-6
+s8c1: 5-5
+s8o1: 7-7
+s8p1: 8-8
+s8z1: 9-9
+s8k1: 10-10
+s8j1: 11-11
+s8o2: 12-12,14-14
+s8f1: 13-13
+s8p2: 16-16
+s8t1: 15-15
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8h1 :same-entity s6h2)
+            (s8c1 :same-entity s7c1)
+            (s8z1 :same-entity s7z2)
+            (s8p2 :same-entity s4p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1    2   3    4   5   6  7  8   9   10         11        12     13    14 15    16     17     18 19 20    21 22  23  24    25 26        27 28    29
+Words: Část ODS dělá vše pro to ,  aby byl parlamentu předložen takový návrh ,  který nemůže projít ,  a  mohla to pak vše svést na parlament ,  dodal .
+
+# sentence level graph:
+(s9d1 / dodat-005
+        :ARG0 (s9e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :effect (s9d2 / dělat-010
+            :ARG0 (s9c1 / část
+                :mod (s9o1 / ODS)
+                :refer-number singular)
+            :ARG1 (s9v1 / všechen
+                :refer-number singular
+                :refer-person 3rd)
+            :purpose (s9a1 / and
+                :op1 (s9p1 / předložit-001
+                    :ARG2 (s9p2 / parlament
+                        :refer-number singular)
+                    :ARG0 (s9e2 / entity)
+                    :ARG1 (s9n1 / návrh
+                        :ARG0-of (s9p3 / projít-006
+                            :aspect performance
+                            :polarity -)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance)
+                :op2 (s9s1 / svést-001
+                    :ARG1 (s9t1 / ten
+                        :mod (s9v2 / všechen
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0 s9c1
+                    :temporal (s9p4 / pak)
+                    :ARG2 (s9p5 / parlament
+                        :refer-number singular)
+                    :aspect performance))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s9d1: 28-28
+s9e1: 0-0
+s9d2: 3-3
+s9c1: 1-1
+s9o1: 2-2
+s9v1: 4-4
+s9a1: 19-19
+s9p1: 5-6,8-9,11-11
+s9p2: 10-10
+s9e2: 0-0
+s9n1: 13-13,15-15
+s9p3: 12-12,16-17
+s9s1: 5-6,8-8,20-20,24-24
+s9t1: 21-21
+s9v2: 23-23
+s9p4: 22-22
+s9p5: 25-26
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9e1 :same-entity s8h1)
+            (s9p2 :same-entity s8p2)
+            (s9t1 :same-event s9p1)
+            (s9p5 :same-entity s9p2)))
+
+

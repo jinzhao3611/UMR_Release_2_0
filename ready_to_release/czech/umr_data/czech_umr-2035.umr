@@ -1,0 +1,78 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1   2      3  4  5     6        7    8        9     10    11        12 13     14
+Words: Tom Cruise se v  Praze zúčastní také premiéry svého filmu Interview s  upírem .
+
+# sentence level graph:
+(s1z1 / zúčastnit-se-001
+        :ARG0 (s1c1 / Cruise
+            :mod (s1t1 / Tom
+                :refer-number singular)
+            :refer-number singular)
+        :place (s1p1 / Praha
+            :refer-number singular)
+        :clausal-marker (s1t2 / také)
+        :ARG1 (s1p2 / premiéra
+            :possessor (s1f1 / film
+                :possessor s1c1
+                :name (s1i1 / interview
+                    :companion (s1u1 / upír
+                        :refer-number singular))
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1z1: 3-3,6-6
+s1c1: 2-2,9-9
+s1t1: 1-1
+s1p1: 4-5
+s1t2: 7-7
+s1p2: 8-8
+s1f1: 10-10
+s1i1: 11-11
+s1u1: 12-13
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2      3  4 5    6         7        8
+Words: Tento snímek je z jeho londýnské premiéry .
+
+# sentence level graph:
+(s2b1 / být-011
+        :ARG0 (s2s1 / snímek
+            :mod (s2t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :start (s2p1 / premiéra
+            :possessor (s2e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :mod (s2l1 / londýnský
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2b1: 3-3
+s2s1: 2-2
+s2t1: 1-1
+s2p1: 4-4,7-7
+s2e1: 5-5
+s2l1: 6-6
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2e1 :same-entity s1f1)))
+
+

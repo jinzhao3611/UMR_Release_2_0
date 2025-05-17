@@ -1,0 +1,97 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1   2      3  4  5    6     7    8
+Words: Pan Kaščák má od Boha zlaté ruce .
+
+# sentence level graph:
+(s1m1 / mít-002
+        :ARG0 (s1k1 / Kaščák
+            :mod (s1p1 / pan
+                :refer-number singular)
+            :refer-number singular)
+        :source (s1b1 / bůh
+            :refer-number singular)
+        :ARG1 (s1r1 / ruka
+            :mod (s1z1 / zlatý
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s1m1: 3-3
+s1k1: 2-2
+s1p1: 1-1
+s1b1: 4-5
+s1r1: 7-7
+s1z1: 6-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2  3  4       5  6   7       8     9  10        11
+Words: Narodil se v  Čechách ,  ale souhrou náhod má slovenské občanství
+
+# sentence level graph:
+(s2b1 / but-91
+        :ARG1 (s2n1 / narodit-se-002
+            :ARG0 (s2e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :place (s2c1 / Čechy
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :ARG2 (s2m1 / mít-002
+            :ARG0 s2e1
+            :cause (s2s1 / souhra
+                :ARG1 (s2n2 / náhoda
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG1 (s2o1 / občanství
+                :mod (s2s2 / slovenský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state))
+
+# alignment:
+s2b1: 6-6
+s2n1: 1-2
+s2c1: 3-4
+s2e1: 0-0
+s2m1: 9-9
+s2s1: 7-7
+s2n2: 8-8
+s2o1: 11-11
+s2s2: 10-10
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2e1 :same-entity s1k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1
+Words: Foto
+
+# sentence level graph:
+(s3f1 / foto
+        :refer-number singular)
+
+# alignment:
+s3f1: 1-1
+
+# document level annotation:
+(s3s0 / sentence)
+
+

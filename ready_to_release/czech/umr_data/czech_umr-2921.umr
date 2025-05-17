@@ -1,0 +1,185 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Čechy
+
+# sentence level graph:
+(s1c1 / Čechy
+        :refer-number singular)
+
+# alignment:
+s1c1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1  2       3  4     5      6  7     8  9      10       11 12 13 14 15 16
+Words: U  stránek ,  které dáváte do desek ,  nechte označení ,  co je to za vydání
+
+# sentence level graph:
+(s2n1 / nechat-006
+        :place (s2s1 / stránka
+            :ARG1-of (s2d1 / dávat-013
+                :ARG0 (s2e1 / entity
+                    :refer-number plural
+                    :refer-person 2nd)
+                :goal (s2d2 / deska
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 2nd
+                :aspect activity)
+            :refer-number plural)
+        :ARG0 s2e1
+        :ARG1 (s2o1 / označení
+            :ARG0 s2e1
+            :ARG1 s2s1
+            :effect (s2b1 / být-002
+                :ARG1 (s2t1 / ten
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG0 (s2c1 / co
+                    :refer-number singular
+                    :refer-person 3rd)
+                :effect (s2v1 / vydání
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect performance)
+
+# alignment:
+s2n1: 9-9
+s2s1: 1-2,4-4
+s2d1: 5-5
+s2e1: 0-0
+s2d2: 6-7
+s2o1: 10-10
+s2b1: 13-13
+s2t1: 14-14
+s2c1: 12-12
+s2v1: 15-16
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2t1 :same-entity s2s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2       3 4            5
+Words: Porovnání českých a zahraničních potravin
+
+# sentence level graph:
+(s3p1 / porovnání
+        :ARG1 (s3x1 / #Rcp)
+        :effect (s3e1 / entity)
+        :ARG0 (s3a1 / and
+            :op1 (s3p2 / potravina
+                :mod (s3c1 / český
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s3p3 / potravina
+                :mod (s3z1 / zahraniční
+                    :refer-number plural)
+                :refer-number plural))
+        :refer-number singular)
+
+# alignment:
+s3p1: 1-1
+s3x1: 0-0
+s3e1: 0-0
+s3a1: 3-3
+s3p2: 0-0
+s3c1: 2-2
+s3p3: 5-5
+s3z1: 4-4
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3x1 :same-entity s3a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1   2  3      4   5      6        7
+Words: Čím se řídíte při nákupu potravin ?
+
+# sentence level graph:
+(s4r1 / řídit-se-001
+        :ARG0 (s4e1 / entity
+            :refer-number plural
+            :refer-person 2nd)
+        :condition (s4n1 / nákup
+            :ARG1 (s4p1 / potravina
+                :refer-number plural)
+            :refer-number singular)
+        :ARG1 (s4c1 / co
+            :refer-number singular
+            :refer-person 3rd)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect activity)
+
+# alignment:
+s4r1: 2-3
+s4e1: 0-0
+s4n1: 4-5
+s4p1: 6-6
+s4c1: 1-1
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s2e1)
+            (s4p1 :same-entity s3a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2      3        4         5          6    7
+Words: Zákazníci dávají přednost tuzemským potravinám před zahraničními
+
+# sentence level graph:
+(s5d1 / dávat-023
+        :ARG0 (s5z1 / zákazník
+            :refer-number plural)
+        :predicative-noun (s5p1 / přednost
+            :ARG0 s5p2
+            :ARG1 (s5p3 / potravina
+                :mod (s5z2 / zahraniční
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG2 (s5p2 / potravina
+            :mod (s5t1 / tuzemský
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5d1: 2-2
+s5z1: 1-1
+s5p1: 3-3
+s5p3: 0-0
+s5z2: 7-7
+s5p2: 5-5
+s5t1: 4-4
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p3 :same-entity s3p3)
+            (s5p2 :same-entity s3p2)))
+
+

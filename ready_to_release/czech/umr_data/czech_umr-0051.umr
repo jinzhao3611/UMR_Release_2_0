@@ -1,0 +1,94 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2       3  4     5         6    7      8
+Words: KOLIK PLATÍME ZA JEDEN ČTVEREČNÍ METR PLOCHY ?
+
+# sentence level graph:
+(s1p1 / platit-008
+        :ARG0 (s1e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :ARG1 (s1m1 / metr
+            :mod (s1c1 / čtvereční
+                :refer-number singular)
+            :possessor (s1p2 / plocha
+                :refer-number singular)
+            :mod (s1j1 / jeden
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s1k1 / kolik)
+        :refer-number plural
+        :refer-person 1st
+        :aspect activity)
+
+# alignment:
+s1p1: 2-2
+s1e1: 0-0
+s1m1: 3-3,6-6
+s1c1: 5-5
+s1p2: 7-7
+s1j1: 4-4
+s1k1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2   3  4         5  6   7   8  9    10       11         12     13 14      15    16         17
+Words: Kdybych vám to prozradil ,  tak nám tu jako bejvalej živnostník budete od momentu dělat ventilátor .
+
+# sentence level graph:
+(s2d1 / dělat-013
+        :condition (s2p1 / prozradit-001
+            :effect (s2t1 / ten
+                :refer-number singular
+                :refer-person 1st)
+            :ARG0 (s2e1 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :ARG2 (s2e2 / entity
+                :refer-number singular
+                :refer-person 2nd)
+            :refer-number singular
+            :aspect performance)
+        :clausal-marker (s2t2 / tak)
+        :ARG0 s2e2
+        :affectee (s2e3 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :place (s2t3 / tu)
+        :temporal (s2m1 / moment
+            :refer-number singular)
+        :manner (s2z1 / živnostník
+            :mod-of s2e2
+            :mod (s2b1 / bejvalý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2v1 / ventilátor
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s2d1: 12-12,15-15
+s2p1: 1-1,4-4
+s2t1: 3-3
+s2e1: 0-0
+s2e2: 2-2
+s2t2: 6-6
+s2e3: 7-7
+s2t3: 8-8
+s2m1: 13-14
+s2z1: 9-9,11-11
+s2b1: 10-10
+s2v1: 16-16
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2t1 :same-event s1p1)
+            (s2e3 :same-entity s1e1)))
+
+

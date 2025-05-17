@@ -1,0 +1,424 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2       3       4 5
+Words: Američtí poradci jednají o Ulsteru
+
+# sentence level graph:
+(s1j1 / jednat-001
+        :ARG0 (s1p1 / poradce
+            :mod (s1a1 / americký
+                :refer-number plural)
+            :refer-number plural)
+        :ARG2 (s1x1 / #Rcp
+            :refer-number plural)
+        :ARG1 (s1u1 / Ulster
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1j1: 3-3
+s1p1: 2-2
+s1a1: 1-1
+s1x1: 0-0
+s1u1: 4-5
+
+# document level annotation:
+(s1s0 / sentence
+    :coref ((s1x1 :same-entity s1p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: Dublin -
+
+# sentence level graph:
+(s2d1 / Dublin
+        :refer-number singular)
+
+# alignment:
+s2d1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1           2        3        4  5      6       7                8          9        10 11      12     13       14 15 16         17 18        19    20 21      22 23      24 25     26        27 28 29         30
+Words: Šestičlenná americká delegace ,  vedená blízkým spolupracovníkem prezidenta Clintona a  bývalým členem Kongresu B  .  Morrisonem ,  přiletěla včera do Dublinu na setkání s  irským premiérem A  .  Reynoldsem .
+
+# sentence level graph:
+(s3p1 / přiletět-001
+        :ARG0 (s3d1 / delegace
+            :mod (s3a1 / americký
+                :refer-number singular)
+            :mod (s3v1 / vedený
+                :ARG0 (s3m1 / Morrison
+                    :mod (s3b1 / B)
+                    :mod (s3a2 / and
+                        :op1 (s3s1 / spolupracovník
+                            :possessor (s3c1 / Clinton
+                                :mod (s3p2 / prezident
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :mod (s3b2 / blízký
+                                :refer-number singular)
+                            :refer-number singular)
+                        :op2 (s3c2 / člen
+                            :possessor (s3k1 / kongres
+                                :refer-number singular)
+                            :mod (s3b3 / bývalý
+                                :refer-number singular)
+                            :refer-number singular))
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3s2 / šestičlenný
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3v2 / včera)
+        :goal (s3d2 / Dublin
+            :refer-number singular)
+        :purpose (s3s3 / setkání
+            :ARG0 s3d1
+            :ARG1 (s3r1 / Reynolds
+                :mod (s3a3 / A)
+                :mod (s3p3 / premiér
+                    :mod (s3i1 / irský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3p1: 18-18
+s3d1: 3-3
+s3a1: 2-2
+s3v1: 5-5
+s3m1: 16-16
+s3b1: 14-14
+s3a2: 10-10
+s3s1: 7-7
+s3c1: 9-9
+s3p2: 8-8
+s3b2: 6-6
+s3c2: 12-12
+s3k1: 13-13
+s3b3: 11-11
+s3s2: 1-1
+s3v2: 19-19
+s3d2: 20-21
+s3s3: 22-23
+s3r1: 24-24,29-29
+s3a3: 27-27
+s3p3: 26-26
+s3i1: 25-25
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3d1 :same-entity s1x1)
+            (s3a1 :same-entity s1a1)
+            (s3d2 :same-entity s2d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2      3        4  5        6  7        8     9  10      11 12 13 14      15 16     17   18   19 20          21     22  23
+Words: Dnes odjede delegace do Belfastu v  Severním Irsku na setkání s  G  .  Adamsem ,  vůdcem Sinn Fein ,  politického křídla IRA .
+
+# sentence level graph:
+(s4o1 / odjet-001
+        :ARG0 (s4d1 / delegace
+            :refer-number singular
+            :refer-person 3rd)
+        :start (s4e1 / entity)
+        :temporal (s4d2 / dnes)
+        :goal (s4b1 / Belfast
+            :place (s4i1 / Irsko
+                :mod (s4s1 / severní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :purpose (s4s2 / setkání
+            :ARG0 s4d1
+            :ARG1 (s4i2 / identity-91
+                :ARG1 (s4a1 / Adams
+                    :mod (s4g1 / G)
+                    :refer-number singular)
+                :ARG2 (s4v1 / vůdce
+                    :ARG1 (s4i3 / identity-91
+                        :ARG1 (s4f1 / Fein
+                            :mod (s4s3 / Sinn))
+                        :ARG2 (s4k1 / křídlo
+                            :mod (s4p1 / politický
+                                :refer-number singular)
+                            :possessor (s4i4 / IRA)
+                            :refer-number singular))
+                    :refer-number singular))
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s4o1: 2-2
+s4d1: 3-3
+s4e1: 0-0
+s4d2: 1-1
+s4b1: 4-5
+s4i1: 6-6,8-8
+s4s1: 7-7
+s4s2: 9-10
+s4i2: 15-15
+s4a1: 11-11,14-14
+s4g1: 12-12
+s4v1: 11-11,16-16
+s4i3: 19-19
+s4f1: 18-18
+s4s3: 17-17
+s4k1: 21-21
+s4p1: 20-20
+s4i4: 22-22
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4d1 :same-entity s3d1)
+            (s4i1 :same-entity s1u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1             2        3  4        5     6    7        8     9           10
+Words: Protestantská komunita v  Severním Irsku tuto návštěvu ostře kritizovala .
+
+# sentence level graph:
+(s5k1 / kritizovat-001
+        :ARG0 (s5k2 / komunita
+            :place (s5i1 / Irsko
+                :mod (s5s1 / severní
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s5p1 / protestantský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s5n1 / návštěva
+            :mod (s5t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :manner (s5o1 / ostře)
+        :aspect activity)
+
+# alignment:
+s5k1: 9-9
+s5k2: 2-2
+s5i1: 3-3,5-5
+s5s1: 4-4
+s5p1: 1-1
+s5n1: 7-7
+s5t1: 6-6
+s5o1: 8-8
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5i1 :same-entity s4i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1        2  3  4         5         6  7             8         9           10 11       12       13 14 15 16    17 18     19          20 21              22     23    24 25   26 27  28 29  30  31    32            33 34 35  36     37        38    39        40   41
+Words: Označila ji za vměšování Američanů do severoirských vnitřních záležitostí a  obvinila delegaci ,  že se staví na stranu katolického a  republikánského tábora právě v  době ,  kdy se zdá být velmi pravděpodobné ,  že IRA oznámí zastavení svých násilných akcí .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6o1 / označit-001
+            :ARG0 (s6e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s6e2 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :effect (s6v1 / vměšování
+                :ARG0 (s6a2 / Američan
+                    :refer-number plural)
+                :ARG1 (s6z1 / záležitost
+                    :mod (s6s1 / severoirský
+                        :refer-number plural)
+                    :mod (s6v2 / vnitřní
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :aspect performance)
+        :op2 (s6o2 / obvinit-001
+            :ARG0 s6e1
+            :ARG2 (s6d1 / delegace
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s6s2 / stavět-se-004
+                :ARG0 s6d1
+                :goal (s6s3 / strana
+                    :possessor (s6t1 / tábor
+                        :mod (s6a3 / and
+                            :op1 (s6k1 / katolický
+                                :refer-number singular)
+                            :op2 (s6r1 / republikánský
+                                :refer-number singular))
+                        :refer-number singular)
+                    :refer-number singular)
+                :clausal-marker (s6p1 / právě)
+                :temporal (s6d2 / doba
+                    :temporal-of (s6z2 / zdát-se-001
+                        :ARG0 (s6e3 / entity)
+                        :effect (s6b1 / být-007
+                            :ARG0 s6e3
+                            :ARG1 (s6p2 / pravděpodobný
+                                :extent (s6v3 / velmi)
+                                :refer-number singular)
+                            :aspect activity)
+                        :ARG1 (s6o3 / oznámit-001
+                            :ARG0 (s6i1 / IRA
+                                :refer-number singular)
+                            :ARG1 (s6z3 / zastavení
+                                :ARG0 s6i1
+                                :ARG1 (s6a4 / akce
+                                    :ARG0 s6i1
+                                    :mod (s6n1 / násilný
+                                        :refer-number plural)
+                                    :refer-number plural)
+                                :refer-number singular)
+                            :refer-number singular
+                            :refer-person 3rd
+                            :aspect performance)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect state)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :aspect performance))
+
+# alignment:
+s6a1: 10-10
+s6o1: 1-1
+s6e2: 2-2
+s6v1: 3-4
+s6a2: 5-5
+s6z1: 6-6,9-9
+s6s1: 7-7
+s6v2: 8-8
+s6e1: 0-0
+s6o2: 11-11
+s6d1: 12-12
+s6s2: 14-16
+s6s3: 17-18
+s6t1: 22-22
+s6a3: 20-20
+s6k1: 19-19
+s6r1: 21-21
+s6p1: 23-23
+s6d2: 24-25,27-27
+s6z2: 28-29
+s6e3: 0-0
+s6b1: 30-30
+s6p2: 32-32
+s6v3: 31-31
+s6o3: 34-34,36-36
+s6i1: 35-35,38-38
+s6z3: 37-37
+s6a4: 40-40
+s6n1: 39-39
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e2 :same-entity s5n1)
+            (s6s1 :same-entity s5i1)
+            (s6e1 :same-entity s5k2)
+            (s6d1 :same-entity s4d1)
+            (s6i1 :same-entity s4i4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2  3     4         5  6          7     8     9         10 11 12   13    14    15     16 17            18          19 20    21  22        23     24      25
+Words: Británie a  Irská republika v  posledních dnech znovu potvrdily ,  že není možný žádný dialog se severoirskými separatisty ,  dokud IRA nevyhlásí trvalé příměří .
+
+# sentence level graph:
+(s7p1 / potvrdit-001
+        :ARG0 (s7a1 / and
+            :op1 (s7b1 / Británie
+                :refer-number singular)
+            :op2 (s7r1 / republika
+                :mod (s7i1 / irský
+                    :refer-number singular)
+                :refer-number singular))
+        :temporal (s7d1 / den
+            :mod (s7p2 / poslední
+                :refer-number plural)
+            :refer-number plural)
+        :temporal (s7z1 / znovu)
+        :ARG1 (s7b2 / být-159
+            :ARG1 (s7m1 / možný
+                :refer-number singular)
+            :ARG0 (s7d2 / dialog
+                :ARG1 (s7s1 / separatista
+                    :mod (s7s2 / severoirský
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s7z2 / žádný
+                    :refer-number singular
+                    :polarity -)
+                :refer-number singular)
+            :temporal (s7v1 / vyhlásit-002
+                :ARG0 (s7i2 / IRA
+                    :refer-number singular)
+                :ARG1 (s7p3 / příměří
+                    :mod (s7t1 / trvalý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance
+                :polarity -)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s7p1: 9-9
+s7a1: 2-2
+s7b1: 1-1
+s7r1: 4-4
+s7i1: 3-3
+s7d1: 5-5,7-7
+s7p2: 6-6
+s7z1: 8-8
+s7b2: 11-12
+s7m1: 13-13
+s7d2: 15-15
+s7s1: 16-16,18-18
+s7s2: 17-17
+s7z2: 14-14
+s7v1: 20-20,22-22
+s7i2: 21-21
+s7p3: 24-24
+s7t1: 23-23
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7r1 :same-entity s3i1)
+            (s7i2 :same-entity s6i1)))
+
+

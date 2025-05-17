@@ -1,0 +1,96 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2  3        4       5  6    7  8        9       10 11
+Words: štoček :  PRODEJNÍ VÝSTAVY *  TRHY *  PRODEJNÍ VÝSTAVY *  TRHY
+
+# sentence level graph:
+(s1i1 / identity-91
+        :ARG1 (s1s1 / štoček
+            :refer-number singular)
+        :ARG2 (s1a1 / and
+            :op1 (s1v1 / výstava
+                :mod (s1p1 / prodejní
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s1t1 / trh
+                :refer-number plural)
+            :op3 (s1v2 / výstava
+                :mod (s1p2 / prodejní
+                    :refer-number plural)
+                :refer-number plural)
+            :op4 (s1t2 / trh
+                :refer-number plural)))
+
+# alignment:
+s1i1: 2-2
+s1s1: 1-1
+s1a1: 0-0
+s1v1: 4-4
+s1p1: 3-3
+s1t1: 6-6
+s1v2: 9-9
+s1p2: 8-8
+s1t2: 11-11
+
+# document level annotation:
+(s1s0 / sentence
+    :coref ((s1v2 :same-entity s1v1)
+            (s1t2 :same-entity s1t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1         2       3 4       5 6
+Words: Sportovní potřeby , nábytek , gastronomie
+
+# sentence level graph:
+(s2a1 / and
+        :op1 (s2p1 / potřeba
+            :mod (s2s1 / sportovní
+                :refer-number plural)
+            :refer-number plural)
+        :op2 (s2n1 / nábytek
+            :refer-number singular)
+        :op3 (s2g1 / gastronomie
+            :refer-number singular))
+
+# alignment:
+s2a1: 5-5
+s2p1: 2-2
+s2s1: 1-1
+s2n1: 4-4
+s2g1: 6-6
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2        3     4
+Words: Pořádá Agentura Movis .
+
+# sentence level graph:
+(s3p1 / pořádat-001
+        :ARG1 (s3e1 / entity)
+        :ARG0 (s3a1 / agentura
+            :name (s3m1 / Movis
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3p1: 1-1
+s3e1: 0-0
+s3a1: 2-2
+s3m1: 3-3
+
+# document level annotation:
+(s3s0 / sentence)
+
+

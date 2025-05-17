@@ -1,0 +1,154 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2      3    4    5  6     7  8  9       10             11        12     13        14 15     16        17    18
+Words: Společnost Mellon Bank Corp .  řekla ,  že členové představenstva schválili zpětné odkoupení až 250000 kmenových akcií .
+
+# sentence level graph:
+(s1r1 / říci-008
+        :ARG2 (s1e1 / entity)
+        :ARG0 (s1s1 / společnost
+            :name (s1x1 / #Forn
+                :FPHR (s1m1 / Mellon)
+                :FPHR (s1b1 / Bank)
+                :FPHR (s1c1 / Corp)
+                :FPHR (s1x2 / .))
+            :refer-number singular)
+        :effect (s1s2 / schválit-002
+            :ARG0 (s1c2 / člen
+                :mod (s1p1 / představenstvo
+                    :refer-number singular)
+                :refer-number plural)
+            :ARG1 (s1o1 / odkoupení
+                :ARG0 s1s1
+                :goal (s1z1 / zpětný
+                    :refer-number singular)
+                :ARG1 (s1a1 / akcie
+                    :mod (s1x4 / 250000
+                        :extent (s1a2 / až))
+                    :mod (s1k1 / kmenový
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s1r1: 6-6
+s1e1: 0-0
+s1s1: 1-1
+s1x1: 0-0
+s1m1: 2-2
+s1b1: 3-3
+s1c1: 4-4
+s1x2: 5-5
+s1s2: 8-8,11-11
+s1c2: 9-9
+s1p1: 10-10
+s1o1: 13-13
+s1z1: 12-12
+s1a1: 17-17
+s1x4: 15-15
+s1a2: 14-14
+s1k1: 16-16
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2        3          4          5      6  7  8         9     10    11      12 13      14        15      16         17    18          19
+Words: Tato bankovní holdingová společnost uvedla ,  že odkoupené akcie budou použity na splnění požadavků ohledně penzijních plánů společnosti .
+
+# sentence level graph:
+(s2u1 / uvést-007
+        :ARG0 (s2s1 / společnost
+            :mod (s2t1 / tento
+                :refer-number singular)
+            :mod (s2b1 / bankovní
+                :refer-number singular)
+            :mod (s2h1 / holdingový
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s2p1 / použít-001
+            :ARG0 s2s1
+            :ARG1 (s2a1 / akcie
+                :mod (s2o1 / odkoupený
+                    :refer-number plural)
+                :refer-number plural)
+            :purpose (s2s2 / splnění
+                :ARG0 s2s1
+                :ARG1 (s2p2 / požadavek
+                    :regard (s2p3 / plán
+                        :mod (s2p4 / penzijní
+                            :refer-number plural)
+                        :mod (s2s3 / společnost
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s2u1: 5-5
+s2s1: 4-4
+s2t1: 1-1
+s2b1: 2-2
+s2h1: 3-3
+s2p1: 7-7,10-11
+s2a1: 9-9
+s2o1: 8-8
+s2s2: 12-13
+s2p2: 14-14
+s2p3: 15-15,17-17
+s2p4: 16-16
+s2s3: 18-18
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2s1 :same-entity s1s1)
+            (s2s3 :same-entity s2s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2      3  4 5     6    7       8     9
+Words: Společnost Mellon má v oběhu 36.6 milionu akcií .
+
+# sentence level graph:
+(s3m1 / mít-006
+        :ARG0 (s3s1 / společnost
+            :name (s3m2 / Mellon
+                :refer-number singular)
+            :refer-number singular)
+        :place (s3o1 / oběh
+            :refer-number singular)
+        :ARG1 (s3m3 / milión
+            :mod (s3x1 / 36.6)
+            :mod (s3a1 / akcie
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s3m1: 3-3
+s3s1: 1-1
+s3m2: 2-2
+s3o1: 4-5
+s3m3: 7-7
+s3x1: 6-6
+s3a1: 8-8
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s1 :same-entity s2s3)))
+
+

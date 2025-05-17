@@ -1,0 +1,125 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2         3        4     5    6        7   8        9        10 11    12       13          14          15        16
+Words: K  problémům Ukrajiny patří také rozsáhlá síť prodejců potravin ,  které neprošly předepsanou hygienickou kontrolou .
+
+# sentence level graph:
+(s1p1 / patřit-003
+        :goal (s1p2 / problém
+            :possessor (s1u1 / Ukrajina
+                :refer-number singular)
+            :refer-number plural)
+        :clausal-marker (s1t1 / také)
+        :ARG0 (s1s1 / síť
+            :mod (s1p3 / prodejce
+                :ARG1 (s1p4 / potravina
+                    :ARG0-of (s1p5 / projít-005
+                        :path (s1k1 / kontrola
+                            :mod (s1h1 / hygienický
+                                :refer-number singular)
+                            :mod (s1p6 / předepsaný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural
+                        :aspect performance
+                        :polarity -)
+                    :refer-number plural)
+                :refer-number plural)
+            :mod (s1r1 / rozsáhlý
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s1p1: 4-4
+s1p2: 1-2
+s1u1: 3-3
+s1t1: 5-5
+s1s1: 7-7
+s1p3: 8-8
+s1p4: 9-9,11-11
+s1p5: 12-12
+s1k1: 15-15
+s1h1: 14-14
+s1p6: 13-13
+s1r1: 6-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1  2      3         4         5  6         7          8         9       10     11 12        13       14      15
+Words: Na snímku likvidují policisté za asistence hygieničky sortiment jednoho stánku na kyjevském vlakovém nádraží .
+
+# sentence level graph:
+(s2l1 / likvidovat-001
+        :place (s2s1 / snímek
+            :refer-number singular)
+        :ARG0 (s2p1 / policista
+            :refer-number plural)
+        :condition (s2a1 / asistence
+            :ARG0 (s2h1 / hygienička
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2s2 / sortiment
+            :possessor (s2s3 / stánek
+                :place (s2n1 / nádraží
+                    :mod (s2v1 / vlakový
+                        :refer-number singular)
+                    :mod (s2k1 / kyjevský
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s2j1 / jeden
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect process)
+
+# alignment:
+s2l1: 3-3
+s2s1: 1-2
+s2p1: 4-4
+s2a1: 5-6
+s2h1: 7-7
+s2s2: 8-8
+s2s3: 10-10
+s2n1: 11-11,14-14
+s2v1: 13-13
+s2k1: 12-12
+s2j1: 9-9
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2
+Words: Foto ČTK
+
+# sentence level graph:
+(s3e1 / event
+        :ARG1 (s3f1 / foto
+            :refer-number singular)
+        :ARG0 (s3c1 / ČTK)
+        :aspect state)
+
+# alignment:
+s3e1: 0-0
+s3f1: 1-1
+s3c1: 2-2
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3f1 :same-entity s2s1)))
+
+

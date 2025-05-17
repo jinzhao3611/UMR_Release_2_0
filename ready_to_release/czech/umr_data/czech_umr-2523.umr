@@ -1,0 +1,104 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2    3      4  5         6   7       8       9           10 11       12    13 14   15     16  17 18 19   20
+Words: Ve svět hraček se proměnila dvě podlaží Starého purkrabství na Pražském hradě ,  tedy bývalý Dům čs .  dětí .
+
+# sentence level graph:
+(s1p1 / proměnit-002
+        :effect (s1s1 / svět
+            :possessor (s1h1 / hračka
+                :refer-number plural)
+            :refer-number singular)
+        :ARG0 (s1e1 / entity)
+        :ARG1 (s1i1 / identity-91
+            :ARG1 (s1p2 / podlaží
+                :possessor (s1p3 / purkrabství
+                    :mod (s1s2 / Starý
+                        :refer-number singular)
+                    :place (s1h2 / hrad
+                        :mod (s1p4 / Pražský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s1d1 / dva
+                    :refer-number plural)
+                :refer-number plural)
+            :clausal-marker (s1t1 / tedy)
+            :ARG2 (s1d2 / Dům
+                :possessor (s1d3 / dítě
+                    :mod (s1c1 / Československý)
+                    :refer-number plural)
+                :mod (s1b1 / bývalý
+                    :refer-number singular)
+                :refer-number singular))
+        :aspect performance)
+
+# alignment:
+s1p1: 4-5
+s1s1: 1-2
+s1h1: 3-3
+s1e1: 0-0
+s1i1: 13-13
+s1p2: 7-7
+s1p3: 9-9
+s1s2: 8-8
+s1h2: 10-10,12-12
+s1p4: 11-11
+s1d1: 6-6
+s1t1: 14-14
+s1d2: 16-16
+s1d3: 19-19
+s1c1: 17-17
+s1b1: 15-15
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1   2      3   4         5       6    7       8      9  10   11   12 13      14
+Words: Své sbírky zde vystavuje kreslíř Ivan Steiger žijící od roku 1968 v  Německu .
+
+# sentence level graph:
+(s2v1 / vystavovat-003
+        :ARG1 (s2s1 / sbírka
+            :ARG0 s2s2
+            :refer-number plural)
+        :place (s2z1 / zde)
+        :ARG0 (s2s2 / Steiger
+            :mod (s2i1 / Ivan
+                :refer-number singular)
+            :mod (s2k1 / kreslíř
+                :refer-number singular)
+            :mod (s2z2 / žijící
+                :temporal (s2r1 / rok
+                    :mod (s2x2 / 1968)
+                    :refer-number singular)
+                :place (s2n1 / Německo
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2v1: 4-4
+s2s1: 2-2
+s2z1: 3-3
+s2s2: 1-1,7-7
+s2i1: 6-6
+s2k1: 5-5
+s2z2: 8-8
+s2r1: 9-10
+s2x2: 11-11
+s2n1: 12-13
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2z1 :same-entity s1i1)))
+
+

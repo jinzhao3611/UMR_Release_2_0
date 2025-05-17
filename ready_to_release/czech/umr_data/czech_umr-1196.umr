@@ -1,0 +1,175 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2    3         4
+Words: Argentina chce Falklandy zpět
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1a1 / Argentina
+            :refer-number singular)
+        :ARG1 (s1f1 / Falklandy
+            :refer-number plural)
+        :goal (s1z1 / zpět)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1a1: 1-1
+s1f1: 3-3
+s1z1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2     3
+Words: Buenos Aires -
+
+# sentence level graph:
+(s2x1 / #Forn
+        :FPHR (s2b1 / Buenos)
+        :FPHR (s2a1 / Aires))
+
+# alignment:
+s2x1: 0-0
+s2b1: 1-1
+s2a1: 2-2
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2  3       4        5  6  7         8       9       10    11       12 13    14 15    16           17    18   19 20 21        22   23 24   25     26       27        28            29  30            31      32
+Words: Argentina ve čtvrtek oznámila ,  že oficiálně odmítne námitku Velké Británie ,  která v  úterý protestovala proti tomu ,  že Argentina chce do nové ústavy zakotvit požadavek svrchovanosti nad Falklandskými ostrovy .
+
+# sentence level graph:
+(s3o1 / oznámit-002
+        :ARG0 (s3a1 / Argentina
+            :refer-number singular)
+        :ARG2 (s3e1 / entity)
+        :temporal (s3c1 / čtvrtek
+            :refer-number singular)
+        :effect (s3o2 / odmítnout-002
+            :ARG0 s3a1
+            :manner (s3o3 / oficiálně)
+            :ARG1 (s3n1 / námitka
+                :ARG0 (s3b1 / Británie
+                    :mod (s3v1 / velký
+                        :refer-number singular)
+                    :ARG0-of (s3p1 / protestovat-001
+                        :temporal (s3u1 / úterý
+                            :refer-number singular)
+                        :ARG1 (s3z1 / zakotvit-002
+                            :ARG0 (s3a2 / Argentina
+                                :refer-number singular
+                                :refer-person 3rd)
+                            :goal (s3u2 / ústava
+                                :mod (s3n2 / nový
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :ARG1 (s3p2 / požadavek
+                                :ARG1 (s3s1 / svrchovanost
+                                    :ARG1 (s3o4 / ostrov
+                                        :mod (s3f1 / Falklandský
+                                            :refer-number plural)
+                                        :refer-number plural)
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :aspect performance)
+                        :aspect activity)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s3o1: 4-4
+s3a1: 1-1
+s3e1: 0-0
+s3c1: 2-3
+s3o2: 6-6,8-8
+s3o3: 7-7
+s3n1: 9-9
+s3b1: 11-11,13-13
+s3v1: 10-10
+s3p1: 16-16
+s3u1: 14-15
+s3z1: 17-18,20-20,22-22,26-26
+s3a2: 21-21
+s3u2: 23-23,25-25
+s3n2: 24-24
+s3p2: 27-27
+s3s1: 28-28
+s3o4: 29-29,31-31
+s3f1: 30-30
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3a1 :same-entity s1a1)
+            (s3a2 :same-entity s3a1)
+            (s3o4 :same-entity s1f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1           2       3         4         5  6  7         8            9         10    11   12         13      14
+Words: Argentinský ministr zahraničí prohlásil ,  že britskému ministerstvu zahraničí předá nótu odmítající protest .
+
+# sentence level graph:
+(s4p1 / prohlásit-003
+        :ARG0 (s4m1 / ministr
+            :mod (s4a1 / argentinský
+                :refer-number singular)
+            :possessor (s4z1 / zahraničí
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s4p2 / předat-001
+            :ARG2 (s4m2 / ministerstvo
+                :mod (s4b1 / britský
+                    :refer-number singular)
+                :possessor (s4z2 / zahraničí
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s4m1
+            :ARG1 (s4n1 / nóta
+                :mod (s4o1 / odmítající
+                    :ARG1 (s4p3 / protest
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4p1: 4-4
+s4m1: 2-2
+s4a1: 1-1
+s4z1: 3-3
+s4p2: 6-6,10-10
+s4m2: 8-8
+s4b1: 7-7
+s4z2: 9-9
+s4n1: 11-11
+s4o1: 12-12
+s4p3: 13-13
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4a1 :same-entity s3a2)
+            (s4b1 :same-entity s3b1)
+            (s4p3 :same-entity s3n1)))
+
+

@@ -1,0 +1,296 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2        3 4      5  6         7 8
+Words: Na veletrhu v Cannes se představí i Praha
+
+# sentence level graph:
+(s1p1 / představit-se-001
+        :place (s1v1 / veletrh
+            :place (s1c1 / Cannes)
+            :refer-number singular)
+        :ARG1 (s1e1 / entity)
+        :clausal-marker (s1i1 / i)
+        :ARG0 (s1p2 / Praha
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1p1: 5-6
+s1v1: 1-2
+s1c1: 3-4
+s1e1: 0-0
+s1i1: 7-7
+s1p2: 8-8
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p1 :same-entity s1p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2  3     4  5      6        7             8        9           10    11 12           13     14
+Words: Praha se letos v  březnu zúčastní mezinárodního veletrhu nemovitostí MIPIM ve francouzském Cannes .
+
+# sentence level graph:
+(s3z1 / zúčastnit-se-001
+        :ARG0 (s3p1 / Praha
+            :refer-number singular)
+        :temporal (s3l1 / letos)
+        :temporal (s3b1 / březen
+            :refer-number singular)
+        :ARG1 (s3v1 / veletrh
+            :possessor (s3n1 / nemovitost
+                :refer-number plural)
+            :mod (s3m1 / mezinárodní
+                :refer-number singular)
+            :name (s3m2 / MIPIM)
+            :place (s3c1 / Cannes
+                :mod (s3f1 / francouzský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s3z1: 2-2,6-6
+s3p1: 1-1
+s3l1: 3-3
+s3b1: 4-5
+s3v1: 8-8
+s3n1: 9-9
+s3m1: 7-7
+s3m2: 10-10
+s3c1: 11-11,13-13
+s3f1: 12-12
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s2p1)
+            (s3v1 :same-entity s1v1)
+            (s3c1 :same-entity s1c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2     3         4  5     6      7     8       9  10           11       12
+Words: Zástupci české metropole se kromě stánku budou podílet na přednáškovém programu .
+
+# sentence level graph:
+(s4p1 / podílet-se-001
+        :ARG0 (s4z1 / zástupce
+            :ARG1 (s4m1 / metropole
+                :mod (s4c1 / český
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :subtraction (s4s1 / stánek
+            :refer-number singular)
+        :ARG1 (s4p2 / program
+            :mod (s4p3 / přednáškový
+                :refer-number singular)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s4p1: 4-4,7-8
+s4z1: 1-1
+s4m1: 3-3
+s4c1: 2-2
+s4s1: 5-6
+s4p2: 9-9,11-11
+s4p3: 10-10
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4m1 :same-entity s3p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2      3         4         5    6       7    8            9      10  11       12            13       14
+Words: Podle mluvčí pražského primátora chce radnice této příležitosti využít pro navázání mezinárodních kontaktů .
+
+# sentence level graph:
+(s5v1 / využít-001
+        :regard (s5m1 / mluvčí
+            :possessor (s5p1 / primátor
+                :mod (s5p2 / pražský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5r1 / radnice
+            :refer-number singular)
+        :ARG1 (s5p3 / příležitost
+            :mod (s5t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :purpose (s5n1 / navázání
+            :ARG0 (s5e1 / entity)
+            :ARG1 (s5k1 / kontakt
+                :mod (s5m2 / mezinárodní
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s5v1: 5-5,9-9
+s5m1: 1-2
+s5p1: 4-4
+s5p2: 3-3
+s5r1: 6-6
+s5p3: 8-8
+s5t1: 7-7
+s5n1: 10-11
+s5e1: 0-0
+s5k1: 13-13
+s5m2: 12-12
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p2 :same-entity s4m1)
+            (s5p3 :same-entity s3v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1           2       3           4     5  6    7  8      9  10   11   12
+Words: Mezinárodní veletrh nemovitostí MIPIM se koná v  Cannes od roku 1990 .
+
+# sentence level graph:
+(s6k1 / konat-se-001
+        :ARG0 (s6v1 / veletrh
+            :mod (s6m1 / mezinárodní
+                :refer-number singular)
+            :possessor (s6n1 / nemovitost
+                :refer-number plural)
+            :name (s6m2 / MIPIM)
+            :refer-number singular)
+        :place (s6c1 / Cannes
+            :refer-number singular)
+        :temporal (s6r1 / rok
+            :mod (s6x1 / 1990)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6k1: 5-6
+s6v1: 2-2
+s6m1: 1-1
+s6n1: 3-3
+s6m2: 4-4
+s6c1: 7-8
+s6r1: 9-10
+s6x1: 11-11
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6v1 :same-entity s5p3)
+            (s6c1 :same-entity s3c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1    2  3  4        5     6    7   8    9         10 11 12   13
+Words: Loni se na veletrhu sešlo více než 5500 účastníků ze 48 zemí .
+
+# sentence level graph:
+(s7s1 / sejít-se-001
+        :temporal (s7v1 / vloni)
+        :place (s7v2 / veletrh
+            :refer-number singular)
+        :ARG1 (s7x1 / #Rcp
+            :refer-number plural)
+        :ARG0 (s7u1 / účastník
+            :mod (s7h1 / hodně
+                :comparison (s7x2 / 5500))
+            :start (s7z1 / země
+                :mod (s7x3 / 48)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7s1: 2-2,5-5
+s7v1: 1-1
+s7v2: 3-4
+s7x1: 0-0
+s7u1: 9-9
+s7h1: 6-6
+s7x2: 7-8
+s7z1: 10-10,12-12
+s7x3: 11-11
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7v2 :same-entity s6v1)
+            (s7x1 :same-entity s7u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2       3  4         5  6  7  8  9  10 11     12
+Words: Letošní veletrh se uskuteční od 9  .  do 12 .  března .
+
+# sentence level graph:
+(s8u1 / uskutečnit-se-001
+        :ARG0 (s8v1 / veletrh
+            :mod (s8l1 / letošní
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s8b1 / březen
+            :mod (s8x1 / 9)
+            :refer-number singular)
+        :temporal (s8b2 / březen
+            :mod (s8x2 / 12)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s8u1: 3-4
+s8v1: 2-2
+s8l1: 1-1
+s8b1: 0-0
+s8x1: 6-6
+s8b2: 8-8,11-11
+s8x2: 9-9
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8v1 :same-entity s7v2)))
+
+

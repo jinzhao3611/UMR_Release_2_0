@@ -1,0 +1,122 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2
+Words: Zatčení fanouška
+
+# sentence level graph:
+(s1z1 / zatčení
+        :ARG0 (s1e1 / entity)
+        :ARG1 (s1f1 / fanoušek
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1z1: 1-1
+s1e1: 0-0
+s1f1: 2-2
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Janov -
+
+# sentence level graph:
+(s2j1 / Janov
+        :refer-number singular)
+
+# alignment:
+s2j1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2       3      4        5          6  7     8     9              10 11    12 13      14 15          16 17     18        19     20       21       22  23     24   25    26 27 28    29
+Words: Italská policie zatkla fanouška fotbalistů AC Milán Carla Giacominelliho ,  který je obviněn ze spoluúčasti na vraždě příznivce Janova Vincenza Spagnoly při utkání obou klubů 29 .  ledna .
+
+# sentence level graph:
+(s3z1 / zatknout-001
+        :ARG0 (s3p1 / policie
+            :mod (s3i1 / italský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3g1 / Giacominelli
+            :mod (s3c1 / Carlo
+                :refer-number singular)
+            :mod (s3f1 / fanoušek
+                :possessor (s3f2 / fotbalista
+                    :possessor (s3a1 / AC
+                        :mod (s3m1 / Milán
+                            :refer-number singular))
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG2-of (s3o1 / obvinit-001
+                :ARG0 (s3e1 / entity)
+                :ARG1 (s3s1 / spoluúčast
+                    :ARG1 (s3v1 / vražda
+                        :ARG1 (s3s2 / Spagnola
+                            :mod (s3v2 / Vincenzo
+                                :refer-number singular)
+                            :mod (s3p2 / příznivec
+                                :possessor (s3j1 / Janov
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :temporal (s3u1 / utkání
+                            :ARG0 (s3k1 / klub
+                                :mod (s3o2 / oba
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :ARG2 (s3x1 / #Rcp
+                                :refer-number plural)
+                            :temporal (s3l1 / leden
+                                :mod (s3x2 / 29)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3z1: 3-3
+s3p1: 2-2
+s3i1: 1-1
+s3g1: 9-9,11-11
+s3c1: 8-8
+s3f1: 4-4
+s3f2: 5-5
+s3a1: 6-6
+s3m1: 7-7
+s3o1: 12-13
+s3e1: 0-0
+s3s1: 14-15
+s3v1: 16-17
+s3s2: 21-21
+s3v2: 20-20
+s3p2: 18-18
+s3j1: 19-19
+s3u1: 22-23
+s3k1: 25-25
+s3o2: 24-24
+s3x1: 0-0
+s3l1: 28-28
+s3x2: 26-26
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3g1 :same-entity s1f1)
+            (s3x1 :same-entity s3k1)))
+
+

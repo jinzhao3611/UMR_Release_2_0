@@ -1,0 +1,347 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2        3   4  5
+Words: Kabelová televize bez OK 3
+
+# sentence level graph:
+(s1t1 / televize
+        :mod (s1k1 / kabelový
+            :refer-number singular)
+        :companion (s1o1 / OK
+            :mod (s1x1 / 3))
+        :refer-number singular)
+
+# alignment:
+s1t1: 2-2
+s1k1: 1-1
+s1o1: 3-4
+s1x1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2 3   4 5
+Words: Jihlava ( bod ) -
+
+# sentence level graph:
+(s2j1 / Jihlava
+        :parenthesis (s2b1 / bod)
+        :refer-number singular)
+
+# alignment:
+s2j1: 1-1
+s2b1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2    3  4    5   6  7         8      9        10         11    12   13  14      15       16        17       18
+Words: Během čtyř až pěti let by Jihlavané včetně obyvatel okrajových částí měli mít možnost přijímat kabelovou televizi .
+
+# sentence level graph:
+(s3m1 / mít-028
+        :temporal (s3r1 / rok
+            :mod (s3m2 / math
+                :op1 (s3c1 / čtyři
+                    :refer-number plural)
+                :op2 (s3p1 / pět
+                    :refer-number plural))
+            :refer-number plural)
+        :ARG0 (s3j1 / Jihlavan
+            :companion (s3o1 / obyvatel
+                :possessor (s3c2 / část
+                    :mod (s3o2 / okrajový
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :predicative-noun (s3m3 / možnost
+            :ARG0 s3j1
+            :ARG1 (s3p2 / přijímat-006
+                :ARG0 s3j1
+                :ARG1 (s3t1 / televize
+                    :mod (s3k1 / kabelový
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect activity)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s3m1: 6-6,12-13
+s3r1: 1-1,5-5
+s3m2: 3-3
+s3c1: 2-2
+s3p1: 4-4
+s3j1: 7-7
+s3o1: 8-9
+s3c2: 11-11
+s3o2: 10-10
+s3m3: 14-14
+s3p2: 15-15
+s3t1: 17-17
+s3k1: 16-16
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3t1 :same-entity s1t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2       3    4    5         6          7  8     9     10       11   12
+Words: Několik prvních domů bude připojeno nejpozději do konce ledna příštího roku .
+
+# sentence level graph:
+(s4p1 / připojit-001
+        :ARG1 (s4d1 / dům
+            :mod (s4p2 / první
+                :refer-number plural)
+            :mod (s4n1 / několik)
+            :refer-number plural)
+        :ARG0 (s4e1 / entity)
+        :goal (s4e2 / entity)
+        :temporal (s4p3 / pozdě
+            :temporal (s4k1 / konec
+                :possessor (s4l1 / leden
+                    :possessor (s4r1 / rok
+                        :mod (s4p4 / příští
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4p1: 4-5
+s4d1: 3-3
+s4p2: 2-2
+s4n1: 1-1
+s4e1: 0-0
+s4e2: 0-0
+s4p3: 6-6
+s4k1: 7-8
+s4l1: 9-9
+s4r1: 11-11
+s4p4: 10-10
+
+# document level annotation:
+(s4s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1   2        3  4    5          6        7        8       9  10     11       12          13          14  15      16 17      18          19      20    21
+Words: Síť vybuduje a  bude provozovat Kabelová televize Jihlava ,  kterou utvořily společnosti Elektronika Tvs Příbram a  Philips Komunikační systémy Praha .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5v1 / vybudovat-001
+            :ARG1 (s5s1 / síť
+                :refer-number singular)
+            :ARG0 (s5t1 / televize
+                :mod (s5k1 / Kabelový
+                    :refer-number singular)
+                :mod (s5j1 / Jihlava
+                    :refer-number singular)
+                :ARG1-of (s5u1 / utvořit-001
+                    :ARG0 (s5a2 / and
+                        :op1 (s5s2 / společnost
+                            :name (s5e1 / Elektronika
+                                :mod (s5t2 / Tvs)
+                                :mod (s5p1 / Příbram
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number plural)
+                        :op2 (s5s3 / společnost
+                            :name (s5s4 / systém
+                                :mod (s5k2 / Komunikační
+                                    :refer-number plural)
+                                :mod (s5p2 / Philips
+                                    :refer-number singular)
+                                :mod (s5p3 / Praha
+                                    :refer-number singular)
+                                :refer-number plural)
+                            :refer-number plural))
+                    :refer-number plural
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :op2 (s5p4 / provozovat-001
+            :ARG1 s5s1
+            :ARG0 s5t1
+            :aspect activity))
+
+# alignment:
+s5a1: 3-3
+s5v1: 2-2
+s5s1: 1-1
+s5t1: 7-7,10-10
+s5k1: 6-6
+s5j1: 8-8
+s5u1: 11-11
+s5a2: 16-16
+s5s2: 12-12
+s5e1: 13-13
+s5t2: 14-14
+s5p1: 15-15
+s5s3: 0-0
+s5s4: 19-19
+s5k2: 18-18
+s5p2: 17-17
+s5p3: 20-20
+s5p4: 4-5
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5j1 :same-entity s2j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2        3      4     5  6     7       8        9      10 11 12     13       14 15      16     17 18  19 20 21 22    23    24      25        26 27        28           29 30           31      32
+Words: Podle zástupců těchto firem ,  které vyhrály výběrové řízení ,  má určité zpoždění v  Jihlavě výhodu v  tom ,  že se město vyhne potížím plynoucím z  používání nepovolených a  nekvalitních systémů .
+
+# sentence level graph:
+(s6m1 / mít-008
+        :regard (s6z1 / zástupce
+            :ARG1 (s6f1 / firma
+                :mod (s6t1 / tento
+                    :refer-number plural)
+                :ARG0-of (s6v1 / vyhrát-001
+                    :ARG1 (s6r1 / řízení
+                        :mod (s6v2 / výběrový
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural
+                    :aspect performance)
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s6z2 / zpoždění
+            :ARG0 (s6e1 / entity)
+            :place (s6j1 / Jihlava
+                :refer-number singular)
+            :mod (s6u1 / určitý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s6v3 / výhoda
+            :ARG1 (s6v4 / vyhnout-se-001
+                :ARG0 (s6m2 / město
+                    :refer-number singular)
+                :ARG1 (s6p1 / potíž
+                    :mod (s6p2 / plynoucí
+                        :ARG1 (s6p3 / používání
+                            :ARG0 (s6e2 / entity)
+                            :ARG1 (s6a1 / and
+                                :op1 (s6s1 / systém
+                                    :mod (s6p4 / povolený
+                                        :refer-number plural
+                                        :polarity -)
+                                    :refer-number plural)
+                                :op2 (s6s2 / systém
+                                    :mod (s6k1 / kvalitní
+                                        :refer-number plural
+                                        :polarity -)
+                                    :refer-number plural))
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s6m1: 11-11
+s6z1: 1-2
+s6f1: 4-4,6-6
+s6t1: 3-3
+s6v1: 7-7
+s6r1: 9-9
+s6v2: 8-8
+s6z2: 13-13
+s6e1: 0-0
+s6j1: 14-15
+s6u1: 12-12
+s6v3: 16-16
+s6v4: 17-18,20-21,23-23
+s6m2: 22-22
+s6p1: 24-24
+s6p2: 25-25
+s6p3: 26-27
+s6e2: 0-0
+s6a1: 29-29
+s6s1: 0-0
+s6p4: 28-28
+s6s2: 31-31
+s6k1: 30-30
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6f1 :same-entity s5a2)
+            (s6j1 :same-entity s5j1)
+            (s6m2 :same-entity s6j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2        3        4        5        6     7  8 9
+Words: Bohužel současné podmínky neumožní připojit kanál OK 3 .
+
+# sentence level graph:
+(s7u1 / umožnit-001
+        :clausal-marker (s7b1 / bohužel)
+        :ARG0 (s7p1 / podmínka
+            :mod (s7s1 / současný
+                :refer-number plural)
+            :refer-number plural)
+        :ARG2 (s7e1 / entity)
+        :ARG1 (s7p2 / připojit-001
+            :ARG0 s7e1
+            :goal (s7e2 / entity)
+            :ARG1 (s7k1 / kanál
+                :name (s7o1 / OK
+                    :mod (s7x2 / 3))
+                :refer-number singular)
+            :aspect performance)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s7u1: 4-4
+s7b1: 1-1
+s7p1: 3-3
+s7s1: 2-2
+s7e1: 0-0
+s7p2: 5-5
+s7e2: 0-0
+s7k1: 6-6
+s7o1: 7-7
+s7x2: 8-8
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7k1 :same-entity s1o1)))
+
+

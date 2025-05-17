@@ -1,0 +1,354 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2     3           4      5          6          7       8      9  10      11      12      13    14  15     16    17
+Words: Federální vláda pozastavila prodej amerických ukládacích cenných papírů ,  protože Kongres nezvedl strop pro vládní dluhy .
+
+# sentence level graph:
+(s1p1 / pozastavit-001
+        :ARG0 (s1v1 / vláda
+            :mod (s1f1 / federální
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1p2 / prodej
+            :mod (s1p3 / papír
+                :mod (s1a1 / americký
+                    :refer-number plural)
+                :mod (s1u1 / ukládací
+                    :refer-number plural)
+                :mod (s1c1 / cenný
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :cause (s1z1 / zvednout-001
+            :ARG0 (s1k1 / Kongres
+                :refer-number singular)
+            :ARG1 (s1s1 / strop
+                :affectee (s1d1 / dluh
+                    :mod (s1v2 / vládní
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance
+            :polarity -)
+        :aspect performance)
+
+# alignment:
+s1p1: 3-3
+s1v1: 2-2
+s1f1: 1-1
+s1p2: 4-4
+s1p3: 8-8
+s1a1: 5-5
+s1u1: 6-6
+s1c1: 7-7
+s1z1: 10-10,12-12
+s1k1: 11-11
+s1s1: 13-13
+s1d1: 14-14,16-16
+s1v2: 15-15
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1            2       3      4  5  6     7       8     9  10   11    12        13      14    15   16        17
+Words: Ministerstvo financí uvedlo ,  že dokud Kongres jedná ,  není vláda oprávněna vydávat žádné nové dluhopisy .
+
+# sentence level graph:
+(s2u1 / uvést-007
+        :ARG0 (s2m1 / ministerstvo
+            :mod (s2f1 / finance
+                :refer-number plural)
+            :refer-number singular)
+        :effect (s2b1 / být-007
+            :temporal (s2j1 / jednat-001
+                :ARG1 (s2e1 / entity
+                    :refer-number singular)
+                :ARG2 (s2e2 / entity)
+                :ARG0 (s2k1 / Kongres
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :ARG0 (s2v1 / vláda
+                :refer-number singular)
+            :ARG1 (s2o1 / oprávněný
+                :ARG1 (s2v2 / vydávat-006
+                    :ARG0 s2v1
+                    :ARG1 (s2d1 / dluhopis
+                        :mod (s2z1 / žádný
+                            :refer-number plural)
+                        :mod (s2n1 / nový
+                            :refer-number plural)
+                        :refer-number plural)
+                    :aspect habitual))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s2u1: 3-3
+s2m1: 1-1
+s2f1: 2-2
+s2b1: 5-5,10-10
+s2j1: 6-6,8-8
+s2e1: 0-0
+s2e2: 0-0
+s2k1: 7-7
+s2v1: 11-11
+s2o1: 12-12
+s2v2: 13-13
+s2d1: 16-16
+s2z1: 14-14
+s2n1: 15-15
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2e1 :same-event s1z1)
+            (s2k1 :same-entity s1k1)
+            (s2v1 :same-entity s1v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2         3  4         5        6  7       8      9  10   11      12     13 14   15      16     17
+Words: Vládní oprávnění k  uzavírání výpůjček o  půlnoci kleslo z  2.87 bilionů dolarů na 2.80 bilionů dolarů .
+
+# sentence level graph:
+(s3k1 / klesnout-001
+        :ARG0 (s3o1 / oprávnění
+            :mod (s3v1 / vládní
+                :refer-number singular)
+            :mod (s3u1 / uzavírání
+                :ARG0 (s3e1 / entity)
+                :ARG1 (s3v2 / výpůjčka
+                    :refer-number plural)
+                :temporal (s3p1 / půlnoc
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :source (s3b1 / bilion
+            :mod (s3x1 / 2.87)
+            :mod (s3d1 / dolar
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s3b2 / bilion
+            :mod (s3x2 / 2.80)
+            :mod (s3d2 / dolar
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3k1: 8-8
+s3o1: 2-2
+s3v1: 1-1
+s3u1: 3-4
+s3e1: 0-0
+s3v2: 5-5
+s3p1: 6-7
+s3b1: 9-9,11-11
+s3x1: 10-10
+s3d1: 12-12
+s3b2: 13-13,15-15
+s3x2: 14-14
+s3d2: 16-16
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1           2  3       4         5      6  7         8  9    10 11        12   13 14           15    16
+Words: Legislativa na zvýšení dluhového stropu je zapletena v  boji o  snižování daní z  kapitálového zisku .
+
+# sentence level graph:
+(s4b1 / být-007
+        :ARG0 (s4l1 / legislativa
+            :purpose (s4z1 / zvýšení
+                :ARG0 (s4e1 / entity
+                    :refer-number singular)
+                :ARG1 (s4s1 / strop
+                    :mod (s4d1 / dluhový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s4z2 / zapletený
+            :place (s4b2 / boj
+                :purpose (s4s2 / snižování
+                    :ARG0 (s4e2 / entity)
+                    :ARG1 (s4d2 / daň
+                        :mod (s4z3 / zisk
+                            :mod (s4k1 / kapitálový
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4b1: 6-6
+s4l1: 1-1
+s4z1: 2-3
+s4e1: 0-0
+s4s1: 5-5
+s4d1: 4-4
+s4z2: 7-7
+s4b2: 8-9
+s4s2: 10-11
+s4e2: 0-0
+s4d2: 12-12
+s4z3: 13-13,15-15
+s4k1: 14-14
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s2k1)
+            (s4s1 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1        2             3           4       5      6  7   8       9      10 11  12      13     14 15        16       17     18    19
+Words: Sněmovna reprezentantů odhlasovala zvýšení stropu na 3.1 bilionu dolarů ,  ale jednání Senátu je očekáváno nejdříve příští týden .
+
+# sentence level graph:
+(s5b1 / but-91
+        :ARG1 (s5o1 / odhlasovat-001
+            :ARG0 (s5s1 / Sněmovna
+                :mod (s5r1 / reprezentant
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG1 (s5z1 / zvýšení
+                :ARG0 (s5e1 / entity)
+                :ARG1 (s5s2 / strop
+                    :refer-number singular)
+                :effect (s5b2 / bilion
+                    :mod (s5x1 / 3.1)
+                    :mod (s5d1 / dolar
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :ARG2 (s5o2 / očekávat-002
+            :ARG0 (s5e2 / entity)
+            :ARG1 (s5j1 / jednání
+                :ARG1 s5z1
+                :ARG2 (s5e3 / entity)
+                :ARG0 (s5s3 / Senát
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s5t1 / týden
+                :clausal-marker (s5b3 / brzy)
+                :mod (s5p1 / příští
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity))
+
+# alignment:
+s5b1: 11-11
+s5o1: 3-3
+s5s1: 1-1
+s5r1: 2-2
+s5z1: 4-4
+s5e1: 0-0
+s5s2: 5-5
+s5b2: 6-6,8-8
+s5x1: 7-7
+s5d1: 9-9
+s5o2: 14-15
+s5e2: 0-0
+s5j1: 12-12
+s5e3: 0-0
+s5s3: 13-13
+s5t1: 18-18
+s5b3: 16-16
+s5p1: 17-17
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5z1 :same-entity s4z1)
+            (s5e1 :same-entity s4e1)
+            (s5s2 :same-entity s4s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1            2       3      4  5  6   7        8     9  10 11        12 13    14      15 16 17   18     19     20
+Words: Ministerstvo financí uvedlo ,  že USA promešká lhůtu 9  .  listopadu ,  pokud Kongres do té doby nebude jednat .
+
+# sentence level graph:
+(s6u1 / uvést-007
+        :ARG0 (s6m1 / ministerstvo
+            :mod (s6f1 / finance
+                :refer-number plural)
+            :refer-number singular)
+        :effect (s6p1 / promeškat-001
+            :ARG0 (s6x1 / #Idph
+                :name (s6u2 / USA))
+            :ARG1 (s6l1 / lhůta
+                :mod (s6l2 / listopad
+                    :mod (s6x2 / 9)
+                    :refer-number singular)
+                :refer-number singular)
+            :condition (s6j1 / jednat-001
+                :ARG1 (s6e1 / entity)
+                :ARG2 (s6e2 / entity)
+                :ARG0 (s6k1 / Kongres
+                    :refer-number singular)
+                :temporal (s6d1 / doba
+                    :mod (s6t1 / ten
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect activity
+                :polarity -)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6u1: 3-3
+s6m1: 1-1
+s6f1: 2-2
+s6p1: 5-5,7-7
+s6x1: 0-0
+s6u2: 6-6
+s6l1: 8-8
+s6l2: 11-11
+s6x2: 9-10
+s6j1: 13-13,18-19
+s6e1: 0-0
+s6e2: 0-0
+s6k1: 14-14
+s6d1: 15-15,17-17
+s6t1: 16-16
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6m1 :same-entity s2m1)
+            (s6e1 :same-entity s5z1)
+            (s6k1 :same-entity s5e1)
+            (s6d1 :same-entity s6l2)))
+
+

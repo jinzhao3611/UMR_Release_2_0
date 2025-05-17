@@ -1,0 +1,207 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2     3
+Words: Polské akcie spadly
+
+# sentence level graph:
+(s1s1 / spadnout-001
+        :ARG0 (s1a1 / akcie
+            :mod (s1p1 / polský
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s1s1: 3-3
+s1a1: 2-2
+s1p1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2
+Words: Varšava -
+
+# sentence level graph:
+(s2v1 / Varšava
+        :refer-number singular)
+
+# alignment:
+s2v1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2      3     4           5       6         7       8         9  10    11 12    13     14 15        16      17    18       19 20     21     22  23
+Words: Pondělní pokles místo očekávaného oživení postrašil spoustu investorů ,  takže v  úterý nastal na varšavské akciové burze výprodej a  prudký propad cen .
+
+# sentence level graph:
+(s3h1 / have-result-91
+        :ARG1 (s3p1 / postrašit-001
+            :ARG0 (s3p2 / pokles
+                :mod (s3p3 / pondělní
+                    :refer-number singular)
+                :refer-number singular)
+            :substitute (s3o1 / oživení
+                :ARG0 (s3e1 / entity)
+                :manner (s3o2 / očekávaný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s3s1 / spousta
+                :mod (s3i1 / investor
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :ARG2 (s3n1 / nastat-001
+            :temporal (s3u1 / úterý
+                :refer-number singular)
+            :place (s3b1 / burza
+                :mod (s3a1 / akciový
+                    :refer-number singular)
+                :mod (s3v1 / varšavský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s3a2 / and
+                :op1 (s3v2 / výprodej
+                    :refer-number singular)
+                :op2 (s3p4 / propad
+                    :ARG0 (s3c1 / cena
+                        :refer-number plural)
+                    :mod (s3p5 / prudký
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s3h1: 10-10
+s3p1: 6-6
+s3p2: 2-2
+s3p3: 1-1
+s3o1: 3-3,5-5
+s3e1: 0-0
+s3o2: 4-4
+s3s1: 7-7
+s3i1: 8-8
+s3n1: 13-13
+s3u1: 11-12
+s3b1: 14-14,17-17
+s3a1: 16-16
+s3v1: 15-15
+s3a2: 19-19
+s3v2: 18-18
+s3p4: 21-21
+s3c1: 22-22
+s3p5: 20-20
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3v1 :same-entity s2v1)
+            (s3p4 :same-event s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2       3    4      5     6     7     8  9   10  11 12       13    14    15 16 17     18 19 20    21         22
+Words: Podle makléřů bude pokles trvat ještě jeden až dva dny a  prodávat budou chtít ti ,  kterým se to zatím nepodařilo .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4t1 / trvat-003
+            :regard (s4m1 / makléř
+                :refer-number plural)
+            :ARG0 (s4p1 / pokles
+                :refer-number singular)
+            :duration (s4d1 / den
+                :clausal-marker (s4j1 / ještě)
+                :mod (s4m2 / math
+                    :op1 (s4j2 / jeden
+                        :refer-number singular)
+                    :op2 (s4d2 / dva
+                        :refer-number plural))
+                :refer-number plural)
+            :aspect activity)
+        :op2 (s4p2 / prodávat-001
+            :ARG1 (s4e1 / entity)
+            :ARG2 (s4e2 / entity)
+            :ARG0 (s4t2 / ten
+                :ARG0-of (s4p3 / podařit-se-001
+                    :ARG1 (s4t3 / ten
+                        :refer-number singular)
+                    :temporal (s4z1 / zatím)
+                    :refer-number singular
+                    :aspect performance
+                    :polarity -)
+                :refer-number plural)
+            :aspect habitual))
+
+# alignment:
+s4a1: 11-11
+s4t1: 3-3,5-5
+s4m1: 1-2
+s4p1: 4-4
+s4d1: 10-10
+s4j1: 6-6
+s4m2: 8-8
+s4j2: 7-7
+s4d2: 9-9
+s4p2: 12-14
+s4e1: 0-0
+s4e2: 0-0
+s4t2: 15-15,17-17
+s4p3: 18-18,21-21
+s4t3: 19-19
+s4z1: 20-20
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4p1 :same-entity s3p4)
+            (s4t3 :same-event s4p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2         3     4  5    6      7
+Words: Delší negativní trend se však nečeká .
+
+# sentence level graph:
+(s5c1 / čekat-002
+        :clausal-marker (s5v1 / však)
+        :ARG1 (s5t1 / trend
+            :mod (s5n1 / negativní
+                :refer-number singular)
+            :mod (s5d1 / dlouhý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5e1 / entity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s5c1: 4-4,6-6
+s5v1: 5-5
+s5t1: 3-3
+s5n1: 2-2
+s5d1: 1-1
+s5e1: 0-0
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5t1 :same-entity s4p1)))
+
+

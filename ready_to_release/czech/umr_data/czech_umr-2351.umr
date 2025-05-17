@@ -1,0 +1,461 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2        3     4     5
+Words: Pivovar Rakovník koupí český FALL
+
+# sentence level graph:
+(s1k1 / koupit-001
+        :ARG1 (s1p1 / pivovar
+            :name (s1r1 / Rakovník
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s1f1 / FALL
+            :mod (s1c1 / český
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1k1: 3-3
+s1p1: 1-1
+s1r1: 2-2
+s1f1: 5-5
+s1c1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2
+Words: Rakovník -
+
+# sentence level graph:
+(s2r1 / Rakovník
+        :refer-number singular)
+
+# alignment:
+s2r1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2     3     4  5       6          7       8     9    10        11   12 13 14   15         16    17 18    19             20     21 22       23      24       25
+Words: Jak uvedl včera na tiskové konferenci majitel firmy FALL František Urik ,  má jeho společnost zájem o  koupi stoprocentního podílu na pivovaru Bohemia Rakovník .
+
+# sentence level graph:
+(s3m1 / mít-025
+        :parenthesis (s3u1 / uvést-007
+            :temporal (s3v1 / včera)
+            :place (s3k1 / konference
+                :mod (s3t1 / tiskový
+                    :refer-number singular)
+                :refer-number singular)
+            :effect s3m1
+            :ARG0 (s3u2 / Urik
+                :mod (s3f1 / František
+                    :refer-number singular)
+                :mod (s3m2 / majitel
+                    :ARG1 (s3f2 / firma
+                        :name (s3f3 / FALL)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :ARG0 (s3s1 / společnost
+            :possessor s3u2
+            :refer-number singular)
+        :predicative-noun (s3z1 / zájem
+            :ARG0 s3s1
+            :ARG1 (s3k2 / koupě
+                :ARG0 s3s1
+                :ARG1 (s3p1 / podíl
+                    :mod (s3s2 / stoprocentní
+                        :refer-number singular)
+                    :place (s3p2 / pivovar
+                        :name (s3b1 / Bohemia
+                            :mod (s3r1 / Rakovník
+                                :refer-number singular))
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s3m1: 13-13
+s3u1: 1-2
+s3v1: 3-3
+s3k1: 4-4,6-6
+s3t1: 5-5
+s3u2: 11-11,14-14
+s3f1: 10-10
+s3m2: 7-7
+s3f2: 8-8
+s3f3: 9-9
+s3s1: 15-15
+s3z1: 16-16
+s3k2: 17-18
+s3p1: 20-20
+s3s2: 19-19
+s3p2: 21-22
+s3b1: 23-23
+s3r1: 24-24
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3f2 :same-entity s1f1)
+            (s3s1 :same-entity s3f2)
+            (s3k2 :same-event s1k1)
+            (s3p2 :same-entity s1p1)
+            (s3r1 :same-entity s2r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2          3      4     5       6        7
+Words: Nová společnost ponese název Pivovar Rakovník .
+
+# sentence level graph:
+(s4n1 / nést-003
+        :ARG0 (s4s1 / společnost
+            :mod (s4n2 / nový
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s4n3 / název
+            :name (s4p1 / pivovar
+                :mod (s4r1 / Rakovník
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4n1: 3-3
+s4s1: 2-2
+s4n2: 1-1
+s4n3: 4-4
+s4p1: 5-5
+s4r1: 6-6
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s1 :same-entity s3p2)
+            (s4r1 :same-entity s3r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2        3    4  5        6      7  8       9       10 11 12      13     14 15    16           17       18
+Words: V  současné době je uzavřena dohoda o  budoucí smlouvě ,  je složena záloha na koupi rakovnického pivovaru .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5u1 / uzavřít-010
+            :temporal (s5d1 / doba
+                :mod (s5s1 / současný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s5e1 / entity)
+            :predicative-noun (s5d2 / dohoda
+                :ARG0 s5e1
+                :ARG2 (s5e2 / entity)
+                :ARG1 (s5s2 / smlouva
+                    :mod (s5b1 / budoucí
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :op2 (s5s3 / složit-001
+            :temporal s5d1
+            :ARG0 s5e1
+            :ARG1 (s5z1 / záloha
+                :purpose (s5k1 / koupě
+                    :ARG1 (s5p1 / pivovar
+                        :mod (s5r1 / rakovnický
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance))
+
+# alignment:
+s5a1: 10-10
+s5u1: 4-5
+s5d2: 6-6
+s5e2: 0-0
+s5s2: 7-7,9-9
+s5b1: 8-8
+s5d1: 1-1,3-3
+s5s1: 2-2
+s5e1: 0-0
+s5s3: 11-12
+s5z1: 13-13
+s5k1: 14-15
+s5p1: 17-17
+s5r1: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5k1 :same-entity s3k2)
+            (s5p1 :same-entity s4s1)
+            (s5r1 :same-entity s4r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2    3     4           5         6        7
+Words: Je také určen harmonogram předávání pivovaru .
+
+# sentence level graph:
+(s6u1 / určit-006
+        :ARG0 (s6e1 / entity)
+        :clausal-marker (s6t1 / také)
+        :ARG1 (s6h1 / harmonogram
+            :possessor (s6p1 / předávání
+                :ARG0 (s6e2 / entity)
+                :ARG2 (s6e3 / entity)
+                :ARG1 (s6p2 / pivovar
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6u1: 1-1,3-3
+s6e1: 0-0
+s6t1: 2-2
+s6h1: 4-4
+s6p1: 5-5
+s6e2: 0-0
+s6e3: 0-0
+s6p2: 6-6
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p2 :same-entity s5p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2        3  4  5     6         7         8  9         10         11         12 13          14   15
+Words: Od pondělka 20 .  února probíhají inventury ,  předávání základních prostředků ,  nemovitostí apod .
+
+# sentence level graph:
+(s7p1 / probíhat-002
+        :temporal (s7p2 / pondělek
+            :possessor (s7u1 / únor
+                :mod (s7x1 / 20)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7a1 / and
+            :op1 (s7i1 / inventura
+                :refer-number plural)
+            :op2 (s7p3 / předávání
+                :ARG0 (s7e1 / entity)
+                :ARG2 (s7e2 / entity)
+                :ARG1 (s7a2 / and
+                    :op1 (s7p4 / prostředek
+                        :mod (s7z1 / základní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :op2 (s7n1 / nemovitost
+                        :refer-number plural))
+                :refer-number plural)
+            :op3 (s7a3 / apod))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7p1: 6-6
+s7p2: 1-2
+s7u1: 5-5
+s7x1: 3-3
+s7a1: 8-8
+s7i1: 7-7
+s7p3: 9-9
+s7e1: 0-0
+s7e2: 0-0
+s7a2: 12-12
+s7p4: 11-11
+s7z1: 10-10
+s7n1: 13-13
+s7a3: 14-14
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2      3  4          5    6  7        8  9  10     11    12     13       14
+Words: V  dohodě je definovaná cena a  podmínky ,  za jakých tento prodej proběhne .
+
+# sentence level graph:
+(s8b1 / být-007
+        :place (s8d1 / dohoda
+            :refer-number singular)
+        :ARG1 (s8d2 / definovaný
+            :refer-number singular)
+        :ARG0 (s8a1 / and
+            :op1 (s8c1 / cena
+                :refer-number singular)
+            :op2 (s8p1 / podmínka
+                :condition-of (s8p2 / proběhnout-003
+                    :ARG0 (s8p3 / prodej
+                        :mod (s8t1 / tento
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect performance)
+                :refer-number plural))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s8b1: 3-3
+s8d1: 1-2
+s8d2: 4-4
+s8a1: 6-6
+s8c1: 5-5
+s8p1: 7-7,9-10
+s8p2: 13-13
+s8p3: 12-12
+s8t1: 11-11
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8d1 :same-entity s5d2)
+            (s8p3 :same-entity s5k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1   2       3    4 5   6 7       8     9
+Words: Nic nebrání tomu , aby k prodeji došlo .
+
+# sentence level graph:
+(s9b1 / bránit-003
+        :ARG0 (s9n1 / nic
+            :refer-number singular
+            :refer-person 3rd
+            :polarity -)
+        :ARG1 (s9d1 / dojít-009
+            :ARG0 (s9p1 / prodej
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s9b1: 2-2
+s9n1: 1-1
+s9d1: 3-3,5-5,8-8
+s9p1: 6-7
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p1 :same-entity s8p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1   2  3   4   5          6          7  8     9      10        11   12
+Words: Ten by měl být uskutečněn nejpozději do konce března letošního roku .
+
+# sentence level graph:
+(s10u1 / uskutečnit-001
+        :ARG1 (s10t1 / ten
+            :refer-number singular)
+        :ARG0 (s10e1 / entity)
+        :temporal (s10p1 / pozdě
+            :temporal (s10k1 / konec
+                :possessor (s10b1 / březen
+                    :possessor (s10r1 / rok
+                        :mod (s10l1 / letošní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s10u1: 2-5
+s10t1: 1-1
+s10e1: 0-0
+s10p1: 6-6
+s10k1: 7-8
+s10b1: 9-9
+s10r1: 11-11
+s10l1: 10-10
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10t1 :same-entity s9p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1    2        3  4          5   6   7      8
+Words: Cena pivovaru je přijatelná pro obě strany .
+
+# sentence level graph:
+(s11b1 / být-007
+        :ARG0 (s11c1 / cena
+            :ARG1 (s11p1 / pivovar
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s11p2 / přijatelný
+            :affectee (s11s1 / strana
+                :mod (s11o1 / oba
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s11b1: 3-3
+s11c1: 1-1
+s11p1: 2-2
+s11p2: 4-4
+s11s1: 5-5,7-7
+s11o1: 6-6
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11p1 :same-entity s6p2)))
+
+

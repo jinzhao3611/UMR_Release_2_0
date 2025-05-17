@@ -1,0 +1,295 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2
+Words: Tragická rvačka
+
+# sentence level graph:
+(s1r1 / rvačka
+        :mod (s1t1 / tragický
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1r1: 2-2
+s1t1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1          2 3   4 5
+Words: Strachotín ( luč ) -
+
+# sentence level graph:
+(s2s1 / Strachotín
+        :parenthesis (s2l1 / luč)
+        :refer-number singular)
+
+# alignment:
+s2s1: 1-1
+s2l1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2        3       4    5     6    7  8        9     10 11          12 13         14
+Words: Tragicky skončila rozepře mezi dvěma muži v  rodinném domku ve Strachotíně na Břeclavsku .
+
+# sentence level graph:
+(s3s1 / skončit-005
+        :manner (s3t1 / tragicky)
+        :ARG0 (s3r1 / rozepře
+            :ARG1 (s3x1 / #Rcp
+                :refer-number plural)
+            :ARG0 (s3m1 / muž
+                :mod (s3d1 / dva
+                    :refer-number plural)
+                :refer-number plural)
+            :place (s3d2 / domek
+                :mod (s3r2 / rodinný
+                    :refer-number singular)
+                :place (s3s2 / Strachotín
+                    :place (s3b1 / Břeclavsko
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3s1: 2-2
+s3t1: 1-1
+s3r1: 3-3
+s3x1: 0-0
+s3m1: 4-4,6-6
+s3d1: 5-5
+s3d2: 7-7,9-9
+s3r2: 8-8
+s3s2: 10-11
+s3b1: 12-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3x1 :same-entity s3m1)
+            (s3s2 :same-entity s2s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2         3      4      5           6  7  8  9  10    11      12 13                14 15 16 17 18 19      20         21      22 23   24  25    26 27 28          29     30    31 32      33    34
+Words: Po předchozí rvačce udeřil dvacetiletý R  .  CH .  svého známého ,  pětadvacetiletého O  .  B  .  ,  kovovou dřevařskou svěrkou do krku tak silně ,  že poškozenému zlomil páteř a  poranil míchu .
+
+# sentence level graph:
+(s4u1 / udeřit-001
+        :temporal (s4r1 / rvačka
+            :mod (s4p1 / předchozí
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4c1 / Ch
+            :mod (s4r2 / R)
+            :mod (s4d1 / dvacetiletý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s4i1 / identity-91
+            :ARG1 (s4z1 / známý
+                :possessor s4c1
+                :refer-number singular)
+            :ARG2 (s4b1 / B
+                :mod (s4o1 / O)
+                :mod (s4p2 / pětadvacetiletý
+                    :refer-number singular)
+                :refer-number singular))
+        :instrument (s4s1 / svěrka
+            :mod (s4d2 / dřevařský
+                :refer-number singular)
+            :mod (s4k1 / kovový
+                :refer-number singular)
+            :refer-number singular)
+        :goal (s4k2 / krk
+            :refer-number singular)
+        :extent (s4s2 / silně
+            :extent (s4t1 / tak
+                :result (s4a1 / and
+                    :op1 (s4z2 / zlomit-001
+                        :affectee (s4p3 / poškozený
+                            :refer-number singular)
+                        :ARG0 s4c1
+                        :ARG1 (s4p4 / páteř
+                            :refer-number singular)
+                        :refer-number singular
+                        :aspect performance)
+                    :op2 (s4p5 / poranit-001
+                        :affectee s4p3
+                        :ARG0 s4c1
+                        :ARG1 (s4m1 / mícha
+                            :refer-number singular)
+                        :refer-number singular
+                        :aspect performance))))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4u1: 4-4
+s4r1: 1-1,3-3
+s4p1: 2-2
+s4c1: 8-8,10-10
+s4r2: 6-6
+s4d1: 5-5
+s4i1: 12-12
+s4z1: 11-11
+s4b1: 16-16
+s4o1: 14-14
+s4p2: 13-13
+s4s1: 21-21
+s4d2: 20-20
+s4k1: 19-19
+s4k2: 22-23
+s4s2: 25-25
+s4t1: 24-24
+s4a1: 31-31
+s4z2: 27-27,29-29
+s4p4: 30-30
+s4p3: 28-28
+s4p5: 27-27,32-32
+s4m1: 33-33
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4r1 :same-entity s1r1)
+            (s4p3 :same-entity s4i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1 2 3 4 5       6       7
+Words: O . B . zranění podlehl .
+
+# sentence level graph:
+(s5p1 / podlehnout-001
+        :ARG0 (s5b1 / B
+            :mod (s5o1 / O)
+            :refer-number singular)
+        :ARG1 (s5z1 / zranění
+            :ARG0 (s5e1 / entity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5p1: 6-6
+s5b1: 3-3
+s5o1: 1-1
+s5z1: 5-5
+s5e1: 0-0
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5b1 :same-entity s4p3)
+            (s5z1 :same-entity s4a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2  3  4  5  6    7  8     9       10     11    12 13        14 15   16  17        18 19      20 21          22
+Words: R  .  CH .  po činu z  domku nejprve uprchl oknem ,  odpoledne se však sám přihlásil na policii v  Hustopečích .
+
+# sentence level graph:
+(s6b1 / but-91
+        :ARG1 (s6u1 / uprchnout-001
+            :ARG0 (s6c1 / Ch
+                :mod (s6r1 / R)
+                :refer-number singular
+                :refer-person 3rd)
+            :temporal (s6c2 / čin
+                :refer-number singular)
+            :start (s6d1 / domek
+                :refer-number singular)
+            :temporal (s6n1 / nejprve)
+            :path (s6o1 / okno
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :ARG2 (s6p1 / přihlásit-se-005
+            :ARG0 s6c1
+            :temporal (s6o2 / odpoledne)
+            :manner (s6s1 / sám
+                :mod-of s6c1
+                :refer-number singular)
+            :goal (s6p2 / policie
+                :place (s6h1 / Hustopeče
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s6b1: 15-15
+s6u1: 10-10
+s6c2: 5-6
+s6d1: 7-8
+s6n1: 9-9
+s6o1: 11-11
+s6c1: 3-3
+s6r1: 1-1
+s6p1: 14-14,17-17
+s6o2: 13-13
+s6s1: 16-16
+s6p2: 18-19
+s6h1: 20-21
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6d1 :same-entity s3d2)
+            (s6c1 :same-entity s4c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2  3      4   5       6   7        8  9      10
+Words: Pachatel je stíhán pro trestný čin ublížení na zdraví .
+
+# sentence level graph:
+(s7s1 / stíhat-001
+        :ARG1 (s7p1 / pachatel
+            :refer-number singular)
+        :ARG0 (s7e1 / entity)
+        :cause (s7c1 / čin
+            :mod (s7t1 / trestný
+                :refer-number singular)
+            :ARG1 (s7u1 / ublížení
+                :ARG0 s7p1
+                :ARG1 (s7e2 / entity)
+                :regard (s7z1 / zdraví
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s7s1: 2-3
+s7p1: 1-1
+s7e1: 0-0
+s7c1: 4-4,6-6
+s7t1: 5-5
+s7u1: 7-7
+s7e2: 0-0
+s7z1: 8-9
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p1 :same-entity s6c1)))
+
+

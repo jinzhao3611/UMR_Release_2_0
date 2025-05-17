@@ -1,0 +1,556 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2  3      4    5       6        7
+Words: Bude se vrchní soud zabývat Wallisem ?
+
+# sentence level graph:
+(s1z1 / zabývat-se-001
+        :ARG0 (s1s1 / soud
+            :mod (s1v1 / vrchní
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1w1 / Wallis
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s1z1: 1-2,5-5
+s1s1: 4-4
+s1v1: 3-3
+s1w1: 6-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2         3   4        5      6  7       8    9     10      11        12    13        14     15     16       17    18       19       20            21     22       23
+Words: Návrh stížnosti pro porušení zákona v  trestní věci proti Václavu Wallisovi včera předložil vrchní státní zástupce Libor Grygárek ministru spravedlnosti Jiřímu Novákovi .
+
+# sentence level graph:
+(s3p1 / předložit-001
+        :ARG1 (s3n1 / návrh
+            :ARG1 (s3s1 / stížnost
+                :cause (s3p2 / porušení
+                    :ARG0 (s3e1 / entity)
+                    :ARG1 (s3z1 / zákon
+                        :refer-number singular)
+                    :regard (s3v1 / věc
+                        :mod (s3t1 / trestní
+                            :refer-number singular)
+                        :affectee (s3w1 / Wallis
+                            :mod (s3v2 / Václav
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3v3 / včera)
+        :ARG0 (s3g1 / Grygárek
+            :mod (s3l1 / Libor
+                :refer-number singular)
+            :mod (s3z2 / zástupce
+                :mod (s3s2 / státní
+                    :refer-number singular)
+                :mod (s3v4 / vrchní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s3n2 / Novák
+            :mod (s3j1 / Jiří
+                :refer-number singular)
+            :mod (s3m1 / ministr
+                :possessor (s3s3 / spravedlnost
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3p1: 13-13
+s3n1: 1-1
+s3s1: 2-2
+s3p2: 3-4
+s3e1: 0-0
+s3z1: 5-5
+s3v1: 6-6,8-8
+s3t1: 7-7
+s3w1: 9-9,11-11
+s3v2: 10-10
+s3v3: 12-12
+s3g1: 18-18
+s3l1: 17-17
+s3z2: 16-16
+s3s2: 15-15
+s3v4: 14-14
+s3n2: 22-22
+s3j1: 21-21
+s3m1: 19-19
+s3s3: 20-20
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3w1 :same-entity s1w1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2  3     4  5       6    7  8       9          10        11    12 13    14 15    16  17     18       19       20 21        22
+Words: Stížnost ,  pokud ji ministr podá ,  napadne rozhodnutí Krajského soudu v  Plzni ,  který věc vrátil státnímu zástupci k  došetření .
+
+# sentence level graph:
+(s4n1 / napadnout-001
+        :ARG0 (s4s1 / stížnost
+            :refer-number singular)
+        :condition (s4p1 / podat-008
+            :ARG0 (s4m1 / ministr
+                :refer-number singular)
+            :ARG2 (s4e1 / entity)
+            :predicative-noun s4s1
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :ARG1 (s4r1 / rozhodnutí
+            :ARG1 (s4e2 / entity)
+            :ARG0 (s4s2 / soud
+                :mod (s4k1 / krajský
+                    :refer-number singular)
+                :place (s4p2 / Plzeň
+                    :refer-number singular)
+                :ARG0-of (s4v1 / vrátit-001
+                    :ARG1 (s4v2 / věc
+                        :refer-number singular)
+                    :ARG2 (s4z1 / zástupce
+                        :mod (s4s3 / státní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :purpose (s4d1 / došetření
+                        :ARG0 (s4e3 / entity)
+                        :ARG1 (s4e4 / entity)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s4n1: 8-8
+s4s1: 1-1,4-4
+s4p1: 3-3,6-6
+s4m1: 5-5
+s4e1: 0-0
+s4r1: 9-9
+s4e2: 0-0
+s4s2: 11-11,15-15
+s4k1: 10-10
+s4p2: 12-13
+s4v1: 17-17
+s4v2: 16-16
+s4z1: 19-19
+s4s3: 18-18
+s4d1: 20-21
+s4e3: 0-0
+s4e4: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s1 :same-entity s3s1)
+            (s4m1 :same-entity s3n2)
+            (s4z1 :same-entity s3z2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1        2  3     4     5
+Words: Grygárek to uvedl včera .
+
+# sentence level graph:
+(s5u1 / uvést-007
+        :ARG0 (s5g1 / Grygárek
+            :refer-number singular)
+        :effect (s5t1 / ten
+            :refer-number singular)
+        :temporal (s5v1 / včera)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5u1: 3-3
+s5g1: 1-1
+s5t1: 2-2
+s5v1: 4-4
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5g1 :same-entity s4z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1              2     3   4        5          6  7  8        9       10   11     12  13 14          15     16 17       18       19 20        21 22 23      24 25    26 27    28 29         30
+Words: Zastupitelství podle něj shledává nezákonným ,  že odvolací Krajský soud vrátil věc do přípravného řízení (  státnímu zástupci k  došetření )  za situace ,  která je zralá k  rozhodnutí .
+
+# sentence level graph:
+(s6s1 / shledávat-001
+        :ARG0 (s6z1 / zastupitelství
+            :refer-number singular)
+        :regard (s6e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :effect (s6z2 / zákonný
+            :refer-number singular
+            :polarity -)
+        :ARG1 (s6v1 / vrátit-001
+            :ARG0 (s6s2 / soud
+                :mod (s6o1 / odvolací
+                    :refer-number singular)
+                :mod (s6k1 / krajský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s6v2 / věc
+                :refer-number singular)
+            :goal (s6r1 / řízení
+                :mod (s6p1 / přípravný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s6z3 / zástupce
+                :mod (s6s3 / státní
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :purpose (s6d1 / došetření
+                :ARG0 (s6e2 / entity)
+                :ARG1 (s6e3 / entity)
+                :refer-number singular)
+            :condition (s6s4 / situace
+                :ARG0-of (s6b1 / být-007
+                    :ARG1 (s6z4 / zralý
+                        :purpose (s6r2 / rozhodnutí
+                            :ARG0 (s6e4 / entity)
+                            :ARG1 (s6e5 / entity)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect habitual)
+
+# alignment:
+s6s1: 4-4
+s6z1: 1-1
+s6e1: 2-3
+s6z2: 5-5
+s6v1: 7-7,11-11
+s6s2: 10-10
+s6o1: 8-8
+s6k1: 9-9
+s6v2: 12-12
+s6r1: 13-13,15-15
+s6p1: 14-14
+s6z3: 18-18
+s6s3: 17-17
+s6d1: 19-20
+s6e2: 0-0
+s6e3: 0-0
+s6s4: 22-23,25-25
+s6b1: 26-26
+s6z4: 27-27
+s6r2: 28-29
+s6e4: 0-0
+s6e5: 0-0
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5g1)
+            (s6s2 :same-entity s4s2)
+            (s6z3 :same-entity s6e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1           2        3              4  5  6   7  8  9    10     11        12     13          14 15    16    17 18 19     20  21      22      23       24    25       26        27 28    29       30
+Words: Nezákonnost spatřuje zastupitelství i  v  tom ,  že soud špatně zhodnotil právní kvalifikaci ,  pokud tvrdí ,  že Wallis při páchání trestné činnosti nebyl veřejným činitelem ,  uvedl Grygárek .
+
+# sentence level graph:
+(s7u1 / uvést-007
+        :ARG0 (s7g1 / Grygárek
+            :refer-number singular)
+        :effect (s7s1 / spatřovat-001
+            :ARG1 (s7z1 / zákonnost
+                :refer-number singular
+                :polarity -)
+            :ARG0 (s7z2 / zastupitelství
+                :refer-number singular)
+            :clausal-marker (s7i1 / i)
+            :effect (s7z3 / zhodnotit-002
+                :ARG0 (s7s2 / soud
+                    :refer-number singular)
+                :manner (s7s3 / špatně)
+                :ARG1 (s7k1 / kvalifikace
+                    :mod (s7p1 / právní
+                        :refer-number singular)
+                    :refer-number singular)
+                :condition (s7t1 / tvrdit-002
+                    :ARG0 s7s2
+                    :effect (s7b1 / být-007
+                        :ARG0 (s7w1 / Wallis
+                            :refer-number singular)
+                        :temporal (s7p2 / páchání
+                            :ARG0 (s7e1 / entity)
+                            :ARG1 (s7c1 / činnost
+                                :mod (s7t2 / trestný
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG1 (s7c2 / činitel
+                            :mod (s7v1 / veřejný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :aspect activity
+                        :polarity -)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7u1: 28-28
+s7g1: 29-29
+s7s1: 2-2
+s7z1: 1-1
+s7z2: 3-3
+s7i1: 4-4
+s7z3: 5-6,8-8,11-11
+s7s2: 9-9
+s7s3: 10-10
+s7k1: 13-13
+s7p1: 12-12
+s7t1: 15-16
+s7b1: 18-18,24-24
+s7w1: 19-19
+s7p2: 20-21
+s7e1: 0-0
+s7c1: 23-23
+s7t2: 22-22
+s7c2: 26-26
+s7v1: 25-25
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7g1 :same-entity s6z3)
+            (s7s2 :same-entity s6s2)
+            (s7w1 :same-entity s3w1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2       3        4    5  6    7  8  9          10     11   12 13    14
+Words: Pokud ministr stížnost podá ,  bude o  ní rozhodovat Vrchní soud v  Praze .
+
+# sentence level graph:
+(s8r1 / rozhodovat-002
+        :condition (s8p1 / podat-008
+            :ARG0 (s8m1 / ministr
+                :refer-number singular)
+            :predicative-noun (s8s1 / stížnost
+                :ARG0 s8m1
+                :ARG1 (s8e1 / entity)
+                :ARG2 s8e2
+                :refer-number singular)
+            :ARG2 (s8e2 / entity)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :ARG1 s8s1
+        :ARG0 (s8s2 / soud
+            :mod (s8v1 / vrchní
+                :refer-number singular)
+            :place (s8p2 / Praha
+                :refer-number singular)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s8r1: 6-6,9-9
+s8p1: 1-1,4-4
+s8m1: 2-2
+s8s1: 3-3,7-8
+s8e1: 0-0
+s8e2: 0-0
+s8s2: 11-11
+s8v1: 10-10
+s8p2: 12-13
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8m1 :same-entity s4m1)
+            (s8s2 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1   2   3          4         5     6       7  8    9        10 11   12   13    14 15        16    17   18      19 20  21 22   23    24     25 26      27
+Words: Ten buď rozhodnutí Krajského soudu potvrdí ,  nebo usnesení či jeho část zruší a  Krajskému soudu může nařídit ,  aby ve věci znovu jednal a  rozhodl .
+
+# sentence level graph:
+(s9a1 / and
+        :op1 (s9o1 / or
+            :op1 (s9p1 / potvrdit-001
+                :ARG0 s9t1
+                :ARG1 (s9r1 / rozhodnutí
+                    :ARG0 (s9s1 / soud
+                        :mod (s9k1 / krajský
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :ARG1 (s9e1 / entity)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :op2 (s9z1 / zrušit-001
+                :ARG0 s9t1
+                :ARG1 (s9a2 / and
+                    :op1 (s9u1 / usnesení
+                        :refer-number singular)
+                    :op2 (s9c1 / část
+                        :mod s9u1
+                        :refer-number singular))
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance))
+        :op2 (s9n1 / nařídit-001
+            :ARG0 (s9t1 / ten
+                :refer-number singular)
+            :ARG2 (s9s2 / soud
+                :mod (s9k2 / krajský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s9a3 / and
+                :op1 (s9j1 / jednat-001
+                    :ARG0 s9s2
+                    :ARG1 (s9v1 / věc
+                        :refer-number singular)
+                    :ARG2 (s9e2 / entity)
+                    :temporal (s9z2 / znovu)
+                    :refer-number singular
+                    :aspect activity)
+                :op2 (s9r2 / rozhodnout-002
+                    :ARG0 s9s2
+                    :ARG1 (s9e3 / entity)
+                    :refer-number singular
+                    :aspect performance))
+            :aspect performance))
+
+# alignment:
+s9a1: 14-14
+s9o1: 2-2,8-8
+s9p1: 6-6
+s9r1: 3-3
+s9s1: 5-5
+s9k1: 4-4
+s9e1: 0-0
+s9z1: 13-13
+s9a2: 10-10
+s9u1: 9-9,11-11
+s9c1: 12-12
+s9n1: 17-18
+s9s2: 16-16
+s9k2: 15-15
+s9a3: 25-25
+s9j1: 20-20,24-24
+s9v1: 21-22
+s9e2: 0-0
+s9z2: 23-23
+s9r2: 20-20,26-26
+s9e3: 0-0
+s9t1: 1-1
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9s1 :same-entity s7s2)
+            (s9s2 :same-entity s9s1)
+            (s9t1 :same-entity s8s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1      2    3    4    5   6      7     8       9      10
+Words: Vrchní soud také může věc vrátit soudu prvního stupně .
+
+# sentence level graph:
+(s10v1 / vrátit-001
+        :ARG0 (s10s1 / soud
+            :mod (s10v2 / vrchní
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s10v3 / věc
+            :refer-number singular)
+        :clausal-marker (s10t1 / také)
+        :ARG2 (s10s2 / soud
+            :mod (s10s3 / stupeň
+                :mod (s10p1 / první
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s10v1: 4-4,6-6
+s10s1: 2-2
+s10v2: 1-1
+s10v3: 5-5
+s10t1: 3-3
+s10s2: 7-7
+s10s3: 9-9
+s10p1: 8-8
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10s1 :same-entity s9t1)))
+
+

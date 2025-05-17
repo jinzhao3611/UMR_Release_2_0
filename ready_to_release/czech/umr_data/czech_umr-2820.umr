@@ -1,0 +1,90 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2         3     4  5         6         7           8   9  10       11    12        13 14      15    16         17
+Words: Další cizorodou látku ,  tentokrát fenolický antioxidant BHT ,  objevili včera odborníci v  závadné vodce Stoličnaja .
+
+# sentence level graph:
+(s1o1 / objevit-001
+        :ARG1 (s1i1 / identity-91
+            :ARG1 (s1l1 / látka
+                :mod (s1c1 / cizorodý
+                    :refer-number singular)
+                :mod (s1d1 / další
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s1t1 / tentokrát)
+            :ARG2 (s1a1 / antioxidant
+                :mod (s1f1 / fenolický
+                    :refer-number singular)
+                :name (s1b1 / BHT)
+                :refer-number singular))
+        :temporal (s1v1 / včera)
+        :ARG0 (s1o2 / odborník
+            :refer-number plural)
+        :place (s1v2 / vodka
+            :name (s1s1 / Stoličnaja
+                :refer-number singular)
+            :mod (s1z1 / závadný
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s1o1: 10-10
+s1i1: 4-4
+s1l1: 3-3
+s1c1: 2-2
+s1d1: 1-1
+s1t1: 5-5
+s1a1: 7-7
+s1f1: 6-6
+s1b1: 8-8
+s1v1: 11-11
+s1o2: 12-12
+s1v2: 13-13,15-15
+s1s1: 16-16
+s1z1: 14-14
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1             2     3  4        5  6         7    8  9        10      11
+Words: Nepoživatelná vodka se objevila na tuzemském trhu v  minulých týdnech .
+
+# sentence level graph:
+(s2o1 / objevit-se-001
+        :ARG0 (s2v1 / vodka
+            :mod (s2p1 / poživatelný
+                :refer-number singular
+                :polarity -)
+            :refer-number singular)
+        :place (s2t1 / trh
+            :mod (s2t2 / tuzemský
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s2t3 / týden
+            :mod (s2m1 / minulý
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s2o1: 3-4
+s2v1: 2-2
+s2p1: 1-1
+s2t1: 5-5,7-7
+s2t2: 6-6
+s2t3: 8-8,10-10
+s2m1: 9-9
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2v1 :same-entity s1v2)))
+
+

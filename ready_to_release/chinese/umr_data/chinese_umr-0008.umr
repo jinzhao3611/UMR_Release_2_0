@@ -1,0 +1,732 @@
+################################################################################
+# meta-info
+# :: snt1
+Index: 1    2    3  4    5  6            7     8  9 10 11   12     13 14 15   16     17     18 19   20 21     22   23 24   25 26 27 28 29 30   31   32 33 34   35 36   37 38 39   40 41   42   43 44
+Words: 3 美元   金币   （  英语   ：  three-dollar piece ）  是  由  美国   铸币局    该  局  首席   雕刻师    詹姆斯    ·  巴顿   ·  朗埃克    设计   ，  1853 年  2  月  21 日  获得   授权   ，  于  1854 至  1889 年  间  生产   的  一种   金币   。 
+
+# sentence level graph:
+(s1x / 设计-01
+	:ARG0 (s1x2 / 雕刻师
+		:name (s1n / name
+			:op1 "詹姆斯"
+			:op2 "巴顿"
+			:op3 "朗埃克")
+		:ARG1-of (s1h / have-rel-role-91
+			:ARG2 (s1x7 / 首席
+				:possessor (s1g / government-organization
+					:name (s1n3 / name
+						:op1 "铸币局")
+					:possessor (s1c / country
+						:name (s1n2 / name
+							:op1 "美国"))))))
+	:ARG1 (s1x4 / 金币
+		:name (s1t / three-dollar-piece)
+		:mod (s1m / monetary-quantity
+			:quant 3
+			:unit (s1x3 / 美元))
+		:ARG0-of (s2x8 / 获得-01
+			:ARG1 (s2x9 / 授权)
+			:aspect performance
+			:time (s1d / date-entity
+				:year 1853
+				:month 2
+				:day 21)
+			:aspect performance)
+		:ARG1-of (s1x6 / 生产-01
+			:aspect performance
+			:year2 (s1d2 / date-interval
+				:op1 1853
+				:op2 1889)
+			:aspect performance))
+	:aspect performance)
+
+# alignment:
+s1c: 0-0
+s1d: 0-0
+s1d2: 0-0
+s1g: 0-0
+s1h: 0-0
+s1m: 0-0
+s1n: 0-0
+s1n2: 0-0
+s1n3: 0-0
+s1t: 8-8
+s1x: 23-23
+s1x2: 17-17
+s1x3: 2-2
+s1x4: 3-3
+s1x6: 40-40
+s1x7: 16-16
+s2x8: 31-31
+s2x9: 32-32
+
+# document level annotation:
+(s1s0 / sentence
+	:temporal ((document-creation-time :after s1x)
+		(s1x :after s2x)
+		(s1x :after s1x6))
+	:modal ((author :full-affirmative s1x)
+		(root :modal author)
+		(author :full-affirmative s2x8)
+		(author :full-affirmative s1x6)
+		(author :full-affirmative s1x)
+		(author :full-affirmative s2x)))
+
+
+################################################################################
+# meta-info
+# :: snt2
+Index:    1    2    3    4    5      6    7    8  9   10   11   12 13   14 15   16 17   18 19   20 21   22 23   24 25   26 27   28 29   30   31 32   33 34
+Words: 硬币   正面   刻有   头戴   美洲   原住民    公主   头饰   的  自由   女神   头像   ，  背面   的  中间   是  面值   和  年份   ，  周围   有  玉米   、  小麦   、  棉花   和  烟草   组成   的  花环   。 
+
+# sentence level graph:
+(s2a / and
+	:op1 (s2x / 刻有-01
+		:ARG1 (s2c / 硬币)
+		:ARG2 (s2x2 / 头像
+			:ARG1-of (s2i2 / identity-91
+				:ARG2 (s2x3 / 女神
+					:mod (s2x4 / 自由)
+					:ARG0-of (s2x13 / 头戴-01
+						:ARG1 (s2x14 / 头饰
+							:possessor (s2x6 / 公主
+								:ARG1-of (s2h / have-rel-role-91
+									:ARG2 (s2x8 / 原住民
+										:place (s2x5 / 美洲)))))))))
+		:aspect state
+		:place (s2x7 / 正面))
+	:op2 (s2i4 / identity-91
+		:ARG1 s2c
+		:ARG2 (s2a3 / and
+			:op1 (s2x12 / 年份)
+			:op2 (s2x9 / 面值))
+		:place (s2x10 / 背面
+			:part (s2x11 / 中间))
+		:aspect state)
+	:op3 (s2x15 / 有-03
+		:ARG1 (s2s2 / s2c)
+		:ARG2 (s2w / 花环
+			:ARG0-of (s2x17 / 组成-01
+				:ARG1 (s2a2 / and
+					:op1 (s2x21 / 玉米)
+					:op2 (s2x20 / 小麦)
+					:op3 (s2x19 / 棉花)
+					:op4 (s2x18 / 烟草))))
+		:aspect state
+		:place (s2x16 / 周围)))
+
+# alignment:
+s2a: 0-0
+s2a2: 0-0
+s2a3: 0-0
+s2c: 1-1
+s2h: 0-0
+s2i2: 0-0
+s2i4: 0-0
+s2s2: 0-0
+s2w: 33-33
+s2x: 3-3
+s2x10: 14-14
+s2x11: 16-16
+s2x12: 20-20
+s2x13: 4-4
+s2x14: 8-8
+s2x15: 23-23
+s2x16: 22-22
+s2x17: 31-31
+s2x18: 30-30
+s2x19: 28-28
+s2x2: 12-12
+s2x20: 26-26
+s2x21: 24-24
+s2x3: 11-11
+s2x4: 10-10
+s2x5: 5-5
+s2x6: 7-7
+s2x7: 2-2
+s2x8: 6-6
+s2x9: 18-18
+
+# document level annotation:
+(s2s0 / sentence
+	:temporal ((document-creation-time :before s2x)
+		(document-creation-time :before s2i4)
+		(present-reference:overlap s2x)
+		(present-reference:overlap s2i4)
+		(present-reference:overlap s2x15))
+	:modal ((author :full-affirmative s2x)
+		(root :modal author)
+		(author :full-affirmative s2x)
+		(author :full-affirmative s2x15)
+		(author :full-affirmative s2i4))
+	:coref ((s1x4 :same-entity s2c)))
+
+
+################################################################################
+# meta-info
+# :: snt3
+Index:    1  2  3    4    5    6    7    8 9   10   11 12   13   14   15 16   17 18   19   20 21 22 23   24   25 26       27 28   29   30 31
+Words: 1851 年  ，  联邦   国会   授权   发行   银质   3 美分   硬币   ，  以便   人们   今后   在  购买   3  美分   邮票   时  不  再  需要   使用   很  不得人心     的  铜质   分币   。 
+
+# sentence level graph:
+(s3x / 授权-01
+	:ARG0 (s3g / government-organization
+		:name (s3n / name
+			:op1 "联邦"
+			:op2 "国会"))
+	:ARG1 (s3x2 / 发行-01
+		:ARG1 (s3x3 / 硬币
+			:unit (s3x4 / 美分)
+			:quant 3
+			:material (s3x15 / 银质))
+		:aspect performance)
+	:aspect performance
+	:time (s3d / date-entity
+		:year 1851)
+	:purpose (s3x10 / 需要-01
+		:ARG0 (s3x5 / 人们)
+		:ARG1 (s3x14 / 使用-01
+			:ARG1 (s3x7 / 分币
+				:material (s3x12 / 铜质)
+				:mod (s3x13 / 不得人心))
+			:aspect endeavor
+			:temporal (s3x6 / 时
+				:op1 (s3x9 / 购买-01
+					:ARG0 s3x5
+					:ARG1 (s3x19 / 邮票
+						:quant 3
+						:unit (s3x20 / 美分))
+					:temporal (s3x16 / 今后)
+					:aspect activity)))))
+
+# alignment:
+s3d: 0-0
+s3g: 0-0
+s3n: 0-0
+s3x: 6-6
+s3x10: 24-24
+s3x12: 29-29
+s3x13: 27-27
+s3x14: 25-25
+s3x15: 8-8
+s3x16: 15-15
+s3x19: 20-20
+s3x2: 7-7
+s3x20: 10-10
+s3x3: 11-11
+s3x4: 10-10
+s3x5: 14-14
+s3x6: 21-21
+s3x7: 30-30
+s3x9: 17-17
+
+# document level annotation:
+(s3s0 / sentence
+	:temporal ((s3x :after s3x14)
+		(document-creation-time :after s3x)
+		(s3x6 :overlap s3x14)
+		(s3x :after s3x2)
+		(s3x :after s3x9)
+		(s3x9 :overlap s3x14))
+	:modal ((author :full-affirmative s3x)
+		(author :full-negative s3x14)
+		(root :modal author)
+		(author :full-affirmative s3x2)
+		(author :full-affirmative s3x)
+		(author :neutral-affirmative s3x9)
+		(author :partial-affirmative s3x9)))
+
+
+################################################################################
+# meta-info
+# :: snt4
+Index:    1  2  3    4  5    6    7    8    9 10   11   12 13
+Words: 两年   后  ，  国会   又  通过   法案   授权   发行   3  美元   金币   。 
+
+# sentence level graph:
+(s4x / 发行-01
+	:ARG0 (s4g / government-organization
+		:name (s4n / name
+			:op1 "国会"))
+	:ARG1 (s4x7 / 金币
+		:quant 3
+		:unit (s4x8 / 美元))
+	:temporal (s4x2 / 后
+		:op1 (s4x3 / 两年))
+	:aspect performance
+	:manner (s4x5 / 授权-01
+		:ARG0 (s4x6 / 法案)
+		:aspect performance))
+
+# alignment:
+s4g: 0-0
+s4n: 0-0
+s4x: 9-9
+s4x2: 2-2
+s4x3: 1-1
+s4x5: 8-8
+s4x6: 7-7
+s4x7: 12-12
+s4x8: 11-11
+
+# document level annotation:
+(s4s0 / sentence
+	:temporal ((s3d :after s4x3)
+		(s4x :after s4x2)
+		(s4x :after s4x5))
+	:modal ((root :modal author)
+		(author :full-affirmative s4x)
+		(author :full-affirmative s4x5)
+		(author :full-affirmative s4x)))
+
+
+################################################################################
+# meta-info
+# :: snt5
+Index:    1    2    3  4    5    6  7    8    9   10   11   12   13 14
+Words: 部分   来源   认为   ，  这种   金币   是  为了   方便   人们   大量   购买   邮票   。 
+
+# sentence level graph:
+(s5x / 认为-01
+	:ARG0 (s5x2 / 来源
+		:mod (s5x3 / 部分))
+	:ARG1 (s5i2 / identity-91
+		:ARG1 (s5x4 / 金币
+			:mod (s5x5 / 这)
+			:unit (s5x11 / 种))
+		:purpose (s5x6 / 方便-01
+			:ARG0 (s5x7 / 人们)
+			:ARG1 (s5x8 / 购买-01
+				:ARG1 (s5x9 / 邮票)
+				:mod (s5x10 / 大量)
+				:aspect process)
+			:aspect habitual))
+	:aspect state)
+
+# alignment:
+s5i2: 0-0
+s5x: 3-3
+s5x10: 11-11
+s5x11: 5-5
+s5x2: 2-2
+s5x3: 1-1
+s5x4: 6-6
+s5x5: 5-5
+s5x6: 9-9
+s5x7: 10-10
+s5x8: 12-12
+s5x9: 13-13
+
+# document level annotation:
+(s5s0 / sentence
+	:temporal ((document-creation-time :before s5x)
+		(s5x6 :overlap s5x8)
+		(s5x :after s5x6))
+	:modal ((root :partial-affirmative s5x)
+		(author :full-affirmative s5x8)
+		(author :full-affirmative s5x6)
+		(author :full-affirmative s5x)
+		(root :partial-affirmative s5x8))
+	:coref ((s4x7 :same-entity s5x4)))
+
+
+################################################################################
+# meta-info
+# :: snt6
+Index:      1  2    3    4  5  6  7    8    9   10   11 12  13   14   15 16   17   18 19   20   21 22   23 24 25 26   27   28   29 30 31       32 33
+Words: 朗埃克    在  设计   金币   时  想  了  多种   办法   确保   新币   和  2.5 美元   金币   有  显著   区别   ，  不但   采用   的  坯饼   更  薄  ，  而且   设计   图案   也  是  别具一格     。 
+
+# sentence level graph:
+(s6x / 想-01
+	:ARG0 (s6p / person
+		:name (s6n / name
+			:op1 "朗埃克"))
+	:ARG1 (s6x11 / 办法
+		:purpose (s6e / 确保-01
+			:ARG1 (s6e2 / exist-91
+				:ARG1 (s6a2 / and
+					:op1 (s6x8 / 新币)
+					:op2 (s6x9 / 金币
+						:quant 2.5
+						:unit (s6x10 / 美元)))
+				:ARG2 (s6x6 / 区别
+					:mod (s6x7 / 显著)))
+			:aspect state)
+		:quant (s6x3 / 多)
+		:unit (s6x4 / 种)
+		:ARG1-of (s6i2 / identity-91
+			:ARG2 (s6a / and
+				:op1 (s6x12 / 薄-01
+					:ARG0 (s6x13 / 坯饼)
+					:aspect state)
+				:op2 (s6x14 / 别具一格-01
+					:ARG0 (s6x15 / 图案
+						:part-of (s6x16 / 设计))
+					:aspect state))))
+	:aspect performance
+	:temporal (s6t / 时
+		:op1 (s6d2 / 设计-01
+			:ARG0 s6p
+			:ARG1 (s6x2 / 金币))))
+
+# alignment:
+s6a: 0-0
+s6a2: 0-0
+s6d2: 3-3
+s6e: 10-10
+s6e2: 0-0
+s6i2: 0-0
+s6n: 0-0
+s6p: 0-0
+s6t: 5-5
+s6x: 6-6
+s6x10: 14-14
+s6x11: 9-9
+s6x12: 25-25
+s6x13: 23-23
+s6x14: 32-32
+s6x15: 29-29
+s6x16: 3-3
+s6x2: 4-4
+s6x3: 8-8
+s6x4: 8-8
+s6x6: 18-18
+s6x7: 17-17
+s6x8: 11-11
+s6x9: 4-4
+
+# document level annotation:
+(s6s0 / sentence
+	:temporal ((document-creation-time :before s6x)
+		(s6x :after s6i2)
+		(s6x :after s6e)
+		(s6d2 :overlap s6x)
+		(s6x12 :overlap s6x14))
+	:modal ((author :full-affirmative s6x)
+		(author :full-affirmative s6e2)
+		(root :modal author)
+		(author :full-affirmative s6e)
+		(author :full-affirmative s6x12)
+		(author :full-affirmative s6x14)
+		(author :full-affirmative s6x)
+		(author :full-affirmative s6x12)))
+
+
+################################################################################
+# meta-info
+# :: snt7
+Index:    1    2  3  4    5  6  7    8  9   10 11 12 13 14 15 16   17   18   19   20 21
+Words: 金币   投产   后  的  第一   年  就  出产   了  超过   10 万  枚  ，  但  其  流通   程度   非常   有限   。 
+
+# sentence level graph:
+(s7b / but-91
+	:op1 (s7x / 出产-01
+		:ARG1 (s7x1 / 金币
+			:ARG1-of (s7x9 / 超过
+				:unit (s7x10 / 枚)
+				:quant "10万"
+				:aspect performance))
+		:aspect performance
+		:temporal (s7x3 / 后
+			:op1 (s7x4 / 投产-01
+				:ARG1 s7x1
+				:temporal (s7t2 / temporal-quantity
+					:unit (s7x6 / 年)
+					:ord (s7o / ordinal-entity
+						:value (s7x5 / 1)))
+				:aspect performance)))
+	:op2 (s7x7 / 有限-01
+		:ARG0 (s7x11 / 流通-01
+			:part (s7x2 / 程度))
+		:degree (s7x8 / 非常)
+		:aspect state))
+
+# alignment:
+s7b: 0-0
+s7o: 0-0
+s7t2: 0-0
+s7x: 8-8
+s7x1: 1-1
+s7x10: 13-13
+s7x11: 17-17
+s7x2: 18-18
+s7x3: 3-3
+s7x4: 2-2
+s7x5: 11-11
+s7x6: 6-6
+s7x7: 20-20
+s7x8: 19-19
+s7x9: 10-10
+
+# document level annotation:
+(s7s0 / sentence
+	:temporal ((document-creation-time :before s7x)
+		(s7x :after s7x7))
+		(root :modal author)
+		(author :full-affirmative s7x9)
+		(author :full-affirmative s7x)
+		(author :full-affirmative s7x4)
+		(author :full-affirmative s7x7)
+	:modal ((author :full-affirmative s7x)))
+
+
+################################################################################
+# meta-info
+# :: snt8
+Index:    1    2    3    4    5  6    7    8  9   10   11   12 13   14 15 16   17 18   19   20   21 22   23 24 25   26 27   28   29 30   31   32 33 34 35   36   37     38 39   40 41   42   43 44   45   46 47   48   49   50   51   52 53     54   55 56
+Words: 虽然   美国   西岸   部分   地区   不  接受   纸币   ，  只能   使用   金币   和  银币   ，  但  东部   的  情况   截然   不同   ，  特别   是  在  经济   因  内战   爆发   而  陷入   动荡   后  ，  3  美元   金币   基本上    在  东部   的  商品   交易   中  难得   一见   ，  并且   此后   再也   没有   出现   过  大范围    流通   。 
+
+# sentence level graph:
+(s8b2 / but-91
+	:op1 (s8a / and
+		:op1 (s8x4 / 接受-01
+			:ARG0 (s8x3 / 地区
+				:mod (s8x8 / 部分)
+				:place (s8x5 / 西岸
+					:part-of (s8c / country
+						:name (s8n / name
+							:op1 "美国"))))
+			:ARG1 (s8x10 / 纸币)
+			:aspect state)
+		:op2 (s8x2 / 使用-01
+			:ARG1 (s8a2 / and
+				:op1 (s8x11 / 金币)
+				:op2 (s8x12 / 银币))
+			:mod (s8x6 / 只能)
+			:aspect state))
+	:op2 (s8j / 不同
+		:ARG0 (s8k / 情况
+			:place (s8c2 / country-region
+				:name (s8n4 / name
+					:op1 "东部")))
+		:aspect state
+		:example (s8a3 / and
+			:op1 (s8x17 / 一见
+				:ARG1 (s8x18 / 金币
+					:quant 3
+					:unit (s8x19 / 美元))
+				:place (s8c3 / country-region
+					:name (s8n3 / name
+						:op1 "东部")
+					:part-of (s8s / s8c))
+				:aspect habitual
+				:mod (s8x23 / 难得))
+			:op2 (s8x24 / 出现-01
+				:ARG1 (s8x15 / 流通
+					:ARG0 s8x18
+					:mod (s8x16 / 大范围))
+				:aspect performance
+				:mod (s8x14 / 再也))
+			:temporal (s8x9 / 后
+				:op1 (s8x13 / 陷入-01
+					:ARG0 (s8x21 / 经济)
+					:ARG1 (s8x7 / 动荡)
+					:reason (s8x20 / 爆发-01
+						:ARG0 (s8x22 / 内战))
+					:aspect performance)
+				:mod (s8x / 特别)))))
+
+# alignment:
+s8a: 0-0
+s8a2: 0-0
+s8a3: 0-0
+s8b2: 0-0
+s8c: 0-0
+s8c2: 0-0
+s8c3: 0-0
+s8j: 21-21
+s8k: 19-19
+s8n: 0-0
+s8n3: 0-0
+s8n4: 0-0
+s8s: 0-0
+s8x: 23-23
+s8x10: 8-8
+s8x11: 12-12
+s8x12: 14-14
+s8x13: 31-31
+s8x14: 50-50
+s8x15: 55-55
+s8x16: 54-54
+s8x17: 46-46
+s8x18: 12-12
+s8x19: 36-36
+s8x2: 11-11
+s8x20: 29-29
+s8x21: 26-26
+s8x22: 28-28
+s8x23: 45-45
+s8x24: 52-52
+s8x3: 5-5
+s8x4: 7-7
+s8x5: 3-3
+s8x6: 10-10
+s8x7: 32-32
+s8x8: 4-4
+s8x9: 33-33
+
+# document level annotation:
+(s8s0 / sentence
+	:temporal ((s8x4 :contained s8x2)
+		(s8x20 :after s8x13)
+		(s8x13 :overlap s8x23)
+		(s8x13 :after s8x24)
+		(document-creation-time :before s8x4)
+		(s8x20 :after s8x15)
+		(s8x13 :after s8x17))
+	:modal ((author :full-affirmative s8x2)
+		(root :modal author)
+		(author :full-negative s8x4)
+		(author :full-affirmative s8x2)
+		(author :full-affirmative s8j)
+		(author :partial-negative s8x17)
+		(author :full-negative s8x24)
+		(author :full-affirmative s8x13)))
+
+
+################################################################################
+# meta-info
+# :: snt9
+Index: 1    2    3  4    5  6    7  8    9 10   11   12 13   14   15 16
+Words: 3 美元   金币   于  1889 年  停产   ，  国会   在  次年   中止   其  发行   授权   。 
+
+# sentence level graph:
+(s9c / consecutive
+	:op1 (s9x / 停产-01
+		:ARG0 (s9x2 / 金币
+			:quant 3
+			:unit (s9x3 / 美元))
+		:temporal (s9x4 / date-entity
+			:year 1889)
+		:aspect performance)
+	:op2 (s9x5 / 中止-01
+		:ARG0 (s9g / government-organization
+			:name (s9n / name
+				:op1 "国会"))
+		:ARG1 (s9x9 / 授权-01
+			:ARG1-of (s9x10 / 发行-01
+				:ARG1 s9x2)
+			:aspect performance)
+		:aspect performance
+		:temporal (s9x8 / 次年)))
+
+# alignment:
+s9c: 0-0
+s9g: 0-0
+s9n: 0-0
+s9x: 7-7
+s9x10: 14-14
+s9x2: 3-3
+s9x3: 2-2
+s9x4: 0-0
+s9x5: 12-12
+s9x8: 11-11
+s9x9: 15-15
+
+# document level annotation:
+(s9s0 / sentence
+	:temporal ((s9x :after s9x5)
+		(document-creation-time :before s9x)
+		(s9x5 :after s9x9)
+		(s9x9 :after s9x10)))
+	:modal ((root :modal author)
+		(author :full-affirmative s9x)
+		(author :full-negative s9x9)
+		(author :full-affirmative s9x5)
+		(root :modal author))
+
+
+################################################################################
+# meta-info
+# :: snt10
+Index:    1    2    3    4    5    6  7    8    9   10 11     12 13 14 15 16 17   18   19 20   21   22     23     24   25 26   27 28     29 30 31   32   33 34   35   36 37
+Words: 这种   硬币   存在   多种   年份   版本   ，  其中   许多   版本   的  铸造量    都  很  少  ，  但  最为   罕见   的  品种   还是   旧金山    铸币局    1870 年  打造   的  1870-S 版  ，  确认   存在   的  仅有   一枚   。 
+
+# sentence level graph:
+(s10b / but-91
+	:op1 (s10a / and
+		:op1 (s10h / have-91
+			:ARG1 (s10x8 / 硬币
+				:unit (s10x9 / 种)
+				:mod (s10x10 / 这))
+			:ARG2 (s10x2 / 版本
+				:mod (s10x3 / 年份
+					:mod (s10x4 / 多种)))
+			:aspect state)
+		:op2 (s10x5 / 少-01
+			:ARG1 (s10x6 / 铸造量
+				:possessor (s10x7 / 版本
+					:quant (s10x16 / 许多)
+					:mod (s10x17 / 其中)))
+			:aspect state))
+	:op2 (s10a2 / and
+		:op1 (s10i3 / identity-91
+			:ARG1 (s10x11 / 品种
+				:mod (s10x12 / 罕见
+					:degree intensifier))
+			:ARG2 (s10p / product
+				:name (s10n2 / name
+					:op1 "1870-S"
+					:op2 "版")
+				:ARG1-of (s10x13 / 打造-01
+					:ARG0 (s10g / government-organization
+						:name (s10n / name
+							:op1 "铸币局")
+						:possessor (s10x14 / 旧金山))
+					:aspect performance)
+				:ARG1-of (s10x18 / 存在-01
+					:aspect activity)))
+		:op2 (s10h3 / have-quant-91
+			:ARG1 s10p
+			:ARG2 (s10x15 / 一枚
+				:quant 1
+				:unit (s10x / 枚))
+			:aspect state)))
+
+# alignment:
+s10a: 0-0
+s10a2: 0-0
+s10b: 0-0
+s10g: 0-0
+s10h: 0-0
+s10h3: 0-0
+s10i3: 0-0
+s10n: 0-0
+s10n2: 0-0
+s10p: 0-0
+s10x: 36-36
+s10x10: 1-1
+s10x11: 21-21
+s10x12: 19-19
+s10x13: 27-27
+s10x14: 23-23
+s10x15: 36-36
+s10x16: 9-9
+s10x17: 8-8
+s10x18: 3-3
+s10x2: 6-6
+s10x3: 5-5
+s10x4: 4-4
+s10x5: 15-15
+s10x6: 12-12
+s10x7: 6-6
+s10x8: 2-2
+s10x9: 1-1
+
+# document level annotation:
+(s10s0 / sentence
+	:temporal ((s10h :contained s10i3)
+		(s10h :contained s10x13)
+		(s10x13 :overlap s10x18)
+		(present-reference :overlap s10x5))
+	:modal ((author :full-affirmative s10a)
+		(root :modal author)
+		(author :full-affirmative s10h)
+		(author :full-affirmative s10x5)
+		(author :full-affirmative s10x13)
+		(author :full-affirmative s10x18)
+		(author :full-affirmative s10h3)
+		(author :full-affirmative s10x16))
+	:coref ((s9x2 :same-entity s10x8)))
+
+

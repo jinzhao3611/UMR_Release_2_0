@@ -1,0 +1,759 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2      3 4            5
+Words: Nový proces s vyjednávačem ?
+
+# sentence level graph:
+(s1p1 / proces
+        :companion (s1v1 / vyjednávač
+            :refer-number singular)
+        :mod (s1n1 / nový
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1p1: 2-2
+s1v1: 3-4
+s1n1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2    3  4       5    6        7  8   9  10  11      12     13    14       15          16  17        18       19 20 21 22   23       24 25    26   27     28 29 30   31 32  33      34 35 36      37       38    39        40 41
+Words: Zemský soud v  Berlíně dnes rozhodne o  tom ,  zda nynější proces proti hlavnímu vyjednávači NDR Wolfgangu Vogelovi (  69 )  bude zastaven a  začne nové líčení ,  v  němž by byl obviněn z  52 případů vydírání místo nynějších 23 .
+
+# sentence level graph:
+(s2r1 / rozhodnout-002
+        :ARG0 (s2s1 / soud
+            :mod (s2z1 / zemský
+                :refer-number singular)
+            :place (s2b1 / Berlín
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s2d1 / dnes)
+        :ARG1 (s2a1 / and
+            :op1 (s2z2 / zastavit-003
+                :ARG1 (s2p1 / proces
+                    :mod (s2n1 / nynější
+                        :refer-number singular)
+                    :affectee (s2v1 / Vogel
+                        :mod (s2w1 / Wolfgang
+                            :refer-number singular)
+                        :mod (s2v2 / vyjednávač
+                            :possessor (s2n2 / NDR)
+                            :mod (s2h1 / hlavní
+                                :refer-number singular)
+                            :refer-number singular)
+                        :parenthesis (s2x1 / 69)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s2e1 / entity)
+                :refer-number singular
+                :aspect performance)
+            :op2 (s2z3 / začít-002
+                :ARG0 (s2l1 / líčení
+                    :mod (s2n3 / nový
+                        :refer-number singular)
+                    :place-of (s2o1 / obvinit-001
+                        :ARG0 (s2e2 / entity)
+                        :ARG2 s2v1
+                        :ARG1 (s2p2 / případ
+                            :name (s2v3 / vydírání
+                                :ARG0 (s2e3 / entity)
+                                :ARG1 (s2e4 / entity)
+                                :refer-number singular)
+                            :mod (s2x3 / 52)
+                            :refer-number plural)
+                        :substitute (s2p3 / případ
+                            :mod (s2x4 / 23)
+                            :mod (s2n4 / nynější
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular
+                        :aspect performance)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s2r1: 6-6
+s2s1: 2-2
+s2z1: 1-1
+s2b1: 3-4
+s2d1: 5-5
+s2a1: 24-24
+s2z2: 7-8,10-10,22-23
+s2p1: 12-12
+s2n1: 11-11
+s2v1: 13-13,18-18
+s2w1: 17-17
+s2v2: 15-15
+s2n2: 16-16
+s2h1: 14-14
+s2x1: 20-20
+s2e1: 0-0
+s2z3: 7-8,10-10,25-25
+s2l1: 27-27,29-30
+s2n3: 26-26
+s2o1: 31-33
+s2e2: 0-0
+s2p2: 34-34,36-36
+s2v3: 37-37
+s2e3: 0-0
+s2e4: 0-0
+s2x3: 35-35
+s2p3: 0-0
+s2x4: 40-40
+s2n4: 39-39
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2v1 :same-entity s1v1)
+            (s2l1 :same-entity s1p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2       3  4          5        6     7  8         9  10 11        12    13        14 15   16 17  18 19       20  21         22 23          24 25    26      27   28          29     30          31
+Words: Bývalý advokát a  Honeckerův důvěrník Vogel je obžalován ,  že zneužíval svého postavení k  tomu ,  aby na občanech NDR žádajících o  vystěhování na Západ vymáhal jako protislužbu jejich nemovitosti .
+
+# sentence level graph:
+(s3o1 / obžalovat-001
+        :ARG1 (s3v1 / Vogel
+            :mod (s3a1 / and
+                :op1 (s3a2 / advokát
+                    :mod (s3b1 / bývalý
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s3d1 / důvěrník
+                    :possessor (s3h1 / Honecker
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s3e1 / entity)
+        :cause (s3z1 / zneužívat-001
+            :ARG1 (s3p1 / postavení
+                :possessor s3v1
+                :refer-number singular)
+            :ARG0 s3v1
+            :purpose (s3v2 / vymáhat-001
+                :source (s3o2 / občan
+                    :possessor (s3n1 / NDR)
+                    :mod (s3z2 / žádající
+                        :ARG1 (s3v3 / vystěhování
+                            :ARG0 s3o2
+                            :start (s3e2 / entity)
+                            :goal (s3z3 / západ
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG0 s3v1
+                :manner (s3p2 / protislužba
+                    :mod-of s3n2
+                    :refer-number singular)
+                :ARG1 (s3n2 / nemovitost
+                    :possessor s3o2
+                    :refer-number plural)
+                :refer-number singular
+                :aspect activity)
+            :refer-number singular
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3o1: 7-8
+s3v1: 6-6,12-12
+s3a1: 3-3
+s3a2: 2-2
+s3b1: 1-1
+s3d1: 5-5
+s3h1: 4-4
+s3e1: 0-0
+s3z1: 10-11
+s3p1: 13-13
+s3v2: 14-15,17-17,26-26
+s3o2: 18-19,29-29
+s3n1: 20-20
+s3z2: 21-21
+s3v3: 22-23
+s3e2: 0-0
+s3z3: 24-25
+s3p2: 27-28
+s3n2: 30-30
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3v1 :same-entity s2v1)
+            (s3n1 :same-entity s2n2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2  3  4  5    6      7          8  9     10        11
+Words: Klade se mu za vinu rovněž zpronevěra a  křivé svědectví .
+
+# sentence level graph:
+(s4k1 / klást-001
+        :effect (s4v1 / vina
+            :refer-number singular)
+        :ARG0 (s4e1 / entity)
+        :ARG2 (s4e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :clausal-marker (s4r1 / rovněž)
+        :ARG1 (s4a1 / and
+            :op1 (s4z1 / zpronevěra
+                :refer-number singular)
+            :op2 (s4s1 / svědectví
+                :mod (s4k2 / křivý
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4k1: 1-2
+s4v1: 4-5
+s4e1: 0-0
+s4e2: 3-3
+s4r1: 6-6
+s4a1: 8-8
+s4z1: 7-7
+s4s1: 10-10
+s4k2: 9-9
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e2 :same-entity s3v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1          2    3        4      5       6  7     8  9      10 11         12       13    14 15    16    17   18  19     20         21 22    23      24
+Words: Prokurátor žádá otevření nového procesu a  opírá se přitom o  rozhodnutí soudního dvora ,  podle něhož musí být žaloba projednána v  plném rozsahu .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5z1 / žádat-002
+            :ARG0 (s5p1 / prokurátor
+                :refer-number singular)
+            :ARG1 (s5o1 / otevření
+                :ARG0 (s5e1 / entity)
+                :ARG1 (s5p2 / proces
+                    :mod (s5n1 / nový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s5o2 / opírat-se-001
+            :ARG0 s5p1
+            :clausal-marker (s5p3 / přitom)
+            :ARG1 (s5r1 / rozhodnutí
+                :ARG1 (s5e2 / entity)
+                :ARG0 (s5d1 / dvůr
+                    :mod (s5s1 / soudní
+                        :refer-number singular)
+                    :refer-number singular)
+                :regard-of (s5p4 / projednat-002
+                    :ARG1 (s5z2 / žaloba
+                        :refer-number singular)
+                    :ARG0 (s5e3 / entity)
+                    :manner (s5r2 / rozsah
+                        :mod (s5p5 / plný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s5a1: 6-6
+s5z1: 2-2
+s5o1: 3-3
+s5e1: 0-0
+s5p2: 5-5
+s5n1: 4-4
+s5p1: 1-1
+s5o2: 7-8
+s5p3: 9-9
+s5r1: 10-11,15-16
+s5e2: 0-0
+s5d1: 13-13
+s5s1: 12-12
+s5p4: 17-18,20-20
+s5z2: 19-19
+s5e3: 0-0
+s5r2: 21-21,23-23
+s5p5: 22-22
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p2 :same-entity s2l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2     3      4  5   6     7      8      9  10     11           12             13     14          15 16    17 18      19       20 21 22 23 24    25 26    27       28              29 30 31        32
+Words: V  novém líčení by byl vedle Vogela souzen i  bývalý generálmajor východoněmecké státní bezpečnosti (  Stasi )  Gerhard Niebling (  62 )  ,  který je podle obžaloby spolupachatelem ve 40 případech .
+
+# sentence level graph:
+(s6s1 / soudit-001
+        :temporal (s6l1 / líčení
+            :mod (s6n1 / nový
+                :refer-number singular)
+            :refer-number singular)
+        :subtraction (s6v1 / Vogel
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s6e1 / entity)
+        :clausal-marker (s6i1 / i)
+        :ARG1 (s6n2 / Niebling
+            :mod (s6g1 / Gerhard
+                :refer-number singular)
+            :mod (s6g2 / generálmajor
+                :mod (s6b1 / bývalý
+                    :refer-number singular)
+                :possessor (s6i2 / identity-91
+                    :ARG1 (s6b2 / bezpečnost
+                        :mod (s6v2 / východoněmecký
+                            :refer-number singular)
+                        :mod (s6s2 / státní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG2 (s6s3 / Stasi))
+                :refer-number singular)
+            :parenthesis (s6x1 / 62)
+            :ARG0-of (s6b3 / být-007
+                :regard (s6o1 / obžaloba
+                    :refer-number singular)
+                :ARG1 (s6s4 / spolupachatel
+                    :refer-number singular)
+                :frequency (s6p1 / případ
+                    :mod (s6x2 / 40)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s6s1: 4-5,8-8
+s6l1: 1-1,3-3
+s6n1: 2-2
+s6v1: 6-7
+s6e1: 0-0
+s6i1: 9-9
+s6n2: 19-19,24-24
+s6g1: 18-18
+s6g2: 11-11
+s6b1: 10-10
+s6i2: 15-15
+s6b2: 14-14
+s6v2: 12-12
+s6s2: 13-13
+s6s3: 16-16
+s6x1: 21-21
+s6b3: 25-25
+s6o1: 26-27
+s6s4: 28-28
+s6p1: 29-29,31-31
+s6x2: 30-30
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6l1 :same-entity s5p2)
+            (s6v1 :same-entity s4e2)
+            (s6v2 :same-entity s3n1)
+            (s6o1 :same-entity s5z2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2    3  4           5         6      7  8      9  10      11        12        13       14     15      16
+Words: Obhajoba trvá na pokračování nynějšího líčení a  nechce za žádných okolností připustit otevření nového procesu .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7t1 / trvat-002
+            :ARG0 (s7o1 / obhajoba
+                :refer-number singular)
+            :ARG1 (s7p1 / pokračování
+                :ARG0 (s7l1 / líčení
+                    :mod (s7n1 / nynější
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s7p2 / připustit-004
+            :ARG0 s7o1
+            :condition (s7o2 / okolnost
+                :mod (s7z1 / žádný
+                    :refer-number plural
+                    :polarity -)
+                :refer-number plural)
+            :ARG1 (s7o3 / otevření
+                :ARG1 (s7p3 / proces
+                    :mod (s7n2 / nový
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s7e1 / entity)
+                :refer-number singular)
+            :aspect performance
+            :polarity -))
+
+# alignment:
+s7a1: 7-7
+s7t1: 2-2
+s7p1: 3-4
+s7l1: 6-6
+s7n1: 5-5
+s7o1: 1-1
+s7p2: 8-8,12-12
+s7o2: 9-9,11-11
+s7z1: 10-10
+s7o3: 13-13
+s7p3: 15-15
+s7n2: 14-14
+s7e1: 0-0
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7l1 :same-entity s2p1)
+            (s7p3 :same-entity s6l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1         2         3  4        5       6  7     8     9    10        11 12     13        14
+Words: Vogelovým advokátem je Wolfgang Ziegler ,  který svého času obhajoval i  Ericha Honeckera .
+
+# sentence level graph:
+(s8b1 / být-007
+        :ARG1 (s8a1 / advokát
+            :possessor (s8v1 / Vogel
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s8z1 / Ziegler
+            :mod (s8w1 / Wolfgang
+                :refer-number singular)
+            :ARG0-of (s8o1 / obhajovat-001
+                :temporal (s8c1 / čas
+                    :part-of-phraseme (s8s1 / svého
+                        :refer-number singular)
+                    :refer-number singular)
+                :clausal-marker (s8i1 / i)
+                :ARG1 (s8h1 / Honecker
+                    :mod (s8e1 / Erich
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s8b1: 3-3
+s8a1: 2-2
+s8v1: 1-1
+s8z1: 5-5,7-7
+s8w1: 4-4
+s8o1: 10-10
+s8c1: 9-9
+s8s1: 8-8
+s8i1: 11-11
+s8h1: 13-13
+s8e1: 12-12
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8v1 :same-entity s6v1)
+            (s8h1 :same-entity s3h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1     2   3         4        5     6    7         8                9      10  11       12          13     14    15       16 17       18 19       20       21        22 23  24 25    26        27  28          29 30    31  32       33          34               35     36
+Words: Podle 700 stránkové obžaloby Vogel jako zmocněnec východoněmeckého režimu pro takzvané humanitární otázky nutil žadatele o  emigraci do tehdejší Spolkové republiky ,  aby mu levně odprodali své nemovitosti ,  které pak předával prominentům východoněmeckého režimu .
+
+# sentence level graph:
+(s9n1 / nutit-002
+        :regard (s9o1 / obžaloba
+            :mod (s9x1 / 700_stránkový)
+            :refer-number singular)
+        :ARG0 (s9v1 / Vogel
+            :refer-number singular)
+        :manner (s9z1 / zmocněnec
+            :mod-of s9v1
+            :possessor (s9r1 / režim
+                :mod (s9v2 / východoněmecký
+                    :refer-number singular)
+                :refer-number singular)
+            :affectee (s9o2 / otázka
+                :clausal-marker (s9t1 / takzvaný
+                    :refer-number plural)
+                :mod (s9h1 / humanitární
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG2 (s9z2 / žadatel
+            :ARG1 (s9e1 / emigrace
+                :goal (s9r2 / republika
+                    :mod (s9t2 / tehdejší
+                        :refer-number singular)
+                    :mod (s9s1 / Spolkový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s9o3 / odprodat-001
+            :ARG0 s9z2
+            :ARG2 s9v1
+            :manner (s9l1 / levně)
+            :ARG1 (s9n2 / nemovitost
+                :possessor s9z2
+                :ARG1-of (s9p1 / předávat-001
+                    :ARG0 s9v1
+                    :temporal (s9p2 / pak)
+                    :ARG2 (s9p3 / prominent
+                        :possessor (s9r3 / režim
+                            :mod (s9v3 / východoněmecký
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular
+                    :aspect habitual)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s9n1: 14-14
+s9o1: 1-1,4-4
+s9x1: 2-3
+s9v1: 5-5,24-24
+s9z1: 6-7
+s9r1: 9-9
+s9v2: 8-8
+s9o2: 10-10,13-13
+s9t1: 11-11
+s9h1: 12-12
+s9z2: 15-15,27-27
+s9e1: 16-17
+s9r2: 18-18,21-21
+s9t2: 19-19
+s9s1: 20-20
+s9o3: 23-23,26-26
+s9l1: 25-25
+s9n2: 28-28,30-30
+s9p1: 32-32
+s9p2: 31-31
+s9p3: 33-33
+s9r3: 35-35
+s9v3: 34-34
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9o1 :same-entity s6o1)
+            (s9v1 :same-entity s8v1)
+            (s9v2 :same-entity s6v2)
+            (s9z2 :same-entity s3o2)
+            (s9e1 :same-entity s3v3)
+            (s9n2 :same-entity s3n2)
+            (s9r3 :same-entity s9r1)
+            (s9v3 :same-entity s9v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1  2      3    4  5    6          7    8  9               10    11         12          13    14
+Words: V  letech 1983 -  1985 vyjednával také se západoněmeckými úřady vykupování politických vězňů .
+
+# sentence level graph:
+(s10v1 / vyjednávat-001
+        :temporal (s10r1 / rok
+            :mod (s10m1 / math
+                :op1 (s10x1 / 1983)
+                :op2 (s10x2 / 1985))
+            :refer-number plural)
+        :ARG0 (s10e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :clausal-marker (s10t1 / také)
+        :ARG2 (s10u1 / úřad
+            :mod (s10z1 / západoněmecký
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s10v2 / vykupování
+            :ARG0 (s10e2 / entity)
+            :ARG1 (s10v3 / vězeň
+                :mod (s10p1 / politický
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :aspect habitual)
+
+# alignment:
+s10v1: 6-6
+s10r1: 1-2
+s10m1: 4-4
+s10x1: 3-3
+s10x2: 5-5
+s10e1: 0-0
+s10t1: 7-7
+s10u1: 8-8,10-10
+s10z1: 9-9
+s10v2: 11-11
+s10e2: 0-0
+s10v3: 13-13
+s10p1: 12-12
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10e1 :same-entity s9v1)
+            (s10z1 :same-entity s9r2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1  2    3       4      5     6  7       8     9       10 11      12    13
+Words: Za svou činnost dostal tehdy od bonnské vlády honorář 14 miliónů marek .
+
+# sentence level graph:
+(s11d1 / dostat-001
+        :cause (s11c1 / činnost
+            :ARG0 s11e1
+            :refer-number singular)
+        :ARG0 (s11e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s11t1 / tehdy
+            :refer-number plural)
+        :source (s11v1 / vláda
+            :mod (s11b1 / bonnský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s11h1 / honorář
+            :mod (s11m1 / milión
+                :mod (s11m2 / marka
+                    :refer-number plural)
+                :mod (s11x2 / 14)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s11d1: 4-4
+s11c1: 1-1,3-3
+s11e1: 2-2
+s11t1: 5-5
+s11v1: 6-6,8-8
+s11b1: 7-7
+s11h1: 9-9
+s11m1: 11-11
+s11m2: 12-12
+s11x2: 10-10
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11c1 :same-event s10v1)
+            (s11e1 :same-entity s10e1)
+            (s11t1 :same-entity s10r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1  2        3        4          5  6     7      8          9     10 11   12        13    14          15    16
+Words: Za Vogelova působení emigrovalo na Západ 250000 východních Němců a  bylo vykoupeno 34000 politických vězňů .
+
+# sentence level graph:
+(s12a1 / and
+        :op1 (s12e1 / emigrovat-001
+            :condition (s12p1 / působení
+                :ARG0 (s12v1 / Vogel
+                    :refer-number singular
+                    :refer-person 3rd)
+                :place (s12e2 / entity)
+                :refer-number singular)
+            :start (s12e3 / entity)
+            :goal (s12z1 / západ
+                :refer-number singular)
+            :ARG0 (s12n1 / Němec
+                :mod (s12v2 / východní
+                    :refer-number plural)
+                :mod (s12x1 / 250000)
+                :refer-number plural)
+            :refer-number singular
+            :aspect process)
+        :op2 (s12v3 / vykoupit-001
+            :condition s12p1
+            :ARG0 (s12e4 / entity)
+            :ARG1 (s12v4 / vězeň
+                :mod (s12p2 / politický
+                    :refer-number plural)
+                :mod (s12x3 / 34000)
+                :refer-number plural)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s12a1: 10-10
+s12e1: 4-4
+s12e3: 0-0
+s12z1: 5-6
+s12n1: 9-9
+s12v2: 8-8
+s12x1: 7-7
+s12p1: 1-1,3-3
+s12v1: 2-2
+s12e2: 0-0
+s12v3: 11-12
+s12e4: 0-0
+s12v4: 15-15
+s12p2: 14-14
+s12x3: 13-13
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12z1 :same-entity s3z3)
+            (s12v1 :same-entity s11e1)
+            (s12v4 :same-entity s10v3)))
+
+

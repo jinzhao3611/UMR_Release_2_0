@@ -1,0 +1,299 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1             2  3
+Words: Elektromobily na trhu
+
+# sentence level graph:
+(s1e1 / elektromobil
+        :place (s1t1 / trh
+            :refer-number singular)
+        :refer-number plural)
+
+# alignment:
+s1e1: 1-1
+s1t1: 2-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2 3  4 5
+Words: Zlín ( do ) -
+
+# sentence level graph:
+(s2z1 / Zlín
+        :parenthesis (s2d1 / do)
+        :refer-number singular)
+
+# alignment:
+s2z1: 1-1
+s2d1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2         3                4             5  6    7       8         9       10    11
+Words: Prvním prodejcem československých elektromobilů se stal zlínský autosalón Samohýl Motor .
+
+# sentence level graph:
+(s3s1 / stát-se-001
+        :ARG1 (s3p1 / prodejce
+            :ARG1 (s3e1 / elektromobil
+                :mod (s3c1 / československý
+                    :refer-number plural)
+                :refer-number plural)
+            :mod (s3p2 / první
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3a1 / autosalón
+            :mod (s3z1 / zlínský
+                :refer-number singular)
+            :name (s3m1 / motor
+                :mod (s3s2 / Samohýl
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3s1: 5-6
+s3p1: 2-2
+s3e1: 4-4
+s3c1: 3-3
+s3p2: 1-1
+s3a1: 8-8
+s3z1: 7-7
+s3m1: 10-10
+s3s2: 9-9
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3z1 :same-entity s2z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2         3  4         5     6      7            8         9     10      11  12 13 14      15 16    17     18  19 20      21
+Words: Od včerejška tu zákazníci mohou koupit akumulátorem poháněnou Škodu Favorit 135 LS -  Elektro a  Škodu Pickup 135 LS Elektro .
+
+# sentence level graph:
+(s4k1 / koupit-001
+        :temporal (s4v1 / včerejšek
+            :refer-number singular)
+        :place (s4t1 / tu
+            :refer-number singular)
+        :ARG0 (s4z1 / zákazník
+            :refer-number plural)
+        :ARG1 (s4a1 / and
+            :op1 (s4s1 / Škoda
+                :mod (s4f1 / Favorit
+                    :refer-number singular)
+                :mod (s4x1 / 135)
+                :mod (s4l1 / LS)
+                :mod (s4e1 / Elektro
+                    :refer-number singular)
+                :mod (s4p1 / poháněný
+                    :instrument (s4a2 / akumulátor
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s4s2 / Škoda
+                :mod (s4p2 / Pickup
+                    :refer-number singular)
+                :mod (s4x2 / 135)
+                :mod (s4l2 / LS)
+                :mod (s4e2 / Elektro
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s4k1: 5-6
+s4v1: 1-2
+s4t1: 3-3
+s4z1: 4-4
+s4a1: 15-15
+s4s1: 9-9
+s4f1: 10-10
+s4x1: 11-11
+s4l1: 12-12
+s4e1: 14-14
+s4p1: 8-8
+s4a2: 7-7
+s4s2: 16-16
+s4p2: 17-17
+s4x2: 18-18
+s4l2: 19-19
+s4e2: 20-20
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-entity s3a1)
+            (s4a1 :same-entity s1e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1   2    3    4      5     6    7      8    9        10 11      12          13     14 15   16        17         18         19       20 21 22 23 24    25    26       27 28 29 30 31 32    33    34 35    36       37
+Words: Oba vozy jsou stejně drahé jako stejné typy škodovek s  běžnými spalovacími motory a  jsou výsledkem společného vývojového programu a  .  s  .  Škoda Mladá Boleslav a  a  .  s  .  Škoda Plzeň ,  závod Ejpovice .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5b1 / být-007
+            :ARG0 (s5v1 / vůz
+                :mod (s5o1 / oba
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s5d1 / drahý
+                :manner (s5s1 / stejně
+                    :comparison (s5b2 / být-007
+                        :ARG1 (s5d2 / drahý
+                            :refer-number plural)
+                        :ARG0 (s5t1 / typ
+                            :possessor (s5s2 / škodovka
+                                :companion (s5m1 / motor
+                                    :mod (s5s3 / spalovací
+                                        :refer-number plural)
+                                    :mod (s5b3 / běžný
+                                        :refer-number plural)
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :mod (s5s4 / stejný
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number plural
+                        :refer-person 3rd
+                        :aspect activity))
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s5b4 / být-007
+            :ARG0 s5v1
+            :ARG1 (s5v2 / výsledek
+                :possessor (s5p1 / program
+                    :mod (s5v3 / vývojový
+                        :refer-number singular)
+                    :mod (s5s5 / společný
+                        :refer-number singular)
+                    :ARG0 (s5a2 / and
+                        :op1 (s5s6 / společnost
+                            :mod (s5a3 / akciový)
+                            :name (s5s7 / Škoda
+                                :mod (s5b5 / Boleslav
+                                    :mod (s5m2 / Mladý
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :refer-number singular))
+                        :op2 (s5s8 / společnost
+                            :mod (s5a4 / akciový)
+                            :name (s5s9 / Škoda
+                                :mod (s5p2 / Plzeň
+                                    :refer-number singular)
+                                :mod (s5z1 / závod
+                                    :name (s5e1 / Ejpovice
+                                        :refer-number plural)
+                                    :refer-number singular)
+                                :refer-number singular)))
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s5a1: 14-14
+s5b1: 3-3
+s5d1: 5-5
+s5s1: 4-4
+s5b2: 0-0
+s5d2: 0-0
+s5t1: 8-8
+s5s2: 9-9
+s5m1: 10-10,13-13
+s5s3: 12-12
+s5b3: 11-11
+s5s4: 7-7
+s5v1: 2-2
+s5o1: 1-1
+s5b4: 15-15
+s5v2: 16-16
+s5p1: 19-19
+s5v3: 18-18
+s5s5: 17-17
+s5a2: 27-27
+s5s6: 22-22
+s5a3: 20-20
+s5s7: 24-24
+s5b5: 26-26
+s5m2: 25-25
+s5s8: 30-30
+s5a4: 28-28
+s5s9: 32-32
+s5p2: 33-33
+s5z1: 35-35
+s5e1: 36-36
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5v1 :same-entity s4a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2             3  4     5      6           7  8  9  10 11 12
+Words: Dojezd elektromobilů na jedno nabití akumulátorů je 60 až 80 km .
+
+# sentence level graph:
+(s6b1 / být-007
+        :ARG0 (s6d1 / dojezd
+            :ARG0 (s6e1 / elektromobil
+                :refer-number plural)
+            :regard (s6n1 / nabití
+                :ARG0 (s6e2 / entity)
+                :ARG1 (s6a1 / akumulátor
+                    :refer-number plural)
+                :mod (s6j1 / jeden
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s6k1 / km
+            :mod (s6m1 / math
+                :op1 (s6x1 / 60)
+                :op2 (s6x2 / 80)))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 7-7
+s6d1: 1-1
+s6e1: 2-2
+s6n1: 3-3,5-5
+s6e2: 0-0
+s6a1: 6-6
+s6j1: 4-4
+s6k1: 11-11
+s6m1: 9-9
+s6x1: 8-8
+s6x2: 10-10
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5v1)
+            (s6a1 :same-entity s4a2)))
+
+

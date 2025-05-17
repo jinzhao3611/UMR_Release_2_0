@@ -1,0 +1,383 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2   3
+Words: Derby pro Jadese
+
+# sentence level graph:
+(s1d1 / derby
+        :affectee (s1j1 / Jades
+            :refer-number singular))
+
+# alignment:
+s1d1: 1-1
+s1j1: 2-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( mmz ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2m1 / mmz)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2m1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2         3        4     5  6         7  8     9       10    11    12     13 14     15        16        17       18
+Words: Očekávanou podívanou přineslo včera na závodišti ve Velké Chuchli české derby Blesku ,  určené nejlepším čtyřletým klusákům .
+
+# sentence level graph:
+(s3p1 / přinést-001
+        :ARG1 (s3p2 / podívaná
+            :mod (s3o1 / očekávaný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s3e1 / entity)
+        :temporal (s3v1 / včera)
+        :place (s3z1 / závodiště
+            :place (s3c1 / Chuchle
+                :mod (s3v2 / Velký
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3d1 / derby
+            :mod (s3c2 / český
+                :refer-number singular)
+            :possessor (s3b1 / Blesk
+                :refer-number singular)
+            :mod (s3u1 / určený
+                :ARG1 (s3k1 / klusák
+                    :mod (s3c3 / čtyřletý
+                        :refer-number plural)
+                    :mod (s3d2 / dobrý
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3p1: 3-3
+s3p2: 2-2
+s3o1: 1-1
+s3e1: 0-0
+s3v1: 4-4
+s3z1: 5-6
+s3c1: 7-7,9-9
+s3v2: 8-8
+s3d1: 11-11
+s3c2: 10-10
+s3b1: 12-12
+s3u1: 14-14
+s3k1: 17-17
+s3c3: 16-16
+s3d2: 15-15
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3d1 :same-entity s1d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1           2            3      4      5       6            7  8        9  10 11       12     13    14 15    16   17  18 19     20      21    22 23 24      25      26   27   28          29        30     31     32
+Words: Kvalifikace favorizovaly Jadese Ideala trenéra Dobrovolného a  svěřence tr .  Demeleho Sorbit Skala ,  kteří také již od startu udávali tempo a  po prvních metrech měli před osmičlenným pelotonem značný náskok .
+
+# sentence level graph:
+(s4f1 / favorizovat-001
+        :ARG0 (s4k1 / kvalifikace
+            :refer-number plural)
+        :ARG1 (s4a1 / and
+            :op1 (s4i1 / Ideal
+                :mod (s4j1 / Jades
+                    :refer-number singular)
+                :mod (s4t1 / trenér
+                    :ARG1 (s4d1 / Dobrovolný
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0-of (s4a2 / and
+                    :op1 (s4u1 / udávat-001
+                        :clausal-marker (s4t2 / také)
+                        :clausal-marker (s4j2 / již)
+                        :start (s4s1 / start
+                            :refer-number singular)
+                        :ARG1 (s4t3 / tempo
+                            :refer-number singular)
+                        :refer-number plural
+                        :aspect habitual)
+                    :op2 (s4m1 / mít-033
+                        :temporal (s4m2 / metr
+                            :mod (s4p1 / první
+                                :refer-number plural)
+                            :refer-number plural)
+                        :predicative-noun (s4n1 / náskok
+                            :ARG1 (s4p2 / peloton
+                                :mod (s4o1 / osmičlenný
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :ARG0 s4a1
+                            :mod (s4z1 / značný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural
+                        :aspect state))
+                :refer-number singular)
+            :op2 (s4s2 / Skal
+                :ARG0-of s4a2
+                :mod (s4s3 / Sorbit)
+                :mod (s4s4 / svěřenec
+                    :possessor (s4d2 / Demele
+                        :mod (s4t4 / trenér)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s4f1: 2-2
+s4k1: 1-1
+s4a1: 7-7,15-15
+s4i1: 4-4
+s4j1: 3-3
+s4t1: 5-5
+s4d1: 6-6
+s4a2: 22-22
+s4u1: 20-20
+s4t2: 16-16
+s4j2: 17-17
+s4s1: 18-19
+s4t3: 21-21
+s4m1: 26-26
+s4m2: 23-23,25-25
+s4p1: 24-24
+s4n1: 31-31
+s4p2: 27-27,29-29
+s4o1: 28-28
+s4z1: 30-30
+s4s2: 13-13
+s4s3: 12-12
+s4s4: 8-8
+s4d2: 11-11
+s4t4: 9-9
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4i1 :same-entity s1j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2     3  4     5  6    7        8  9  10          11 12    13       14     15 16      17 18 19   20  21     22       23 24   25          26        27  28     29     30      31    32
+Words: Jades Ideal v  sulce se svým trenérem J  .  Dobrovolným si držel výhodnou pozici u  bariéry a  to také asi zřejmě rozhodlo o  jeho půldélkovém vítězství nad Sorbit Skalem vedeným Crlou .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5d1 / držet-005
+            :ARG0 (s5i1 / Ideal
+                :mod (s5j1 / Jades
+                    :refer-number singular)
+                :refer-number singular)
+            :affectee s5i1
+            :place (s5s1 / sulka
+                :companion (s5d2 / Dobrovolný
+                    :mod (s5t1 / trenér
+                        :possessor s5i1
+                        :refer-number singular)
+                    :mod (s5j2 / J)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s5p1 / pozice
+                :place (s5b1 / bariéra
+                    :refer-number singular)
+                :mod (s5v1 / výhodný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity)
+        :op2 (s5r1 / rozhodnout-002
+            :ARG0 (s5t2 / ten
+                :refer-number singular)
+            :clausal-marker (s5t3 / také)
+            :clausal-marker (s5a2 / asi)
+            :clausal-marker (s5z1 / zřejmě)
+            :ARG1 (s5v2 / vítězství
+                :possessor s5i1
+                :mod (s5p2 / půldélkový
+                    :refer-number singular)
+                :ARG2 (s5s2 / Skala
+                    :mod (s5s3 / Sorbit)
+                    :mod (s5v3 / vedený
+                        :ARG0 (s5c1 / Crla
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s5a1: 17-17
+s5d1: 12-12
+s5i1: 2-2,6-6,11-11,24-24
+s5j1: 1-1
+s5s1: 3-4
+s5d2: 5-5,10-10
+s5t1: 7-7
+s5j2: 8-8
+s5p1: 14-14
+s5b1: 15-16
+s5v1: 13-13
+s5r1: 22-22
+s5t2: 18-18
+s5t3: 19-19
+s5a2: 20-20
+s5z1: 21-21
+s5v2: 23-23,26-26
+s5p2: 25-25
+s5s2: 27-27,29-29
+s5s3: 28-28
+s5v3: 30-30
+s5c1: 31-31
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5i1 :same-entity s4i1)
+            (s5d2 :same-entity s4d1)
+            (s5t2 :same-event s5d1)
+            (s5s2 :same-entity s4s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2      3  4    5    6  7       8    9  10     11 12    13 14     15 16    17   18 19      20   21 22  23
+Words: Další pořadí :  Sear Skal ,  Gelinda Glow ,  Lidren ,  Terxi ,  Sarago ,  Janin Kash ,  Anthony Skan ,  Pat .
+
+# sentence level graph:
+(s6i1 / identity-91
+        :ARG1 (s6p1 / pořadí
+            :mod (s6d1 / další
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s6a1 / and
+            :op1 (s6s1 / Skal
+                :mod (s6s2 / Sear
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s6g1 / Glow
+                :mod (s6g2 / Gelinda
+                    :refer-number singular)
+                :refer-number singular)
+            :op3 (s6l1 / Lidren
+                :refer-number singular)
+            :op4 (s6t1 / Terxi
+                :refer-number singular)
+            :op5 (s6s3 / Sarago
+                :refer-number singular)
+            :op6 (s6k1 / Kash
+                :mod (s6j1 / Janin
+                    :refer-number singular)
+                :refer-number singular)
+            :op7 (s6s4 / Skan
+                :mod (s6a2 / Anthony
+                    :refer-number singular)
+                :refer-number singular)
+            :op8 (s6p2 / Pat
+                :refer-number singular)))
+
+# alignment:
+s6i1: 3-3
+s6p1: 2-2
+s6d1: 1-1
+s6a1: 21-21
+s6s1: 5-5
+s6s2: 4-4
+s6g1: 8-8
+s6g2: 7-7
+s6l1: 10-10
+s6t1: 12-12
+s6s3: 14-14
+s6k1: 17-17
+s6j1: 16-16
+s6s4: 20-20
+s6a2: 19-19
+s6p2: 22-22
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2     3     4     5     6  7     8      9         10            11   12 13 14   15
+Words: Vítězný Jades Ideal stáje Skree -  Blesk dosáhl výborného kilometrového času 1  :  20.2 .
+
+# sentence level graph:
+(s7d1 / dosáhnout-002
+        :ARG0 (s7i1 / Ideal
+            :mod (s7j1 / Jades
+                :refer-number singular)
+            :mod (s7v1 / vítězný
+                :refer-number singular)
+            :possessor (s7s1 / stáj
+                :name (s7x1 / #Forn
+                    :FPHR (s7s2 / Skree)
+                    :FPHR (s7b1 / Blesk
+                        :refer-number singular))
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s7c1 / čas
+            :mod (s7k1 / kilometrový
+                :refer-number singular)
+            :mod (s7v2 / výborný
+                :refer-number singular)
+            :mod (s7m1 / math
+                :op1 (s7x2 / 1)
+                :op2 (s7x3 / 20.2))
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7d1: 8-8
+s7i1: 3-3
+s7j1: 2-2
+s7v1: 1-1
+s7s1: 4-4
+s7x1: 0-0
+s7s2: 5-5
+s7b1: 7-7
+s7c1: 11-11
+s7k1: 10-10
+s7v2: 9-9
+s7m1: 13-13
+s7x2: 12-12
+s7x3: 14-14
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7i1 :same-entity s5i1)))
+
+

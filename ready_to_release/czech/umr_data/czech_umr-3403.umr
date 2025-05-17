@@ -1,0 +1,274 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2    3        4     5
+Words: Tohle byla poslední fotka .
+
+# sentence level graph:
+(s1b1 / být-007
+        :ARG0 (s1t1 / tenhle
+            :refer-number singular)
+        :ARG1 (s1f1 / fotka
+            :mod (s1p1 / poslední
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1b1: 2-2
+s1t1: 1-1
+s1f1: 4-4
+s1p1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: Děkuju .
+
+# sentence level graph:
+(s2d1 / děkovat-001
+        :ARG0 (s2e1 / entity)
+        :ARG2 (s2e2 / entity)
+        :refer-number singular
+        :refer-person 1st
+        :aspect activity)
+
+# alignment:
+s2d1: 1-1
+s2e1: 0-0
+s2e2: 0-0
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2   3  4   5   6
+Words: Děkujeme vám za váš čas .
+
+# sentence level graph:
+(s3d1 / děkovat-001
+        :ARG0 (s3e1 / entity)
+        :ARG2 (s3e2 / entity
+            :refer-number plural
+            :refer-person 2nd)
+        :ARG1 (s3c1 / čas
+            :mod s3e2
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 1st
+        :aspect activity)
+
+# alignment:
+s3d1: 1-1
+s3e1: 0-0
+s3e2: 2-2,4-4
+s3c1: 3-3,5-5
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e2 :same-entity s2e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2    3      4
+Words: Já taky děkuju .
+
+# sentence level graph:
+(s4d1 / děkovat-001
+        :ARG0 (s4e1 / entity
+            :refer-number singular
+            :refer-person 1st)
+        :ARG2 (s4e2 / entity)
+        :clausal-marker (s4t1 / taky)
+        :refer-number singular
+        :refer-person 1st
+        :aspect activity)
+
+# alignment:
+s4d1: 3-3
+s4e1: 1-1
+s4e2: 0-0
+s4t1: 2-2
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3e2)
+            (s4e2 :same-entity s3e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1   2     3  4  5 6    7        8
+Words: Moc hezky se mi s vámi povídalo .
+
+# sentence level graph:
+(s5p1 / povídat-si-001
+        :manner (s5h1 / hezky
+            :extent (s5m1 / moc))
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 1st)
+        :ARG2 (s5e2 / entity
+            :refer-number plural
+            :refer-person 2nd)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5p1: 3-3,7-7
+s5h1: 2-2
+s5m1: 1-1
+s5e1: 4-4
+s5e2: 5-6
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s2e2)
+            (s5e2 :same-entity s4e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1   2    3
+Words: Mně taky .
+
+# sentence level graph:
+(s6p1 / povídat-si-001
+        :ARG2 (s6e1 / entity
+            :refer-number singular
+            :refer-person 1st)
+        :ARG0 (s6e2 / entity
+            :refer-number singular
+            :refer-person 1st)
+        :clausal-marker (s6t1 / taky)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s6p1: 0-0
+s6e1: 0-0
+s6e2: 1-1
+s6t1: 2-2
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5e1)
+            (s6e2 :same-entity s5e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2       3 4     5   6       7          8
+Words: Počkejte chvilku , kluci vás přijdou vysvobodit .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7p1 / počkat-001
+            :ARG0 (s7e1 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :ARG1 s7p2
+            :duration (s7c1 / chvilka
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 2nd
+            :aspect performance)
+        :op2 (s7p2 / přijít-010
+            :ARG0 (s7k1 / kluk
+                :refer-number plural)
+            :goal (s7e2 / entity)
+            :purpose (s7v1 / vysvobodit-001
+                :ARG1 s7e1
+                :ARG0 s7k1
+                :aspect performance)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect performance))
+
+# alignment:
+s7a1: 3-3
+s7p1: 1-1
+s7e1: 5-5
+s7c1: 2-2
+s7p2: 6-6
+s7k1: 4-4
+s7e2: 0-0
+s7v1: 7-7
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1   2
+Words: Ano .
+
+# sentence level graph:
+(s8a1 / ano)
+
+# alignment:
+s8a1: 1-1
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2         3
+Words: Na shledanou .
+
+# sentence level graph:
+(s9e1 / event
+        :ARG1 (s9s1 / shledaná
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s9e1: 0-0
+s9s1: 1-2
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1  2         3
+Words: Na shledanou .
+
+# sentence level graph:
+(s10e1 / event
+        :ARG1 (s10s1 / shledaná
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s10e1: 0-0
+s10s1: 1-2
+
+# document level annotation:
+(s10s0 / sentence)
+
+

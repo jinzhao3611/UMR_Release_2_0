@@ -1,0 +1,977 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2       3      4    5  6      7  8  9  10     11       12      13 14      15      16      17 18    19       20      21 22    23        24 25     26
+Words: Společnost General Motors Corp .  uvedla ,  že z  důvodu pomalého prodeje od pondělí dočasně odstaví na týden montážní továrnu ve městě Arlington v  Texasu .
+
+# sentence level graph:
+(s1u1 / uvést-007
+        :ARG0 (s1s1 / společnost
+            :name (s1x1 / #Forn
+                :FPHR (s1g1 / General)
+                :FPHR (s1m1 / Motors)
+                :FPHR (s1c1 / Corp)
+                :FPHR (s1x2 / .))
+            :refer-number singular)
+        :effect (s1o1 / odstavit-002
+            :ARG0 s1s1
+            :cause (s1p1 / prodej
+                :mod (s1p2 / pomalý
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s1p3 / pondělí
+                :refer-number singular)
+            :duration (s1d1 / dočasně)
+            :duration (s1t1 / týden
+                :refer-number singular)
+            :ARG1 (s1t2 / továrna
+                :mod (s1m2 / montážní
+                    :refer-number singular)
+                :place (s1m3 / město
+                    :name (s1a1 / Arlington
+                        :refer-number singular)
+                    :place (s1t3 / Texas
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s1u1: 6-6
+s1s1: 1-1
+s1x1: 0-0
+s1g1: 2-2
+s1m1: 3-3
+s1c1: 4-4
+s1x2: 5-5
+s1o1: 8-8,16-16
+s1p1: 9-10,12-12
+s1p2: 11-11
+s1p3: 13-14
+s1d1: 15-15
+s1t1: 17-18
+s1t2: 20-20
+s1m2: 19-19
+s1m3: 21-22
+s1a1: 23-23
+s1t3: 24-25
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2  3    4     5   6    7          8  9     10       11 12  13         14
+Words: Uzavření se bude týkat asi 3000 pracovníků a  omezí produkci o  700 automobilů .
+
+# sentence level graph:
+(s2a1 / and
+        :op1 (s2t1 / týkat-se-001
+            :ARG0 (s2u1 / uzavření
+                :ARG1 (s2e1 / entity
+                    :refer-number singular)
+                :ARG0 (s2e2 / entity)
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s2p1 / pracovník
+                :mod (s2x1 / 3000
+                    :extent (s2a2 / asi))
+                :refer-number plural)
+            :aspect activity)
+        :op2 (s2o1 / omezit-001
+            :ARG0 s2u1
+            :ARG1 (s2p2 / produkce
+                :refer-number singular)
+            :extent (s2a3 / automobil
+                :mod (s2x3 / 700)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance))
+
+# alignment:
+s2a1: 8-8
+s2t1: 2-4
+s2p1: 7-7
+s2x1: 6-6
+s2a2: 5-5
+s2u1: 1-1
+s2e1: 0-0
+s2e2: 0-0
+s2o1: 9-9
+s2p2: 10-10
+s2a3: 11-11,13-13
+s2x3: 12-12
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2u1 :same-event s1o1)
+            (s2e1 :same-entity s1t2)
+            (s2e2 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2    3        4       5  6         7    8        9       10 11        12      13 14         15      16    17    18
+Words: V  této montážní továrně se sestavují vozy Cadillac DeVille ,  Chevrolet Caprice a  Oldsmobile Cutlass Ciera Wagon .
+
+# sentence level graph:
+(s3s1 / sestavovat-001
+        :place (s3t1 / továrna
+            :mod (s3t2 / tento
+                :refer-number singular)
+            :mod (s3m1 / montážní
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3e1 / entity)
+        :ARG1 (s3v1 / vůz
+            :name (s3a1 / and
+                :op1 (s3x1 / #Forn
+                    :FPHR (s3c1 / Cadillac)
+                    :FPHR (s3d1 / DeVille))
+                :op2 (s3x2 / #Forn
+                    :FPHR (s3c2 / Chevrolet)
+                    :FPHR (s3c3 / Caprice))
+                :op3 (s3x3 / #Forn
+                    :FPHR (s3o1 / Oldsmobile)
+                    :FPHR (s3c4 / Cutlass)
+                    :FPHR (s3c5 / Ciera)
+                    :FPHR (s3w1 / Wagon)))
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3s1: 5-6
+s3t1: 1-1,4-4
+s3t2: 2-2
+s3m1: 3-3
+s3e1: 0-0
+s3v1: 7-7
+s3a1: 13-13
+s3x1: 0-0
+s3c1: 8-8
+s3d1: 9-9
+s3x2: 0-0
+s3c2: 11-11
+s3c3: 12-12
+s3x3: 0-0
+s3o1: 14-14
+s3c4: 15-15
+s3c5: 16-16
+s3w1: 17-17
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3t1 :same-entity s2e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2     3  4   5     6           7  8     9      10 11 12    13     14 15   16 17      18     19 20          21       22      23
+Words: Skupina Truck &  Bus Group společnosti GM navíc uvedla ,  že nízký prodej ji nutí od pondělí zavřít i  detroitskou montážní továrnu .
+
+# sentence level graph:
+(s4u1 / uvést-007
+        :ARG0 (s4s1 / skupina
+            :name (s4x1 / #Forn
+                :FPHR (s4t1 / Truck)
+                :FPHR (s4x2 / &)
+                :FPHR (s4b1 / Bus)
+                :FPHR (s4g1 / Group))
+            :mod (s4s2 / společnost
+                :name (s4g2 / GM)
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s4n1 / navíc)
+        :effect (s4n2 / nutit-002
+            :ARG0 (s4p1 / prodej
+                :mod (s4n3 / nízký
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 s4s1
+            :ARG1 (s4z1 / zavřít-001
+                :ARG0 s4s1
+                :temporal (s4p2 / pondělí
+                    :refer-number singular)
+                :clausal-marker (s4i1 / i)
+                :ARG1 (s4t2 / továrna
+                    :mod (s4d1 / detroitský
+                        :refer-number singular)
+                    :mod (s4m1 / montážní
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :aspect performance)
+
+# alignment:
+s4u1: 9-9
+s4s1: 1-1,14-14
+s4x1: 0-0
+s4t1: 2-2
+s4x2: 3-3
+s4b1: 4-4
+s4g1: 5-5
+s4s2: 6-6
+s4g2: 7-7
+s4n1: 8-8
+s4n2: 11-11,15-15
+s4p1: 13-13
+s4n3: 12-12
+s4z1: 18-18
+s4p2: 16-17
+s4i1: 19-19
+s4t2: 22-22
+s4d1: 20-20
+s4m1: 21-21
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s2 :same-entity s2e2)
+            (s4p2 :same-entity s1p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2       3      4        5   6         7       8  9       10        11   12       13 14  15         16
+Words: Tato továrna vyrábí podvozky pro rekreační vozidla ,  přičemž odstávkou bude zasaženo na 450 pracovníků .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5v1 / vyrábět-001
+            :ARG0 (s5t1 / továrna
+                :mod (s5t2 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s5p1 / podvozek
+                :affectee (s5v2 / vozidlo
+                    :mod (s5r1 / rekreační
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s5z1 / zasáhnout-001
+            :ARG0 (s5e1 / entity)
+            :instrument (s5o1 / odstávka
+                :refer-number singular)
+            :ARG1 (s5p2 / pracovník
+                :mod (s5x1 / 450)
+                :refer-number plural)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s5a1: 9-9
+s5v1: 3-3
+s5t1: 2-2
+s5t2: 1-1
+s5p1: 4-4
+s5v2: 5-5,7-7
+s5r1: 6-6
+s5z1: 11-12
+s5e1: 0-0
+s5o1: 10-10
+s5p2: 13-13,15-15
+s5x1: 14-14
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5t1 :same-entity s4t2)
+            (s5o1 :same-event s4z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2   3     4     5     6     7       8     9       10 11       12      13 14    15         16 17         18 19  20 21     22        23       24
+Words: Výrobce aut číslo jedna tento týden nařídil práci přesčas v  montážní továrně ve městě Janesville ve Wisconsinu ,  kde se vyrábí Chevrolet Cavalier .
+
+# sentence level graph:
+(s6n1 / nařídit-001
+        :ARG2 (s6e1 / entity)
+        :ARG0 (s6v1 / výrobce
+            :mod (s6a1 / auto
+                :refer-number plural)
+            :mod (s6c1 / číslo
+                :name (s6j1 / jeden
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s6t1 / týden
+            :mod (s6t2 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s6p1 / práce
+            :duration (s6p2 / přesčas)
+            :refer-number singular)
+        :place (s6t3 / továrna
+            :mod (s6m1 / montážní
+                :refer-number singular)
+            :place (s6m2 / město
+                :name (s6j2 / Janesville)
+                :place (s6w1 / Wisconsin
+                    :refer-number singular)
+                :refer-number singular)
+            :place-of (s6v2 / vyrábět-001
+                :ARG0 (s6e2 / entity)
+                :ARG1 (s6x1 / #Forn
+                    :FPHR (s6c2 / Chevrolet)
+                    :FPHR (s6c3 / Cavalier))
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6n1: 7-7
+s6e1: 0-0
+s6v1: 1-1
+s6a1: 2-2
+s6c1: 3-3
+s6j1: 4-4
+s6t1: 6-6
+s6t2: 5-5
+s6p1: 8-8
+s6p2: 9-9
+s6t3: 10-10,12-12,19-19
+s6m1: 11-11
+s6m2: 13-14
+s6j2: 15-15
+s6w1: 16-17
+s6v2: 20-21
+s6e2: 0-0
+s6x1: 0-0
+s6c2: 22-22
+s6c3: 23-23
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6v1 :same-entity s4s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1     2        3       4          5  6         7       8  9  10    11    12    13      14     15      16 17  18 19     20 21  22 23     24     25    26 27   28     29       30   31 32    33     34 35  36 37     38     39 40      41    42
+Words: Devět předních výrobců automobilů ve Spojených státech má v  plánu tento týden vyrobit 147121 vozidel ,  což je pokles o  9.6 %  oproti 162767 kusům za dané období minulého roku ,  avšak nárůst o  2.5 %  oproti 143534 v  minulém týdnu .
+
+# sentence level graph:
+(s7m1 / mít-080
+        :ARG0 (s7v1 / výrobce
+            :mod (s7d1 / devět
+                :refer-number singular)
+            :mod (s7p1 / přední
+                :refer-number plural)
+            :mod (s7a1 / automobil
+                :refer-number plural)
+            :place (s7s1 / stát
+                :mod (s7s2 / Spojený
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :part-of-phraseme (s7v2 / v_plánu
+            :refer-number singular)
+        :ARG1 (s7v3 / vyrobit-001
+            :temporal (s7t1 / týden
+                :mod (s7t2 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s7v1
+            :ARG1 (s7i1 / identity-91
+                :ARG1 (s7v4 / vozidlo
+                    :mod (s7x2 / 147121)
+                    :refer-number plural)
+                :ARG2 (s7b1 / but-91
+                    :ARG1 (s7b2 / být-007
+                        :ARG0 (s7c1 / což
+                            :refer-number plural)
+                        :ARG1 (s7p2 / pokles
+                            :extent (s7x3 / #Percnt
+                                :mod (s7x4 / 9.6))
+                            :comparison (s7k1 / kus
+                                :mod (s7x5 / 162767)
+                                :duration (s7o1 / období
+                                    :mod (s7d2 / daný
+                                        :refer-number singular)
+                                    :mod (s7r1 / rok
+                                        :mod (s7m2 / minulý
+                                            :refer-number singular)
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :refer-number plural)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :ARG2 (s7b3 / být-007
+                        :ARG0 s7c1
+                        :ARG1 (s7n1 / nárůst
+                            :extent (s7x7 / #Percnt
+                                :mod (s7x8 / 2.5))
+                            :comparison (s7x9 / 143534
+                                :temporal (s7t3 / týden
+                                    :mod (s7m3 / minulý
+                                        :refer-number singular)
+                                    :refer-number singular))
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)))
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s7m1: 8-8
+s7v1: 3-3
+s7d1: 1-1
+s7p1: 2-2
+s7a1: 4-4
+s7s1: 5-5,7-7
+s7s2: 6-6
+s7v2: 9-10
+s7v3: 13-13
+s7t1: 12-12
+s7t2: 11-11
+s7i1: 16-16
+s7v4: 15-15
+s7x2: 14-14
+s7b1: 32-32
+s7b2: 18-18
+s7p2: 19-19
+s7x3: 20-20,22-22
+s7x4: 21-21
+s7k1: 23-23,25-25
+s7x5: 24-24
+s7o1: 26-26,28-28
+s7d2: 27-27
+s7r1: 30-30
+s7m2: 29-29
+s7c1: 17-17
+s7b3: 0-0
+s7n1: 33-33
+s7x7: 34-34,36-36
+s7x8: 35-35
+s7x9: 37-38
+s7t3: 39-39,41-41
+s7m3: 40-40
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7t1 :same-entity s6t1)
+            (s7c1 :same-entity s7v4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1          2    3     4  5  6     7     8     9         10       11 12         13        14 15    16    17 18    19       20 21 22    23 24    25       26 27 28     29   30 31    32       33 34 35    36      37 38    39       40
+Words: Společnost Ford Motor Co .  tento týden znovu vyhlásila přesčasy v  montážních továrnách ve městě Wixom ve státě Michigan ,  ve Wayne ve státě Michigan ,  v  Kansas City ve státě Missouri a  ve městě Norfolk ve státě Virginia .
+
+# sentence level graph:
+(s8v1 / vyhlásit-002
+        :ARG0 (s8s1 / společnost
+            :name (s8x1 / #Forn
+                :FPHR (s8f1 / Ford)
+                :FPHR (s8m1 / Motor)
+                :FPHR (s8c1 / Co)
+                :FPHR (s8x2 / .))
+            :refer-number singular)
+        :temporal (s8t1 / týden
+            :mod (s8t2 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s8z1 / znovu)
+        :ARG1 (s8p1 / přesčas
+            :refer-number plural)
+        :place (s8t3 / továrna
+            :mod (s8m2 / montážní
+                :refer-number plural)
+            :place (s8a1 / and
+                :op1 (s8m3 / město
+                    :name (s8w1 / Wixom
+                        :refer-number singular)
+                    :place (s8s2 / stát
+                        :name (s8m4 / Michigan
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s8x3 / #Forn
+                    :FPHR (s8w2 / Wayne)
+                    :place (s8s3 / stát
+                        :name (s8m5 / Michigan
+                            :refer-number singular)
+                        :refer-number singular))
+                :op3 (s8x4 / #Forn
+                    :FPHR (s8k1 / Kansas)
+                    :FPHR (s8c2 / City)
+                    :place (s8s4 / stát
+                        :name (s8m6 / Missouri)
+                        :refer-number singular))
+                :op4 (s8m7 / město
+                    :name (s8n1 / Norfolk
+                        :refer-number singular)
+                    :place (s8s5 / stát
+                        :name (s8v2 / Virginia
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s8v1: 9-9
+s8s1: 1-1
+s8x1: 0-0
+s8f1: 2-2
+s8m1: 3-3
+s8c1: 4-4
+s8x2: 5-5
+s8t1: 7-7
+s8t2: 6-6
+s8z1: 8-8
+s8p1: 10-10
+s8t3: 11-11,13-13
+s8m2: 12-12
+s8a1: 33-33
+s8m3: 14-15
+s8w1: 16-16
+s8s2: 17-18
+s8m4: 19-19
+s8x3: 0-0
+s8w2: 22-22
+s8s3: 23-24
+s8m5: 25-25
+s8x4: 0-0
+s8k1: 28-28
+s8c2: 29-29
+s8s4: 30-31
+s8m6: 32-32
+s8m7: 34-35
+s8n1: 36-36
+s8s5: 37-38
+s8v2: 39-39
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8t1 :same-entity s7t1)
+            (s8s3 :same-entity s8s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1   2  3        4          5    6       7    8   9  10          11 12   13  14 15   16     17 18    19      20   21   22 23 24
+Words: Tam se vyrábějí automobily řady Lincoln Town Car ,  Continental a  Mark VII ,  Ford Escort a  velké dodávky typu pick -  up .
+
+# sentence level graph:
+(s9v1 / vyrábět-001
+        :ARG0 (s9e1 / entity)
+        :place (s9t1 / tam
+            :refer-number plural)
+        :ARG1 (s9a1 / and
+            :op1 (s9a2 / automobil
+                :mod (s9r1 / řada
+                    :name (s9a3 / and
+                        :op1 (s9x1 / #Forn
+                            :FPHR (s9l1 / Lincoln)
+                            :FPHR (s9t2 / Town)
+                            :FPHR (s9c1 / Car))
+                        :op2 (s9x2 / #Forn
+                            :FPHR (s9c2 / Continental
+                                :refer-number singular))
+                        :op3 (s9x3 / #Forn
+                            :FPHR (s9m1 / Mark
+                                :refer-number singular)
+                            :FPHR (s9v2 / VII)))
+                    :refer-number singular)
+                :refer-number plural)
+            :op2 (s9x4 / #Forn
+                :FPHR (s9f1 / Ford
+                    :refer-number singular)
+                :FPHR (s9e2 / Escort
+                    :refer-number singular))
+            :op3 (s9d1 / dodávka
+                :mod (s9v3 / velký
+                    :refer-number plural)
+                :mod (s9t3 / typ
+                    :name (s9x5 / #Forn
+                        :FPHR (s9p1 / pick)
+                        :FPHR (s9x6 / -)
+                        :FPHR (s9u1 / up))
+                    :refer-number singular)
+                :refer-number plural))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9v1: 2-3
+s9e1: 0-0
+s9t1: 1-1
+s9a1: 17-17
+s9a2: 4-4
+s9r1: 5-5
+s9a3: 11-11
+s9x1: 0-0
+s9l1: 6-6
+s9t2: 7-7
+s9c1: 8-8
+s9x2: 0-0
+s9c2: 10-10
+s9x3: 0-0
+s9m1: 12-12
+s9v2: 13-13
+s9x4: 0-0
+s9f1: 15-15
+s9e2: 16-16
+s9d1: 19-19
+s9v3: 18-18
+s9t3: 20-20
+s9x5: 0-0
+s9p1: 21-21
+s9x6: 22-22
+s9u1: 23-23
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9t1 :same-entity s8t3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1          2        3    4  5     6     7        8     9       10 11       12      13 14 15 16 17 18 19    20 21   22 23    24     25 26    27       28 29 30       31      32 33    34       35
+Words: Společnost Chrysler Corp .  tento týden nařídila práci přesčas v  montážní továrně č  .  2  v  St .  Louis a  dále ve městě Newark ve státě Delaware a  v  Sterling Heights ve státě Michigan .
+
+# sentence level graph:
+(s10n1 / nařídit-001
+        :ARG2 (s10e1 / entity)
+        :ARG0 (s10s1 / společnost
+            :name (s10x1 / #Forn
+                :FPHR (s10c1 / Chrysler)
+                :FPHR (s10c2 / Corp)
+                :FPHR (s10x2 / .))
+            :refer-number singular)
+        :temporal (s10t1 / týden
+            :mod (s10t2 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s10p1 / práce
+            :duration (s10p2 / přesčas)
+            :refer-number singular)
+        :place (s10a1 / and
+            :op1 (s10t3 / továrna
+                :mod (s10m1 / montážní
+                    :refer-number singular)
+                :mod (s10c3 / číslo
+                    :name (s10x3 / 2))
+                :place (s10x4 / #Forn
+                    :FPHR (s10s2 / St)
+                    :FPHR (s10x5 / .)
+                    :FPHR (s10l1 / Louis))
+                :refer-number singular)
+            :clausal-marker (s10d1 / dále)
+            :op2 (s10a2 / and
+                :op1 (s10m2 / město
+                    :name (s10n2 / Newark
+                        :refer-number singular)
+                    :place (s10s3 / stát
+                        :mod (s10d2 / Delaware)
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s10x6 / #Forn
+                    :FPHR (s10s4 / Sterling)
+                    :FPHR (s10h1 / Heights)
+                    :place (s10s5 / stát
+                        :name (s10m3 / Michigan
+                            :refer-number singular)
+                        :refer-number singular))))
+        :aspect performance)
+
+# alignment:
+s10n1: 7-7
+s10e1: 0-0
+s10s1: 1-1
+s10x1: 0-0
+s10c1: 2-2
+s10c2: 3-3
+s10x2: 4-4
+s10t1: 6-6
+s10t2: 5-5
+s10p1: 8-8
+s10p2: 9-9
+s10a1: 20-20
+s10t3: 10-10,12-12
+s10m1: 11-11
+s10c3: 13-13
+s10x3: 15-15
+s10x4: 0-0
+s10s2: 17-17
+s10x5: 18-18
+s10l1: 19-19
+s10d1: 21-21
+s10a2: 28-28
+s10m2: 22-23
+s10n2: 24-24
+s10s3: 25-26
+s10d2: 27-27
+s10x6: 0-0
+s10s4: 30-30
+s10h1: 31-31
+s10s5: 32-33
+s10m3: 34-34
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10t1 :same-entity s8t1)
+            (s10s5 :same-entity s8s3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1   2  3        4     5       6  7     8      9  10      11 12     13 14       15
+Words: Tam se vyrábějí větší dodávky a  Dodge Spirit ,  Acclaim ,  Shadow a  Sundance .
+
+# sentence level graph:
+(s11v1 / vyrábět-001
+        :ARG0 (s11e1 / entity)
+        :place (s11t1 / tam)
+        :ARG1 (s11a1 / and
+            :op1 (s11d1 / dodávka
+                :mod (s11v2 / velký
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s11a2 / and
+                :op1 (s11x1 / #Forn
+                    :FPHR (s11d2 / Dodge)
+                    :FPHR (s11s1 / Spirit))
+                :op2 (s11x2 / #Forn
+                    :FPHR (s11a3 / Acclaim
+                        :refer-number singular))
+                :op3 (s11x3 / #Forn
+                    :FPHR (s11s2 / Shadow
+                        :refer-number singular))
+                :op4 (s11x4 / #Forn
+                    :FPHR (s11s3 / Sundance
+                        :refer-number singular))))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s11v1: 2-3
+s11e1: 0-0
+s11t1: 1-1
+s11a1: 6-6
+s11d1: 5-5
+s11v2: 4-4
+s11a2: 13-13
+s11x1: 0-0
+s11d2: 7-7
+s11s1: 8-8
+s11x2: 0-0
+s11a3: 10-10
+s11x3: 0-0
+s11s2: 12-12
+s11x4: 0-0
+s11s3: 14-14
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11t1 :same-entity s10a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1  2  3            4     5  6     7   8   9  10
+Words: d  -  Procentuální změna je větší než 999 %  .
+
+# sentence level graph:
+(s12b1 / být-007
+        :clausal-marker (s12d1 / d)
+        :ARG0 (s12z1 / změna
+            :mod (s12p1 / procentuální
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s12v1 / velký
+            :comparison (s12x1 / #Percnt
+                :mod (s12x2 / 999))
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s12b1: 5-5
+s12d1: 1-1
+s12z1: 4-4
+s12p1: 3-3
+s12v1: 6-6
+s12x1: 7-7,9-9
+s12x2: 8-8
+
+# document level annotation:
+(s12s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1 2 3     4
+Words: e - Odhad .
+
+# sentence level graph:
+(s13e1 / event
+        :clausal-marker (s13e2 / e)
+        :ARG0 (s13o1 / odhad
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s13e1: 0-0
+s13e2: 1-1
+s13o1: 3-3
+
+# document level annotation:
+(s13s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1  2  3        4    5         6     7  8      9       10
+Words: f  -  Zahrnuje vozy Chevrolet Prizm a  Toyota Corolla .
+
+# sentence level graph:
+(s14z1 / zahrnovat-003
+        :clausal-marker (s14f1 / f)
+        :ARG0 (s14e1 / entity
+            :refer-number singular)
+        :ARG1 (s14v1 / vůz
+            :name (s14a1 / and
+                :op1 (s14x1 / #Forn
+                    :FPHR (s14c1 / Chevrolet)
+                    :FPHR (s14p1 / Prizm))
+                :op2 (s14x2 / #Forn
+                    :FPHR (s14t1 / Toyota)
+                    :FPHR (s14c2 / Corolla)))
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s14z1: 3-3
+s14f1: 1-1
+s14e1: 0-0
+s14v1: 4-4
+s14a1: 7-7
+s14x1: 0-0
+s14c1: 5-5
+s14p1: 6-6
+s14x2: 0-0
+s14t1: 8-8
+s14c2: 9-9
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14e1 :same-entity s12z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1 2 3          4
+Words: r - Revidováno .
+
+# sentence level graph:
+(s15r1 / revidovat-001
+        :ARG1 (s15e1 / entity)
+        :ARG0 (s15e2 / entity)
+        :clausal-marker (s15r2 / r)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s15r1: 3-3
+s15e1: 0-0
+s15e2: 0-0
+s15r2: 1-1
+
+# document level annotation:
+(s15s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1  2  3     4  5      6   7  8    9    10       11     12       13          14         15 16       17
+Words: x  -  Údaje k  danému dni z  roku 1988 zahrnují domácí produkci společnosti Volkswagen do července .
+
+# sentence level graph:
+(s16z1 / zahrnovat-002
+        :ARG0 (s16u1 / údaj
+            :temporal (s16d1 / den
+                :mod (s16d2 / daný
+                    :refer-number singular)
+                :temporal (s16r1 / rok
+                    :name (s16x1 / 1988)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :goal (s16e1 / entity)
+        :clausal-marker (s16x2 / x)
+        :ARG1 (s16p1 / produkce
+            :mod (s16d3 / domácí
+                :refer-number singular)
+            :mod (s16s1 / společnost
+                :name (s16v1 / Volkswagen
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s16c1 / červenec
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s16z1: 10-10
+s16u1: 3-3
+s16d1: 4-4,6-6
+s16d2: 5-5
+s16r1: 7-8
+s16x1: 9-9
+s16e1: 0-0
+s16x2: 1-1
+s16p1: 12-12
+s16d3: 11-11
+s16s1: 13-13
+s16v1: 14-14
+s16c1: 15-16
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16r1 :same-entity s7r1)))
+
+

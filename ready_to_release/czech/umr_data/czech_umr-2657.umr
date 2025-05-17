@@ -1,0 +1,926 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2  3
+Words: Mercedesy se zpožděním
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1m1 / Mercedes
+            :refer-number plural)
+        :companion (s1z1 / zpoždění
+            :ARG0 (s1e2 / entity)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1m1: 1-1
+s1z1: 2-3
+s1e2: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2        3   4    5     6      7 8
+Words: MALÉ AUTOBUSY PRO ČSAD ZATÍM ČEKAJÍ V NĚMECKU
+
+# sentence level graph:
+(s2c1 / čekat-002
+        :ARG0 (s2a1 / autobus
+            :mod (s2m1 / malý
+                :refer-number plural)
+            :affectee (s2c2 / ČSAD)
+            :refer-number plural)
+        :ARG1 (s2e1 / entity)
+        :temporal (s2z1 / zatím)
+        :place (s2n1 / Německo
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2c1: 6-6
+s2a1: 2-2
+s2m1: 1-1
+s2c2: 3-4
+s2e1: 0-0
+s2z1: 5-5
+s2n1: 7-8
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2a1 :same-entity s1m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2 3   4 5
+Words: Ostrava ( mas ) -
+
+# sentence level graph:
+(s3o1 / Ostrava
+        :parenthesis (s3m1 / mas)
+        :refer-number singular)
+
+# alignment:
+s3o1: 1-1
+s3m1: 3-3
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2           3         4       5    6       7  8  9  10 11 12     13       14       15 16   17  18 19
+Words: S  tříměsíčním zpožděním dostane ČSAD Ostrava a  .  s  .  20 malých autobusů Mercedes -  Benz 310 D  .
+
+# sentence level graph:
+(s4d1 / dostat-001
+        :companion (s4z1 / zpoždění
+            :ARG0 (s4e1 / entity)
+            :duration (s4t1 / tříměsíční
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4c1 / ČSAD
+            :mod (s4o1 / Ostrava
+                :refer-number singular)
+            :mod (s4s1 / společnost
+                :mod (s4a1 / akciový))
+            :refer-number singular)
+        :ARG1 (s4a2 / autobus
+            :name (s4m1 / Mercedes
+                :mod (s4b1 / Benz)
+                :mod (s4d2 / d
+                    :mod (s4x1 / 310))
+                :refer-number singular)
+            :mod (s4m2 / malý
+                :refer-number plural)
+            :mod (s4x2 / 20)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s4d1: 4-4
+s4z1: 1-1,3-3
+s4e1: 0-0
+s4t1: 2-2
+s4c1: 5-5
+s4o1: 6-6
+s4s1: 9-9
+s4a1: 7-7
+s4a2: 13-13
+s4m1: 14-14
+s4b1: 16-16
+s4d2: 18-18
+s4x1: 17-17
+s4m2: 12-12
+s4x2: 11-11
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4c1 :same-entity s2c2)
+            (s4o1 :same-entity s3o1)
+            (s4a2 :same-entity s2a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1        2  3           4     5       6    7         8        9   10 11    12      13 14   15            16    17
+Words: Polovinu z  plánovaného počtu vozidel měli ostravští dopravci již v  srpnu nasadit na málo frekventované linky .
+
+# sentence level graph:
+(s5n1 / nasadit-003
+        :ARG1 (s5p1 / polovina
+            :start (s5p2 / počet
+                :mod (s5v1 / vozidlo
+                    :refer-number plural)
+                :mod (s5p3 / plánovaný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5d1 / dopravce
+            :mod (s5o1 / ostravský
+                :refer-number plural)
+            :refer-number plural)
+        :clausal-marker (s5j1 / již)
+        :temporal (s5s1 / srpen
+            :refer-number singular)
+        :goal (s5l1 / linka
+            :mod (s5f1 / frekventovaný
+                :extent (s5m1 / málo)
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s5n1: 6-6,12-12
+s5p1: 1-1
+s5p2: 2-2,4-4
+s5v1: 5-5
+s5p3: 3-3
+s5d1: 8-8
+s5o1: 7-7
+s5j1: 9-9
+s5s1: 10-11
+s5l1: 13-13,16-16
+s5f1: 15-15
+s5m1: 14-14
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p2 :same-entity s4x2)
+            (s5d1 :same-entity s4c1)
+            (s5o1 :same-entity s4o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2   3      4  5        6       7  8     9  10      11       12
+Words: "  Vše závisí na finanční situaci ,  která se rapidně zhoršila .
+
+# sentence level graph:
+(s6z1 / záviset-001
+        :ARG0 (s6v1 / všechen
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s6s1 / situace
+            :mod (s6f1 / finanční
+                :refer-number singular)
+            :ARG0-of (s6z2 / zhoršit-se-001
+                :manner (s6r1 / rapidně)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6z1: 3-3
+s6v1: 2-2
+s6s1: 4-4,6-6,8-8
+s6f1: 5-5
+s6z2: 9-9,11-11
+s6r1: 10-10
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1   2  3       4     5   6      7  8          9  10      11     12         13     14 15      16          17 18  19      20   21 22           23 24        25 26 27   28  29   30    31 32        33      34   35      36 37 38 39
+Words: Asi 50 miliónů korun nám schází z  delimitace po přeměně našich dopravních závodů na akciové společnosti a  150 miliónů máme v  pohledávkách u  neplatičů ,  "  řekl nám Jiří Horák ,  generální ředitel ČSAD Ostrava a  .  s  .
+
+# sentence level graph:
+(s7r1 / říci-008
+        :ARG0 (s7i1 / identity-91
+            :ARG1 (s7h1 / Horák
+                :mod (s7j1 / Jiří
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG2 (s7r2 / ředitel
+                :possessor (s7c1 / ČSAD
+                    :mod (s7o1 / Ostrava
+                        :refer-number singular)
+                    :mod (s7s1 / společnost
+                        :mod (s7a1 / akciový))
+                    :refer-number plural
+                    :refer-person 1st)
+                :mod (s7g1 / generální
+                    :refer-number singular)
+                :refer-number singular))
+        :ARG2 (s7e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :effect (s7a2 / and
+            :op1 (s7s2 / scházet-001
+                :ARG0 (s7m1 / milión
+                    :mod (s7k1 / koruna
+                        :refer-number plural)
+                    :mod (s7x1 / 50
+                        :extent (s7a3 / asi))
+                    :refer-number plural)
+                :ARG1 (s7e2 / entity
+                    :refer-number plural
+                    :refer-person 1st)
+                :start (s7d1 / delimitace
+                    :refer-number singular)
+                :temporal (s7p1 / přeměna
+                    :ARG1 (s7z1 / závod
+                        :possessor s7e2
+                        :mod (s7d2 / dopravní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :effect (s7s3 / společnost
+                        :mod (s7a4 / akciový
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :op2 (s7m2 / mít-002
+                :ARG1 (s7m3 / milión
+                    :mod (s7x3 / 150)
+                    :refer-number plural)
+                :ARG0 s7e2
+                :place (s7p2 / pohledávka
+                    :place (s7n1 / neplatič
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 1st
+                :aspect state))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7r1: 27-27
+s7i1: 31-31
+s7h1: 30-30
+s7j1: 29-29
+s7r2: 33-33
+s7c1: 34-34
+s7o1: 35-35
+s7s1: 38-38
+s7a1: 36-36
+s7g1: 32-32
+s7e1: 28-28
+s7a2: 17-17
+s7s2: 6-6
+s7m1: 3-3
+s7k1: 4-4
+s7x1: 2-2
+s7a3: 1-1
+s7e2: 5-5,11-11
+s7d1: 7-8
+s7p1: 9-10
+s7z1: 13-13
+s7d2: 12-12
+s7s3: 14-14,16-16
+s7a4: 15-15
+s7m2: 20-20
+s7m3: 19-19
+s7x3: 18-18
+s7p2: 21-22
+s7n1: 23-24
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7c1 :same-entity s7e2)
+            (s7o1 :same-entity s5o1)
+            (s7e2 :same-entity s5d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1      2         3      4  5  6       7     8
+Words: Dvacet mercedesů přijde na 26 miliónů korun .
+
+# sentence level graph:
+(s8p1 / přijít-001
+        :ARG0 (s8m1 / Mercedes
+            :mod (s8d1 / dvacet
+                :refer-number singular)
+            :refer-number plural)
+        :ARG2 (s8e1 / entity)
+        :ARG1 (s8m2 / milión
+            :mod (s8k1 / koruna
+                :refer-number plural)
+            :mod (s8x1 / 26)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s8p1: 3-3
+s8m1: 2-2
+s8d1: 1-1
+s8e1: 0-0
+s8m2: 4-4,6-6
+s8k1: 7-7
+s8x1: 5-5
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8m1 :same-entity s4a2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1       2    3   4       5         6      7
+Words: Původně měla být vozidla zakoupena hotově .
+
+# sentence level graph:
+(s9z1 / zakoupit-001
+        :temporal (s9p1 / původně)
+        :ARG1 (s9v1 / vozidlo
+            :refer-number plural)
+        :ARG0 (s9e1 / entity)
+        :manner (s9h1 / hotově)
+        :aspect performance)
+
+# alignment:
+s9z1: 2-3,5-5
+s9p1: 1-1
+s9v1: 4-4
+s9e1: 0-0
+s9h1: 6-6
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9v1 :same-entity s8m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1       2  3    4      5    6  7        8     9    10 11   12   13      14    15
+Words: Později si ČSAD muselo vzít u  Komerční banky úvěr ve výši 22.5 miliónů korun .
+
+# sentence level graph:
+(s10v1 / vzít-si-001
+        :temporal (s10p1 / pozdě)
+        :ARG0 (s10c1 / ČSAD
+            :refer-number singular)
+        :place (s10b1 / banka
+            :mod (s10k1 / Komerční
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s10u1 / úvěr
+            :mod (s10v2 / výše
+                :mod (s10m1 / milión
+                    :mod (s10k2 / koruna
+                        :refer-number plural)
+                    :mod (s10x1 / 22.5)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s10v1: 2-2,4-5
+s10p1: 1-1
+s10c1: 3-3
+s10b1: 6-6,8-8
+s10k1: 7-7
+s10u1: 9-9
+s10v2: 10-11
+s10m1: 13-13
+s10k2: 14-14
+s10x1: 12-12
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10c1 :same-entity s7c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1        2    3   4  5     6          7 8       9
+Words: Autobusy jsou již od srpna připraveny v Německu .
+
+# sentence level graph:
+(s11p1 / připravit-002
+        :ARG1 (s11a1 / autobus
+            :refer-number plural)
+        :clausal-marker (s11j1 / již)
+        :temporal (s11s1 / srpen
+            :refer-number singular)
+        :ARG0 (s11e1 / entity)
+        :place (s11n1 / Německo
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s11p1: 2-2,6-6
+s11a1: 1-1
+s11j1: 3-3
+s11s1: 4-5
+s11e1: 0-0
+s11n1: 7-8
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11a1 :same-entity s9v1)
+            (s11n1 :same-entity s2n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1  2  3        4      5       6  7        8    9  10   11 12       13 14  15     16      17   18       19
+Words: "  O  finanční pomoci jednáme se zástupci měst a  obcí v  okresech ,  kde chceme nasadit nové autobusy .
+
+# sentence level graph:
+(s12j1 / jednat-001
+        :ARG1 (s12p1 / pomoc
+            :mod (s12f1 / finanční
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s12e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :ARG2 (s12a1 / and
+            :op1 (s12z1 / zástupce
+                :ARG1 (s12m1 / město
+                    :refer-number plural)
+                :place (s12o1 / okres
+                    :place-of (s12n1 / nasadit-003
+                        :ARG1 (s12a2 / autobus
+                            :mod (s12n2 / nový
+                                :refer-number plural)
+                            :refer-number plural)
+                        :ARG0 s12e1
+                        :aspect performance)
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s12z2 / zástupce
+                :place s12o1
+                :ARG1 (s12o2 / obec
+                    :refer-number plural)
+                :refer-number plural))
+        :refer-number plural
+        :refer-person 1st
+        :aspect activity)
+
+# alignment:
+s12j1: 5-5
+s12p1: 2-2,4-4
+s12f1: 3-3
+s12e1: 0-0
+s12a1: 9-9
+s12z1: 6-7
+s12m1: 8-8
+s12o1: 11-12,14-14
+s12n1: 15-16
+s12a2: 18-18
+s12n2: 17-17
+s12z2: 0-0
+s12o2: 10-10
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12e1 :same-entity s10c1)
+            (s12a2 :same-entity s11a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1     2        3         4  5      6  7  8    9   10   11 12     13    14
+Words: Zatím většinou neúspěšně a  přitom by to mělo být také v  jejich zájmu .
+
+# sentence level graph:
+(s13a1 / and
+        :op1 (s13j1 / jednat-001
+            :temporal (s13z1 / zatím)
+            :ARG0 (s13e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :ARG1 (s13e2 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG2 (s13e3 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :extent (s13v1 / většinou)
+            :manner (s13u1 / úspěšně
+                :polarity -)
+            :refer-number plural
+            :refer-person 1st
+            :aspect activity)
+        :clausal-marker (s13p1 / přitom)
+        :op2 (s13b1 / být-030
+            :ARG0 (s13t1 / ten
+                :refer-number singular
+                :refer-person 3rd)
+            :clausal-marker (s13t2 / také)
+            :part-of-phraseme (s13v2 / v_zájmu
+                :possessor s13e3
+                :refer-number singular)
+            :aspect activity))
+
+# alignment:
+s13a1: 4-4
+s13j1: 0-0
+s13z1: 1-1
+s13e1: 0-0
+s13e2: 0-0
+s13e3: 12-12
+s13v1: 2-2
+s13u1: 3-3
+s13p1: 5-5
+s13b1: 6-6,8-9
+s13t1: 7-7
+s13t2: 10-10
+s13v2: 11-11,13-13
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13e1 :same-entity s12e1)
+            (s13e2 :same-entity s12p1)
+            (s13e3 :same-entity s12a1)
+            (s13t1 :same-entity s13e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1 2      3       4        5 6         7        8
+Words: U deseti vozidel počítáme s komerčním využitím .
+
+# sentence level graph:
+(s14p1 / počítat-007
+        :place (s14v1 / vozidlo
+            :mod (s14d1 / deset
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s14e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :ARG1 (s14v2 / využití
+            :ARG0 (s14e2 / entity)
+            :ARG1 (s14e3 / entity)
+            :manner (s14k1 / komerční
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 1st
+        :aspect activity)
+
+# alignment:
+s14p1: 4-4
+s14v1: 1-1,3-3
+s14d1: 2-2
+s14e1: 0-0
+s14v2: 5-5,7-7
+s14e2: 0-0
+s14e3: 0-0
+s14k1: 6-6
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14e1 :same-entity s13e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1  2   3    4       5  6       7      8  9             10       11   12 13     14 15     16 17    18    19    20
+Words: Už teď máme nabídky na obsluhu hotelů ,  nepravidelnou přepravu osob ,  pohřby či svatby "  dodal Pavel Horák .
+
+# sentence level graph:
+(s15d1 / dodat-005
+        :ARG0 (s15h1 / Horák
+            :mod (s15p1 / Pavel
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s15m1 / mít-002
+            :clausal-marker (s15u1 / už)
+            :temporal (s15t1 / teď)
+            :ARG0 (s15e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :ARG1 (s15n1 / nabídka
+                :ARG1 (s15a1 / and
+                    :op1 (s15o1 / obsluha
+                        :ARG1 (s15h2 / hotel
+                            :refer-number plural)
+                        :refer-number singular)
+                    :op2 (s15p2 / přeprava
+                        :ARG1 (s15o2 / osoba
+                            :refer-number plural)
+                        :mod (s15p3 / pravidelný
+                            :refer-number singular
+                            :polarity -)
+                        :refer-number singular)
+                    :op3 (s15p4 / pohřeb
+                        :refer-number plural)
+                    :op4 (s15s1 / svatba
+                        :refer-number plural))
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 1st
+            :aspect state)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s15d1: 17-17
+s15h1: 19-19
+s15p1: 18-18
+s15m1: 3-3
+s15u1: 1-1
+s15t1: 2-2
+s15e1: 0-0
+s15n1: 4-4
+s15a1: 14-14
+s15o1: 5-6
+s15h2: 7-7
+s15p2: 5-5,10-10
+s15o2: 11-11
+s15p3: 9-9
+s15p4: 5-5,13-13
+s15s1: 5-5,15-15
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15h1 :same-entity s7h1)
+            (s15e1 :same-entity s14e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1     2           3    4    5  6         7         8      9         10
+Words: Mnoho zaměstnanců ČSAD není k  zakoupení mercedesů příliš nakloněno .
+
+# sentence level graph:
+(s16b1 / být-007
+        :ARG0 (s16z1 / zaměstnanec
+            :possessor (s16c1 / ČSAD
+                :refer-number plural
+                :refer-person 1st)
+            :mod (s16m1 / mnoho)
+            :refer-number plural)
+        :ARG1 (s16n1 / nakloněný
+            :ARG1 (s16z2 / zakoupení
+                :ARG1 (s16m2 / Mercedes
+                    :refer-number plural)
+                :ARG0 (s16e1 / entity)
+                :refer-number singular)
+            :extent (s16p1 / příliš)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s16b1: 4-4
+s16z1: 2-2
+s16c1: 3-3
+s16m1: 1-1
+s16n1: 9-9
+s16z2: 5-6
+s16m2: 7-7
+s16e1: 0-0
+s16p1: 8-8
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16c1 :same-entity s15e1)
+            (s16m2 :same-entity s12a2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1     2  3  4  5  6        7        8           9     10     11 12   13  14   15         16
+Words: Myslí si ,  že o  polovinu levnější konkurenční Fiaty Ducato by byly pro ČSAD výhodnější .
+
+# sentence level graph:
+(s17m1 / myslit-si-003
+        :ARG0 (s17e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :effect (s17b1 / být-007
+            :ARG0 (s17f1 / Fiat
+                :mod (s17d1 / Ducato
+                    :refer-number singular)
+                :mod (s17k1 / konkurenční
+                    :refer-number plural)
+                :mod (s17l1 / levný
+                    :extent (s17p1 / polovina
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural)
+            :affectee (s17c1 / ČSAD)
+            :ARG1 (s17v1 / výhodný
+                :refer-number plural)
+            :refer-number plural
+            :aspect activity)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s17m1: 1-2
+s17e1: 0-0
+s17b1: 4-4,11-12
+s17f1: 9-9
+s17d1: 10-10
+s17k1: 8-8
+s17l1: 7-7
+s17p1: 5-6
+s17c1: 13-14
+s17v1: 15-15
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17e1 :same-entity s16z1)
+            (s17c1 :same-entity s16c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1       2        3    4     5        6      7      8           9  10     11            12  13    14
+Words: Německé autobusy jsou podle ředitele Horáka mnohem kvalitnější a  hlavně spolehlivější než fiaty .
+
+# sentence level graph:
+(s18b1 / být-007
+        :ARG0 (s18a1 / autobus
+            :mod (s18n1 / německý
+                :refer-number plural)
+            :refer-number plural)
+        :regard (s18h1 / Horák
+            :mod (s18r1 / ředitel
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s18g1 / gradation
+            :op1 (s18k1 / kvalitní
+                :extent (s18m1 / mnohem)
+                :comparison (s18b2 / být-007
+                    :ARG1 (s18a2 / and
+                        :op1 (s18k2 / kvalitní
+                            :refer-number plural)
+                        :op2 (s18s1 / spolehlivý
+                            :refer-number plural))
+                    :ARG0 (s18f1 / fiat
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number plural)
+            :clausal-marker (s18h2 / hlavně)
+            :op2 (s18s2 / spolehlivý
+                :comparison s18b2
+                :refer-number plural))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s18b1: 3-3
+s18a1: 2-2
+s18n1: 1-1
+s18h1: 4-4,6-6
+s18r1: 5-5
+s18g1: 9-9
+s18k1: 8-8
+s18m1: 7-7
+s18b2: 0-0
+s18a2: 0-0
+s18k2: 0-0
+s18s1: 0-0
+s18f1: 13-13
+s18h2: 10-10
+s18s2: 11-11
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18a1 :same-entity s16m2)
+            (s18n1 :same-entity s11n1)
+            (s18h1 :same-entity s15h1)
+            (s18f1 :same-entity s17f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s19-root
+# :: snt19
+Index: 1     2         3    4         5     6        7  8    9  10    11      12     13 14  15 16    17         18  19    20         21 22       23      24
+Words: Navíc ostravské ČSAD zastupuje firmu Mercedes -  Benz na území severní Moravy ,  což je dobrý předpoklad pro další spolupráci a  servisní činnost .
+
+# sentence level graph:
+(s19a1 / and
+        :op1 (s19z1 / zastupovat-001
+            :clausal-marker (s19n1 / navíc)
+            :ARG0 (s19c1 / ČSAD
+                :mod (s19o1 / ostravský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s19f1 / firma
+                :name (s19m1 / Mercedes
+                    :mod (s19b1 / Benz)
+                    :refer-number singular)
+                :refer-number singular)
+            :place (s19u1 / území
+                :possessor (s19m2 / Morava
+                    :mod (s19s1 / severní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s19b2 / být-007
+            :ARG0 (s19c2 / což
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s19p1 / předpoklad
+                :ARG1 (s19a2 / and
+                    :op1 (s19s2 / spolupráce
+                        :mod (s19d1 / další
+                            :refer-number singular)
+                        :refer-number singular)
+                    :op2 (s19c3 / činnost
+                        :mod (s19s3 / servisní
+                            :refer-number singular)
+                        :refer-number singular))
+                :mod (s19d2 / dobrý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s19a1: 13-13
+s19z1: 4-4
+s19n1: 1-1
+s19c1: 3-3
+s19o1: 2-2
+s19f1: 5-5
+s19m1: 6-6
+s19b1: 8-8
+s19u1: 9-10
+s19m2: 12-12
+s19s1: 11-11
+s19b2: 15-15
+s19c2: 14-14
+s19p1: 17-17
+s19a2: 21-21
+s19s2: 18-18,20-20
+s19d1: 19-19
+s19c3: 18-18,23-23
+s19s3: 22-22
+s19d2: 16-16
+
+# document level annotation:
+(s19s0 / sentence
+    :coref ((s19c1 :same-entity s17c1)
+            (s19o1 :same-entity s7o1)
+            (s19c2 :same-event s19z1)))
+
+

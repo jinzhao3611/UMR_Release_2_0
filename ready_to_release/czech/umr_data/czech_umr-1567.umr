@@ -1,0 +1,278 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2       3  4         5  6       7  8          9       10 11 12
+Words: David Gilmour (  uprostřed )  vychází z  ruzyňského letiště .  .  .
+
+# sentence level graph:
+(s1v1 / vycházet-010
+        :ARG0 (s1g1 / Gilmour
+            :mod (s1d1 / David
+                :refer-number singular)
+            :place (s1u1 / uprostřed)
+            :refer-number singular)
+        :start (s1l1 / letiště
+            :mod (s1r1 / ruzyňský
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1v1: 6-6
+s1g1: 2-2
+s1d1: 1-1
+s1u1: 4-4
+s1l1: 7-7,9-9
+s1r1: 8-8
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2       3       4    5     6         7  8     9     10        11        12 13         14
+Words: Členové rockové skupiny Pink Floyd přiletěli do Prahy včera odpoledne speciálem z  Rotterdamu .
+
+# sentence level graph:
+(s2p1 / přiletět-001
+        :ARG0 (s2c1 / člen
+            :possessor (s2s1 / skupina
+                :name (s2x1 / #Forn
+                    :FPHR (s2p2 / Pink)
+                    :FPHR (s2f1 / Floyd))
+                :mod (s2r1 / rockový
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :goal (s2p3 / Praha
+            :refer-number singular)
+        :temporal (s2v1 / včera)
+        :temporal (s2o1 / odpoledne)
+        :instrument (s2s2 / speciál
+            :refer-number singular)
+        :start (s2r2 / Rotterdam
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s2p1: 6-6
+s2c1: 1-1
+s2s1: 3-3
+s2x1: 0-0
+s2p2: 4-4
+s2f1: 5-5
+s2r1: 2-2
+s2p3: 7-8
+s2v1: 9-9
+s2o1: 10-10
+s2s2: 11-11
+s2r2: 12-13
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2    3  4       5        6      7                8
+Words: Ubytováni jsou ve třiceti pokojích hotelu Intercontinental .
+
+# sentence level graph:
+(s3u1 / ubytovat-001
+        :ARG0 (s3e1 / entity)
+        :ARG1 (s3e2 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :place (s3p1 / pokoj
+            :possessor (s3h1 / hotel
+                :name (s3i1 / Intercontinental
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3t1 / třicet
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s3u1: 1-2
+s3e1: 0-0
+s3e2: 0-0
+s3p1: 3-3,5-5
+s3h1: 6-6
+s3i1: 7-7
+s3t1: 4-4
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e2 :same-entity s2c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2          3        4  5     6     7   8      9  10           11      12       13        14 15 16    17
+Words: S  legendární skupinou se včera sešel při večeři v  malostranské vinárně Čertovka prezident V  .  Havel .
+
+# sentence level graph:
+(s4s1 / sejít-se-001
+        :ARG1 (s4s2 / skupina
+            :mod (s4l1 / legendární
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s4v1 / včera)
+        :temporal (s4v2 / večeře
+            :place (s4v3 / vinárna
+                :name (s4c1 / Čertovka
+                    :refer-number singular)
+                :mod (s4m1 / malostranský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4h1 / Havel
+            :mod (s4v4 / V)
+            :mod (s4p1 / prezident
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4s1: 4-4,6-6
+s4s2: 1-1,3-3
+s4l1: 2-2
+s4v1: 5-5
+s4v2: 7-8
+s4v3: 9-9,11-11
+s4c1: 12-12
+s4m1: 10-10
+s4h1: 16-16
+s4v4: 14-14
+s4p1: 13-13
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s2 :same-entity s2s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2          3       4    5     6  7  8        9        10
+Words: Dnešní strahovský koncert Pink Floyd je od pondělka vyprodán .
+
+# sentence level graph:
+(s5v1 / vyprodat-001
+        :ARG1 (s5k1 / koncert
+            :mod (s5d1 / dnešní
+                :refer-number singular)
+            :ARG0 (s5x1 / #Forn
+                :FPHR (s5p1 / Pink)
+                :FPHR (s5f1 / Floyd)
+                :refer-number singular)
+            :mod (s5s1 / strahovský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5e1 / entity)
+        :temporal (s5p2 / pondělek
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5v1: 6-6,9-9
+s5k1: 3-3
+s5d1: 1-1
+s5x1: 0-0
+s5p1: 4-4
+s5f1: 5-5
+s5s1: 2-2
+s5e1: 0-0
+s5p2: 7-8
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5x1 :same-entity s4s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2    3     4         5  6     7    8        9    10 11 12  13 14    15 16       17
+Words: Rezerva pěti tisíc vstupenek se možná bude prodávat dnes od 16 hod .  přímo na stadionu .
+
+# sentence level graph:
+(s6p1 / prodávat-001
+        :ARG1 (s6r1 / rezerva
+            :mod (s6t1 / tisíc
+                :mod (s6v1 / vstupenka
+                    :refer-number plural)
+                :mod (s6p2 / pět
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s6e1 / entity)
+        :ARG2 (s6e2 / entity)
+        :clausal-marker (s6m1 / možná)
+        :temporal (s6d1 / dnes)
+        :temporal (s6h1 / hodina
+            :mod (s6x1 / 16))
+        :clausal-marker (s6p3 / přímo)
+        :place (s6s1 / stadión
+            :refer-number singular)
+        :aspect habitual)
+
+# alignment:
+s6p1: 5-5,7-8
+s6r1: 1-1
+s6t1: 3-3
+s6v1: 4-4
+s6p2: 2-2
+s6e1: 0-0
+s6e2: 0-0
+s6m1: 6-6
+s6d1: 9-9
+s6h1: 10-10,12-12
+s6x1: 11-11
+s6p3: 14-14
+s6s1: 15-16
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1    2      3      4 5
+Words: Foto Martin Přibyl - LN
+
+# sentence level graph:
+(s7e1 / event
+        :ARG1 (s7f1 / foto
+            :refer-number singular)
+        :ARG0 (s7p1 / Přibyl
+            :mod (s7m1 / Martin
+                :refer-number singular)
+            :parenthesis (s7l1 / LN
+                :refer-number plural)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s7e1: 0-0
+s7f1: 1-1
+s7p1: 3-3
+s7m1: 2-2
+s7l1: 5-5
+
+# document level annotation:
+(s7s0 / sentence)
+
+

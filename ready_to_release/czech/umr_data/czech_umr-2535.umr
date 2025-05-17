@@ -1,0 +1,333 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2 3       4 5       6
+Words: Příspěvek k diskusi o budoucí Evropě
+
+# sentence level graph:
+(s1p1 / příspěvek
+        :ARG1 (s1d1 / diskuse
+            :ARG1 (s1e1 / Evropa
+                :mod (s1b1 / budoucí
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1p1: 1-1
+s1d1: 2-3
+s1e1: 4-4,6-6
+s1b1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2  3       4  5        6          7      8          9  10    11       12          13         14 15     16     17 18 19
+Words: Přispět k  diskusi o  budoucím uspořádání našeho kontinentu je cílem třídenní mezinárodní konference s  názvem Evropa a  my .
+
+# sentence level graph:
+(s3b1 / být-007
+        :ARG0 (s3p1 / přispět-002
+            :ARG0 s3k1
+            :ARG1 (s3d1 / diskuse
+                :ARG1 (s3u1 / uspořádání
+                    :ARG0 (s3e1 / entity)
+                    :ARG1 (s3k2 / kontinent
+                        :possessor (s3e2 / entity
+                            :refer-number plural
+                            :refer-person 1st)
+                        :refer-number singular)
+                    :temporal (s3b2 / budoucí
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :ARG1 (s3c1 / cíl
+            :ARG0 (s3k1 / konference
+                :mod (s3m1 / mezinárodní
+                    :refer-number singular)
+                :mod (s3t1 / třídenní
+                    :refer-number singular)
+                :companion (s3n1 / název
+                    :name (s3a1 / and
+                        :op1 (s3e3 / Evropa
+                            :refer-number singular)
+                        :op2 (s3e4 / entity
+                            :refer-number plural
+                            :refer-person 1st))
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3b1: 9-9
+s3p1: 1-1
+s3d1: 2-3
+s3u1: 4-4,6-6
+s3e1: 0-0
+s3k2: 8-8
+s3e2: 7-7
+s3b2: 5-5
+s3c1: 10-10
+s3k1: 13-13
+s3m1: 12-12
+s3t1: 11-11
+s3n1: 14-15
+s3a1: 17-17
+s3e3: 16-16
+s3e4: 18-18
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3d1 :same-entity s1d1)
+            (s3k2 :same-entity s1e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2  3  4  5  6  7      8  9        10 11      12        13    14     15      16 17   18      19     20   21         22
+Words: Od 13 .  do 15 .  května ji uspořádá v  Míčovně Pražského hradu nadace Patriae ,  řekl ředitel nadace Jiří Oberfalzer .
+
+# sentence level graph:
+(s4r1 / říci-008
+        :ARG0 (s4o1 / Oberfalzer
+            :mod (s4j1 / Jiří
+                :refer-number singular)
+            :mod (s4r2 / ředitel
+                :possessor (s4n1 / nadace
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s4e1 / entity)
+        :effect (s4u1 / uspořádat-003
+            :temporal (s4k1 / květen
+                :mod (s4x1 / 13)
+                :refer-number singular)
+            :temporal (s4k2 / květen
+                :mod (s4x2 / 15)
+                :refer-number singular)
+            :ARG1 (s4e2 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :place (s4m1 / Míčovna
+                :possessor (s4h1 / hrad
+                    :mod (s4p1 / Pražský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s4n2 / nadace
+                :name (s4p2 / Patriae
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4r1: 17-17
+s4o1: 21-21
+s4j1: 20-20
+s4r2: 18-18
+s4n1: 19-19
+s4e1: 0-0
+s4u1: 9-9
+s4k1: 0-0
+s4x1: 2-2
+s4k2: 4-4,7-7
+s4x2: 5-5
+s4e2: 8-8
+s4m1: 10-11
+s4h1: 13-13
+s4p1: 12-12
+s4n2: 14-14
+s4p2: 15-15
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4n1 :same-entity s4n2)
+            (s4e2 :same-entity s3k1)
+            (s4p1 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2  3  4  5    6          7         8         9      10    11 12      13     14    15 16      17        18    19        20
+Words: Za ČR by se měli konference zúčastnit prezident Václav Havel ,  premiér Václav Klaus a  ministr zahraničí Josef Zieleniec .
+
+# sentence level graph:
+(s5z1 / zúčastnit-se-001
+        :substitute (s5c1 / ČR
+            :refer-number singular)
+        :ARG1 (s5k1 / konference
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s5a1 / and
+            :op1 (s5h1 / Havel
+                :mod (s5v1 / Václav
+                    :refer-number singular)
+                :mod (s5p1 / prezident
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s5k2 / Klaus
+                :mod (s5v2 / Václav
+                    :refer-number singular)
+                :mod (s5p2 / premiér
+                    :refer-number singular)
+                :refer-number singular)
+            :op3 (s5z2 / Zieleniec
+                :mod (s5j1 / Josef
+                    :refer-number singular)
+                :mod (s5m1 / ministr
+                    :possessor (s5z3 / zahraničí
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular))
+        :aspect performance)
+
+# alignment:
+s5z1: 3-5,7-7
+s5c1: 1-2
+s5k1: 6-6
+s5a1: 15-15
+s5h1: 10-10
+s5v1: 9-9
+s5p1: 8-8
+s5k2: 14-14
+s5v2: 13-13
+s5p2: 12-12
+s5z2: 19-19
+s5j1: 18-18
+s5m1: 16-16
+s5z3: 17-17
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5k1 :same-entity s4e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2         3          4        5           6      7     8  9        10        11       12   13         14 15        16    17      18 19     20      21   22  23          24      25  26  27  28    29 30    31        32
+Words: Účast předběžně přislíbili rakouský vicekancléř Erhard Busek ,  ministři zahraničí Maďarska Géza Jeszenszky a  Slovinska Lojze Peterle ,  vysoký komisař KBSE pro národnostní menšiny Max van der Stoel a  další osobnosti .
+
+# sentence level graph:
+(s6p1 / přislíbit-001
+        :ARG1 (s6u1 / účast
+            :refer-number singular)
+        :ARG2 (s6e1 / entity)
+        :temporal (s6p2 / předběžně)
+        :ARG0 (s6a1 / and
+            :op1 (s6b1 / Busek
+                :mod (s6e2 / Erhard
+                    :refer-number singular)
+                :mod (s6v1 / vícekancléř
+                    :mod (s6r1 / rakouský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s6a2 / and
+                :op1 (s6j1 / Jeszenszky
+                    :mod (s6g1 / Géza
+                        :refer-number singular)
+                    :mod (s6m1 / ministr
+                        :possessor (s6z1 / zahraničí
+                            :refer-number singular)
+                        :possessor (s6m2 / Maďarsko
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular)
+                :op2 (s6p3 / Peterle
+                    :mod (s6l1 / Lojze
+                        :refer-number singular)
+                    :mod (s6m3 / ministr
+                        :possessor (s6z2 / zahraničí
+                            :refer-number singular)
+                        :possessor (s6s1 / Slovinsko
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular))
+            :op3 (s6v2 / van_der_Stoel
+                :mod (s6m4 / Max
+                    :refer-number singular)
+                :mod (s6k1 / komisař
+                    :possessor (s6k2 / KBSE)
+                    :mod (s6v3 / vysoký
+                        :refer-number singular)
+                    :affectee (s6m5 / menšina
+                        :mod (s6n1 / národnostní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :op4 (s6o1 / osobnost
+                :mod (s6d1 / další
+                    :refer-number plural)
+                :refer-number plural))
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s6p1: 3-3
+s6u1: 1-1
+s6e1: 0-0
+s6p2: 2-2
+s6a1: 29-29
+s6b1: 7-7
+s6e2: 6-6
+s6v1: 5-5
+s6r1: 4-4
+s6a2: 14-14
+s6j1: 13-13
+s6g1: 12-12
+s6m1: 9-9
+s6z1: 10-10
+s6m2: 11-11
+s6p3: 17-17
+s6l1: 16-16
+s6m3: 0-0
+s6z2: 0-0
+s6s1: 15-15
+s6v2: 26-28
+s6m4: 25-25
+s6k1: 20-20
+s6k2: 21-21
+s6v3: 19-19
+s6m5: 22-22,24-24
+s6n1: 23-23
+s6o1: 31-31
+s6d1: 30-30
+
+# document level annotation:
+(s6s0 / sentence)
+
+

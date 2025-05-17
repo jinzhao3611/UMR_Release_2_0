@@ -1,0 +1,344 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2          3
+Words: Setkání významných majorů
+
+# sentence level graph:
+(s1s1 / setkání
+        :ARG1 (s1x1 / #Rcp
+            :refer-number plural)
+        :ARG0 (s1m1 / major
+            :mod (s1v1 / významný
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular)
+
+# alignment:
+s1s1: 1-1
+s1x1: 0-0
+s1m1: 3-3
+s1v1: 2-2
+
+# document level annotation:
+(s1s0 / sentence
+    :coref ((s1x1 :same-entity s1m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3      4
+Words: Praha - Ralsko -
+
+# sentence level graph:
+(s2a1 / and
+        :op1 (s2p1 / Praha
+            :refer-number singular)
+        :op2 (s2r1 / Ralsko
+            :refer-number singular))
+
+# alignment:
+s2a1: 2-2
+s2p1: 1-1
+s2r1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2      3      4  5     6  7         8        9      10    11      12   13       14     15
+Words: Na sjezdu majorů se včera ve vojenském prostoru Ralsko sešli všichni naši významní majoři .
+
+# sentence level graph:
+(s3s1 / sejít-se-001
+        :place (s3s2 / sjezd
+            :ARG0 (s3m1 / major
+                :refer-number plural)
+            :refer-number singular)
+        :temporal (s3v1 / včera)
+        :place (s3p1 / prostor
+            :mod (s3v2 / vojenský
+                :refer-number singular)
+            :name (s3r1 / Ralsko
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3x1 / #Rcp
+            :refer-number plural)
+        :ARG0 (s3m2 / major
+            :mod (s3v3 / významný
+                :refer-number plural)
+            :possessor (s3e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :mod (s3v4 / všechen
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s3s1: 4-4,10-10
+s3s2: 1-2
+s3m1: 3-3
+s3v1: 5-5
+s3p1: 6-6,8-8
+s3v2: 7-7
+s3r1: 9-9
+s3x1: 0-0
+s3m2: 14-14
+s3v3: 13-13
+s3e1: 12-12
+s3v4: 11-11
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s2 :same-entity s1s1)
+            (s3m1 :same-entity s1m1)
+            (s3x1 :same-entity s3m2)
+            (s3m2 :same-entity s3m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2      3      4      5        6      7         8  9  10           11    12         13     14    15 16      17     18       19 20    21  22   23   24        25
+Words: Vedle majora Zemana můžeme jmenovat majora Terazkyho a  ze zahraničních hostů anglického Majora Johna a  ruského majora Gagarina ,  který prý před lety nezahynul .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4j1 / jmenovat-003
+            :ARG0 (s4e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :subtraction (s4z1 / Zeman
+                :mod (s4m1 / major
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s4t1 / Terazky
+                :mod (s4m2 / major
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect process)
+        :op2 (s4j2 / jmenovat-003
+            :ARG0 s4e1
+            :regard (s4h1 / host
+                :mod (s4z2 / zahraniční
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s4a2 / and
+                :op1 (s4j3 / John
+                    :mod (s4m3 / Major
+                        :mod (s4a3 / anglický
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s4g1 / Gagarin
+                    :mod (s4m4 / major
+                        :mod (s4r1 / ruský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0-of (s4z3 / zahynout-001
+                        :temporal (s4r2 / rok
+                            :refer-number plural)
+                        :clausal-marker (s4p1 / prý)
+                        :refer-number singular
+                        :aspect performance
+                        :polarity -)
+                    :refer-number singular))
+            :aspect process))
+
+# alignment:
+s4a1: 8-8
+s4j1: 4-5
+s4z1: 1-1,3-3
+s4m1: 2-2
+s4t1: 7-7
+s4m2: 6-6
+s4e1: 0-0
+s4j2: 0-0
+s4h1: 9-9,11-11
+s4z2: 10-10
+s4a2: 15-15
+s4j3: 14-14
+s4m3: 13-13
+s4a3: 12-12
+s4g1: 18-18,20-20
+s4m4: 17-17
+s4r1: 16-16
+s4z3: 24-24
+s4r2: 22-23
+s4p1: 21-21
+
+# document level annotation:
+(s4s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2       3  4     5  6  7      8       9  10 11    12      13    14 15      16   17      18 19 20   21
+Words: Kapitán Minařík ,  který se za majora vydával ,  na sjezd vpuštěn nebyl ,  protože bude povýšen až na jaře .
+
+# sentence level graph:
+(s5v1 / vpustit-001
+        :ARG1 (s5m1 / Minařík
+            :mod (s5k1 / kapitán
+                :refer-number singular)
+            :ARG0-of (s5v2 / vydávat-se-002
+                :ARG1 (s5m2 / major
+                    :refer-number singular)
+                :refer-number singular
+                :aspect habitual)
+            :refer-number singular)
+        :ARG0 (s5e1 / entity)
+        :goal (s5s1 / sjezd
+            :refer-number singular)
+        :cause (s5p1 / povýšit-001
+            :ARG0 (s5e2 / entity)
+            :ARG1 s5m1
+            :clausal-marker (s5a1 / až)
+            :temporal (s5j1 / jaro
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s5v1: 12-13
+s5m1: 2-2,4-4
+s5k1: 1-1
+s5v2: 5-5,8-8
+s5m2: 6-7
+s5e1: 0-0
+s5s1: 10-11
+s5p1: 15-17
+s5e2: 0-0
+s5a1: 18-18
+s5j1: 19-20
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s1 :same-entity s3s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2         3     4  5     6     7  8     9  10 11     12     13        14        15 16             17     18
+Words: Odpoledne navštívil sjezd i  major Klaus ,  který si s  kolegy majory přátelsky popovídal o  konvertibilitě koruny .
+
+# sentence level graph:
+(s6n1 / navštívit-001
+        :temporal (s6o1 / odpoledne)
+        :ARG1 (s6s1 / sjezd
+            :refer-number singular)
+        :clausal-marker (s6i1 / i)
+        :ARG0 (s6k1 / Klaus
+            :mod (s6m1 / major
+                :refer-number singular)
+            :ARG0-of (s6p1 / popovídat-si-001
+                :ARG2 (s6k2 / kolega
+                    :mod (s6m2 / major
+                        :refer-number plural)
+                    :refer-number plural)
+                :manner (s6p2 / přátelsky)
+                :ARG1 (s6k3 / konvertibilita
+                    :ARG0 (s6k4 / koruna
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6n1: 2-2
+s6o1: 1-1
+s6s1: 3-3
+s6i1: 4-4
+s6k1: 6-6,8-8
+s6m1: 5-5
+s6p1: 9-9,14-14
+s6k2: 10-11
+s6m2: 12-12
+s6p2: 13-13
+s6k3: 15-16
+s6k4: 17-17
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s1 :same-entity s5s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2        3        4      5      6  7         8          9         10      11 12    13 14      15       16 17  18 19      20 21    22
+Words: Přítomní novináři zaměnili majora Zemana s  předsedou sociálních demokratů Zemanem ,  který na setkání nepřišel ,  neb je chabrus na srdce .
+
+# sentence level graph:
+(s7z1 / zaměnit-001
+        :ARG0 (s7n1 / novinář
+            :mod (s7p1 / přítomný
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s7z2 / Zeman
+            :mod (s7m1 / major
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s7z3 / Zeman
+            :mod (s7p2 / předseda
+                :possessor (s7d1 / demokrat
+                    :mod (s7s1 / sociální
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG0-of (s7a1 / and
+                :op1 (s7p3 / přijít-010
+                    :goal (s7s2 / setkání
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance
+                    :polarity -)
+                :op2 (s7b1 / být-007
+                    :ARG1 (s7c1 / chabrus
+                        :regard (s7s3 / srdce
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity))
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s7z1: 3-3
+s7n1: 2-2
+s7p1: 1-1
+s7z2: 5-5
+s7m1: 4-4
+s7z3: 6-6,10-10,12-12
+s7p2: 7-7
+s7d1: 9-9
+s7s1: 8-8
+s7a1: 17-17
+s7p3: 15-15
+s7s2: 13-14
+s7b1: 18-18
+s7c1: 19-19
+s7s3: 20-21
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7z2 :same-entity s4z1)
+            (s7s2 :same-entity s6s1)))
+
+

@@ -1,0 +1,334 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2 3     4     5
+Words: Výbuch v šatně Barum Continental
+
+# sentence level graph:
+(s1v1 / výbuch
+        :place (s1s1 / šatna
+            :possessor (s1x1 / #Idph
+                :name (s1b1 / Barum
+                    :mod (s1c1 / Continental
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1v1: 1-1
+s1s1: 2-3
+s1x1: 0-0
+s1b1: 4-4
+s1c1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1          2 3  4 5
+Words: Otrokovice ( do ) -
+
+# sentence level graph:
+(s2o1 / Otrokovice
+        :parenthesis (s2d1 / do)
+        :refer-number plural)
+
+# alignment:
+s2o1: 1-1
+s2d1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2  3     4      5     6  7     8      9       10 11      12    13    14          15 16           17      18     19 20    21        22        23       24        25 26        27     28 29         30
+Words: Krátce po třetí hodině ranní se včera šatnou jednoho z  provozů firmy Barum Continental v  Otrokovicích rozlehl výbuch ,  který způsobila podomácky vyrobená výbušnina ,  přinesená jedním z  pracovníků .
+
+# sentence level graph:
+(s3r1 / rozlehnout-se-001
+        :temporal (s3k1 / krátce
+            :temporal (s3h1 / hodina
+                :mod (s3t1 / třetí
+                    :refer-number singular)
+                :mod (s3r2 / ranní
+                    :refer-number singular)
+                :refer-number singular))
+        :temporal (s3v1 / včera)
+        :path (s3s1 / šatna
+            :possessor (s3j1 / jeden
+                :start (s3p1 / provoz
+                    :possessor (s3f1 / firma
+                        :name (s3b1 / Barum
+                            :mod (s3c1 / Continental
+                                :refer-number singular)
+                            :refer-number singular)
+                        :place (s3o1 / Otrokovice
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3v2 / výbuch
+            :ARG1-of (s3z1 / způsobit-002
+                :ARG0 (s3v3 / výbušnina
+                    :mod (s3v4 / vyrobený
+                        :manner (s3p2 / podomácky)
+                        :refer-number singular)
+                    :mod (s3p3 / přinesený
+                        :ARG0 (s3j2 / jeden
+                            :start (s3p4 / pracovník
+                                :refer-number plural)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3r1: 6-6,17-17
+s3k1: 1-1
+s3h1: 2-2,4-4
+s3t1: 3-3
+s3r2: 5-5
+s3v1: 7-7
+s3s1: 8-8
+s3j1: 9-9
+s3p1: 10-11
+s3f1: 12-12
+s3b1: 13-13
+s3c1: 14-14
+s3o1: 15-16
+s3v2: 18-18,20-20
+s3z1: 21-21
+s3v3: 24-24
+s3v4: 23-23
+s3p2: 22-22
+s3p3: 26-26
+s3j2: 27-27
+s3p4: 28-29
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s1 :same-entity s1s1)
+            (s3f1 :same-entity s1b1)
+            (s3o1 :same-entity s2o1)
+            (s3v2 :same-entity s1v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2      3     4      5         6       7    8    9  10    11 12 13 14     15 16    17        18 19 20   21            22    23 24       25 26        27      28     29        30  31       32    33
+Words: Jeho kolega chtěl patrně vystrašit dalších šest lidí ,  kteří se v  tu chvíli v  šatně nacházeli ,  a  ženě odklepávající popel z  cigarety do popelníku nasypal trochu výbušniny pod padající popel .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4v1 / vystrašit-001
+            :ARG0 (s4k1 / kolega
+                :possessor (s4e1 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular)
+            :clausal-marker (s4p1 / patrně)
+            :ARG1 (s4c1 / člověk
+                :mod (s4s1 / šest
+                    :refer-number singular)
+                :mod (s4d1 / další
+                    :refer-number plural)
+                :ARG0-of (s4n1 / nacházet-se-002
+                    :temporal (s4c2 / chvíle
+                        :mod (s4t1 / ten
+                            :refer-number singular)
+                        :refer-number singular)
+                    :place (s4s2 / šatna
+                        :refer-number singular)
+                    :refer-number plural
+                    :aspect activity)
+                :refer-number plural)
+            :aspect performance)
+        :op2 (s4n2 / nasypat-001
+            :ARG0 s4k1
+            :affectee (s4z1 / žena
+                :mod (s4o1 / odklepávající
+                    :ARG1 (s4p2 / popel
+                        :start (s4c3 / cigareta
+                            :refer-number singular)
+                        :refer-number singular)
+                    :goal (s4p3 / popelník
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s4t2 / trochu
+                :mod (s4v2 / výbušnina
+                    :refer-number singular)
+                :refer-number singular)
+            :goal (s4p4 / popel
+                :mod (s4p5 / padající
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s4a1: 19-19
+s4v1: 3-3,5-5
+s4p1: 4-4
+s4c1: 8-8,10-10
+s4s1: 7-7
+s4d1: 6-6
+s4n1: 11-11,17-17
+s4c2: 12-12,14-14
+s4t1: 13-13
+s4s2: 15-16
+s4k1: 2-2
+s4e1: 1-1
+s4n2: 27-27
+s4z1: 20-20
+s4o1: 21-21
+s4p2: 22-22
+s4c3: 23-24
+s4p3: 25-26
+s4t2: 28-28
+s4v2: 29-29
+s4p4: 30-30,32-32
+s4p5: 31-31
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s2 :same-entity s3s1)
+            (s4e1 :same-entity s3j2)
+            (s4p4 :same-entity s4p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2  3       4      5       6       7     8  9  10   11         12    13                14    15 16        17     18    19      20  21   22 23      24
+Words: Výbušnina od žhavého popela chytila takovou silou ,  že muži sypajícímu dosud neidentifikovanou látku do popelníku výbuch těžce poranil obě ruce a  obličej .
+
+# sentence level graph:
+(s5c1 / chytit-004
+        :ARG0 (s5v1 / výbušnina
+            :refer-number singular)
+        :cause (s5p1 / popel
+            :mod (s5z1 / žhavý
+                :refer-number singular)
+            :refer-number singular)
+        :manner (s5s1 / síla
+            :mod (s5t1 / takový
+                :result (s5p2 / poranit-001
+                    :affectee (s5m1 / muž
+                        :mod (s5s2 / sypající
+                            :goal (s5p3 / popelník
+                                :refer-number singular)
+                            :ARG1 (s5l1 / látka
+                                :mod (s5i1 / identifikovaný
+                                    :temporal (s5d1 / dosud)
+                                    :refer-number singular
+                                    :polarity -)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0 (s5v2 / výbuch
+                        :refer-number singular)
+                    :manner (s5t2 / těžce)
+                    :ARG1 (s5a1 / and
+                        :op1 (s5r1 / ruka
+                            :mod (s5o1 / oba
+                                :refer-number plural)
+                            :refer-number plural)
+                        :op2 (s5o2 / obličej
+                            :refer-number singular))
+                    :refer-number singular
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s5c1: 5-5
+s5v1: 1-1
+s5p1: 2-2,4-4
+s5z1: 3-3
+s5s1: 7-7
+s5t1: 6-6
+s5p2: 9-9,19-19
+s5m1: 10-10
+s5s2: 11-11
+s5p3: 15-16
+s5l1: 14-14
+s5i1: 13-13
+s5d1: 12-12
+s5v2: 17-17
+s5t2: 18-18
+s5a1: 22-22
+s5r1: 21-21
+s5o1: 20-20
+s5o2: 23-23
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5v1 :same-entity s3v3)
+            (s5p1 :same-entity s4p4)
+            (s5m1 :same-entity s4k1)
+            (s5p3 :same-entity s4p3)
+            (s5l1 :same-entity s5v1)
+            (s5v2 :same-entity s3v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2        3   4       5     6        7  8       9         10        11 12   13
+Words: Po ošetření byl zraněný ihned převezen na kliniku plastické chirurgie v  Brně .
+
+# sentence level graph:
+(s6p1 / převézt-001
+        :temporal (s6o1 / ošetření
+            :ARG0 (s6e1 / entity)
+            :ARG1 (s6e2 / entity)
+            :refer-number singular)
+        :ARG1 (s6z1 / zraněný
+            :refer-number singular)
+        :ARG0 (s6e3 / entity)
+        :start (s6e4 / entity)
+        :temporal (s6i1 / ihned)
+        :goal (s6k1 / klinika
+            :possessor (s6c1 / chirurgie
+                :mod (s6p2 / plastický
+                    :refer-number singular)
+                :refer-number singular)
+            :place (s6b1 / Brno
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6p1: 3-3,6-6
+s6o1: 1-2
+s6e1: 0-0
+s6e2: 0-0
+s6z1: 4-4
+s6e3: 0-0
+s6e4: 0-0
+s6i1: 5-5
+s6k1: 7-8
+s6c1: 10-10
+s6p2: 9-9
+s6b1: 11-12
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6z1 :same-entity s5m1)))
+
+

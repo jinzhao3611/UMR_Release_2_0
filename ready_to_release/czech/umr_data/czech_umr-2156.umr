@@ -1,0 +1,315 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2        3      4      5
+Words: Poslanec Ladislav Blažek nechce odstoupit
+
+# sentence level graph:
+(s1o1 / odstoupit-003
+        :ARG0 (s1b1 / Blažek
+            :mod (s1l1 / Ladislav
+                :refer-number singular)
+            :mod (s1p1 / poslanec
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s1o1: 4-5
+s1b1: 3-3
+s1l1: 2-2
+s1p1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1 2         3
+Words: Z politické scény
+
+# sentence level graph:
+(s2e1 / event
+        :start (s2s1 / scéna
+            :mod (s2p1 / politický
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s2e1: 0-0
+s2s1: 1-1,3-3
+s2p1: 2-2
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s3p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s3p1: 1-1
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2            3       4  5     6        7  8  9    10    11       12       13           14     15       16     17 18    19 20    21     22 23     24   25      26 27         28
+Words: "  Poslaneckého mandátu se vzdát nehodlám ,  "  řekl včera poslanec Občanské demokratické strany Ladislav Blažek ,  který se včera poprvé po dlouhé době objevil na veřejnosti .
+
+# sentence level graph:
+(s4r1 / říci-008
+        :ARG0 (s4b1 / Blažek
+            :mod (s4l1 / Ladislav
+                :refer-number singular)
+            :mod (s4p1 / poslanec
+                :possessor (s4s1 / strana
+                    :mod (s4d1 / demokratický
+                        :refer-number singular)
+                    :mod (s4o1 / Občanský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0-of (s4o2 / objevit-se-001
+                :place (s4e1 / entity)
+                :temporal (s4v1 / včera)
+                :frequency (s4p2 / poprvé
+                    :temporal (s4d2 / doba
+                        :mod (s4d3 / dlouhý
+                            :refer-number singular)
+                        :refer-number singular))
+                :place (s4v2 / veřejnost
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular
+            :refer-person 1st)
+        :ARG2 (s4e2 / entity)
+        :temporal (s4v3 / včera)
+        :effect (s4v4 / vzdát-se-001
+            :ARG1 (s4m1 / mandát
+                :mod (s4p3 / poslanecký
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s4e3 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :aspect performance
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4r1: 9-9
+s4b1: 16-16,18-18
+s4l1: 15-15
+s4p1: 11-11
+s4s1: 14-14
+s4d1: 13-13
+s4o1: 12-12
+s4o2: 19-19,25-25
+s4e1: 0-0
+s4v1: 20-20
+s4p2: 21-21
+s4d2: 22-22,24-24
+s4d3: 23-23
+s4v2: 26-27
+s4e2: 0-0
+s4v3: 10-10
+s4v4: 4-6
+s4m1: 3-3
+s4p3: 2-2
+s4e3: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4b1 :same-entity s4e3)
+            (s4e3 :same-entity s1b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2        3   4  5          6   7      8    9  10 11 12 13        14      15        16  17     18         19     20  21     22       23
+Words: K  opuštění ODS a  parlamentu byl vyzván poté ,  co ho v  listopadu policie přistihla při řízení automobilu údajně pod vlivem alkoholu .
+
+# sentence level graph:
+(s5v1 / vyzvat-001
+        :ARG1 (s5o1 / opuštění
+            :ARG0 s5e1
+            :ARG1 (s5a1 / and
+                :op1 (s5o2 / ODS
+                    :refer-number singular)
+                :op2 (s5p1 / parlament
+                    :refer-number singular))
+            :refer-number singular)
+        :ARG0 (s5e2 / entity)
+        :ARG2 (s5e1 / entity
+            :refer-person 3rd)
+        :temporal (s5p2 / přistihnout-001
+            :clausal-marker (s5u1 / údajně)
+            :ARG0 (s5p3 / policie
+                :refer-number singular)
+            :ARG1 s5e1
+            :temporal (s5l1 / listopad
+                :refer-number singular)
+            :temporal (s5r1 / řízení
+                :ARG0 s5e1
+                :ARG1 (s5a2 / automobil
+                    :refer-number singular)
+                :manner (s5v2 / vliv
+                    :ARG0 (s5a3 / alkohol
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5v1: 6-7
+s5o1: 1-2
+s5a1: 4-4
+s5o2: 3-3
+s5p1: 5-5
+s5e2: 0-0
+s5e1: 11-11
+s5p2: 8-8,10-10,15-15
+s5u1: 19-19
+s5p3: 14-14
+s5l1: 12-13
+s5r1: 16-17
+s5a2: 18-18
+s5v2: 20-21
+s5a3: 22-22
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5o2 :same-entity s4s1)
+            (s5e1 :same-entity s4b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2      3     4      5  6   7          8          9  10  11 12 13 14 15   16     17     18
+Words: Blažek odmítl návrh strany na své vystoupení komentovat s  tím ,  že je to věcí vedení strany .
+
+# sentence level graph:
+(s6o1 / odmítnout-003
+        :ARG0 (s6b1 / Blažek
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s6k1 / komentovat-001
+            :ARG1 (s6n1 / návrh
+                :ARG0 (s6s1 / strana
+                    :refer-number singular)
+                :ARG1 (s6v1 / vystoupení
+                    :ARG0 s6b1
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s6b1
+            :aspect process)
+        :companion (s6b2 / být-007
+            :ARG0 (s6t1 / ten
+                :refer-number singular)
+            :ARG1 (s6v2 / věc
+                :possessor (s6v3 / vedení
+                    :possessor (s6s2 / strana
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6o1: 2-2
+s6b1: 1-1,6-6
+s6k1: 8-8
+s6n1: 3-3
+s6s1: 4-4
+s6v1: 5-5,7-7
+s6b2: 9-10,12-13
+s6t1: 14-14
+s6v2: 15-15
+s6v3: 16-16
+s6s2: 17-17
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6b1 :same-entity s5e1)
+            (s6s1 :same-entity s5o2)
+            (s6v1 :same-entity s5o1)
+            (s6t1 :same-entity s6n1)
+            (s6s2 :same-entity s6s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2             3         4  5        6        7     8  9    10          11     12     13  14      15
+Words: Od listopadového incidentu o  poslanci Blažkovi nikdo z  jeho stranických kolegů údajně nic nevěděl .
+
+# sentence level graph:
+(s7v1 / vědět-004
+        :clausal-marker (s7u1 / údajně)
+        :temporal (s7i1 / incident
+            :mod (s7l1 / listopadový
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s7b1 / Blažek
+            :mod (s7p1 / poslanec
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7n1 / nikdo
+            :start (s7k1 / kolega
+                :possessor s7b1
+                :mod (s7s1 / stranický
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :polarity -)
+        :effect (s7n2 / nic
+            :refer-number singular
+            :refer-person 3rd
+            :polarity -)
+        :refer-number singular
+        :aspect state
+        :polarity -)
+
+# alignment:
+s7v1: 14-14
+s7u1: 12-12
+s7i1: 1-1,3-3
+s7l1: 2-2
+s7b1: 4-4,6-6,9-9
+s7p1: 5-5
+s7n1: 7-7
+s7k1: 8-8,11-11
+s7s1: 10-10
+s7n2: 13-13
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7i1 :same-event s5p2)
+            (s7b1 :same-entity s6b1)))
+
+

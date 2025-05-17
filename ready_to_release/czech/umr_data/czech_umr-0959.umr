@@ -1,0 +1,266 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2     3     4
+Words: Čína znovu hrozí Hongkongu
+
+# sentence level graph:
+(s1h1 / hrozit-003
+        :ARG0 (s1c1 / Čína
+            :refer-number singular)
+        :temporal (s1z1 / znovu)
+        :ARG1 (s1h2 / Hongkong
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1h1: 3-3
+s1c1: 1-1
+s1z1: 2-2
+s1h2: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2
+Words: Hongkong -
+
+# sentence level graph:
+(s2h1 / Hongkong
+        :refer-number singular)
+
+# alignment:
+s2h1: 1-1
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2h1 :same-entity s1h2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2         3     4       5  6  7           8           9    10 11    12     13        14    15 16       17      18 19    20       21 22   23   24      25 26 27  28   29       30   31        32
+Words: Čínský parlament včera rozhodl ,  že hongkongský zákonodárný sbor a  další volené instituce budou po převzetí ostrova od Velké Británie v  roce 1997 zrušeny a  že tam bude vytvořen nový parlament .
+
+# sentence level graph:
+(s3r1 / rozhodnout-002
+        :ARG0 (s3p1 / parlament
+            :mod (s3c1 / čínský
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3v1 / včera)
+        :ARG1 (s3a1 / and
+            :op1 (s3z1 / zrušit-001
+                :ARG0 (s3e1 / entity)
+                :ARG1 (s3a2 / and
+                    :op1 (s3s1 / sbor
+                        :mod (s3z2 / zákonodárný
+                            :refer-number singular)
+                        :mod (s3h1 / hongkongský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :op2 (s3i1 / instituce
+                        :mod (s3v2 / volený
+                            :refer-number plural)
+                        :mod (s3d1 / další
+                            :refer-number plural)
+                        :refer-number plural))
+                :temporal (s3p2 / převzetí
+                    :ARG1 (s3o1 / ostrov
+                        :refer-number singular)
+                    :ARG0 (s3e2 / entity)
+                    :source (s3b1 / Británie
+                        :mod (s3v3 / velký
+                            :refer-number singular)
+                        :refer-number singular)
+                    :temporal (s3r2 / rok
+                        :mod (s3x1 / 1997)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :aspect performance)
+            :op2 (s3v4 / vytvořit-001
+                :ARG0 s3e1
+                :place (s3t1 / tam
+                    :refer-number singular)
+                :ARG1 (s3p3 / parlament
+                    :mod (s3n1 / nový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3r1: 4-4
+s3p1: 2-2
+s3c1: 1-1
+s3v1: 3-3
+s3a1: 25-25
+s3z1: 6-6,14-14,24-24
+s3a2: 10-10
+s3s1: 9-9
+s3z2: 8-8
+s3h1: 7-7
+s3i1: 13-13
+s3v2: 12-12
+s3d1: 11-11
+s3p2: 15-16
+s3o1: 17-17
+s3e2: 0-0
+s3b1: 18-18,20-20
+s3v3: 19-19
+s3r2: 21-22
+s3x1: 23-23
+s3e1: 0-0
+s3v4: 26-26,28-29
+s3t1: 27-27
+s3p3: 31-31
+s3n1: 30-30
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3c1 :same-entity s1c1)
+            (s3h1 :same-entity s2h1)
+            (s3o1 :same-entity s3h1)
+            (s3t1 :same-entity s3o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2           3          4     5   6  7    8           9     10 11 12     13         14     15      16 17       18 19 20       21 22 23    24     25     26  27     28 29  30   31
+Words: Známá hongkongská poslankyně Emily Lau v  této souvislosti řekla ,  že čínské rozhodnutí otřese důvěrou v  Hongkong ,  a  označila je za velmi špatný signál pro ostrov i  pro svět .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4r1 / říci-008
+            :ARG0 (s4l1 / Lau
+                :mod (s4e1 / Emily)
+                :mod (s4p1 / poslankyně
+                    :mod (s4h1 / hongkongský
+                        :refer-number singular)
+                    :mod (s4z1 / známý
+                        :refer-number singular)
+                    :refer-number singular))
+            :condition (s4s1 / souvislost
+                :mod (s4t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s4e2 / entity)
+            :effect (s4o1 / otřást-002
+                :ARG0 (s4r2 / rozhodnutí
+                    :mod (s4c1 / čínský
+                        :refer-number singular)
+                    :ARG0 (s4e3 / entity)
+                    :ARG1 (s4e4 / entity)
+                    :refer-number singular)
+                :ARG1 (s4d1 / důvěra
+                    :ARG1 (s4h2 / Hongkong
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :aspect performance)
+        :op2 (s4o2 / označit-001
+            :ARG0 s4l1
+            :ARG1 s4r2
+            :effect (s4s2 / signál
+                :affectee (s4a2 / and
+                    :op1 (s4o3 / ostrov
+                        :refer-number singular)
+                    :op2 (s4s3 / svět
+                        :refer-number singular))
+                :mod (s4s4 / špatný
+                    :extent (s4v1 / velmi)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance))
+
+# alignment:
+s4a1: 19-19
+s4r1: 9-9
+s4s1: 6-6,8-8
+s4t1: 7-7
+s4e2: 0-0
+s4o1: 11-11,14-14
+s4r2: 13-13,21-21
+s4c1: 12-12
+s4e3: 0-0
+s4e4: 0-0
+s4d1: 15-15
+s4h2: 16-17
+s4l1: 5-5
+s4e1: 4-4
+s4p1: 3-3
+s4h1: 2-2
+s4z1: 1-1
+s4o2: 20-20
+s4s2: 22-22,25-25
+s4a2: 28-28
+s4o3: 26-27
+s4s3: 29-30
+s4s4: 24-24
+s4v1: 23-23
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4r2 :same-event s3r1)
+            (s4c1 :same-entity s3c1)
+            (s4h2 :same-entity s4h1)
+            (s4h1 :same-entity s3t1)
+            (s4o3 :same-entity s4h2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2  3      4           5    6  7        8      9  10       11        12
+Words: Dosavadní 60 členná Zákonodárná rada je částečně volená a  částečně jmenovaná .
+
+# sentence level graph:
+(s5b1 / být-007
+        :ARG0 (s5r1 / rada
+            :mod (s5z1 / zákonodárný
+                :refer-number singular)
+            :mod (s5x1 / 60_členný)
+            :mod (s5d1 / dosavadní
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s5a1 / and
+            :op1 (s5v1 / volený
+                :extent (s5c1 / částečně)
+                :refer-number singular)
+            :op2 (s5j1 / jmenovaný
+                :extent (s5c2 / částečně)
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5b1: 6-6
+s5r1: 5-5
+s5z1: 4-4
+s5x1: 2-3
+s5d1: 1-1
+s5a1: 9-9
+s5v1: 8-8
+s5c1: 7-7
+s5j1: 11-11
+s5c2: 10-10
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5r1 :same-entity s3s1)))
+
+

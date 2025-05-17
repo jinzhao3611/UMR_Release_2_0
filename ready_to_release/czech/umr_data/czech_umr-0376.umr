@@ -1,0 +1,65 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2    3           4 5        6
+Words: Jednání Rady hospodářské a sociální dohody
+
+# sentence level graph:
+(s1j1 / jednání
+        :ARG1 (s1e1 / entity)
+        :ARG2 (s1x1 / #Rcp
+            :refer-number singular)
+        :ARG0 (s1r1 / Rada
+            :possessor (s1d1 / dohoda
+                :mod (s1a1 / and
+                    :op1 (s1h1 / hospodářský
+                        :refer-number singular)
+                    :op2 (s1s1 / sociální
+                        :refer-number singular))
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1j1: 1-1
+s1e1: 0-0
+s1x1: 0-0
+s1r1: 2-2
+s1d1: 6-6
+s1a1: 4-4
+s1h1: 3-3
+s1s1: 5-5
+
+# document level annotation:
+(s1s0 / sentence
+    :coref ((s1x1 :same-entity s1r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2 3 4      5 6
+Words: Foto M . Přibyl - LN
+
+# sentence level graph:
+(s2e1 / event
+        :ARG1 (s2f1 / foto
+            :refer-number singular)
+        :ARG0 (s2p1 / Přibyl
+            :mod (s2m1 / M)
+            :parenthesis (s2l1 / LN
+                :refer-number plural)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s2e1: 0-0
+s2f1: 1-1
+s2p1: 4-4
+s2m1: 2-2
+s2l1: 6-6
+
+# document level annotation:
+(s2s0 / sentence)
+
+

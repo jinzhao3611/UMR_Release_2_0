@@ -1,0 +1,1023 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2        3       4  5    6      7  8   9
+Words: Slovenští studenti zaplatí až 6000 dolarů za dva semestry
+
+# sentence level graph:
+(s1z1 / zaplatit-001
+        :ARG0 (s1s1 / student
+            :mod (s1s2 / slovenský
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s1d1 / dolar
+            :clausal-marker (s1a1 / až)
+            :mod (s1x1 / 6000)
+            :refer-number plural)
+        :effect (s1s3 / semestr
+            :mod (s1d2 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1z1: 3-3
+s1s1: 2-2
+s1s2: 1-1
+s1d1: 6-6
+s1a1: 4-4
+s1x1: 5-5
+s1s3: 7-7,9-9
+s1d2: 8-8
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( kva ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2k1 / kva)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2k1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2        3  4       5  6        7       8  9  10   11 12    13        14     15
+Words: Mezi uchazeči o  studium na vysokých školách v  ČR jsou i  letos slovenští občané .
+
+# sentence level graph:
+(s3b1 / být-011
+        :place (s3u1 / uchazeč
+            :ARG1 (s3s1 / studium
+                :place (s3s2 / škola
+                    :mod (s3v1 / vysoký
+                        :refer-number plural)
+                    :place (s3c1 / ČR
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number plural)
+        :clausal-marker (s3i1 / i)
+        :temporal (s3l1 / letos)
+        :ARG0 (s3o1 / občan
+            :mod (s3s3 / slovenský
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3b1: 10-10
+s3u1: 1-2
+s3s1: 3-4
+s3s2: 5-5,7-7
+s3v1: 6-6
+s3c1: 8-9
+s3i1: 11-11
+s3l1: 12-12
+s3o1: 14-14
+s3s3: 13-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s3 :same-entity s1s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1         2  3          4       5  6  7     8  9    10    11 12 13 14       15 16        17         18     19 20 21 22        23      24         25         26 27   28     29 30
+Words: Například na Právnickou fakultu UK v  Praze se jich hlásí 54 ,  na největší z  pražských lékařských fakult 52 ,  na Lékařskou fakultu Masarykovy univerzity v  Brně celkem 20 .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4h1 / hlásit-se-005
+            :clausal-marker (s4n1 / například)
+            :goal (s4f1 / fakulta
+                :possessor (s4u1 / UK)
+                :mod (s4p1 / Právnický
+                    :refer-number singular)
+                :place (s4p2 / Praha
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s4e1 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :manner (s4x1 / 54
+                :mod-of s4e1
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s4h2 / hlásit-se-005
+            :goal (s4f2 / fakulta
+                :mod (s4v1 / velký
+                    :refer-number singular)
+                :start (s4f3 / fakulta
+                    :mod (s4l1 / lékařský
+                        :refer-number plural)
+                    :mod (s4p3 / pražský
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 (s4x3 / 52)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op3 (s4h3 / hlásit-se-005
+            :goal (s4f4 / fakulta
+                :mod (s4l2 / Lékařský
+                    :refer-number singular)
+                :possessor (s4u2 / univerzita
+                    :possessor (s4m1 / Masaryk
+                        :refer-number singular)
+                    :place (s4b1 / Brno
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s4x4 / 20
+                :extent (s4c1 / celkem))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s4a1: 20-20
+s4h1: 8-8,10-10
+s4n1: 1-1
+s4f1: 2-2,4-4
+s4u1: 5-5
+s4p1: 3-3
+s4p2: 6-7
+s4e1: 9-9
+s4x1: 11-11
+s4h2: 0-0
+s4f2: 0-0
+s4v1: 14-14
+s4f3: 15-15,18-18
+s4l1: 17-17
+s4p3: 16-16
+s4x3: 19-19
+s4h3: 0-0
+s4f4: 21-21,23-23
+s4l2: 22-22
+s4u2: 25-25
+s4m1: 24-24
+s4b1: 26-27
+s4x4: 29-29
+s4c1: 28-28
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4p2 :same-entity s2p1)
+            (s4p3 :same-entity s4p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2    3    4            5        6  7  8  9        10           11     12 13 14     15      16    17       18       19            20 21    22        23     24 25        26    27
+Words: Loni byla mezi ministerstvy školství ČR a  SR uzavřena meziresortní dohoda ,  na jejímž základě mohlo studovat osmdesát vysokoškoláků z  každé republiky zdarma v  republice druhé .
+
+# sentence level graph:
+(s5u1 / uzavřít-010
+        :temporal (s5v1 / vloni)
+        :ARG0 (s5e1 / entity)
+        :predicative-noun (s5d1 / dohoda
+            :ARG0 (s5a1 / and
+                :op1 (s5m1 / ministerstvo
+                    :possessor (s5s1 / školství
+                        :refer-number singular)
+                    :possessor (s5c1 / ČR
+                        :refer-number singular)
+                    :refer-number plural)
+                :op2 (s5m2 / ministerstvo
+                    :possessor (s5s2 / SR
+                        :refer-number singular)
+                    :possessor (s5s3 / školství
+                        :refer-number singular)
+                    :refer-number plural))
+            :ARG1 (s5e2 / entity)
+            :ARG2 (s5x1 / #Rcp)
+            :mod (s5m3 / meziresortní
+                :refer-number singular)
+            :mod (s5s4 / studovat-001
+                :regard (s5z1 / základ
+                    :possessor s5d1
+                    :refer-number singular)
+                :ARG1 (s5e3 / entity)
+                :ARG0 (s5v2 / vysokoškolák
+                    :mod (s5o1 / osmdesát
+                        :refer-number singular)
+                    :start (s5r1 / republika
+                        :mod (s5k1 / každý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :manner (s5z2 / zdarma)
+                :place (s5r2 / republika
+                    :mod (s5d2 / druhý
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect activity)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s5u1: 2-2,9-9
+s5v1: 1-1
+s5e1: 0-0
+s5d1: 11-11,14-14
+s5a1: 7-7
+s5m1: 3-4
+s5s1: 5-5
+s5c1: 6-6
+s5m2: 0-0
+s5s2: 8-8
+s5s3: 0-0
+s5e2: 0-0
+s5x1: 0-0
+s5m3: 10-10
+s5s4: 16-17
+s5z1: 13-13,15-15
+s5e3: 0-0
+s5v2: 19-19
+s5o1: 18-18
+s5r1: 20-20,22-22
+s5k1: 21-21
+s5z2: 23-23
+s5r2: 24-25
+s5d2: 26-26
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5c1 :same-entity s3c1)
+            (s5s2 :same-entity s3s3)
+            (s5x1 :same-entity s5a1)
+            (s5r2 :same-entity s5r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2       3         4  5        6           7  8           9  10    11 12    13   14     15        16
+Words: Podobná smlouva postavená na finanční reciprocitě je přichystaná i  letos ,  zatím však nebyla podepsána .
+
+# sentence level graph:
+(s6b1 / but-91
+        :ARG1 (s6b2 / být-007
+            :ARG0 (s6s1 / smlouva
+                :mod (s6p1 / postavený
+                    :source (s6r1 / reciprocita
+                        :mod (s6f1 / finanční
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s6p2 / podobný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s6p3 / přichystaný
+                :refer-number singular)
+            :clausal-marker (s6i1 / i)
+            :temporal (s6l1 / letos)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG2 (s6p4 / podepsat-001
+            :temporal (s6z1 / zatím)
+            :ARG0 (s6e1 / entity)
+            :ARG1 s6s1
+            :aspect performance
+            :polarity -))
+
+# alignment:
+s6b1: 13-13
+s6b2: 7-7
+s6s1: 2-2
+s6p1: 3-3
+s6r1: 4-4,6-6
+s6f1: 5-5
+s6p2: 1-1
+s6p3: 8-8
+s6i1: 9-9
+s6l1: 10-10
+s6p4: 14-15
+s6z1: 12-12
+s6e1: 0-0
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2        3  4         5  6     7        8       9         10      11 12 13    14    15      16 17      18 19 20     21     22
+Words: Ostatní uchazeči ze Slovenska ,  kteří vykonají úspěšně přijímací zkoušky ,  si budou muset studium v  Čechách či na Moravě platit .
+
+# sentence level graph:
+(s7p1 / platit-001
+        :ARG0 (s7u1 / uchazeč
+            :start (s7s1 / Slovensko
+                :refer-number singular)
+            :mod (s7o1 / ostatní
+                :refer-number plural)
+            :ARG0-of (s7v1 / vykonat-001
+                :manner (s7u2 / úspěšně)
+                :ARG1 (s7z1 / zkouška
+                    :mod (s7p2 / přijímací
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number plural)
+        :ARG1 (s7o2 / or
+            :op1 (s7s2 / studium
+                :place (s7c1 / Čechy
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s7s3 / studium
+                :place (s7m1 / Morava
+                    :refer-number singular)
+                :refer-number singular))
+        :ARG2 s7u1
+        :aspect activity)
+
+# alignment:
+s7p1: 13-14,21-21
+s7u1: 2-2,6-6,12-12
+s7s1: 3-4
+s7o1: 1-1
+s7v1: 7-7
+s7u2: 8-8
+s7z1: 10-10
+s7p2: 9-9
+s7o2: 18-18
+s7s2: 15-15
+s7c1: 16-17
+s7s3: 0-0
+s7m1: 19-20
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7s1 :same-entity s5s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1    2        3    4     5    6
+Words: Výši školného určí školy samy .
+
+# sentence level graph:
+(s8u1 / určit-006
+        :ARG1 (s8v1 / výše
+            :possessor (s8s1 / školné
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s8s2 / škola
+            :refer-number plural)
+        :manner (s8s3 / sám
+            :mod-of s8s2
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s8u1: 3-3
+s8v1: 1-1
+s8s1: 2-2
+s8s2: 4-4
+s8s3: 5-5
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8s2 :same-entity s3s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1       2         3       4    5     6  7     8   9      10  11       12    13    14 15   16   17 18     19      20 21      22      23       24 25       26       27
+Words: Pražská právnická fakulta bude žádat za jeden rok neboli dva semestry 21600 korun ,  tedy sumu ,  kterou dostává na jednoho českého studenta ze státního rozpočtu .
+
+# sentence level graph:
+(s9z1 / žádat-002
+        :ARG0 (s9f1 / fakulta
+            :mod (s9p1 / právnický
+                :refer-number singular)
+            :mod (s9p2 / pražský
+                :refer-number singular)
+            :refer-number singular)
+        :duration (s9i1 / identity-91
+            :ARG1 (s9r1 / rok
+                :mod (s9j1 / jeden
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s9s1 / semestr
+                :mod (s9d1 / dva
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s9i2 / identity-91
+            :ARG1 (s9k1 / koruna
+                :mod (s9x1 / 21600)
+                :refer-number plural)
+            :clausal-marker (s9t1 / tedy)
+            :ARG2 (s9s2 / suma
+                :ARG1-of (s9d2 / dostávat-001
+                    :ARG0 s9f1
+                    :regard (s9s3 / student
+                        :mod (s9c1 / český
+                            :refer-number singular)
+                        :mod (s9j2 / jeden
+                            :refer-number singular)
+                        :refer-number singular)
+                    :source (s9r2 / rozpočet
+                        :mod (s9s4 / státní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect habitual)
+                :refer-number singular))
+        :aspect activity)
+
+# alignment:
+s9z1: 4-5
+s9f1: 3-3
+s9p1: 2-2
+s9p2: 1-1
+s9i1: 9-9
+s9r1: 6-6,8-8
+s9j1: 7-7
+s9s1: 6-6,11-11
+s9d1: 10-10
+s9i2: 14-14
+s9k1: 13-13
+s9x1: 12-12
+s9t1: 15-15
+s9s2: 16-16,18-18
+s9d2: 19-19
+s9s3: 20-20,23-23
+s9c1: 22-22
+s9j2: 21-21
+s9r2: 24-24,26-26
+s9s4: 25-25
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9f1 :same-entity s4f1)
+            (s9p2 :same-entity s4p3)
+            (s9i1 :same-entity s1s3)
+            (s9c1 :same-entity s5c1)
+            (s9s4 :same-entity s9c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1  2  3  4        5       6     7         8      9  10    11 12      13 14     15      16 17    18 19 20     21      22 23   24   25    26  27       28 29      30 31   32    33
+Words: Na 1  .  lékařské fakultě platí slovenští občané ,  kteří už studují v  prvním ročníku ,  44000 a  v  druhém ročníku se tato suma zvýší jen nepatrně ,  nejspíš o  1000 korun .
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10p1 / platit-008
+            :place (s10f1 / fakulta
+                :mod (s10l1 / lékařský
+                    :refer-number singular)
+                :mod (s10x1 / 1)
+                :refer-number singular)
+            :ARG0 (s10o1 / občan
+                :mod (s10s1 / slovenský
+                    :refer-number plural)
+                :ARG0-of (s10s2 / studovat-001
+                    :ARG1 (s10e1 / entity)
+                    :temporal (s10u1 / už)
+                    :place (s10r1 / ročník
+                        :mod (s10p2 / první
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number plural)
+            :extent (s10x2 / 44000)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s10z1 / zvýšit-se-001
+            :place (s10r2 / ročník
+                :mod (s10d1 / druhý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s10s3 / suma
+                :mod (s10t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s10j1 / jen)
+            :extent (s10n1 / nepatrně)
+            :extent (s10k1 / koruna
+                :mod (s10x3 / 1000
+                    :extent (s10s4 / spíše))
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance))
+
+# alignment:
+s10a1: 18-18
+s10p1: 6-6
+s10f1: 1-1,5-5
+s10l1: 4-4
+s10x1: 2-2
+s10o1: 8-8,10-10
+s10s1: 7-7
+s10s2: 12-12
+s10e1: 0-0
+s10u1: 11-11
+s10r1: 13-13,15-15
+s10p2: 14-14
+s10x2: 17-17
+s10z1: 22-22,25-25
+s10r2: 19-19,21-21
+s10d1: 20-20
+s10s3: 24-24
+s10t1: 23-23
+s10j1: 26-26
+s10n1: 27-27
+s10k1: 30-30,32-32
+s10x3: 31-31
+s10s4: 29-29
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10f1 :same-entity s4f2)
+            (s10s1 :same-entity s7s1)
+            (s10s3 :same-entity s10x2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1  2  3   4        5  6       7       8  9       10   11   12 13 14 15   16    17          18      19        20 21       22    23
+Words: Ti ,  kdo nastoupí do prvního ročníku ve školním roce 1994 /  95 ,  však podle předpokladů zaplatí sedmdesát až osmdesát tisíc .
+
+# sentence level graph:
+(s11z1 / zaplatit-001
+        :clausal-marker (s11v1 / však)
+        :ARG0 (s11t1 / ten
+            :mod (s11n1 / nastoupit-001
+                :ARG0 (s11k1 / kdo
+                    :refer-number plural)
+                :ARG1 (s11r1 / ročník
+                    :mod (s11p1 / první
+                        :refer-number singular)
+                    :refer-number singular)
+                :temporal (s11r2 / rok
+                    :mod (s11s1 / školní
+                        :refer-number singular)
+                    :mod (s11m1 / math
+                        :op1 (s11x1 / 1994)
+                        :op2 (s11x2 / 95))
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number plural)
+        :regard (s11p2 / předpoklad
+            :refer-number plural)
+        :ARG1 (s11t2 / tisíc
+            :mod (s11m2 / math
+                :op1 (s11s2 / sedmdesát
+                    :refer-number singular)
+                :op2 (s11o1 / osmdesát
+                    :refer-number singular))
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s11z1: 18-18
+s11v1: 15-15
+s11t1: 1-1
+s11n1: 4-4
+s11k1: 3-3
+s11r1: 5-5,7-7
+s11p1: 6-6
+s11r2: 8-8,10-10
+s11s1: 9-9
+s11m1: 12-12
+s11x1: 11-11
+s11x2: 13-13
+s11p2: 16-17
+s11t2: 22-22
+s11m2: 20-20
+s11s2: 19-19
+s11o1: 21-21
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11k1 :same-entity s11t1)
+            (s11r1 :same-entity s10r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1      2     3     4   5       6       7  8       9        10   11         12    13  14    15       16 17  18 19    20         21     22 23   24   25     26   27     28 29    30      31       32   33
+Words: Vedení školy totiž při výpočtu nákladů na jednoho studenta nově započítává nejen tak zvaný normativ ,  ale i  další rozpočtové zdroje ,  jako jsou granty nebo peníze z  fondu rozvoje vysokých škol .
+
+# sentence level graph:
+(s12z1 / započítávat-002
+        :clausal-marker (s12t1 / totiž)
+        :ARG0 (s12v1 / vedení
+            :possessor (s12s1 / škola
+                :refer-number singular)
+            :refer-number singular)
+        :condition (s12v2 / výpočet
+            :ARG1 (s12n1 / náklad
+                :regard (s12s2 / student
+                    :mod (s12j1 / jeden
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :manner (s12n2 / nově)
+        :ARG1 (s12g1 / gradation
+            :clausal-marker (s12n3 / nejen)
+            :op1 (s12n4 / normativ
+                :clausal-marker (s12t2 / takzvaný
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s12i1 / i)
+            :op2 (s12i2 / identity-91
+                :ARG1 (s12z2 / zdroj
+                    :mod (s12r1 / rozpočtový
+                        :refer-number plural)
+                    :mod (s12d1 / další
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG2 (s12b1 / být-007
+                    :ARG1 s12z2
+                    :ARG0 (s12o1 / or
+                        :op1 (s12g2 / grant
+                            :source (s12f1 / fond
+                                :possessor (s12r2 / rozvoj
+                                    :ARG1 (s12s3 / škola
+                                        :mod (s12v3 / vysoký
+                                            :refer-number plural)
+                                        :refer-number plural)
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number plural)
+                        :op2 (s12p1 / peníze
+                            :source s12f1
+                            :refer-number plural))
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect activity)))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect habitual)
+
+# alignment:
+s12z1: 11-11
+s12t1: 3-3
+s12v1: 1-1
+s12s1: 2-2
+s12v2: 4-5
+s12n1: 6-6
+s12s2: 7-7,9-9
+s12j1: 8-8
+s12n2: 10-10
+s12g1: 17-17
+s12n3: 12-12
+s12n4: 15-15
+s12t2: 13-14
+s12i1: 18-18
+s12i2: 23-23
+s12z2: 21-21
+s12r1: 20-20
+s12d1: 19-19
+s12b1: 24-24
+s12o1: 26-26
+s12g2: 25-25
+s12f1: 28-29
+s12r2: 30-30
+s12s3: 32-32
+s12v3: 31-31
+s12p1: 27-27
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12s1 :same-entity s10f1)
+            (s12s3 :same-entity s8s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1      2  3    4    5  6  7  8  9  10       11      12        13         14 15    16        17      18
+Words: Přesto se nedá říci ,  že by 1  .  lékařská stavěla slovenské samoplátce na roveň ostatních cizinců .
+
+# sentence level graph:
+(s13r1 / říci-009
+        :clausal-marker (s13p1 / přesto)
+        :ARG0 (s13e1 / entity)
+        :ARG2 (s13e2 / entity)
+        :effect (s13s1 / stavět-005
+            :ARG0 (s13e3 / entity
+                :mod (s13x1 / 1)
+                :mod (s13l1 / lékařský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s13s2 / samoplátce
+                :mod (s13s3 / slovenský
+                    :refer-number plural)
+                :refer-number plural)
+            :goal (s13c1 / cizinec
+                :mod (s13o1 / ostatní
+                    :refer-number plural)
+                :refer-number plural)
+            :aspect activity)
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s13r1: 2-4
+s13p1: 1-1
+s13e1: 0-0
+s13e2: 0-0
+s13s1: 6-7,11-11
+s13e3: 0-0
+s13x1: 8-8
+s13l1: 10-10
+s13s2: 13-13
+s13s3: 12-12
+s13c1: 14-15,17-17
+s13o1: 16-16
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13e3 :same-entity s12s1)
+            (s13s2 :same-entity s11k1)
+            (s13s3 :same-entity s10s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1  2     3     4     5      6     7
+Words: Ti totiž platí 10000 dolarů ročně .
+
+# sentence level graph:
+(s14p1 / platit-001
+        :clausal-marker (s14t1 / totiž)
+        :ARG0 (s14t2 / ten
+            :refer-number plural)
+        :ARG1 (s14d1 / dolar
+            :mod (s14x1 / 10000)
+            :refer-number plural)
+        :duration (s14r1 / ročně)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s14p1: 3-3
+s14t1: 2-2
+s14t2: 1-1
+s14d1: 5-5
+s14x1: 4-4
+s14r1: 6-6
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14t2 :same-entity s13c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1  2        3       4 5    6    7       8        9
+Words: Na Lékařské fakultě v Brně však rozdíly nedělají .
+
+# sentence level graph:
+(s15d1 / dělat-010
+        :clausal-marker (s15v1 / však)
+        :place (s15f1 / fakulta
+            :mod (s15l1 / Lékařský
+                :refer-number singular)
+            :place (s15b1 / Brno
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s15r1 / rozdíl
+            :refer-number plural)
+        :ARG0 (s15e1 / entity)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s15d1: 8-8
+s15v1: 6-6
+s15f1: 1-1,3-3
+s15l1: 2-2
+s15b1: 4-5
+s15r1: 7-7
+s15e1: 0-0
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15f1 :same-entity s4f4)
+            (s15b1 :same-entity s4b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1       2   3       4     5    6      7     8  9  10      11    12    13    14      15 16        17     18
+Words: Studium tam cizince stojí 6000 dolarů ročně a  se stejnou sumou budou muset počítat i  slovenští občané .
+
+# sentence level graph:
+(s16a1 / and
+        :op1 (s16s1 / stát-001
+            :ARG0 (s16s2 / studium
+                :refer-number singular)
+            :place (s16t1 / tam
+                :refer-number singular)
+            :ARG1 (s16c1 / cizinec
+                :refer-number plural)
+            :extent (s16d1 / dolar
+                :mod (s16x1 / 6000)
+                :refer-number plural)
+            :duration (s16r1 / ročně)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s16p1 / počítat-007
+            :ARG1 (s16s3 / suma
+                :mod (s16s4 / stejný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s16o1 / občan
+                :clausal-marker (s16i1 / i)
+                :mod (s16s5 / slovenský
+                    :refer-number plural)
+                :refer-number plural)
+            :aspect activity))
+
+# alignment:
+s16a1: 8-8
+s16s1: 4-4
+s16s2: 1-1
+s16t1: 2-2
+s16c1: 3-3
+s16d1: 6-6
+s16x1: 5-5
+s16r1: 7-7
+s16p1: 12-14
+s16s3: 9-9,11-11
+s16s4: 10-10
+s16o1: 17-17
+s16i1: 15-15
+s16s5: 16-16
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16t1 :same-entity s15f1)
+            (s16c1 :same-entity s14t2)
+            (s16s3 :same-entity s16d1)
+            (s16s5 :same-entity s13s3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1    2         3  4       5       6   7     8  9         10     11     12   13 14   15         16       17
+Words: Také například na Filmové fakultě AMU hledí na slovenské občany stejně jako na jiné zahraniční studenty .
+
+# sentence level graph:
+(s17h1 / hledět-004
+        :clausal-marker (s17t1 / také)
+        :clausal-marker (s17n1 / například)
+        :place (s17f1 / fakulta
+            :mod (s17f2 / Filmový
+                :refer-number singular)
+            :possessor (s17a1 / AMU)
+            :refer-number singular)
+        :ARG0 (s17e1 / entity)
+        :goal (s17o1 / občan
+            :mod (s17s1 / slovenský
+                :refer-number plural)
+            :refer-number plural)
+        :manner (s17s2 / stejně
+            :comparison (s17h2 / hledět-004
+                :ARG0 s17e1
+                :goal (s17s3 / student
+                    :mod (s17z1 / zahraniční
+                        :refer-number plural)
+                    :mod (s17j1 / jiný
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s17h1: 7-7
+s17t1: 1-1
+s17n1: 2-2
+s17f1: 3-3,5-5
+s17f2: 4-4
+s17a1: 6-6
+s17e1: 0-0
+s17o1: 8-8,10-10
+s17s1: 9-9
+s17s2: 11-11
+s17h2: 0-0
+s17s3: 13-13,16-16
+s17z1: 15-15
+s17j1: 14-14
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17s1 :same-entity s16s5)
+            (s17s3 :same-entity s16c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1     2     3       4  5       6   7  8    9     10     11    12    13    14
+Words: Pokud budou přijati ,  zaplatí tři až sedm tisíc dolarů ročně podle oboru .
+
+# sentence level graph:
+(s18z1 / zaplatit-001
+        :condition (s18p1 / přijmout-004
+            :ARG0 (s18e1 / entity)
+            :ARG1 s18e2
+            :refer-number plural
+            :aspect performance)
+        :ARG0 (s18e2 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s18t1 / tisíc
+            :mod (s18d1 / dolar
+                :refer-number plural)
+            :mod (s18m1 / math
+                :op1 (s18t2 / tři
+                    :refer-number plural)
+                :op2 (s18s1 / sedm
+                    :refer-number singular))
+            :refer-number singular)
+        :duration (s18r1 / ročně)
+        :regard (s18o1 / obor
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s18z1: 5-5
+s18p1: 1-3
+s18e1: 0-0
+s18e2: 0-0
+s18t1: 9-9
+s18d1: 10-10
+s18m1: 7-7
+s18t2: 6-6
+s18s1: 8-8
+s18r1: 11-11
+s18o1: 12-13
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18e2 :same-entity s17o1)))
+
+

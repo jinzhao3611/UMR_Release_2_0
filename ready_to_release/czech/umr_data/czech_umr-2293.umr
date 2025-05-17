@@ -1,0 +1,249 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2      3
+Words: Sahula opustí ČMFS
+
+# sentence level graph:
+(s1o1 / opustit-001
+        :ARG0 (s1s1 / Sahula
+            :refer-number singular)
+        :ARG1 (s1c1 / ČMFS)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1o1: 2-2
+s1s1: 1-1
+s1c1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2
+Words: Brno -
+
+# sentence level graph:
+(s2b1 / Brno
+        :refer-number singular)
+
+# alignment:
+s2b1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2  3            4       5  6            7               8           9     10 11 12   13      14    15      16      17    18    19
+Words: Volání po personálních změnách v  sekretariátu Českomoravského fotbalového svazu se na jeho nedávné valné hromadě ozývalo velmi silně .
+
+# sentence level graph:
+(s3o1 / ozývat-se-003
+        :ARG0 (s3v1 / volání
+            :ARG0 (s3e1 / entity)
+            :ARG1 (s3z1 / změna
+                :mod (s3p1 / personální
+                    :refer-number plural)
+                :place (s3s1 / sekretariát
+                    :possessor (s3s2 / svaz
+                        :mod (s3f1 / fotbalový
+                            :refer-number singular)
+                        :mod (s3c1 / Českomoravský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :place (s3h1 / hromada
+            :possessor s3s2
+            :mod (s3v2 / valný
+                :refer-number singular)
+            :mod (s3d1 / dávný
+                :refer-number singular
+                :polarity -)
+            :refer-number singular)
+        :manner (s3s3 / silně
+            :extent (s3v3 / velmi))
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s3o1: 10-10,16-16
+s3v1: 1-1
+s3e1: 0-0
+s3z1: 2-2,4-4
+s3p1: 3-3
+s3s1: 5-6
+s3s2: 9-9,12-12
+s3f1: 8-8
+s3c1: 7-7
+s3h1: 11-11,15-15
+s3v2: 14-14
+s3d1: 13-13
+s3s3: 18-18
+s3v3: 17-17
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s2 :same-entity s1c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2    3         4    5             6  7     8     9  10  11        12
+Words: Ačkoliv tomu dosavadní klid nenasvědčoval ,  první kroky se již podnikají .
+
+# sentence level graph:
+(s4b1 / but-91
+        :ARG2 (s4n1 / nasvědčovat-001
+            :ARG0 (s4k1 / klid
+                :mod (s4d1 / dosavadní
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s4t1 / ten
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular
+            :aspect activity
+            :polarity -)
+        :ARG1 (s4p1 / podnikat-003
+            :predicative-noun (s4k2 / krok
+                :ARG0 s4e1
+                :ARG1 (s4e2 / entity)
+                :mod (s4p2 / první
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 (s4e1 / entity)
+            :temporal (s4j1 / již)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s4b1: 1-1
+s4p1: 9-9,11-11
+s4k2: 8-8
+s4e2: 0-0
+s4p2: 7-7
+s4e1: 0-0
+s4j1: 10-10
+s4n1: 5-5
+s4k1: 4-4
+s4d1: 3-3
+s4t1: 2-2
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s4p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2         3  4    5         6      7  8        9     10 11     12     13 14      15 16       17   18      19     20
+Words: Podle informací LN musí František Sahula ,  sekretář svazu a  Ligové komise ,  opustit v  dohledné době všechny funkce .
+
+# sentence level graph:
+(s5o1 / opustit-001
+        :regard (s5i1 / informace
+            :ARG0 (s5l1 / LN
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s5i2 / identity-91
+            :ARG1 (s5s1 / Sahula
+                :mod (s5f1 / František
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s5s2 / sekretář
+                :possessor (s5a1 / and
+                    :op1 (s5s3 / svaz
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :op2 (s5k1 / komise
+                        :mod (s5l2 / ligový
+                            :refer-number singular)
+                        :refer-number singular))
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s5d1 / doba
+            :mod (s5d2 / dohledný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s5f2 / funkce
+            :mod (s5v1 / všechen
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s5o1: 4-4,14-14
+s5i1: 1-2
+s5l1: 3-3
+s5i2: 7-7
+s5s1: 6-6
+s5f1: 5-5
+s5s2: 8-8
+s5a1: 10-10
+s5s3: 9-9
+s5k1: 12-12
+s5l2: 11-11
+s5d1: 15-15,17-17
+s5d2: 16-16
+s5f2: 19-19
+s5v1: 18-18
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5i2 :same-entity s1s1)
+            (s5s3 :same-entity s3s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2  3  4        5    6         7          8
+Words: Oznámil mu to předseda ČMFS František Chvalovský .
+
+# sentence level graph:
+(s6o1 / oznámit-001
+        :ARG1 (s6t1 / ten
+            :refer-number singular)
+        :ARG2 (s6e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s6c1 / Chvalovský
+            :mod (s6f1 / František
+                :refer-number singular)
+            :mod (s6p1 / předseda
+                :possessor (s6c2 / ČMFS
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6o1: 1-1
+s6t1: 3-3
+s6e1: 2-2
+s6c1: 7-7
+s6f1: 6-6
+s6p1: 4-4
+s6c2: 5-5
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6t1 :same-event s5o1)
+            (s6e1 :same-entity s5i2)
+            (s6c2 :same-entity s5s3)))
+
+

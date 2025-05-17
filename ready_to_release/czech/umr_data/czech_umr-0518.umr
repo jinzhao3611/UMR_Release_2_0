@@ -1,0 +1,450 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2
+Words: Nebezpečné studně
+
+# sentence level graph:
+(s1s1 / studna
+        :mod (s1b1 / bezpečný
+            :refer-number plural
+            :polarity -)
+        :refer-number plural)
+
+# alignment:
+s1s1: 2-2
+s1b1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1  2          3      4    5     6        7     8    9        10   11       12 13     14
+Words: V  posledních letech lidé znovu začínají stále více využívat vodu čerpanou ze studní .
+
+# sentence level graph:
+(s2z1 / začínat-001
+        :temporal (s2r1 / rok
+            :mod (s2p1 / poslední
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s2c1 / člověk
+            :refer-number plural)
+        :temporal (s2z2 / znovu)
+        :ARG1 (s2v1 / využívat-001
+            :ARG0 s2c1
+            :clausal-marker (s2s1 / stále)
+            :extent (s2h1 / hodně)
+            :ARG1 (s2v2 / voda
+                :mod (s2c2 / čerpaný
+                    :start (s2s2 / studna
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2z1: 6-6
+s2r1: 1-1,3-3
+s2p1: 2-2
+s2c1: 4-4
+s2z2: 5-5
+s2v1: 9-9
+s2s1: 7-7
+s2h1: 8-8
+s2v2: 10-10
+s2c2: 11-11
+s2s2: 12-13
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2s2 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2  3     4          5   6       7        8  9  10  11 12    13 14      15
+Words: Nyní je takto zásobováno 1.7 milionu obyvatel ČR ,  což je téměř 17 procent .
+
+# sentence level graph:
+(s3z1 / zásobovat-001
+        :temporal (s3n1 / nyní)
+        :manner (s3t1 / takto
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG0 (s3e1 / entity)
+        :ARG1 (s3i1 / identity-91
+            :ARG1 (s3m1 / milión
+                :mod (s3x1 / 1.7)
+                :mod (s3o1 / obyvatel
+                    :possessor (s3c1 / ČR
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s3b1 / být-007
+                :ARG0 (s3c2 / což
+                    :refer-number singular)
+                :ARG1 (s3p1 / procento
+                    :mod (s3x2 / 17
+                        :extent (s3t2 / téměř))
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity))
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s3z1: 2-2,4-4
+s3n1: 1-1
+s3t1: 3-3
+s3e1: 0-0
+s3i1: 9-9
+s3m1: 6-6
+s3x1: 5-5
+s3o1: 7-7
+s3c1: 8-8
+s3b1: 11-11
+s3c2: 10-10
+s3p1: 14-14
+s3x2: 13-13
+s3t2: 12-12
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3t1 :same-event s2z1)
+            (s3c2 :same-entity s3m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2  3     4         5    6    7  8        9          10         11             12        13
+Words: Téměř ve všech případech však voda ve studních nevyhovuje hygienicky nejzávažnějším kritériím .
+
+# sentence level graph:
+(s4v1 / vyhovovat-002
+        :clausal-marker (s4v2 / však)
+        :regard (s4p1 / případ
+            :mod (s4v3 / všechen
+                :extent (s4t1 / téměř)
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s4v4 / voda
+            :place (s4s1 / studna
+                :refer-number plural)
+            :refer-number singular)
+        :regard (s4h1 / hygienicky)
+        :ARG1 (s4k1 / kritérium
+            :mod (s4z1 / závažný
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s4v1: 9-9
+s4v2: 5-5
+s4p1: 2-2,4-4
+s4v3: 3-3
+s4t1: 1-1
+s4v4: 6-6
+s4s1: 7-8
+s4h1: 10-10
+s4k1: 12-12
+s4z1: 11-11
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4v4 :same-entity s2v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2  3          4          5  6        7       8        9      10 11        12
+Words: Často je znečištěna bakteriemi ,  obsahuje zvýšené množství radonu i  dusičnanů .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5z1 / znečistit-001
+            :frequency (s5c1 / často)
+            :ARG1 (s5e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG0 (s5b1 / bakterie
+                :refer-number plural)
+            :aspect performance)
+        :op2 (s5o1 / obsahovat-001
+            :ARG0 s5e1
+            :ARG1 (s5m1 / množství
+                :mod (s5z2 / zvýšený
+                    :refer-number singular)
+                :mod (s5a2 / and
+                    :op1 (s5r1 / radon
+                        :refer-number singular)
+                    :op2 (s5d1 / dusičnan
+                        :refer-number plural))
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s5a1: 5-5
+s5z1: 2-3
+s5c1: 1-1
+s5e1: 0-0
+s5b1: 4-4
+s5o1: 6-6
+s5m1: 8-8
+s5z2: 7-7
+s5a2: 10-10
+s5r1: 9-9
+s5d1: 11-11
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4v4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1        2  3    4    5       6  7     8           9            10          11       12 13            14            15 16     17    18 19  20
+Words: Potvrdil to mimo jiné průzkum ,  který uskutečnilo ministerstvo zemědělství společně s  ministerstvem zdravotnictví v  okrese Plzeň -  jih .
+
+# sentence level graph:
+(s6p1 / potvrdit-001
+        :ARG1 (s6t1 / ten
+            :refer-number singular)
+        :subtraction (s6j1 / jiný
+            :refer-number singular)
+        :ARG0 (s6p2 / průzkum
+            :ARG1-of (s6u1 / uskutečnit-001
+                :companion (s6m1 / ministerstvo
+                    :possessor (s6z1 / zdravotnictví
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s6m2 / ministerstvo
+                    :possessor (s6z2 / zemědělství
+                        :refer-number singular)
+                    :refer-number singular)
+                :place (s6o1 / okres
+                    :name (s6p3 / Plzeň
+                        :mod (s6j2 / jih
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6p1: 1-1
+s6t1: 2-2
+s6j1: 3-4
+s6p2: 5-5,7-7
+s6u1: 8-8
+s6m1: 11-13
+s6z1: 14-14
+s6m2: 9-9
+s6z2: 10-10
+s6o1: 15-16
+s6p3: 17-17
+s6j2: 19-19
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6t1 :same-entity s5a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1     2  3            4    5        6          7      8
+Words: Normě tu neodpovídalo 97.6 procenta odebraných vzorků .
+
+# sentence level graph:
+(s7o1 / odpovídat-002
+        :ARG1 (s7n1 / norma
+            :refer-number singular)
+        :place (s7t1 / tu
+            :refer-number singular)
+        :ARG0 (s7p1 / procento
+            :mod (s7x1 / 97.6)
+            :mod (s7v1 / vzorek
+                :mod (s7o2 / odebraný
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s7o1: 3-3
+s7n1: 1-1
+s7t1: 2-2
+s7p1: 5-5
+s7x1: 4-4
+s7v1: 7-7
+s7o2: 6-6
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7t1 :same-entity s6o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1    2  3      4      5  6     7      8  9       10   11        12 13 14   15  16       17          18      19
+Words: Voda z  těchto zdrojů ,  které nebyly po dlouhou dobu používány ,  by měla být nejdříve laboratorně ověřena .
+
+# sentence level graph:
+(s8o1 / ověřit-001
+        :ARG1 (s8v1 / voda
+            :start (s8z1 / zdroj
+                :mod (s8t1 / tento
+                    :refer-number plural)
+                :ARG1-of (s8p1 / používat-001
+                    :ARG0 (s8e1 / entity)
+                    :duration (s8d1 / doba
+                        :mod (s8d2 / dlouhý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural
+                    :aspect activity
+                    :polarity -)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s8e2 / entity)
+        :temporal (s8b1 / brzy)
+        :manner (s8l1 / laboratorně)
+        :aspect performance)
+
+# alignment:
+s8o1: 13-15,18-18
+s8v1: 1-1
+s8z1: 2-2,4-4,6-6
+s8t1: 3-3
+s8p1: 7-7,11-11
+s8e1: 0-0
+s8d1: 8-8,10-10
+s8d2: 9-9
+s8e2: 0-0
+s8b1: 16-16
+s8l1: 17-17
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8v1 :same-entity s5e1)
+            (s8z1 :same-entity s4s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1      2  3     4           5         6        7  8            9         10 11 12           13      14 15             16         17           18
+Words: Občané si mohou laboratorní vyšetření objednat v  hygienických stanicích ,  v  laboratořích vodáren i  akreditovaných soukromých laboratořích .
+
+# sentence level graph:
+(s9o1 / objednat-001
+        :ARG0 (s9o2 / občan
+            :refer-number plural)
+        :ARG1 (s9v1 / vyšetření
+            :mod (s9l1 / laboratorní
+                :refer-number singular)
+            :ARG0 (s9e1 / entity)
+            :ARG1 (s9e2 / entity)
+            :refer-number singular)
+        :affectee s9o2
+        :place (s9a1 / and
+            :op1 (s9s1 / stanice
+                :mod (s9h1 / hygienický
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s9l2 / laboratoř
+                :possessor (s9v2 / vodárna
+                    :refer-number plural)
+                :refer-number plural)
+            :op3 (s9l3 / laboratoř
+                :mod (s9a2 / akreditovaný
+                    :refer-number plural)
+                :mod (s9s2 / soukromý
+                    :refer-number plural)
+                :refer-number plural))
+        :aspect performance)
+
+# alignment:
+s9o1: 3-3,6-6
+s9o2: 1-2
+s9v1: 5-5
+s9l1: 4-4
+s9e1: 0-0
+s9e2: 0-0
+s9a1: 14-14
+s9s1: 7-7,9-9
+s9h1: 8-8
+s9l2: 11-12
+s9v2: 13-13
+s9l3: 11-11,17-17
+s9a2: 15-15
+s9s2: 16-16
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9v1 :same-event s8o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1            2  3   4   5  6         7    8      9  10     11    12
+Words: Zkontrolován by měl být i  technický stav studny a  jejího okolí .
+
+# sentence level graph:
+(s10z1 / zkontrolovat-001
+        :ARG0 (s10e1 / entity)
+        :ARG1 (s10s1 / stav
+            :clausal-marker (s10i1 / i)
+            :mod (s10t1 / technický
+                :refer-number singular)
+            :possessor (s10a1 / and
+                :op1 (s10s2 / studna
+                    :refer-number singular)
+                :op2 (s10o1 / okolí
+                    :possessor s10s2
+                    :refer-number singular))
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s10z1: 1-4
+s10e1: 0-0
+s10s1: 7-7
+s10i1: 5-5
+s10t1: 6-6
+s10a1: 9-9
+s10s2: 8-8,10-10
+s10o1: 11-11
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10s2 :same-entity s8z1)))
+
+

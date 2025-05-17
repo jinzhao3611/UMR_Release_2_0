@@ -1,0 +1,335 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2 3         4        5
+Words: Pivo z Pražských pivovarů podraží
+
+# sentence level graph:
+(s1p1 / podražit-001
+        :ARG0 (s1p2 / pivo
+            :start (s1p3 / pivovar
+                :mod (s1p4 / Pražský
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1p1: 5-5
+s1p2: 1-1
+s1p3: 2-2,4-4
+s1p4: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p1 :same-entity s1p4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2        3       4  5        6       7  8  9     10   11     12          13 14     15 16       17   18 19      20 21   22       23 24  25          26     27 28     29 30      31
+Words: Pražské pivovary zvyšují od příštího pondělí 27 .  února cenu značek Staropramen ,  Měšťan a  Branické pivo v  průměru o  9.85 procenta ,  což představuje zhruba 60 haléřů na půllitr .
+
+# sentence level graph:
+(s3z1 / zvyšovat-001
+        :ARG0 (s3p1 / pivovar
+            :mod (s3p2 / pražský
+                :refer-number plural)
+            :refer-number plural)
+        :extent (s3p3 / průměr
+            :refer-number singular)
+        :temporal (s3p4 / pondělí
+            :mod (s3p5 / příští
+                :refer-number singular)
+            :possessor (s3u1 / únor
+                :mod (s3x1 / 27)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3c1 / cena
+            :ARG1 (s3z2 / značka
+                :name (s3a1 / and
+                    :op1 (s3s1 / Staropramen
+                        :refer-number singular)
+                    :op2 (s3m1 / Měšťan
+                        :refer-number singular)
+                    :op3 (s3p6 / pivo
+                        :mod (s3b1 / Branický
+                            :refer-number singular)
+                        :refer-number singular))
+                :refer-number plural)
+            :refer-number singular)
+        :extent (s3i1 / identity-91
+            :ARG1 (s3p7 / procento
+                :mod (s3x2 / 9.85)
+                :refer-number singular)
+            :ARG2 (s3p8 / představovat-003
+                :ARG0 (s3c2 / což
+                    :refer-number singular)
+                :ARG1 (s3h1 / haléř
+                    :regard (s3p9 / půllitr
+                        :refer-number singular)
+                    :mod (s3x3 / 60
+                        :extent (s3z3 / zhruba))
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3z1: 3-3
+s3p1: 2-2
+s3p2: 1-1
+s3p3: 18-19
+s3p4: 4-4,6-6
+s3p5: 5-5
+s3u1: 9-9
+s3x1: 7-7
+s3c1: 10-10
+s3z2: 11-11
+s3a1: 15-15
+s3s1: 12-12
+s3m1: 14-14
+s3p6: 17-17
+s3b1: 16-16
+s3i1: 23-23
+s3p7: 20-20,22-22
+s3x2: 21-21
+s3p8: 25-25
+s3c2: 24-24
+s3h1: 28-28
+s3p9: 29-30
+s3x3: 27-27
+s3z3: 26-26
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s1p3)
+            (s3p2 :same-entity s2p1)
+            (s3z2 :same-entity s1p2)
+            (s3c2 :same-entity s3p7)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1          2  3   4     5        6    7      8  9         10       11
+Words: Informoval o  tom včera novináře Jiří Kmínek z  Pražských pivovarů .
+
+# sentence level graph:
+(s4i1 / informovat-001
+        :ARG1 (s4t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s4v1 / včera)
+        :ARG2 (s4n1 / novinář
+            :refer-number plural)
+        :ARG0 (s4k1 / Kmínek
+            :start (s4p1 / pivovar
+                :mod (s4p2 / pražský
+                    :refer-number plural)
+                :refer-number plural)
+            :mod (s4j1 / Jiří
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect process)
+
+# alignment:
+s4i1: 1-1
+s4t1: 2-3
+s4v1: 4-4
+s4n1: 5-5
+s4k1: 7-7
+s4p1: 8-8,10-10
+s4p2: 9-9
+s4j1: 6-6
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3z1)
+            (s4p1 :same-entity s3p1)
+            (s4p2 :same-entity s3p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2          3          4    5     6    7    8           9           10           11    12  13 14    15      16       17       18 19      20 21  22     23
+Words: Určitou kompenzací zákazníkům bude podle jeho slov prodloužení garantované trvanlivosti všech piv ,  která Pražské pivovary vyrábějí ,  nejméně na tři měsíce .
+
+# sentence level graph:
+(s5b1 / být-007
+        :ARG1 (s5k1 / kompenzace
+            :ARG2 (s5z1 / zákazník
+                :refer-number plural)
+            :mod (s5u1 / určitý
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s5s1 / slovo
+            :ARG0 (s5e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number plural)
+        :ARG0 (s5p1 / prodloužení
+            :ARG0 (s5e2 / entity)
+            :ARG1 (s5t1 / trvanlivost
+                :mod (s5g1 / garantovaný
+                    :refer-number singular)
+                :possessor (s5p2 / pivo
+                    :ARG1-of (s5v1 / vyrábět-001
+                        :ARG0 (s5p3 / pivovar
+                            :mod (s5p4 / pražský
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number plural
+                        :refer-person 3rd
+                        :aspect activity)
+                    :mod (s5v2 / všechen
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :duration (s5m1 / měsíc
+                :mod (s5t2 / tři
+                    :extent (s5m2 / málo)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5b1: 4-4
+s5k1: 2-2
+s5z1: 3-3
+s5u1: 1-1
+s5s1: 5-5,7-7
+s5e1: 6-6
+s5p1: 8-8
+s5e2: 0-0
+s5t1: 10-10
+s5g1: 9-9
+s5p2: 12-12,14-14
+s5v1: 17-17
+s5p3: 16-16
+s5p4: 15-15
+s5v2: 11-11
+s5m1: 20-20,22-22
+s5t2: 21-21
+s5m2: 19-19
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4k1)
+            (s5p2 :same-entity s3z2)
+            (s5p3 :same-entity s4p1)
+            (s5p4 :same-entity s4p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2           3  4  5    6        7      8  9    10       11     12           13    14 15     16   17   18      19      20    21 22 23     24 25    26
+Words: Dvanáctka Staropramen má už dnes půlroční záruku a  přes zavedení nových atraktivních lahví a  etiket její cenu pivovar zvyšuje pouze o  25 haléřů na lahvi .
+
+# sentence level graph:
+(s6a1 / and
+        :op2 (s6b1 / but-91
+            :ARG2 (s6z1 / zavedení
+                :ARG0 (s6e1 / entity)
+                :ARG1 (s6a2 / and
+                    :op1 (s6l1 / lahev
+                        :mod (s6n1 / nový
+                            :refer-number plural)
+                        :mod (s6a3 / atraktivní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :op2 (s6e2 / etiketa
+                        :refer-number plural))
+                :refer-number singular)
+            :ARG1 (s6z2 / zvyšovat-001
+                :ARG1 (s6c1 / cena
+                    :ARG1 s6d1
+                    :refer-number singular)
+                :ARG0 (s6p1 / pivovar
+                    :refer-number singular)
+                :extent (s6h1 / haléř
+                    :regard (s6l2 / lahev
+                        :refer-number singular)
+                    :clausal-marker (s6p2 / pouze)
+                    :mod (s6x2 / 25)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity))
+        :op1 (s6m1 / mít-026
+            :ARG0 (s6d1 / dvanáctka
+                :name (s6s1 / Staropramen
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s6u1 / už)
+            :temporal (s6d2 / dnes)
+            :predicative-noun (s6z3 / záruka
+                :ARG0 s6d1
+                :ARG1 (s6e3 / entity)
+                :mod (s6p3 / půlroční
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state))
+
+# alignment:
+s6a1: 8-8
+s6m1: 3-3
+s6d1: 1-1,16-16
+s6s1: 2-2
+s6u1: 4-4
+s6d2: 5-5
+s6z3: 7-7
+s6e3: 0-0
+s6p3: 6-6
+s6b1: 0-0
+s6z2: 19-19
+s6c1: 17-17
+s6p1: 18-18
+s6h1: 21-21,23-23
+s6l2: 24-25
+s6p2: 20-20
+s6x2: 22-22
+s6z1: 9-10
+s6e1: 0-0
+s6a2: 14-14
+s6l1: 13-13
+s6n1: 11-11
+s6a3: 12-12
+s6e2: 15-15
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p1 :same-entity s5p3)))
+
+

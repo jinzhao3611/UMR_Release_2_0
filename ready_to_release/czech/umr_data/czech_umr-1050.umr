@@ -1,0 +1,883 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2     3       4      5 6       7             8
+Words: Škoda Plzeň přebírá správu v podniku Umformtechnik Erfurt
+
+# sentence level graph:
+(s1p1 / přebírat-001
+        :ARG0 (s1s1 / Škoda
+            :mod (s1p2 / Plzeň
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1s2 / správa
+            :place (s1p3 / podnik
+                :name (s1u1 / Umformtechnik
+                    :mod (s1e1 / Erfurt
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1p1: 3-3
+s1s1: 1-1
+s1p2: 2-2
+s1s2: 4-4
+s1p3: 5-6
+s1u1: 7-7
+s1e1: 8-8
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Plzeň -
+
+# sentence level graph:
+(s2p1 / Plzeň
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p1 :same-entity s1p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2     3     4     5       6      7              8       9             10 11  12 13 14       15      16
+Words: Holding Škoda Plzeň včera převzal správu strojírenského podniku Umformtechnik (  UTE )  v  německém Erfurtu .
+
+# sentence level graph:
+(s3p1 / převzít-002
+        :ARG0 (s3h1 / holding
+            :name (s3s1 / Škoda
+                :mod (s3p2 / Plzeň
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3v1 / včera)
+        :ARG1 (s3s2 / správa
+            :ARG1 (s3p3 / podnik
+                :name (s3i1 / identity-91
+                    :ARG1 (s3u1 / Umformtechnik
+                        :refer-number singular)
+                    :ARG2 (s3u2 / UTE))
+                :mod (s3s3 / strojírenský
+                    :refer-number singular)
+                :place (s3e1 / Erfurt
+                    :mod (s3n1 / německý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3p1: 5-5
+s3h1: 1-1
+s3s1: 2-2
+s3p2: 3-3
+s3v1: 4-4
+s3s2: 6-6
+s3p3: 8-8
+s3i1: 10-10
+s3u1: 9-9
+s3u2: 11-11
+s3s3: 7-7
+s3e1: 13-13,15-15
+s3n1: 14-14
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3h1 :same-entity s1s1)
+            (s3p2 :same-entity s2p1)
+            (s3s2 :same-entity s1s2)
+            (s3p3 :same-entity s1p3)
+            (s3e1 :same-entity s1e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2     3    4    5     6         7        8         9     10         11       12 13      14      15      16        17        18 19          20   21    22    23
+Words: Jako další krok bude podle tiskového mluvčího Jaroslava Hudce následovat převzetí 95 procent majetku podniku plzeňskou Škodovkou za symbolickou cenu jedné marky .
+
+# sentence level graph:
+(s4n1 / následovat-002
+        :manner (s4k1 / krok
+            :mod-of s4p1
+            :mod (s4d1 / další
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s4h1 / Hudec
+            :mod (s4j1 / Jaroslav
+                :refer-number singular)
+            :mod (s4m1 / mluvčí
+                :mod (s4t1 / tiskový
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4p1 / převzetí
+            :ARG0 (s4s1 / škodovka
+                :mod (s4p2 / plzeňský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s4p3 / procento
+                :mod (s4m2 / majetek
+                    :possessor (s4p4 / podnik
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s4x2 / 95)
+                :refer-number plural)
+            :extent (s4c1 / cena
+                :mod (s4s2 / symbolický
+                    :refer-number singular)
+                :mod (s4m3 / marka
+                    :mod (s4j2 / jeden
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s4n1: 4-4,10-10
+s4k1: 1-1,3-3
+s4d1: 2-2
+s4h1: 5-5,9-9
+s4j1: 8-8
+s4m1: 7-7
+s4t1: 6-6
+s4p1: 11-11
+s4s1: 17-17
+s4p2: 16-16
+s4p3: 13-13
+s4m2: 14-14
+s4p4: 15-15
+s4x2: 12-12
+s4c1: 18-18,20-20
+s4s2: 19-19
+s4m3: 22-22
+s4j2: 21-21
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s1 :same-entity s3h1)
+            (s4p2 :same-entity s3p2)
+            (s4p4 :same-entity s3p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2        3           4      5       6  7     8  9       10 11      12    13 14 15   16    17  18    19 20    21        22   23
+Words: K  převzetí většinového podílu podniku ,  který má hodnotu 40 milionů marek ,  by mělo podle něj dojít do konce letošního roku .
+
+# sentence level graph:
+(s5d1 / dojít-009
+        :ARG0 (s5p1 / převzetí
+            :ARG1 (s5p2 / podíl
+                :mod (s5v1 / většinový
+                    :refer-number singular)
+                :possessor (s5p3 / podnik
+                    :ARG0-of (s5m1 / mít-008
+                        :ARG1 (s5h1 / hodnota
+                            :extent (s5m2 / milión
+                                :mod (s5m3 / marka
+                                    :refer-number plural)
+                                :mod (s5x1 / 40)
+                                :refer-number plural)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect state)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s5e1 / entity)
+            :refer-number singular)
+        :regard (s5e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s5k1 / konec
+            :possessor (s5r1 / rok
+                :mod (s5l1 / letošní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s5d1: 14-15,18-18
+s5p1: 1-2
+s5p2: 4-4
+s5v1: 3-3
+s5p3: 5-5,7-7
+s5m1: 8-8
+s5h1: 9-9
+s5m2: 11-11
+s5m3: 12-12
+s5x1: 10-10
+s5e1: 0-0
+s5e2: 16-17
+s5k1: 19-20
+s5r1: 22-22
+s5l1: 21-21
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p1 :same-entity s4p1)
+            (s5p2 :same-entity s4p3)
+            (s5p3 :same-entity s4p4)
+            (s5e2 :same-entity s4h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2      3         4     5  6      7            8    9  10    11         12   13   14 15        16    17    18    19 20    21
+Words: O  prodej erfurtské firmy na výrobu karosářských lisů ,  která zaměstnává 1500 osob ,  projevila Škoda zájem letos v  lednu .
+
+# sentence level graph:
+(s6p1 / projevit-003
+        :ARG0 (s6s1 / Škoda
+            :refer-number singular)
+        :predicative-noun (s6z1 / zájem
+            :ARG1 (s6p2 / prodej
+                :ARG1 (s6f1 / firma
+                    :mod (s6e1 / erfurtský
+                        :refer-number singular)
+                    :ARG1 (s6v1 / výroba
+                        :ARG1 (s6l1 / lis
+                            :mod (s6k1 / karosářský
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :ARG0-of (s6z2 / zaměstnávat-001
+                        :ARG1 (s6o1 / osoba
+                            :mod (s6x1 / 1500)
+                            :refer-number plural)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect habitual)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s6s1
+            :refer-number singular)
+        :temporal (s6l2 / letos
+            :refer-number singular)
+        :temporal (s6l3 / leden
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s6p1: 15-15
+s6s1: 16-16
+s6z1: 17-17
+s6p2: 1-2
+s6f1: 4-4,10-10
+s6e1: 3-3
+s6v1: 5-6
+s6l1: 8-8
+s6k1: 7-7
+s6z2: 11-11
+s6o1: 13-13
+s6x1: 12-12
+s6l2: 18-18
+s6l3: 19-20
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s1 :same-entity s4s1)
+            (s6f1 :same-entity s5p3)
+            (s6e1 :same-entity s3e1)
+            (s6l2 :same-entity s5r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1          2    3       4  5      6      7         8       9  10       11            12            13 14    15 16       17 18 19       20 21      22           23     24 25  26
+Words: Předložila tedy nabídku a  koncem března podepsala smlouvu s  německým privatizačním ministerstvem ,  které se zavázalo ,  že přispěje k  nápravě nepříznivých poměrů v  UTE .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7p1 / předložit-001
+            :ARG0 (s7e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :clausal-marker (s7t1 / tedy)
+            :ARG2 (s7e2 / entity)
+            :ARG1 (s7n1 / nabídka
+                :refer-number singular)
+            :aspect performance)
+        :op2 (s7p2 / podepsat-001
+            :ARG0 s7e1
+            :temporal (s7b1 / březen
+                :refer-number singular)
+            :ARG1 (s7s1 / smlouva
+                :companion (s7m1 / ministerstvo
+                    :mod (s7p3 / privatizační
+                        :refer-number singular)
+                    :mod (s7n2 / německý
+                        :refer-number singular)
+                    :ARG0-of (s7z1 / zavázat-se-001
+                        :ARG1 (s7p4 / přispět-002
+                            :ARG0 s7m1
+                            :ARG1 (s7n3 / náprava
+                                :ARG1 (s7p5 / poměr
+                                    :place (s7u1 / UTE)
+                                    :mod (s7p6 / příznivý
+                                        :refer-number plural
+                                        :polarity -)
+                                    :refer-number plural)
+                                :refer-number singular)
+                            :refer-number singular
+                            :refer-person 3rd
+                            :aspect performance)
+                        :refer-number singular
+                        :aspect performance)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance))
+
+# alignment:
+s7a1: 4-4
+s7p1: 1-1
+s7t1: 2-2
+s7e2: 0-0
+s7n1: 3-3
+s7e1: 0-0
+s7p2: 7-7
+s7b1: 5-6
+s7s1: 8-8
+s7m1: 9-9,12-12,14-14
+s7p3: 11-11
+s7n2: 10-10
+s7z1: 15-16
+s7p4: 18-19
+s7n3: 20-21
+s7p5: 23-23
+s7u1: 24-25
+s7p6: 22-22
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6s1)
+            (s7n2 :same-entity s3n1)
+            (s7u1 :same-entity s6f1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2         3           4  5        6       7  8    9     10     11         12        13  14  15 16    17
+Words: Na ozdravění hospodaření v  německém podniku by měla Škoda získat nenávratně přibližně 300 mil .  marek .
+
+# sentence level graph:
+(s8z1 / získat-004
+        :purpose (s8o1 / ozdravění
+            :ARG1 (s8h1 / hospodaření
+                :place (s8p1 / podnik
+                    :mod (s8n1 / německý
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s8e1 / entity)
+                :refer-number singular)
+            :ARG0 (s8e2 / entity)
+            :refer-number singular)
+        :ARG0 (s8s1 / Škoda
+            :refer-number singular
+            :refer-person 3rd)
+        :manner (s8n2 / návratně
+            :polarity -)
+        :ARG1 (s8m1 / milión
+            :mod (s8m2 / marka
+                :refer-number plural)
+            :mod (s8x1 / 300
+                :extent (s8p2 / přibližně)))
+        :aspect performance)
+
+# alignment:
+s8z1: 7-8,10-10
+s8o1: 1-2
+s8h1: 3-3
+s8p1: 4-4,6-6
+s8n1: 5-5
+s8e1: 0-0
+s8e2: 0-0
+s8s1: 9-9
+s8n2: 11-11
+s8m1: 14-14
+s8m2: 16-16
+s8x1: 13-13
+s8p2: 12-12
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8o1 :same-entity s7n3)
+            (s8p1 :same-entity s7u1)
+            (s8n1 :same-entity s7n2)
+            (s8s1 :same-entity s7e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1           2        3              4  5     6  7     8     9    10      11 12      13         14 15      16 17   18       19 20        21       22        23 24  25       26         27    28 29 30                31      32  33   34          35
+Words: Hospodářské problémy Umformtechniku ,  který se podle Hudce nyní nachází na hranici katastrofy ,  pramení z  jeho dřívější 80 procentní odbytové orientace na trh bývalého Sovětského svazu a  z  administrativních průtahů při jeho privatizaci .
+
+# sentence level graph:
+(s9p1 / pramenit-001
+        :ARG0 (s9p2 / problém
+            :mod (s9h1 / hospodářský
+                :refer-number plural)
+            :possessor (s9u1 / Umformtechnik
+                :ARG0-of (s9n1 / nacházet-se-002
+                    :regard (s9h2 / Hudec
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :temporal (s9n2 / nyní)
+                    :place (s9h3 / hranice
+                        :possessor (s9k1 / katastrofa
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number plural)
+        :ARG1 (s9a1 / and
+            :op1 (s9o1 / orientace
+                :ARG0 s9u1
+                :mod (s9o2 / odbytový
+                    :refer-number singular)
+                :ARG1 (s9t1 / trh
+                    :ARG0 (s9s1 / svaz
+                        :mod (s9s2 / Sovětský
+                            :refer-number singular)
+                        :mod (s9b1 / bývalý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s9x2 / 80_procentní)
+                :mod (s9b2 / brzký
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s9p3 / průtah
+                :mod (s9a2 / administrativní
+                    :refer-number plural)
+                :condition (s9p4 / privatizace
+                    :ARG1 s9u1
+                    :refer-number singular)
+                :refer-number plural))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9p1: 15-15
+s9p2: 2-2
+s9h1: 1-1
+s9u1: 3-3,5-5,17-17,33-33
+s9n1: 6-6,10-10
+s9h2: 7-8
+s9n2: 9-9
+s9h3: 11-12
+s9k1: 13-13
+s9a1: 28-28
+s9o1: 16-16,22-22
+s9o2: 21-21
+s9t1: 23-24
+s9s1: 27-27
+s9s2: 26-26
+s9b1: 25-25
+s9x2: 19-20
+s9b2: 18-18
+s9p3: 29-29,31-31
+s9a2: 30-30
+s9p4: 32-32,34-34
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p2 :same-entity s7p5)
+            (s9u1 :same-entity s8p1)
+            (s9h2 :same-entity s5e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1  2    3  4   5    6     7     8  9    10        11       12      13    14
+Words: Ty byly ,  jak dále uvedl Hudec ,  dány především německým právním řádem .
+
+# sentence level graph:
+(s10d1 / dát-019
+        :ARG1 (s10t1 / ten
+            :refer-number plural)
+        :parenthesis (s10u1 / uvést-007
+            :clausal-marker (s10d2 / dále)
+            :ARG0 (s10h1 / Hudec
+                :refer-number singular)
+            :effect s10d1
+            :refer-number singular
+            :aspect performance)
+        :clausal-marker (s10p1 / především)
+        :ARG0 (s10r1 / řád
+            :mod (s10p2 / právní
+                :refer-number singular)
+            :mod (s10n1 / německý
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s10d1: 2-2,9-9
+s10t1: 1-1
+s10u1: 4-4,6-6
+s10d2: 5-5
+s10h1: 7-7
+s10p1: 10-10
+s10r1: 13-13
+s10p2: 12-12
+s10n1: 11-11
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10t1 :same-entity s9p3)
+            (s10h1 :same-entity s9h2)
+            (s10n1 :same-entity s8n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1       2       3         4  5  6  7          8      9  10    11         12         13 14    15           16       17      18    19     20        21    22 23      24    25
+Words: Zmíněné průtahy způsobily ,  že se ekonomický propad od dubna dramaticky prohloubil a  podle škodováckých propočtů dosáhne letos ztráta erfurtské firmy 76 milionů marek .
+
+# sentence level graph:
+(s11z1 / způsobit-002
+        :ARG0 (s11p1 / průtah
+            :mod (s11z2 / zmíněný
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s11a1 / and
+            :op1 (s11p2 / prohloubit-se-001
+                :ARG0 (s11p3 / propad
+                    :mod (s11e1 / ekonomický
+                        :refer-number singular)
+                    :refer-number singular)
+                :temporal (s11d1 / duben
+                    :refer-number singular)
+                :manner (s11d2 / dramaticky)
+                :refer-number singular
+                :aspect performance)
+            :op2 (s11d3 / dosáhnout-002
+                :regard (s11p4 / propočet
+                    :mod (s11s1 / škodovácký
+                        :refer-number plural)
+                    :refer-number plural)
+                :temporal (s11l1 / letos)
+                :ARG0 (s11z3 / ztráta
+                    :ARG0 (s11f1 / firma
+                        :mod (s11e2 / erfurtský
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :refer-number singular)
+                :ARG1 (s11m1 / milión
+                    :mod (s11m2 / marka
+                        :refer-number plural)
+                    :mod (s11x1 / 76)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance))
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s11z1: 3-3
+s11p1: 2-2
+s11z2: 1-1
+s11a1: 13-13
+s11p2: 5-6,12-12
+s11p3: 8-8
+s11e1: 7-7
+s11d1: 9-10
+s11d2: 11-11
+s11d3: 5-5,17-17
+s11p4: 14-14,16-16
+s11s1: 15-15
+s11l1: 18-18
+s11z3: 19-19
+s11f1: 21-21
+s11e2: 20-20
+s11m1: 23-23
+s11m2: 24-24
+s11x1: 22-22
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11p1 :same-entity s10t1)
+            (s11s1 :same-entity s8s1)
+            (s11f1 :same-entity s9u1)
+            (s11e2 :same-entity s6e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1      2         3      4             5    6         7               8
+Words: Odhady německého vedení Umformtechnik jsou podstatně optimističtější .
+
+# sentence level graph:
+(s12b1 / být-007
+        :ARG0 (s12o1 / odhad
+            :ARG0 (s12v1 / vedení
+                :possessor (s12x1 / #Idph
+                    :name (s12u1 / Umformtechnik
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s12n1 / německý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :ARG1 (s12o2 / optimistický
+            :extent (s12p1 / podstatně)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s12b1: 5-5
+s12o1: 1-1
+s12v1: 3-3
+s12x1: 0-0
+s12u1: 4-4
+s12n1: 2-2
+s12o2: 7-7
+s12p1: 6-6
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12x1 :same-entity s11f1)
+            (s12n1 :same-entity s10n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1      2     3     4  5       6       7  8  9  10      11         12      13      14     15 16    17           18      19 20  21           22
+Words: Vedení Škody Plzeň se nicméně domnívá ,  že v  případě vstřícného postupu německé strany je možné hospodářskou situaci v  UTE stabilizovat .
+
+# sentence level graph:
+(s13d1 / domnívat-se-001
+        :clausal-marker (s13n1 / nicméně)
+        :ARG0 (s13v1 / vedení
+            :possessor (s13s1 / Škoda
+                :mod (s13p1 / Plzeň
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s13b1 / být-159
+            :condition (s13p2 / postup
+                :ARG0 (s13s2 / strana
+                    :mod (s13n2 / německý
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s13v2 / vstřícný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s13m1 / možný
+                :affectee (s13e1 / entity)
+                :refer-number singular)
+            :ARG0 (s13s3 / stabilizovat-001
+                :ARG1 (s13s4 / situace
+                    :place (s13u1 / UTE)
+                    :mod (s13h1 / hospodářský
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 s13e1
+                :aspect process)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s13d1: 4-4,6-6
+s13n1: 5-5
+s13v1: 1-1
+s13s1: 2-2
+s13p1: 3-3
+s13b1: 8-8,15-15
+s13p2: 9-10,12-12
+s13s2: 14-14
+s13n2: 13-13
+s13v2: 11-11
+s13m1: 16-16
+s13e1: 0-0
+s13s3: 21-21
+s13s4: 18-18
+s13u1: 19-20
+s13h1: 17-17
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13s1 :same-entity s11s1)
+            (s13p1 :same-entity s4p2)
+            (s13n2 :same-entity s12n1)
+            (s13u1 :same-entity s12x1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1      2    3  4     5  6       7   8  9  10 11 12    13       14    15            16         17    18 19       20     21      22 23     24           25    26
+Words: Stejně jako ve Škodě na přelomu let 92 /  93 je nutné zajistit firmě Umformtechnik zakázkovou náplň ,  postupně snížit náklady a  zvýšit produktivitu práce .
+
+# sentence level graph:
+(s14b1 / být-159
+        :manner (s14s1 / stejně
+            :comparison (s14b2 / být-159
+                :place (s14s2 / Škoda
+                    :refer-number singular)
+                :ARG0 s14a1
+                :ARG1 (s14n1 / nutný
+                    :refer-number singular)
+                :temporal (s14p1 / přelom
+                    :possessor (s14r1 / rok
+                        :mod (s14m1 / math
+                            :op1 (s14x2 / 92)
+                            :op2 (s14x3 / 93))
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity))
+        :ARG1 (s14n2 / nutný
+            :affectee (s14e1 / entity)
+            :refer-number singular)
+        :ARG0 (s14a1 / and
+            :op1 (s14z1 / zajistit-001
+                :ARG0 s14e1
+                :affectee (s14f1 / firma
+                    :name (s14u1 / Umformtechnik
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s14n3 / náplň
+                    :mod (s14z2 / zakázkový
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :op2 (s14s3 / snížit-001
+                :ARG0 s14e1
+                :manner (s14p2 / postupně)
+                :ARG1 (s14n4 / náklad
+                    :refer-number plural)
+                :aspect performance)
+            :op3 (s14z3 / zvýšit-001
+                :ARG0 s14e1
+                :ARG1 (s14p3 / produktivita
+                    :ARG0 (s14p4 / práce
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s14b1: 11-11
+s14s1: 1-1
+s14b2: 0-0
+s14s2: 3-4
+s14n1: 0-0
+s14p1: 5-6
+s14r1: 7-7
+s14m1: 9-9
+s14x2: 8-8
+s14x3: 10-10
+s14n2: 12-12
+s14e1: 0-0
+s14a1: 22-22
+s14z1: 13-13
+s14f1: 14-14
+s14u1: 15-15
+s14n3: 17-17
+s14z2: 16-16
+s14s3: 20-20
+s14p2: 19-19
+s14n4: 21-21
+s14z3: 23-23
+s14p3: 24-24
+s14p4: 25-25
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14s2 :same-entity s13s1)
+            (s14f1 :same-entity s13u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1  2      3  4     5         6      7  8       9         10      11     12        13      14   15
+Words: Na rozdíl od České republiky odpadá v  bývalém východním Německu výhoda relativně nízkých mezd .
+
+# sentence level graph:
+(s15o1 / odpadat-001
+        :comparison (s15r1 / republika
+            :mod (s15c1 / Český
+                :refer-number singular)
+            :refer-number singular)
+        :place (s15n1 / Německo
+            :mod (s15v1 / východní
+                :refer-number singular)
+            :mod (s15b1 / bývalý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s15v2 / výhoda
+            :possessor (s15m1 / mzda
+                :mod (s15n2 / nízký
+                    :extent (s15r2 / relativně)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s15o1: 6-6
+s15r1: 1-3,5-5
+s15c1: 4-4
+s15n1: 7-7,10-10
+s15v1: 9-9
+s15b1: 8-8
+s15v2: 11-11
+s15m1: 14-14
+s15n2: 13-13
+s15r2: 12-12
+
+# document level annotation:
+(s15s0 / sentence)
+
+

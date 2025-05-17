@@ -1,0 +1,1257 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1 2      3       4 5   6
+Words: V Kolíně divadlo i bez divadla
+
+# sentence level graph:
+(s1e1 / event
+        :place (s1k1 / Kolín
+            :refer-number singular)
+        :ARG0 (s1d1 / divadlo
+            :refer-number singular)
+        :clausal-marker (s1i1 / i)
+        :companion (s1d2 / divadlo
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1k1: 1-2
+s1d1: 3-3
+s1i1: 4-4
+s1d2: 5-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2  3         4       5  6  7        8        9  10      11       12    13        14
+Words: Situace v  kolínském divadle se po loňských potížích s  výběrem ředitele znovu vyhrotila .
+
+# sentence level graph:
+(s2v1 / vyhrotit-se-001
+        :ARG0 (s2s1 / situace
+            :place (s2d1 / divadlo
+                :mod (s2k1 / kolínský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s2p1 / potíž
+            :mod (s2l1 / loňský
+                :refer-number plural)
+            :ARG1 (s2v2 / výběr
+                :ARG1 (s2r1 / ředitel
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :temporal (s2z1 / znovu)
+        :aspect performance)
+
+# alignment:
+s2v1: 5-5,13-13
+s2s1: 1-1
+s2d1: 2-2,4-4
+s2k1: 3-3
+s2p1: 6-6,8-8
+s2l1: 7-7
+s2v2: 9-10
+s2r1: 11-11
+s2z1: 12-12
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2k1 :same-entity s1k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2    3      4       5     6  7  8      9          10       11 12 13       14      15 16   17 18        19       20        21    22    23       24 25    26     27     28 29 30 31 32 33            34    35
+Words: Na jaře odešli někteří herci ,  v  červnu ekonomický náměstek a  v  červenci ředitel -  nyní ho zastupuje tajemník městského úřadu Pavel Pobříslo ,  který navrhl zrušit k  31 .  12 .  profesionální scénu .
+
+# sentence level graph:
+(s3a1 / and
+        :op1 (s3o1 / odejít-001
+            :start (s3e1 / entity)
+            :temporal (s3j1 / jaro
+                :refer-number singular)
+            :ARG0 (s3h1 / herec
+                :mod (s3n1 / některý
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance)
+        :op2 (s3o2 / odejít-001
+            :start s3e1
+            :temporal (s3c1 / červen
+                :refer-number singular)
+            :ARG0 (s3n2 / náměstek
+                :mod (s3e2 / ekonomický
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance)
+        :op3 (s3o3 / odejít-001
+            :start s3e1
+            :temporal (s3c2 / červenec
+                :refer-number singular)
+            :ARG0 (s3r1 / ředitel
+                :parenthesis (s3z1 / zastupovat-001
+                    :temporal (s3n3 / nyní)
+                    :ARG1 s3r1
+                    :ARG0 (s3p1 / Pobříslo
+                        :mod (s3p2 / Pavel
+                            :refer-number singular)
+                        :mod (s3t1 / tajemník
+                            :possessor (s3u1 / úřad
+                                :mod (s3m1 / městský
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG0-of (s3n4 / navrhnout-001
+                            :ARG2 (s3e3 / entity)
+                            :ARG1 (s3z2 / zrušit-001
+                                :ARG0 s3e3
+                                :temporal (s3x5 / 12
+                                    :mod (s3x6 / 31))
+                                :ARG1 (s3s1 / scéna
+                                    :mod (s3p3 / profesionální
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :aspect performance)
+                            :refer-number singular
+                            :aspect performance)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s3a1: 11-11
+s3o1: 3-3
+s3j1: 1-2
+s3h1: 5-5
+s3n1: 4-4
+s3e1: 0-0
+s3o2: 0-0
+s3c1: 7-8
+s3n2: 10-10
+s3e2: 9-9
+s3o3: 0-0
+s3c2: 12-13
+s3r1: 14-14,17-17
+s3z1: 18-18
+s3n3: 16-16
+s3p1: 23-23,25-25
+s3p2: 22-22
+s3t1: 19-19
+s3u1: 21-21
+s3m1: 20-20
+s3n4: 26-26
+s3e3: 0-0
+s3z2: 27-27
+s3x5: 28-28,31-31
+s3x6: 29-29
+s3s1: 34-34
+s3p3: 33-33
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3r1 :same-entity s2r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2    3       4       5         6  7   8  9   10  11 12 13 14
+Words: Soubor však ukončil činnost prakticky ze dne na den již 10 .  9  .
+
+# sentence level graph:
+(s4u1 / ukončit-001
+        :clausal-marker (s4v1 / však)
+        :ARG0 (s4s1 / soubor
+            :refer-number singular)
+        :clausal-marker (s4p1 / prakticky)
+        :ARG1 (s4c1 / činnost
+            :refer-number singular)
+        :temporal (s4d1 / den
+            :refer-number singular)
+        :temporal (s4d2 / den
+            :refer-number singular)
+        :clausal-marker (s4j1 / již)
+        :temporal (s4x1 / 9
+            :mod (s4x2 / 10))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4u1: 3-3
+s4v1: 2-2
+s4s1: 1-1
+s4p1: 5-5
+s4c1: 4-4
+s4d1: 6-7
+s4d2: 8-9
+s4j1: 10-10
+s4x1: 13-13
+s4x2: 11-11
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s1 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2          3    4        5  6  7        8  9  10     11      12    13    14    15    16      17 18  19 20     21       22     23       24 25   26 27 28     29      30 31    32  33          34
+Words: O  vysvětlení jsme požádali P  .  Pobřísla :  "  Provoz divadla stojí letos město čtyři milióny ,  což je částka neúměrně vysoká vzhledem k  tomu ,  co soubor odváděl a  jakou měl návštěvnost .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5p1 / požádat-001
+            :ARG1 (s5v1 / vysvětlení
+                :ARG0 (s5e1 / entity)
+                :ARG1 (s5e2 / entity)
+                :refer-number singular)
+            :ARG0 (s5e3 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :ARG2 (s5p2 / Pobříslo
+                :mod (s5p3 / P)
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance)
+        :op2 (s5s1 / stát-014
+            :ARG0 (s5p4 / provoz
+                :ARG1 (s5d1 / divadlo
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s5l1 / letos)
+            :ARG1 (s5m1 / město
+                :refer-number singular)
+            :extent (s5i1 / identity-91
+                :ARG1 (s5m2 / milión
+                    :mod (s5c1 / čtyři
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG2 (s5b1 / být-007
+                    :ARG0 (s5c2 / což
+                        :refer-number plural)
+                    :ARG1 (s5c3 / částka
+                        :mod (s5v2 / vysoký
+                            :extent (s5u1 / úměrně
+                                :polarity -)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :regard (s5a2 / and
+                        :op1 (s5o1 / odvádět-002
+                            :ARG0 (s5s2 / soubor
+                                :refer-number singular)
+                            :ARG1 (s5c4 / co
+                                :refer-number singular
+                                :refer-person 3rd)
+                            :refer-number singular
+                            :aspect activity)
+                        :op2 (s5m3 / mít-008
+                            :ARG0 s5s2
+                            :ARG1 (s5n1 / návštěvnost
+                                :mod (s5j1 / jaký
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular
+                            :aspect state))
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s5a1: 8-8
+s5p1: 3-4
+s5v1: 1-2
+s5e1: 0-0
+s5e2: 0-0
+s5e3: 0-0
+s5p2: 7-7
+s5p3: 5-5
+s5s1: 12-12
+s5p4: 10-10
+s5d1: 11-11
+s5l1: 13-13
+s5m1: 14-14
+s5i1: 17-17
+s5m2: 16-16
+s5c1: 15-15
+s5b1: 19-19
+s5c2: 18-18
+s5c3: 20-20
+s5v2: 22-22
+s5u1: 21-21
+s5a2: 30-30
+s5o1: 23-25,29-29
+s5c4: 27-27
+s5s2: 28-28
+s5m3: 23-25,32-32
+s5n1: 33-33
+s5j1: 31-31
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p2 :same-entity s3p1)
+            (s5d1 :same-entity s2d1)
+            (s5m1 :same-entity s2k1)
+            (s5c2 :same-entity s5m2)
+            (s5s2 :same-entity s4s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1   2      3   4  5   6            7      8  9        10         11 12      13 14      15       16       17   18 19 20    21 22          23     24 25      26 27            28        29     30  31      32
+Words: Pro příští rok ,  kdy reorganizace počítá s  dvanácti pracovníky v  divadle (  namísto dnešních padesáti osmi )  ,  kteří by zajišťovali provoz a  program ,  předpokládáme maximálně dotace dva milióny .
+
+# sentence level graph:
+(s6p1 / předpokládat-001
+        :affectee (s6r1 / rok
+            :mod (s6p2 / příští
+                :refer-number singular)
+            :temporal-of (s6p3 / počítat-007
+                :ARG0 (s6r2 / reorganizace
+                    :refer-number singular)
+                :ARG1 (s6p4 / pracovník
+                    :place (s6d1 / divadlo
+                        :refer-number singular)
+                    :mod (s6d2 / dvanáct
+                        :refer-number plural)
+                    :ARG0-of (s6z1 / zajišťovat-001
+                        :ARG1 (s6a1 / and
+                            :op1 (s6p5 / provoz
+                                :refer-number singular)
+                            :op2 (s6p6 / program
+                                :refer-number singular))
+                        :refer-number plural
+                        :aspect activity)
+                    :refer-number plural)
+                :substitute (s6p7 / pracovník
+                    :mod (s6p8 / padesát
+                        :refer-number plural)
+                    :mod (s6o1 / osm
+                        :refer-number plural)
+                    :mod (s6d3 / dnešní
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :ARG0 (s6e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :extent (s6m1 / maximálně)
+        :ARG1 (s6d4 / dotace
+            :mod (s6m2 / milión
+                :mod (s6d5 / dva
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 1st
+        :aspect activity)
+
+# alignment:
+s6p1: 27-27
+s6r1: 1-1,3-3,5-5
+s6p2: 2-2
+s6p3: 7-7
+s6r2: 6-6
+s6p4: 8-8,10-10,20-20
+s6d1: 11-12
+s6d2: 9-9
+s6z1: 21-22
+s6a1: 24-24
+s6p5: 23-23
+s6p6: 25-25
+s6p7: 0-0
+s6p8: 16-16
+s6o1: 17-17
+s6d3: 15-15
+s6e1: 0-0
+s6m1: 28-28
+s6d4: 29-29
+s6m2: 31-31
+s6d5: 30-30
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6d1 :same-entity s5d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1      2  3      4       5    6      7  8  9    10   11      12       13 14    15     16    17 18  19   20        21
+Words: Reakce ze strany souboru byly takové ,  že jsme jeho činnost ukončili o  čtyři měsíce dříve ,  než bylo plánováno .
+
+# sentence level graph:
+(s7b1 / být-007
+        :ARG0 (s7r1 / reakce
+            :ARG0 (s7s1 / soubor
+                :refer-number singular)
+            :refer-number plural)
+        :ARG1 (s7t1 / takový
+            :result (s7u1 / ukončit-001
+                :ARG1 (s7c1 / činnost
+                    :ARG0 s7s1
+                    :refer-number singular)
+                :ARG0 (s7e1 / entity
+                    :refer-number plural
+                    :refer-person 1st)
+                :temporal (s7b2 / brzy
+                    :extent (s7m1 / měsíc
+                        :mod (s7c2 / čtyři
+                            :refer-number plural)
+                        :refer-number plural)
+                    :comparison (s7p1 / plánovat-001
+                        :ARG0 (s7e2 / entity)
+                        :ARG1 s7u1
+                        :refer-number singular
+                        :aspect activity))
+                :refer-number plural
+                :aspect performance)
+            :refer-number plural)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s7b1: 5-5
+s7r1: 1-1
+s7s1: 2-4,10-10
+s7t1: 6-6
+s7u1: 8-9,12-12
+s7c1: 11-11
+s7e1: 0-0
+s7b2: 16-16
+s7m1: 13-13,15-15
+s7c2: 14-14
+s7p1: 18-20
+s7e2: 0-0
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7s1 :same-entity s5s2)
+            (s7c1 :same-entity s4c1)
+            (s7e1 :same-entity s6e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1        2     3         4       5  6        7  8   9   10         11         12            13      14 15      16 17         18     19
+Words: Nerušíme ovšem divadelní činnost -  podařilo se nám již nasmlouvat vystoupení Vinohradského divadla a  jednáme s  Činoherním klubem .
+
+# sentence level graph:
+(s8a1 / and
+        :op1 (s8r1 / rušit-002
+            :clausal-marker (s8o1 / ovšem)
+            :ARG0 (s8e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :ARG1 (s8c1 / činnost
+                :mod (s8d1 / divadelní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 1st
+            :aspect activity
+            :polarity -)
+        :op2 (s8a2 / and
+            :op1 (s8p1 / podařit-se-001
+                :ARG0 s8e1
+                :temporal (s8j1 / již)
+                :ARG1 (s8n1 / nasmlouvat-001
+                    :ARG0 s8e1
+                    :ARG1 (s8v1 / vystoupení
+                        :ARG0 (s8d2 / divadlo
+                            :mod (s8v2 / Vinohradský
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect performance)
+                :refer-number singular
+                :aspect performance)
+            :op2 (s8j2 / jednat-001
+                :ARG0 s8e1
+                :ARG1 (s8e2 / entity)
+                :ARG2 (s8k1 / klub
+                    :mod (s8c2 / Činoherní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 1st
+                :aspect activity)))
+
+# alignment:
+s8a1: 5-5
+s8r1: 1-1
+s8o1: 2-2
+s8e1: 8-8
+s8c1: 4-4
+s8d1: 3-3
+s8a2: 14-14
+s8p1: 6-7
+s8j1: 9-9
+s8n1: 10-10
+s8v1: 11-11
+s8d2: 13-13
+s8v2: 12-12
+s8j2: 15-15
+s8e2: 0-0
+s8k1: 16-16,18-18
+s8c2: 17-17
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8e1 :same-entity s7e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2     3      4   5   6      7         8           9           10
+Words: Za menší peníze tak pro diváky zajistíme kvalitnější představení .
+
+# sentence level graph:
+(s9z1 / zajistit-001
+        :substitute (s9p1 / peníze
+            :mod (s9m1 / malý
+                :refer-number plural)
+            :refer-number plural)
+        :manner (s9t1 / tak)
+        :affectee (s9d1 / divák
+            :refer-number plural)
+        :ARG0 (s9e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :ARG1 (s9p2 / představení
+            :mod (s9k1 / kvalitní
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 1st
+        :aspect performance)
+
+# alignment:
+s9z1: 7-7
+s9p1: 1-1,3-3
+s9m1: 2-2
+s9t1: 4-4
+s9d1: 5-6
+s9e1: 0-0
+s9p2: 9-9
+s9k1: 8-8
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p1 :same-entity s6d4)
+            (s9e1 :same-entity s8e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1     2          3        4  5     6    7     8  9        10 11 12 13      14 15 16       17        18 19    20    21 22
+Words: Celou záležitost považuji za velký krok vpřed a  domnívám se ,  že podobně se v  budoucnu zachovají i  další města .  "
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10p1 / považovat-001
+            :ARG0 (s10e1 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :ARG1 (s10z1 / záležitost
+                :mod (s10c1 / celý
+                    :refer-number singular)
+                :refer-number singular)
+            :effect (s10k1 / krok
+                :mod (s10v1 / velký
+                    :refer-number singular)
+                :goal (s10v2 / vpřed)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 1st
+            :aspect activity)
+        :op2 (s10d1 / domnívat-se-002
+            :ARG0 s10e1
+            :effect (s10z2 / zachovat-se-001
+                :temporal (s10b1 / budoucno
+                    :refer-number singular)
+                :manner (s10p2 / podobně)
+                :clausal-marker (s10i1 / i)
+                :ARG0 (s10m1 / město
+                    :mod (s10d2 / další
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number singular
+            :refer-person 1st
+            :aspect activity))
+
+# alignment:
+s10a1: 8-8
+s10p1: 3-3
+s10z1: 2-2
+s10c1: 1-1
+s10k1: 4-4,6-6
+s10v1: 5-5
+s10v2: 7-7
+s10e1: 0-0
+s10d1: 9-10
+s10z2: 12-12,14-14,17-17
+s10b1: 15-16
+s10p2: 13-13
+s10i1: 18-18
+s10m1: 20-20
+s10d2: 19-19
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10e1 :same-entity s5p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1   2 3
+Words: kdo z koho
+
+# sentence level graph:
+(s11e1 / event
+        :ARG0 (s11k1 / kdo
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s11k2 / kdo
+            :refer-number singular
+            :refer-person 3rd)
+        :aspect state)
+
+# alignment:
+s11e1: 0-0
+s11k1: 1-1
+s11k2: 2-3
+
+# document level annotation:
+(s11s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1  2     3  4        5  6        7         8    9       10      11 12 13       14  15 16   17 18 19           20    21 22        23       24 25 26    27     28    29        30   31     32 33        34           35  36       37     38
+Words: Ke cause se vyjádřil i  sekretář Divadelní obce Bohumil Nekolný :  "  Poslanci ČNR na jaře '  92 novelizovali zákon o  divadelní činnosti ,  z  něhož zhruba čtyři paragrafy mají logiku a  oprávnění přinejmenším pro současné období .
+
+# sentence level graph:
+(s12v1 / vyjádřit-se-001
+        :ARG1 (s12k1 / kauza
+            :refer-number singular)
+        :clausal-marker (s12i1 / i)
+        :ARG0 (s12n1 / Nekolný
+            :mod (s12b1 / Bohumil
+                :refer-number singular)
+            :mod (s12s1 / sekretář
+                :possessor (s12o1 / obec
+                    :mod (s12d1 / Divadelní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :manner (s12e1 / event
+            :mod-of s12n1
+            :ARG0 s12n1
+            :effect (s12n2 / novelizovat-001
+                :ARG0 (s12p1 / poslanec
+                    :possessor (s12c1 / ČNR)
+                    :refer-number plural)
+                :temporal (s12j1 / jaro
+                    :mod (s12x3 / 92)
+                    :refer-number singular)
+                :ARG1 (s12z1 / zákon
+                    :ARG1 (s12c2 / činnost
+                        :mod (s12d2 / divadelní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s12m1 / mít-008
+                        :ARG0 (s12p2 / paragraf
+                            :start s12z1
+                            :mod (s12c3 / čtyři
+                                :extent (s12z2 / zhruba)
+                                :refer-number plural)
+                            :refer-number plural)
+                        :ARG1 (s12a1 / and
+                            :op1 (s12l1 / logika
+                                :refer-number singular)
+                            :op2 (s12o2 / oprávnění
+                                :ARG0 (s12e2 / entity)
+                                :ARG1 (s12e3 / entity)
+                                :refer-number singular))
+                        :clausal-marker (s12p3 / přinejmenším)
+                        :duration (s12o3 / období
+                            :mod (s12s2 / současný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural
+                        :refer-person 3rd
+                        :aspect state)
+                    :refer-number singular)
+                :refer-number plural
+                :aspect process)
+            :aspect state)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s12v1: 3-4
+s12k1: 1-2
+s12i1: 5-5
+s12n1: 10-10
+s12b1: 9-9
+s12s1: 6-6
+s12o1: 8-8
+s12d1: 7-7
+s12e1: 0-0
+s12n2: 19-19
+s12p1: 13-13
+s12c1: 14-14
+s12j1: 15-16
+s12x3: 18-18
+s12z1: 20-20,25-26
+s12c2: 21-21,23-23
+s12d2: 22-22
+s12m1: 30-30
+s12p2: 29-29
+s12c3: 28-28
+s12z2: 27-27
+s12a1: 32-32
+s12l1: 31-31
+s12o2: 33-33
+s12e2: 0-0
+s12e3: 0-0
+s12p3: 34-34
+s12o3: 35-35,37-37
+s12s2: 36-36
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12k1 :same-entity s10z1)
+            (s12c2 :same-entity s8c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1     2    3  4  5          6       7  8    9     10 11       12      13   14 15   16       17          18            19        20       21    22 23        24       25      26
+Words: Jeden říká ,  že zřizovatel divadla (  tedy město ,  případně okresní úřad )  může zastavit provozování profesionální divadelní činnosti pouze se souhlasem ministra kultury .
+
+# sentence level graph:
+(s13r1 / říkat-007
+        :ARG0 (s13j1 / jeden
+            :refer-number singular)
+        :ARG2 (s13e1 / entity)
+        :effect (s13z1 / zastavit-001
+            :ARG0 (s13i1 / identity-91
+                :ARG1 (s13z2 / zřizovatel
+                    :ARG1 (s13d1 / divadlo
+                        :refer-number singular)
+                    :refer-number singular)
+                :clausal-marker (s13t1 / tedy)
+                :ARG2 (s13o1 / or
+                    :op1 (s13m1 / město
+                        :refer-number singular)
+                    :clausal-marker (s13p1 / případně)
+                    :op2 (s13u1 / úřad
+                        :mod (s13o2 / okresní
+                            :refer-number singular)
+                        :refer-number singular)))
+            :ARG1 (s13p2 / provozování
+                :ARG0 (s13e2 / entity)
+                :ARG1 (s13c1 / činnost
+                    :mod (s13d2 / divadelní
+                        :refer-number singular)
+                    :mod (s13p3 / profesionální
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s13p4 / pouze)
+            :companion (s13s1 / souhlas
+                :ARG0 (s13m2 / ministr
+                    :possessor (s13k1 / kultura
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s13r1: 2-2
+s13j1: 1-1
+s13e1: 0-0
+s13z1: 4-4,15-16
+s13i1: 7-7
+s13z2: 5-5
+s13d1: 6-6
+s13t1: 8-8
+s13o1: 10-10
+s13m1: 9-9
+s13p1: 11-11
+s13u1: 13-13
+s13o2: 12-12
+s13p2: 17-17
+s13e2: 0-0
+s13c1: 20-20
+s13d2: 19-19
+s13p3: 18-18
+s13p4: 21-21
+s13s1: 22-23
+s13m2: 24-24
+s13k1: 25-25
+
+# document level annotation:
+(s13s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1      2  3   4  5         6     7  8         9     10 11       12 13     14      15 16      17              18 19 20 21      22
+Words: Okresy ,  kde je divadelní scéna ,  získávají totiž do rozpočtu i  částku určenou na činnost profesionálního (  !  )  souboru .
+
+# sentence level graph:
+(s14z1 / získávat-001
+        :clausal-marker (s14t1 / totiž)
+        :ARG0 (s14o1 / okres
+            :place-of (s14b1 / být-011
+                :ARG0 (s14s1 / scéna
+                    :mod (s14d1 / divadelní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number plural)
+        :goal (s14r1 / rozpočet
+            :refer-number singular)
+        :clausal-marker (s14i1 / i)
+        :ARG1 (s14c1 / částka
+            :mod (s14u1 / určený
+                :purpose (s14c2 / činnost
+                    :ARG0 (s14s2 / soubor
+                        :mod (s14p1 / profesionální
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect habitual)
+
+# alignment:
+s14z1: 8-8
+s14t1: 9-9
+s14o1: 1-1,3-3
+s14b1: 4-4
+s14s1: 6-6
+s14d1: 5-5
+s14r1: 10-11
+s14i1: 12-12
+s14c1: 13-13
+s14u1: 14-14
+s14c2: 15-16
+s14s2: 21-21
+s14p1: 17-17
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14s1 :same-entity s13d1)
+            (s14c2 :same-entity s13c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1  2         3       4  5   6  7    8   9        10 11 12  13   14    15      16
+Words: V  kolínském případě -  šlo o  akci bez souhlasu MK -  byl tedy zákon porušen .
+
+# sentence level graph:
+(s15p1 / porušit-001
+        :clausal-marker (s15t1 / tedy)
+        :condition (s15p2 / případ
+            :mod (s15k1 / kolínský
+                :refer-number singular)
+            :parenthesis (s15j1 / jít-035
+                :ARG0 (s15a1 / akce
+                    :companion (s15s1 / souhlas
+                        :ARG0 (s15m1 / MK
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular
+                :aspect activity)
+            :refer-number singular)
+        :ARG1 (s15z1 / zákon
+            :refer-number singular)
+        :ARG0 (s15e1 / entity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s15p1: 12-12,15-15
+s15t1: 13-13
+s15p2: 1-1,3-3
+s15k1: 2-2
+s15j1: 5-5
+s15a1: 6-7
+s15s1: 8-9
+s15m1: 10-10
+s15z1: 14-14
+s15e1: 0-0
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15p2 :same-entity s12k1)
+            (s15k1 :same-entity s5m1)
+            (s15a1 :same-entity s7u1)
+            (s15m1 :same-entity s13m2)
+            (s15z1 :same-entity s12z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1      2     3  4   5           6            7  8  9          10 11      12     13 14 15 16    17 18 19 20     21        22      23      24 25 26 27   28     29       30 31  32 33    34       35 36    37    38        39
+Words: Postup města je pro divadelníky nepřijatelný a  na poslancích a  státním orgánu (  tj .  vládě )  je ,  jestli precedent přejdou mlčením ,  či z  něho vyvodí důsledky ,  což by mohlo znamenat i  změnu onoho paragrafu .
+
+# sentence level graph:
+(s16a1 / and
+        :op1 (s16b1 / být-007
+            :ARG0 (s16p1 / postup
+                :ARG0 (s16m1 / město
+                    :refer-number singular)
+                :refer-number singular)
+            :affectee (s16d1 / divadelník
+                :refer-number plural)
+            :ARG1 (s16p2 / přijatelný
+                :refer-number singular
+                :polarity -)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s16b2 / být-011
+            :regard (s16a2 / and
+                :op1 (s16p3 / poslanec
+                    :refer-number plural)
+                :op2 (s16i1 / identity-91
+                    :ARG1 (s16o1 / orgán
+                        :mod (s16s1 / státní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG2 (s16v1 / vláda
+                        :refer-number singular)))
+            :ARG0 (s16o2 / or
+                :op1 (s16p4 / přejít-002
+                    :ARG1 (s16p5 / precedent
+                        :refer-number singular)
+                    :ARG0 s16a2
+                    :instrument (s16m2 / mlčení
+                        :ARG0 (s16e1 / entity)
+                        :refer-number singular)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect performance)
+                :op2 (s16a3 / and
+                    :op1 (s16v2 / vyvodit-001
+                        :ARG0 s16a2
+                        :source s16p5
+                        :ARG1 (s16d2 / důsledek
+                            :refer-number plural)
+                        :refer-number plural
+                        :refer-person 3rd
+                        :aspect performance)
+                    :op2 (s16z1 / znamenat-001
+                        :ARG0 (s16c1 / což
+                            :refer-number plural
+                            :refer-person 3rd)
+                        :clausal-marker (s16i2 / i)
+                        :ARG1 (s16z2 / změna
+                            :ARG1 (s16p6 / paragraf
+                                :mod (s16o3 / onen
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :aspect state)))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s16a1: 7-7
+s16b1: 3-3
+s16p1: 1-1
+s16m1: 2-2
+s16d1: 4-5
+s16p2: 6-6
+s16b2: 18-18
+s16a2: 10-10
+s16p3: 8-9
+s16i1: 14-14
+s16o1: 8-8,12-12
+s16s1: 11-11
+s16v1: 8-8,16-16
+s16o2: 25-25
+s16p4: 20-20,22-22
+s16p5: 21-21,26-27
+s16m2: 23-23
+s16e1: 0-0
+s16a3: 30-30
+s16v2: 20-20,28-28
+s16d2: 29-29
+s16z1: 32-34
+s16c1: 31-31
+s16i2: 35-35
+s16z2: 36-36
+s16p6: 38-38
+s16o3: 37-37
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16p1 :same-entity s15a1)
+            (s16m1 :same-entity s15k1)
+            (s16d1 :same-entity s12o1)
+            (s16p3 :same-entity s12p1)
+            (s16p5 :same-entity s15p2)
+            (s16c1 :same-event s16v2)
+            (s16p6 :same-entity s13j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1   2          3  4        5  6   7   8        9      10         11 12   13    14 15      16      17      18   19 20      21        22  23            24           25 26     27 28      29       30       31
+Words: Pro budoucnost je důležité ,  aby byl dokončen proces odstátnění :  mezi města a  divadla vstoupí správní rady ,  divadla přestanou být příspěvkovými organizacemi a  stanou se veřejně právními subjekty .
+
+# sentence level graph:
+(s17a1 / and
+        :op1 (s17b1 / být-007
+            :affectee (s17b2 / budoucnost
+                :refer-number singular)
+            :ARG1 (s17d1 / důležitý
+                :refer-number singular)
+            :ARG0 (s17d2 / dokončit-002
+                :ARG0 (s17e1 / entity)
+                :ARG1 (s17p1 / proces
+                    :possessor (s17o1 / odstátnění
+                        :ARG0 (s17e2 / entity)
+                        :ARG1 (s17e3 / entity)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s17a2 / and
+            :op1 (s17v1 / vstoupit-003
+                :goal (s17a3 / and
+                    :op1 (s17m1 / město
+                        :refer-number plural)
+                    :op2 (s17d3 / divadlo
+                        :refer-number plural))
+                :ARG0 (s17r1 / rada
+                    :mod (s17s1 / správní
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect performance)
+            :op2 (s17a4 / and
+                :op1 (s17p2 / přestat-001
+                    :ARG0 (s17d4 / divadlo
+                        :refer-number plural)
+                    :ARG1 (s17b3 / být-007
+                        :ARG0 s17d4
+                        :ARG1 (s17o2 / organizace
+                            :mod (s17p3 / příspěvkový
+                                :refer-number plural)
+                            :refer-number plural)
+                        :aspect activity)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect performance)
+                :op2 (s17s2 / stát-se-001
+                    :ARG0 s17d4
+                    :ARG1 (s17s3 / subjekt
+                        :mod (s17p4 / právní
+                            :manner (s17v2 / veřejně)
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect performance))))
+
+# alignment:
+s17a1: 11-11
+s17b1: 3-3
+s17b2: 1-2
+s17d1: 4-4
+s17d2: 6-8
+s17e1: 0-0
+s17p1: 9-9
+s17o1: 10-10
+s17e2: 0-0
+s17e3: 0-0
+s17a2: 19-19
+s17v1: 16-16
+s17a3: 14-14
+s17m1: 12-13
+s17d3: 12-12,15-15
+s17r1: 18-18
+s17s1: 17-17
+s17a4: 25-25
+s17p2: 21-21
+s17b3: 22-22
+s17o2: 24-24
+s17p3: 23-23
+s17d4: 20-20
+s17s2: 26-27
+s17s3: 30-30
+s17p4: 29-29
+s17v2: 28-28
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17m1 :same-entity s13m1)
+            (s17d3 :same-entity s14s1)
+            (s17d4 :same-entity s17d3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1  2     3      4         5        6     7     8  9      10            11    12  13 14  15      16    17    18
+Words: "  Podle našich informací získával okres Kolín na provoz profesionální scény tři a  půl miliónu korun ročně .
+
+# sentence level graph:
+(s18z1 / získávat-001
+        :regard (s18i1 / informace
+            :possessor (s18e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :refer-number plural)
+        :ARG0 (s18o1 / okres
+            :mod (s18k1 / Kolín
+                :refer-number singular)
+            :refer-number singular)
+        :purpose (s18p1 / provoz
+            :ARG1 (s18s1 / scéna
+                :mod (s18p2 / profesionální
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :ARG1 (s18m1 / milión
+            :mod (s18k2 / koruna
+                :refer-number plural)
+            :mod (s18a1 / and
+                :op1 (s18t1 / tři
+                    :refer-number plural)
+                :op2 (s18p3 / půl
+                    :refer-number singular))
+            :refer-number singular)
+        :frequency (s18r1 / ročně)
+        :refer-number singular
+        :aspect habitual)
+
+# alignment:
+s18z1: 5-5
+s18i1: 2-2,4-4
+s18e1: 3-3
+s18o1: 6-6
+s18k1: 7-7
+s18p1: 8-9
+s18s1: 11-11
+s18p2: 10-10
+s18m1: 15-15
+s18k2: 16-16
+s18a1: 13-13
+s18t1: 12-12
+s18p3: 14-14
+s18r1: 17-17
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18e1 :same-entity s5e3)
+            (s18s1 :same-entity s7s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s19-root
+# :: snt19
+Index: 1  2             3  4  5   6      7   8  9    10     11      12
+Words: Je pravděpodobné ,  že pro příští rok už tuto částku nezíská .
+
+# sentence level graph:
+(s19b1 / být-007
+        :ARG1 (s19p1 / pravděpodobný
+            :refer-number singular)
+        :ARG0 (s19z1 / získat-001
+            :ARG1 (s19c1 / částka
+                :mod (s19t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :affectee (s19r1 / rok
+                :mod (s19p2 / příští
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s19e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :clausal-marker (s19u1 / už)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance
+            :polarity -)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s19b1: 1-1
+s19p1: 2-2
+s19z1: 4-4,11-11
+s19c1: 10-10
+s19t1: 9-9
+s19r1: 5-5,7-7
+s19p2: 6-6
+s19e1: 0-0
+s19u1: 8-8
+
+# document level annotation:
+(s19s0 / sentence
+    :coref ((s19c1 :same-entity s18m1)
+            (s19e1 :same-entity s18o1)))
+
+

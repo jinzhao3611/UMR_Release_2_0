@@ -1,0 +1,320 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2     3     4            5
+Words: Daňové úlevy malým spisovatelům !
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1u1 / úleva
+            :mod (s1d1 / daňový
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s1s1 / spisovatel
+            :mod (s1m1 / malý
+                :refer-number plural)
+            :refer-number plural)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1u1: 2-2
+s1d1: 1-1
+s1s1: 4-4
+s1m1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2     3          4        5     6      7          8      9        10 11 12   13          14
+Words: Rozpočtový výbor parlamentu rozšířil včera daňové zvýhodnění malých pivovarů i  na malé spisovatele .
+
+# sentence level graph:
+(s3r1 / rozšířit-001
+        :ARG0 (s3v1 / výbor
+            :possessor (s3p1 / parlament
+                :refer-number singular)
+            :mod (s3r2 / rozpočtový
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3v2 / včera)
+        :ARG1 (s3z1 / zvýhodnění
+            :ARG0 (s3e1 / entity)
+            :regard (s3d1 / daňový
+                :refer-number singular)
+            :ARG1 (s3p2 / pivovar
+                :mod (s3m1 / malý
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :effect (s3s1 / spisovatel
+            :clausal-marker (s3i1 / i)
+            :mod (s3m2 / malý
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3r1: 4-4
+s3v1: 2-2
+s3p1: 3-3
+s3r2: 1-1
+s3v2: 5-5
+s3z1: 7-7
+s3e1: 0-0
+s3d1: 6-6
+s3p2: 9-9
+s3m1: 8-8
+s3s1: 11-11,13-13
+s3i1: 10-10
+s3m2: 12-12
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s1 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2       3           4  5   6     7    8  9    10 11    12      13      14   15    16          17
+Words: Protože velkých spisovatelů u  nás mnoho není ,  týká se úleva bezmála dvaceti pěti tisíc spisovatelů .
+
+# sentence level graph:
+(s4t1 / týkat-se-001
+        :cause (s4b1 / být-007
+            :ARG0 (s4s1 / spisovatel
+                :mod (s4v1 / velký
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s4m1 / mnoho)
+            :place (s4e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :ARG0 (s4u1 / úleva
+            :refer-number singular)
+        :ARG1 (s4t2 / tisíc
+            :mod (s4s2 / spisovatel
+                :refer-number plural)
+            :mod (s4d1 / dvacet
+                :extent (s4b2 / bezmála)
+                :refer-number plural)
+            :mod (s4p1 / pět
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4t1: 9-10
+s4b1: 1-1,7-7
+s4s1: 3-3
+s4v1: 2-2
+s4m1: 6-6
+s4e1: 4-5
+s4u1: 11-11
+s4t2: 15-15
+s4s2: 16-16
+s4d1: 13-13
+s4b2: 12-12
+s4p1: 14-14
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4u1 :same-entity s1u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2          3  4     5            6      7       8   9  10 11     12    13   14  15  16    17    18 19   20 21     22   23 24 25     26 27 28   29
+Words: Malý spisovatel je podle rozpočtového výboru počítán tak ,  že napíše ročně méně než sto deset stran ,  nebo že význam toho ,  co napsal ,  je malý .
+
+# sentence level graph:
+(s5p1 / počítat-006
+        :ARG1 (s5s1 / spisovatel
+            :mod (s5m1 / malý
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s5v1 / výbor
+            :mod (s5r1 / rozpočtový
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5e1 / entity)
+        :manner (s5o1 / or
+            :op1 (s5n1 / napsat-007
+                :ARG0 s5s1
+                :duration (s5r2 / ročně)
+                :effect (s5m2 / málo
+                    :comparison (s5s2 / strana
+                        :mod (s5s3 / sto
+                            :refer-number singular)
+                        :mod (s5d1 / deset
+                            :refer-number singular)
+                        :refer-number plural))
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :op2 (s5b1 / být-007
+                :ARG0 (s5v2 / význam
+                    :possessor (s5n2 / napsat-007
+                        :effect (s5c1 / co
+                            :refer-number singular
+                            :refer-person 3rd)
+                        :ARG0 s5s1
+                        :refer-number singular
+                        :aspect performance)
+                    :refer-number singular)
+                :ARG1 (s5m3 / malý
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity))
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s5p1: 3-3,7-7
+s5s1: 2-2
+s5m1: 1-1
+s5v1: 4-4,6-6
+s5r1: 5-5
+s5e1: 0-0
+s5o1: 19-19
+s5n1: 8-8,10-11
+s5r2: 12-12
+s5m2: 13-13
+s5s2: 14-14,17-17
+s5s3: 15-15
+s5d1: 16-16
+s5b1: 8-8,20-20,27-27
+s5v2: 21-21
+s5n2: 22-22,25-25
+s5c1: 24-24
+s5m3: 28-28
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s1 :same-entity s3s1)
+            (s5v1 :same-entity s3v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2  3     4  5          6     7    8      9  10 11         12
+Words: Novela ,  která by zvýhodnila další malé umělce ,  se připravuje .
+
+# sentence level graph:
+(s6p1 / připravovat-002
+        :ARG1 (s6n1 / novela
+            :ARG0-of (s6z1 / zvýhodnit-001
+                :ARG1 (s6u1 / umělec
+                    :mod (s6m1 / malý
+                        :refer-number plural)
+                    :mod (s6d1 / další
+                        :refer-number plural)
+                    :refer-number plural)
+                :aspect performance)
+            :refer-number singular)
+        :ARG0 (s6e1 / entity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6p1: 10-11
+s6n1: 1-1,3-3
+s6z1: 4-5
+s6u1: 8-8
+s6m1: 7-7
+s6d1: 6-6
+s6e1: 0-0
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1   2    3     4           5  6  7     8  9          10         11 12 13    14         15     16       17
+Words: Oba naši velcí spisovatelé ,  na které se zvýhodnění nevztahuje ,  se proti rozhodnutí výboru ohradili .
+
+# sentence level graph:
+(s7o1 / ohradit-se-001
+        :ARG0 (s7s1 / spisovatel
+            :possessor (s7e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :mod (s7v1 / velký
+                :refer-number plural)
+            :mod (s7o2 / oba
+                :refer-number plural)
+            :ARG1-of (s7v2 / vztahovat-se-001
+                :ARG0 (s7z1 / zvýhodnění
+                    :ARG0 (s7e2 / entity)
+                    :ARG1 (s7e3 / entity)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity
+                :polarity -)
+            :refer-number plural)
+        :ARG1 (s7r1 / rozhodnutí
+            :ARG0 (s7v3 / výbor
+                :refer-number singular)
+            :ARG1 (s7e4 / entity)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s7o1: 12-12,16-16
+s7s1: 4-4,6-7
+s7e1: 2-2
+s7v1: 3-3
+s7o2: 1-1
+s7v2: 8-8,10-10
+s7z1: 9-9
+s7e2: 0-0
+s7e3: 0-0
+s7r1: 13-14
+s7v3: 15-15
+s7e4: 0-0
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s4e1)
+            (s7z1 :same-entity s4u1)
+            (s7r1 :same-event s3r1)
+            (s7v3 :same-entity s5v1)))
+
+

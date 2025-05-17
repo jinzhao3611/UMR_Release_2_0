@@ -1,0 +1,350 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2          3         4
+Words: Polsko nevylučuje devalvaci měny
+
+# sentence level graph:
+(s1v1 / vylučovat-002
+        :ARG0 (s1p1 / Polsko
+            :refer-number singular)
+        :ARG1 (s1d1 / devalvace
+            :ARG1 (s1m1 / měna
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s1v1: 2-2
+s1p1: 1-1
+s1d1: 3-3
+s1m1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2
+Words: Varšava -
+
+# sentence level graph:
+(s2v1 / Varšava
+        :refer-number singular)
+
+# alignment:
+s2v1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2       3     4          5  6  7    8     9          10   11
+Words: Polská národní banka nevylučuje ,  že bude muset devalvovat měnu .
+
+# sentence level graph:
+(s3v1 / vylučovat-002
+        :ARG0 (s3b1 / banka
+            :mod (s3n1 / národní
+                :refer-number singular)
+            :mod (s3p1 / polský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3d1 / devalvovat-001
+            :ARG0 s3b1
+            :ARG1 (s3m1 / měna
+                :refer-number singular)
+            :aspect process)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s3v1: 4-4
+s3b1: 3-3
+s3n1: 2-2
+s3p1: 1-1
+s3d1: 6-9
+s3m1: 10-10
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s1p1)
+            (s3m1 :same-entity s1m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1         2    3     4       5           6           7         8      9      10    11              12 13        14 15    16  17 18 19   20    21       22 23       24    25        26 27      28
+Words: Varšavský tisk včera citoval prezidentku centrálního peněžního ústavu Polska Hannu Gronkiewiczovou -  Waltzovou ,  podle níž "  je dnes nutné uvažovat o  možnosti náhlé devalvace "  zlotého .
+
+# sentence level graph:
+(s4c1 / citovat-001
+        :ARG0 (s4t1 / tisk
+            :mod (s4v1 / varšavský
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s4v2 / včera)
+        :ARG1 (s4w1 / Waltzová
+            :mod (s4g1 / Gronkiewiczová
+                :refer-number singular)
+            :mod (s4h1 / Hanna
+                :refer-number singular)
+            :mod (s4p1 / prezidentka
+                :possessor (s4u1 / ústav
+                    :mod (s4p2 / peněžní
+                        :refer-number singular)
+                    :mod (s4c2 / centrální
+                        :refer-number singular)
+                    :possessor (s4p3 / Polsko
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular)
+            :regard-of (s4b1 / být-159
+                :temporal (s4d1 / dnes)
+                :ARG1 (s4n1 / nutný
+                    :affectee (s4e1 / entity)
+                    :refer-number singular)
+                :ARG0 (s4u2 / uvažovat-002
+                    :ARG0 s4e1
+                    :ARG1 (s4m1 / možnost
+                        :ARG1 (s4d2 / devalvace
+                            :ARG1 (s4z1 / zlotý
+                                :refer-number singular)
+                            :mod (s4n2 / náhlý
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect activity)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect process)
+
+# alignment:
+s4c1: 4-4
+s4t1: 2-2
+s4v1: 1-1
+s4v2: 3-3
+s4w1: 13-13,15-16
+s4g1: 11-11
+s4h1: 10-10
+s4p1: 5-5
+s4u1: 8-8
+s4p2: 7-7
+s4c2: 6-6
+s4p3: 9-9
+s4b1: 18-18
+s4d1: 19-19
+s4n1: 20-20
+s4e1: 0-0
+s4u2: 21-21
+s4m1: 22-23
+s4d2: 25-25
+s4z1: 27-27
+s4n2: 24-24
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4v1 :same-entity s2v1)
+            (s4u1 :same-entity s3b1)
+            (s4p3 :same-entity s3p1)
+            (s4d2 :same-entity s1d1)
+            (s4z1 :same-entity s3m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1        2     3      4        5     6     7         8  9  10   11    12 13       14 15    16      17           18 19
+Words: Ústřední banka takové opatření zatím ještě neplánuje ,  je však nutné "  seznámit s  tímto záměrem obyvatelstvo "  .
+
+# sentence level graph:
+(s5b1 / but-91
+        :ARG1 (s5p1 / plánovat-001
+            :ARG0 (s5b2 / banka
+                :mod (s5u1 / ústřední
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s5o1 / opatření
+                :mod (s5t1 / takový
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s5z1 / zatím)
+            :duration (s5j1 / ještě)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :ARG2 (s5b3 / být-159
+            :ARG1 (s5n1 / nutný
+                :affectee (s5e1 / entity)
+                :refer-number singular)
+            :ARG0 (s5s1 / seznámit-001
+                :ARG1 (s5z2 / záměr
+                    :mod (s5t2 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 s5e1
+                :ARG2 (s5o2 / obyvatelstvo
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s5b1: 10-10
+s5p1: 7-7
+s5b2: 2-2
+s5u1: 1-1
+s5o1: 4-4
+s5t1: 3-3
+s5z1: 5-5
+s5j1: 6-6
+s5b3: 9-9
+s5n1: 11-11
+s5e1: 0-0
+s5s1: 13-13
+s5z2: 14-14,16-16
+s5t2: 15-15
+s5o2: 17-17
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5b2 :same-entity s4u1)
+            (s5o1 :same-entity s4d2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2  3       4  5         6      7   8      9  10 11 12 13         14       15       16      17 18         19 20  21     22       23      24   25       26     27
+Words: Devalvace je nicméně až posledním krokem pro případ ,  že by se nepodařilo vylepšit obchodní bilanci se zahraničím ,  kde Polsko vykazuje schodek 1.18 miliardy dolarů .
+
+# sentence level graph:
+(s6b1 / být-007
+        :clausal-marker (s6n1 / nicméně)
+        :ARG0 (s6d1 / devalvace
+            :refer-number singular)
+        :ARG1 (s6k1 / krok
+            :clausal-marker (s6a1 / až)
+            :mod (s6p1 / poslední
+                :refer-number singular)
+            :affectee (s6p2 / případ
+                :ARG1 (s6p3 / podařit-se-001
+                    :ARG0 (s6e1 / entity)
+                    :ARG1 (s6v1 / vylepšit-001
+                        :ARG0 s6e1
+                        :ARG1 (s6b2 / bilance
+                            :mod (s6o1 / obchodní
+                                :refer-number singular)
+                            :companion (s6z1 / zahraničí
+                                :refer-number singular)
+                            :place-of (s6v2 / vykazovat-001
+                                :ARG0 (s6p4 / Polsko
+                                    :refer-number singular)
+                                :ARG1 (s6s1 / schodek
+                                    :mod (s6m1 / miliarda
+                                        :mod (s6d2 / dolar
+                                            :refer-number singular)
+                                        :mod (s6x2 / 1.18)
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :refer-number singular
+                                :refer-person 3rd
+                                :aspect activity)
+                            :refer-number singular)
+                        :aspect performance)
+                    :refer-number singular
+                    :aspect performance
+                    :polarity -)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 2-2
+s6n1: 3-3
+s6d1: 1-1
+s6k1: 6-6
+s6a1: 4-4
+s6p1: 5-5
+s6p2: 7-8
+s6p3: 10-13
+s6e1: 0-0
+s6v1: 14-14
+s6b2: 16-16,20-20
+s6o1: 15-15
+s6z1: 17-18
+s6v2: 22-22
+s6p4: 21-21
+s6s1: 23-23
+s6m1: 25-25
+s6d2: 26-26
+s6x2: 24-24
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6d1 :same-entity s5o1)
+            (s6p4 :same-entity s4p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1    2       3  4      5   6  7      8         9     10 11    12
+Words: Kurs zlotého k  dolaru byl v  červnu přibližně 17000 ku jedné .
+
+# sentence level graph:
+(s7b1 / být-007
+        :ARG0 (s7k1 / kurs
+            :possessor (s7z1 / zlotý
+                :refer-number singular)
+            :regard (s7d1 / dolar
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s7c1 / červen
+            :refer-number singular)
+        :extent (s7p1 / přibližně)
+        :ARG1 (s7e1 / entity
+            :mod (s7m1 / math
+                :op1 (s7x1 / 17000)
+                :op2 (s7j1 / jeden
+                    :refer-number singular))
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s7b1: 5-5
+s7k1: 1-1
+s7z1: 2-2
+s7d1: 3-4
+s7c1: 6-7
+s7p1: 8-8
+s7e1: 0-0
+s7m1: 10-10
+s7x1: 9-9
+s7j1: 11-11
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7z1 :same-entity s4z1)))
+
+

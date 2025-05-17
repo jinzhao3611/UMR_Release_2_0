@@ -1,0 +1,251 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2
+Words: Burza zahájila
+
+# sentence level graph:
+(s1z1 / zahájit-001
+        :ARG0 (s1b1 / burza
+            :refer-number singular)
+        :ARG1 (s1e1 / entity)
+        :aspect performance)
+
+# alignment:
+s1z1: 2-2
+s1b1: 1-1
+s1e1: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2           3         4        5    6           7       8     9
+Words: Po devítidenní přestávce zahájila opět obchodování pražská burza .
+
+# sentence level graph:
+(s3z1 / zahájit-001
+        :temporal (s3p1 / přestávka
+            :mod (s3d1 / devítidenní
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3o1 / opět)
+        :ARG1 (s3o2 / obchodování
+            :ARG0 (s3e1 / entity)
+            :ARG1 (s3e2 / entity)
+            :refer-number singular)
+        :ARG0 (s3b1 / burza
+            :mod (s3p2 / pražský
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3z1: 4-4
+s3p1: 1-1,3-3
+s3d1: 2-2
+s3o1: 5-5
+s3o2: 6-6
+s3e1: 0-0
+s3e2: 0-0
+s3b1: 8-8
+s3p2: 7-7
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3b1 :same-entity s1b1)
+            (s3p2 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2       3      4       5   6  7  8  9      10  11    12   13         14
+Words: Objem obchodu dosáhl 580.899 mil .  Kč ,  pokles cen akcií dále pokračoval .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4d1 / dosáhnout-002
+            :ARG0 (s4o1 / objem
+                :possessor (s4o2 / obchod
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s4m1 / milión
+                :mod (s4k1 / Kč)
+                :mod (s4x1 / 580.899))
+            :refer-number singular
+            :aspect performance)
+        :op2 (s4p1 / pokračovat-004
+            :ARG0 (s4p2 / pokles
+                :ARG0 (s4c1 / cena
+                    :possessor (s4a2 / akcie
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :duration (s4d2 / dále)
+            :refer-number singular
+            :aspect activity))
+
+# alignment:
+s4a1: 8-8
+s4d1: 3-3
+s4o1: 1-1
+s4o2: 2-2
+s4m1: 5-5
+s4k1: 7-7
+s4x1: 4-4
+s4p1: 13-13
+s4p2: 9-9
+s4c1: 10-10
+s4a2: 11-11
+s4d2: 12-12
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4o2 :same-entity s3o2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2       3  4  5    6      7  8    9  10 11      12    13      14 15      16    17   18
+Words: Měřeno indexem PX 50 ceny klesly o  1.18 %  a  samotný index uzavřel na hodnotě 487.1 bodu .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5k1 / klesnout-001
+            :condition (s5m1 / měřit-002
+                :ARG0 (s5e1 / entity)
+                :ARG1 (s5e2 / entity)
+                :instrument (s5i1 / index
+                    :name (s5p1 / PX
+                        :mod (s5x1 / 50))
+                    :refer-number singular)
+                :refer-number singular
+                :aspect activity)
+            :ARG0 (s5c1 / cena
+                :refer-number plural)
+            :extent (s5x2 / #Percnt
+                :mod (s5x3 / 1.18))
+            :refer-number plural
+            :aspect performance)
+        :op2 (s5u1 / uzavřít-006
+            :ARG0 (s5i2 / index
+                :mod (s5s1 / samotný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s5e3 / entity)
+            :place (s5h1 / hodnota
+                :mod (s5b1 / bod
+                    :mod (s5x4 / 487.1)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s5a1: 10-10
+s5k1: 6-6
+s5m1: 1-1
+s5e1: 0-0
+s5e2: 0-0
+s5i1: 2-2
+s5p1: 3-3
+s5x1: 4-4
+s5c1: 5-5
+s5x2: 7-7,9-9
+s5x3: 8-8
+s5u1: 13-13
+s5i2: 12-12
+s5s1: 11-11
+s5e3: 0-0
+s5h1: 14-15
+s5b1: 17-17
+s5x4: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5c1 :same-entity s4c1)
+            (s5i2 :same-entity s5i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1           2  3  4  5       6     7  8  9      10 11  12    13 14  15   16      17    18 19    20   21          22
+Words: Obchodování v  RM -  Systému začne 1  .  března ,  kdy budou na oba trhy uvedeny akcie z  druhé vlny privatizace .
+
+# sentence level graph:
+(s6z1 / začít-002
+        :ARG0 (s6o1 / obchodování
+            :ARG0 (s6e1 / entity)
+            :ARG1 (s6e2 / entity)
+            :place (s6s1 / systém
+                :mod (s6r1 / RM)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s6b1 / březen
+            :mod (s6x1 / 1)
+            :temporal-of (s6u1 / uvést-004
+                :goal (s6t1 / trh
+                    :mod (s6o2 / oba
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG0 (s6e3 / entity)
+                :ARG1 (s6a1 / akcie
+                    :start (s6v1 / vlna
+                        :possessor (s6p1 / privatizace
+                            :refer-number singular)
+                        :mod (s6d1 / druhý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s6z1: 6-6
+s6o1: 1-1
+s6e1: 0-0
+s6e2: 0-0
+s6s1: 2-2,5-5
+s6r1: 3-3
+s6b1: 9-9,11-11
+s6x1: 7-7
+s6u1: 12-12,16-16
+s6t1: 13-13,15-15
+s6o2: 14-14
+s6e3: 0-0
+s6a1: 17-17
+s6v1: 18-18,20-20
+s6p1: 21-21
+s6d1: 19-19
+
+# document level annotation:
+(s6s0 / sentence)
+
+

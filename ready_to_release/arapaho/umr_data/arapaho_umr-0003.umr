@@ -1,0 +1,1777 @@
+################################################################################
+# meta-info
+# :: snt1
+Index:               	1	2	3
+Words:               	Nouu	    noh	    Hisi'
+Morphemes:           	nouu	    noh	    hisi'
+Morphemes(English):  	swift_fox	and	    tick
+Part of Speech:      	na	        part	na
+Translation(English):	The Fox and the Woodtick.
+
+# sentence level graph:
+(s1p / publication-91
+    :ARG1 (s1a / and
+        :op1 (s1n / nouu)
+        :op2 (s1h / hisi'))
+    :ARG3 (s1t / thing))
+
+
+# alignment:
+s1p: 0-0
+s1a: 2-2
+s1n: 1-1
+s1h: 3-3
+s1t: 0-0
+
+
+# document level annotation:
+(s1s0 / sentence
+    :modal ((author :full-affirmative s1p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt2
+Index:               	1	2	3	4	5
+Words:               	Nehe'	hisi'	he'ihbeetnonouhtiibee	            nouu        .
+Morphemes:           	nehe'	hisi'	he'ih- beet- nonouhtiib -ee	        nouu        .
+Morphemes(English):  	this	tick	NARRPAST- want_to- race_with -3S/4	swift_fox   .
+Part of Speech:      	det	    na	    prefix- prefix- vta -infl	        na          .
+Translation(English):	This woodtick wanted to race the Fox.
+
+# sentence level graph:
+(s2n / nonouhtiib-00
+    :actor (s2h / hisi'
+        :mod (s2n2 / nehe'))
+    :companion (s2n3 / nouu)
+    :aspect performance)
+
+
+# alignment:
+s2n: 3-3
+s2h: 2-2
+s2n2: 1-1
+s2n3: 4-4
+
+
+# document level annotation:
+(s2s0 / sentence
+    :temporal ((document-creation-time :before s2n))
+    :modal ((author :full-affirmative s2n))
+    :coref ((s1t :subset-of s2n)
+            (s1h :same-entity s2h)
+            (s1n :same-entity s2n3)))
+
+
+
+################################################################################
+# meta-info
+# :: snt3
+Index:               	1	2	3	4	5	6
+Words:               	"   Hoowuuni    "	nih'iihok	        nouu        .
+Morphemes:           	"   hoowuuni	"   nih- 'ii -hok	    nouu        .
+Morphemes(English):  	"   no/not	    "   PAST- say -SUBJ	    swift_fox   .
+Part of Speech:      	"   prefix.det	"   prefix- vai -infl	na          .
+Translation(English):	"No," the fox said.
+
+# sentence level graph:
+(s3h / hii-00
+    :actor (s3n / nouu)
+    :theme (s3h2 / hoowuuni
+        :quote s3h)
+    :recipient (s3p / person))
+
+
+# alignment:
+s3h: 4-4
+s3n: 5-5
+s3h2: 2-2
+s3p: 0-0
+
+
+# document level annotation:
+(s3s0 / sentence
+    :temporal ((s2n :overlap s3h))
+    :modal ((author :full-affirmative s3h)
+            (author :full-affirmative s3n)
+            (s3n :full-negative s3h2))
+    :coref ((s1t :subset-of s3h)
+            (s2n3 :same-entity s3n)
+            (s2h :same-entity s3p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt4
+Index:               	1	2	3
+Words:               	"   Heihoowuni'cebe'eih         "
+Morphemes:           	"   heihoowu- ni'- cebe'eih     "
+Morphemes(English):  	"   2.NEG- able- surpass/beat   "
+Part of Speech:      	"   infl+prefix- prefix- vta    "
+Translation(English):	"You can't beat me."
+
+# sentence level graph:
+(s4h / hii-00 
+    :actor s4p2
+    :theme (s4c / cebe'eih-00
+        :polarity -
+        :actor (s4p / person
+            :refer-person 2nd
+            :refer-number singular)
+        :undergoer (s4p2 / person)
+        :theme (s4e / event)
+        :aspect habitual
+        :quote s4h)
+    :recipient s4p
+    :aspect performance)
+
+
+# alignment:
+s4h: 0-0
+s4c: 1-1
+s4p: 1-1
+s4p2: 0-0
+s4e: 0-0
+
+
+# document level annotation:
+(s4s0 / sentence
+    :temporal ((s3h :after s4h)
+            (s4h :contains s4c))
+    :modal ((author :full-affirmative s4h)
+            (author :full-affirmative s4p2)
+            (s4p2 :neutral-negative s4c))
+    :coref ((s1t :subset-of s4h)
+            (s3p :same-entity s4p)
+            (s3n :same-entity s4p2)
+            (s2n :same-event s4e)))
+
+
+
+################################################################################
+# meta-info
+# :: snt5
+Index:               	1	2	3	4	5	6
+Words:               	"   Heetnoo3be3en                   "   heehehk     hisi'   .
+Morphemes:           	"   heet- noo3b -e3en               "   heehehk     hisi'   .
+Morphemes(English):  	"   FUT- defeat_in_comp. -1S/2S     "   said        tick    .
+Part of Speech:      	"   prefix- vta -infl               "   vai         na      .
+Translation(English):	"I'll beat you," said Mr. Woodtick.
+
+# sentence level graph:
+(s5h / heehehk-00
+    :actor (s5h2 / hisi')
+    :theme (s5n / noo3b-00
+        :actor s5h2
+        :undergoer (s5p / person
+            :refer-person 2nd
+            :refer-number singular)
+        :theme (s5e / event)
+        :aspect performance
+        :quote s5h)
+    :recipient s5p
+    :aspect performance)
+
+
+# alignment:
+s5h: 4-4
+s5h2: 5-5
+s5n: 2-2
+s5p: 2-2
+s5e: 0-0
+
+
+# document level annotation:
+(s5s0 / sentence
+    :temporal ((s4h :after s5h)
+            (s5h :after s5n))
+    :modal ((author :full-affirmative s5h)
+            (author :full-affirmative s5h2)
+            (s5h2 :full-affirmative s5n))
+    :coref ((s1t :subset-of s5h)
+            (s4p :same-entity s5h2)
+            (s4p2 :same-entity s5p)
+            (s4e :same-event s5e)))
+
+
+
+################################################################################
+# meta-info
+# :: snt6
+Index:               	1	2	3	4	5	6	7	8
+Words:               	"   'Ee yehei   ,   henei'ei3hehk	        nonoo3i'eebit               .   "
+Morphemes:           	"   'Eeyehei	,   he- nei'ei3hehk	        nonoo3i'eebi -t             .   "
+Morphemes(English):  	"   gee_whiz!	,   2S- who_in_the_heck?!	IC.beat/defeat_s.o. -3.S    .   "
+Part of Speech:      	"   part	    ,   infl- vai	            vai.o -infl                 .   "
+Translation(English):	"Gee whiz, who in the heck are you to beat me?"
+
+# sentence level graph:
+(s6h / hii-00
+    :actor s6p2
+    :theme (s6n / noo3i'eebi-00
+        :actor (s6p / person
+            :refer-person 2nd
+            :refer-number singular
+            :theme-of (s6n2 / nei'ei3hehk-00
+                :mode interrogative
+                :mod (s6u / umr-unknown)
+                :aspect state))
+        :undergoer (s6p2 / person)
+        :theme (s6e / event)
+        :mod (s6x / 'eeyehei-00)
+        :aspect habitual
+        :quote s6h)
+    :recipient s6p
+    :aspect performance)
+
+
+# alignment:
+s6h: 0-0
+s6n: 5-5
+s6p: 5-5
+s6n2: 4-4
+s6u :4-4
+s6p2: 5-5
+s6e: 0-0
+s6x: 2-2
+
+
+# document level annotation:
+(s6s0 / sentence
+    :temporal ((s5h :after s6h)
+            (s6h :contains s6n2)
+            (s6h :contains s6n))
+    :modal ((author :full-affirmative s6h)
+            (author :full-affirmative s6p2)
+            (s6p2 :neutral-affirmative s6n)
+            (s6p2 :neutral-affirmative s6n2))
+    :coref ((s1t :subset-of s6h)
+            (s5h2 :same-entity s6p)
+            (s5p :same-entity s6p2)
+            (s5e :same-event s6e)))
+
+
+
+################################################################################
+# meta-info
+# :: snt7
+Index:               	1	2	3	4
+Words:               	"   coobou'uheso'oo                 .   "
+Morphemes:           	"   coobou'u- heso'oo               .   "
+Morphemes(English):  	"   no_way!_couldn't_be!- fast      .   "
+Part of Speech:      	"   prefix- vai                     .   "
+Translation(English):	"You can't even run fast," Fox said.
+
+# sentence level graph:
+(s7h / hii-00
+    :actor (s7p / person)
+    :theme (s7h2 / heso'oo-00
+        :polarity -
+        :theme (s7p2 / person)
+        :degree intensifier
+        :aspect state
+        :quote s7h)
+    :recipient s7p2
+    :aspect performance)
+
+
+# alignment:
+s7h: 0-0
+s7p: 0-0
+s7h: 2-2
+s7p2: 0-0
+
+
+# document level annotation:
+(s7s0 / sentence
+    :temporal ((s6h :after s7h)
+            (s7h :contains s7h2))
+    :modal ((author :full-affirmative s7h)
+            (author :full-affirmative s7p)
+            (s7p :neutral-negative s7h2))
+    :coref ((s1t :subset-of s7h)
+            (s6p2 :same-entity s7p)
+            (s6p :same-entity s7p2)))
+
+
+
+################################################################################
+# meta-info
+# :: snt8
+Index:               	1	2	3	4	5
+Words:               	"   Nohni'      cihnoohowu                  !   "
+Morphemes:           	"   noh -ni'    cih- noohow -u              !   "
+Morphemes(English):  	"   and -12	    EMPH.IMPER- see -1S.IMPER   !   "
+Part of Speech:      	"   part -infl  prefix- vta -infl           !   "
+Translation(English):	[Fox said] "Look at me!"
+
+# sentence level graph:
+(s8h / hii-00
+    :actor s8p
+    :theme (s8n / noohow-00
+        :mode imperative
+        :experiencer (s8p / person
+            :refer-person 2nd
+            :refer-number singular)
+        :stimulus (s8p2 / person
+            :refer-person 1st
+            :refer-number singular)
+        :aspect activity
+        :quote s8h)
+    :recipient s8p2
+    :aspect performance)
+
+
+# alignment:
+s8h: 0-0
+s8n: 3-3
+s8p: 0-0
+s8p2: 3-3
+
+
+# document level annotation:
+(s8s0 / sentence
+    :temporal ((s7h :after s8h)
+            (s8h :after s8n))
+    :modal ((author :full-affirmative s8h)
+            (author :full-affirmative s8p)
+            (s8p :partial-affirmative s8n))
+    :coref ((s1t :subset-of s8h)
+            (s7p2 :same-entity s8p)
+            (s7p :same-entity s8p2)))
+
+
+
+################################################################################
+# meta-info
+# :: snt9
+Index:               	1	2	3	4	5
+Words:               	Nouu	    he'ihcesihce                ,   ne'ce'no'koohut                     .
+Morphemes:           	nouu	    he'ih- cesihcehi	        ,   ne'- ce'- no'koohu -t               .
+Morphemes(English):  	swift_fox	NARRPAST- set_off_running	,   then- back- arrive_by_running -3.S  .
+Part of Speech:      	na	        prefix- vai	                ,   prefix- prefix- vai -infl           .
+Translation(English):	Fox took off and then came back.
+
+# sentence level graph:
+(s9c / consecutive
+    :op1 (s9c2 / cesihcehi-00
+        :actor (s9n / nouu)
+        :start (s9p / place)          
+        :aspect performance) 
+    :op2 (s9n2 / no'koohu-00
+        :actor s9n
+        :goal s9p
+        :aspect performance))
+
+
+# alignment:
+s9c: 0-0
+s9c2: 2-2
+s9n: 1-1
+s9p: 4-4
+s9n2: 4-4
+
+
+# document level annotation:
+(s9s0 / sentence
+    :temporal ((s8h :after s9c2)
+            (s9c2 :after s9n2))
+    :modal ((author :full-affirmative s9c2)
+            (author :full-affirmative s9n2))
+    :coref ((s1t :subset-of s9c)
+            (s8p2 :same-entity s9n)))
+
+
+
+################################################################################
+# meta-info
+# :: snt10
+Index:               	1	2	3	4	5	6	7
+Words:               	"   Noohoot	        hee3ei'neeneeso'oonoo	    "   heehehk	    nouu        .
+Morphemes:           	"   noohoot -oo	    hee3ei'neeni- eso'oo -noo   "   heehehk	    nouu        .
+Morphemes(English):  	"   see -0.IMPER	how_much- fast -1S          "   said	    swift_fox   .
+Part of Speech:      	"   vti -infl	    prefix.rel- vai(alt) -infl  "   vai	        na          .
+Translation(English):	"See how fast I am," said Mr. Fox.
+
+# sentence level graph:
+(s10h / heehehk-00
+    :actor (s10n / nouu)
+    :theme (s10n2 / noohoot-00
+        :mode imperative
+        :experiencer (s10p / person
+            :refer-person 2nd
+            :refer-number singular)
+        :stimulus (s10h2 / heso'oo-00
+                :theme s10n
+                :degree intensifier
+                :aspect state)
+        :aspect state
+        :quote s10h)
+    :recipient s10p
+    :aspect performance)
+
+
+# alignment:
+s10h: 5-5
+s10n: 6-6
+s10n2: 2-2
+s10p: 0-0
+s10h2: 3-3
+
+
+# document level annotation:
+(s10s0 / sentence
+    :temporal ((s9c :overlap s10n2)
+            (s10h :contains s10h2)
+            (s9n2 :after s10h))
+    :modal ((author :full-affirmative s10h)
+            (author :full-affirmative s10n)
+            (s10n :partial-affirmative s10n2)
+            (s10n :full-affirmative s10h2))
+    :coref ((s1t :subset-of s10h)
+            (s9n :same-entity s10n)
+            (s8p :same-entity s10p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt11
+Index:               	1	2	3	4	5
+Words:               	'oh	        nehe'	hisi'	he'ihnihi'nei       .
+Morphemes:           	'oh	        nehe'	hisi'	he'ih- nihi'nei
+Morphemes(English):  	but/and	    this	tick	NARRPAST- insist
+Part of Speech:      	part	    det	    na	    prefix- vai
+Translation(English):	But this Woodtick kept insisting.
+
+# sentence level graph:
+(s11n / nihi'nei-00
+    :actor (s11h / hisi'
+        :mod (s11n2 / nehe'))
+    :theme (s11t / thing)
+    :aspect habitual)
+
+
+# alignment:
+s11n: 4-4
+s11h: 3-3
+s11n2: 2-2
+s11t: 0-0
+
+
+# document level annotation:
+(s11s0 / sentence
+    :temporal ((s10h :after s11n))
+    :modal ((author :full-affirmative s11n))
+    :coref ((s1t :subset-of s11n)
+            (s10p :same-entity s11h)
+            (s6e :same-event s11t)))
+
+
+
+################################################################################
+# meta-info
+# :: snt12
+Index:               	1	2	3	4	5	6
+Words:               	"   Heetnonouhtiibe3en      "   hee3oohok       nouu        .
+Morphemes:           	"   heet- nonouhtiib -e3en  "   hee3oohok       nouu        .
+Morphemes(English):  	"   FUT- race_with -1S/2S   "   said_to_s.o.    swift_fox   .
+Part of Speech:      	"   prefix- vta -infl       "   vta.3S/4        na          .
+Translation(English):	"I'll race you," he said to the Fox.
+
+# sentence level graph:
+(s12h / hee3-00
+    :actor s12p
+    :theme (s12n / nonouhtiib-00
+        :actor (s12p / person
+            :refer-person 1st   
+            :refer-number singular)
+        :companion s12n2
+        :aspect performance
+        :quote s12h)
+    :recipient  (s12n2 / nouu)
+    :aspect performance)
+
+
+# alignment:
+s12h: 4-4
+s12n: 2-2
+s12p: 2-2
+s12n2: 5-5
+
+
+# document level annotation:
+(s12s0 / sentence
+    :temporal ((s12h :after s11n)
+            (s12h :after s12n))
+    :modal ((author :full-affirmative s12h)
+            (author :full-affirmative s12p)
+            (s12p :full-affirmative s12n))
+    :coref ((s1t :subset-of s12h)
+            (s11h :same-entity s12p)
+            (s10n :same-entity s12n2)
+            (s11t :same-event s12n)))
+
+
+
+################################################################################
+# meta-info
+# :: snt13
+Index:               	1	2	3	4	5	6	7
+Words:               	"   Hiikoot	    heetniitobeekuun	            "   hee3oohok	    nouu        .
+Morphemes:           	"   hiikoot	    heet- niitobeekuu -n	        "   hee3oohok	    nouu        .
+Morphemes(English):  	"   moreover	FUT- stand_first/in_front -2S	"   said_to_s.o.	swift_fox   .
+Part of Speech:      	"   part	    prefix- vai -infl	            "   vta.3S/4	    na          .
+Translation(English):	"What's more, you will even stand in front."
+
+# sentence level graph:
+(s13h / hee3-00
+    :actor (s13n / nouu)
+    :theme (s13u / unexpected-co-occurrence-91
+        :ARG1 (s13e / event)
+        :ARG2 (s13n2 / niitobeekuu-00
+            :actor (s13p / person
+                :refer-person 2nd
+                :refer-number singular)
+            :mod (s13h2 / hiikoot)
+            :aspect state)
+        :quote s13h)
+    :recipient s13p
+    :aspect performance)
+
+
+# alignment:
+s13h: 5-5
+s13n: 6-6
+s13u: 2-2
+s13e: 0-0
+s13n2: 3-3
+s13p: 3-3
+s13h2: 2-2
+
+
+# document level annotation:
+(s13s0 / sentence
+    :temporal ((s12h :after s13h)
+            (s13h :after s13n2))
+    :modal ((author :full-affirmative s13h)
+            (author :full-affirmative s13n)
+            (s13n :full-affirmative s13n2))
+    :coref ((s1t :subset-of s13h)
+            (s12n2 :same-entity s13n)
+            (s12p :same-entity s13p)
+            (s12n :same-event s13e)))
+
+
+
+################################################################################
+# meta-info
+# :: snt14
+Index:               	1	2	3	4
+Words:               	Ne'eesnoneet	        nehe'	nouu        .
+Morphemes:           	ne'i- esnonee -t	    nehe'	nouu        .
+Morphemes(English):  	then- mad -3.S          this	swift_fox   .
+Part of Speech:      	prefix- vai(alt) -infl  det	    na          .
+Translation(English):	Then Fox got mad.
+
+# sentence level graph:
+(s14h / hesnonee-00
+    :experiencer (s14n / nouu
+        :mod (s14n2 / nehe'))
+    :aspect state)
+
+
+# alignment:
+s14h: 1-1
+s14n: 3-3
+s14n2: 2-2
+
+
+# document level annotation:
+(s14s0 / sentence
+    :temporal ((s13h :after s14h))
+    :modal ((author :full-affirmative s14h))
+    :coref ((s1t :subset-of s14h)
+            (s13n :same-entity s14n)))
+
+
+
+################################################################################
+# meta-info
+# :: snt15
+Index:               	1	2	3	4	5	6	7
+Words:               	"   Heetousicebe'eih	                ?   "   hee3oohok	    hisi'   .
+Morphemes:           	"   he- et- tousi- cebe'eih	            ?   "   hee3oohok	    hisi'   .
+Morphemes(English):  	"   2S- FUT- what/how?- surpass/beat	?   "   said to s.o.	tick    .
+Part of Speech:      	"   infl- prefix- prefix- vta	        ?   "   vta.3S/4	    na      .
+Translation(English):	"How are you going to beat me?" he said to Mr. Woodtick.
+
+# sentence level graph:
+(s15h / hee3-00
+    :actor (s15p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :theme (s15c / cebe'eih-00
+        :mode interrogative
+        :actor s15h2
+        :undergoer s15p
+        :manner (s15u / umr-unknown)
+        :aspect performance
+        :quote s15h)
+    :recipient (s15h2 / hisi')
+    :aspect performance)
+
+
+# alignment:
+s15h: 5-5
+s15p: 5-5
+s15c: 2-2
+s15u: 2-2
+s15h2: 6-6
+
+
+# document level annotation:
+(s15s0 / sentence
+    :temporal ((s14h :after s15h)
+            (s15h :after s15c))
+    :modal ((author :full-affirmative s15h)
+            (author :full-affirmative s15p)
+            (s15p :neutral-affirmative s15c))
+    :coref ((s1t :subset-of s15h)
+            (s14n :same-entity s15p)
+            (s13p :same-entity s15h2)
+            (s6n :same-event s15c)))
+
+
+
+################################################################################
+# meta-info
+# :: snt16
+Index:               	1	2	3	4	5	6	7
+Words:               	"   Heetnoo3be3en                   "   he'ihwonooti3ee	                    nehe'	hisi'   .
+Morphemes:           	"   heet- noo3b -e3en               "   he'ih- wonooti3 -ee	                nehe'	hisi'   .
+Morphemes(English):  	"   FUT- defeat_in_comp. -1S/2S     "   NARRPAST- keep_saying_to_s.o.-3S/4  this	tick    .
+Part of Speech:      	"   prefix- vta -infl               "   prefix- vta -infl	                det	    na      .
+Translation(English):	"I'll beat you" Mr. Woodtick kept insisting.
+
+# sentence level graph:
+(s16w / wonooti3-00
+    :actor (s16h / hisi'
+        :mod (s16n / nehe'))
+    :theme (s16n2 / noo3b-00
+        :actor s16h
+        :undergoer (s16p / person
+            :refer-person 2nd
+            :refer-number singular)
+        :theme (s16e / event)
+        :aspect performance
+        :quote s16w)
+    :recipient s16p
+    :aspect habitual)
+
+
+# alignment:
+s16w: 4-4
+s16h: 6-6
+s16n: 5-5
+s16n2: 2-2
+s16p: 2-2
+s16e: 0-0
+
+
+# document level annotation:
+(s16s0 / sentence
+    :temporal ((s15h :after s16w)
+            (s16w :after s16n2))
+    :modal ((author :full-affirmative s16w)
+            (author :full-affirmative s16h)
+            (s16h :full-affirmative s16n2))
+    :coref ((s1t :subset-of s16w)
+            (s15h2 :same-entity s16h)
+            (s15p :same-entity s16p)
+            (s15c :same-event s16n2)
+            (s13e :same-event s16e)))
+
+
+
+################################################################################
+# meta-info
+# :: snt17
+Index:               	1	2	3	4	5	6	7	8
+Words:               	"   Wohei	hookoh	    he'hebeetnonouhet                   :   heetxouubene3en             .   "
+Morphemes:           	"   wohei	hookoh	    he'- he- beet- nonouhti	            :   heet- xouuben -e3en         .   "
+Morphemes(English):  	"   okay	because	    DUBIT- 2S- want_to- race	        :   FUT- straighten_out -1S/2S  .   "
+Part of Speech:      	"   part	part	    proclitic- infl- prefix- vai.recip	:   prefix- vta -infl           .   "
+Translation(English):	"Okay, so you want us to race each other: I'll straighten you out," said Fox.
+
+# sentence level graph:
+(s17h / hii-00 
+    :actor s17p2
+    :theme (s17c / cause-91
+        :ARG0 (s17n / nonouhti-00
+            :actor (s17p / person
+                :refer-person 2nd
+                :refer-number singular)
+            :companion s17p2
+            :mod (s17w / wohei)
+            :aspect performance)
+        :ARG1 (s17x / xouuben-00
+            :actor (s17p2 / person
+                :refer-person 1st
+                :refer-number singular)
+            :undergoer s17p
+            :aspect performance)
+        :quote s17h)
+    :recipient s17p
+    :aspect performance )
+
+
+# alignment:
+s17h: 0-0
+s17c: 0-0
+s17n: 4-4
+s17p: 4-4
+s17w: 2-2
+s17x: 6-6
+s17p2: 6-6
+
+
+# document level annotation:
+(s17s0 / sentence
+    :temporal ((s16w :after s17h)
+            (s17h :contains s17n)
+            (s17h :after s17x))
+    :modal ((author :full-affirmative s17h)
+            (author :full-affirmative s17p2)
+            (s17p2 :neutral-affirmative s17n)
+            (s17p2 :full-affirmative s17x))
+    :coref ((s1t :subset-of s17h)
+            (s16h :same-entity s17p)
+            (s16p :same-entity s17p2)
+            (s16e :same-event s17n)))
+
+
+
+################################################################################
+# meta-info
+# :: snt18
+Index:               	1	2
+Words:               	Ne'iise'enou'u3i'       .
+Morphemes:           	ne'- iise'enou'u -3i'   .
+Morphemes(English):  	then- ready -3PL        .
+Part of Speech:      	prefix- vai -infl       .
+Translation(English):	So they got ready.
+
+# sentence level graph:
+(s18h / hiise'enou'u-00
+    :actor (s18p / person
+        :refer-person 3rd
+        :refer-number plural)
+    :aspect performance)
+
+
+# alignment:
+s18h: 1-1
+s18p: 1-1
+
+
+# document level annotation:
+(s18s0 / sentence
+    :temporal ((s17h :after s18h))
+    :modal ((author :full-affirmative s18h))
+    :coref ((s1t :subset-of s18h)
+            (s18p :subset-of s17p2)
+            (s18p :subset-of s17p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt19
+Index:               	1	2	3
+Words:               	He'ihniitobeekuu	            nouu        ;
+Morphemes:           	he'ih- niitobeekuu	            nouu        ;
+Morphemes(English):  	NARRPAST- stand_first/in_front	swift_fox   ;
+Part of Speech:      	prefix- vai	                    na          ;
+Translation(English):	Fox had a head start;
+
+# sentence level graph:
+(s19n / niitobeekuu-00
+    :theme (s19n2 / nouu)
+    :aspect state)
+
+
+# alignment:
+s19n: 1-1
+s19n2: 2-2
+
+
+# document level annotation:
+(s19s0 / sentence
+    :temporal ((s18h :after s19n))
+    :modal ((author :full-affirmative s19n))
+    :coref ((s1t :subset-of s19n)
+            (s17p2 :same-entity s19n2)))
+
+
+
+################################################################################
+# meta-info
+# :: snt20
+Index:               	1	2
+Words:               	Heesnoneet      .
+Morphemes:           	heesnonee -t    .
+Morphemes(English):  	IC.mad -3.S     .
+Part of Speech:      	vai -infl       .
+Translation(English):	He was mad.
+
+# sentence level graph:
+(s20h / hesnonee-00
+    :experiencer (s20p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :aspect state)
+
+
+# alignment:
+s20h: 1-1
+s20p: 1-1
+
+
+# document level annotation:
+(s20s0 / sentence
+    :temporal ((s19n :overlap s20h))
+    :modal ((author :full-affirmative s20h))
+    :coref ((s1t :subset-of s20h)
+            (s19n2 :same-entity s20p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt21
+Index:               	1	2	3	4	5	6	7	8	9	10
+Words:               	Nehe'	hisi'	heehehk	    "   no'outiinoohok	                            neeso   ,	heetne'cesihcehino'             .   "
+Morphemes:           	nehe'	hisi'	heehehk	    "   no'outii- noo- hok-	                        neeso	,   heet- ne'- cesihcehi -no'       .   "
+Morphemes(English):  	this	tick	said	    "   arrive_at_a_point_in_counting- 1S- SUBJ-    three	,   FUT- then- set_off_running -12  .   "
+Part of Speech:      	det	    na	    vai	        "   vai.t- infl- infl-	                        part	,   prefix- prefix- vai -infl       .   "
+Translation(English):	Mr. Woodtick said, "when I count to three, we'll start running."
+
+# sentence level graph:
+(s21h / heehehk-00
+    :actor (s21h2 / hisi'
+        :mod (s21n / nehe'))
+    :theme (s21c / consecutive
+        :op1 (s21n2 / no'outii-00
+            :actor s21h2
+            :goal 3
+            :aspect performance)
+        :op2 (s21c2 / cesihcehi-00
+            :actor (s21p / person
+                :refer-person 1st
+                :refer-number plural)
+            :aspect performance)
+        :quote s21h)
+    :recipient (s21p3 / person)
+    :aspect performance)
+
+
+# alignment:
+s21h: 3-3
+s21h2: 2-2
+s21n: 1-1
+s21c: 8-8
+s21n2: 5-5
+s21c2: 8-8
+s21p: 8-8
+s21p3: 0-0
+
+
+# document level annotation:
+(s21s0 / sentence
+    :temporal ((s21h :contains s20h)
+            (s21h :after s21n2)
+            (s21n2 :after s21c2))
+    :modal ((author :full-affirmative s21h)
+            (author :full-affirmative s21h2)
+            (s21h2 :full-affirmative s21n2)
+            (s21h2 :full-affirmative s21c2))
+    :coref ((s1t :subset-of s21h)
+            (s17p :same-entity s21h2)
+            (s18p :same-entity s21p)
+            (s21p3 :same-entity s21p3)))
+
+
+
+################################################################################
+# meta-info
+# :: snt22
+Index:               	1	2	3	4
+Words:               	Ne'ce3i3outiit	            nehe'	hisi'   .
+Morphemes:           	ne'- ce3i3outii -t	        nehe'	hisi'   .
+Morphemes(English):  	then- begin_counting -3.S	this	tick    .
+Part of Speech:      	prefix- vai.t -infl	        det	    na      .
+Translation(English):	Mr. Woodtick started counting.
+
+# sentence level graph:
+(s22c / ce3i3outii-00
+    :actor (s22h / hisi'
+        :mod (s22n / nehe'))
+    :aspect performance)
+
+
+# alignment:
+s22c: 1-1
+s22h: 3-3
+s22n: 2-2
+
+
+# document level annotation:
+(s22s0 / sentence
+    :temporal ((s21h :after s22c))
+    :modal ((author :full-affirmative s22c))
+    :coref ((s1t :subset-of s22c)
+            (s21h2 :same-entity s22h)))
+
+
+
+################################################################################
+# meta-info
+# :: snt23
+Index:               	1	2	3	4	5	6	7	8
+Words:               	Teebe	    ceesisneyeitiit,	    ne'teesceno'oot	            hitihiinin	                    nehe'	nouu        .
+Morphemes:           	teebe	    ceesis- neyeitii -t	    ne'- tees- ceno'oo -t	    hi- tihiin -in	                nehe'	nouu        .
+Morphemes(English):  	just_now	IC.begin- count -3.S	then- on/over- jump -3.S	4S- tail -4POSS	                this	swift_fox   .
+Part of Speech:      	part	    prefix- vai.t -infl	    prefix- prefix- vai -infl	infl- ni.oblposs+4poss -infl	det	    na          .
+Translation(English):	He had just started to count when Mr. Woodtick jumped on Mr. Fox's tail.
+
+# sentence level graph:
+(s23t / teesceno'oo-00
+    :actor (s23n / nouu
+        :mod (s23n2 / nehe'))
+    :goal (s23h / hitihiinin
+        :part-of s23n)
+    :temporal (s23c / cesisneyeitii-00
+        :actor (s23p / person
+            :refer-person 3rd
+            :refer-number singular)
+        :temporal (s23t2 / teebe)
+        :aspect performance)
+    :aspect performance)
+
+
+# alignment:
+s23t: 3-3
+s23n: 6-6
+s23n2: 5-5
+s23h: 4-4
+s23c: 2-2
+s23p: 2-2
+s23t2: 1-1
+
+
+# document level annotation:
+(s23s0 / sentence
+    :temporal ((s23c :after s23t2)
+            (s23t2 :overlap s23t))
+    :modal ((author :full-affirmative s23t)
+            (author :full-affirmative s23c))
+    :coref ((s1t :subset-of s23t)
+            (s20p :same-entity s23n)
+            (s22h :same-entity s23p)
+            (s22c :same-event s23c)))
+
+
+
+################################################################################
+# meta-info
+# :: snt24
+Index:               	1	2	3	4	5
+Words:               	Neeso	hei'iiht                ,	ne'cesihcehi3i'             .
+Morphemes:           	neeso	hei'- 'iihi -t	        ,   ne'- cesihcehi -3i'         .
+Morphemes(English):  	three	when.PERF- said -3.S	,   then- set.off.running -3PL  .
+Part of Speech:      	part	prefix- vai -infl	    ,   prefix- vai -infl           .
+Translation(English):	When Tick counted to three, they started to run.
+
+# sentence level graph:
+(s24c / cesihcehi-00
+    :actor (s24p / person
+        :refer-person 3rd
+        :refer-number plural)
+    :temporal (s24h / hiihi-00
+        :actor (s24p2 / person
+            :refer-person 3rd
+            :refer-number singular)
+        :theme (s24n / numerical-quantity 
+            :quant 3
+            :quote s24h)
+        :aspect performance)
+    :aspect performance)
+
+
+# alignment:
+s24c: 4-4
+s24p: 4-4
+s24h: 2-2
+s24p2: 2-2
+s24n: 1-1
+
+
+# document level annotation:
+(s24s0 / sentence
+    :temporal ((s23c :after s24h)
+            (s24h :after s24c))
+    :modal ((author :full-affirmative s24c)
+            (author :full-affirmative s24h))
+    :coref ((s1t :subset-of s24c)
+            (s21p :same-entity s24p)
+            (s23p :same-entity s24p2)))
+
+
+
+################################################################################
+# meta-info
+# :: snt25
+Index:               	1	2	3	4
+Words:               	Nehe'	nouu	    neniito'cesihcehit                      ;
+Morphemes:           	nehe'	nouu	    neniito'- cesihcehi -t                  ;
+Morphemes(English):  	this	swift_fox	first/in_front- set_off_running -3.S    ;
+Part of Speech:      	det	    na	        prefix- vai -infl                       ;
+Translation(English):	Mr. Fox started to run first;
+
+# sentence level graph:
+(s25n / neniito'cesihcehi-00
+    :actor (s25n2 / nouu
+        :mod (s25n3 / nehe'))
+    :aspect performance)
+
+
+# alignment:
+s25n: 3-3
+s25n2: 2-2
+s25n3: 1-1
+
+
+# document level annotation:
+(s25s0 / sentence
+    :temporal ((s25n :contains s24c))
+    :modal ((author :full-affirmative s25n))
+    :coref ((s1t :subset-of s25n)
+            (s23n :same-entity s25n2)))
+
+
+
+################################################################################
+# meta-info
+# :: snt26
+Index:               	1	2	3
+Words:               	Beebei'on	hee3ebkoohut        .
+Morphemes:           	beebei'on	hee3eb- koohu -t    .
+Morphemes(English):  	far_away	IC.there- run -3.S  .
+Part of Speech:      	part	    prefix- vai -infl   .
+Translation(English):	In a little while he was way over there.
+
+# sentence level graph:
+(s26h / he3ebkoohu-00
+    :actor (s26p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :goal (s26p2 / place
+        :place (s26b / beebei'on))
+    :aspect performance)
+
+
+# alignment:
+s26h: 2-2
+s26p: 2-2
+s26p2: 1-1
+s26b: 1-1
+
+
+# document level annotation:
+(s26s0 / sentence
+    :temporal ((s25n :after s26h))
+    :modal ((author :full-affirmative s26h))
+    :coref ((s1t :subset-of s26h)
+            (s25n2 :same-entity s26p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt27
+Index:               	1	2	3	4	5	6
+Words:               	Cee'e'einei'ooku'oonit          ,	'oh	        hoowceikoohun	            hisi'   .
+Morphemes:           	cee'e'ei- nei'ooku'ooni -t	    ,   'oh	        hoow- ceikoohu -n	        hisi'   .
+Morphemes(English):  	IC.turn_head_back- look -3.S	,   but/and	    3.NEG- run_to_here -OBV.S	tick    .
+Part of Speech:      	prefix- vai(alt) -infl	        ,   part        infl+prefix- vai -infl	    na      .
+Translation(English):	He turned around and looked back, but Mr. Tick wasn't coming.
+
+# sentence level graph:
+(s27c / contrast-91
+    :ARG1 (s27c2 / ce'e'einei'ooku'oni-00
+        :experiencer (s27p / person
+            :refer-person 3rd
+            :refer-number singular)
+        :aspect performance )
+    :ARG2 (s27c3 / ceikoohu-00
+        :polarity -
+        :actor (s27h / hisi')
+        :aspect state))
+
+
+# alignment:
+s27c: 3-3
+s27c2: 1-1
+s27p: 1-1
+s27c3: 4-4
+s27h: 5-5
+
+
+# document level annotation:
+(s27s0 / sentence
+    :temporal ((s26h :after s27c2)
+            (s27c2 :overlap s27c3))
+    :modal ((author :full-affirmative s27c2)
+            (author :full-negative s27c3))
+    :coref ((s1t :subset-of s27c)
+            (s26p :same-entity s27p)
+            (s24p2 :same-entity s27h)))
+
+
+
+################################################################################
+# meta-info
+# :: snt28
+Index:               	1	2	3	4
+Words:               	Ne'too'uhce                     ,	tooyeinousi'    ;
+Morphemes:           	ne'- too'uhcehi	                ,   tooyeinousi -'  ;
+Morphemes(English):  	then- come_quickly_to_a_stop	,   IC.rest -3S     ;
+Part of Speech:      	prefix- vai	                    ,   vai -infl       ;
+Translation(English):	So he stopped to rest;
+
+# sentence level graph:
+(s28c / consecutive
+    :op1 (s28t / too'uhcehi-00
+        :actor s28p
+        :aspect performance)
+    :op2 (s28t2 / toyeinousi-00
+        :theme (s28p / person
+            :refer-person 3rd
+            :refer-number singular)
+        :aspect state ))
+
+
+# alignment:
+s28c: 0-0
+s28t: 1-1
+s28t2: 3-3
+s28p: 3-3
+
+
+# document level annotation:
+(s28s0 / sentence
+    :temporal ((s27c2 :after s28t)
+            (s28t :after s28t2))
+    :modal ((author :full-affirmative s28t)
+            (author :full-affirmative s28t2))
+    :coref ((s1t :subset-of s28c)
+            (s27p :same-entity s28p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt29
+Index:               	1	2	3	4	5	6
+Words:               	'oh		    hikoobe'                    noosouniihouuni3	            nehe'   hisi'   .  
+Morphemes:           	'oh	   	    hi- koob -e'                noosou- niihouuhu -ni3	        nehe'   hisi'   .
+Morphemes(English):  	but/and	    4S- back -LOC?              IC.still- climb_along_s.t. -4S  this    tick    .
+Part of Speech:      	part        infl- ni.oblposs+loc -infl  prefix- vai -infl	            det     na      .
+Translation(English):	But Mr. Woodtick was still climbing along Mr. Fox's back.
+
+# sentence level graph:
+(s29n / niihouuhu-00
+    :actor (s29h / hisi'
+        :mod (s29n2 / nehe'))
+    :path (s29h2 / hikoobe'
+        :part-of (s29p / person
+            :refer-person 3rd
+            :refer-number singular))
+    :mod (s29n3 / nosou)
+    :aspect activity)
+
+
+# alignment:
+s29n: 3-3
+s29h: 5-5
+s29n2: 4-4
+s29h2: 2-2
+s29p: 2-2
+s29n3: 3-3
+
+
+# document level annotation:
+(s29s0 / sentence
+    :temporal ((s29n :contains s28t2))
+    :modal ((author :full-affirmative s29n))
+    :coref ((s1t :subset-of s29n)
+            (s27h :same-entity s29h)
+            (s28p :same-entity s29p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt30
+Index:               	1	2	3	4	5
+Words:               	Wohei	nehe'	nouu	    ne'ce'cesihcehit                    ;
+Morphemes:           	wohei	nehe'	nouu	    ne'- ce'- cesihcehi -t              ;
+Morphemes(English):  	okay	this	swift_fox	then- again- set_off_running -3.S   ;
+Part of Speech:      	part	det	    na	        prefix- prefix- vai -infl           ;
+Translation(English):	So Mr. Fox started to run again.
+
+# sentence level graph:
+(s30c / cesihcehi-00
+    :actor (s30n / nouu
+        :mod (s30n2 / nehe'))
+    :aspect performance)
+
+
+# alignment:
+s30c: 4-4
+s30n: 3-3
+s30n2: 2-2
+
+
+# document level annotation:
+(s30s0 / sentence
+    :temporal ((s28c :after s30c))
+    :modal ((author :full-affirmative s30c))
+    :coref ((s1t :subset-of s30c)
+            (s29p :same-entity s30n)))
+
+
+
+################################################################################
+# meta-info
+# :: snt31
+Index:               	1	2	3	4	5	6	7	8
+Words:               	'oh	    	woow	    teesiihi'       hitookuhu'eene'	       	    nee'ei'ouuhuni3	            nehe'   hisi'   .
+Morphemes:           	'oh	     	woow	    tees- -iihi'    hit- ookuhu'een -e'	 	    nee'ei'-ouuhu -ni3	        nehe'   hisi'   .
+Morphemes(English):  	but/and	    now.PERF	on/over- -ADV   3S- head -LOC	            that_is_how_far- climb -4S  this    tick    .
+Part of Speech:      	part	    part	    prefix- -deriv  infl- ni.olbposs+loc -infl  procl+pref.back- vai -infl  det     na      .
+Translation(English):	But by then Mr. Woodtick was on Mr. Fox's head.
+
+# sentence level graph:
+(s31h / houuhu-00
+    :actor (s31h2 / hisi'
+        :mod (s31n / nehe'))
+    :goal (s31t / teesiihi'
+        :op1 (s31h3 / hitookuhu'eene'
+            :part-of (s31p / person
+                :refer-person 3rd
+                :refer-number singular)))
+    :temporal (s31w / woow)
+    :aspect state)
+
+
+# alignment:
+s31h: 5-5
+s31h2: 7-7
+s31n: 6-6
+s31t: 3-3
+s31h3: 4-4
+s31p: 4-4
+s31w: 2-2
+
+
+# document level annotation:
+(s31s0 / sentence
+    :temporal ((s30c :before s31h))
+    :modal ((author :full-affirmative s31h))
+    :coref ((s1t :subset-of s31h)
+            (s29h :same-entity s31h2)
+            (s30n :same-entity s31p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt32
+Index:               	1	2	3	4
+Words:               	Nehe'	nouu	    ne'iixootohuu'oot                       .
+Morphemes:           	nehe'	nouu	    ne'- iixootohuu'oo -t                   .
+Morphemes(English):  	this	swift_fox	then- really_going_at_something -3.S    .
+Part of Speech:      	det	    na	        prefix- vai -infl                       .
+Translation(English):	So, Mr. Fox was really running then.
+
+# sentence level graph:
+(s32h / hiixootohuu'oo-00
+    :actor (s32n / nouu
+        :mod (s32n2 / nehe'))
+    :aspect activity)
+
+
+# alignment:
+s32h: 3-3
+s32n: 2-2
+s32n2: 1-1
+
+
+# document level annotation:
+(s32s0 / sentence
+    :temporal ((s31h :after s32h))
+    :modal ((author :full-affirmative s32h))
+    :coref ((s1t :subset-of s32h)
+            (s31p :same-entity s32n)))
+
+
+
+################################################################################
+# meta-info
+# :: snt33
+Index:               	1	2	3	4	5
+Words:               	'oh	        woow	    hi'isine'	                    noo'ouuhuni3                .
+Morphemes:           	'oh	        woow	    hi- 'isin -e'	                noo'ouuhu -ni3              .
+Morphemes(English):  	but/and	    now.PERF	3S- nose -LOC	                IC.arrive_by_climbing -4S   .
+Part of Speech:      	part	    part	    infl- ni.oblposs+loc -infl	    vai -infl                   .
+Translation(English):	But by then Mr. Woodtick was on Mr. Fox's nose.
+
+# sentence level graph:
+(s33n / no'ouuhu-00
+    :actor (s33p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :goal (s33h / hi'isine'
+        :part-of (s33p2 / person
+            :refer-person 3rd
+            :refer-number singular))
+    :temporal (s33w / woow)
+    :aspect state)
+
+
+# alignment:
+s33n: 4-4
+s33p: 4-4
+s33h: 3-3
+s33p2: 3-3
+s33w: 2-2
+
+
+# document level annotation:
+(s33s0 / sentence
+    :temporal ((s32h :before s33n))
+    :modal ((author :full-affirmative s33n))
+    :coref ((s1t :subset-of s33n)
+            (s31h2 :same-entity s33p)
+            (s32n :same-entity s33p2)))
+
+
+
+################################################################################
+# meta-info
+# :: snt34
+Index:               	1	2	3
+Words:               	Heeyeihno'koohut	                        heetohnooxeihini'               ;
+Morphemes:           	heeyeih- no'koohu -t	                    heetoh- nooxeihini -'           ;
+Morphemes(English):  	IC.almost.PAST- arrive_by_running -3.S	    where- tracks_are_present -0S   ;
+Part of Speech:      	prefix- vai -infl	                        prefix.rel- vii -infl           ;
+Translation(English):	Mr. Fox was just about at the finish line;
+
+# sentence level graph:
+(s34n / no'koohu-00
+    :actor (s34p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :goal (s34p2 / place
+        :place-of (s34n2 / nooxeihini-00))
+    :aspect directed-activity)
+
+
+# alignment:
+s34n: 1-1
+s34p: 1-1
+s34p2: 2-2
+s34n2: 2-2
+
+
+# document level annotation:
+(s34s0 / sentence
+    :temporal ((s32h :after s34n))
+    :modal ((author :full-affirmative s34n))
+    :coref ((s1t :subset-of s34n)
+            (s33p2 :same-entity s34p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt35
+Index:               	1	2	3	4
+Words:               	Ne'too'uhcehit                  ,	ne'bi'cebiseet              .
+Morphemes:           	ne'- too'uhcehi -t	            ,   ne'- bi'- cebisee -t        .
+Morphemes(English):  	then- come_to_stop_run -3.S	    ,   then- just- walk -3.S       .
+Part of Speech:      	prefix- vai -infl	            ,   prefix- prefix- vai -infl   .
+Translation(English):	then he stopped there started just walking.
+
+# sentence level graph:
+(s35c / consecutive
+    :op1 (s35t / too'uhcehi-00
+        :actor (s35p / person
+            :refer-person 3rd
+            :refer-number singular)
+        :aspect performance)
+    :op2 (s35c2 / cebisee-00
+        :actor s35p
+        :degree downtoner
+        :aspect activity))
+
+
+# alignment:
+s35c: 0-0
+s35t: 1-1
+s35p: 1-1
+s35c2: 3-3
+
+
+# document level annotation:
+(s35s0 / sentence
+    :temporal ((s34n :overlap s35t)
+            (s35c :after s35c2))
+    :modal ((author :full-affirmative s35t)
+            (author :full-affirmative s35c2))
+    :coref ((s1t :subset-of s35c)
+            (s34p :same-entity s35p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt36
+Index:               	1	2	3
+Words:               	Nooxoweeyeihno'useet	                    heetohtowooxeini'                   ;
+Morphemes:           	nooxow- heeyeih- no'usee -t	                heetoh- towooxeini -'               ;
+Morphemes(English):  	IC.INTENSE- IC.almost.PAST- arrive -3.S	    where- line/break_is_marked -0S     ;
+Part of Speech:      	prefix- prefix- vai -infl	                prefix.rel- vii -infl               ;
+Translation(English):	The Fox was almost at the line;
+
+# sentence level graph:
+(s36h / heyeihno'usee-00
+    :theme (s36p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :goal (s36p2 / place
+        :place-of (s36t / towooxeini-00))
+    :aspect directed-activity)
+
+
+# alignment:
+s36h: 1-1
+s36p: 1-1
+s36p2: 2-2
+s36t: 2-2
+
+
+# document level annotation:
+(s36s0 / sentence
+    :temporal ((s35c :after s36h))
+    :modal ((author :full-affirmative s36h))
+    :coref ((s1t :subset-of s36h)
+            (s35p :same-entity s36p)
+            (s34p2 :same-entity s36p2)))
+
+
+
+################################################################################
+# meta-info
+# :: snt37
+Index:               	1	2	3	4
+Words:               	Nehe'	hisi'	ne'oowceno'oot              .
+Morphemes:           	nehe'	hisi'	ne'- 'oow - ceno'oo -t      .
+Morphemes(English):  	this	tick	then- down- jump -3.S       .
+Part of Speech:      	det	    na	    prefix- prefix- vai -infl   .
+Translation(English):	That's when the Tick jumped down from the Fox's nose.
+
+# sentence level graph:
+(s37h / hoowceno'oo-00
+    :actor (s37h2 / hisi'
+        :mod (s37n / nehe'))
+    :start (s37p / place)
+    :aspect performance)
+
+
+# alignment:
+s37h: 3-3
+s37h2: 2-2
+s37n: 1-1
+s37p: 3-3
+
+
+# document level annotation:
+(s37s0 / sentence
+    :temporal ((s37h :overlap s36h))
+    :modal ((author :full-affirmative s37h))
+    :coref ((s1t :subset-of s37h)
+            (s33p :same-entity s37h2)
+            (s33h :same-entity s37p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt38
+Index:               	1	2	3
+Words:               	He'ih3i'ok	        hinit           .
+Morphemes:           	he'ih- 3i'oku	    hinit           .
+Morphemes(English):  	NARRPAST- sit	    right_there     .
+Part of Speech:      	prefix- vai	        part            .
+Translation(English):	He was sitting right there (on the finish line).
+
+# sentence level graph:
+(s38x / 3i'oku-00
+    :theme (s38p / person)
+    :place (s38h / hinit)
+    :aspect state)
+
+
+# alignment:
+s38x: 1-1
+s38p: 0-0
+s38h: 2-2
+
+
+# document level annotation:
+(s38s0 / sentence
+    :temporal ((s37h :after s38x))
+    :modal ((author :full-affirmative s38x))
+    :coref ((s1t :subset-of s38x)
+            (s37h2 :same-entity s38p)
+            (s36p2 :same-entity s38h)))
+
+
+
+################################################################################
+# meta-info
+# :: snt39
+Index:               	1	2	3	4
+Words:               	Heitoustoo	            hee3oohok	    nouun               .
+Morphemes:           	hei- toustoo	        hee3oohok	    nouu -n             .
+Morphemes(English):  	2S.IMPERF- what_do?	    said_to_s.o.	swift_fox -OBV.S    .
+Part of Speech:      	infl+prefix- vai	    vta.3S/4	    na -infl            .
+Translation(English):	"What are you doing here?" he said to Fox.
+
+# sentence level graph:
+(s39h / hee3-00
+    :actor (s39p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :theme (s39t / toustoo-00
+        :mode interrogative
+        :theme s39n
+        :aspect activity
+        :quote s39h)
+    :recipient (s39n / nouu)
+    :aspect performance)
+
+
+# alignment:
+s39h: 2-2
+s39p: 2-2
+s39t: 1-1
+s39n: 3-3
+
+
+# document level annotation:
+(s39s0 / sentence
+    :temporal ((s39h :contains s38x)
+            (s39h :overlap s39t))
+    :modal ((author :full-affirmative s39h)
+            (author :full-affirmative s39p)
+            (s39p :neutral-affirmative s39t))
+    :coref ((s1t :subset-of s39h)
+            (s38p :same-entity s39p)
+            (s36p :same-entity s39n)))
+
+
+
+################################################################################
+# meta-info
+# :: snt40
+Index:               	1	2	3	4	5	6	7	8
+Words:               	"   Teecxo'	    3ii'okunoo	    huut	"   heehehk	    hisi'   .
+Morphemes:           	"   teecxo'	    3ii'oku -noo	huut	"   heehehk	    hisi'   .
+Morphemes(English):  	"   long_ago	IC.sit -1S	    here	"   said	    tick    .
+Part of Speech:      	"   part	    vai -infl	    part	"   vai	        na      .
+Translation(English):	"I sat down here a long time ago" Tick said.
+
+# sentence level graph:
+(s40h / heehehk-00
+    :actor (s40h2 / hisi')
+    :theme (s40x / 3i'oku-00
+        :theme s40h2
+        :place (s40h3 / huut)      
+        :temporal (s40t / teecxo')
+        :aspect performance
+        :quote s40h)
+    :recipient (s40p / person)
+    :aspect performance)
+
+
+# alignment:
+s40h: 6-6
+s40h2: 7-7
+s40x: 3-3
+s40h3: 4-4
+s40t: 2-2
+s40p: 0-0
+
+
+# document level annotation:
+(s40s0 / sentence
+    :temporal ((s40h :depends-on s40t)
+            (s39h :after s40h)
+            (s40h :before s40x))
+    :modal ((author :full-affirmative s40h)
+            (author :full-affirmative s40h2)
+            (s40h2 :full-affirmative s40x))
+    :coref ((s1t :subset-of s40h)
+            (s39p :same-entity s40h2)
+            (s39n :same-entity s40p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt41
+Index:               	1	2	3
+Words:               	Seniine'wo'weesnoneet	                    nouu        ;
+Morphemes:           	senii- ne'- wo'wu- esnonee -t	            nouu        ;
+Morphemes(English):  	IC.INTENSE- then- farther- mad -3.S	        swift_fox   ;
+Part of Speech:      	proclitic- prefix- prefix- vai(alt) -infl   na          ;
+Translation(English):	Fox got real mad.
+
+# sentence level graph:
+(s41h / hesnonee-00
+    :experiencer (s41n / nouu)
+    :degree intensifier
+    :ARG2-of (s41h2 / have-degree-91
+        :ARG1 s41n
+        :ARG3 (s41m / more))
+    :aspect performance)
+
+
+# alignment:
+s41h: 1-1
+s41n: 2-2
+s41h2: 1-1
+s41m: 1-1
+
+
+# document level annotation:
+(s41s0 / sentence
+    :temporal ((s40h :after s41h))
+    :modal ((author :full-affirmative s41h))
+    :coref ((s1t :subset-of s41h)
+            (s40p :same-entity s41n)))
+
+
+
+################################################################################
+# meta-info
+# :: snt42
+Index:               	1	2
+Words:               	Hoowuni'eenet               .
+Morphemes:           	hoowu- ni'- eeneti          .
+Morphemes(English):  	3.NEG- able- speak          .
+Part of Speech:      	infl+prefix- prefix- vai    .
+Translation(English):	He couldn't talk.
+
+# sentence level graph:
+(s42h / heeneti-00
+    :polarity -
+    :actor (s42p / person
+        :refer-person 3rd
+        :refer-person singular)
+    :aspect state)
+
+
+# alignment:
+s42h: 1-1
+s42p: 1-1
+
+
+# document level annotation:
+(s42s0 / sentence
+    :temporal ((s42h :contains s41h))
+    :modal ((author :partial-negative s42h))
+    :coref ((s1t :subset-of s42h)
+            (s41n :same-entity s42p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt43
+Index:               	1	2	3	4	5	6
+Words:               	Noh	    ne'nih'iisnoo3woohok	                            nouun	            nehe'	hisi'   .
+Morphemes:           	noh	    ne'- nih'iis- noo3w -oohok	                        nouu -n	            nehe'	hisi'   .
+Morphemes(English):  	and	    that- PAST.what/how- defeat_in_comp. -3S/4.SUBJ	    swift_fox -OBV.S	this	tick    .
+Part of Speech:      	part	proclitic- prefix+rel- vta -infl	                na -infl	        det	    na      .
+Translation(English):	And that's how Mr. Tick beat Mr. Fox in a race
+
+# sentence level graph:
+(s43m / manner
+    :manner-of (s43n / noo3w-00
+        :actor (s43h / hisi'
+            :mod (s43n2 / nehe'))
+        :undergoer (s43n3 / nouu)
+        :theme (s43e / event)
+        :aspect performance))
+
+
+# alignment:
+s43m: 2-2
+s43n: 2-2
+s43h: 5-5
+s43n2: 4-4
+s43n3: 3-3
+
+
+# document level annotation:
+(s43s0 / sentence
+    :temporal ((document-creation-time :before s43n))
+    :modal ((author :full-affirmative s43n))
+    :coref ((s1t :same-entity s43m)
+            (s40h2 :same-entity s43h)
+            (s42p :same-entity s43n3)
+            (s17n :same-event s43e)
+            (s16n2 :same-event s43n)))
+
+
+
+################################################################################
+# meta-info
+# :: snt44
+Index:               	1	2
+Words:               	Nohuusoho'  .
+Morphemes:           	nohuusoho'  .
+Morphemes(English):  	like_that   .
+Part of Speech:      	part        .
+Translation(English):	That's all.
+
+# sentence level graph:
+(s44n / nohuusoho')
+
+
+# alignment:
+s44n: 1-1
+
+
+# document level annotation:
+(s44s0 / sentence)
+
+
+

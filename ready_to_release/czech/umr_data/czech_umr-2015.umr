@@ -1,0 +1,375 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2 3          4 5      6  7
+Words: Zeman : Spolupráce s odbory je permanentní
+
+# sentence level graph:
+(s1x1 / #Colon
+        :ARG0 (s1z1 / Zeman
+            :refer-number singular)
+        :effect (s1b1 / být-007
+            :ARG0 (s1s1 / spolupráce
+                :ARG2 (s1o1 / odbory
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG1 (s1p1 / permanentní
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s1x1: 2-2
+s1z1: 1-1
+s1b1: 6-6
+s1s1: 3-3
+s1o1: 4-5
+s1p1: 7-7
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1 2         3
+Words: Z politické scény
+
+# sentence level graph:
+(s2e1 / event
+        :start (s2s1 / scéna
+            :mod (s2p1 / politický
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s2e1: 0-0
+s2s1: 1-1,3-3
+s2p1: 2-2
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s3p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s3p1: 1-1
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2  3       4       5      6  7     8   9       10       11 12     13     14         15       16        17          18      19
+Words: Pokusy co nejvíce oslabit odbory ,  zúžit jim prostor působení a  omezit jejich kompetence ohrožují stabilitu politického systému .
+
+# sentence level graph:
+(s4o1 / ohrožovat-001
+        :ARG0 (s4p1 / pokus
+            :ARG0 (s4e1 / entity)
+            :ARG1 (s4a1 / and
+                :op1 (s4o2 / oslabit-001
+                    :ARG0 s4e1
+                    :ARG1 (s4o3 / odbory
+                        :refer-number plural)
+                    :extent (s4h1 / hodně
+                        :extent (s4c1 / co
+                            :refer-number singular
+                            :refer-person 3rd))
+                    :aspect performance)
+                :op2 (s4z1 / zúžit-001
+                    :ARG0 s4e1
+                    :affectee s4o3
+                    :ARG1 (s4p2 / prostor
+                        :possessor (s4p3 / působení
+                            :ARG0 (s4e2 / entity)
+                            :ARG1 (s4e3 / entity)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect performance)
+                :op3 (s4o4 / omezit-001
+                    :ARG0 s4e1
+                    :ARG1 (s4k1 / kompetence
+                        :possessor s4o3
+                        :refer-number plural)
+                    :aspect performance))
+            :refer-number plural)
+        :ARG1 (s4s1 / stabilita
+            :possessor (s4s2 / systém
+                :mod (s4p4 / politický
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4o1: 15-15
+s4p1: 1-1
+s4e1: 0-0
+s4a1: 11-11
+s4o2: 4-4
+s4o3: 5-5,8-8,13-13
+s4h1: 3-3
+s4c1: 2-2
+s4z1: 7-7
+s4p2: 9-9
+s4p3: 10-10
+s4e2: 0-0
+s4e3: 0-0
+s4o4: 12-12
+s4k1: 14-14
+s4s1: 16-16
+s4s2: 18-18
+s4p4: 17-17
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4o3 :same-entity s1o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2  3  4  5         6          7    8  9          10    11                12      13 14      15 16      17           18
+Words: Uvádí se to ve společném prohlášení ČSSD a  Odborového svazu dřevozpracujících odvětví ,  lesního a  vodního hospodářství .
+
+# sentence level graph:
+(s5u1 / uvádět-005
+        :ARG1 (s5t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s5e1 / entity)
+        :place (s5p1 / prohlášení
+            :ARG1 (s5e2 / entity)
+            :mod (s5s1 / společný
+                :refer-number singular)
+            :ARG0 (s5a1 / and
+                :op1 (s5c1 / ČSSD)
+                :op2 (s5s2 / svaz
+                    :mod (s5o1 / Odborový
+                        :refer-number singular)
+                    :possessor (s5a2 / and
+                        :op1 (s5o2 / odvětví
+                            :mod (s5d1 / dřevozpracující
+                                :refer-number plural)
+                            :refer-number plural)
+                        :op2 (s5h1 / hospodářství
+                            :mod (s5a3 / and
+                                :op1 (s5l1 / lesní
+                                    :refer-number singular)
+                                :op2 (s5v1 / vodní
+                                    :refer-number singular))
+                            :refer-number singular))
+                    :refer-number singular))
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5u1: 1-2
+s5t1: 3-3
+s5e1: 0-0
+s5p1: 4-4,6-6
+s5e2: 0-0
+s5s1: 5-5
+s5a1: 8-8
+s5c1: 7-7
+s5s2: 10-10
+s5o1: 9-9
+s5a2: 13-13
+s5o2: 12-12
+s5d1: 11-11
+s5h1: 17-17
+s5a3: 15-15
+s5l1: 14-14
+s5v1: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5t1 :same-event s4o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1        2    3     4     5  6    7     8    9  10 11         12   13     14 15         16    17 18          19
+Words: Předseda ČSSD Miloš Zeman k  tomu včera řekl ,  že spolupráce jeho strany s  odborovými svazy je permanentní .
+
+# sentence level graph:
+(s6r1 / říci-008
+        :ARG0 (s6z1 / Zeman
+            :mod (s6m1 / Miloš
+                :refer-number singular)
+            :mod (s6p1 / předseda
+                :possessor (s6c1 / ČSSD)
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s6t1 / ten
+            :refer-number singular)
+        :ARG2 (s6e1 / entity)
+        :temporal (s6v1 / včera)
+        :effect (s6b1 / být-007
+            :ARG0 (s6s1 / spolupráce
+                :ARG0 (s6s2 / strana
+                    :possessor s6z1
+                    :refer-number singular)
+                :ARG2 (s6s3 / svaz
+                    :mod (s6o1 / odborový
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd)
+                :refer-number singular)
+            :ARG1 (s6p2 / permanentní
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6r1: 8-8
+s6z1: 4-4,12-12
+s6m1: 3-3
+s6p1: 1-1
+s6c1: 2-2
+s6t1: 5-6
+s6e1: 0-0
+s6v1: 7-7
+s6b1: 10-10,17-17
+s6s1: 11-11
+s6s2: 13-13
+s6s3: 14-14,16-16
+s6o1: 15-15
+s6p2: 18-18
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6z1 :same-entity s1z1)
+            (s6c1 :same-entity s5c1)
+            (s6t1 :same-entity s5t1)
+            (s6s2 :same-entity s6c1)
+            (s6s3 :same-entity s4o3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1             2    3  4         5       6       7  8       9     10      11 12         13    14     15
+Words: Představitelé ČSSD se například nedávno setkali s  vedením svazu horníků a  Odborového svazu Stavba .
+
+# sentence level graph:
+(s7s1 / setkat-se-002
+        :ARG0 (s7p1 / představitel
+            :ARG1 (s7c1 / ČSSD
+                :refer-number singular)
+            :refer-number plural)
+        :temporal (s7d1 / dávno
+            :polarity -)
+        :clausal-marker (s7n1 / například)
+        :ARG1 (s7v1 / vedení
+            :possessor (s7a1 / and
+                :op1 (s7s2 / svaz
+                    :possessor (s7h1 / horník
+                        :refer-number plural)
+                    :refer-number singular)
+                :op2 (s7s3 / svaz
+                    :mod (s7o1 / odborový
+                        :refer-number singular)
+                    :name (s7s4 / stavba
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s7s1: 3-3,6-6
+s7p1: 1-1
+s7c1: 2-2
+s7d1: 5-5
+s7n1: 4-4
+s7v1: 7-8
+s7a1: 11-11
+s7s2: 9-9
+s7h1: 10-10
+s7s3: 13-13
+s7o1: 12-12
+s7s4: 14-14
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7c1 :same-entity s6s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2      3         4     5       6  7        8      9        10 11      12            13     14         15    16
+Words: Podle Zemana vyvrcholí série setkání v  polovině března schůzkou s  vedením Českomoravské komory odborových svazů .
+
+# sentence level graph:
+(s8v1 / vyvrcholit-001
+        :regard (s8z1 / Zeman
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s8s1 / série
+            :mod (s8s2 / setkání
+                :refer-number plural)
+            :refer-number singular)
+        :temporal (s8p1 / polovina
+            :possessor (s8b1 / březen
+                :refer-number singular)
+            :refer-number singular)
+        :instrument (s8s3 / schůzka
+            :ARG1 (s8v2 / vedení
+                :possessor (s8k1 / komora
+                    :mod (s8c1 / Českomoravský
+                        :refer-number singular)
+                    :possessor (s8s4 / svaz
+                        :mod (s8o1 / odborový
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s8v1: 3-3
+s8z1: 1-2
+s8s1: 4-4
+s8s2: 5-5
+s8p1: 6-7
+s8b1: 8-8
+s8s3: 9-9
+s8v2: 10-11
+s8k1: 13-13
+s8c1: 12-12
+s8s4: 15-15
+s8o1: 14-14
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8z1 :same-entity s6z1)))
+
+

@@ -1,0 +1,395 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1           2        3  4      5
+Words: Navrátilová porazila ve finále Novotnou
+
+# sentence level graph:
+(s1p1 / porazit-001
+        :ARG0 (s1n1 / Navrátilová
+            :refer-number singular)
+        :place (s1f1 / finále
+            :refer-number singular)
+        :ARG1 (s1n2 / Novotná
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s1p1: 2-2
+s1n1: 1-1
+s1f1: 3-4
+s1n2: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1   2     3
+Words: New Haven -
+
+# sentence level graph:
+(s2h1 / Haven
+        :mod (s2n1 / New)
+        :refer-number singular)
+
+# alignment:
+s2h1: 2-2
+s2n1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2      3           4       5  6   7      8         9          10      11          12  13     14        15    16       17 18 19 20 21 22 23 24
+Words: Ve finále exhibičního turnaje v  New Havenu zvítězila Američanka Martina Navrátilová nad českou tenistkou Janou Novotnou 7  :  5  ,  7  :  5  .
+
+# sentence level graph:
+(s3z1 / zvítězit-001
+        :ARG1 (s3f1 / finále
+            :possessor (s3t1 / turnaj
+                :mod (s3e1 / exhibiční
+                    :refer-number singular)
+                :place (s3h1 / Haven
+                    :mod (s3n1 / New)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3n2 / Navrátilová
+            :mod (s3a1 / Američanka
+                :refer-number singular)
+            :mod (s3m1 / Martina
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s3n3 / Novotná
+            :mod (s3t2 / tenistka
+                :mod (s3c1 / český
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3j1 / Jana
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s3a2 / and
+            :op1 (s3m2 / math
+                :op1 (s3x1 / 7)
+                :op2 (s3x2 / 5))
+            :op2 (s3m3 / math
+                :op1 (s3x3 / 7)
+                :op2 (s3x4 / 5)))
+        :aspect performance)
+
+# alignment:
+s3z1: 8-8
+s3f1: 1-2
+s3t1: 4-4
+s3e1: 3-3
+s3h1: 5-5,7-7
+s3n1: 6-6
+s3n2: 11-11
+s3a1: 9-9
+s3m1: 10-10
+s3n3: 12-12,16-16
+s3t2: 14-14
+s3c1: 13-13
+s3j1: 15-15
+s3a2: 20-20
+s3m2: 18-18
+s3x1: 17-17
+s3x2: 19-19
+s3m3: 22-22
+s3x3: 21-21
+s3x4: 23-23
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3f1 :same-entity s1f1)
+            (s3h1 :same-entity s2h1)
+            (s3n2 :same-entity s1n1)
+            (s3n3 :same-entity s1n2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1           2  3     4  5      6       7  8       9       10 11       12    13       14 15       16   17   18 19        20 21   22     23     24 25    26
+Words: Navrátilová ,  která po sezoně zamýšlí s  tenisem skončit ,  předčila svoji soupeřku v  závěrech obou setů a  prosadila se svým stylem servis -  volej .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4p1 / předčit-001
+            :ARG0 (s4n1 / Navrátilová
+                :ARG0-of (s4z1 / zamýšlet-002
+                    :temporal (s4s1 / sezona
+                        :refer-number singular)
+                    :ARG1 (s4s2 / skončit-002
+                        :ARG1 (s4t1 / tenis
+                            :refer-number singular)
+                        :ARG0 s4n1
+                        :aspect performance)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :ARG1 (s4s3 / soupeřka
+                :possessor s4n1
+                :refer-number singular)
+            :temporal (s4z2 / závěr
+                :possessor (s4s4 / set
+                    :mod (s4o1 / oba
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural)
+            :aspect process)
+        :op2 (s4p2 / prosadit-se-001
+            :ARG0 s4n1
+            :instrument (s4s5 / styl
+                :possessor s4n1
+                :name (s4a2 / and
+                    :op1 (s4s6 / servis
+                        :refer-number singular)
+                    :op2 (s4v1 / volej
+                        :refer-number singular))
+                :refer-number singular)
+            :aspect performance))
+
+# alignment:
+s4a1: 18-18
+s4p1: 11-11
+s4s3: 13-13
+s4z2: 14-15
+s4s4: 17-17
+s4o1: 16-16
+s4n1: 1-1,3-3,12-12,21-21
+s4z1: 6-6
+s4s1: 4-5
+s4s2: 9-9
+s4t1: 7-8
+s4p2: 19-20
+s4s5: 22-22
+s4a2: 24-24
+s4s6: 23-23
+s4v1: 25-25
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s3 :same-entity s3n3)
+            (s4n1 :same-entity s3n2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2    3         4  5      6    7      8    9      10  11       12 13  14  15     16 17 18 19 20     21     22
+Words: Novotná sice prolomila ve třetím gamu úvodní sady podání své soupeřky ,  ale ani vedení 5  :  3  jí nebylo platné .
+
+# sentence level graph:
+(s5b1 / but-91
+        :clausal-marker (s5s1 / sice)
+        :ARG1 (s5p1 / prolomit-001
+            :ARG0 (s5n1 / Novotná
+                :refer-number singular)
+            :temporal (s5g1 / game
+                :mod (s5t1 / třetí
+                    :refer-number singular)
+                :possessor (s5s2 / sada
+                    :mod (s5u1 / úvodní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s5p2 / podání
+                :ARG0 (s5s3 / soupeřka
+                    :possessor s5n1
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :ARG2 (s5b2 / být-007
+            :clausal-marker (s5a1 / ani)
+            :ARG0 (s5v1 / vedení
+                :ARG0 (s5e1 / entity)
+                :mod (s5m1 / math
+                    :op1 (s5x2 / 5)
+                    :op2 (s5x3 / 3))
+                :refer-number singular)
+            :affectee s5n1
+            :ARG1 (s5p3 / platný
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity
+            :polarity -))
+
+# alignment:
+s5b1: 13-13
+s5s1: 2-2
+s5p1: 3-3
+s5n1: 1-1,10-10,19-19
+s5g1: 4-4,6-6
+s5t1: 5-5
+s5s2: 8-8
+s5u1: 7-7
+s5p2: 9-9
+s5s3: 11-11
+s5b2: 20-20
+s5a1: 14-14
+s5v1: 15-15
+s5e1: 0-0
+s5m1: 17-17
+s5x2: 16-16
+s5x3: 18-18
+s5p3: 21-21
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5n1 :same-entity s4s3)
+            (s5s3 :same-entity s4n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2       3     4    5     6    7       8  9   10     11      12       13          14    15        16 17     18       19    20
+Words: Rovněž začátek druhé sady vyšel lépe Novotné ,  ale bývalá světová jednička Navrátilová znovu potvrdila v  závěru pevnější nervy .
+
+# sentence level graph:
+(s6b1 / but-91
+        :ARG1 (s6v1 / vyjít-010
+            :ARG1 (s6z1 / začátek
+                :possessor (s6s1 / sada
+                    :clausal-marker (s6r1 / rovněž)
+                    :mod (s6d1 / druhý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :manner (s6l1 / lépe)
+            :ARG0 (s6n1 / Novotná
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular
+            :aspect performance)
+        :ARG2 (s6p1 / potvrdit-001
+            :ARG0 (s6n2 / Navrátilová
+                :mod (s6j1 / jednička
+                    :mod (s6b2 / bývalý
+                        :refer-number singular)
+                    :mod (s6s2 / světový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s6z2 / znovu)
+            :temporal (s6z3 / závěr
+                :refer-number singular)
+            :ARG1 (s6n3 / nerv
+                :mod (s6p2 / pevný
+                    :refer-number plural)
+                :refer-number plural)
+            :aspect performance))
+
+# alignment:
+s6b1: 9-9
+s6v1: 5-5
+s6z1: 2-2
+s6s1: 4-4
+s6r1: 1-1
+s6d1: 3-3
+s6l1: 6-6
+s6n1: 7-7
+s6p1: 15-15
+s6n2: 13-13
+s6j1: 12-12
+s6b2: 10-10
+s6s2: 11-11
+s6z2: 14-14
+s6z3: 16-17
+s6n3: 19-19
+s6p2: 18-18
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6n1 :same-entity s5n1)
+            (s6n2 :same-entity s5s3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2          3       4  5     6      7  8     9     10  11  12   13        14         15             16      17     18 19   20 21       22     23 24         25  26       27        28       29
+Words: V  exhibičním turnaji ,  jehož finále se hrálo pouhé dva dny před zahájením posledního grandslamového turnaje sezony US Open ve Flushing Meadow ,  startovalo osm předních světových tenistek .
+
+# sentence level graph:
+(s7s1 / startovat-002
+        :place (s7t1 / turnaj
+            :mod (s7e1 / exhibiční
+                :refer-number singular)
+            :mod (s7h1 / hrát-001
+                :ARG1 (s7f1 / finále
+                    :possessor s7t1
+                    :refer-number singular)
+                :ARG0 (s7e2 / entity)
+                :temporal (s7d1 / den
+                    :mod (s7p1 / pouhý
+                        :refer-number plural)
+                    :mod (s7d2 / dva
+                        :refer-number plural)
+                    :temporal (s7z1 / zahájení
+                        :ARG0 (s7t2 / turnaj
+                            :mod (s7p2 / poslední
+                                :refer-number singular)
+                            :mod (s7g1 / grandslamový
+                                :refer-number singular)
+                            :possessor (s7s2 / sezona
+                                :refer-number singular)
+                            :name (s7o1 / Open
+                                :mod (s7u1 / US))
+                            :place (s7m1 / Meadow
+                                :mod (s7f2 / Flushing))
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular
+                :aspect activity)
+            :refer-number singular)
+        :ARG0 (s7t3 / tenistka
+            :mod (s7o2 / osm
+                :refer-number singular)
+            :mod (s7p3 / přední
+                :refer-number plural)
+            :mod (s7s3 / světový
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s7s1: 24-24
+s7t1: 1-1,3-3,5-5
+s7e1: 2-2
+s7h1: 7-8
+s7f1: 6-6
+s7e2: 0-0
+s7d1: 11-11
+s7p1: 9-9
+s7d2: 10-10
+s7z1: 12-13
+s7t2: 16-16
+s7p2: 14-14
+s7g1: 15-15
+s7s2: 17-17
+s7o1: 19-19
+s7u1: 18-18
+s7m1: 20-20,22-22
+s7f2: 21-21
+s7t3: 28-28
+s7o2: 25-25
+s7p3: 26-26
+s7s3: 27-27
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7t1 :same-entity s3t1)
+            (s7f1 :same-entity s3f1)))
+
+

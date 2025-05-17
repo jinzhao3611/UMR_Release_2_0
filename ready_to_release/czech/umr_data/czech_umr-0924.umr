@@ -1,0 +1,269 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2  3       4
+Words: Kalamita na pražské magistrále
+
+# sentence level graph:
+(s1k1 / kalamita
+        :place (s1m1 / magistrála
+            :mod (s1p1 / pražský
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1k1: 1-1
+s1m1: 2-2,4-4
+s1p1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( teb ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2t1 / teb)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2t1: 3-3
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p1 :same-entity s1p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2        3       4     5  6           7        8  9      10      11         12 13  14   15 16       17   18       19    20  21    22
+Words: Dopravní kalamita vznikla včera v  odpoledních hodinách na zúžené pražské magistrále ,  kde jsou v  současné době otevřeny pouze dva pruhy .
+
+# sentence level graph:
+(s3v1 / vzniknout-002
+        :ARG0 (s3k1 / kalamita
+            :mod (s3d1 / dopravní
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3v2 / včera)
+        :temporal (s3h1 / hodina
+            :mod (s3o1 / odpolední
+                :refer-number plural)
+            :refer-number plural)
+        :place (s3m1 / magistrála
+            :mod (s3p1 / pražský
+                :refer-number singular)
+            :mod (s3z1 / zúžený
+                :refer-number singular)
+            :place-of (s3o2 / otevřít-002
+                :temporal (s3d2 / doba
+                    :mod (s3s1 / současný
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s3e1 / entity)
+                :ARG1 (s3p2 / pruh
+                    :clausal-marker (s3p3 / pouze)
+                    :mod (s3d3 / dva
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :aspect performance)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3v1: 3-3
+s3k1: 2-2
+s3d1: 1-1
+s3v2: 4-4
+s3h1: 5-5,7-7
+s3o1: 6-6
+s3m1: 8-8,11-11,13-13
+s3p1: 10-10
+s3z1: 9-9
+s3o2: 14-14,18-18
+s3d2: 15-15,17-17
+s3s1: 16-16
+s3e1: 0-0
+s3p2: 21-21
+s3p3: 19-19
+s3d3: 20-20
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3k1 :same-entity s1k1)
+            (s3m1 :same-entity s1m1)
+            (s3p1 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2         3  4  5        6  7          8    9        10 11        12    13
+Words: Lidé vracející se z  prázdnin a  dovolených měli problémy s  průjezdem Prahy .
+
+# sentence level graph:
+(s4m1 / mít-038
+        :ARG0 (s4c1 / člověk
+            :mod (s4v1 / vracející_se
+                :start (s4a1 / and
+                    :op1 (s4p1 / prázdniny
+                        :refer-number plural)
+                    :op2 (s4d1 / dovolená
+                        :refer-number plural))
+                :refer-number plural)
+            :refer-number plural)
+        :predicative-noun (s4p2 / problém
+            :ARG0 s4c1
+            :ARG1 (s4p3 / průjezd
+                :ARG0 s4c1
+                :path (s4p4 / Praha
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number plural
+        :aspect state)
+
+# alignment:
+s4m1: 8-8
+s4c1: 1-1
+s4v1: 2-3
+s4a1: 6-6
+s4p1: 4-5
+s4d1: 4-4,7-7
+s4p2: 9-9
+s4p3: 10-11
+s4p4: 12-12
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4p4 :same-entity s3p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2         3          4            5  6  7  8  9     10      11      12       13        14   15     16 17      18 19 20   21     22      23   24     25 26        27  28    29     30   31        32 33 34    35          36      37         38   39 40          41      42
+Words: Podle informací dopravního inspektorátu hl .  m  .  Prahy špatnou situaci zavinili především sami řidiči ,  protože se ve dvou užších pruzích báli jezdit a  vytvořili tak jeden široký pruh uprostřed ,  ke všemu nevyužívali četných objízdných tras a  zablokovali centrum .
+
+# sentence level graph:
+(s5z1 / zavinit-001
+        :regard (s5i1 / informace
+            :ARG0 (s5i2 / inspektorát
+                :mod (s5d1 / dopravní
+                    :refer-number singular)
+                :possessor (s5m1 / město
+                    :mod (s5h1 / hlavní)
+                    :mod (s5p1 / Praha
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :ARG1 (s5s1 / situace
+            :mod (s5s2 / špatný
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s5p2 / především)
+        :manner (s5s3 / sám
+            :mod-of s5r1
+            :refer-number plural)
+        :ARG0 (s5r1 / řidič
+            :refer-number plural)
+        :cause (s5h2 / have-result-91
+            :ARG1 (s5b1 / bát-se-002
+                :ARG0 s5r1
+                :ARG1 (s5j1 / jezdit-003
+                    :place (s5p3 / pruh
+                        :mod (s5d2 / dva
+                            :refer-number plural)
+                        :mod (s5u1 / úzký
+                            :refer-number plural)
+                        :refer-number plural)
+                    :ARG0 s5r1
+                    :aspect activity)
+                :refer-number plural
+                :aspect activity)
+            :clausal-marker (s5t1 / tak)
+            :ARG2 (s5a1 / and
+                :op1 (s5v1 / vytvořit-001
+                    :ARG0 s5r1
+                    :ARG1 (s5p4 / pruh
+                        :mod (s5s4 / široký
+                            :refer-number singular)
+                        :mod (s5j2 / jeden
+                            :refer-number singular)
+                        :refer-number singular)
+                    :place (s5u2 / uprostřed)
+                    :refer-number plural
+                    :aspect performance)
+                :op2 (s5v2 / využívat-001
+                    :ARG0 s5r1
+                    :clausal-marker (s5k1 / ke_všemu
+                        :refer-number singular)
+                    :ARG1 (s5t2 / trasa
+                        :mod (s5o1 / objízdný
+                            :refer-number plural)
+                        :mod (s5c1 / četný
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural
+                    :aspect activity
+                    :polarity -)
+                :op3 (s5z2 / zablokovat-001
+                    :ARG0 s5r1
+                    :ARG1 (s5c2 / centrum
+                        :refer-number singular)
+                    :refer-number plural
+                    :aspect performance)))
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s5z1: 12-12
+s5i1: 1-2
+s5i2: 4-4
+s5d1: 3-3
+s5m1: 7-7
+s5h1: 5-5
+s5p1: 9-9
+s5s1: 11-11
+s5s2: 10-10
+s5p2: 13-13
+s5s3: 14-14
+s5r1: 15-15
+s5h2: 25-25
+s5b1: 17-18,23-23
+s5j1: 24-24
+s5p3: 19-19,22-22
+s5d2: 20-20
+s5u1: 21-21
+s5t1: 27-27
+s5a1: 39-39
+s5v1: 17-17,26-26
+s5p4: 30-30
+s5s4: 29-29
+s5j2: 28-28
+s5u2: 31-31
+s5v2: 17-17,35-35
+s5k1: 33-34
+s5t2: 38-38
+s5o1: 37-37
+s5c1: 36-36
+s5z2: 17-17,40-40
+s5c2: 41-41
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5m1 :same-entity s4p4)
+            (s5s1 :same-entity s3k1)
+            (s5p3 :same-entity s3p2)))
+
+

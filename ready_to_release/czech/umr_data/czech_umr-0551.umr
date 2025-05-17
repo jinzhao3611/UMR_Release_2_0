@@ -1,0 +1,94 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2    3       4  5        6
+Words: Souboj dvou devítek na Strahově .
+
+# sentence level graph:
+(s1s1 / souboj
+        :ARG1 (s1e1 / entity)
+        :ARG2 (s1x1 / #Rcp
+            :refer-number plural)
+        :ARG0 (s1d1 / devítka
+            :mod (s1d2 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :place (s1s2 / Strahov
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1s1: 1-1
+s1e1: 0-0
+s1x1: 0-0
+s1d1: 3-3
+s1d2: 2-2
+s1s2: 4-5
+
+# document level annotation:
+(s1s0 / sentence
+    :coref ((s1x1 :same-entity s1d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1            2       3        4  5        6         7       8
+Words: Sparťanského Kožleje sledoval po trávníku žižkovský Kordule .
+
+# sentence level graph:
+(s2s1 / sledovat-002
+        :ARG1 (s2k1 / Kožlej
+            :mod (s2s2 / sparťanský
+                :refer-number singular)
+            :refer-number singular)
+        :place (s2t1 / trávník
+            :refer-number singular)
+        :ARG0 (s2k2 / Kordule
+            :mod (s2z1 / žižkovský
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s2s1: 3-3
+s2k1: 2-2
+s2s2: 1-1
+s2t1: 4-5
+s2k2: 7-7
+s2z1: 6-6
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2     3    4 5
+Words: Foto Pavel Hula - LN
+
+# sentence level graph:
+(s3e1 / event
+        :ARG1 (s3f1 / foto
+            :refer-number singular)
+        :ARG0 (s3h1 / Hula
+            :mod (s3p1 / Pavel
+                :refer-number singular)
+            :parenthesis (s3l1 / LN
+                :refer-number plural)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s3e1: 0-0
+s3f1: 1-1
+s3h1: 3-3
+s3p1: 2-2
+s3l1: 5-5
+
+# document level annotation:
+(s3s0 / sentence)
+
+

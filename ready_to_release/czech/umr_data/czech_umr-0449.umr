@@ -1,0 +1,267 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2  3       4      5 6
+Words: Kuba je ochotna jednat s USA
+
+# sentence level graph:
+(s1b1 / být-007
+        :ARG0 (s1k1 / Kuba
+            :refer-number singular)
+        :ARG1 (s1o1 / ochotný
+            :ARG1 (s1j1 / jednat-001
+                :ARG0 s1k1
+                :ARG1 (s1e1 / entity)
+                :ARG2 (s1u1 / USA
+                    :refer-number plural)
+                :aspect activity))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1b1: 2-2
+s1k1: 1-1
+s1o1: 3-3
+s1j1: 4-4
+s1e1: 0-0
+s1u1: 5-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: Havana -
+
+# sentence level graph:
+(s2h1 / Havana
+        :refer-number singular)
+
+# alignment:
+s2h1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2  3    4  5      6     7         8      9      10 11  12 13         14    15
+Words: Kuba v  noci na sobotu znovu potvrdila ochotu jednat s  USA o  uprchlické krizi .
+
+# sentence level graph:
+(s3p1 / potvrdit-001
+        :ARG0 (s3k1 / Kuba
+            :refer-number singular)
+        :temporal (s3n1 / noc
+            :temporal (s3s1 / sobota
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3z1 / znovu)
+        :ARG1 (s3o1 / ochota
+            :ARG0 s3k1
+            :ARG1 (s3j1 / jednat-001
+                :ARG0 s3k1
+                :ARG2 (s3u1 / USA
+                    :refer-number plural)
+                :ARG1 (s3k2 / krize
+                    :mod (s3u2 / uprchlický
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect activity)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3p1: 7-7
+s3k1: 1-1
+s3n1: 2-3
+s3s1: 4-5
+s3z1: 6-6
+s3o1: 8-8
+s3j1: 9-9
+s3u1: 10-11
+s3k2: 12-12,14-14
+s3u2: 13-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3k1 :same-entity s1k1)
+            (s3u1 :same-entity s1u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2  3        4       5         6       7
+Words: Oznámil to kubánský ministr zahraničí Robaina .
+
+# sentence level graph:
+(s4o1 / oznámit-002
+        :effect (s4t1 / ten
+            :refer-number singular)
+        :ARG2 (s4e1 / entity)
+        :ARG0 (s4r1 / Robaina
+            :mod (s4m1 / ministr
+                :mod (s4k1 / kubánský
+                    :refer-number singular)
+                :possessor (s4z1 / zahraničí
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4o1: 1-1
+s4t1: 2-2
+s4e1: 0-0
+s4r1: 6-6
+s4m1: 4-4
+s4k1: 3-3
+s4z1: 5-5
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3p1)
+            (s4k1 :same-entity s3k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2    3         4    5      6   7     8        9       10
+Words: Podle jeho vyjádření nemá Havana nic proti zahájení jednání .
+
+# sentence level graph:
+(s5m1 / mít-022
+        :regard (s5v1 / vyjádření
+            :ARG1 (s5e1 / entity)
+            :ARG0 (s5e2 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :ARG0 (s5h1 / Havana
+            :refer-number singular)
+        :predicative-noun (s5n1 / nic
+            :refer-number singular
+            :refer-person 3rd
+            :polarity -)
+        :affectee (s5z1 / zahájení
+            :ARG0 (s5e3 / entity)
+            :ARG1 (s5j1 / jednání
+                :ARG0 (s5e4 / entity)
+                :ARG1 (s5e5 / entity)
+                :ARG2 (s5e6 / entity)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state
+        :polarity -)
+
+# alignment:
+s5m1: 4-4
+s5v1: 1-1,3-3
+s5e1: 0-0
+s5e2: 2-2
+s5h1: 5-5
+s5n1: 6-6
+s5z1: 7-8
+s5e3: 0-0
+s5j1: 9-9
+s5e4: 0-0
+s5e5: 0-0
+s5e6: 0-0
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5v1 :same-event s4o1)
+            (s5e2 :same-entity s4r1)
+            (s5h1 :same-entity s4k1)
+            (s5j1 :same-event s3j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2       3   4    5  6  7        8       9        10 11    12          13     14
+Words: Prezident Clinton ale řekl ,  že jakákoli jednání nepůjdou za rámec emigračních otázek .
+
+# sentence level graph:
+(s6r1 / říci-008
+        :clausal-marker (s6a1 / ale)
+        :ARG0 (s6c1 / Clinton
+            :mod (s6p1 / prezident
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s6e1 / entity)
+        :effect (s6j1 / jít-025
+            :ARG0 (s6j2 / jednání
+                :ARG0 (s6e2 / entity)
+                :ARG1 (s6e3 / entity)
+                :ARG2 (s6e4 / entity)
+                :mod (s6j3 / jakýkoli
+                    :refer-number plural)
+                :refer-number plural)
+            :goal (s6r2 / rámec
+                :possessor (s6o1 / otázka
+                    :mod (s6e5 / emigrační
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6r1: 4-4
+s6a1: 3-3
+s6c1: 2-2
+s6p1: 1-1
+s6e1: 0-0
+s6j1: 6-6,9-9
+s6j2: 8-8
+s6e2: 0-0
+s6e3: 0-0
+s6e4: 0-0
+s6j3: 7-7
+s6r2: 10-11
+s6o1: 13-13
+s6e5: 12-12
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6j2 :same-entity s5j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1         2  3      4
+Words: Komentáře na straně 7
+
+# sentence level graph:
+(s7k1 / komentář
+        :place (s7s1 / strana
+            :mod (s7x1 / 7)
+            :refer-number singular)
+        :refer-number plural)
+
+# alignment:
+s7k1: 1-1
+s7s1: 2-3
+s7x1: 4-4
+
+# document level annotation:
+(s7s0 / sentence)
+
+

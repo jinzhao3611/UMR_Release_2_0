@@ -1,0 +1,884 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2
+Words: Jedinečné seance
+
+# sentence level graph:
+(s1s1 / seance
+        :mod (s1j1 / jedinečný
+            :refer-number plural)
+        :refer-number plural)
+
+# alignment:
+s1s1: 2-2
+s1j1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2         3  4          5       6      7       8  9        10     11 12 13    14      15 16   17   18 19     20   21   22
+Words: Polský výtvarník a  divadelník TADEUSZ KANTOR sjezdil s  divadlem CRICOT 2  ,  které založil v  roce 1955 ,  takřka celý svět .
+
+# sentence level graph:
+(s2s1 / sjezdit-001
+        :ARG0 (s2k1 / Kantor
+            :mod (s2t1 / Tadeusz
+                :refer-number singular)
+            :mod (s2a1 / and
+                :op1 (s2v1 / výtvarník
+                    :mod (s2p1 / polský
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s2d1 / divadelník
+                    :mod s2p1
+                    :refer-number singular))
+            :refer-number singular)
+        :companion (s2d2 / divadlo
+            :name (s2c1 / Cricot
+                :mod (s2x2 / 2)
+                :refer-number singular)
+            :ARG1-of (s2z1 / založit-001
+                :ARG0 s2k1
+                :temporal (s2r1 / rok
+                    :mod (s2x4 / 1955)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :ARG1 (s2s2 / svět
+            :mod (s2c2 / celý
+                :extent (s2t2 / takřka)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s2s1: 7-7
+s2k1: 6-6
+s2t1: 5-5
+s2a1: 3-3
+s2v1: 2-2
+s2p1: 1-1
+s2d1: 4-4
+s2d2: 8-9,13-13
+s2c1: 10-10
+s2x2: 11-11
+s2z1: 14-14
+s2r1: 15-16
+s2x4: 17-17
+s2s2: 21-21
+s2c2: 20-20
+s2t2: 19-19
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2  3  4    5     6      7  8              9
+Words: Nepodařilo se mu však nikdy přijet do Československa .
+
+# sentence level graph:
+(s3p1 / podařit-se-001
+        :clausal-marker (s3v1 / však)
+        :ARG0 (s3e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s3n1 / nikdy
+            :polarity -)
+        :ARG1 (s3p2 / přijet-001
+            :ARG0 s3e1
+            :goal (s3c1 / Československo
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s3p1: 1-2
+s3v1: 4-4
+s3e1: 3-3
+s3n1: 5-5
+s3p2: 6-6
+s3c1: 7-8
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2  3  4   5       6  7  8    9     10 11   12        13  14      15      16 17      18    19       20 21        22 23    24          25          26  27 28   29    30 31       32      33       34 35      36 37   38 39 40        41       42     43 44   45   46
+Words: Cricot 2  k  nám zavítal až po jeho smrti -  nyní vystupuje pod vedením malířky a  herečky Marie Stankret -  Kantorové v  rámci Kafkovských divadelních dnů (  dnes ještě v  pražském Divadle Labyrint a  pozítří v  Brně )  s  proslulou Zemřelou třídou z  roku 1975 .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4z1 / zavítat-001
+            :ARG0 (s4c1 / Cricot
+                :mod (s4x1 / 2)
+                :refer-number singular)
+            :goal (s4e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :clausal-marker (s4a2 / až)
+            :temporal (s4s1 / smrt
+                :ARG0 (s4e2 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s4v1 / vystupovat-002
+            :ARG0 s4c1
+            :temporal (s4n1 / nyní)
+            :place (s4e3 / entity)
+            :condition (s4v2 / vedení
+                :ARG1 s4c1
+                :ARG0 (s4k1 / Kantorová
+                    :mod (s4s2 / Stankret)
+                    :mod (s4m1 / Marie
+                        :refer-number singular)
+                    :mod (s4a3 / and
+                        :op1 (s4m2 / malířka
+                            :refer-number singular)
+                        :op2 (s4h1 / herečka
+                            :refer-number singular))
+                    :refer-number singular)
+                :refer-number singular)
+            :regard (s4d1 / den
+                :mod (s4d2 / divadelní
+                    :refer-number plural)
+                :mod (s4k2 / Kafkovský
+                    :refer-number plural)
+                :refer-number plural)
+            :parenthesis (s4a4 / and
+                :op1 (s4v3 / vystupovat-002
+                    :ARG0 s4c1
+                    :temporal (s4d3 / dnes)
+                    :temporal (s4j1 / ještě)
+                    :place (s4d4 / divadlo
+                        :name (s4l1 / Labyrint
+                            :refer-number singular)
+                        :mod (s4p1 / pražský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :op2 (s4v4 / vystupovat-002
+                    :ARG0 s4c1
+                    :temporal (s4p2 / pozítří)
+                    :place (s4b1 / Brno
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity))
+            :companion (s4x6 / #Idph
+                :name (s4t1 / třída
+                    :mod (s4z2 / Zemřelý
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s4p3 / proslulý
+                    :refer-number singular)
+                :temporal (s4r1 / rok
+                    :mod (s4x7 / 1975)
+                    :refer-number singular))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s4a1: 10-10
+s4z1: 5-5
+s4e1: 3-4
+s4a2: 6-6
+s4s1: 7-7,9-9
+s4e2: 8-8
+s4c1: 1-1
+s4x1: 2-2
+s4v1: 12-12
+s4n1: 11-11
+s4e3: 0-0
+s4v2: 13-14
+s4k1: 21-21
+s4s2: 19-19
+s4m1: 18-18
+s4a3: 16-16
+s4m2: 15-15
+s4h1: 17-17
+s4d1: 22-23,26-26
+s4d2: 25-25
+s4k2: 24-24
+s4a4: 34-34
+s4v3: 0-0
+s4d3: 28-28
+s4j1: 29-29
+s4d4: 30-30,32-32
+s4l1: 33-33
+s4p1: 31-31
+s4v4: 0-0
+s4p2: 35-35
+s4b1: 36-37
+s4x6: 0-0
+s4t1: 42-42
+s4z2: 41-41
+s4p3: 40-40
+s4r1: 43-44
+s4x7: 45-45
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3c1)
+            (s4e2 :same-entity s3e1)
+            (s4c1 :same-entity s2d2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2        3   4           5  6       7  8     9  10       11     12 13           14 15 16        17      18   19      20    21 22   23        24   25    26
+Words: Kantor zůstával při představení na jevišti ,  řídil je způsobem takřka "  dirigentským "  a  opravoval detaily jako pečlivý malíř ,  jenž dokončuje svůj obraz .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5z1 / zůstávat-005
+            :ARG0 (s5k1 / Kantor
+                :refer-number singular
+                :refer-person 3rd)
+            :temporal (s5p1 / představení
+                :refer-number singular)
+            :place (s5j1 / jeviště
+                :refer-number singular)
+            :refer-number singular
+            :aspect habitual)
+        :op2 (s5r1 / řídit-001
+            :ARG0 s5k1
+            :ARG1 s5p1
+            :manner (s5z2 / způsob
+                :mod (s5d1 / dirigentský
+                    :extent (s5t1 / takřka)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity)
+        :op3 (s5o1 / opravovat-001
+            :ARG0 s5k1
+            :ARG1 (s5d2 / detail
+                :refer-number plural)
+            :manner (s5x4 / #Equal
+                :comparison (s5o2 / opravovat-001
+                    :ARG1 s5d2
+                    :ARG0 (s5m1 / malíř
+                        :mod (s5p2 / pečlivý
+                            :refer-number singular)
+                        :ARG0-of (s5d3 / dokončovat-001
+                            :ARG1 (s5o3 / obraz
+                                :source s5m1
+                                :refer-number singular)
+                            :refer-number singular
+                            :refer-person 3rd
+                            :aspect activity)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect activity))
+            :refer-number singular
+            :aspect activity))
+
+# alignment:
+s5a1: 15-15
+s5z1: 2-2
+s5p1: 3-4,9-9
+s5j1: 5-6
+s5k1: 1-1
+s5r1: 8-8
+s5z2: 10-10
+s5d1: 13-13
+s5t1: 11-11
+s5o1: 16-16
+s5d2: 17-17
+s5x4: 0-0
+s5o2: 0-0
+s5m1: 20-20,22-22,24-24
+s5p2: 19-19
+s5d3: 23-23
+s5o3: 25-25
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5k1 :same-entity s4e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2    3           4      5        6     7      8    9    10 11     12      13 14         15    16
+Words: Díky této preciznosti můžeme Zemřelou třídu vnímat jako dílo na pomezí divadla a  výtvarného umění .
+
+# sentence level graph:
+(s6v1 / vnímat-002
+        :cause (s6p1 / preciznost
+            :mod (s6t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s6x1 / #Idph
+            :name (s6t2 / třída
+                :mod (s6z1 / Zemřelý
+                    :refer-number singular)
+                :refer-number singular))
+        :ARG0 (s6e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :manner (s6d1 / dílo
+            :mod-of s6t2
+            :mod (s6p2 / pomezí
+                :possessor (s6a1 / and
+                    :op1 (s6d2 / divadlo
+                        :refer-number singular)
+                    :op2 (s6u1 / umění
+                        :mod (s6v2 / výtvarný
+                            :refer-number singular)
+                        :refer-number singular))
+                :refer-number singular)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s6v1: 4-4,7-7
+s6p1: 1-1,3-3
+s6t1: 2-2
+s6x1: 0-0
+s6t2: 6-6
+s6z1: 5-5
+s6e1: 0-0
+s6d1: 8-9
+s6p2: 10-11
+s6a1: 13-13
+s6d2: 12-12
+s6u1: 15-15
+s6v2: 14-14
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p1 :same-entity s5a1)
+            (s6x1 :same-entity s4x6)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1           2    3  4    5  6       7      8         9  10    11     12 13      14    15      16 17     18      19     20
+Words: Prošedivělí muži a  ženy v  černých šatech vláčející s  sebou loutky -  fantomy svého dětství -  zaplní dřevěné lavice .
+
+# sentence level graph:
+(s7z1 / zaplnit-001
+        :ARG0 (s7a1 / and
+            :op1 (s7m1 / muž
+                :mod (s7p1 / prošedivělý
+                    :refer-number plural)
+                :mod (s7s1 / šat
+                    :mod (s7c1 / černý
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s7v1 / vláčející
+                    :goal s7a1
+                    :ARG1 (s7i1 / identity-91
+                        :ARG1 (s7l1 / loutka
+                            :refer-number plural)
+                        :ARG2 (s7f1 / fantom
+                            :possessor (s7d1 / dětství
+                                :possessor s7a1
+                                :refer-number singular)
+                            :refer-number plural))
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s7z2 / žena
+                :mod s7p1
+                :mod s7s1
+                :mod s7v1
+                :refer-number plural))
+        :ARG1 (s7l2 / lavice
+            :mod (s7d2 / dřevěný
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s7z1: 17-17
+s7a1: 3-3,9-10,14-14
+s7m1: 2-2
+s7p1: 1-1
+s7s1: 5-5,7-7
+s7c1: 6-6
+s7v1: 8-8
+s7i1: 12-12
+s7l1: 11-11
+s7f1: 13-13
+s7d1: 15-15
+s7z2: 4-4
+s7l2: 19-19
+s7d2: 18-18
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1      2  3                4        5       6  7     8         9         10    11 12        13 14   15 16        17    18      19    20 21      22     23 24         25      26 27      28    29 30       31    32 33          34 35     36 37    38 39        40 41 42
+Words: Útržky z  traumatizujících školních zážitků ,  pedel zpívající rakouskou hymnu ,  uklízečka -  smrt ,  vyhlášení první světové války ,  postava vojáka ,  mechanická kolébka v  popředí scény ,  židovské zpěvy ,  grotesknost ,  poezie ,  stesk i  nostalgie .  .  .
+
+# sentence level graph:
+(s8a1 / and
+        :op1 (s8u1 / útržek
+            :start (s8z1 / zážitek
+                :mod (s8s1 / školní
+                    :refer-number plural)
+                :mod (s8t1 / traumatizující
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :op2 (s8p1 / pedel
+            :mod (s8z2 / zpívající
+                :ARG1 (s8h1 / hymna
+                    :mod (s8r1 / rakouský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :op3 (s8i1 / identity-91
+            :ARG1 (s8u2 / uklízečka
+                :refer-number singular)
+            :ARG2 (s8s2 / smrt
+                :refer-number singular))
+        :op4 (s8v1 / vyhlášení
+            :ARG0 (s8e1 / entity)
+            :ARG1 (s8v2 / válka
+                :mod (s8s3 / světový
+                    :refer-number singular)
+                :mod (s8p2 / první
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :op5 (s8p3 / postava
+            :mod (s8v3 / voják
+                :refer-number singular)
+            :refer-number singular)
+        :op6 (s8k1 / kolébka
+            :mod (s8m1 / mechanický
+                :refer-number singular)
+            :place (s8p4 / popředí
+                :possessor (s8s4 / scéna
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :op7 (s8z3 / zpěv
+            :mod (s8z4 / židovský
+                :refer-number plural)
+            :refer-number plural)
+        :op8 (s8g1 / grotesknost
+            :refer-number singular)
+        :op9 (s8p5 / poezie
+            :refer-number singular)
+        :op10 (s8a2 / and
+            :op1 (s8s5 / stesk
+                :refer-number singular)
+            :op2 (s8n1 / nostalgie
+                :refer-number singular)))
+
+# alignment:
+s8a1: 6-6
+s8u1: 1-1
+s8z1: 2-2,5-5
+s8s1: 4-4
+s8t1: 3-3
+s8p1: 7-7
+s8z2: 8-8
+s8h1: 10-10
+s8r1: 9-9
+s8i1: 13-13
+s8u2: 12-12
+s8s2: 14-14
+s8v1: 16-16
+s8e1: 0-0
+s8v2: 19-19
+s8s3: 18-18
+s8p2: 17-17
+s8p3: 21-21
+s8v3: 22-22
+s8k1: 25-25
+s8m1: 24-24
+s8p4: 26-27
+s8s4: 28-28
+s8z3: 31-31
+s8z4: 30-30
+s8g1: 33-33
+s8p5: 35-35
+s8a2: 38-38
+s8s5: 37-37
+s8n1: 39-39
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1      2  3       4  5         6      7  8           9       10 11    12             13      14
+Words: Neživí -  nemrtví se opakovaně dávají do nekonečného pochodu v  rytmu straussovského valčíku .
+
+# sentence level graph:
+(s9d1 / dávat-se-005
+        :ARG0 (s9a1 / and
+            :op1 (s9e1 / entity
+                :mod (s9z1 / živý
+                    :refer-number plural
+                    :polarity -)
+                :refer-number plural)
+            :op2 (s9e2 / entity
+                :mod (s9m1 / mrtvý
+                    :refer-number plural
+                    :polarity -)
+                :refer-number plural))
+        :frequency (s9o1 / opakovaně)
+        :predicative-noun (s9p1 / pochod
+            :ARG0 s9a1
+            :mod (s9k1 / konečný
+                :refer-number singular
+                :polarity -)
+            :mod (s9r1 / rytmus
+                :possessor (s9v1 / valčík
+                    :mod (s9s1 / straussovský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9d1: 4-4,6-6
+s9a1: 2-2
+s9e1: 0-0
+s9z1: 1-1
+s9e2: 0-0
+s9m1: 3-3
+s9o1: 5-5
+s9p1: 7-7,9-9
+s9k1: 8-8
+s9r1: 10-11
+s9v1: 13-13
+s9s1: 12-12
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1   2         3  4       5  6          7      8     9  10        11        12 13        14 15      16 17        18    19   20 21     22     23 24  25
+Words: Vír vzpomínek se usazuje ,  dramatická seance končí -  Kantorovy vzpomínky ,  vzpomínky na Kantora ,  probuzená paměť naše i  našich předků v  nás .
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10a2 / and
+            :op1 (s10u1 / usazovat-se-003
+                :ARG0 (s10v1 / vír
+                    :mod (s10v2 / vzpomínka
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :op2 (s10k1 / končit-004
+                :ARG0 (s10s1 / seance
+                    :mod (s10d1 / dramatický
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity))
+        :op2 (s10a3 / and
+            :op1 (s10v3 / vzpomínka
+                :ARG0 (s10k2 / Kantor
+                    :refer-number singular)
+                :refer-number plural)
+            :op2 (s10v4 / vzpomínka
+                :ARG1 (s10k3 / Kantor
+                    :refer-number singular)
+                :refer-number plural)
+            :op3 (s10a4 / and
+                :op1 (s10p1 / paměť
+                    :possessor (s10e1 / entity
+                        :refer-number plural
+                        :refer-person 1st)
+                    :mod (s10p2 / probuzený
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s10p3 / paměť
+                    :mod s10p2
+                    :possessor (s10p4 / předek
+                        :possessor s10e1
+                        :refer-number plural)
+                    :place s10e1
+                    :refer-number singular))))
+
+# alignment:
+s10a1: 9-9
+s10a2: 5-5
+s10u1: 3-4
+s10v1: 1-1
+s10v2: 2-2
+s10k1: 8-8
+s10s1: 7-7
+s10d1: 6-6
+s10a3: 16-16
+s10v3: 11-11
+s10k2: 10-10
+s10v4: 13-13
+s10k3: 14-15
+s10a4: 20-20
+s10p1: 0-0
+s10e1: 19-19,21-21,23-24
+s10p2: 17-17
+s10p3: 18-18
+s10p4: 22-22
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10k2 :same-entity s5k1)
+            (s10k3 :same-entity s10k2)
+            (s10e1 :same-entity s6e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1  2      3  4    5     6      7    8  9   10   11        12   13   14 15 16   17    18       19 20        21
+Words: "  Kantor si jako každý umělec přál ,  aby dílo přetrvalo jeho smrt ,  "  říká Marie Stankret -  Kantorová .
+
+# sentence level graph:
+(s11r1 / říkat-007
+        :ARG0 (s11k1 / Kantorová
+            :mod (s11m1 / Marie
+                :refer-number singular)
+            :mod (s11s1 / Stankret)
+            :refer-number singular)
+        :ARG2 (s11e1 / entity)
+        :effect (s11p1 / přát-si-002
+            :ARG0 (s11k2 / Kantor
+                :refer-number singular)
+            :manner (s11x1 / #Equal
+                :comparison (s11p2 / přát-si-002
+                    :ARG1 s11p3
+                    :ARG0 (s11u1 / umělec
+                        :mod (s11k3 / každý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect state))
+            :ARG1 (s11p3 / přetrvat-001
+                :ARG0 (s11d1 / dílo
+                    :refer-number singular)
+                :ARG1 (s11s2 / smrt
+                    :ARG0 s11k2
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular
+            :aspect state)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s11r1: 16-16
+s11k1: 20-20
+s11m1: 17-17
+s11s1: 18-18
+s11e1: 0-0
+s11p1: 3-3,7-7
+s11k2: 2-2,12-12
+s11x1: 0-0
+s11p2: 0-0
+s11u1: 6-6
+s11k3: 5-5
+s11p3: 9-9,11-11
+s11d1: 10-10
+s11s2: 13-13
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11k1 :same-entity s4k1)
+            (s11k2 :same-entity s10k3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1  2        3     4    5         6  7       8  9    10   11   12
+Words: "  Zemřelou třídu jsme vzkřísili ,  protože to byla jeho vůle .
+
+# sentence level graph:
+(s12v1 / vzkřísit-001
+        :ARG1 (s12x1 / #Idph
+            :name (s12t1 / třída
+                :mod (s12z1 / Zemřelý
+                    :refer-number singular)
+                :refer-number singular))
+        :ARG0 (s12e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :cause (s12b1 / být-007
+            :ARG0 (s12t2 / ten
+                :refer-number singular)
+            :ARG1 (s12v2 / vůle
+                :ARG0 (s12e2 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular)
+            :aspect activity)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s12v1: 4-5
+s12x1: 0-0
+s12t1: 3-3
+s12z1: 2-2
+s12e1: 0-0
+s12b1: 7-7,9-9
+s12t2: 8-8
+s12v2: 11-11
+s12e2: 10-10
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12x1 :same-entity s6x1)
+            (s12t2 :same-event s12v1)
+            (s12e2 :same-entity s11k2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1     2         3           4  5       6         7
+Words: Každé Kantorovo představení je zároveň posledním .
+
+# sentence level graph:
+(s13b1 / být-007
+        :ARG0 (s13p1 / představení
+            :ARG0 (s13k1 / Kantor
+                :refer-number singular
+                :refer-person 3rd)
+            :mod (s13k2 / každý
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s13z1 / zároveň)
+        :ARG1 (s13p2 / poslední
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s13b1: 4-4
+s13p1: 3-3
+s13k1: 2-2
+s13k2: 1-1
+s13z1: 5-5
+s13p2: 6-6
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13p1 :same-entity s1s1)
+            (s13k1 :same-entity s12e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1    2   3   4      5         6  7   8    9          10 11  12       13        14 15  16     17    18   19     20 21        22 23
+Words: Dnes vám ale nemohu odpovědět ,  zda jsou vystoupení u  vás světovou derniérou a  jak dlouho ještě bude Cricot 2  existovat .  "
+
+# sentence level graph:
+(s14o1 / odpovědět-003
+        :clausal-marker (s14a1 / ale)
+        :ARG0 (s14e1 / entity
+            :refer-number singular
+            :refer-person 1st)
+        :ARG2 (s14e2 / entity
+            :refer-number singular
+            :refer-person 2nd)
+        :temporal (s14d1 / dnes)
+        :effect (s14a2 / and
+            :op1 (s14b1 / být-007
+                :ARG0 (s14v1 / vystoupení
+                    :ARG0 s14c1
+                    :place (s14e3 / entity
+                        :refer-number plural
+                        :refer-person 2nd)
+                    :refer-number plural
+                    :refer-person 3rd)
+                :ARG1 (s14d2 / derniéra
+                    :mod (s14s1 / světový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :op2 (s14e4 / existovat-001
+                :ARG0 (s14c1 / Cricot
+                    :mod (s14x2 / 2)
+                    :refer-number singular
+                    :refer-person 3rd)
+                :clausal-marker (s14j1 / ještě)
+                :duration (s14d3 / dlouho
+                    :extent (s14j2 / jak))
+                :aspect activity))
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s14o1: 4-5
+s14a1: 3-3
+s14e1: 0-0
+s14e2: 2-2
+s14d1: 1-1
+s14a2: 14-14
+s14b1: 7-8
+s14v1: 9-9
+s14e3: 10-11
+s14d2: 13-13
+s14s1: 12-12
+s14e4: 18-18,21-21
+s14c1: 19-19
+s14x2: 20-20
+s14j1: 17-17
+s14d3: 16-16
+s14j2: 15-15
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14e1 :same-entity s11k1)
+            (s14v1 :same-event s4v4)
+            (s14e3 :same-entity s4e1)
+            (s14c1 :same-entity s4c1)))
+
+

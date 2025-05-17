@@ -1,0 +1,380 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2     3       4
+Words: ČT derby vysílat nebude
+
+# sentence level graph:
+(s1v1 / vysílat-003
+        :ARG0 (s1c1 / ČT
+            :refer-number singular)
+        :ARG1 (s1d1 / derby)
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s1v1: 3-4
+s1c1: 1-1
+s1d1: 2-2
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( tse ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2t1 / tse)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2t1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2         3       4  5          6       7  8        9     10     11 12  13        14
+Words: ČT podepsala smlouvu o  vysílacích právech na pohárový zápas Slavie s  AIK Stockholm .
+
+# sentence level graph:
+(s3p1 / podepsat-001
+        :ARG0 (s3c1 / ČT
+            :refer-number singular)
+        :ARG1 (s3s1 / smlouva
+            :ARG1 (s3p2 / právo
+                :ARG1 (s3z1 / zápas
+                    :ARG0 (s3s2 / Slavia
+                        :refer-number singular)
+                    :ARG2 (s3a1 / AIK
+                        :mod (s3s3 / Stockholm
+                            :refer-number singular))
+                    :mod (s3p3 / pohárový
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s3v1 / vysílací
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3p1: 2-2
+s3c1: 1-1
+s3s1: 3-3
+s3p2: 4-4,6-6
+s3z1: 7-7,9-9
+s3s2: 10-10
+s3a1: 11-12
+s3s3: 13-13
+s3p3: 8-8
+s3v1: 5-5
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3c1 :same-entity s1c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2      3  4  5     6        7    8      9     10      11    12     13 14     15 16      17          18  19 20      21     22 23 24      25 26 27     28     29     30    31    32 33 34   35   36     37   38 39       40       41 42  43        44 45       46   47
+Words: Na otázku LN ,  která televize bude příští týden vysílat derby Sparta -  Slavie ,  vedoucí sportovního odd .  Baumruk sdělil ,  že smlouva ČT na domácí zápasy Sparty stále platí ,  i  když byla Sparta ČMFS v  podstatě donucena ,  aby vstoupila do projektu STES .
+
+# sentence level graph:
+(s4s1 / sdělit-002
+        :effect (s4b1 / but-91
+            :ARG1 (s4p1 / platit-009
+                :ARG0 (s4s2 / smlouva
+                    :possessor (s4c1 / ČT)
+                    :ARG1 (s4z1 / zápas
+                        :ARG0 (s4s3 / sparta
+                            :refer-number singular)
+                        :mod (s4d1 / domácí
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :duration (s4s4 / stále)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :ARG2 (s4d2 / donutit-001
+                :clausal-marker (s4v1 / v_podstatě
+                    :refer-number singular)
+                :ARG2 (s4s5 / sparta
+                    :refer-number singular)
+                :ARG0 (s4c2 / ČMFS)
+                :ARG1 (s4v2 / vstoupit-001
+                    :ARG0 s4s5
+                    :ARG1 (s4p2 / projekt
+                        :possessor (s4s6 / STES)
+                        :refer-number singular)
+                    :aspect performance)
+                :aspect performance))
+        :regard (s4o1 / otázka
+            :ARG0 (s4l1 / LN
+                :refer-number plural)
+            :ARG1 (s4v3 / vysílat-003
+                :temporal (s4t1 / týden
+                    :mod (s4p3 / příští
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s4d3 / derby
+                    :ARG2 (s4x2 / #Rcp)
+                    :ARG0 (s4c3 / contra-entity
+                        :op1 (s4s7 / sparta
+                            :refer-number singular)
+                        :op2 (s4s8 / Slavia
+                            :refer-number singular)))
+                :ARG0 (s4t2 / televize
+                    :mod (s4k1 / který
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect activity)
+            :refer-number singular)
+        :ARG0 (s4b2 / Baumruk
+            :mod (s4v4 / vedoucí
+                :possessor (s4o2 / oddělení
+                    :mod (s4s9 / sportovní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s4e1 / entity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4s1: 21-21
+s4o1: 1-2
+s4l1: 3-3
+s4v3: 7-7,10-10
+s4t1: 9-9
+s4p3: 8-8
+s4d3: 11-11
+s4x2: 0-0
+s4c3: 13-13
+s4s7: 12-12
+s4s8: 14-14
+s4t2: 6-6
+s4k1: 5-5
+s4b2: 20-20
+s4v4: 16-16
+s4o2: 18-18
+s4s9: 17-17
+s4e1: 0-0
+s4b1: 34-34
+s4p1: 23-23,31-31
+s4s2: 24-24
+s4c1: 25-25
+s4z1: 26-26,28-28
+s4s3: 29-29
+s4d1: 27-27
+s4s4: 30-30
+s4d2: 33-33,35-35,40-40
+s4v1: 38-39
+s4s5: 36-36
+s4c2: 37-37
+s4v2: 42-43
+s4p2: 44-45
+s4s6: 46-46
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4d3 :same-entity s1d1)
+            (s4x2 :same-entity s4c3)
+            (s4s8 :same-entity s3s2)
+            (s4c1 :same-entity s3c1)
+            (s4s3 :same-entity s4s7)
+            (s4s5 :same-entity s4s3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2      3     4        5       6  7         8    9       10      11     12             13      14
+Words: Včera Sparta podle Baumruka nabídla ČT vyrovnání její původní smlouvy formou marketingových aktivit .
+
+# sentence level graph:
+(s5n1 / nabídnout-001
+        :ARG0 (s5s1 / sparta
+            :refer-number singular
+            :refer-person 3rd)
+        :regard (s5b1 / Baumruk
+            :refer-number singular)
+        :temporal (s5v1 / včera)
+        :ARG2 (s5c1 / ČT)
+        :ARG1 (s5v2 / vyrovnání
+            :ARG0 (s5e1 / entity)
+            :ARG1 (s5s2 / smlouva
+                :possessor s5s1
+                :mod (s5p1 / původní
+                    :refer-number singular)
+                :refer-number singular)
+            :manner (s5a1 / aktivita
+                :mod (s5m1 / marketingový
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s5n1: 5-5
+s5s1: 2-2,8-8
+s5b1: 3-4
+s5v1: 1-1
+s5c1: 6-6
+s5v2: 7-7
+s5e1: 0-0
+s5s2: 10-10
+s5p1: 9-9
+s5a1: 11-11,13-13
+s5m1: 12-12
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s1 :same-entity s4s5)
+            (s5b1 :same-entity s4b2)
+            (s5c1 :same-entity s4c1)
+            (s5s2 :same-entity s4s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2        3  4   5             6        7            8  9    10
+Words: Něco takového je pro veřejnoprávní televizi nepřijatelné ,  řekl .
+
+# sentence level graph:
+(s6r1 / říci-008
+        :ARG0 (s6e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s6e2 / entity)
+        :effect (s6b1 / být-007
+            :ARG0 (s6n1 / něco
+                :mod (s6t1 / takový
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :affectee (s6t2 / televize
+                :mod (s6v1 / veřejnoprávní
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s6p1 / přijatelný
+                :refer-number singular
+                :polarity -)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6r1: 9-9
+s6e1: 0-0
+s6e2: 0-0
+s6b1: 3-3
+s6n1: 1-1
+s6t1: 2-2
+s6t2: 4-4,6-6
+s6v1: 5-5
+s6p1: 7-7
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5b1)
+            (s6n1 :same-entity s5v2)
+            (s6t2 :same-entity s5c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2    3        4        5      6  7        8     9        10      11 12       13     14          15     16     17 18  19 20   21 22        23 24    25
+Words: Do doby vyřešení problému nebude ČT plánovat další vysílání přenosů z  domácích zápasů fotbalového oddílu Sparty ,  což se týká i  blížícího se derby .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7p1 / plánovat-001
+            :temporal (s7d1 / doba
+                :mod (s7v1 / vyřešení
+                    :ARG0 (s7e1 / entity)
+                    :ARG1 (s7p2 / problém
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s7c1 / ČT
+                :refer-number singular)
+            :ARG1 (s7v2 / vysílání
+                :ARG0 (s7e2 / entity)
+                :ARG1 (s7p3 / přenos
+                    :start (s7z1 / zápas
+                        :mod (s7d2 / domácí
+                            :refer-number plural)
+                        :ARG0 (s7o1 / oddíl
+                            :possessor (s7s1 / sparta
+                                :refer-number singular)
+                            :mod (s7f1 / fotbalový
+                                :refer-number singular)
+                            :refer-number singular
+                            :refer-person 3rd)
+                        :refer-number plural)
+                    :refer-number plural)
+                :duration (s7d3 / další
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity
+            :polarity -)
+        :op2 (s7t1 / týkat-se-001
+            :ARG0 (s7c2 / což)
+            :clausal-marker (s7i1 / i)
+            :ARG1 (s7d4 / derby
+                :mod (s7b1 / blížící_se
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s7a1: 17-17
+s7p1: 5-5,7-7
+s7d1: 1-2
+s7v1: 3-3
+s7e1: 0-0
+s7p2: 4-4
+s7c1: 6-6
+s7v2: 9-9
+s7e2: 0-0
+s7p3: 10-10
+s7z1: 11-11,13-13
+s7d2: 12-12
+s7o1: 15-15
+s7s1: 16-16
+s7f1: 14-14
+s7d3: 8-8
+s7t1: 19-20
+s7c2: 18-18
+s7i1: 21-21
+s7d4: 24-24
+s7b1: 22-23
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7c1 :same-entity s6t2)
+            (s7z1 :same-entity s4z1)
+            (s7o1 :same-entity s5s1)
+            (s7c2 :same-event s7p1)
+            (s7d4 :same-entity s4d3)))
+
+

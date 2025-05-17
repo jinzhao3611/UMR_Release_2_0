@@ -1,0 +1,255 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2
+Words: Bělkevič dopoval
+
+# sentence level graph:
+(s1d1 / dopovat-001
+        :ARG0 (s1b1 / Bělkevič
+            :refer-number singular)
+        :ARG1 (s1e1 / entity)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s1d1: 2-2
+s1b1: 1-1
+s1e1: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: Ženeva -
+
+# sentence level graph:
+(s2z1 / Ženeva
+        :refer-number singular)
+
+# alignment:
+s2z1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2      3     4        5        6   7         8         9    10  11     12     13       14     15   16    17 18         19 20      21
+Words: Fotbalista Dynama Minsk Valentin Bělkevič měl pozitivní dopingový test při prvním utkání předkola Poháru UEFA Minsk -  Hibernians La Valleta .
+
+# sentence level graph:
+(s3m1 / mít-009
+        :ARG0 (s3b1 / Bělkevič
+            :mod (s3v1 / Valentin
+                :refer-number singular)
+            :mod (s3f1 / fotbalista
+                :possessor (s3d1 / dynamo
+                    :mod (s3m2 / Minsk
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3t1 / test
+            :mod (s3d2 / dopingový
+                :refer-number singular)
+            :mod (s3p1 / pozitivní
+                :refer-number singular)
+            :temporal (s3u1 / utkání
+                :ARG2 (s3x1 / #Rcp)
+                :possessor (s3p2 / předkolo
+                    :possessor (s3p3 / pohár
+                        :possessor (s3u2 / UEFA)
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s3p4 / první
+                    :refer-number singular)
+                :ARG0 (s3c1 / contra-entity
+                    :op1 (s3m3 / Minsk
+                        :refer-number singular)
+                    :op2 (s3x2 / #Forn
+                        :FPHR (s3h1 / Hibernians)
+                        :FPHR (s3l1 / La)
+                        :FPHR (s3v2 / Valleta)))
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect state)
+
+# alignment:
+s3m1: 6-6
+s3b1: 5-5
+s3v1: 4-4
+s3f1: 1-1
+s3d1: 2-2
+s3m2: 3-3
+s3t1: 9-9
+s3d2: 8-8
+s3p1: 7-7
+s3u1: 10-10,12-12
+s3x1: 0-0
+s3p2: 13-13
+s3p3: 14-14
+s3u2: 15-15
+s3p4: 11-11
+s3c1: 17-17
+s3m3: 16-16
+s3x2: 0-0
+s3h1: 18-18
+s3l1: 19-19
+s3v2: 20-20
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3b1 :same-entity s1b1)
+            (s3x1 :same-entity s3c1)
+            (s3m3 :same-entity s3d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2  3     4      5    6
+Words: Potvrdil to včera mluvčí UEFA .
+
+# sentence level graph:
+(s4p1 / potvrdit-001
+        :ARG1 (s4t1 / ten
+            :refer-number singular)
+        :temporal (s4v1 / včera)
+        :ARG0 (s4m1 / mluvčí
+            :possessor (s4u1 / UEFA)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4p1: 1-1
+s4t1: 2-2
+s4v1: 3-3
+s4m1: 4-4
+s4u1: 5-5
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3m1)
+            (s4u1 :same-entity s3u2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2      3  4  5     6     7  8     9  10      11    12   13   14       15        16      17
+Words: Odmítl sdělit ,  o  jakou látku se jedná ,  protože ještě není znám výsledek opakované zkoušky .
+
+# sentence level graph:
+(s5o1 / odmítnout-002
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s5s1 / sdělit-002
+            :ARG0 s5e1
+            :ARG2 (s5e2 / entity)
+            :effect (s5j1 / jednat-se-002
+                :ARG0 (s5l1 / látka
+                    :mod (s5j2 / jaký
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :aspect performance)
+        :cause (s5b1 / být-007
+            :temporal (s5j3 / ještě)
+            :ARG1 (s5z1 / známý
+                :refer-number singular)
+            :ARG0 (s5v1 / výsledek
+                :possessor (s5z2 / zkouška
+                    :mod (s5o2 / opakovaný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5o1: 1-1
+s5e1: 0-0
+s5s1: 2-2
+s5e2: 0-0
+s5j1: 7-8
+s5l1: 4-4,6-6
+s5j2: 5-5
+s5b1: 10-10,12-12
+s5j3: 11-11
+s5z1: 13-13
+s5v1: 14-14
+s5z2: 16-16
+s5o2: 15-15
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1   2          3      4  5       6    7  8  9         10     11       12   13     14    15
+Words: Své prohlášení učinil na základě toho ,  že dopingový případ oznámilo samo Dynamo Minsk .
+
+# sentence level graph:
+(s6u1 / učinit-009
+        :predicative-noun (s6p1 / prohlášení
+            :ARG1 (s6e1 / entity)
+            :ARG0 s6e2
+            :refer-number singular)
+        :ARG0 (s6e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :regard (s6o1 / oznámit-001
+            :ARG1 (s6p2 / případ
+                :mod (s6d1 / dopingový
+                    :refer-number singular)
+                :refer-number singular)
+            :manner (s6s1 / sám
+                :mod-of s6d2
+                :refer-number singular)
+            :ARG0 (s6d2 / dynamo
+                :mod (s6m1 / Minsk
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6u1: 3-3
+s6p1: 2-2
+s6e1: 0-0
+s6e2: 1-1
+s6o1: 4-6,8-8,11-11
+s6p2: 10-10
+s6d1: 9-9
+s6s1: 12-12
+s6d2: 13-13
+s6m1: 14-14
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e2 :same-entity s5e1)
+            (s6p2 :same-entity s4t1)
+            (s6d2 :same-entity s3m3)))
+
+

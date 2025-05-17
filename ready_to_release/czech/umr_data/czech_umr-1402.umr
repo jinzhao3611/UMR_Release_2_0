@@ -1,0 +1,1021 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2   3
+Words: Strýček Sam rezolutní
+
+# sentence level graph:
+(s1s1 / Sam
+        :mod (s1s2 / strýček
+            :refer-number singular)
+        :mod (s1r1 / rezolutní
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1s1: 2-2
+s1s2: 1-1
+s1r1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1         2   3        4     5  6
+Words: Ultimátum USA vojenské juntě na Haiti
+
+# sentence level graph:
+(s2u1 / ultimátum
+        :ARG0 (s2u2 / USA
+            :refer-number plural)
+        :ARG1 (s2j1 / junta
+            :mod (s2v1 / vojenský
+                :refer-number singular)
+            :place (s2h1 / Haiti)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s2u1: 1-1
+s2u2: 2-2
+s2j1: 4-4
+s2v1: 3-3
+s2h1: 5-6
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2           3  4 5   6     7
+Words: Stálý dopisovatel LN v USA Dušan Neumann
+
+# sentence level graph:
+(s3n1 / Neumann
+        :mod (s3d1 / Dušan
+            :refer-number singular)
+        :mod (s3d2 / dopisovatel
+            :possessor (s3l1 / LN
+                :refer-number plural)
+            :place (s3u1 / USA
+                :refer-number plural)
+            :mod (s3s1 / stálý
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s3n1: 7-7
+s3d1: 6-6
+s3d2: 2-2
+s3l1: 3-3
+s3u1: 4-5
+s3s1: 1-1
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3u1 :same-entity s2u2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1   2     3           4        5  6     7       8  9    10  11      12      13 14        15 16      17         18           19     20        21    22   23     24   25      26
+Words: Buď budou mezinárodní jednotky na Haiti pozvány ,  nebo tam vstoupí násilím ,  prohlásil na tiskové konferenci ministerstva obrany Spojených států jeho mluvčí John Deutsch .
+
+# sentence level graph:
+(s4p1 / prohlásit-003
+        :ARG0 (s4d1 / Deutsch
+            :mod (s4j1 / John
+                :refer-number singular)
+            :mod (s4m1 / mluvčí
+                :possessor s4m2
+                :refer-number singular)
+            :refer-number singular)
+        :place (s4k1 / konference
+            :possessor (s4m2 / ministerstvo
+                :possessor (s4o1 / obrana
+                    :refer-number singular)
+                :possessor (s4s1 / stát
+                    :mod (s4s2 / Spojený
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :mod (s4t1 / tiskový
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s4o2 / or
+            :op1 (s4p2 / pozvat-001
+                :ARG1 (s4j2 / jednotka
+                    :mod (s4m3 / mezinárodní
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG0 (s4e1 / entity)
+                :goal (s4h1 / Haiti)
+                :refer-number plural
+                :aspect performance)
+            :op2 (s4v1 / vstoupit-003
+                :goal (s4t2 / tam)
+                :ARG0 s4j2
+                :manner (s4n1 / násilí
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect performance))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4p1: 14-14
+s4d1: 25-25
+s4j1: 24-24
+s4m1: 23-23
+s4k1: 15-15,17-17
+s4m2: 18-18,22-22
+s4o1: 19-19
+s4s1: 21-21
+s4s2: 20-20
+s4t1: 16-16
+s4o2: 1-1,9-9
+s4p2: 2-2,7-7
+s4j2: 4-4
+s4m3: 3-3
+s4e1: 0-0
+s4h1: 5-6
+s4v1: 11-11
+s4t2: 10-10
+s4n1: 12-12
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s1 :same-entity s3u1)
+            (s4h1 :same-entity s2h1)
+            (s4t2 :same-entity s4h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1          2         3      4     5         6       7              8    9    10      11   12       13
+Words: Pamětníkům přátelské pomoci států Varšavské smlouvy Československu může tato nabídka znít povědomě .
+
+# sentence level graph:
+(s5z1 / znít-003
+        :affectee (s5p1 / pamětník
+            :ARG1 (s5p2 / pomoc
+                :ARG0 (s5s1 / stát
+                    :possessor (s5s2 / smlouva
+                        :mod (s5v1 / Varšavský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :ARG1 (s5c1 / Československo
+                    :refer-number singular)
+                :mod (s5p3 / přátelský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :ARG0 (s5n1 / nabídka
+            :mod (s5t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :manner (s5p4 / povědomě)
+        :aspect state)
+
+# alignment:
+s5z1: 8-8,11-11
+s5p1: 1-1
+s5p2: 3-3
+s5s1: 4-4
+s5s2: 6-6
+s5v1: 5-5
+s5c1: 7-7
+s5p3: 2-2
+s5n1: 10-10
+s5t1: 9-9
+s5p4: 12-12
+
+# document level annotation:
+(s5s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2         3  4  5     6       7  8    9     10   11
+Words: Jenže okolnosti ,  z  nichž vychází ,  jsou zcela jiné .
+
+# sentence level graph:
+(s6b1 / být-007
+        :clausal-marker (s6j1 / jenže)
+        :ARG0 (s6o1 / okolnost
+            :ARG1-of (s6v1 / vycházet-007
+                :ARG0 (s6e1 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number plural)
+        :ARG1 (s6j2 / jiný
+            :extent (s6z1 / zcela)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 8-8
+s6j1: 1-1
+s6o1: 2-2,4-5
+s6v1: 6-6
+s6e1: 0-0
+s6j2: 10-10
+s6z1: 9-9
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1     2  3     4  5        6        7     8        9       10   11 12 13     14           15        16         17    18 19        20       21
+Words: Vlády na Haiti se zmocnila vojenská junta generála Cédrase poté ,  co svrhla demokraticky zvoleného prezidenta Jeana -  Bertranda Aristida .
+
+# sentence level graph:
+(s7z1 / zmocnit-se-001
+        :ARG1 (s7v1 / vláda
+            :place (s7h1 / Haiti)
+            :refer-number singular)
+        :ARG0 (s7j1 / junta
+            :mod (s7v2 / vojenský
+                :refer-number singular)
+            :possessor (s7c1 / Cédras
+                :mod (s7g1 / generál
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s7s1 / svrhnout-001
+            :ARG0 s7j1
+            :ARG1 (s7a1 / Aristide
+                :mod (s7j2 / Jean
+                    :refer-number singular)
+                :mod (s7b1 / Bertrand
+                    :refer-number singular)
+                :mod (s7p1 / prezident
+                    :mod (s7z2 / zvolený
+                        :manner (s7d1 / demokraticky)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s7z1: 4-5
+s7v1: 1-1
+s7h1: 2-3
+s7j1: 7-7
+s7v2: 6-6
+s7c1: 9-9
+s7g1: 8-8
+s7s1: 10-10,12-13
+s7a1: 20-20
+s7j2: 17-17
+s7b1: 19-19
+s7p1: 16-16
+s7z2: 15-15
+s7d1: 14-14
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7h1 :same-entity s4t2)
+            (s7j1 :same-entity s2j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1    2         3     4  5      6          7        8         9  10  11
+Words: Akci Spojených států a  jejich karibských spojenců schválila RB OSN .
+
+# sentence level graph:
+(s8s1 / schválit-002
+        :ARG1 (s8a1 / akce
+            :ARG0 (s8a2 / and
+                :op1 (s8s2 / stát
+                    :mod (s8s3 / Spojený
+                        :refer-number plural)
+                    :refer-number plural)
+                :op2 (s8s4 / spojenec
+                    :possessor s8s2
+                    :mod (s8k1 / karibský
+                        :refer-number plural)
+                    :refer-number plural))
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s8r1 / RB
+            :possessor (s8o1 / OSN))
+        :aspect performance)
+
+# alignment:
+s8s1: 8-8
+s8a1: 1-1
+s8a2: 4-4
+s8s2: 3-3,5-5
+s8s3: 2-2
+s8s4: 7-7
+s8k1: 6-6
+s8r1: 9-9
+s8o1: 10-10
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8a1 :same-event s4v1)
+            (s8s2 :same-entity s4s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1     2  3          4   5  6      7     8       9       10            11 12          13         14      15    16 17         18
+Words: Navíc se Washington již po měsíce zcela veřejně pokouší hospodářskými a  politickými prostředky donutit juntu k  odstoupení .
+
+# sentence level graph:
+(s9p1 / pokoušet-se-001
+        :clausal-marker (s9n1 / navíc)
+        :ARG0 (s9w1 / Washington
+            :refer-number singular)
+        :clausal-marker (s9j1 / již)
+        :duration (s9m1 / měsíc
+            :refer-number plural)
+        :manner (s9v1 / veřejně
+            :extent (s9z1 / zcela))
+        :instrument (s9a1 / and
+            :op1 (s9p2 / prostředek
+                :mod (s9h1 / hospodářský
+                    :refer-number plural)
+                :refer-number plural)
+            :op2 (s9p3 / prostředek
+                :mod (s9p4 / politický
+                    :refer-number plural)
+                :refer-number plural))
+        :ARG1 (s9d1 / donutit-001
+            :ARG2 (s9j2 / junta
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG0 s9w1
+            :ARG1 (s9o1 / odstoupení
+                :ARG0 (s9e1 / entity)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9p1: 2-2,9-9
+s9n1: 1-1
+s9w1: 3-3
+s9j1: 4-4
+s9m1: 5-6
+s9v1: 8-8
+s9z1: 7-7
+s9a1: 11-11
+s9p2: 0-0
+s9h1: 10-10
+s9p3: 13-13
+s9p4: 12-12
+s9d1: 14-14
+s9j2: 15-15
+s9o1: 16-17
+s9e1: 0-0
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9j2 :same-entity s7j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1        2        3         4   5      6       7     8        9         10 11  12         13       14     15 16       17
+Words: Náměstek ministra zahraničí USA Strobe Talbott výzvu haitským generálům ,  aby dobrovolně opustili ostrov ,  opakoval .
+
+# sentence level graph:
+(s10o1 / opakovat-001
+        :ARG0 (s10t1 / Talbott
+            :mod (s10s1 / Strobe
+                :refer-number singular)
+            :mod (s10n1 / náměstek
+                :possessor (s10m1 / ministr
+                    :possessor (s10z1 / zahraničí
+                        :refer-number singular)
+                    :possessor (s10u1 / USA
+                        :refer-number plural
+                        :refer-person 3rd)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s10v1 / výzva
+            :ARG2 (s10g1 / generál
+                :mod (s10h1 / haitský
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s10o2 / opustit-001
+                :ARG1 (s10o3 / ostrov
+                    :refer-number singular)
+                :ARG0 s10g1
+                :manner (s10d1 / dobrovolně)
+                :refer-number plural
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s10o1: 16-16
+s10t1: 6-6
+s10s1: 5-5
+s10n1: 1-1
+s10m1: 2-2
+s10z1: 3-3
+s10u1: 4-4
+s10v1: 7-7
+s10g1: 9-9
+s10h1: 8-8
+s10o2: 11-11,13-13
+s10o3: 14-14
+s10d1: 12-12
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10u1 :same-entity s8s2)
+            (s10g1 :same-entity s9j2)
+            (s10h1 :same-entity s7h1)
+            (s10o3 :same-entity s10h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1     2     3  4          5       6     7         8     9  10   11      12     13 14   15   16    17 18     19 20        21          22    23
+Words: Pokud dojde k  restauraci zákonné vlády vojenskou silou ,  bude generál Cédras a  jeho štáb zajat a  předán do pravomoci právoplatné vlády .
+
+# sentence level graph:
+(s11a1 / and
+        :op1 (s11z1 / zajmout-001
+            :condition (s11d1 / dojít-009
+                :ARG0 (s11r1 / restaurace
+                    :ARG1 (s11v1 / vláda
+                        :mod (s11z2 / zákonný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0 (s11s1 / síla
+                        :mod (s11v2 / vojenský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :ARG1 (s11a2 / and
+                :op1 (s11c1 / Cédras
+                    :mod (s11g1 / generál
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s11s2 / štáb
+                    :possessor s11c1
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd)
+            :ARG0 (s11e1 / entity)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s11p1 / předat-002
+            :condition s11d1
+            :ARG1 s11a2
+            :ARG0 s11e1
+            :goal (s11p2 / pravomoc
+                :possessor (s11v3 / vláda
+                    :mod (s11p3 / právoplatný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s11a1: 17-17
+s11z1: 10-10,16-16
+s11d1: 1-2
+s11r1: 3-4
+s11v1: 6-6
+s11z2: 5-5
+s11s1: 8-8
+s11v2: 7-7
+s11a2: 13-13
+s11c1: 12-12,14-14
+s11g1: 11-11
+s11s2: 15-15
+s11e1: 0-0
+s11p1: 10-10,18-18
+s11p2: 19-20
+s11v3: 22-22
+s11p3: 21-21
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11a2 :same-entity s10g1)
+            (s11c1 :same-entity s7c1)
+            (s11v3 :same-entity s11v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1        2       3          4  5  6    7        8       9    10    11   12       13        14
+Words: Náměstek Talbott nevylučuje ,  že před začátkem operace bude juntě dáno poslední ultimátum .
+
+# sentence level graph:
+(s12v1 / vylučovat-002
+        :ARG0 (s12t1 / Talbott
+            :mod (s12n1 / náměstek
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s12d1 / dát-005
+            :temporal (s12z1 / začátek
+                :possessor (s12o1 / operace
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s12j1 / junta
+                :refer-number singular)
+            :ARG0 (s12e1 / entity)
+            :ARG1 (s12u1 / ultimátum
+                :mod (s12p1 / poslední
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s12v1: 3-3
+s12t1: 2-2
+s12n1: 1-1
+s12d1: 5-5,9-9,11-11
+s12z1: 6-7
+s12o1: 8-8
+s12j1: 10-10
+s12e1: 0-0
+s12u1: 13-13
+s12p1: 12-12
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12t1 :same-entity s10t1)
+            (s12o1 :same-entity s8a1)
+            (s12j1 :same-entity s11a2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1  2          3        4    5     6     7       8     9  10      11       12      13      14 15          16       17
+Words: Z  vojenského hlediska bude ležet jádro operace zcela na bedrech americké námořní pěchoty a  speciálních jednotek .
+
+# sentence level graph:
+(s13l1 / ležet-007
+        :regard (s13h1 / hledisko
+            :mod (s13v1 / vojenský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s13j1 / jádro
+            :possessor (s13o1 / operace
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s13z1 / zcela)
+        :part-of-phraseme (s13n1 / na_bedrech
+            :possessor (s13a1 / and
+                :op1 (s13p1 / pěchota
+                    :mod (s13n2 / námořní
+                        :refer-number singular)
+                    :mod (s13a2 / americký
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s13j2 / jednotka
+                    :mod (s13s1 / speciální
+                        :refer-number plural)
+                    :refer-number plural))
+            :refer-number plural)
+        :aspect activity)
+
+# alignment:
+s13l1: 4-5
+s13h1: 1-1,3-3
+s13v1: 2-2
+s13j1: 6-6
+s13o1: 7-7
+s13z1: 8-8
+s13n1: 9-10
+s13a1: 14-14
+s13p1: 13-13
+s13n2: 12-12
+s13a2: 11-11
+s13j2: 16-16
+s13s1: 15-15
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13o1 :same-entity s12o1)
+            (s13a2 :same-entity s10u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1        2        3  4  5   6    7      8    9     10      11    12    13     14
+Words: Pentagon spočítal ,  že pro její úspěch bude nutné nasadit deset tisíc vojáků .
+
+# sentence level graph:
+(s14s1 / spočítat-001
+        :ARG0 (s14p1 / Pentagon
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s14b1 / být-159
+            :cause (s14u1 / úspěch
+                :possessor (s14e1 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular)
+            :ARG1 (s14n1 / nutný
+                :affectee (s14e2 / entity)
+                :refer-number singular)
+            :ARG0 (s14n2 / nasadit-003
+                :ARG0 s14e2
+                :ARG1 (s14t1 / tisíc
+                    :mod (s14v1 / voják
+                        :refer-number plural)
+                    :mod (s14d1 / deset
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s14s1: 2-2
+s14p1: 1-1
+s14b1: 4-4,8-8
+s14u1: 5-5,7-7
+s14e1: 6-6
+s14n1: 9-9
+s14e2: 0-0
+s14n2: 10-10
+s14t1: 12-12
+s14v1: 13-13
+s14d1: 11-11
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14p1 :same-entity s4m2)
+            (s14e1 :same-entity s13o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1   2       3       4    5        6         7      8  9        10       11  12         13     14 15  16        17        18
+Words: Jen mohutná přesila může zajistit minimální ztráty na lidských životech jak amerických vojáků ,  tak haitských civilistů .
+
+# sentence level graph:
+(s15z1 / zajistit-004
+        :clausal-marker (s15j1 / jen)
+        :ARG0 (s15p1 / přesila
+            :mod (s15m1 / mohutný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s15z2 / ztráta
+            :mod (s15m2 / minimální
+                :refer-number plural)
+            :mod (s15z3 / život
+                :mod (s15l1 / lidský
+                    :refer-number plural)
+                :possessor (s15a1 / and
+                    :op1 (s15v1 / voják
+                        :mod (s15a2 / americký
+                            :refer-number plural)
+                        :refer-number plural)
+                    :op2 (s15c1 / civilista
+                        :mod (s15h1 / haitský
+                            :refer-number plural)
+                        :refer-number plural))
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s15z1: 4-5
+s15j1: 1-1
+s15p1: 3-3
+s15m1: 2-2
+s15z2: 7-7
+s15m2: 6-6
+s15z3: 8-8,10-10
+s15l1: 9-9
+s15a1: 11-11,15-15
+s15v1: 13-13
+s15a2: 12-12
+s15c1: 17-17
+s15h1: 16-16
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15a2 :same-entity s13a2)
+            (s15h1 :same-entity s10o3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1     2          3     4  5     6         7
+Words: Podíl karibských armád je zatím minimální .
+
+# sentence level graph:
+(s16b1 / být-007
+        :ARG0 (s16p1 / podíl
+            :ARG0 (s16a1 / armáda
+                :mod (s16k1 / karibský
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :temporal (s16z1 / zatím)
+        :ARG1 (s16m1 / minimální
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s16b1: 4-4
+s16p1: 1-1
+s16a1: 3-3
+s16k1: 2-2
+s16z1: 5-5
+s16m1: 6-6
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16k1 :same-entity s8k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1     2        3     4       5   6      7
+Words: Čtyři ostrovní státy nabídly 260 vojáků .
+
+# sentence level graph:
+(s17n1 / nabídnout-001
+        :ARG0 (s17s1 / stát
+            :mod (s17o1 / ostrovní
+                :refer-number plural)
+            :mod (s17c1 / čtyři
+                :refer-number plural)
+            :refer-number plural)
+        :ARG2 (s17e1 / entity)
+        :ARG1 (s17v1 / voják
+            :mod (s17x1 / 260)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s17n1: 4-4
+s17s1: 3-3
+s17o1: 2-2
+s17c1: 1-1
+s17e1: 0-0
+s17v1: 6-6
+s17x1: 5-5
+
+# document level annotation:
+(s17s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1     2        3         4    5   6     7         8     9   10     11
+Words: Podle mluvčího Pentagonu jich ale budou zapotřebí aspoň dva tisíce .
+
+# sentence level graph:
+(s18b1 / být-020
+        :clausal-marker (s18a1 / ale)
+        :regard (s18m1 / mluvčí
+            :possessor (s18p1 / Pentagon
+                :refer-number singular)
+            :refer-number singular)
+        :predicative-noun (s18z1 / zapotřebí)
+        :ARG0 (s18t1 / tisíc
+            :mod (s18e1 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :mod (s18d1 / dva
+                :extent (s18a2 / aspoň)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s18b1: 6-6
+s18a1: 5-5
+s18m1: 1-2
+s18p1: 3-3
+s18z1: 7-7
+s18t1: 10-10
+s18e1: 4-4
+s18d1: 9-9
+s18a2: 8-8
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18m1 :same-entity s4d1)
+            (s18p1 :same-entity s14p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s19-root
+# :: snt19
+Index: 1     2       3        4  5        6          7     8         9        10 11      12          13      14       15
+Words: Délka výcviku spojenců a  vzájemná koordinace všech invazních jednotek je hlavním limitujícím časovým faktorem .
+
+# sentence level graph:
+(s19b1 / být-007
+        :ARG0 (s19a1 / and
+            :op1 (s19d1 / délka
+                :possessor (s19v1 / výcvik
+                    :ARG1 (s19s1 / spojenec
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s19k1 / koordinace
+                :mod (s19v2 / vzájemný
+                    :refer-number singular)
+                :ARG1 (s19j1 / jednotka
+                    :mod (s19v3 / všechen
+                        :refer-number plural)
+                    :mod (s19i1 / invazní
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd)
+                :refer-number singular))
+        :ARG1 (s19f1 / faktor
+            :mod (s19c1 / časový
+                :refer-number singular)
+            :mod (s19l1 / limitující
+                :refer-number singular)
+            :mod (s19h1 / hlavní
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s19b1: 10-10
+s19a1: 4-4
+s19d1: 1-1
+s19v1: 2-2
+s19s1: 3-3
+s19k1: 6-6
+s19v2: 5-5
+s19j1: 9-9
+s19v3: 7-7
+s19i1: 8-8
+s19f1: 14-14
+s19c1: 13-13
+s19l1: 12-12
+s19h1: 11-11
+
+# document level annotation:
+(s19s0 / sentence
+    :coref ((s19j1 :same-entity s4j2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s20-root
+# :: snt20
+Index: 1   2      3       4  5   6    7       8  9  10       11    12      13      14       15
+Words: Jak Strobe Talbott ,  tak John Deutsch se k  časovému plánu operace odmítli vyjádřit .
+
+# sentence level graph:
+(s20o1 / odmítnout-003
+        :ARG0 (s20a1 / and
+            :op1 (s20t1 / Talbott
+                :mod (s20s1 / Strobe
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s20d1 / Deutsch
+                :mod (s20j1 / John
+                    :refer-number singular)
+                :refer-number singular))
+        :ARG1 (s20v1 / vyjádřit-se-001
+            :ARG1 (s20p1 / plán
+                :ARG1 (s20o2 / operace
+                    :refer-number singular
+                    :refer-person 3rd)
+                :mod (s20c1 / časový
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s20a1
+            :aspect performance)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s20o1: 13-13
+s20a1: 1-1,5-5
+s20t1: 3-3
+s20s1: 2-2
+s20d1: 7-7
+s20j1: 6-6
+s20v1: 8-8,14-14
+s20p1: 9-9,11-11
+s20o2: 12-12
+s20c1: 10-10
+
+# document level annotation:
+(s20s0 / sentence
+    :coref ((s20t1 :same-entity s12t1)
+            (s20d1 :same-entity s18m1)
+            (s20o2 :same-entity s14e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s21-root
+# :: snt21
+Index: 1  2  3    4            5  6  7  8         9     10       11       12 13   14 15 16 17     18 19        20
+Words: Dá se však předpokládat ,  že i  tentokrát budou američtí novináři v  Port -  au -  Prince v  předstihu .
+
+# sentence level graph:
+(s21p1 / předpokládat-002
+        :clausal-marker (s21v1 / však)
+        :ARG0 (s21e1 / entity)
+        :effect (s21b1 / být-011
+            :clausal-marker (s21i1 / i)
+            :temporal (s21t1 / tentokrát)
+            :ARG0 (s21n1 / novinář
+                :mod (s21a1 / americký
+                    :refer-number plural)
+                :place (s21x1 / #Forn
+                    :FPHR (s21p2 / Port)
+                    :FPHR (s21x2 / -)
+                    :FPHR (s21a2 / au)
+                    :FPHR (s21x3 / -)
+                    :FPHR (s21p3 / Prince))
+                :refer-number plural)
+            :place (s21p4 / předstih
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :aspect activity)
+
+# alignment:
+s21p1: 1-2,4-4
+s21v1: 3-3
+s21e1: 0-0
+s21b1: 6-6,9-9
+s21i1: 7-7
+s21t1: 8-8
+s21n1: 11-11
+s21a1: 10-10
+s21x1: 0-0
+s21p2: 13-13
+s21x2: 14-14
+s21a2: 15-15
+s21x3: 16-16
+s21p3: 17-17
+s21p4: 18-19
+
+# document level annotation:
+(s21s0 / sentence
+    :coref ((s21a1 :same-entity s15a2)))
+
+

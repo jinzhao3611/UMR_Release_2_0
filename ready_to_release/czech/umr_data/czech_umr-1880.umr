@@ -1,0 +1,1001 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2 3        4      5       6
+Words: Rozpory v obvinění Tomáše Vodičky trvají
+
+# sentence level graph:
+(s1t1 / trvat-003
+        :ARG0 (s1r1 / rozpor
+            :regard (s1o1 / obvinění
+                :ARG0 (s1e1 / entity)
+                :ARG1 (s1e2 / entity)
+                :ARG2 (s1v1 / Vodička
+                    :mod (s1t2 / Tomáš
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1t1: 6-6
+s1r1: 1-1
+s1o1: 2-3
+s1e1: 0-0
+s1e2: 0-0
+s1v1: 5-5
+s1t2: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: Soudní síň
+
+# sentence level graph:
+(s2s1 / síň
+        :mod (s2s2 / soudní
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s2s1: 2-2
+s2s2: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s3p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s3p1: 1-1
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2    3  4     5           6     7        8      9  10    11     12      13 14    15 16        17 18            19         20        21
+Words: Městský soud v  Praze projednával včera obnovené řízení v  kauze Tomáše Vodičky ,  který je obžalován z  dvojnásobného loupežného přepadení .
+
+# sentence level graph:
+(s4p1 / projednávat-002
+        :ARG0 (s4s1 / soud
+            :mod (s4m1 / městský
+                :refer-number singular)
+            :place (s4p2 / Praha
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s4v1 / včera)
+        :ARG1 (s4r1 / řízení
+            :mod (s4o1 / obnovený
+                :refer-number singular)
+            :regard (s4k1 / kauza
+                :possessor (s4v2 / Vodička
+                    :mod (s4t1 / Tomáš
+                        :refer-number singular)
+                    :ARG1-of (s4o2 / obžalovat-001
+                        :ARG0 (s4e1 / entity)
+                        :cause (s4p3 / přepadení
+                            :ARG0 s4v2
+                            :ARG1 (s4e2 / entity)
+                            :mod (s4l1 / loupežný
+                                :refer-number singular)
+                            :mod (s4d1 / dvojnásobný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :aspect performance)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect habitual)
+
+# alignment:
+s4p1: 5-5
+s4s1: 2-2
+s4m1: 1-1
+s4p2: 3-4
+s4v1: 6-6
+s4r1: 8-8
+s4o1: 7-7
+s4k1: 9-10
+s4v2: 12-12,14-14
+s4t1: 11-11
+s4o2: 15-16
+s4e1: 0-0
+s4p3: 17-17,20-20
+s4e2: 0-0
+s4l1: 19-19
+s4d1: 18-18
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4p2 :same-entity s3p1)
+            (s4v2 :same-entity s1v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2   3  4        5    6  7     8  9          10       11 12       13              14    15         16 17 18    19   20  21     22
+Words: Vodička měl v  prosinci 1992 v  Praze 4  přepadnout společně s  neznámým spolupachatelem jednu listonošku a  v  únoru 1993 sám druhou .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5p1 / přepadnout-001
+            :ARG0 (s5v1 / Vodička
+                :refer-number singular)
+            :temporal (s5p2 / prosinec
+                :possessor (s5x1 / 1992)
+                :refer-number singular)
+            :place (s5p3 / Praha
+                :mod (s5x2 / 4)
+                :refer-number singular)
+            :companion (s5s1 / spolupachatel
+                :mod (s5z1 / známý
+                    :refer-number singular
+                    :polarity -)
+                :refer-number singular)
+            :ARG1 (s5l1 / listonoška
+                :mod (s5j1 / jeden
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :op2 (s5p4 / přepadnout-001
+            :ARG0 s5v1
+            :temporal (s5u1 / únor
+                :possessor (s5x4 / 1993)
+                :refer-number singular)
+            :manner (s5s2 / sám
+                :mod-of s5v1
+                :refer-number singular)
+            :ARG1 (s5l2 / listonoška
+                :mod (s5d1 / druhý
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance))
+
+# alignment:
+s5a1: 16-16
+s5p1: 2-2,9-9
+s5p2: 3-4
+s5x1: 5-5
+s5p3: 6-7
+s5x2: 8-8
+s5s1: 10-11,13-13
+s5z1: 12-12
+s5l1: 15-15
+s5j1: 14-14
+s5v1: 1-1
+s5p4: 0-0
+s5u1: 17-18
+s5x4: 19-19
+s5s2: 20-20
+s5l2: 0-0
+s5d1: 21-21
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5v1 :same-entity s4v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2     3      4      5  6   7       8     9     10
+Words: Ztráta pošty činila celkem na sto padesát tisíc korun .
+
+# sentence level graph:
+(s6c1 / činit-007
+        :ARG0 (s6z1 / ztráta
+            :ARG0 (s6p1 / pošta
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s6c2 / celkem)
+        :extent (s6t1 / tisíc
+            :mod (s6k1 / koruna
+                :refer-number plural)
+            :mod (s6s1 / sto
+                :refer-number singular)
+            :mod (s6p2 / padesát
+                :refer-number singular)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s6c1: 3-3
+s6z1: 1-1
+s6p1: 2-2
+s6c2: 4-4
+s6t1: 8-8
+s6k1: 9-9
+s6s1: 5-6
+s6p2: 7-7
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2     3    4   5    6        7  8    9   10     11      12 13  14       15       16       17      18  19            20 21      22          23 24      25  26 27        28
+Words: Vodičku tento soud již loni odsoudil na sedm let odnětí svobody ,  ale odvolací instance rozsudek zrušila pro nesrovnalosti v  průběhu vyšetřování a  vrátila věc k  došetření .
+
+# sentence level graph:
+(s7b1 / but-91
+        :ARG1 (s7o1 / odsoudit-001
+            :ARG1 (s7v1 / Vodička
+                :refer-number singular)
+            :ARG0 (s7s1 / soud
+                :mod (s7t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s7j1 / již)
+            :temporal (s7v2 / vloni)
+            :duration (s7r1 / rok
+                :possessor (s7o2 / odnětí
+                    :ARG0 (s7e1 / entity)
+                    :ARG1 (s7s2 / svoboda
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s7s3 / sedm
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular
+            :aspect performance)
+        :ARG2 (s7a1 / and
+            :op1 (s7z1 / zrušit-001
+                :ARG0 (s7i1 / instance
+                    :mod (s7o3 / odvolací
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s7r2 / rozsudek
+                    :refer-number singular)
+                :cause (s7n1 / nesrovnalost
+                    :temporal (s7v3 / vyšetřování
+                        :ARG0 (s7e2 / entity)
+                        :ARG1 (s7e3 / entity)
+                        :refer-number singular)
+                    :refer-number plural)
+                :aspect performance)
+            :op2 (s7v4 / vrátit-004
+                :ARG0 s7i1
+                :ARG1 (s7v5 / věc
+                    :refer-number singular)
+                :goal (s7e4 / entity)
+                :purpose (s7d1 / došetření
+                    :ARG0 (s7e5 / entity)
+                    :ARG1 (s7e6 / entity)
+                    :refer-number singular)
+                :aspect performance)))
+
+# alignment:
+s7b1: 13-13
+s7o1: 6-6
+s7v1: 1-1
+s7s1: 3-3
+s7t1: 2-2
+s7j1: 4-4
+s7v2: 5-5
+s7r1: 7-7,9-9
+s7o2: 10-10
+s7e1: 0-0
+s7s2: 11-11
+s7s3: 8-8
+s7a1: 23-23
+s7z1: 17-17
+s7r2: 16-16
+s7n1: 18-19
+s7v3: 20-22
+s7e2: 0-0
+s7e3: 0-0
+s7i1: 15-15
+s7o3: 14-14
+s7v4: 24-24
+s7v5: 25-25
+s7e4: 0-0
+s7d1: 26-27
+s7e5: 0-0
+s7e6: 0-0
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7v1 :same-entity s5v1)
+            (s7s1 :same-entity s4s1)
+            (s7r2 :same-event s7o1)
+            (s7n1 :same-entity s1r1)
+            (s7v5 :same-entity s4k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1   2         3      4  5         6  7  8     9  10            11 12    13   14     15      16             17 18 19     20 21     22   23    24
+Words: Při včerejším líčení se potvrdilo ,  že jedna z  doručovatelek ,  která jako jediná Vodičku identifikovala ,  se mýlila v  popise jeho bundy .
+
+# sentence level graph:
+(s8p1 / potvrdit-001
+        :temporal (s8l1 / líčení
+            :mod (s8v1 / včerejší
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s8e1 / entity)
+        :ARG1 (s8m1 / mýlit-se-001
+            :ARG0 (s8j1 / jeden
+                :start (s8d1 / doručovatelka
+                    :mod (s8i1 / identifikovat-002
+                        :ARG0 s8j1
+                        :ARG1 (s8v2 / Vodička
+                            :refer-number singular)
+                        :manner (s8j2 / jediný
+                            :mod-of s8j1
+                            :refer-number singular)
+                        :aspect process)
+                    :refer-number plural)
+                :refer-number singular)
+            :regard (s8p2 / popis
+                :ARG1 (s8b1 / bunda
+                    :possessor s8v2
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8p1: 4-5
+s8l1: 1-1,3-3
+s8v1: 2-2
+s8e1: 0-0
+s8m1: 7-7,18-19
+s8j1: 8-8,12-12
+s8d1: 9-10
+s8i1: 16-16
+s8v2: 15-15,22-22
+s8j2: 13-14
+s8p2: 20-21
+s8b1: 23-23
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8l1 :same-event s4p1)
+            (s8v2 :same-entity s7v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1    2     3     4      5  6         7     8  9  10    11  12         13     14
+Words: Soud totiž včera dostal k  dispozici bundu ,  v  které byl obžalovaný zatčen .
+
+# sentence level graph:
+(s9d1 / dostat-017
+        :clausal-marker (s9t1 / totiž)
+        :ARG0 (s9s1 / soud
+            :refer-number singular)
+        :temporal (s9v1 / včera)
+        :part-of-phraseme (s9k1 / k_dispozici
+            :refer-number singular)
+        :ARG1 (s9b1 / bunda
+            :manner-of (s9z1 / zatknout-001
+                :ARG1 (s9o1 / obžalovaný
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG0 (s9e1 / entity)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s9d1: 4-4
+s9t1: 2-2
+s9s1: 1-1
+s9v1: 3-3
+s9k1: 5-6
+s9b1: 7-7,9-10
+s9z1: 11-11,13-13
+s9o1: 12-12
+s9e1: 0-0
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9s1 :same-entity s7s1)
+            (s9b1 :same-entity s8b1)
+            (s9o1 :same-entity s8v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1     2         3    4         5       6       7  8  9     10     11 12 13        14 15     16
+Words: Bundu pachatele však přepadená popsala odlišně ,  s  jiným límcem a  s  označením na zádech .
+
+# sentence level graph:
+(s10p1 / popsat-002
+        :clausal-marker (s10v1 / však)
+        :ARG0 (s10p2 / přepadený
+            :refer-number singular)
+        :ARG1 (s10b1 / bunda
+            :possessor (s10p3 / pachatel
+                :refer-number singular)
+            :refer-number singular)
+        :companion (s10i1 / identity-91
+            :ARG1 (s10o1 / odlišně)
+            :ARG2 (s10a1 / and
+                :op1 (s10l1 / límec
+                    :mod (s10j1 / jiný
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s10o2 / označení
+                    :place (s10z1 / záda
+                        :refer-number singular)
+                    :refer-number singular)))
+        :aspect performance)
+
+# alignment:
+s10p1: 5-5
+s10v1: 3-3
+s10p2: 4-4
+s10b1: 1-1
+s10p3: 2-2
+s10i1: 7-7
+s10o1: 6-6
+s10a1: 11-11
+s10l1: 8-8,10-10
+s10j1: 9-9
+s10o2: 12-13
+s10z1: 14-15
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10p2 :same-entity s8j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1    2        3 4   5         6
+Words: Soud vyslechl i dva policisty .
+
+# sentence level graph:
+(s11v1 / vyslechnout-001
+        :ARG0 (s11s1 / soud
+            :refer-number singular)
+        :clausal-marker (s11i1 / i)
+        :ARG1 (s11p1 / policista
+            :mod (s11d1 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s11v1: 2-2
+s11s1: 1-1
+s11i1: 3-3
+s11p1: 5-5
+s11d1: 4-4
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11s1 :same-entity s9s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1      2     3  4  5     6         7       8  9     10       11    12
+Words: Psovod uvedl ,  že stopu pachatele ztratil a  potom vyhledal jinou .
+
+# sentence level graph:
+(s12u1 / uvést-007
+        :ARG0 (s12p1 / psovod
+            :refer-number singular)
+        :effect (s12a1 / and
+            :op1 (s12z1 / ztratit-004
+                :ARG0 s12p1
+                :ARG1 (s12s1 / stopa
+                    :possessor (s12p2 / pachatel
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :op2 (s12v1 / vyhledat-001
+                :ARG0 s12p1
+                :temporal (s12p3 / potom)
+                :ARG1 (s12s2 / stopa
+                    :mod (s12j1 / jiný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s12u1: 2-2
+s12p1: 1-1
+s12a1: 8-8
+s12z1: 4-4,7-7
+s12s1: 5-5
+s12p2: 6-6
+s12v1: 4-4,10-10
+s12p3: 9-9
+s12s2: 0-0
+s12j1: 11-11
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12p2 :same-entity s10p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1    2         3        4            5     6      7  8       9        10 11     12 13 14  15        16 17   18            19 20      21 22 23   24     25       26 27
+Words: Jiní policisté zadrželi obžalovaného podle popisu na stanici autobusu a  psovod se ho ani nepokusil se psem identifikovat ,  protože "  k  tomu nebyly podmínky "  .
+
+# sentence level graph:
+(s13a1 / and
+        :op1 (s13z1 / zadržet-002
+            :ARG0 (s13p1 / policista
+                :mod (s13j1 / jiný
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s13o1 / obžalovaný
+                :refer-number singular)
+            :regard (s13p2 / popis
+                :refer-number singular)
+            :place (s13s1 / stanice
+                :possessor (s13a2 / autobus
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance)
+        :op2 (s13p3 / pokusit-se-001
+            :ARG0 (s13p4 / psovod
+                :refer-number singular
+                :refer-person 3rd)
+            :clausal-marker (s13a3 / ani)
+            :ARG1 (s13i1 / identifikovat-002
+                :companion (s13p5 / pes
+                    :refer-number singular)
+                :ARG0 s13p4
+                :ARG1 s13o1
+                :cause (s13b1 / být-011
+                    :regard (s13t1 / ten
+                        :refer-number singular)
+                    :ARG0 (s13p6 / podmínka
+                        :refer-number plural)
+                    :refer-number plural
+                    :aspect activity
+                    :polarity -)
+                :aspect process)
+            :refer-number singular
+            :aspect performance
+            :polarity -))
+
+# alignment:
+s13a1: 10-10
+s13z1: 3-3
+s13p1: 2-2
+s13j1: 1-1
+s13o1: 4-4,13-13
+s13p2: 5-6
+s13s1: 7-8
+s13a2: 9-9
+s13p3: 12-12,15-15
+s13p4: 11-11
+s13a3: 14-14
+s13i1: 18-18
+s13p5: 16-17
+s13b1: 20-20,24-24
+s13t1: 22-23
+s13p6: 25-25
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13o1 :same-entity s9o1)
+            (s13p4 :same-entity s12p1)
+            (s13t1 :same-event s13i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1     2         3        4      5  6   7       8         9   10           11        12   13
+Words: Druhý policista podrobně popsal ,  jak policie postupuje při identifikaci pachových stop .
+
+# sentence level graph:
+(s14p1 / popsat-001
+        :ARG0 (s14p2 / policista
+            :mod (s14d1 / druhý
+                :refer-number singular)
+            :refer-number singular)
+        :manner (s14p3 / podrobně)
+        :ARG1 (s14p4 / postupovat-004
+            :ARG0 (s14p5 / policie
+                :refer-number singular)
+            :manner (s14j1 / jak)
+            :temporal (s14i1 / identifikace
+                :ARG0 s14p5
+                :ARG1 (s14s1 / stopa
+                    :mod (s14p6 / pachový
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s14p1: 4-4
+s14p2: 2-2
+s14d1: 1-1
+s14p3: 3-3
+s14p4: 8-8
+s14p5: 7-7
+s14j1: 6-6
+s14i1: 9-10
+s14s1: 12-12
+s14p6: 11-11
+
+# document level annotation:
+(s14s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1     2       3         4   5      6  7    8         9  10 11    12          13 14    15   16      17      18           19
+Words: Touto metodou policejní psi určili ve dvou případech ,  že pachy pocházející z  místa dvou loupeží patřily obžalovanému .
+
+# sentence level graph:
+(s15u1 / určit-006
+        :ARG0 (s15p1 / pes
+            :mod (s15p2 / policejní
+                :refer-number plural)
+            :refer-number plural)
+        :instrument (s15m1 / metoda
+            :mod (s15t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s15p3 / případ
+            :mod (s15d1 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s15p4 / patřit-001
+            :ARG0 (s15p5 / pach
+                :mod (s15p6 / pocházející
+                    :start (s15m2 / místo
+                        :possessor (s15l1 / loupež
+                            :mod (s15d2 / dva
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s15o1 / obžalovaný
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number plural
+            :aspect state)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s15u1: 5-5
+s15p1: 4-4
+s15p2: 3-3
+s15m1: 2-2
+s15t1: 1-1
+s15p3: 6-6,8-8
+s15d1: 7-7
+s15p4: 10-10,17-17
+s15p5: 11-11
+s15p6: 12-12
+s15m2: 13-14
+s15l1: 16-16
+s15d2: 15-15
+s15o1: 18-18
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15m1 :same-entity s14i1)
+            (s15o1 :same-entity s13o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1    2       3      4  5      6  7    8       9       10 11   12      13       14
+Words: Soud prvního stupně se opíral o  tyto pachové zkoušky ,  když Vodičku odsoudil .
+
+# sentence level graph:
+(s16o1 / opírat-se-001
+        :ARG0 (s16s1 / soud
+            :mod (s16s2 / stupeň
+                :mod (s16p1 / první
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s16o2 / odsoudit-001
+            :ARG1 (s16v1 / Vodička
+                :refer-number singular)
+            :ARG0 s16s1
+            :refer-number singular
+            :aspect performance)
+        :ARG1 (s16z1 / zkouška
+            :mod (s16t1 / tento
+                :refer-number plural)
+            :mod (s16p2 / pachový
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s16o1: 4-5
+s16s1: 1-1
+s16s2: 3-3
+s16p1: 2-2
+s16o2: 11-11,13-13
+s16v1: 12-12
+s16z1: 6-6,9-9
+s16t1: 7-7
+s16p2: 8-8
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16s1 :same-entity s11s1)
+            (s16v1 :same-entity s15o1)
+            (s16z1 :same-event s15u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1     2      3     4        5       6  7                8      9         10        11 12       13 14    15  16      17    18    19   20
+Words: Senát minulý týden vyslechl jednoho z  nejdůležitějších svědků únorového přepadení -  cyklistu ,  který jel náhodou kolem místa činu .
+
+# sentence level graph:
+(s17v1 / vyslechnout-001
+        :ARG0 (s17s1 / senát
+            :refer-number singular)
+        :temporal (s17t1 / týden
+            :mod (s17m1 / minulý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s17i1 / identity-91
+            :ARG1 (s17j1 / jeden
+                :start (s17s2 / svědek
+                    :mod (s17d1 / důležitý
+                        :refer-number plural)
+                    :ARG1 (s17p1 / přepadení
+                        :ARG0 (s17e1 / entity)
+                        :ARG1 (s17e2 / entity)
+                        :temporal (s17u1 / únorový
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG2 (s17c1 / cyklista
+                :ARG0-of (s17j2 / jet-005
+                    :cause (s17n1 / náhodou)
+                    :place (s17m2 / místo
+                        :possessor (s17c2 / čin
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect activity)
+                :refer-number singular))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s17v1: 4-4
+s17s1: 1-1
+s17t1: 3-3
+s17m1: 2-2
+s17i1: 11-11
+s17j1: 5-5
+s17s2: 6-6,8-8
+s17d1: 7-7
+s17p1: 10-10
+s17e1: 0-0
+s17e2: 0-0
+s17u1: 9-9
+s17c1: 12-12,14-14
+s17j2: 15-15
+s17n1: 16-16
+s17m2: 17-18
+s17c2: 19-19
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17p1 :same-event s5p4)
+            (s17m2 :same-entity s15m2)
+            (s17c2 :same-entity s17p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1   2       3  4  5      6       7  8         9       10     11 12    13   14
+Words: Ten spatřil "  na setinu vteřiny "  pachatele loupeže utíkat z  místa činu .
+
+# sentence level graph:
+(s18s1 / spatřit-002
+        :ARG0 (s18t1 / ten
+            :refer-number singular)
+        :duration (s18s2 / setina
+            :mod (s18v1 / vteřina
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s18p1 / pachatel
+            :possessor (s18l1 / loupež
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s18u1 / utíkat-001
+            :ARG0 s18p1
+            :start (s18m1 / místo
+                :possessor (s18c1 / čin
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s18s1: 2-2
+s18t1: 1-1
+s18s2: 4-5
+s18v1: 6-6
+s18p1: 8-8
+s18l1: 9-9
+s18u1: 10-10
+s18m1: 11-12
+s18c1: 13-13
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18t1 :same-entity s17i1)
+            (s18p1 :same-entity s12p2)
+            (s18l1 :same-entity s17c2)
+            (s18m1 :same-entity s17m2)
+            (s18c1 :same-entity s18l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s19-root
+# :: snt19
+Index: 1       2  3       4  5     6     7  8         9  10  11      12
+Words: Později ho zahlédl na jiném místě a  upozornil na něj policii .
+
+# sentence level graph:
+(s19a1 / and
+        :op1 (s19z1 / zahlédnout-001
+            :ARG0 (s19e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :temporal (s19p1 / pozdě)
+            :ARG1 (s19e2 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :place (s19m1 / místo
+                :mod (s19j1 / jiný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s19u1 / upozornit-001
+            :ARG0 s19e1
+            :ARG1 s19e2
+            :ARG2 (s19p2 / policie
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s19a1: 7-7
+s19z1: 3-3
+s19p1: 1-1
+s19e2: 2-2,9-10
+s19m1: 4-4,6-6
+s19j1: 5-5
+s19e1: 0-0
+s19u1: 8-8
+s19p2: 11-11
+
+# document level annotation:
+(s19s0 / sentence
+    :coref ((s19e2 :same-entity s18p1)
+            (s19e1 :same-entity s18t1)
+            (s19p2 :same-entity s14p5)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s20-root
+# :: snt20
+Index: 1     2      3       4  5     6        7  8  9       10 11       12 13  14   15 16    17   18
+Words: Tento svědek původně na dálku potvrdil ,  že Vodička je pachatel ,  ale nyní si nebyl jist .
+
+# sentence level graph:
+(s20b1 / but-91
+        :ARG1 (s20p1 / potvrdit-001
+            :ARG0 (s20s1 / svědek
+                :mod (s20t1 / tento
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :temporal (s20p2 / původně)
+            :manner (s20d1 / dálka
+                :refer-number singular)
+            :ARG1 (s20b2 / být-007
+                :ARG0 (s20v1 / Vodička
+                    :refer-number singular)
+                :ARG1 (s20p3 / pachatel
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular
+            :aspect performance)
+        :ARG2 (s20b3 / být-007
+            :ARG0 s20s1
+            :temporal (s20n1 / nyní)
+            :affectee s20s1
+            :ARG1 (s20j1 / jistý
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity
+            :polarity -))
+
+# alignment:
+s20b1: 13-13
+s20p1: 6-6
+s20p2: 3-3
+s20d1: 4-5
+s20b2: 8-8,10-10
+s20v1: 9-9
+s20p3: 11-11
+s20s1: 2-2,15-15
+s20t1: 1-1
+s20b3: 16-16
+s20n1: 14-14
+s20j1: 17-17
+
+# document level annotation:
+(s20s0 / sentence
+    :coref ((s20v1 :same-entity s16v1)
+            (s20p3 :same-entity s19e2)
+            (s20s1 :same-entity s19e1)))
+
+

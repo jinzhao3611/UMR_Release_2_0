@@ -1,0 +1,128 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1   2       3  4  5       6  7    8      9              10 11     12 13   14     15 16 17           18 19    20     21
+Words: Pes Blackie (  na obrázku se svou osobní ošetřovatelkou )  zdědil po svém pánovi J  .  Goodchildovi 33 tisíc dolarů .
+
+# sentence level graph:
+(s1z1 / zdědit-001
+        :ARG0 (s1p1 / pes
+            :mod (s1b1 / Blackie
+                :refer-number singular)
+            :parenthesis (s1e1 / event
+                :place (s1o1 / obrázek
+                    :refer-number singular)
+                :companion (s1o2 / ošetřovatelka
+                    :possessor s1p1
+                    :mod (s1o3 / osobní
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect state)
+            :refer-number singular)
+        :source (s1g1 / Goodchild
+            :mod (s1j1 / J)
+            :mod (s1p2 / pán
+                :possessor s1p1
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1t1 / tisíc
+            :mod (s1d1 / dolar
+                :refer-number plural)
+            :mod (s1x3 / 33)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s1z1: 11-11
+s1p1: 1-1,7-7,13-13
+s1b1: 2-2
+s1e1: 0-0
+s1o1: 4-5
+s1o2: 6-6,9-9
+s1o3: 8-8
+s1g1: 12-12,17-17
+s1j1: 15-15
+s1p2: 14-14
+s1t1: 19-19
+s1d1: 20-20
+s1x3: 18-18
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1           2   3     4  5     6   7       8  9  10 11   12     13 14     15
+Words: Goodchildův syn David ,  který byl vyděděn ,  se se psem soudil a  vyhrál .
+
+# sentence level graph:
+(s2a1 / and
+        :op1 (s2s1 / soudit-se-001
+            :ARG0 (s2d1 / David
+                :mod (s2s2 / syn
+                    :possessor (s2g1 / Goodchild
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1-of (s2v1 / vydědit-001
+                    :ARG0 s2g1
+                    :refer-number singular
+                    :aspect performance)
+                :refer-number singular)
+            :ARG2 (s2p1 / pes
+                :refer-number singular)
+            :ARG1 (s2e1 / entity)
+            :refer-number singular
+            :aspect activity)
+        :op2 (s2v2 / vyhrát-001
+            :ARG0 s2d1
+            :ARG1 (s2e2 / entity)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s2a1: 13-13
+s2s1: 9-9,12-12
+s2p1: 10-11
+s2e1: 0-0
+s2d1: 3-3,5-5
+s2s2: 2-2
+s2g1: 1-1
+s2v1: 6-7
+s2v2: 14-14
+s2e2: 0-0
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p1 :same-entity s1p1)
+            (s2g1 :same-entity s1g1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2 3   4 5
+Words: Foto : ČTK / AP
+
+# sentence level graph:
+(s3x1 / #Colon
+        :ARG1 (s3f1 / foto
+            :refer-number singular)
+        :ARG0 (s3a1 / and
+            :op1 (s3c1 / ČTK)
+            :op2 (s3a2 / AP)))
+
+# alignment:
+s3x1: 2-2
+s3f1: 1-1
+s3a1: 4-4
+s3c1: 3-3
+s3a2: 5-5
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3f1 :same-entity s1o1)))
+
+

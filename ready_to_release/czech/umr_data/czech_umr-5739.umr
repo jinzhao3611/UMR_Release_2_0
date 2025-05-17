@@ -1,0 +1,141 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2       3    4  5      6  7  8   9        10   11            12         13          14 15    16      17     18      19     20             21      22          23      24 25      26 27      28     29   30          31           32      33
+Words: Společnost Toshiba Corp .  uvedla ,  že pod záštitou její západoněmecké přidružené společnosti ,  která původně řídila veškerý prodej elektronických výrobků společnosti Toshiba ve Francii ,  zahájil provoz nový francouzský marketingový koncern .
+
+# sentence level graph:
+(s1u1 / uvést-007
+        :ARG0 (s1s1 / společnost
+            :name (s1x1 / #Forn
+                :FPHR (s1t1 / Toshiba)
+                :FPHR (s1c1 / Corp)
+                :FPHR (s1x2 / .))
+            :refer-number singular)
+        :effect (s1z1 / zahájit-001
+            :manner (s1z2 / záštita
+                :mod (s1s2 / společnost
+                    :mod s1s1
+                    :mod (s1z3 / západoněmecký
+                        :refer-number singular)
+                    :mod (s1p1 / přidružený
+                        :refer-number singular)
+                    :ARG0-of (s1r1 / řídit-001
+                        :temporal (s1p2 / původně)
+                        :ARG1 (s1p3 / prodej
+                            :mod (s1v1 / veškerý
+                                :refer-number singular)
+                            :mod (s1v2 / výrobek
+                                :mod (s1e1 / elektronický
+                                    :refer-number plural)
+                                :mod (s1s3 / společnost
+                                    :name (s1t2 / Toshiba
+                                        :refer-number singular)
+                                    :refer-number singular
+                                    :refer-person 3rd)
+                                :refer-number plural)
+                            :place (s1f1 / Francie
+                                :refer-number singular)
+                            :refer-number singular)
+                        :aspect activity)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s1p4 / provoz
+                :refer-number singular)
+            :ARG0 (s1k1 / koncern
+                :mod (s1n1 / nový
+                    :refer-number singular)
+                :mod (s1f2 / francouzský
+                    :refer-number singular)
+                :mod (s1m1 / marketingový
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s1u1: 5-5
+s1s1: 1-1,10-10
+s1x1: 0-0
+s1t1: 2-2
+s1c1: 3-3
+s1x2: 4-4
+s1z1: 7-7,27-27
+s1z2: 8-9
+s1s2: 13-13,15-15
+s1z3: 11-11
+s1p1: 12-12
+s1r1: 17-17
+s1p2: 16-16
+s1p3: 19-19
+s1v1: 18-18
+s1v2: 21-21
+s1e1: 20-20
+s1s3: 22-22
+s1t2: 23-23
+s1f1: 24-25
+s1p4: 28-28
+s1k1: 32-32
+s1n1: 29-29
+s1f2: 30-30
+s1m1: 31-31
+
+# document level annotation:
+(s1s0 / sentence
+    :coref ((s1s3 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2     3             4      5     6           7       8        9     10           11      12 13         14 15     16
+Words: Nedávná změna francouzského zákona podle společnosti Toshiba umožnila vznik marketingové pobočky s  polovodiči v  Paříži .
+
+# sentence level graph:
+(s2u1 / umožnit-002
+        :ARG0 (s2z1 / změna
+            :mod (s2d1 / dávný
+                :refer-number singular
+                :polarity -)
+            :mod (s2z2 / zákon
+                :mod (s2f1 / francouzský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s2s1 / společnost
+            :name (s2t1 / Toshiba
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2v1 / vznik
+            :mod (s2p1 / pobočka
+                :mod (s2m1 / marketingový
+                    :refer-number singular)
+                :mod (s2p2 / polovodič
+                    :refer-number plural)
+                :place (s2p3 / Paříž
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s2u1: 8-8
+s2z1: 2-2
+s2d1: 1-1
+s2z2: 4-4
+s2f1: 3-3
+s2s1: 5-6
+s2t1: 7-7
+s2v1: 9-9
+s2p1: 11-11
+s2m1: 10-10
+s2p2: 12-13
+s2p3: 14-15
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2s1 :same-entity s1s3)
+            (s2p1 :same-entity s1k1)))
+
+

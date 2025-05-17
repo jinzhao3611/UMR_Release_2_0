@@ -1,0 +1,337 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1   2    3  4     5 6  7
+Words: Pro ČSSD je zákon o VŠ nepřijatelný
+
+# sentence level graph:
+(s1b1 / být-007
+        :affectee (s1c1 / ČSSD)
+        :ARG0 (s1z1 / zákon
+            :ARG1 (s1v1 / VŠ)
+            :refer-number singular)
+        :ARG1 (s1p1 / přijatelný
+            :refer-number singular
+            :polarity -)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1b1: 3-3
+s1c1: 1-2
+s1z1: 4-4
+s1v1: 5-6
+s1p1: 7-7
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2             3     4  5     6  7       8        9        10 11 12  13     14     15                    16           17
+Words: Navrhovaný vysokoškolský zákon ,  který by umožnil vybírání školného ,  je pro Českou stranu sociálnědemokratickou nepřijatelný .
+
+# sentence level graph:
+(s3b1 / být-007
+        :ARG0 (s3z1 / zákon
+            :mod (s3v1 / vysokoškolský
+                :refer-number singular)
+            :mod (s3n1 / navrhovaný
+                :refer-number singular)
+            :ARG0-of (s3u1 / umožnit-001
+                :ARG2 (s3e1 / entity)
+                :ARG1 (s3v2 / vybírání
+                    :ARG0 s3e1
+                    :ARG1 (s3s1 / školné
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :ARG1 (s3p1 / přijatelný
+            :affectee (s3s2 / strana
+                :mod (s3s3 / sociálnědemokratický
+                    :refer-number singular)
+                :mod (s3c1 / český
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :polarity -)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3b1: 11-11
+s3z1: 3-3,5-5
+s3v1: 2-2
+s3n1: 1-1
+s3u1: 6-7
+s3e1: 0-0
+s3v2: 8-8
+s3s1: 9-9
+s3p1: 16-16
+s3s2: 12-12,14-14
+s3s3: 15-15
+s3c1: 13-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3z1 :same-entity s1z1)
+            (s3s2 :same-entity s1c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2  3     4        5  6    7      8     9
+Words: Uvedl to včera poslanec za ČSSD Eduard Zeman .
+
+# sentence level graph:
+(s4u1 / uvést-001
+        :ARG1 (s4t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s4v1 / včera)
+        :ARG0 (s4z1 / Zeman
+            :mod (s4e1 / Eduard
+                :refer-number singular)
+            :mod (s4p1 / poslanec
+                :substitute (s4c1 / ČSSD
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4u1: 1-1
+s4t1: 2-2
+s4v1: 3-3
+s4z1: 8-8
+s4e1: 7-7
+s4p1: 4-4
+s4c1: 5-6
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3b1)
+            (s4c1 :same-entity s3s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1        2         3        4  5  6     7  8       9        10 11   12 13  14     15      16 17       18      19      20
+Words: Sociální demokraté namítají ,  že vláda se školným přichází v  době ,  kdy rostou náklady na základní životní potřeby .
+
+# sentence level graph:
+(s5n1 / namítat-001
+        :ARG0 (s5d1 / demokrat
+            :mod (s5s1 / sociální
+                :refer-number plural)
+            :refer-number plural)
+        :effect (s5p1 / přicházet-010
+            :ARG0 (s5v1 / vláda
+                :refer-number singular)
+            :companion (s5s2 / školné
+                :refer-number singular)
+            :temporal (s5d2 / doba
+                :temporal-of (s5r1 / růst-002
+                    :ARG0 (s5n2 / náklad
+                        :ARG1 (s5p2 / potřeba
+                            :mod (s5z1 / životní
+                                :refer-number plural)
+                            :mod (s5z2 / základní
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5n1: 3-3
+s5d1: 2-2
+s5s1: 1-1
+s5p1: 5-5,9-9
+s5v1: 6-6
+s5s2: 7-8
+s5d2: 10-11,13-13
+s5r1: 14-14
+s5n2: 15-15
+s5p2: 16-16,19-19
+s5z1: 18-18
+s5z2: 17-17
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5d1 :same-entity s4c1)
+            (s5s2 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2       3  4     5      6    7      8  9      10
+Words: Druhá námitka se podle Zemana týká půjček na školné .
+
+# sentence level graph:
+(s6t1 / týkat-se-001
+        :ARG0 (s6n1 / námitka
+            :mod (s6d1 / druhý
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s6z1 / Zeman
+            :refer-number singular)
+        :ARG1 (s6p1 / půjčka
+            :purpose (s6s1 / školné
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6t1: 3-3,6-6
+s6n1: 2-2
+s6d1: 1-1
+s6z1: 4-5
+s6p1: 7-7
+s6s1: 8-9
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s1 :same-entity s5s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2     3     4        5  6        7     8           9      10 11 12    13
+Words: "  Vláda zákon posunula do sociálně těžko stravitelné polohy ,  "  uvedl .
+
+# sentence level graph:
+(s7u1 / uvést-007
+        :ARG0 (s7e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :effect (s7p1 / posunout-001
+            :ARG0 (s7v1 / vláda
+                :refer-number singular)
+            :ARG1 (s7z1 / zákon
+                :refer-number singular)
+            :goal (s7p2 / poloha
+                :mod (s7s1 / stravitelný
+                    :regard (s7s2 / sociálně)
+                    :extent (s7t1 / těžko)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7u1: 12-12
+s7e1: 0-0
+s7p1: 4-4
+s7v1: 2-2
+s7z1: 3-3
+s7p2: 5-5,9-9
+s7s1: 8-8
+s7s2: 6-6
+s7t1: 7-7
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6z1)
+            (s7v1 :same-entity s5v1)
+            (s7z1 :same-entity s3z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1      2     3    4    5     6        7        8         9  10    11  12  13       14         15     16
+Words: Půjčky podle něho mají zcela komerční bankovní charakter a  budou prý pro studenty drastickou zátěží .
+
+# sentence level graph:
+(s8a1 / and
+        :op1 (s8m1 / mít-008
+            :ARG0 (s8p1 / půjčka
+                :refer-number plural)
+            :regard (s8e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s8c1 / charakter
+                :mod (s8b1 / bankovní
+                    :refer-number singular)
+                :mod (s8k1 / komerční
+                    :extent (s8z1 / zcela)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect state)
+        :op2 (s8b2 / být-007
+            :ARG0 s8p1
+            :regard s8e1
+            :clausal-marker (s8p2 / prý)
+            :affectee (s8s1 / student
+                :refer-number plural)
+            :ARG1 (s8z2 / zátěž
+                :mod (s8d1 / drastický
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s8a1: 9-9
+s8m1: 4-4
+s8c1: 8-8
+s8b1: 7-7
+s8k1: 6-6
+s8z1: 5-5
+s8p1: 1-1
+s8e1: 2-3
+s8b2: 10-10
+s8p2: 11-11
+s8s1: 12-13
+s8z2: 15-15
+s8d1: 14-14
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8p1 :same-entity s6p1)
+            (s8e1 :same-entity s7e1)))
+
+

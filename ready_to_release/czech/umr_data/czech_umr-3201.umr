@@ -1,0 +1,776 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1 2      3         4     5
+Words: V Moskvě schválili návrh ústavy
+
+# sentence level graph:
+(s1s1 / schválit-002
+        :place (s1m1 / Moskva
+            :refer-number singular)
+        :ARG0 (s1e1 / entity)
+        :ARG1 (s1n1 / návrh
+            :possessor (s1u1 / ústava
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s1s1: 3-3
+s1m1: 1-2
+s1e1: 0-0
+s1n1: 4-4
+s1u1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: Moskva -
+
+# sentence level graph:
+(s2m1 / Moskva
+        :refer-number singular)
+
+# alignment:
+s2m1: 1-1
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2m1 :same-entity s1m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2         3       4      5  6         7       8         9        10 11     12        13    14     15         16     17    18       19
+Words: Většina účastníků ústavní porady na včerejším čtvrtém plenárním zasedání v  Moskvě schválila návrh nového základního zákona Ruské federace .
+
+# sentence level graph:
+(s3s1 / schválit-002
+        :ARG0 (s3v1 / většina
+            :mod (s3u1 / účastník
+                :ARG1 (s3p1 / porada
+                    :mod (s3u2 / ústavní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :place (s3z1 / zasedání
+            :ARG0 (s3e1 / entity)
+            :mod (s3p2 / plenární
+                :refer-number singular)
+            :mod (s3c1 / čtvrtý
+                :refer-number singular)
+            :temporal (s3v2 / včerejší
+                :refer-number singular)
+            :place (s3m1 / Moskva
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3n1 / návrh
+            :possessor (s3z2 / zákon
+                :mod (s3z3 / základní
+                    :refer-number singular)
+                :possessor (s3f1 / federace
+                    :mod (s3r1 / ruský
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s3n2 / nový
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3s1: 12-12
+s3v1: 1-1
+s3u1: 2-2
+s3p1: 4-4
+s3u2: 3-3
+s3z1: 5-5,9-9
+s3e1: 0-0
+s3p2: 8-8
+s3c1: 7-7
+s3v2: 6-6
+s3m1: 10-11
+s3n1: 13-13
+s3z2: 16-16
+s3z3: 15-15
+s3f1: 18-18
+s3r1: 17-17
+s3n2: 14-14
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3m1 :same-entity s2m1)
+            (s3n1 :same-entity s1n1)
+            (s3z2 :same-entity s1u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1   2        3  4     5  6         7    8   9         10      11 12        13  14        15       16 17    18   19 20 21 22 23        24      25
+Words: Pro dokument ,  který je výsledkem více než měsíčního jednání ,  hlasovalo 433 účastníků zasedání ,  proti bylo 62 a  63 se hlasování zdrželo .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4h1 / hlasovat-003
+            :ARG1 (s4d1 / dokument
+                :ARG0-of (s4b1 / být-007
+                    :ARG1 (s4v1 / výsledek
+                        :possessor (s4j1 / jednání
+                            :ARG0 (s4e1 / entity)
+                            :ARG1 (s4e2 / entity)
+                            :ARG2 (s4e3 / entity)
+                            :duration (s4m1 / měsíční
+                                :extent (s4h2 / hodně
+                                    :part-of-phraseme (s4n1 / než))
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :ARG0 (s4u1 / účastník
+                :ARG1 (s4z1 / zasedání
+                    :ARG0 (s4e4 / entity)
+                    :refer-number singular)
+                :mod (s4x1 / 433)
+                :refer-number plural)
+            :refer-number singular
+            :aspect activity)
+        :op2 (s4b2 / být-011
+            :affectee (s4e5 / entity)
+            :ARG0 (s4u2 / účastník
+                :mod (s4x2 / 62)
+                :refer-number plural)
+            :refer-number singular
+            :aspect activity)
+        :op3 (s4z2 / zdržet-se-001
+            :ARG0 (s4u3 / účastník
+                :mod (s4x3 / 63)
+                :refer-number plural)
+            :ARG1 (s4h3 / hlasování
+                :ARG0 (s4e6 / entity)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s4a1: 20-20
+s4h1: 12-12
+s4d1: 1-2,4-4
+s4b1: 5-5
+s4v1: 6-6
+s4j1: 10-10
+s4e1: 0-0
+s4e2: 0-0
+s4e3: 0-0
+s4m1: 9-9
+s4h2: 7-7
+s4n1: 8-8
+s4u1: 14-14
+s4z1: 15-15
+s4e4: 0-0
+s4x1: 13-13
+s4b2: 18-18
+s4e5: 0-0
+s4u2: 0-0
+s4x2: 19-19
+s4z2: 22-22,24-24
+s4u3: 0-0
+s4x3: 21-21
+s4h3: 23-23
+s4e6: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4d1 :same-entity s3n1)
+            (s4u1 :same-entity s3v1)
+            (s4z1 :same-entity s3z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2     3      4  5         6       7       8     9  10     11     12            13         14   15           16      17   18 19         20 21 22   23      24     25   26       27       28      29  30    31     32    33            34 35           36 37   38 39        40
+Words: Prezident Boris Jelcin ve včerejším projevu označil návrh za signál obnovy konstruktivní spolupráce mezi jednotlivými větvemi moci a  poznamenal ,  že díky aktivní účasti řady lidových poslanců přestal být návrh ústavy pouze prezidentským či parlamentním a  stal se společným .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5o1 / označit-001
+            :ARG0 (s5j1 / Jelcin
+                :mod (s5b1 / Boris
+                    :refer-number singular)
+                :mod (s5p1 / prezident
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s5n1 / návrh
+                :refer-number singular)
+            :place (s5p2 / projev
+                :mod (s5v1 / včerejší
+                    :refer-number singular)
+                :refer-number singular)
+            :effect (s5s1 / signál
+                :possessor (s5o2 / obnova
+                    :ARG1 (s5s2 / spolupráce
+                        :ARG2 (s5x1 / #Rcp
+                            :refer-number plural)
+                        :ARG0 (s5v2 / větev
+                            :possessor (s5m1 / moc
+                                :refer-number singular)
+                            :mod (s5j2 / jednotlivý
+                                :refer-number plural)
+                            :refer-number plural)
+                        :mod (s5k1 / konstruktivní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s5p3 / poznamenat-004
+            :ARG0 s5j1
+            :effect (s5a2 / and
+                :op1 (s5p4 / přestat-001
+                    :cause (s5u1 / účast
+                        :mod (s5a3 / aktivní
+                            :refer-number singular)
+                        :ARG0 (s5r1 / řada
+                            :mod (s5p5 / poslanec
+                                :mod (s5l1 / lidový
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0 (s5n2 / návrh
+                        :possessor (s5u2 / ústava
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG1 (s5b2 / být-007
+                        :ARG0 s5n2
+                        :clausal-marker (s5p6 / pouze)
+                        :ARG1 (s5o3 / or
+                            :op1 (s5p7 / prezidentský
+                                :refer-number singular)
+                            :op2 (s5p8 / parlamentní
+                                :refer-number singular))
+                        :aspect activity)
+                    :refer-number singular
+                    :aspect performance)
+                :op2 (s5s3 / stát-se-001
+                    :cause s5u1
+                    :ARG0 s5n2
+                    :ARG1 (s5s4 / společný
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance))
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s5a1: 18-18
+s5o1: 7-7
+s5n1: 8-8
+s5p2: 4-4,6-6
+s5v1: 5-5
+s5s1: 9-10
+s5o2: 11-11
+s5s2: 13-13
+s5x1: 0-0
+s5v2: 14-14,16-16
+s5m1: 17-17
+s5j2: 15-15
+s5k1: 12-12
+s5j1: 3-3
+s5b1: 2-2
+s5p1: 1-1
+s5p3: 19-19
+s5a2: 36-36
+s5p4: 21-21,28-28
+s5b2: 29-29
+s5p6: 32-32
+s5o3: 34-34
+s5p7: 33-33
+s5p8: 35-35
+s5u1: 22-22,24-24
+s5a3: 23-23
+s5r1: 25-25
+s5p5: 27-27
+s5l1: 26-26
+s5n2: 30-30
+s5u2: 31-31
+s5s3: 21-21,37-38
+s5s4: 39-39
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5n1 :same-entity s4d1)
+            (s5v1 :same-entity s3v2)
+            (s5x1 :same-entity s5v2)
+            (s5p7 :same-entity s5j1)
+            (s5n2 :same-entity s5n1)
+            (s5u2 :same-entity s3z2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2  3    4         5  6       7  8   9  10         11  12 13    14     15
+Words: Nejde o  něčí vítězství či porážku ,  ale o  sjednocení sil ,  uvedl Jelcin .
+
+# sentence level graph:
+(s6u1 / uvést-007
+        :ARG0 (s6j1 / Jelcin
+            :refer-number singular)
+        :effect (s6b1 / but-91
+            :ARG1 (s6j2 / jít-035
+                :ARG0 (s6a1 / and
+                    :op1 (s6v1 / vítězství
+                        :mod (s6n1 / něčí
+                            :refer-number singular
+                            :refer-person 3rd)
+                        :refer-number singular)
+                    :op2 (s6p1 / porážka
+                        :mod s6n1
+                        :refer-number singular))
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity
+                :polarity -)
+            :ARG2 (s6j3 / jít-035
+                :ARG0 (s6s1 / sjednocení
+                    :ARG1 (s6x2 / #Rcp
+                        :refer-number plural)
+                    :ARG0 (s6s2 / síla
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6u1: 13-13
+s6j1: 14-14
+s6b1: 8-8
+s6j2: 1-1
+s6a1: 5-5
+s6v1: 2-2,4-4
+s6n1: 3-3
+s6p1: 2-2,6-6
+s6j3: 0-0
+s6s1: 9-10
+s6x2: 0-0
+s6s2: 11-11
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6j1 :same-entity s5p7)
+            (s6x2 :same-entity s6s2)
+            (s6s2 :same-entity s5v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1           2      3     4  5        6          7      8           9  10    11       12      13     14          15
+Words: Prezidentův přední rival ,  předseda parlamentu Ruslan Chasbulatov se včera zasedání ústavní porady nezúčastnil .
+
+# sentence level graph:
+(s7z1 / zúčastnit-se-001
+        :ARG0 (s7i1 / identity-91
+            :ARG1 (s7r1 / rival
+                :possessor (s7p1 / prezident
+                    :refer-number singular)
+                :mod (s7p2 / přední
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s7c1 / Chasbulatov
+                :mod (s7r2 / Ruslan
+                    :refer-number singular)
+                :mod (s7p3 / předseda
+                    :possessor (s7p4 / parlament
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular))
+        :temporal (s7v1 / včera
+            :refer-number singular)
+        :ARG1 (s7z2 / zasedání
+            :ARG0 (s7p5 / porada
+                :mod (s7u1 / ústavní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s7z1: 9-9,14-14
+s7i1: 4-4
+s7r1: 3-3
+s7p1: 1-1
+s7p2: 2-2
+s7c1: 8-8
+s7r2: 7-7
+s7p3: 5-5
+s7p4: 6-6
+s7v1: 10-10
+s7z2: 11-11
+s7p5: 13-13
+s7u1: 12-12
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p1 :same-entity s6j1)
+            (s7p4 :same-entity s5p8)
+            (s7v1 :same-entity s5v1)
+            (s7z2 :same-entity s4z1)
+            (s7p5 :same-entity s3p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1    2            3    4         5          6               7        8      9  10    11         12         13 14         15
+Words: Jeho nepřítomnost byla oficiálně vysvětlena Chasbulatovovou včerejší cestou do sídla Evropského parlamentu ve Štrasburku .
+
+# sentence level graph:
+(s8v1 / vysvětlit-001
+        :ARG1 (s8p1 / přítomnost
+            :ARG0 (s8e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular
+            :polarity -)
+        :ARG0 (s8e2 / entity)
+        :ARG2 (s8e3 / entity)
+        :manner (s8o1 / oficiálně)
+        :instrument (s8c1 / cesta
+            :ARG0 (s8c2 / Chasbulatov
+                :refer-number singular
+                :refer-person 3rd)
+            :temporal (s8v2 / včerejší
+                :refer-number singular)
+            :goal (s8s1 / sídlo
+                :possessor (s8p2 / parlament
+                    :mod (s8e4 / evropský
+                        :refer-number singular)
+                    :place (s8s2 / Štrasburk
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s8v1: 3-3,5-5
+s8p1: 2-2
+s8e1: 1-1
+s8e2: 0-0
+s8e3: 0-0
+s8o1: 4-4
+s8c1: 8-8
+s8c2: 6-6
+s8v2: 7-7
+s8s1: 9-10
+s8p2: 12-12
+s8e4: 11-11
+s8s2: 13-14
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8p1 :same-event s7z1)
+            (s8e1 :same-entity s7i1)
+            (s8c2 :same-entity s8e1)
+            (s8v2 :same-entity s7v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1      2       3  4       5       6        7      8         9        10       11 12       13     14          15 16 17    18     19         20     21       22        23    24     25   26     27
+Words: Jelcin označil za klíčový problém přípravy ústavy postavení subjektů federace a  vyjádřil přitom přesvědčení ,  že návrh nového základního zákona obsahuje maximální možné řešení této otázky .
+
+# sentence level graph:
+(s9a1 / and
+        :op1 (s9o1 / označit-001
+            :ARG0 (s9j1 / Jelcin
+                :refer-number singular)
+            :effect (s9p1 / problém
+                :ARG1 (s9p2 / příprava
+                    :ARG1 (s9u1 / ústava
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s9k1 / klíčový
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s9p3 / postavení
+                :possessor (s9s1 / subjekt
+                    :possessor (s9f1 / federace
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s9v1 / vyjádřit-003
+            :ARG0 s9j1
+            :temporal (s9p4 / přitom)
+            :predicative-noun (s9p5 / přesvědčení
+                :ARG0 s9j1
+                :ARG1 (s9o2 / obsahovat-001
+                    :ARG0 (s9n1 / návrh
+                        :possessor (s9z1 / zákon
+                            :mod (s9n2 / nový
+                                :refer-number singular)
+                            :mod (s9z2 / základní
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG1 (s9r1 / řešení
+                        :ARG1 (s9o3 / otázka
+                            :mod (s9t1 / tento
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG0 (s9e1 / entity)
+                        :mod (s9m1 / možný
+                            :refer-number singular)
+                        :mod (s9m2 / maximální
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s9a1: 11-11
+s9o1: 2-2
+s9p1: 3-3,5-5
+s9p2: 6-6
+s9u1: 7-7
+s9k1: 4-4
+s9p3: 8-8
+s9s1: 9-9
+s9f1: 10-10
+s9j1: 1-1
+s9v1: 12-12
+s9p4: 13-13
+s9p5: 14-14
+s9o2: 16-16,21-21
+s9n1: 17-17
+s9z1: 20-20
+s9n2: 18-18
+s9z2: 19-19
+s9r1: 24-24
+s9o3: 26-26
+s9t1: 25-25
+s9e1: 0-0
+s9m1: 23-23
+s9m2: 22-22
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p2 :same-entity s4j1)
+            (s9u1 :same-entity s5u2)
+            (s9s1 :same-entity s6s2)
+            (s9f1 :same-entity s3f1)
+            (s9j1 :same-entity s7p1)
+            (s9n1 :same-entity s5n2)
+            (s9z1 :same-entity s9u1)
+            (s9o3 :same-entity s9p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1     2          3       4  5     6     7           8         9         10         11         12     13      14 15           16       17 18  19   20   21       22 23    24 25      26    27 28       29     30      31
+Words: Podle prezidenta jediným v  praxi dosud nevyřešeným problémem zůstávají existující ekonomické výhody spojené s  republikovým statutem ,  což mimo jiné vyvolává u  krajů a  oblastí úsilí o  povýšení jejich statutu .
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10z1 / zůstávat-003
+            :ARG1 (s10p1 / problém
+                :mod (s10j1 / jediný
+                    :refer-number singular)
+                :mod (s10v1 / vyřešený
+                    :place (s10p2 / praxe
+                        :refer-number singular)
+                    :temporal (s10d1 / dosud)
+                    :refer-number singular
+                    :polarity -)
+                :refer-number singular)
+            :regard (s10p3 / prezident
+                :refer-number singular)
+            :ARG0 (s10v2 / výhoda
+                :mod (s10e1 / ekonomický
+                    :refer-number plural)
+                :mod (s10e2 / existující
+                    :refer-number plural)
+                :mod (s10s1 / spojený
+                    :ARG1 (s10s2 / statut
+                        :mod (s10r1 / republikový
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect habitual)
+        :op2 (s10v3 / vyvolávat-002
+            :ARG0 (s10c1 / což
+                :refer-number plural
+                :refer-person 3rd)
+            :subtraction (s10j2 / jiný
+                :refer-number singular)
+            :place (s10a2 / and
+                :op1 (s10k1 / kraj
+                    :refer-number plural)
+                :op2 (s10o1 / oblast
+                    :refer-number plural))
+            :ARG1 (s10u1 / úsilí
+                :ARG1 (s10p4 / povýšení
+                    :ARG0 (s10e3 / entity)
+                    :ARG1 (s10s3 / statut
+                        :possessor s10a2
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect habitual))
+
+# alignment:
+s10a1: 17-17
+s10z1: 9-9
+s10p1: 8-8
+s10j1: 3-3
+s10v1: 7-7
+s10p2: 4-5
+s10d1: 6-6
+s10p3: 1-2
+s10v2: 12-12
+s10e1: 11-11
+s10e2: 10-10
+s10s1: 13-13
+s10s2: 14-14,16-16
+s10r1: 15-15
+s10v3: 21-21
+s10c1: 18-18
+s10j2: 19-20
+s10a2: 24-24,29-29
+s10k1: 22-23
+s10o1: 22-22,25-25
+s10u1: 26-26
+s10p4: 27-28
+s10e3: 0-0
+s10s3: 30-30
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10p3 :same-entity s9j1)
+            (s10c1 :same-event s10z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1        2     3            4  5    6           7         8  9  10    11     12     13   14        15 16      17 18    19 20           21       22    23          24 25 26      27           28     29  30  31  32
+Words: Nejvyšší ruský představitel v  této souvislosti zdůraznil ,  že podle návrhu ústavy jsou republiky ,  oblasti a  kraje z  ekonomického hlediska zcela rovnoprávné a  o  žádných privilegiích nemůže být ani řeč .
+
+# sentence level graph:
+(s11z1 / zdůraznit-001
+        :ARG0 (s11p1 / představitel
+            :mod (s11v1 / vysoký
+                :refer-number singular)
+            :mod (s11r1 / ruský
+                :refer-number singular)
+            :refer-number singular)
+        :condition (s11s1 / souvislost
+            :mod (s11t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s11a1 / and
+            :op1 (s11b1 / být-007
+                :regard (s11n1 / návrh
+                    :possessor (s11u1 / ústava
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s11a2 / and
+                    :op1 (s11r2 / republika
+                        :refer-number plural)
+                    :op2 (s11o1 / oblast
+                        :refer-number plural)
+                    :op3 (s11k1 / kraj
+                        :refer-number plural))
+                :regard (s11h1 / hledisko
+                    :mod (s11e1 / ekonomický
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s11r3 / rovnoprávný
+                    :extent (s11z2 / zcela)
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :op2 (s11b2 / být-011
+                :clausal-marker (s11a3 / ani)
+                :ARG0 (s11r4 / řeč
+                    :ARG1 (s11p2 / privilegium
+                        :mod (s11z3 / žádný
+                            :refer-number plural
+                            :polarity -)
+                        :refer-number plural)
+                    :refer-number singular)
+                :aspect activity
+                :polarity -))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s11z1: 7-7
+s11p1: 3-3
+s11v1: 1-1
+s11r1: 2-2
+s11s1: 4-4,6-6
+s11t1: 5-5
+s11a1: 24-24
+s11b1: 9-9,13-13
+s11n1: 10-11
+s11u1: 12-12
+s11a2: 17-17
+s11r2: 14-14
+s11o1: 16-16
+s11k1: 18-18
+s11h1: 19-19,21-21
+s11e1: 20-20
+s11r3: 23-23
+s11z2: 22-22
+s11b2: 9-9,28-29
+s11a3: 30-30
+s11r4: 31-31
+s11p2: 25-25,27-27
+s11z3: 26-26
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11p1 :same-entity s10p3)
+            (s11r1 :same-entity s9f1)
+            (s11s1 :same-entity s10a1)
+            (s11n1 :same-entity s9n1)
+            (s11u1 :same-entity s9z1)
+            (s11o1 :same-entity s10o1)
+            (s11k1 :same-entity s10k1)))
+
+

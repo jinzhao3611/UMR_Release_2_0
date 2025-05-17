@@ -1,0 +1,293 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Krátce
+
+# sentence level graph:
+(s1e1 / event
+        :manner (s1k1 / krátce)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1k1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1         2        3         4  5         6            7     8  9        10
+Words: Slovenská televize nepřebírá od včerejška zpravodajský pořad ČT Události .
+
+# sentence level graph:
+(s2p1 / přebírat-001
+        :ARG0 (s2t1 / televize
+            :mod (s2s1 / Slovenský
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s2v1 / včerejšek
+            :refer-number singular)
+        :ARG1 (s2p2 / pořad
+            :mod (s2z1 / zpravodajský
+                :refer-number singular)
+            :name (s2u1 / Událost
+                :refer-number plural)
+            :possessor (s2c1 / ČT)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s2p1: 3-3
+s2t1: 2-2
+s2s1: 1-1
+s2v1: 4-5
+s2p2: 7-7
+s2z1: 6-6
+s2u1: 9-9
+s2c1: 8-8
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2        3  4  5      6          7  8  9  10  11    12 13          14 15          16            17      18 19   20          21      22
+Words: Slovenští kolegové mi v  dopise vysvětlili ,  že se tak stalo v  souvislosti s  mimořádnými parlamentními volbami na dobu předvolební kampaně .
+
+# sentence level graph:
+(s3v1 / vysvětlit-001
+        :ARG0 (s3k1 / kolega
+            :mod (s3s1 / slovenský
+                :refer-number plural)
+            :refer-number plural)
+        :ARG2 (s3e1 / entity
+            :refer-number singular
+            :refer-person 1st)
+        :place (s3d1 / dopis
+            :refer-number singular)
+        :ARG1 (s3s2 / stát-se-005
+            :ARG0 (s3t1 / tak)
+            :companion (s3v2 / volba
+                :mod (s3p1 / parlamentní
+                    :refer-number plural)
+                :mod (s3m1 / mimořádný
+                    :refer-number plural)
+                :refer-number plural)
+            :duration (s3d2 / doba
+                :possessor (s3k2 / kampaň
+                    :mod (s3p2 / předvolební
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s3v1: 6-6
+s3k1: 2-2
+s3s1: 1-1
+s3e1: 3-3
+s3d1: 4-5
+s3s2: 8-9,11-11
+s3t1: 10-10
+s3v2: 12-14,17-17
+s3p1: 16-16
+s3m1: 15-15
+s3d2: 18-19
+s3k2: 21-21
+s3p2: 20-20
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s1 :same-entity s2s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1            2  3  4   5     6  7       8        9  10    11 12   13          14            15 16   17          18
+Words: Předpokládám ,  že jde pouze o  dočasné opatření ,  uvedl k  tomu šéfredaktor zpravodajství ČT Petr Studenovský .
+
+# sentence level graph:
+(s4u1 / uvést-007
+        :ARG0 (s4s1 / Studenovský
+            :mod (s4p1 / Petr
+                :refer-number singular)
+            :mod (s4s2 / šéfredaktor
+                :possessor (s4z1 / zpravodajství
+                    :possessor (s4c1 / ČT)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 1st)
+        :regard (s4t1 / ten
+            :refer-number singular)
+        :effect (s4p2 / předpokládat-002
+            :ARG0 (s4e1 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :effect (s4j1 / jít-035
+                :ARG0 (s4o1 / opatření
+                    :clausal-marker (s4p3 / pouze)
+                    :mod (s4d1 / dočasný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular
+            :refer-person 1st
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4u1: 10-10
+s4s1: 17-17
+s4p1: 16-16
+s4s2: 13-13
+s4z1: 14-14
+s4c1: 15-15
+s4t1: 11-12
+s4p2: 1-1
+s4e1: 0-0
+s4j1: 3-4
+s4o1: 6-6,8-8
+s4p3: 5-5
+s4d1: 7-7
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s1 :same-entity s4e1)
+            (s4c1 :same-entity s2c1)
+            (s4e1 :same-entity s3e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2  3      4  5       6  7      8  9      10 11         12            13         14 15        16         17      18      19 20     21     22    23 24    25   26    27       28 29        30        31    32
+Words: Téměř 50 obrazů ,  plastik ,  kreseb a  grafik 13 křesťansky orientovaných výtvarníků ze Švýcarska přibližuje putovní výstava s  názvem Stavba mostu ,  která byla včera zahájena v  brněnském Diecézním muzeu .
+
+# sentence level graph:
+(s5p1 / přibližovat-001
+        :ARG1 (s5a1 / and
+            :op1 (s5o1 / obraz
+                :source (s5v1 / výtvarník
+                    :mod (s5o2 / orientovaný
+                        :manner (s5k1 / křesťansky)
+                        :refer-number plural)
+                    :mod (s5x1 / 13)
+                    :start (s5s1 / Švýcarsko
+                        :refer-number singular)
+                    :refer-number plural)
+                :mod (s5x2 / 50
+                    :extent (s5t1 / téměř))
+                :refer-number plural)
+            :op2 (s5p2 / plastika
+                :source s5v1
+                :mod s5x2
+                :refer-number plural)
+            :op3 (s5k2 / kresba
+                :source s5v1
+                :mod s5x2
+                :refer-number plural)
+            :op4 (s5g1 / grafika
+                :source s5v1
+                :mod s5x2
+                :refer-number plural))
+        :ARG2 (s5e1 / entity)
+        :ARG0 (s5v2 / výstava
+            :mod (s5p3 / putovní
+                :refer-number singular)
+            :companion (s5n1 / název
+                :name (s5s2 / Stavba
+                    :ARG1 (s5m1 / most
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1-of (s5z1 / zahájit-001
+                :ARG0 (s5e2 / entity)
+                :temporal (s5v3 / včera)
+                :place (s5m2 / muzeum
+                    :mod (s5d1 / Diecézní
+                        :refer-number singular)
+                    :mod (s5b1 / brněnský
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5p1: 16-16
+s5a1: 8-8
+s5o1: 3-3
+s5v1: 13-13
+s5o2: 12-12
+s5k1: 11-11
+s5x1: 10-10
+s5s1: 14-15
+s5x2: 2-2
+s5t1: 1-1
+s5p2: 5-5
+s5k2: 7-7
+s5g1: 9-9
+s5e1: 0-0
+s5v2: 18-18,24-24
+s5p3: 17-17
+s5n1: 19-20
+s5s2: 21-21
+s5m1: 22-22
+s5z1: 25-25,27-27
+s5e2: 0-0
+s5v3: 26-26
+s5m2: 28-28,31-31
+s5d1: 30-30
+s5b1: 29-29
+
+# document level annotation:
+(s5s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2      3  4 5 6     7
+Words: Výstava potrvá do 2 . října .
+
+# sentence level graph:
+(s6p1 / potrvat-001
+        :ARG0 (s6v1 / výstava
+            :refer-number singular)
+        :temporal (s6r1 / říjen
+            :mod (s6x1 / 2)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s6p1: 2-2
+s6v1: 1-1
+s6r1: 3-3,6-6
+s6x1: 4-4
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6v1 :same-entity s5v2)))
+
+

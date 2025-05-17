@@ -1,0 +1,985 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2     3
+Words: Bouře kolem Telegrafu
+
+# sentence level graph:
+(s1b1 / bouře
+        :place (s1t1 / Telegraf
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1b1: 1-1
+s1t1: 2-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5  6 7
+Words: Praha ( mst , il ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2a1 / and
+            :op1 (s2m1 / mst)
+            :op2 (s2i1 / il))
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2a1: 4-4
+s2m1: 3-3
+s2i1: 5-5
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1           2       3         4     5    6     7          8         9          10 11        12 13     14
+Words: Šéfredaktor Denního Telegrafu Pavel Šafr včera akceptoval požadavek vydavatele a  odstoupil z  funkce .
+
+# sentence level graph:
+(s3a1 / and
+        :op1 (s3a2 / akceptovat-001
+            :ARG0 (s3s1 / Šafr
+                :mod (s3p1 / Pavel
+                    :refer-number singular)
+                :mod (s3s2 / šéfredaktor
+                    :possessor (s3t1 / telegraf
+                        :mod (s3d1 / Denní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s3v1 / včera)
+            :ARG1 (s3p2 / požadavek
+                :possessor (s3v2 / vydavatel
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect process)
+        :op2 (s3o1 / odstoupit-003
+            :ARG0 s3s1
+            :temporal s3v1
+            :start (s3f1 / funkce
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s3a1: 10-10
+s3a2: 7-7
+s3p2: 8-8
+s3v2: 9-9
+s3s1: 5-5
+s3p1: 4-4
+s3s2: 1-1
+s3t1: 3-3
+s3d1: 2-2
+s3v1: 6-6
+s3o1: 11-11
+s3f1: 12-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3t1 :same-entity s1t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2      3       4    5        6  7       8         9         10
+Words: Zároveň podali výpověď jeho zástupci a  většina kmenových redaktorů .
+
+# sentence level graph:
+(s4p1 / podat-008
+        :temporal (s4z1 / zároveň)
+        :ARG2 (s4e1 / entity)
+        :predicative-noun (s4v1 / výpověď
+            :ARG0 s4a1
+            :refer-number singular)
+        :ARG0 (s4a1 / and
+            :op1 (s4z2 / zástupce
+                :possessor (s4e2 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number plural)
+            :op2 (s4v2 / většina
+                :mod (s4r1 / redaktor
+                    :mod (s4k1 / kmenový
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular))
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s4p1: 2-2
+s4z1: 1-1
+s4e1: 0-0
+s4v1: 3-3
+s4a1: 6-6
+s4z2: 5-5
+s4e2: 4-4
+s4v2: 7-7
+s4r1: 9-9
+s4k1: 8-8
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e2 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2  3      4        5         6        7     8      9      10
+Words: Šafra ve funkci vystřídá dosavadní redaktor listu Viktor Krejčí .
+
+# sentence level graph:
+(s5v1 / vystřídat-002
+        :ARG1 (s5s1 / Šafr
+            :refer-number singular
+            :refer-person 3rd)
+        :place (s5f1 / funkce
+            :refer-number singular)
+        :ARG0 (s5k1 / Krejčí
+            :mod (s5v2 / Viktor
+                :refer-number singular)
+            :mod (s5r1 / redaktor
+                :possessor (s5l1 / list
+                    :refer-number singular)
+                :mod (s5d1 / dosavadní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s5v1: 4-4
+s5s1: 1-1
+s5f1: 2-3
+s5k1: 9-9
+s5v2: 8-8
+s5r1: 6-6
+s5l1: 7-7
+s5d1: 5-5
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s1 :same-entity s4e2)
+            (s5f1 :same-entity s3f1)
+            (s5l1 :same-entity s3t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2     3  4      5  6    7  8         9          10         11        12 13 14 15      16 17    18 19      20  21 22         23    24       25
+Words: Podle Šafra je Krejčí ,  jenž v  Telegrafu připravuje pravidelné rozhovory s  V  .  Klausem ,  spjat s  vedením ODS a  samozřejmě zcela poslušný .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6b1 / být-007
+            :ARG0 (s6k1 / Krejčí
+                :ARG0-of (s6p1 / připravovat-003
+                    :place (s6t1 / telegraf
+                        :refer-number singular)
+                    :ARG1 (s6r1 / rozhovor
+                        :ARG2 (s6k2 / Klaus
+                            :mod (s6v1 / V)
+                            :refer-number singular)
+                        :mod (s6p2 / pravidelný
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :regard (s6s1 / Šafr
+                :refer-number singular)
+            :ARG1 (s6s2 / spjatý
+                :ARG1 (s6v2 / vedení
+                    :possessor (s6o1 / ODS)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s6b2 / být-007
+            :ARG0 s6k1
+            :clausal-marker (s6s3 / samozřejmě)
+            :ARG1 (s6p3 / poslušný
+                :extent (s6z1 / zcela)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s6a1: 21-21
+s6b1: 3-3
+s6s1: 1-2
+s6s2: 17-17
+s6v2: 18-19
+s6o1: 20-20
+s6k1: 4-4,6-6
+s6p1: 9-9
+s6t1: 7-8
+s6r1: 11-11
+s6k2: 12-12,15-15
+s6v1: 13-13
+s6p2: 10-10
+s6b2: 0-0
+s6s3: 22-22
+s6p3: 24-24
+s6z1: 23-23
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s1 :same-entity s5s1)
+            (s6k1 :same-entity s5k1)
+            (s6t1 :same-entity s5l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1      2  3 4    5           6      7        8
+Words: Krejčí se k celé záležitosti odmítl vyjádřit .
+
+# sentence level graph:
+(s7o1 / odmítnout-003
+        :ARG0 (s7k1 / Krejčí
+            :refer-number singular)
+        :ARG1 (s7v1 / vyjádřit-se-001
+            :ARG1 (s7z1 / záležitost
+                :mod (s7c1 / celý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s7k1
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7o1: 6-6
+s7k1: 1-1
+s7v1: 2-2,7-7
+s7z1: 3-3,5-5
+s7c1: 4-4
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7k1 :same-entity s6k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2  3    4     5  6    7  8  9      10 11 12 13 14      15 16    17 18       19          20         21 22       23    24 25  26 27 28     29       30 31         32        33 34   35     36          37 38      39        40    41
+Words: P  .  Šafr včera LN řekl ,  že vedení a  .  s  .  Integra ,  která je dceřinou společností Investiční a  poštovní banky (  IPB )  a  vydává Telegraf ,  zdůvodnilo požadavek na jeho odchod nesouhlasem s  ideovým zaměřením listu .
+
+# sentence level graph:
+(s8r1 / říci-008
+        :ARG0 (s8s1 / Šafr
+            :mod (s8p1 / P)
+            :refer-number singular)
+        :ARG2 (s8l1 / LN
+            :refer-number plural)
+        :temporal (s8v1 / včera)
+        :effect (s8z1 / zdůvodnit-001
+            :ARG0 (s8v2 / vedení
+                :possessor (s8s2 / strana
+                    :mod (s8a1 / akciový)
+                    :name (s8i1 / Integra
+                        :refer-number singular)
+                    :ARG0-of (s8a2 / and
+                        :op1 (s8b1 / být-007
+                            :ARG1 (s8s3 / společnost
+                                :mod (s8d1 / dceřiný
+                                    :refer-number singular)
+                                :possessor (s8i2 / identity-91
+                                    :ARG1 (s8b2 / banka
+                                        :mod (s8a3 / and
+                                            :op1 (s8i3 / Investiční
+                                                :refer-number singular)
+                                            :op2 (s8p2 / poštovní
+                                                :refer-number singular))
+                                        :refer-number singular)
+                                    :ARG2 (s8i4 / IPB))
+                                :refer-number singular)
+                            :refer-number singular
+                            :refer-person 3rd
+                            :aspect activity)
+                        :op2 (s8v3 / vydávat-006
+                            :ARG1 (s8t1 / telegraf
+                                :refer-number singular)
+                            :refer-number singular
+                            :refer-person 3rd
+                            :aspect habitual))
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s8p3 / požadavek
+                :ARG1 (s8o1 / odchod
+                    :possessor s8s1
+                    :refer-number singular)
+                :refer-number singular)
+            :instrument (s8n1 / nesouhlas
+                :companion (s8z2 / zaměření
+                    :possessor (s8l2 / list
+                        :refer-number singular)
+                    :mod (s8i5 / ideový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8r1: 6-6
+s8s1: 3-3,34-34
+s8p1: 1-1
+s8l1: 5-5
+s8v1: 4-4
+s8z1: 8-8,31-31
+s8v2: 9-9
+s8s2: 12-12,16-16
+s8a1: 10-10
+s8i1: 14-14
+s8a2: 27-27
+s8b1: 17-17
+s8s3: 19-19
+s8d1: 18-18
+s8i2: 24-24
+s8b2: 23-23
+s8a3: 21-21
+s8i3: 20-20
+s8p2: 22-22
+s8i4: 25-25
+s8v3: 28-28
+s8t1: 29-29
+s8p3: 32-32
+s8o1: 33-33,35-35
+s8n1: 36-36
+s8z2: 37-37,39-39
+s8l2: 40-40
+s8i5: 38-38
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8s1 :same-entity s6s1)
+            (s8s2 :same-entity s3v2)
+            (s8t1 :same-entity s6t1)
+            (s8p3 :same-entity s3p2)
+            (s8o1 :same-event s3o1)
+            (s8l2 :same-entity s8t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1        2      3  4          5        6          7         8  9     10          11          12  13 14     15     16 17     18   19  20          21 22   23   24
+Words: Konflikt nastal po zveřejnění několika kritických komentářů o  možné privatizaci petrochemie tzv .  českou cestou ,  kterou část ODS podporovala ,  řekl Šafr .
+
+# sentence level graph:
+(s9r1 / říci-008
+        :ARG0 (s9s1 / Šafr
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s9e1 / entity)
+        :effect (s9n1 / nastat-001
+            :ARG0 (s9k1 / konflikt
+                :refer-number singular)
+            :temporal (s9z1 / zveřejnění
+                :ARG0 (s9e2 / entity)
+                :ARG1 (s9k2 / komentář
+                    :ARG1 (s9p1 / privatizace
+                        :ARG1 (s9p2 / petrochemie
+                            :refer-number singular)
+                        :manner (s9c1 / cesta
+                            :mod (s9c2 / český
+                                :refer-number singular)
+                            :mod (s9t1 / takzvaný)
+                            :ARG1-of (s9p3 / podporovat-001
+                                :ARG0 (s9c3 / část
+                                    :mod (s9o1 / ODS)
+                                    :refer-number singular)
+                                :aspect activity)
+                            :refer-number singular)
+                        :mod (s9m1 / možný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s9k3 / kritický
+                        :refer-number plural)
+                    :mod (s9n2 / několik)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s9r1: 22-22
+s9s1: 23-23
+s9e1: 0-0
+s9n1: 2-2
+s9k1: 1-1
+s9z1: 3-4
+s9e2: 0-0
+s9k2: 7-7
+s9p1: 8-8,10-10
+s9p2: 11-11
+s9c1: 15-15,17-17
+s9c2: 14-14
+s9t1: 12-12
+s9p3: 20-20
+s9c3: 18-18
+s9o1: 19-19
+s9m1: 9-9
+s9k3: 6-6
+s9n2: 5-5
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9s1 :same-entity s8s1)
+            (s9o1 :same-entity s6o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1  2          3  4  5  6      7            8     9  10    11         12        13            14  15 16 17      18
+Words: Je přesvědčen ,  že k  výměně šéfredaktora došlo po přímé intervenci výkonného místopředsedy ODS P  .  Čermáka .
+
+# sentence level graph:
+(s10p1 / přesvědčit-001
+        :ARG0 (s10e1 / entity)
+        :ARG2 (s10e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s10d1 / dojít-009
+            :ARG0 (s10v1 / výměna
+                :ARG1 (s10s1 / šéfredaktor
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular)
+            :temporal (s10i1 / intervence
+                :mod (s10p2 / přímý
+                    :refer-number singular)
+                :ARG0 (s10c1 / Čermák
+                    :mod (s10p3 / P)
+                    :mod (s10m1 / místopředseda
+                        :possessor (s10o1 / ODS)
+                        :mod (s10v2 / výkonný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s10p1: 1-2
+s10e1: 0-0
+s10e2: 0-0
+s10d1: 4-4,8-8
+s10v1: 5-6
+s10s1: 7-7
+s10i1: 9-9,11-11
+s10p2: 10-10
+s10c1: 17-17
+s10p3: 15-15
+s10m1: 13-13
+s10o1: 14-14
+s10v2: 12-12
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10e2 :same-entity s9s1)
+            (s10s1 :same-entity s10e2)
+            (s10o1 :same-entity s9o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1   2         3  4      5  6      7         8   9  10 11 12  13       14     15       16     17 18    19   20
+Words: Mám potvrzeno ze zdroje z  hlavní kanceláře ODS ,  že o  mém odvolání Čermák skutečně jednal ,  tvrdí Šafr .
+
+# sentence level graph:
+(s11t1 / tvrdit-002
+        :ARG0 (s11s1 / Šafr
+            :refer-number singular)
+        :effect (s11p1 / potvrdit-001
+            :ARG0 (s11e1 / entity)
+            :ARG2 s11s1
+            :start (s11z1 / zdroj
+                :start (s11k1 / kancelář
+                    :possessor (s11o1 / ODS)
+                    :mod (s11h1 / hlavní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s11j1 / jednat-001
+                :ARG0 (s11c1 / Čermák
+                    :refer-number singular)
+                :ARG1 (s11o2 / odvolání
+                    :ARG0 (s11e2 / entity)
+                    :start (s11e3 / entity)
+                    :ARG1 s11s1
+                    :refer-number singular)
+                :ARG2 (s11e4 / entity)
+                :clausal-marker (s11s2 / skutečně)
+                :refer-number singular
+                :aspect activity)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s11t1: 18-18
+s11s1: 12-12,19-19
+s11p1: 1-2
+s11e1: 0-0
+s11z1: 3-4
+s11k1: 5-5,7-7
+s11o1: 8-8
+s11h1: 6-6
+s11j1: 10-10,16-16
+s11c1: 14-14
+s11o2: 11-11,13-13
+s11e2: 0-0
+s11e3: 0-0
+s11e4: 0-0
+s11s2: 15-15
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11s1 :same-entity s10s1)
+            (s11o1 :same-entity s10o1)
+            (s11c1 :same-entity s10c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1   2  3  4     5          6  7         8  9            10 11     12        13  14 15   16
+Words: Vím ,  že každé rozhodnutí o  Telegrafu se konzultovalo v  hlavní kanceláři ODS ,  řekl .
+
+# sentence level graph:
+(s12r1 / říci-008
+        :ARG0 s12e1
+        :ARG2 (s12e2 / entity)
+        :effect (s12v1 / vědět-004
+            :ARG0 (s12e1 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :effect (s12k1 / konzultovat-001
+                :ARG1 (s12r2 / rozhodnutí
+                    :ARG1 (s12t1 / Telegraf
+                        :refer-number singular)
+                    :ARG0 (s12e3 / entity)
+                    :mod (s12k2 / každý
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s12e4 / entity)
+                :ARG2 (s12e5 / entity)
+                :place (s12k3 / kancelář
+                    :possessor (s12o1 / ODS)
+                    :mod (s12h1 / hlavní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect process)
+            :refer-number singular
+            :refer-person 1st
+            :aspect state)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s12r1: 15-15
+s12e2: 0-0
+s12v1: 1-1
+s12e1: 0-0
+s12k1: 3-3,8-9
+s12r2: 5-5
+s12t1: 6-7
+s12e3: 0-0
+s12k2: 4-4
+s12e4: 0-0
+s12e5: 0-0
+s12k3: 10-10,12-12
+s12o1: 13-13
+s12h1: 11-11
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12e1 :same-entity s11s1)
+            (s12t1 :same-entity s8l2)
+            (s12k3 :same-entity s11k1)
+            (s12o1 :same-entity s11o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1      2       3       4       5  6       7
+Words: Čermák Šafrova tvrzení označil za nesmysl .
+
+# sentence level graph:
+(s13o1 / označit-001
+        :ARG0 (s13c1 / Čermák
+            :refer-number singular)
+        :ARG1 (s13t1 / tvrzení
+            :ARG0 (s13s1 / Šafr
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s13e1 / entity)
+            :refer-number plural)
+        :effect (s13n1 / nesmysl
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s13o1: 4-4
+s13c1: 1-1
+s13t1: 3-3
+s13s1: 2-2
+s13e1: 0-0
+s13n1: 5-6
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13c1 :same-entity s11c1)
+            (s13s1 :same-entity s12e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1          2       3  4    5         6     7        8     9  10     11    12 13   14 15     16        17           18    19
+Words: Společnost Integra má jako vydavatel právo provádět změny ve vedení listu a  řídí se přitom především ekonomickými zájmy .
+
+# sentence level graph:
+(s14a1 / and
+        :op1 (s14m1 / mít-028
+            :ARG0 (s14s1 / společnost
+                :name (s14i1 / Integra
+                    :refer-number singular)
+                :refer-number singular)
+            :manner (s14v1 / vydavatel
+                :mod-of s14s1
+                :refer-number singular)
+            :predicative-noun (s14p1 / právo
+                :ARG0 s14s1
+                :ARG1 (s14p2 / provádět-006
+                    :ARG0 s14s1
+                    :predicative-noun (s14z1 / změna
+                        :ARG0 s14s1
+                        :ARG1 (s14e1 / entity)
+                        :place (s14v2 / vedení
+                            :possessor (s14l1 / list
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state)
+        :op2 (s14r1 / řídit-se-001
+            :ARG0 s14s1
+            :clausal-marker (s14p3 / přitom)
+            :clausal-marker (s14p4 / především)
+            :ARG1 (s14z2 / zájem
+                :mod (s14e2 / ekonomický
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s14a1: 12-12
+s14m1: 3-3
+s14v1: 4-5
+s14p1: 6-6
+s14p2: 7-7
+s14z1: 8-8
+s14e1: 0-0
+s14v2: 9-10
+s14l1: 11-11
+s14s1: 1-1
+s14i1: 2-2
+s14r1: 13-14
+s14p3: 15-15
+s14p4: 16-16
+s14z2: 18-18
+s14e2: 17-17
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14l1 :same-entity s12t1)
+            (s14s1 :same-entity s8s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1      2  3      4   5  6  7     8  9   10 11 12      13        14         15     16
+Words: Sdělil to mluvčí IPB J  .  Rezek s  tím ,  že Integra nepodléhá politickým tlakům .
+
+# sentence level graph:
+(s15s1 / sdělit-002
+        :effect (s15t1 / ten
+            :refer-number singular)
+        :ARG2 (s15e1 / entity)
+        :ARG0 (s15r1 / Rezek
+            :mod (s15j1 / J
+                :refer-number singular)
+            :mod (s15m1 / mluvčí
+                :possessor (s15i1 / IPB)
+                :refer-number singular)
+            :refer-number singular)
+        :companion (s15p1 / podléhat-001
+            :ARG0 (s15i2 / Integra
+                :refer-number singular)
+            :ARG1 (s15t2 / tlak
+                :mod (s15p2 / politický
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s15s1: 1-1
+s15t1: 2-2
+s15e1: 0-0
+s15r1: 7-7
+s15j1: 5-5
+s15m1: 3-3
+s15i1: 4-4
+s15p1: 8-9,11-11,13-13
+s15i2: 12-12
+s15t2: 15-15
+s15p2: 14-14
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15t1 :same-entity s14a1)
+            (s15i1 :same-entity s8i2)
+            (s15i2 :same-entity s14s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1     2         3  4    5      6         7        8     9      10        11 12 13    14      15
+Words: Podle informací LN však náklad Telegrafu nástupem Šafra stoupl přibližně o  10 tisíc výtisků .
+
+# sentence level graph:
+(s16s1 / stoupnout-001
+        :clausal-marker (s16v1 / však)
+        :regard (s16i1 / informace
+            :possessor (s16l1 / LN
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s16n1 / náklad
+            :possessor (s16t1 / telegraf
+                :refer-number singular)
+            :refer-number singular)
+        :instrument (s16n2 / nástup
+            :ARG0 (s16s2 / Šafr
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s16p1 / přibližně)
+        :extent (s16t2 / tisíc
+            :mod (s16v2 / výtisk
+                :refer-number plural)
+            :mod (s16x1 / 10)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s16s1: 9-9
+s16v1: 4-4
+s16i1: 1-2
+s16l1: 3-3
+s16n1: 5-5
+s16t1: 6-6
+s16n2: 7-7
+s16s2: 8-8
+s16p1: 10-10
+s16t2: 11-11,13-13
+s16v2: 14-14
+s16x1: 12-12
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16l1 :same-entity s8l1)
+            (s16t1 :same-entity s14l1)
+            (s16s2 :same-entity s13s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1  2     3  4  5   6  7      8   9         10   11 12     13    14    15   16 17 18 19      20   21   22   23 24       25      26       27     28 29 30    31 32       33       34      35 36 37   38
+Words: Na dotaz LN ,  kdo ve vedení IPB zastupuje stát ,  mluvčí banky Rezek řekl ,  že v  dozorčí radě sedí např .  předseda poradců premiéra Klause J  .  Weigl a  náměstek ministra financí M  .  Téra .
+
+# sentence level graph:
+(s17r1 / říci-008
+        :regard (s17d1 / dotaz
+            :possessor (s17l1 / LN
+                :refer-number plural)
+            :ARG1 (s17z1 / zastupovat-001
+                :place (s17v1 / vedení
+                    :possessor (s17i1 / IPB)
+                    :refer-number singular)
+                :ARG1 (s17s1 / stát
+                    :refer-number singular)
+                :ARG0 (s17k1 / kdo
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :ARG0 (s17r2 / Rezek
+            :mod (s17m1 / mluvčí
+                :possessor (s17b1 / banka
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s17e1 / entity)
+        :effect (s17s2 / sedět-002
+            :place (s17r3 / rada
+                :mod (s17d2 / dozorčí
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s17n1 / například)
+            :ARG0 (s17a1 / and
+                :op1 (s17w1 / Weigl
+                    :mod (s17j1 / J)
+                    :mod (s17p1 / předseda
+                        :possessor (s17p2 / poradce
+                            :possessor (s17k2 / Klaus
+                                :mod (s17p3 / premiér
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s17t1 / Téra
+                    :mod (s17m2 / M)
+                    :mod (s17n2 / náměstek
+                        :possessor (s17m3 / ministr
+                            :possessor (s17f1 / finance
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s17r1: 15-15
+s17d1: 1-2
+s17l1: 3-3
+s17z1: 9-9
+s17v1: 6-7
+s17i1: 8-8
+s17s1: 10-10
+s17k1: 5-5
+s17r2: 14-14
+s17m1: 12-12
+s17b1: 13-13
+s17e1: 0-0
+s17s2: 17-17,21-21
+s17r3: 18-18,20-20
+s17d2: 19-19
+s17n1: 22-22
+s17a1: 31-31
+s17w1: 30-30
+s17j1: 28-28
+s17p1: 24-24
+s17p2: 25-25
+s17k2: 27-27
+s17p3: 26-26
+s17t1: 37-37
+s17m2: 35-35
+s17n2: 32-32
+s17m3: 33-33
+s17f1: 34-34
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17l1 :same-entity s16l1)
+            (s17i1 :same-entity s15i1)
+            (s17r2 :same-entity s15r1)
+            (s17b1 :same-entity s17i1)
+            (s17k2 :same-entity s6k2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1 2   3  4         5     6    7
+Words: V IPB má většinový podíl stát .
+
+# sentence level graph:
+(s18m1 / mít-009
+        :place (s18i1 / IPB
+            :refer-number singular)
+        :ARG1 (s18p1 / podíl
+            :mod (s18v1 / většinový
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s18s1 / stát
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s18m1: 3-3
+s18i1: 1-2
+s18p1: 5-5
+s18v1: 4-4
+s18s1: 6-6
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18i1 :same-entity s17b1)
+            (s18s1 :same-entity s17s1)))
+
+

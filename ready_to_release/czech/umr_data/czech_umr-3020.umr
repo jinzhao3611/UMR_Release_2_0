@@ -1,0 +1,242 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2   3    4       5
+Words: Sochy pro park vyberou občané
+
+# sentence level graph:
+(s1v1 / vybrat-001
+        :ARG1 (s1s1 / socha
+            :affectee (s1p1 / park
+                :refer-number singular)
+            :refer-number plural)
+        :ARG0 (s1o1 / občan
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1v1: 4-4
+s1s1: 1-1
+s1p1: 2-3
+s1o1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2 3  4 5
+Words: Slavičín ( do ) -
+
+# sentence level graph:
+(s2s1 / Slavičín
+        :parenthesis (s2d1 / do)
+        :refer-number singular)
+
+# alignment:
+s2s1: 1-1
+s2d1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2  3     4       5        6        7    8  9         10 11      12     13    14
+Words: Sochy ,  které vyzdobí obnovený Pivečkův park ve Slavičíně ,  vyberou občané města .
+
+# sentence level graph:
+(s3v1 / vybrat-001
+        :ARG1 (s3s1 / socha
+            :ARG0-of (s3v2 / vyzdobit-001
+                :ARG1 (s3p1 / park
+                    :mod (s3p2 / Pivečko
+                        :refer-number singular)
+                    :place (s3s2 / Slavičín
+                        :refer-number singular)
+                    :mod (s3o1 / obnovený
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number plural)
+        :ARG0 (s3o2 / občan
+            :possessor (s3m1 / město
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s3v1: 11-11
+s3s1: 1-1,3-3
+s3v2: 4-4
+s3p1: 7-7
+s3p2: 6-6
+s3s2: 8-9
+s3o1: 5-5
+s3o2: 12-12
+s3m1: 13-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s1 :same-entity s1s1)
+            (s3p1 :same-entity s1p1)
+            (s3s2 :same-entity s2s1)
+            (s3o2 :same-entity s1o1)
+            (s3m1 :same-entity s3s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2    3          4  5  6    7    8  9     10    11 12    13 14       15    16        17       18            19          20      21
+Words: Lidé mají rozhodnout ,  na jaká díla se budou dívat v  parku ,  nesoucím jméno původního majitele slavičínských obuvnických továren .
+
+# sentence level graph:
+(s4r1 / rozhodnout-003
+        :ARG0 (s4c1 / člověk
+            :refer-number plural)
+        :ARG1 (s4d1 / dívat-se-001
+            :ARG0 s4c1
+            :ARG1 (s4d2 / dílo
+                :mod (s4j1 / jaký
+                    :refer-number plural)
+                :refer-number plural)
+            :place (s4p1 / park
+                :mod (s4n1 / nesoucí
+                    :ARG1 (s4j2 / jméno
+                        :possessor (s4m1 / majitel
+                            :mod (s4p2 / původní
+                                :refer-number singular)
+                            :ARG1 (s4t1 / továrna
+                                :mod (s4o1 / obuvnický
+                                    :refer-number plural)
+                                :mod (s4s1 / slavičínský
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity)
+        :aspect performance)
+
+# alignment:
+s4r1: 2-3
+s4c1: 1-1
+s4d1: 8-10
+s4d2: 5-5,7-7
+s4j1: 6-6
+s4p1: 11-12
+s4n1: 14-14
+s4j2: 15-15
+s4m1: 17-17
+s4p2: 16-16
+s4t1: 20-20
+s4o1: 19-19
+s4s1: 18-18
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4c1 :same-entity s3o2)
+            (s4d2 :same-entity s3s1)
+            (s4p1 :same-entity s3p1)
+            (s4m1 :same-entity s3p2)
+            (s4s1 :same-entity s3m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2          3       4      5     6                  7         8   9        10       11 12        13   14     15
+Words: Ateliér sochařství pražské Vysoké školy uměleckoprůmyslové připravil pro včerejší vernisáž ve Slavičíně řadu návrhů .
+
+# sentence level graph:
+(s5p1 / připravit-004
+        :ARG0 (s5a1 / ateliér
+            :possessor (s5s1 / sochařství
+                :refer-number singular)
+            :possessor (s5s2 / škola
+                :mod (s5u1 / uměleckoprůmyslový
+                    :refer-number singular)
+                :mod (s5v1 / Vysoký
+                    :refer-number singular)
+                :mod (s5p2 / pražský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :purpose (s5v2 / vernisáž
+            :mod (s5v3 / včerejší
+                :refer-number singular)
+            :place (s5s3 / Slavičín
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s5r1 / řada
+            :mod (s5n1 / návrh
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5p1: 7-7
+s5a1: 1-1
+s5s1: 2-2
+s5s2: 5-5
+s5u1: 6-6
+s5v1: 4-4
+s5p2: 3-3
+s5v2: 8-8,10-10
+s5v3: 9-9
+s5s3: 11-12
+s5r1: 13-13
+s5n1: 14-14
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s3 :same-entity s4s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2        3     4  5      6           7 8     9
+Words: Vítězné exponáty budou na podzim instalovány v parku .
+
+# sentence level graph:
+(s6i1 / instalovat-001
+        :ARG1 (s6e1 / exponát
+            :mod (s6v1 / vítězný
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s6e2 / entity)
+        :temporal (s6p1 / podzim
+            :refer-number singular)
+        :place (s6p2 / park
+            :refer-number singular)
+        :refer-number plural
+        :aspect process)
+
+# alignment:
+s6i1: 3-3,6-6
+s6e1: 2-2
+s6v1: 1-1
+s6e2: 0-0
+s6p1: 4-5
+s6p2: 7-8
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s4d2)
+            (s6p2 :same-entity s4p1)))
+
+

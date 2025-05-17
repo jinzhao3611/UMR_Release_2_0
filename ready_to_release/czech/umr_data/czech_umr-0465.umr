@@ -1,0 +1,608 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2      3        4
+Words: Pomník padlým německým vojákům
+
+# sentence level graph:
+(s1p1 / pomník
+        :affectee (s1v1 / voják
+            :mod (s1p2 / padlý
+                :refer-number plural)
+            :mod (s1n1 / německý
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular)
+
+# alignment:
+s1p1: 1-1
+s1v1: 4-4
+s1p2: 2-2
+s1n1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Opava ( mot ) -
+
+# sentence level graph:
+(s2o1 / Opava
+        :parenthesis (s2m1 / mot)
+        :refer-number singular)
+
+# alignment:
+s2o1: 1-1
+s2m1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2   3       4  5     6     7  8     9       10    11 12     13      14     15 16       17 18     19 20         21 22        23
+Words: Pomník 202 rodákům ,  kteří padli za druhé světové války v  řadách německé armády ,  odhalili v  sobotu v  Bolaticích na Hlučínsku .
+
+# sentence level graph:
+(s3o1 / odhalit-001
+        :temporal (s3s1 / sobota
+            :refer-number singular)
+        :ARG0 (s3e1 / entity)
+        :place (s3b1 / Bolatice
+            :place (s3h1 / Hlučínsko
+                :refer-number singular)
+            :refer-number plural)
+        :ARG1 (s3p1 / pomník
+            :affectee (s3r1 / rodák
+                :mod (s3x1 / 202)
+                :ARG0-of (s3p2 / padnout-013
+                    :temporal (s3v1 / válka
+                        :mod (s3d1 / druhý
+                            :refer-number singular)
+                        :mod (s3s2 / světový
+                            :refer-number singular)
+                        :refer-number singular)
+                    :place (s3r2 / řada
+                        :possessor (s3a1 / armáda
+                            :mod (s3n1 / německý
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number plural
+                    :aspect performance)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s3o1: 16-16
+s3s1: 17-18
+s3e1: 0-0
+s3b1: 19-20
+s3h1: 21-22
+s3p1: 1-1
+s3r1: 3-3,5-5
+s3x1: 2-2
+s3p2: 6-6
+s3v1: 7-7,10-10
+s3d1: 8-8
+s3s2: 9-9
+s3r2: 11-12
+s3a1: 14-14
+s3n1: 13-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s1p1)
+            (s3r1 :same-entity s1v1)
+            (s3n1 :same-entity s1n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2     3          4                5     6  7       8      9  10  11 12  13 14   15     16      17      18      19    20          21 22 23    24    25     26    27 28      29  30 31 32 33      34 35    36        37   38 39   40
+Words: Spor tamní organizace Slezskoněmeckého svazu s  obecním úřadem ,  zda má být na levé straně záhlaví pomníku německý nápis Kriegsopfer a  na pravé český Obětem války ,  skončil tak ,  že v  záhlaví je pouze letopočet 1939 -  1945 .
+
+# sentence level graph:
+(s4s1 / skončit-005
+        :ARG0 (s4s2 / spor
+            :ARG0 (s4o1 / organizace
+                :possessor (s4s3 / svaz
+                    :mod (s4s4 / Slezskoněmecký
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s4t1 / tamní
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s4u1 / úřad
+                :mod (s4o2 / obecní
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s4a1 / and
+                :op1 (s4b1 / být-011
+                    :place (s4s5 / strana
+                        :mod (s4l1 / levý
+                            :refer-number singular)
+                        :possessor (s4z1 / záhlaví
+                            :possessor (s4p1 / pomník
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0 (s4n1 / nápis
+                        :mod (s4n2 / německý
+                            :refer-number singular)
+                        :name (s4k1 / Kriegsopfer)
+                        :refer-number singular)
+                    :aspect activity)
+                :op2 (s4b2 / být-011
+                    :place (s4s6 / strana
+                        :mod (s4p2 / pravý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0 (s4n3 / nápis
+                        :mod (s4c1 / český
+                            :refer-number singular)
+                        :name (s4o3 / oběť
+                            :possessor (s4v1 / válka
+                                :refer-number singular)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :aspect activity))
+            :refer-number singular)
+        :manner (s4b3 / být-011
+            :place (s4z2 / záhlaví
+                :refer-number singular)
+            :clausal-marker (s4p3 / pouze)
+            :ARG0 (s4l2 / letopočet
+                :mod (s4m1 / math
+                    :op1 (s4x1 / 1939)
+                    :op2 (s4x2 / 1945))
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4s1: 28-28
+s4s2: 1-1
+s4o1: 3-3
+s4s3: 5-5
+s4s4: 4-4
+s4t1: 2-2
+s4u1: 6-6,8-8
+s4o2: 7-7
+s4a1: 21-21
+s4b1: 10-12
+s4s5: 13-13,15-15
+s4l1: 14-14
+s4z1: 16-16
+s4p1: 17-17
+s4n1: 19-19
+s4n2: 18-18
+s4k1: 20-20
+s4b2: 0-0
+s4s6: 0-0
+s4p2: 23-23
+s4n3: 0-0
+s4c1: 24-24
+s4o3: 25-25
+s4v1: 26-26
+s4b3: 29-29,31-31,34-34
+s4z2: 32-33
+s4p3: 35-35
+s4l2: 36-36
+s4m1: 38-38
+s4x1: 37-37
+s4x2: 39-39
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-entity s3b1)
+            (s4p1 :same-entity s3p1)
+            (s4n2 :same-entity s3n1)
+            (s4v1 :same-entity s3v1)
+            (s4z2 :same-entity s4z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2           3     4  5       6  7  8      9  10 11      12     13      14   15         16 17 18 19     20            21     22 23   24   25     26 27     28     29
+Words: Prezident Shromáždění Němců v  Čechách ,  na Moravě a  ve Slezsku Walter Piwerka řekl zpravodaji LN ,  že otázka dvojjazyčného nápisu je vždy věcí dohody na místní úrovni .
+
+# sentence level graph:
+(s5r1 / říci-008
+        :ARG0 (s5p1 / Piwerka
+            :mod (s5p2 / prezident
+                :possessor (s5s1 / shromáždění
+                    :possessor (s5n1 / Němec
+                        :place (s5a1 / and
+                            :op1 (s5c1 / Čechy
+                                :refer-number singular)
+                            :op2 (s5m1 / Morava
+                                :refer-number singular)
+                            :op3 (s5s2 / Slezsko
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s5w1 / Walter
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s5z1 / zpravodaj
+            :possessor (s5l1 / LN
+                :refer-number plural)
+            :refer-number singular)
+        :effect (s5b1 / být-007
+            :ARG0 (s5o1 / otázka
+                :possessor (s5n2 / nápis
+                    :mod (s5d1 / dvojjazyčný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s5v1 / vždy)
+            :ARG1 (s5v2 / věc
+                :possessor (s5d2 / dohoda
+                    :mod (s5u1 / úroveň
+                        :mod (s5m2 / místní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5r1: 14-14
+s5p1: 13-13
+s5p2: 1-1
+s5s1: 2-2
+s5n1: 3-3
+s5a1: 9-9
+s5c1: 4-5
+s5m1: 7-8
+s5s2: 10-11
+s5w1: 12-12
+s5z1: 15-15
+s5l1: 16-16
+s5b1: 18-18,22-22
+s5o1: 19-19
+s5n2: 21-21
+s5d1: 20-20
+s5v1: 23-23
+s5v2: 24-24
+s5d2: 25-25
+s5u1: 26-26,28-28
+s5m2: 27-27
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5a1 :same-entity s4c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1        2  3  4  5  6        7      8         9     10    11     12         13
+Words: Důležité je ,  že po padesáti letech nezůstaly oběti války nadále bezejmenné .
+
+# sentence level graph:
+(s6b1 / být-007
+        :ARG1 (s6d1 / důležitý
+            :refer-number singular)
+        :ARG0 (s6z1 / zůstat-002
+            :ARG0 (s6o1 / oběť
+                :possessor (s6v1 / válka
+                    :refer-number singular)
+                :refer-number plural)
+            :temporal (s6r1 / rok
+                :mod (s6p1 / padesát
+                    :refer-number plural)
+                :refer-number plural)
+            :duration (s6n1 / nadále)
+            :ARG1 (s6b2 / bezejmenný
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance
+            :polarity -)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 2-2
+s6d1: 1-1
+s6z1: 4-4,8-8
+s6o1: 9-9
+s6v1: 10-10
+s6r1: 5-5,7-7
+s6p1: 6-6
+s6n1: 11-11
+s6b2: 12-12
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6o1 :same-entity s3r1)
+            (s6v1 :same-entity s4v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1           2     3    4        5     6  7     8  9         10 11    12      13        14     15      16         17 18    19   20        21     22 23
+Words: Shromáždění Němců jako vrcholný orgán 13 svazů v  regionech je podle Piwerky sdružením občanů německé národnosti ,  kteří jsou loyalními občany ČR .
+
+# sentence level graph:
+(s7b1 / být-007
+        :ARG0 (s7s1 / shromáždění
+            :possessor (s7n1 / Němec
+                :refer-number plural)
+            :refer-number singular)
+        :regard (s7p1 / Piwerka
+            :refer-number singular)
+        :manner (s7o1 / orgán
+            :mod-of s7s1
+            :mod (s7v1 / vrcholný
+                :refer-number singular)
+            :possessor (s7s2 / svaz
+                :mod (s7x2 / 13)
+                :place (s7r1 / region
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG1 (s7s3 / sdružení
+            :possessor (s7o2 / občan
+                :mod (s7n2 / národnost
+                    :mod (s7n3 / německý
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0-of (s7b2 / být-007
+                    :ARG1 (s7o3 / občan
+                        :mod (s7l1 / loajální
+                            :refer-number plural)
+                        :possessor (s7c1 / ČR
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7b1: 10-10
+s7s1: 1-1
+s7n1: 2-2
+s7p1: 11-12
+s7o1: 3-3,5-5
+s7v1: 4-4
+s7s2: 7-7
+s7x2: 6-6
+s7r1: 8-9
+s7s3: 13-13
+s7o2: 14-14,18-18
+s7n2: 16-16
+s7n3: 15-15
+s7b2: 19-19
+s7o3: 21-21
+s7l1: 20-20
+s7c1: 22-22
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7s1 :same-entity s5s1)
+            (s7n1 :same-entity s5n1)
+            (s7p1 :same-entity s5p1)
+            (s7o2 :same-entity s7n1)
+            (s7n3 :same-entity s4n2)
+            (s7c1 :same-entity s5a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2       3  4          5         6    7       8         9  10    11 12       13         14     15 16      17        18
+Words: Proti pomníku v  Bolaticích vystoupil Klub českého pohraničí v  Opavě ,  odmítavé stanovisko vydali i  opavští komunisté .
+
+# sentence level graph:
+(s8a1 / and
+        :op1 (s8v1 / vystoupit-001
+            :ARG1 (s8p1 / pomník
+                :place (s8b1 / Bolatice
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG0 (s8k1 / Klub
+                :possessor (s8p2 / pohraničí
+                    :mod (s8c1 / český
+                        :refer-number singular)
+                    :refer-number singular)
+                :place (s8o1 / Opava
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s8v2 / vydat-006
+            :ARG1 (s8s1 / stanovisko
+                :mod (s8o2 / odmítavý
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s8i1 / i)
+            :ARG0 (s8k2 / komunista
+                :mod (s8o3 / opavský
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s8a1: 11-11
+s8v1: 5-5
+s8p1: 1-2
+s8b1: 3-4
+s8k1: 6-6
+s8p2: 8-8
+s8c1: 7-7
+s8o1: 9-10
+s8v2: 14-14
+s8s1: 13-13
+s8o2: 12-12
+s8i1: 15-15
+s8k2: 17-17
+s8o3: 16-16
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8p1 :same-entity s4p1)
+            (s8b1 :same-entity s4t1)
+            (s8c1 :same-entity s7c1)
+            (s8o1 :same-entity s2o1)
+            (s8o3 :same-entity s8o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1         2        3   4      5       6  7    8    9      10 11       12      13   14 15 16   17   18 19   20    21 22   23   24 25   26   27
+Words: Hlučínsko připadlo při dělení Slezska v  roce 1742 Prusku ,  součástí Německa bylo až do roku 1924 ,  poté znovu od roku 1938 do roku 1945 .
+
+# sentence level graph:
+(s9a1 / and
+        :op1 (s9p1 / připadnout-002
+            :ARG0 (s9h1 / Hlučínsko
+                :refer-number singular)
+            :temporal (s9d1 / dělení
+                :ARG0 (s9e1 / entity)
+                :ARG1 (s9s1 / Slezsko
+                    :refer-number singular)
+                :temporal (s9r1 / rok
+                    :mod (s9x1 / 1742)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s9p2 / Prusko
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s9a2 / and
+            :op1 (s9b1 / být-007
+                :ARG0 s9h1
+                :ARG1 (s9s2 / součást
+                    :possessor (s9n1 / Německo
+                        :refer-number singular)
+                    :refer-number singular)
+                :temporal (s9r2 / rok
+                    :clausal-marker (s9a3 / až)
+                    :mod (s9x3 / 1924)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect activity)
+            :op2 (s9b2 / být-007
+                :ARG0 s9h1
+                :ARG1 s9s2
+                :temporal (s9p3 / poté)
+                :temporal (s9z1 / znovu)
+                :temporal (s9r3 / rok
+                    :mod (s9x6 / 1938)
+                    :refer-number singular)
+                :temporal (s9r4 / rok
+                    :mod (s9x7 / 1945)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect activity)))
+
+# alignment:
+s9a1: 10-10
+s9p1: 2-2
+s9d1: 3-4
+s9e1: 0-0
+s9s1: 5-5
+s9r1: 6-7
+s9x1: 8-8
+s9p2: 9-9
+s9h1: 1-1
+s9a2: 18-18
+s9b1: 13-13
+s9r2: 15-16
+s9a3: 14-14
+s9x3: 17-17
+s9s2: 11-11
+s9n1: 12-12
+s9b2: 0-0
+s9p3: 19-19
+s9z1: 20-20
+s9r3: 21-22
+s9x6: 23-23
+s9r4: 24-25
+s9x7: 26-26
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9h1 :same-entity s3h1)
+            (s9n1 :same-entity s7n3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1       2       3    4        5  6  7       8      9  10        11 12    13          14
+Words: Obdobné pomníky byly odhaleny už ve čtyřech obcích na Hlučínsku ,  někde dvojjazyčně .
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10o1 / odhalit-001
+            :ARG1 (s10p1 / pomník
+                :mod (s10o2 / obdobný
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 (s10e1 / entity)
+            :place (s10o3 / obec
+                :place (s10h1 / Hlučínsko
+                    :refer-number singular)
+                :clausal-marker (s10u1 / už)
+                :mod (s10c1 / čtyři
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance)
+        :op2 (s10o4 / odhalit-001
+            :ARG1 s10p1
+            :ARG0 s10e1
+            :place (s10n1 / někde)
+            :manner (s10d1 / dvojjazyčně)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s10a1: 11-11
+s10o1: 3-4
+s10o3: 6-6,8-8
+s10h1: 9-10
+s10u1: 5-5
+s10c1: 7-7
+s10p1: 2-2
+s10o2: 1-1
+s10e1: 0-0
+s10o4: 0-0
+s10n1: 12-12
+s10d1: 13-13
+
+# document level annotation:
+(s10s0 / sentence)
+
+

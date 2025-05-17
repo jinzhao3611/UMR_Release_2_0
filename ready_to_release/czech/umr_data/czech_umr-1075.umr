@@ -1,0 +1,247 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2    3     4     5        6     7  8        9     10 11    12 13         14     15    16       17        18        19     20    21
+Words: Mezi žáky první třídy základní školy v  Chlupově ulici v  Praze -  Stodůlkách přišel včera nečekaně prezident republiky Václav Havel .
+
+# sentence level graph:
+(s1p1 / přijít-010
+        :goal (s1z1 / žák
+            :possessor (s1t1 / třída
+                :mod (s1p2 / první
+                    :refer-number singular)
+                :possessor (s1s1 / škola
+                    :mod (s1z2 / základní
+                        :refer-number singular)
+                    :place (s1u1 / ulice
+                        :mod (s1c1 / Chlup
+                            :refer-number singular)
+                        :refer-number singular)
+                    :place (s1p3 / Praga
+                        :mod (s1s2 / Stodůlky
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :temporal (s1v1 / včera)
+        :result (s1n1 / nečekaně)
+        :ARG0 (s1h1 / Havel
+            :mod (s1v2 / Václav
+                :refer-number singular)
+            :mod (s1p4 / prezident
+                :possessor (s1r1 / republika
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s1p1: 14-14
+s1z1: 1-2
+s1t1: 4-4
+s1p2: 3-3
+s1s1: 6-6
+s1z2: 5-5
+s1u1: 7-7,9-9
+s1c1: 8-8
+s1p3: 10-11
+s1s2: 13-13
+s1v1: 15-15
+s1n1: 16-16
+s1h1: 20-20
+s1v2: 19-19
+s1p4: 17-17
+s1r1: 18-18
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1   2  3            4           5  6    7     8   9  10    11 12     13   14 15 16   17 18 19 20    21
+Words: Při té příležitosti zavzpomínal na svůj první den ve škole :  Vrátil jsem se a  řekl si ,  už nikdy .
+
+# sentence level graph:
+(s2a1 / and
+        :op1 (s2z1 / zavzpomínat-001
+            :temporal (s2p1 / příležitost
+                :mod (s2t1 / ten
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s2e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s2d1 / den
+                :possessor s2e1
+                :mod (s2p2 / první
+                    :refer-number singular)
+                :place (s2s1 / škola
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s2a2 / and
+            :op1 (s2v1 / vrátit-se-004
+                :ARG0 s2e1
+                :goal (s2e2 / entity)
+                :refer-number singular
+                :aspect performance)
+            :op2 (s2r1 / říci-008
+                :ARG0 s2e1
+                :ARG2 s2e1
+                :effect (s2e3 / event
+                    :clausal-marker (s2u1 / už)
+                    :temporal (s2n1 / nikdy
+                        :polarity -)
+                    :aspect state)
+                :refer-number singular
+                :aspect performance)))
+
+# alignment:
+s2a1: 11-11
+s2z1: 4-4
+s2p1: 1-1,3-3
+s2t1: 2-2
+s2e1: 6-6,17-17
+s2d1: 5-5,8-8
+s2p2: 7-7
+s2s1: 9-10
+s2a2: 15-15
+s2v1: 12-14
+s2e2: 0-0
+s2r1: 16-16
+s2e3: 0-0
+s2u1: 19-19
+s2n1: 20-20
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p1 :same-event s1p1)
+            (s2e1 :same-entity s1h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2       3  4        5
+Words: Ale nakonec mě donutili .
+
+# sentence level graph:
+(s3d1 / donutit-001
+        :clausal-marker (s3a1 / ale)
+        :ARG0 (s3e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s3e2 / entity)
+        :ARG2 (s3e3 / entity
+            :refer-number singular
+            :refer-person 1st)
+        :temporal (s3n1 / nakonec)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s3d1: 4-4
+s3a1: 1-1
+s3e1: 0-0
+s3e2: 0-0
+s3e3: 3-3
+s3n1: 2-2
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e3 :same-entity s2e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2   3     4        5    6     7       8  9      10 11     12         13    14           15  16       17
+Words: Přestože prý nebyl tělocvik jeho silná stránka ,  trefil ve školní tělocvičně míčem basketbalový koš napoprvé .
+
+# sentence level graph:
+(s4b1 / but-91
+        :ARG2 (s4b2 / být-007
+            :clausal-marker (s4p1 / prý)
+            :ARG0 (s4t1 / tělocvik
+                :refer-number singular)
+            :ARG1 (s4s1 / stránka
+                :possessor s4e1
+                :mod (s4s2 / silný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity
+            :polarity -)
+        :ARG1 (s4t2 / trefit-001
+            :ARG0 (s4e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :place (s4t3 / tělocvična
+                :mod (s4s3 / školní
+                    :refer-number singular)
+                :refer-number singular)
+            :instrument (s4m1 / míč
+                :refer-number singular)
+            :ARG1 (s4k1 / koš
+                :mod (s4b3 / basketbalový
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s4n1 / napoprvé)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s4b1: 1-1
+s4t2: 9-9
+s4e1: 5-5
+s4t3: 10-10,12-12
+s4s3: 11-11
+s4m1: 13-13
+s4k1: 15-15
+s4b3: 14-14
+s4n1: 16-16
+s4b2: 3-3
+s4p1: 2-2
+s4t1: 4-4
+s4s1: 7-7
+s4s2: 6-6
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s2e1)
+            (s4s3 :same-entity s2s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2   3 4   5
+Words: Foto ČTK - Jan Třeštík
+
+# sentence level graph:
+(s5e1 / event
+        :ARG1 (s5f1 / foto
+            :refer-number singular)
+        :ARG0 (s5c1 / ČTK
+            :parenthesis (s5t1 / Třeštík
+                :mod (s5j1 / Jan
+                    :refer-number singular)
+                :refer-number singular))
+        :aspect state)
+
+# alignment:
+s5e1: 0-0
+s5f1: 1-1
+s5c1: 2-2
+s5t1: 5-5
+s5j1: 4-4
+
+# document level annotation:
+(s5s0 / sentence)
+
+

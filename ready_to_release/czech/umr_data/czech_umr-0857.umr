@@ -1,0 +1,145 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2 3    4 5  6
+Words: Kirjakov a spol . se vracejí
+
+# sentence level graph:
+(s1v1 / vracet-se-003
+        :ARG0 (s1a1 / and
+            :op1 (s1k1 / Kirjakov
+                :refer-number singular)
+            :op2 (s1s1 / spol))
+        :goal (s1e1 / entity)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1v1: 5-6
+s1a1: 2-2
+s1k1: 1-1
+s1s1: 3-3
+s1e1: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: Moskva -
+
+# sentence level graph:
+(s2m1 / Moskva
+        :refer-number singular)
+
+# alignment:
+s2m1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2      3       4  5    6      7             8         9       10    11
+Words: Příští středu vstoupí do nové sezony reprezentační fotbalové mužstvo Ruska .
+
+# sentence level graph:
+(s3v1 / vstoupit-003
+        :temporal (s3s1 / středa
+            :mod (s3p1 / příští
+                :refer-number singular)
+            :refer-number singular)
+        :goal (s3s2 / sezona
+            :mod (s3n1 / nový
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3m1 / mužstvo
+            :mod (s3f1 / fotbalový
+                :refer-number singular)
+            :mod (s3r1 / reprezentační
+                :refer-number singular)
+            :possessor (s3r2 / Rusko
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s3v1: 3-3
+s3s1: 2-2
+s3p1: 1-1
+s3s2: 4-4,6-6
+s3n1: 5-5
+s3m1: 9-9
+s3f1: 8-8
+s3r1: 7-7
+s3r2: 10-10
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3m1 :same-entity s1a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2    3  4  5       6       7        8  9         10 11         12 13          14  15 16 17      18 19     20    21 22        23 24     25
+Words: Do týmu se po bojkotu vracejí Kirjakov z  Karlsruhe ,  Kančelskis z  Manchesteru Unt .  ,  Šalimov z  Interu Milán a  Kolyvanov z  Foggie .
+
+# sentence level graph:
+(s4v1 / vracet-se-003
+        :goal (s4t1 / tým
+            :refer-number singular)
+        :temporal (s4b1 / bojkot
+            :refer-number singular)
+        :ARG0 (s4a1 / and
+            :op1 (s4k1 / Kirjakov
+                :start (s4k2 / Karlsruhe)
+                :refer-number singular)
+            :op2 (s4k3 / Kančelskis
+                :start (s4m1 / Manchester
+                    :mod (s4u1 / United)
+                    :refer-number singular)
+                :refer-number singular)
+            :op3 (s4s1 / Šalimov
+                :start (s4i1 / Inter
+                    :mod (s4m2 / Milán
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :op4 (s4k4 / Kolyvanov
+                :start (s4f1 / Foggia
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4v1: 3-3,6-6
+s4t1: 1-2
+s4b1: 4-5
+s4a1: 21-21
+s4k1: 7-7
+s4k2: 8-9
+s4k3: 11-11
+s4m1: 12-13
+s4u1: 14-14
+s4s1: 17-17
+s4i1: 18-19
+s4m2: 20-20
+s4k4: 22-22
+s4f1: 23-24
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-entity s3m1)))
+
+

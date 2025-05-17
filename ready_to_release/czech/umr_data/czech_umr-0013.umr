@@ -1,0 +1,925 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1 2     3  4 5 6 7
+Words: | Ptáte se . . . |
+
+# sentence level graph:
+(s1p1 / ptát-se-001
+        :ARG0 (s1e1 / entity
+            :refer-number plural
+            :refer-person 2nd)
+        :ARG1 (s1e2 / entity)
+        :ARG2 (s1e3 / entity)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect activity)
+
+# alignment:
+s1p1: 2-3
+s1e1: 0-0
+s1e2: 0-0
+s1e3: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2        3  4        5  6        7  8     9  10     11 12 13      14
+Words: Hledáte kontakty na sdružení ,  asociace ,  cechy ,  komory ,  a  podobně ?
+
+# sentence level graph:
+(s2h1 / hledat-003
+        :ARG0 (s2e1 / entity
+            :refer-number plural
+            :refer-person 2nd)
+        :ARG1 (s2k1 / kontakt
+            :goal (s2a1 / and
+                :op1 (s2s1 / sdružení
+                    :refer-number plural)
+                :op2 (s2a2 / asociace
+                    :refer-number plural)
+                :op3 (s2c1 / cech
+                    :refer-number plural)
+                :op4 (s2k2 / komora
+                    :refer-number plural)
+                :op5 (s2p1 / podobně))
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect activity)
+
+# alignment:
+s2h1: 1-1
+s2e1: 0-0
+s2k1: 2-2
+s2a1: 12-12
+s2s1: 3-4
+s2a2: 3-3,6-6
+s2c1: 3-3,8-8
+s2k2: 3-3,10-10
+s2p1: 3-3,13-13
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2e1 :same-entity s1e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1           2     3  4   5      6            7  8          9    10     11       12
+Words: Potřebujete vědět ,  kde sehnat legislativní ,  hygienické nebo právní předpisy ?
+
+# sentence level graph:
+(s3p1 / potřebovat-002
+        :ARG0 (s3e1 / entity
+            :refer-number plural
+            :refer-person 2nd)
+        :ARG1 (s3v1 / vědět-004
+            :ARG0 s3e1
+            :effect (s3s1 / sehnat-001
+                :ARG0 (s3e2 / entity)
+                :ARG1 (s3o1 / or
+                    :op1 (s3p2 / předpis
+                        :mod (s3l1 / legislativní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :op2 (s3p3 / předpis
+                        :mod (s3h1 / hygienický
+                            :refer-number plural)
+                        :refer-number plural)
+                    :op3 (s3p4 / předpis
+                        :mod (s3p5 / právní
+                            :refer-number plural)
+                        :refer-number plural))
+                :place (s3k1 / kde)
+                :aspect performance)
+            :aspect state)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect activity)
+
+# alignment:
+s3p1: 1-1
+s3e1: 0-0
+s3v1: 2-2
+s3s1: 5-5
+s3e2: 0-0
+s3o1: 9-9
+s3p2: 0-0
+s3l1: 6-6
+s3p3: 0-0
+s3h1: 8-8
+s3p4: 11-11
+s3p5: 10-10
+s3k1: 4-4
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1           2      3       4  5        6        7         8
+Words: Potřebujete získat kontakt na podpůrné programy podnikání ?
+
+# sentence level graph:
+(s4p1 / potřebovat-002
+        :ARG0 (s4e1 / entity
+            :refer-number plural
+            :refer-person 2nd)
+        :ARG1 (s4z1 / získat-004
+            :ARG0 s4e1
+            :ARG1 (s4k1 / kontakt
+                :goal (s4p2 / program
+                    :possessor (s4p3 / podnikání
+                        :ARG0 (s4e2 / entity)
+                        :refer-number singular)
+                    :mod (s4p4 / podpůrný
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect activity)
+
+# alignment:
+s4p1: 1-1
+s4e1: 0-0
+s4z1: 2-2
+s4k1: 3-3
+s4p2: 4-4,6-6
+s4p3: 7-7
+s4e2: 0-0
+s4p4: 5-5
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2 3    4      5    6       7
+Words: Přesně k tomu slouží naše rubrika .
+
+# sentence level graph:
+(s5s1 / sloužit-001
+        :ARG1 (s5t1 / ten
+            :refer-number singular)
+        :manner (s5p1 / přesně)
+        :ARG0 (s5r1 / rubrika
+            :possessor (s5e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5s1: 4-4
+s5t1: 2-3
+s5p1: 1-1
+s5r1: 6-6
+s5e1: 5-5
+
+# document level annotation:
+(s5s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2      3         4  5      6               7       8  9     10
+Words: Vaše dotazy očekáváme na adrese Českomoravského profitu v  Praze .
+
+# sentence level graph:
+(s6o1 / očekávat-001
+        :ARG1 (s6d1 / dotaz
+            :possessor (s6e1 / entity
+                :refer-number plural
+                :refer-person 2nd)
+            :refer-number plural)
+        :ARG0 (s6e2 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :place (s6a1 / adresa
+            :possessor (s6p1 / profit
+                :mod (s6c1 / Českomoravský
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 1st)
+            :refer-number singular)
+        :place (s6p2 / Praha
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 1st
+        :aspect activity)
+
+# alignment:
+s6o1: 3-3
+s6d1: 2-2
+s6e1: 1-1
+s6e2: 0-0
+s6a1: 4-5
+s6p1: 7-7
+s6c1: 6-6
+s6p2: 8-9
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s4e1)
+            (s6e2 :same-entity s5e1)
+            (s6p1 :same-entity s6e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1             2 3
+Words: Automechanici , autoopraváři
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7a2 / automechanik
+            :refer-number plural)
+        :op2 (s7a3 / autoopravář
+            :refer-number plural))
+
+# alignment:
+s7a1: 2-2
+s7a2: 1-1
+s7a3: 3-3
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2    3      4     5    6          7    8            9    10          11
+Words: Chtěl bych nechat svého syna vystudovat obor automechanik nebo autoopravář .
+
+# sentence level graph:
+(s8n1 / nechat-005
+        :ARG0 (s8e1 / entity
+            :refer-number singular
+            :refer-person 1st)
+        :ARG1 (s8s1 / syn
+            :possessor s8e1
+            :refer-number singular)
+        :effect (s8v1 / vystudovat-001
+            :ARG0 s8s1
+            :ARG1 (s8o1 / or
+                :op1 (s8o2 / obor
+                    :name (s8a1 / automechanik
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s8o3 / obor
+                    :name (s8a2 / autoopravář
+                        :refer-number singular)
+                    :refer-number singular))
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s8n1: 1-3
+s8e1: 4-4
+s8s1: 5-5
+s8v1: 6-6
+s8o1: 9-9
+s8o2: 7-7
+s8a1: 8-8
+s8o3: 0-0
+s8a2: 10-10
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1   2      3         4 5          6
+Words: Kde získám informace o učilištích ?
+
+# sentence level graph:
+(s9z1 / získat-001
+        :ARG0 (s9e1 / entity
+            :refer-number singular
+            :refer-person 1st)
+        :ARG1 (s9i1 / informace
+            :ARG1 (s9u1 / učiliště
+                :refer-number plural)
+            :refer-number plural)
+        :place (s9k1 / kde)
+        :refer-number singular
+        :refer-person 1st
+        :aspect performance)
+
+# alignment:
+s9z1: 2-2
+s9e1: 0-0
+s9i1: 3-3
+s9u1: 4-5
+s9k1: 1-1
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9e1 :same-entity s8e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1    2     3 4
+Words: Petr Havíř , Praha
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10h1 / Havíř
+            :mod (s10p1 / Petr
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 1st)
+        :op2 (s10p2 / Praha
+            :refer-number singular))
+
+# alignment:
+s10a1: 3-3
+s10h1: 2-2
+s10p1: 1-1
+s10p2: 4-4
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10h1 :same-entity s9e1)
+            (s10p2 :same-entity s6p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1  2       3     4    5    6  7     8       9     10 11      12        13     14        15 16      17    18 19       20       21      22 23     24    25
+Words: O  studium svého syna jste se začal zajímat pozdě ,  protože oficiální termín přihlášek na střední školy a  učňovská zařízení vypršel s  koncem února .
+
+# sentence level graph:
+(s11z1 / začít-001
+        :ARG0 (s11e1 / entity
+            :refer-number singular
+            :refer-person 2nd)
+        :ARG1 (s11z2 / zajímat-se-001
+            :ARG1 (s11s1 / studium
+                :ARG0 (s11s2 / syn
+                    :possessor s11e1
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s11e1
+            :temporal (s11p1 / pozdě)
+            :cause (s11v1 / vypršet-001
+                :ARG0 (s11t1 / termín
+                    :possessor (s11p2 / přihláška
+                        :goal (s11a1 / and
+                            :op1 (s11s3 / škola
+                                :mod (s11s4 / střední
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :op2 (s11z3 / zařízení
+                                :mod (s11u1 / učňovský
+                                    :refer-number plural)
+                                :refer-number plural))
+                        :refer-number plural)
+                    :mod (s11o1 / oficiální
+                        :refer-number singular)
+                    :refer-number singular)
+                :companion (s11k1 / konec
+                    :possessor (s11u2 / únor
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s11z1: 5-5,7-7
+s11e1: 3-3
+s11z2: 6-6,8-8
+s11s1: 1-2
+s11s2: 4-4
+s11p1: 9-9
+s11v1: 11-11,21-21
+s11t1: 13-13
+s11p2: 14-14
+s11a1: 18-18
+s11s3: 15-15,17-17
+s11s4: 16-16
+s11z3: 15-15,20-20
+s11u1: 19-19
+s11o1: 12-12
+s11k1: 22-23
+s11u2: 24-24
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11e1 :same-entity s10h1)
+            (s11s2 :same-entity s8s1)
+            (s11z3 :same-entity s9u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1      2     3    4     5
+Words: Přesto ještě máte šanci .
+
+# sentence level graph:
+(s12m1 / mít-028
+        :clausal-marker (s12p1 / přesto)
+        :ARG0 (s12e1 / entity
+            :refer-number singular
+            :refer-person 2nd)
+        :temporal (s12j1 / ještě)
+        :predicative-noun (s12s1 / šance
+            :ARG0 s12e1
+            :ARG1 (s12e2 / entity)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect state)
+
+# alignment:
+s12m1: 3-3
+s12p1: 1-1
+s12e1: 0-0
+s12j1: 2-2
+s12s1: 4-4
+s12e2: 0-0
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12e1 :same-entity s11e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1  2          3        4      5  6        7  8     9    10   11       12 13 14    15      16
+Words: U  učňovských zařízení záleží na řediteli ,  který může žáka přijmout i  po tomto termínu .
+
+# sentence level graph:
+(s13z1 / záležet-001
+        :place (s13z2 / zařízení
+            :mod (s13u1 / učňovský
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s13e1 / entity)
+        :ARG1 (s13r1 / ředitel
+            :ARG0-of (s13p1 / přijmout-002
+                :ARG1 (s13z3 / žák
+                    :refer-number singular)
+                :clausal-marker (s13i1 / i)
+                :temporal (s13t1 / termín
+                    :mod (s13t2 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s13z1: 4-4
+s13z2: 1-1,3-3
+s13u1: 2-2
+s13e1: 0-0
+s13r1: 5-6,8-8
+s13p1: 9-9,11-11
+s13z3: 10-10
+s13i1: 12-12
+s13t1: 13-13,15-15
+s13t2: 14-14
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13z2 :same-entity s11z3)
+            (s13t1 :same-entity s11k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1         2   3       4    5  6   7        8  9    10    11 12    13      14   15      16
+Words: Podmínkou pro přijetí však je mít sponzora -  tedy firmu ,  která vyučení žáka zaplatí .
+
+# sentence level graph:
+(s14b1 / být-007
+        :clausal-marker (s14v1 / však)
+        :ARG1 (s14p1 / podmínka
+            :affectee (s14e1 / entity)
+            :affectee (s14p2 / přijetí
+                :ARG0 (s14e2 / entity)
+                :ARG1 (s14e3 / entity)
+                :goal (s14e4 / entity)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s14m1 / mít-002
+            :ARG0 s14e1
+            :ARG1 (s14i1 / identity-91
+                :ARG1 (s14s1 / sponzor
+                    :refer-number singular)
+                :clausal-marker (s14t1 / tedy)
+                :ARG2 (s14f1 / firma
+                    :ARG0-of (s14z1 / zaplatit-001
+                        :ARG1 (s14v2 / vyučení
+                            :ARG0 (s14z2 / žák
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect performance)
+                    :refer-number singular))
+            :aspect state)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s14b1: 5-5
+s14v1: 4-4
+s14p1: 1-1
+s14e1: 0-0
+s14p2: 2-3
+s14e2: 0-0
+s14e3: 0-0
+s14e4: 0-0
+s14m1: 6-6
+s14i1: 8-8
+s14s1: 7-7
+s14t1: 9-9
+s14f1: 10-10,12-12
+s14z1: 15-15
+s14v2: 13-13
+s14z2: 14-14
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14p2 :same-event s13p1)
+            (s14z2 :same-entity s13z3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1     2      3         4       5      6     7  8     9  10 11    12       13 14 15    16 17 18      19   20 21  22    23 24   25          26 27                28 29 30    31 32 33    34         35
+Words: Podle našich informací najdete takové školy v  Praze 2  v  ulici Moravské ,  v  Praze 2  na Náměstí Míru ,  kde sídlí i  Cech podnikatelů v  autoopravárenství a  v  Praze 9  ,  ulici Beranových .
+
+# sentence level graph:
+(s15a1 / and
+        :op1 (s15n1 / najít-002
+            :regard (s15i1 / informace
+                :possessor (s15e1 / entity
+                    :refer-number plural
+                    :refer-person 1st)
+                :refer-number plural)
+            :ARG0 (s15e2 / entity
+                :refer-number singular
+                :refer-person 2nd)
+            :place (s15p1 / Praha
+                :mod (s15x1 / 2)
+                :refer-number singular)
+            :place (s15u1 / ulice
+                :name (s15m1 / moravský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s15s1 / škola
+                :mod (s15t1 / takový
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 2nd
+            :aspect performance)
+        :op2 (s15n2 / najít-002
+            :regard s15i1
+            :ARG0 s15e2
+            :ARG1 s15s1
+            :place (s15p2 / Praha
+                :mod (s15x5 / 2)
+                :refer-number singular)
+            :place (s15n3 / Náměstí
+                :mod (s15m2 / Mír
+                    :refer-number singular)
+                :place-of (s15s2 / sídlit-001
+                    :clausal-marker (s15i2 / i)
+                    :ARG0 (s15c1 / cech
+                        :possessor (s15p3 / podnikatel
+                            :place (s15a2 / autoopravárenství
+                                :refer-number singular)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 2nd
+            :aspect performance)
+        :op3 (s15n4 / najít-002
+            :regard s15i1
+            :ARG0 s15e2
+            :ARG1 s15s1
+            :place (s15i3 / identity-91
+                :ARG1 (s15p4 / Praha
+                    :mod (s15x9 / 9)
+                    :refer-number singular)
+                :ARG2 (s15u2 / ulice
+                    :name (s15b1 / Beran
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number plural
+            :refer-person 2nd
+            :aspect performance))
+
+# alignment:
+s15a1: 28-28
+s15n1: 4-4
+s15p1: 7-8
+s15x1: 9-9
+s15u1: 10-11
+s15m1: 12-12
+s15i1: 1-1,3-3
+s15e1: 2-2
+s15e2: 0-0
+s15s1: 6-6
+s15t1: 5-5
+s15n2: 0-0
+s15p2: 14-15
+s15x5: 16-16
+s15n3: 17-18,21-21
+s15m2: 19-19
+s15s2: 22-22
+s15i2: 23-23
+s15c1: 24-24
+s15p3: 25-25
+s15a2: 26-27
+s15n4: 0-0
+s15i3: 32-32
+s15p4: 29-30
+s15x9: 31-31
+s15u2: 29-29,33-33
+s15b1: 34-34
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15p1 :same-entity s10p2)
+            (s15e1 :same-entity s6p1)
+            (s15e2 :same-entity s12e1)
+            (s15p2 :same-entity s15p1)
+            (s15p4 :same-entity s15p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1      2         3    4       5  6       7         8         9  10        11         12 13     14     15          16 17            18      19  20    21 22 23    24    25 26    27 28 29 30           31    32
+Words: Bližší informace však získáte z  brožury Komplexní informace o  pražských učilištích ,  kterou vydala Pedagogicko -  psychologická poradna pro Prahu 4  ,  která sídlí v  Praze 1  ,  v  Jeruzalémské ulici .
+
+# sentence level graph:
+(s16z1 / získat-001
+        :clausal-marker (s16v1 / však)
+        :ARG1 (s16i1 / informace
+            :mod (s16b1 / blízký
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s16e1 / entity
+            :refer-number singular
+            :refer-person 2nd)
+        :source (s16b2 / brožura
+            :name (s16i2 / informace
+                :ARG1 (s16u1 / učiliště
+                    :mod (s16p1 / pražský
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s16k1 / Komplexní
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1-of (s16v2 / vydat-006
+                :ARG0 (s16p2 / poradna
+                    :mod (s16a1 / and
+                        :op1 (s16p3 / Pedagogický)
+                        :op2 (s16p4 / psychologický
+                            :refer-number singular))
+                    :affectee (s16p5 / Praha
+                        :mod (s16x1 / 4)
+                        :refer-number singular)
+                    :ARG0-of (s16s1 / sídlit-001
+                        :place (s16a2 / and
+                            :op1 (s16p6 / Praha
+                                :mod (s16x2 / 1)
+                                :refer-number singular)
+                            :op2 (s16u2 / ulice
+                                :mod (s16j1 / Jeruzalémský
+                                    :refer-number singular)
+                                :refer-number singular))
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect performance)
+
+# alignment:
+s16z1: 4-4
+s16v1: 3-3
+s16i1: 2-2
+s16b1: 1-1
+s16e1: 0-0
+s16b2: 5-6,13-13
+s16i2: 8-8
+s16u1: 9-9,11-11
+s16p1: 10-10
+s16k1: 7-7
+s16v2: 14-14
+s16p2: 18-18,23-23
+s16a1: 16-16
+s16p3: 15-15
+s16p4: 17-17
+s16p5: 19-20
+s16x1: 21-21
+s16s1: 24-24
+s16a2: 28-28
+s16p6: 25-26
+s16x2: 27-27
+s16u2: 29-29,31-31
+s16j1: 30-30
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16e1 :same-entity s15e2)
+            (s16p1 :same-entity s15p4)
+            (s16p5 :same-entity s16p1)
+            (s16p6 :same-entity s16p5)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1       2 3          4    5   6 7             8    9
+Words: Přehled o učilištích bude mít i podnikatelský cech .
+
+# sentence level graph:
+(s17m1 / mít-008
+        :ARG1 (s17p1 / přehled
+            :ARG1 (s17u1 / učiliště
+                :refer-number plural)
+            :refer-number singular)
+        :clausal-marker (s17i1 / i)
+        :ARG0 (s17c1 / cech
+            :mod (s17p2 / podnikatelský
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s17m1: 4-5
+s17p1: 1-1
+s17u1: 2-3
+s17i1: 6-6
+s17c1: 8-8
+s17p2: 7-7
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17u1 :same-entity s13z2)
+            (s17c1 :same-entity s15c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1     2
+Words: Lumír Síla
+
+# sentence level graph:
+(s18s1 / Síla
+        :mod (s18l1 / Lumír
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s18s1: 2-2
+s18l1: 1-1
+
+# document level annotation:
+(s18s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s19-root
+# :: snt19
+Index: 1        2  3           4  5             6       7   8     9  10 11           12 13 14    15 16
+Words: Kontakty :  Pedagogicko -  psychologická poradna pro Prahu 4  ,  Jeruzalémská 12 ,  Praha 1  .
+
+# sentence level graph:
+(s19x1 / #Colon
+        :ARG0 (s19k1 / kontakt
+            :refer-number plural)
+        :ARG1 (s19p1 / poradna
+            :mod (s19a1 / and
+                :op1 (s19p2 / Pedagogický)
+                :op2 (s19p3 / psychologický
+                    :refer-number singular))
+            :affectee (s19p4 / Praha
+                :mod (s19x2 / 4)
+                :refer-number singular)
+            :mod (s19p5 / Praha
+                :mod (s19x3 / 1)
+                :mod (s19j1 / Jeruzalémský
+                    :mod (s19x4 / 12)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular))
+
+# alignment:
+s19x1: 2-2
+s19k1: 1-1
+s19p1: 6-6
+s19a1: 4-4
+s19p2: 3-3
+s19p3: 5-5
+s19p4: 7-8
+s19x2: 9-9
+s19p5: 14-14
+s19x3: 15-15
+s19j1: 11-11
+s19x4: 12-12
+
+# document level annotation:
+(s19s0 / sentence
+    :coref ((s19p1 :same-entity s16p2)
+            (s19p4 :same-entity s16p6)
+            (s19p5 :same-entity s19p4)
+            (s19j1 :same-entity s16u2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s20-root
+# :: snt20
+Index: 1    2         3           4  5                 6  7       8    9  10 11  12 13    14 15
+Words: Cech pražských podnikatelů v  autoopravárenství ,  náměstí Míru 19 ,  120 00 Praha 2  .
+
+# sentence level graph:
+(s20c1 / cech
+        :possessor (s20p1 / podnikatel
+            :place (s20a1 / autoopravárenství
+                :refer-number singular)
+            :mod (s20p2 / pražský
+                :refer-number plural)
+            :refer-number plural)
+        :mod (s20p3 / Praha
+            :mod (s20x1 / 2)
+            :mod (s20x2 / 120_00)
+            :mod (s20n1 / náměstí
+                :mod (s20m1 / mír
+                    :mod (s20x3 / 19)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s20c1: 1-1
+s20p1: 3-3
+s20a1: 4-5
+s20p2: 2-2
+s20p3: 13-13
+s20x1: 14-14
+s20x2: 11-12
+s20n1: 7-7
+s20m1: 8-8
+s20x3: 9-9
+
+# document level annotation:
+(s20s0 / sentence
+    :coref ((s20c1 :same-entity s17c1)
+            (s20a1 :same-entity s15a2)
+            (s20p2 :same-entity s19p5)
+            (s20p3 :same-entity s20p2)
+            (s20n1 :same-entity s15n3)))
+
+

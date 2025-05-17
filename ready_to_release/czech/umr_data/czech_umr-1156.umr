@@ -1,0 +1,284 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2     3
+Words: KB včera ustoupila
+
+# sentence level graph:
+(s1u1 / ustoupit-005
+        :ARG0 (s1k1 / KB)
+        :temporal (s1v1 / včera)
+        :aspect performance)
+
+# alignment:
+s1u1: 3-3
+s1k1: 1-1
+s1v1: 2-2
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( eko ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2e1 / eko)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2e1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2     3     4        5  6  7      8       9       10 11  12 13   14         15        16  17   18 19              20       21 22 23     24       25     26 27    28  29      30 31     32   33 34   35 36 37    38  39
+Words: Komerční banka včera oznámila ,  že umožní každému zájemci ,  aby si mohl prodloužit speciální typ účtu s  dvanáctiměsíční výpovědí a  s  pevnou úrokovou sazbou ,  který byl nabízen v  letech 1990 -  1991 ,  o  další rok .
+
+# sentence level graph:
+(s3o1 / oznámit-001
+        :ARG0 (s3b1 / banka
+            :mod (s3k1 / Komerční
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3v1 / včera)
+        :ARG1 (s3u1 / umožnit-001
+            :ARG0 s3b1
+            :ARG2 (s3z1 / zájemce
+                :mod (s3k2 / každý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s3p1 / prodloužit-001
+                :ARG0 s3z1
+                :affectee s3z1
+                :ARG1 (s3t1 / typ
+                    :possessor (s3u2 / účet
+                        :companion (s3a1 / and
+                            :op1 (s3v2 / výpověď
+                                :mod (s3d1 / dvanáctiměsíční
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :op2 (s3s1 / sazba
+                                :mod (s3u3 / úrokový
+                                    :refer-number singular)
+                                :mod (s3p2 / pevný
+                                    :refer-number singular)
+                                :refer-number singular))
+                        :refer-number singular)
+                    :ARG1-of (s3n1 / nabízet-001
+                        :ARG0 (s3e1 / entity)
+                        :ARG2 (s3e2 / entity)
+                        :temporal (s3r1 / rok
+                            :mod (s3m1 / math
+                                :op1 (s3x4 / 1990)
+                                :op2 (s3x5 / 1991))
+                            :refer-number plural)
+                        :refer-number singular
+                        :aspect activity)
+                    :mod (s3s2 / speciální
+                        :refer-number singular)
+                    :refer-number singular)
+                :extent (s3r2 / rok
+                    :mod (s3d2 / další
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s3o1: 4-4
+s3b1: 2-2
+s3k1: 1-1
+s3v1: 3-3
+s3u1: 6-7
+s3z1: 9-9,12-12
+s3k2: 8-8
+s3p1: 11-11,13-14
+s3t1: 16-16,27-27
+s3u2: 17-17
+s3a1: 21-21
+s3v2: 18-18,20-20
+s3d1: 19-19
+s3s1: 22-22,25-25
+s3u3: 24-24
+s3p2: 23-23
+s3n1: 28-29
+s3e1: 0-0
+s3e2: 0-0
+s3r1: 30-31
+s3m1: 33-33
+s3x4: 32-32
+s3x5: 34-34
+s3s2: 15-15
+s3r2: 36-36,38-38
+s3d2: 37-37
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3b1 :same-entity s1k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1         2       3     4  5            6      7          8  9  10 11 12
+Words: Příslušné smlouvy budou z  ekonomických důvodů vypovězeny k  31 .  12 .
+
+# sentence level graph:
+(s4v1 / vypovědět-002
+        :ARG1 (s4s1 / smlouva
+            :mod (s4p1 / příslušný
+                :refer-number plural)
+            :refer-number plural)
+        :cause (s4d1 / důvod
+            :mod (s4e1 / ekonomický
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s4e2 / entity)
+        :temporal (s4x1 / 12
+            :mod (s4x2 / 31))
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s4v1: 3-3,7-7
+s4s1: 2-2
+s4p1: 1-1
+s4d1: 4-4,6-6
+s4e1: 5-5
+s4e2: 0-0
+s4x1: 8-8,11-11
+s4x2: 9-9
+
+# document level annotation:
+(s4s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2  3    4  5  6    7  8    9    10      11        12 13 14   15 16       17   18    19      20  21 22         23 24  25   26 27 28    29 30    31  32
+Words: Každý ,  koho se to týká ,  však bude zároveň vyrozuměn ,  že může ke stejnému datu podat výpověď sám a  prodloužit si tak účet i  s  úroky o  jeden rok .
+
+# sentence level graph:
+(s5v1 / vyrozumět-001
+        :clausal-marker (s5v2 / však)
+        :ARG2 (s5k1 / každý
+            :mod (s5t1 / týkat-se-001
+                :ARG1 (s5k2 / kdo
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG0 (s5t2 / ten
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s5e1 / entity)
+        :temporal (s5z1 / zároveň)
+        :ARG1 (s5h1 / have-result-91
+            :ARG1 (s5p1 / podat-008
+                :ARG0 s5k2
+                :predicative-noun (s5v3 / výpověď
+                    :ARG0 s5k2
+                    :ARG1 (s5e2 / entity)
+                    :refer-number singular)
+                :ARG2 (s5e3 / entity)
+                :temporal (s5d1 / datum
+                    :mod (s5s1 / stejný
+                        :refer-number singular)
+                    :refer-number singular)
+                :manner (s5s2 / sám
+                    :mod-of s5k2
+                    :refer-number singular)
+                :aspect performance)
+            :clausal-marker (s5t3 / tak)
+            :ARG2 (s5p2 / prodloužit-001
+                :ARG0 s5k2
+                :affectee s5k2
+                :ARG1 (s5u1 / účet
+                    :clausal-marker (s5i1 / i)
+                    :companion (s5u2 / úrok
+                        :refer-number plural)
+                    :refer-number singular)
+                :extent (s5r1 / rok
+                    :mod (s5j1 / jeden
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5v1: 9-9,11-11
+s5v2: 8-8
+s5k1: 1-1
+s5t1: 4-4,6-6
+s5k2: 3-3,23-23
+s5t2: 5-5
+s5e1: 0-0
+s5z1: 10-10
+s5h1: 21-21
+s5p1: 13-14,18-18
+s5v3: 19-19
+s5e2: 0-0
+s5e3: 0-0
+s5d1: 15-15,17-17
+s5s1: 16-16
+s5s2: 20-20
+s5t3: 24-24
+s5p2: 13-14,22-22
+s5u1: 25-25
+s5i1: 26-26
+s5u2: 27-28
+s5r1: 29-29,31-31
+s5j1: 30-30
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5k2 :same-entity s5k1)
+            (s5d1 :same-entity s4x1)
+            (s5u1 :same-entity s3t1)
+            (s5r1 :same-entity s3r2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1 2    3 4       5      6
+Words: ( Více v příloze Koruna )
+
+# sentence level graph:
+(s6e1 / event
+        :ARG0 (s6e2 / entity
+            :mod (s6h1 / hodně))
+        :place (s6p1 / příloha
+            :name (s6k1 / Koruna
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s6e1: 0-0
+s6e2: 0-0
+s6h1: 2-2
+s6p1: 3-4
+s6k1: 5-5
+
+# document level annotation:
+(s6s0 / sentence)
+
+

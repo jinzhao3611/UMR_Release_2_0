@@ -1,0 +1,306 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2     3       4
+Words: Mexická banka pomohla pesu
+
+# sentence level graph:
+(s1p1 / pomoci-002
+        :ARG0 (s1b1 / banka
+            :mod (s1m1 / mexický
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s1p2 / peso
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s1p1: 3-3
+s1b1: 2-2
+s1m1: 1-1
+s1p2: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2         3     4       5       6       7     8            9     10
+Words: Mexická centrální banka výrazně zvýšila úrokové sazby krátkodobých úvěrů .
+
+# sentence level graph:
+(s3z1 / zvýšit-001
+        :ARG0 (s3b1 / banka
+            :mod (s3c1 / centrální
+                :refer-number singular)
+            :mod (s3m1 / mexický
+                :refer-number singular)
+            :refer-number singular)
+        :manner (s3v1 / výrazně)
+        :ARG1 (s3s1 / sazba
+            :mod (s3u1 / úrokový
+                :refer-number plural)
+            :possessor (s3u2 / úvěr
+                :mod (s3k1 / krátkodobý
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s3z1: 5-5
+s3b1: 3-3
+s3c1: 2-2
+s3m1: 1-1
+s3v1: 4-4
+s3s1: 7-7
+s3u1: 6-6
+s3u2: 9-9
+s3k1: 8-8
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3b1 :same-entity s1b1)
+            (s3m1 :same-entity s1m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2        3  4     5       6     7         8  9       10      11 12      13      14        15   16
+Words: Tímto způsobem se snaží zmírnit obavy investorů z  budoucí inflace a  posílit hodnotu mexického pesa .
+
+# sentence level graph:
+(s4s1 / snažit-se-001
+        :ARG0 (s4e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s4a1 / and
+            :op1 (s4z1 / zmírnit-001
+                :ARG0 s4e1
+                :instrument (s4z2 / způsob
+                    :mod (s4t1 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s4o1 / obava
+                    :ARG0 (s4i1 / investor
+                        :refer-number plural)
+                    :ARG1 (s4i2 / inflace
+                        :mod (s4b1 / budoucí
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :aspect performance)
+            :op2 (s4p1 / posílit-004
+                :ARG0 s4e1
+                :ARG1 (s4h1 / hodnota
+                    :possessor (s4p2 / peso
+                        :mod (s4m1 / mexický
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4s1: 3-4
+s4e1: 0-0
+s4a1: 11-11
+s4z1: 5-5
+s4z2: 2-2
+s4t1: 1-1
+s4o1: 6-6
+s4i1: 7-7
+s4i2: 8-8,10-10
+s4b1: 9-9
+s4p1: 12-12
+s4h1: 13-13
+s4p2: 15-15
+s4m1: 14-14
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3b1)
+            (s4z2 :same-event s3z1)
+            (s4p2 :same-entity s1p2)
+            (s4m1 :same-entity s3m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1   2     3     4    5         6     7  8          9       10    11      12 13      14 15      16     17       18 19        20
+Words: Jak včera uvedl list Financial Times ,  krátkodobé úrokové sazby dosáhly v  pondělí 47 procent oproti pátečním 38 procentům .
+
+# sentence level graph:
+(s5d1 / dosáhnout-002
+        :parenthesis (s5u1 / uvést-007
+            :temporal (s5v1 / včera)
+            :effect s5d1
+            :ARG0 (s5l1 / list
+                :name (s5x2 / #Forn
+                    :FPHR (s5f1 / Financial)
+                    :FPHR (s5t1 / Times))
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :ARG0 (s5s1 / sazba
+            :mod (s5u2 / úrokový
+                :refer-number plural)
+            :mod (s5k1 / krátkodobý
+                :refer-number plural)
+            :refer-number plural)
+        :temporal (s5p1 / pondělí
+            :refer-number singular)
+        :ARG1 (s5p2 / procento
+            :mod (s5x3 / 47)
+            :refer-number plural)
+        :comparison (s5p3 / procento
+            :mod (s5x4 / 38)
+            :mod (s5p4 / páteční
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s5d1: 11-11
+s5u1: 1-1,3-3
+s5v1: 2-2
+s5l1: 4-4
+s5x2: 0-0
+s5f1: 5-5
+s5t1: 6-6
+s5s1: 10-10
+s5u2: 9-9
+s5k1: 8-8
+s5p1: 12-13
+s5p2: 15-15
+s5x3: 14-14
+s5p3: 16-16,19-19
+s5x4: 18-18
+s5p4: 17-17
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s1 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2     3  4     5         6        7        8  9       10       11      12   13
+Words: Tato změna ,  která drasticky postihne dlužníky ,  pomohla okamžitě mexické měně .
+
+# sentence level graph:
+(s6p1 / pomoci-003
+        :ARG0 (s6z1 / změna
+            :mod (s6t1 / tento
+                :refer-number singular)
+            :ARG0-of (s6p2 / postihnout-002
+                :manner (s6d1 / drasticky)
+                :ARG1 (s6d2 / dlužník
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number singular)
+        :temporal (s6o1 / okamžitě)
+        :ARG2 (s6m1 / měna
+            :mod (s6m2 / mexický
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s6p1: 9-9
+s6z1: 2-2,4-4
+s6t1: 1-1
+s6p2: 6-6
+s6d1: 5-5
+s6d2: 7-7
+s6o1: 10-10
+s6m1: 12-12
+s6m2: 11-11
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6z1 :same-entity s4z2)
+            (s6m1 :same-entity s4p2)
+            (s6m2 :same-entity s4m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2       3    4     5        6     7    8     9  10      11     12    13   14    15
+Words: V  pondělí stál jeden americký dolar 5.54 pesos ,  zatímco minulý pátek 5725 pesos .
+
+# sentence level graph:
+(s7c1 / contrast-91
+        :ARG1 (s7s1 / stát-014
+            :ARG0 (s7d1 / dolar
+                :mod (s7a1 / americký
+                    :refer-number singular)
+                :mod (s7j1 / jeden
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s7p1 / pondělí
+                :refer-number singular)
+            :extent (s7p2 / pesos
+                :mod (s7x1 / 5.54))
+            :refer-number singular
+            :aspect activity)
+        :ARG2 (s7s2 / stát-014
+            :temporal (s7p3 / pátek
+                :mod (s7m1 / minulý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s7d1
+            :extent (s7p4 / pesos
+                :mod (s7x3 / 5725))
+            :refer-number singular
+            :aspect activity))
+
+# alignment:
+s7c1: 0-0
+s7s1: 3-3
+s7d1: 6-6
+s7a1: 5-5
+s7j1: 4-4
+s7p1: 1-2
+s7p2: 8-8
+s7x1: 7-7
+s7s2: 0-0
+s7p3: 12-12
+s7m1: 11-11
+s7p4: 14-14
+s7x3: 13-13
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p1 :same-entity s5p1)
+            (s7p3 :same-entity s5p4)))
+
+

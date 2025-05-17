@@ -1,0 +1,179 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Krátce
+
+# sentence level graph:
+(s1e1 / event
+        :manner (s1k1 / krátce)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1k1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2        3      4  5      6  7          8    9         10             11    12     13    14
+Words: Petr Kalandra naváže na loňské CD převzatých hitů světových písničkářských hvězd druhým dílem .
+
+# sentence level graph:
+(s2n1 / navázat-002
+        :ARG0 (s2k1 / Kalandra
+            :mod (s2p1 / Petr
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2c1 / CD
+            :mod (s2l1 / loňský
+                :refer-number singular)
+            :possessor (s2h1 / hit
+                :mod (s2p2 / převzatý
+                    :refer-number plural)
+                :possessor (s2h2 / hvězda
+                    :mod (s2p3 / písničkářský
+                        :refer-number plural)
+                    :mod (s2s1 / světový
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :instrument (s2d1 / díl
+            :mod (s2d2 / druhý
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s2n1: 3-3
+s2k1: 2-2
+s2p1: 1-1
+s2c1: 4-4,6-6
+s2l1: 5-5
+s2h1: 8-8
+s2p2: 7-7
+s2h2: 11-11
+s2p3: 10-10
+s2s1: 9-9
+s2d1: 13-13
+s2d2: 12-12
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2  3    4       5  6       7    8  9     10 11    12 13   14    15 16    17   18
+Words: Album se bude natáčet na přelomu září a  října a  vyjít by mělo ještě do konce roku .
+
+# sentence level graph:
+(s3a1 / and
+        :op1 (s3n1 / natáčet-001
+            :ARG1 (s3a2 / album
+                :refer-number singular)
+            :ARG0 (s3e1 / entity)
+            :temporal (s3p1 / přelom
+                :possessor (s3a3 / and
+                    :op1 (s3z1 / září
+                        :refer-number singular)
+                    :op2 (s3r1 / říjen
+                        :refer-number singular))
+                :refer-number singular)
+            :aspect activity)
+        :op2 (s3v1 / vyjít-015
+            :ARG0 s3a2
+            :clausal-marker (s3j1 / ještě)
+            :temporal (s3k1 / konec
+                :possessor (s3r2 / rok
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance))
+
+# alignment:
+s3a1: 10-10
+s3n1: 2-4
+s3a2: 1-1
+s3e1: 0-0
+s3p1: 5-6
+s3a3: 8-8
+s3z1: 7-7
+s3r1: 9-9
+s3v1: 11-13
+s3j1: 14-14
+s3k1: 15-16
+s3r2: 17-17
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3a2 :same-entity s2d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2  3  4      5     6     7     8       9  10  11       12    13   14       15 16      17     18 19      20        21
+Words: Reedice se na podzim dočká první deska Marsyas ,  kde Kalandra dříve hrál společně s  Oskarem Petrem a  Zuzanou Michnovou .
+
+# sentence level graph:
+(s4d1 / dočkat-se-002
+        :ARG1 (s4r1 / reedice
+            :refer-number singular)
+        :temporal (s4p1 / podzim
+            :refer-number singular)
+        :ARG0 (s4d2 / deska
+            :mod (s4p2 / první
+                :refer-number singular)
+            :ARG0 (s4m1 / Marsyas
+                :place-of (s4h1 / hrát-004
+                    :ARG0 (s4k1 / Kalandra
+                        :refer-number singular)
+                    :ARG1 (s4e1 / entity)
+                    :temporal (s4b1 / brzy)
+                    :companion (s4a1 / and
+                        :op1 (s4p3 / Petr
+                            :mod (s4o1 / Oskar
+                                :refer-number singular)
+                            :refer-number singular)
+                        :op2 (s4m2 / Michnová
+                            :mod (s4z1 / Zuzana
+                                :refer-number singular)
+                            :refer-number singular))
+                    :refer-number singular
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s4d1: 2-2,5-5
+s4r1: 1-1
+s4p1: 3-4
+s4d2: 7-7
+s4p2: 6-6
+s4m1: 8-8,10-10
+s4h1: 13-13
+s4k1: 11-11
+s4e1: 0-0
+s4b1: 12-12
+s4a1: 18-18
+s4p3: 14-15,17-17
+s4o1: 16-16
+s4m2: 14-15,20-20
+s4z1: 19-19
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4k1 :same-entity s2k1)))
+
+

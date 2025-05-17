@@ -1,0 +1,244 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2      3  4     5  6
+Words: Šest branek na cestě do Evropy
+
+# sentence level graph:
+(s1b1 / branka
+        :mod (s1s1 / šest
+            :refer-number singular)
+        :place (s1c1 / cesta
+            :goal (s1e1 / Evropa
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural)
+
+# alignment:
+s1b1: 2-2
+s1s1: 1-1
+s1c1: 3-4
+s1e1: 5-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2 3  4 5  6 7
+Words: Ostrava ( šv , sn ) -
+
+# sentence level graph:
+(s2o1 / Ostrava
+        :parenthesis (s2a1 / and
+            :op1 (s2s1 / šv)
+            :op2 (s2s2 / sn))
+        :refer-number singular)
+
+# alignment:
+s2o1: 1-1
+s2a1: 4-4
+s2s1: 3-3
+s2s2: 5-5
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2         3            4        5  6    7      8             9      10 11     12 13          14     15   16    17 18 19 20 21 22 23 24 25
+Words: Česká fotbalová reprezentace porazila ve svém prvním kvalifikačním utkání o  postup na mistrovství Evropy 1996 Maltu 6  :  1  (  3  :  0  )  .
+
+# sentence level graph:
+(s3p1 / porazit-001
+        :ARG0 (s3r1 / reprezentace
+            :mod (s3f1 / fotbalový
+                :refer-number singular)
+            :mod (s3c1 / český
+                :refer-number singular)
+            :refer-number singular)
+        :place (s3u1 / utkání
+            :ARG2 (s3e1 / entity)
+            :ARG0 s3r1
+            :mod (s3k1 / kvalifikační
+                :refer-number singular)
+            :ARG1 (s3p2 / postup
+                :goal (s3m1 / mistrovství
+                    :possessor (s3e2 / Evropa
+                        :refer-number singular)
+                    :mod (s3x2 / 1996)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3p3 / první
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3m2 / malta
+            :refer-number singular)
+        :extent (s3i1 / identity-91
+            :ARG1 (s3m3 / math
+                :op1 (s3x3 / 6
+                    :refer-number plural)
+                :op2 (s3x4 / 1))
+            :ARG2 (s3m4 / math
+                :op1 (s3x5 / 3)
+                :op2 (s3x6 / 0)))
+        :aspect performance)
+
+# alignment:
+s3p1: 4-4
+s3r1: 3-3,6-6
+s3f1: 2-2
+s3c1: 1-1
+s3u1: 5-5,9-9
+s3e1: 0-0
+s3k1: 8-8
+s3p2: 10-11
+s3m1: 12-13
+s3e2: 14-14
+s3x2: 15-15
+s3p3: 7-7
+s3m2: 16-16
+s3i1: 20-20
+s3m3: 18-18
+s3x3: 17-17
+s3x4: 19-19
+s3m4: 22-22
+s3x5: 21-21
+s3x6: 23-23
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e2 :same-entity s1e1)
+            (s3x3 :same-entity s1b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1   2      3      4     5        6     7     8
+Words: Tři branky našeho celku vstřelil Horst Siegl .
+
+# sentence level graph:
+(s4v1 / vstřelit-001
+        :ARG1 (s4b1 / branka
+            :possessor (s4c1 / celek
+                :possessor (s4e1 / entity
+                    :refer-number plural
+                    :refer-person 1st)
+                :refer-number singular)
+            :mod (s4t1 / tři
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s4s1 / Siegl
+            :mod (s4h1 / Horst
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4v1: 5-5
+s4b1: 2-2
+s4c1: 4-4
+s4e1: 3-3
+s4t1: 1-1
+s4s1: 7-7
+s4h1: 6-6
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4c1 :same-entity s3r1)
+            (s4e1 :same-entity s3c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2        3       4  5       6   7     8  9     10      11 12           13     14     15   16     17
+Words: Penaltu proměnil Šmejkal ,  trestný kop Kubík a  skóre uzavřel v  předposlední minutě pomocí tyče Berger .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5p1 / proměnit-002
+            :ARG1 (s5p2 / penalta
+                :refer-number singular)
+            :effect (s5e1 / entity)
+            :ARG0 (s5s1 / Šmejkal
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s5p3 / proměnit-002
+            :ARG1 (s5k1 / kop
+                :mod (s5t1 / trestný
+                    :refer-number singular)
+                :refer-number singular)
+            :effect (s5e2 / entity)
+            :ARG0 (s5k2 / Kubík
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op3 (s5u1 / uzavřít-006
+            :ARG1 (s5s2 / skóre
+                :refer-number singular)
+            :temporal (s5m1 / minuta
+                :mod (s5p4 / předposlední
+                    :refer-number singular)
+                :refer-number singular)
+            :instrument (s5t2 / tyč
+                :refer-number singular)
+            :ARG0 (s5b1 / Berger
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s5a1: 8-8
+s5p1: 2-2
+s5p2: 1-1
+s5e1: 0-0
+s5s1: 3-3
+s5p3: 0-0
+s5k1: 6-6
+s5t1: 5-5
+s5e2: 0-0
+s5k2: 7-7
+s5u1: 10-10
+s5s2: 9-9
+s5m1: 11-11,13-13
+s5p4: 12-12
+s5t2: 14-15
+s5b1: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s2 :same-entity s3m3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2  3      4
+Words: Více na straně 14
+
+# sentence level graph:
+(s6e1 / event
+        :ARG0 (s6h1 / hodně)
+        :place (s6s1 / strana
+            :mod (s6x1 / 14)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s6e1: 0-0
+s6h1: 1-1
+s6s1: 2-3
+s6x1: 4-4
+
+# document level annotation:
+(s6s0 / sentence)
+
+

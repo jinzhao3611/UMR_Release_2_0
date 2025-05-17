@@ -1,0 +1,686 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2      3        4 5
+Words: Benda napsal učebnici o vládnutí
+
+# sentence level graph:
+(s1n1 / napsat-006
+        :ARG0 (s1b1 / Benda
+            :refer-number singular)
+        :ARG1 (s1u1 / učebnice
+            :ARG1 (s1v1 / vládnutí
+                :ARG0 (s1e1 / entity)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s1n1: 2-2
+s1b1: 1-1
+s1u1: 3-3
+s1v1: 4-5
+s1e1: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( kva ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2k1 / kva)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2k1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2  3  4        5  6  7       8                      9       10 11     12  13   14         15 16        17   18
+Words: "  Co je vládnutí "  se jmenuje pětačtyřicetistránková brožura ,  určená pro žáky základních a  středních škol .
+
+# sentence level graph:
+(s3j1 / jmenovat-se-001
+        :ARG1 (s3b1 / být-007
+            :ARG1 (s3c1 / co
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG0 (s3v1 / vládnutí
+                :ARG0 (s3e1 / entity)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG0 (s3b2 / brožura
+            :mod (s3p1 / pětačtyřicetistránkový
+                :refer-number singular)
+            :mod (s3u1 / určený
+                :affectee (s3z1 / žák
+                    :possessor (s3a1 / and
+                        :op1 (s3s1 / škola
+                            :mod (s3z2 / základní
+                                :refer-number plural)
+                            :refer-number plural)
+                        :op2 (s3s2 / škola
+                            :mod (s3s3 / střední
+                                :refer-number plural)
+                            :refer-number plural))
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect process)
+
+# alignment:
+s3j1: 6-7
+s3b1: 3-3
+s3c1: 2-2
+s3v1: 4-4
+s3e1: 0-0
+s3b2: 9-9
+s3p1: 8-8
+s3u1: 11-11
+s3z1: 12-13
+s3a1: 15-15
+s3s1: 0-0
+s3z2: 14-14
+s3s2: 17-17
+s3s3: 16-16
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3b2 :same-entity s1u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2  3        4          5     6     7  8   9  10
+Words: Autorem je poslanec parlamentu Marek Benda (  KDS )  .
+
+# sentence level graph:
+(s4b1 / být-007
+        :ARG1 (s4a1 / autor
+            :refer-number singular)
+        :ARG0 (s4b2 / Benda
+            :mod (s4m1 / Marek
+                :refer-number singular)
+            :mod (s4p1 / poslanec
+                :possessor (s4p2 / parlament
+                    :refer-number singular)
+                :refer-number singular)
+            :parenthesis (s4k1 / KDS)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4b1: 2-2
+s4a1: 1-1
+s4b2: 6-6
+s4m1: 5-5
+s4p1: 3-3
+s4p2: 4-4
+s4k1: 8-8
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4b2 :same-entity s1b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2    3  4    5    6    7      8  9         10      11 12          13        14 15  16      17        18 19    20           21        22
+Words: "  Loni na jaře jsem dost jezdil po středních školách a  vysvětloval studentům ,  jak pracuje parlament a  další demokratické instituce .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5j1 / jezdit-003
+            :temporal (s5v1 / vloni)
+            :temporal (s5j2 / jaro
+                :refer-number singular)
+            :ARG0 (s5e1 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :extent (s5d1 / dost)
+            :path (s5s1 / škola
+                :mod (s5s2 / střední
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :aspect activity)
+        :op2 (s5v2 / vysvětlovat-001
+            :temporal s5v1
+            :temporal s5j2
+            :ARG0 s5e1
+            :ARG2 (s5s3 / student
+                :refer-number plural)
+            :ARG1 (s5p1 / pracovat-005
+                :manner (s5j3 / jak)
+                :ARG0 (s5a2 / and
+                    :op1 (s5p2 / parlament
+                        :refer-number singular)
+                    :op2 (s5i1 / instituce
+                        :mod (s5d2 / demokratický
+                            :refer-number plural)
+                        :mod (s5d3 / další
+                            :refer-number plural)
+                        :refer-number plural))
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular
+            :aspect activity))
+
+# alignment:
+s5a1: 11-11
+s5j1: 5-5,7-7
+s5d1: 6-6
+s5s1: 8-8,10-10
+s5s2: 9-9
+s5v1: 2-2
+s5j2: 3-4
+s5e1: 0-0
+s5v2: 5-5,12-12
+s5s3: 13-13
+s5p1: 16-16
+s5j3: 15-15
+s5a2: 18-18
+s5p2: 17-17
+s5i1: 21-21
+s5d2: 20-20
+s5d3: 19-19
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4b2)
+            (s5p2 :same-entity s4p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1   2    3         4  5  6     7    8    9    10      11       12
+Words: Byl jsem překvapen ,  že mladé lidi tyto věci opravdu zajímají .
+
+# sentence level graph:
+(s6p1 / překvapit-001
+        :ARG1 (s6e1 / entity
+            :refer-number singular
+            :refer-person 1st)
+        :ARG0 (s6z1 / zajímat-002
+            :clausal-marker (s6o1 / opravdu)
+            :ARG0 (s6c1 / člověk
+                :mod (s6m1 / mladý
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s6v1 / věc
+                :mod (s6t1 / tento
+                    :refer-number plural)
+                :refer-number plural
+                :refer-person 3rd)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6p1: 1-3
+s6e1: 0-0
+s6z1: 5-5,11-11
+s6o1: 10-10
+s6c1: 7-7
+s6m1: 6-6
+s6v1: 9-9
+s6t1: 8-8
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5e1)
+            (s6c1 :same-entity s5s3)
+            (s6v1 :same-event s5p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1      2    3      4  5  6      7        8    9   10   11 12         13 14 15         16               17 18 19    20
+Words: Přitom bylo zřejmé ,  že jejich znalosti jsou jen kusé a  neutříděné ,  "  vysvětluje šestadvacetiletý M  .  Benda .
+
+# sentence level graph:
+(s7v1 / vysvětlovat-001
+        :ARG0 (s7b1 / Benda
+            :mod (s7m1 / M)
+            :mod (s7s1 / šestadvacetiletý
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 1st)
+        :ARG2 (s7e1 / entity)
+        :ARG1 (s7b2 / být-007
+            :clausal-marker (s7p1 / přitom)
+            :ARG1 (s7z1 / zřejmý
+                :refer-number singular)
+            :ARG0 (s7b3 / být-007
+                :ARG0 (s7z2 / znalost
+                    :possessor (s7e2 / entity
+                        :refer-number plural
+                        :refer-person 3rd)
+                    :refer-number plural)
+                :clausal-marker (s7j1 / jen)
+                :ARG1 (s7a1 / and
+                    :op1 (s7k1 / kusý
+                        :refer-number plural)
+                    :op2 (s7u1 / utříděný
+                        :refer-number plural
+                        :polarity -))
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7v1: 15-15
+s7b1: 19-19
+s7m1: 17-17
+s7s1: 16-16
+s7e1: 0-0
+s7b2: 2-2
+s7p1: 1-1
+s7z1: 3-3
+s7b3: 5-5,8-8
+s7z2: 7-7
+s7e2: 6-6
+s7j1: 9-9
+s7a1: 11-11
+s7k1: 10-10
+s7u1: 12-12
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7b1 :same-entity s6e1)
+            (s7e2 :same-entity s6c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2        3           4  5         6       7  8  9        10   11        12 13        14
+Words: Původně studoval matematicko -  fyzikální fakultu ,  v  současné době přesedlal na filozofii .
+
+# sentence level graph:
+(s8a1 / and
+        :op1 (s8s1 / studovat-001
+            :ARG0 (s8e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :temporal (s8p1 / původně)
+            :ARG1 (s8f1 / fakulta
+                :mod (s8a2 / and
+                    :op1 (s8m1 / matematický)
+                    :op2 (s8f2 / fyzikální
+                        :refer-number singular))
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity)
+        :op2 (s8p2 / přesedlat-001
+            :ARG0 s8e1
+            :temporal (s8d1 / doba
+                :mod (s8s2 / současný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s8f3 / filozofie
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s8a1: 7-7
+s8s1: 2-2
+s8p1: 1-1
+s8f1: 6-6
+s8a2: 4-4
+s8m1: 3-3
+s8f2: 5-5
+s8e1: 0-0
+s8p2: 11-11
+s8d1: 8-8,10-10
+s8s2: 9-9
+s8f3: 12-13
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8e1 :same-entity s7b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1   2    3  4  5       6      7       8        9        10  11     12     13     14      15       16   17      18
+Words: Jak říká ,  s  nápadem napsat jakousi základní příručku pro mládež přišel bývalý ministr školství Petr Vopěnka .
+
+# sentence level graph:
+(s9p1 / přijít-018
+        :parenthesis (s9r1 / říkat-007
+            :ARG0 (s9e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG2 (s9e2 / entity)
+            :effect s9p1
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :predicative-noun (s9n1 / nápad
+            :ARG0 s9v1
+            :ARG1 (s9n2 / napsat-006
+                :ARG0 (s9e3 / entity)
+                :ARG1 (s9p2 / příručka
+                    :mod (s9j1 / jakýsi
+                        :refer-number singular)
+                    :mod (s9z1 / základní
+                        :refer-number singular)
+                    :affectee (s9m1 / mládež
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :ARG0 (s9v1 / Vopěnka
+            :mod (s9p3 / Petr
+                :refer-number singular)
+            :mod (s9m2 / ministr
+                :possessor (s9s1 / školství
+                    :refer-number singular)
+                :mod (s9b1 / bývalý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s9p1: 12-12
+s9r1: 1-2
+s9e1: 0-0
+s9e2: 0-0
+s9n1: 4-5
+s9n2: 6-6
+s9e3: 0-0
+s9p2: 9-9
+s9j1: 7-7
+s9z1: 8-8
+s9m1: 10-11
+s9v1: 17-17
+s9p3: 16-16
+s9m2: 14-14
+s9s1: 15-15
+s9b1: 13-13
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9e1 :same-entity s8e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1  2      3    4  5  6           7    8   9   10 11        12 13     14   15 16         17    18    19        20 21           22 23
+Words: "  Zkusil jsem to ,  konzultoval jsem při tom s  odborníky a  snažil jsem se vyjadřovat pokud možno jednoduše a  srozumitelně .  "
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10z1 / zkusit-002
+            :ARG0 (s10e1 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :ARG1 (s10t1 / ten
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s10k1 / konzultovat-001
+            :ARG0 s10e1
+            :temporal (s10t2 / ten
+                :refer-number singular)
+            :ARG2 (s10o1 / odborník
+                :refer-number plural)
+            :refer-number singular
+            :aspect process)
+        :op3 (s10s1 / snažit-se-001
+            :ARG0 s10e1
+            :ARG1 (s10v1 / vyjadřovat-se-001
+                :ARG0 s10e1
+                :ARG1 (s10e2 / entity)
+                :manner (s10a2 / and
+                    :op1 (s10j1 / jednoduše)
+                    :op2 (s10s2 / srozumitelně))
+                :condition (s10e3 / event
+                    :ARG1 (s10m1 / možný
+                        :refer-number singular)
+                    :aspect state)
+                :aspect activity)
+            :refer-number singular
+            :aspect activity))
+
+# alignment:
+s10a1: 12-12
+s10z1: 2-3
+s10t1: 4-4
+s10e1: 0-0
+s10k1: 6-7
+s10t2: 8-9
+s10o1: 10-11
+s10s1: 13-15
+s10v1: 15-16
+s10e2: 0-0
+s10a2: 20-20
+s10j1: 19-19
+s10s2: 21-21
+s10e3: 0-0
+s10m1: 18-18
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10t1 :same-event s9n2)
+            (s10e1 :same-entity s9e1)
+            (s10t2 :same-entity s10t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1       2      3             4    5
+Words: Brožuru vydalo vydavatelství Práh .
+
+# sentence level graph:
+(s11v1 / vydat-006
+        :ARG1 (s11b1 / brožura
+            :refer-number singular)
+        :ARG0 (s11v2 / vydavatelství
+            :name (s11p1 / práh
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s11v1: 2-2
+s11b1: 1-1
+s11v2: 3-3
+s11p1: 4-4
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11b1 :same-entity s3b2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1  2        3    4  5  6    7         8           9       10           11       12 13 14   15    16       17 18     19           20      21
+Words: V  současné době má už také takzvanou schvalovací doložku ministerstva školství ,  a  bude tudíž zařazena na seznam doporučených učebnic .
+
+# sentence level graph:
+(s12h1 / have-result-91
+        :ARG1 (s12m1 / mít-002
+            :temporal (s12d1 / doba
+                :mod (s12s1 / současný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s12e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :clausal-marker (s12u1 / už)
+            :clausal-marker (s12t1 / také)
+            :ARG1 (s12d2 / doložka
+                :clausal-marker (s12t2 / takzvaný
+                    :refer-number singular)
+                :possessor (s12m2 / ministerstvo
+                    :possessor (s12s2 / školství
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s12s3 / schvalovací
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state)
+        :clausal-marker (s12t3 / tudíž)
+        :ARG2 (s12z1 / zařadit-001
+            :ARG0 (s12e2 / entity)
+            :ARG1 s12e1
+            :goal (s12s4 / seznam
+                :possessor (s12u2 / učebnice
+                    :mod (s12d3 / doporučený
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :aspect performance))
+
+# alignment:
+s12h1: 13-13
+s12m1: 4-4
+s12d1: 1-1,3-3
+s12s1: 2-2
+s12e1: 0-0
+s12u1: 5-5
+s12t1: 6-6
+s12d2: 9-9
+s12t2: 7-7
+s12m2: 10-10
+s12s2: 11-11
+s12s3: 8-8
+s12t3: 15-15
+s12z1: 14-14,16-16
+s12e2: 0-0
+s12s4: 17-18
+s12u2: 20-20
+s12d3: 19-19
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12e1 :same-entity s11b1)
+            (s12s2 :same-entity s9s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1     2         3  4            5        6  7    8       9  10      11     12    13    14  15        16    17 18  19        20   21       22 23        24        25    26   27    28 29        30    31
+Words: Podle informace z  ministerstva existuje na trhu učebnic už poměrně široká škála textů pro občanskou nauku ,  tak konkrétní text zaměřený na praktické fungování státu však zatím k  dispozici nebyl .
+
+# sentence level graph:
+(s13b1 / but-91
+        :ARG1 (s13e1 / existovat-001
+            :regard (s13i1 / informace
+                :start (s13m1 / ministerstvo
+                    :refer-number singular)
+                :refer-number singular)
+            :place (s13t1 / trh
+                :possessor (s13u1 / učebnice
+                    :refer-number plural)
+                :refer-number singular)
+            :clausal-marker (s13u2 / už)
+            :ARG0 (s13s1 / škála
+                :possessor (s13t2 / text
+                    :affectee (s13n1 / nauka
+                        :mod (s13o1 / občanský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :mod (s13s2 / široký
+                    :extent (s13p1 / poměrně)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG2 (s13b2 / být-041
+            :ARG0 (s13t3 / text
+                :mod (s13k1 / konkrétní
+                    :manner (s13t4 / tak)
+                    :refer-number singular)
+                :mod (s13z1 / zaměřený
+                    :ARG1 (s13f1 / fungování
+                        :ARG0 (s13s3 / stát
+                            :refer-number singular)
+                        :manner (s13p2 / praktický
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s13z2 / zatím)
+            :part-of-phraseme (s13k2 / k_dispozici
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity
+            :polarity -))
+
+# alignment:
+s13b1: 26-26
+s13e1: 5-5
+s13i1: 1-2
+s13m1: 3-4
+s13t1: 6-7
+s13u1: 8-8
+s13u2: 9-9
+s13s1: 12-12
+s13t2: 13-13
+s13n1: 14-14,16-16
+s13o1: 15-15
+s13s2: 11-11
+s13p1: 10-10
+s13b2: 30-30
+s13t3: 20-20
+s13k1: 19-19
+s13t4: 18-18
+s13z1: 21-21
+s13f1: 22-22,24-24
+s13s3: 25-25
+s13p2: 23-23
+s13z2: 27-27
+s13k2: 28-29
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13m1 :same-entity s12m2)))
+
+

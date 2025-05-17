@@ -1,0 +1,475 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2        3      4       5 6        7       8 9
+Words: Zástupci Svobodné Evropy jednali s pražskou radnicí o bytech
+
+# sentence level graph:
+(s1j1 / jednat-001
+        :ARG0 (s1z1 / zástupce
+            :ARG1 (s1e1 / Evropa
+                :mod (s1s1 / Svobodný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :ARG2 (s1r1 / radnice
+            :mod (s1p1 / pražský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1b1 / byt
+            :refer-number plural)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s1j1: 4-4
+s1z1: 1-1
+s1e1: 3-3
+s1s1: 2-2
+s1r1: 5-5,7-7
+s1p1: 6-6
+s1b1: 8-9
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( kva ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2k1 / kva)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2k1: 3-3
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p1 :same-entity s1p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2        3      4  5        6  7     8  9    10      11 12     13       14    15    16        17     18        19  20  21   22 23    24    25    26    27     28
+Words: Přesídlení Svobodné Evropy z  Mnichova do Prahy by mělo přivést do našeho hlavního města podle některých odhadů přibližně dvě stě lidí ,  kteří budou muset někde bydlet .
+
+# sentence level graph:
+(s3p1 / přivést-003
+        :ARG0 (s3p2 / přesídlení
+            :ARG0 (s3e1 / Evropa
+                :mod (s3s1 / svobodný
+                    :refer-number singular)
+                :refer-number singular)
+            :start (s3m1 / Mnichov
+                :refer-number singular)
+            :goal (s3p3 / Praha
+                :refer-number singular)
+            :refer-number singular)
+        :goal (s3m2 / město
+            :mod (s3h1 / hlavní
+                :refer-number singular)
+            :possessor (s3e2 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :refer-number singular)
+        :regard (s3o1 / odhad
+            :mod (s3n1 / některý
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s3s2 / sto
+            :mod (s3c1 / člověk
+                :ARG0-of (s3b1 / bydlet-001
+                    :place (s3n2 / někde)
+                    :aspect activity)
+                :refer-number plural)
+            :mod (s3d1 / dva
+                :refer-number plural)
+            :extent (s3p4 / přibližně)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s3p1: 8-10
+s3p2: 1-1
+s3e1: 3-3
+s3s1: 2-2
+s3m1: 4-5
+s3p3: 6-7
+s3m2: 11-11,14-14
+s3h1: 13-13
+s3e2: 12-12
+s3o1: 15-15,17-17
+s3n1: 16-16
+s3s2: 20-20
+s3c1: 21-21,23-23
+s3b1: 24-25,27-27
+s3n2: 26-26
+s3d1: 19-19
+s3p4: 18-18
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s1e1)
+            (s3p3 :same-entity s2p1)
+            (s3m2 :same-entity s3p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2    3  4       5        6         7         8           9  10      11       12        13   14 15  16 17       18    19       20     21       22 23   24   25 26      27
+Words: Proto jsme se zeptali náměstka pražského primátora odpovědného za bytovou politiku Vladimíra Říhy ,  zda se zástupci Radia Svobodná Evropa obrátili v  této věci na radnici .
+
+# sentence level graph:
+(s4z1 / zeptat-se-001
+        :clausal-marker (s4p1 / proto)
+        :ARG0 (s4e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :ARG2 (s4r1 / Říha
+            :mod (s4v1 / Vladimír
+                :refer-number singular)
+            :mod (s4n1 / náměstek
+                :possessor (s4p2 / primátor
+                    :mod (s4p3 / pražský
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s4o1 / odpovědný
+                    :ARG1 (s4p4 / politika
+                        :mod (s4b1 / bytový
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s4o2 / obrátit-se-003
+            :ARG0 (s4z2 / zástupce
+                :ARG1 (s4r2 / rádio
+                    :name (s4e2 / Evropa
+                        :mod (s4s1 / svobodný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :regard (s4v2 / věc
+                :mod (s4t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s4r3 / radnice
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s4z1: 2-4
+s4p1: 1-1
+s4e1: 0-0
+s4r1: 13-13
+s4v1: 12-12
+s4n1: 5-5
+s4p2: 7-7
+s4p3: 6-6
+s4o1: 8-8
+s4p4: 9-9,11-11
+s4b1: 10-10
+s4o2: 15-16,21-21
+s4z2: 17-17
+s4r2: 18-18
+s4e2: 20-20
+s4s1: 19-19
+s4v2: 22-22,24-24
+s4t1: 23-23
+s4r3: 25-26
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4p3 :same-entity s3m2)
+            (s4z2 :same-entity s1z1)
+            (s4r2 :same-entity s3e1)
+            (s4v2 :same-event s3p1)
+            (s4r3 :same-entity s1r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1 2    3         4         5 6  7        8        9
+Words: Z jeho vyjádření vyplynulo , že kontakty navázali .
+
+# sentence level graph:
+(s5v1 / vyplynout-001
+        :ARG1 (s5v2 / vyjádření
+            :ARG1 (s5e1 / entity)
+            :ARG0 (s5e2 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :ARG0 (s5n1 / navázat-003
+            :predicative-noun (s5k1 / kontakt
+                :ARG0 s5e3
+                :ARG1 (s5e4 / entity)
+                :refer-number plural)
+            :ARG0 (s5e3 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :refer-number plural
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5v1: 4-4
+s5v2: 1-1,3-3
+s5e1: 0-0
+s5e2: 2-2
+s5n1: 6-6,8-8
+s5k1: 7-7
+s5e4: 0-0
+s5e3: 0-0
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e2 :same-entity s4r1)
+            (s5e3 :same-entity s4z2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2     3          4            5       6       7    8  9     10 11
+Words: Město zatím propůjčilo zaměstnancům stanice několik bytů v  Praze 3  .
+
+# sentence level graph:
+(s6p1 / propůjčit-001
+        :ARG0 (s6m1 / město
+            :refer-number singular)
+        :temporal (s6z1 / zatím)
+        :ARG2 (s6z2 / zaměstnanec
+            :possessor (s6s1 / stanice
+                :refer-number singular)
+            :refer-number plural)
+        :ARG1 (s6b1 / byt
+            :mod (s6n1 / několik)
+            :place (s6p2 / Praha
+                :mod (s6x1 / 3)
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6p1: 3-3
+s6m1: 1-1
+s6z1: 2-2
+s6z2: 4-4
+s6s1: 5-5
+s6b1: 7-7
+s6n1: 6-6
+s6p2: 8-9
+s6x1: 10-10
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s1 :same-entity s4r2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2      3  4     5      6  7         8        9    10 11 12 13 14   15       16 17      18    19   20
+Words: Na otázku ,  kolik přesně ,  odpověděl náměstek Říha ,  že by se daly spočítat na prstech jedné ruky .
+
+# sentence level graph:
+(s7o1 / odpovědět-003
+        :ARG1 (s7o2 / otázka
+            :ARG1 (s7p1 / propůjčit-001
+                :ARG1 (s7e1 / entity
+                    :mod (s7k1 / kolik
+                        :extent (s7p2 / přesně))
+                    :refer-number plural
+                    :refer-person 3rd)
+                :ARG0 (s7e2 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG2 (s7e3 / entity
+                    :refer-number plural
+                    :refer-person 3rd)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :ARG0 (s7r1 / Říha
+            :mod (s7n1 / náměstek
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s7e4 / entity)
+        :effect (s7s1 / spočítat-001
+            :ARG0 (s7e5 / entity)
+            :ARG1 s7e1
+            :place (s7p3 / prst
+                :possessor (s7r2 / ruka
+                    :mod (s7j1 / jeden
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7o1: 7-7
+s7o2: 1-2
+s7p1: 0-0
+s7e1: 0-0
+s7k1: 4-4
+s7p2: 5-5
+s7e2: 0-0
+s7e3: 0-0
+s7r1: 9-9
+s7n1: 8-8
+s7e4: 0-0
+s7s1: 11-12,14-15
+s7e5: 0-0
+s7p3: 16-17
+s7r2: 19-19
+s7j1: 18-18
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6b1)
+            (s7e2 :same-entity s6m1)
+            (s7e3 :same-entity s6z2)
+            (s7r1 :same-entity s5e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2           3       4  5   6    7        8  9   10 11 12 13      14          15        16     17    18     19         20 21       22       23            24          25      26
+Words: Během předběžného jednání se prý také hovořilo o  tom ,  že by stanice financovaná americkou vládou mohla vložit prostředky do dostavby několika rozestavěných sídlištních objektů .
+
+# sentence level graph:
+(s8h1 / hovořit-001
+        :temporal (s8j1 / jednání
+            :ARG0 (s8e1 / entity)
+            :ARG1 (s8e2 / entity)
+            :ARG2 (s8e3 / entity)
+            :manner (s8p1 / předběžný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s8e4 / entity)
+        :clausal-marker (s8t1 / také)
+        :clausal-marker (s8p2 / prý)
+        :ARG1 (s8v1 / vložit-001
+            :ARG0 (s8s1 / stanice
+                :mod (s8f1 / financovaný
+                    :ARG0 (s8v2 / vláda
+                        :mod (s8a1 / americký
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s8p3 / prostředek
+                :refer-number plural)
+            :goal (s8d1 / dostavba
+                :ARG1 (s8o1 / objekt
+                    :mod (s8s2 / sídlištní
+                        :refer-number plural)
+                    :mod (s8r1 / rozestavěný
+                        :refer-number plural)
+                    :mod (s8n1 / několik)
+                    :refer-number plural)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s8h1: 4-4,7-7
+s8j1: 1-1,3-3
+s8e1: 0-0
+s8e2: 0-0
+s8e3: 0-0
+s8p1: 2-2
+s8e4: 0-0
+s8t1: 6-6
+s8p2: 5-5
+s8v1: 8-9,11-12,17-18
+s8s1: 13-13
+s8f1: 14-14
+s8v2: 16-16
+s8a1: 15-15
+s8p3: 19-19
+s8d1: 20-21
+s8o1: 25-25
+s8s2: 24-24
+s8r1: 23-23
+s8n1: 22-22
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8j1 :same-event s1j1)
+            (s8s1 :same-entity s6s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1    2          3       4        5  6     7  8  9     10     11 12 13      14        15         16              17         18        19
+Words: Část pracovníků českého vysílání ,  kteří už v  Praze působí ,  si sehnala ubytování samostatně prostřednictvím realitních kanceláří .
+
+# sentence level graph:
+(s9s1 / sehnat-001
+        :ARG0 (s9c1 / část
+            :mod (s9p1 / pracovník
+                :possessor (s9v1 / vysílání
+                    :mod (s9c2 / český
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0-of (s9p2 / působit-004
+                    :temporal (s9u1 / už)
+                    :place (s9p3 / Praha
+                        :refer-number singular)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG1 (s9u2 / ubytování
+            :refer-number singular)
+        :affectee s9c1
+        :manner (s9s2 / samostatně)
+        :instrument (s9k1 / kancelář
+            :mod (s9r1 / realitní
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s9s1: 13-13
+s9c1: 1-1,12-12
+s9p1: 2-2,6-6
+s9v1: 4-4
+s9c2: 3-3
+s9p2: 10-10
+s9u1: 7-7
+s9p3: 8-9
+s9u2: 14-14
+s9s2: 15-15
+s9k1: 16-16,18-18
+s9r1: 17-17
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p3 :same-entity s4p3)))
+
+

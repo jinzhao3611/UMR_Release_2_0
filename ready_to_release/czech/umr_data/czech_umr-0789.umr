@@ -1,0 +1,204 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1   2 3   4       5       6
+Words: KDU - ČSL získala dalšího poslance
+
+# sentence level graph:
+(s1z1 / získat-004
+        :ARG0 (s1a1 / and
+            :op1 (s1k1 / KDU)
+            :op2 (s1c1 / ČSL))
+        :ARG1 (s1p1 / poslanec
+            :mod (s1d1 / další
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s1z1: 4-4
+s1a1: 2-2
+s1k1: 1-1
+s1c1: 3-3
+s1p1: 6-6
+s1d1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5  6 7
+Words: Praha ( haš , če ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2a1 / and
+            :op1 (s2h1 / haš)
+            :op2 (s2c1 / če))
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2a1: 4-4
+s2h1: 3-3
+s2c1: 5-5
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2      3            4     5   6  7   8  9     10   11  12    13
+Words: Šestnáctým členem poslaneckého klubu KDU -  ČSL se včera stal Jan Vraný .
+
+# sentence level graph:
+(s3s1 / stát-se-001
+        :ARG1 (s3c1 / člen
+            :possessor (s3k1 / klub
+                :possessor (s3a1 / and
+                    :op1 (s3k2 / KDU)
+                    :op2 (s3c2 / ČSL))
+                :mod (s3p1 / poslanecký
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3s2 / šestnáctý
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3v1 / včera)
+        :ARG0 (s3v2 / Vraný
+            :mod (s3j1 / Jan
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3s1: 8-8,10-10
+s3c1: 2-2
+s3k1: 4-4
+s3a1: 6-6
+s3k2: 5-5
+s3c2: 7-7
+s3p1: 3-3
+s3s2: 1-1
+s3v1: 9-9
+s3v2: 12-12
+s3j1: 11-11
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3a1 :same-entity s1a1)
+            (s3v2 :same-entity s1p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2    3          4      5          6    7     8    9  10  11 12      13        14       15   16
+Words: Jako člen Zemědělské strany kandidoval před dvěma lety do ČNR za Trnkovu Liberálně sociální unii .
+
+# sentence level graph:
+(s4k1 / kandidovat-002
+        :manner (s4c1 / člen
+            :mod-of s4e1
+            :possessor (s4s1 / strana
+                :mod (s4z1 / zemědělský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s4r1 / rok
+            :mod (s4d1 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :goal (s4c2 / ČNR)
+        :substitute (s4u1 / unie
+            :mod (s4s2 / sociální
+                :regard (s4l1 / liberálně)
+                :refer-number singular)
+            :possessor (s4t1 / Trnka
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s4k1: 5-5
+s4c1: 1-2
+s4s1: 4-4
+s4z1: 3-3
+s4e1: 0-0
+s4r1: 6-6,8-8
+s4d1: 7-7
+s4c2: 9-10
+s4u1: 11-11,15-15
+s4s2: 14-14
+s4l1: 13-13
+s4t1: 12-12
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2     3   4     5  6    7         8  9  10         11         12   13        14       15
+Words: Z  klubu LSU letos na jaře vystoupil a  v  parlamentu vystupoval jako nezávislý poslanec .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5v1 / vystoupit-004
+            :ARG0 (s5e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :start (s5k1 / klub
+                :possessor (s5l1 / LSU
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s5l2 / letos)
+            :temporal (s5j1 / jaro
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s5v2 / vystupovat-004
+            :ARG0 s5e1
+            :place (s5p1 / parlament
+                :refer-number singular)
+            :manner (s5p2 / poslanec
+                :mod-of s5e1
+                :mod (s5z1 / závislý
+                    :refer-number singular
+                    :polarity -)
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity))
+
+# alignment:
+s5a1: 8-8
+s5v1: 7-7
+s5k1: 1-2
+s5l1: 3-3
+s5l2: 4-4
+s5j1: 5-6
+s5e1: 0-0
+s5v2: 11-11
+s5p1: 9-10
+s5p2: 12-12,14-14
+s5z1: 13-13
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5l1 :same-entity s4u1)
+            (s5e1 :same-entity s4e1)
+            (s5p1 :same-entity s4c2)))
+
+

@@ -1,0 +1,400 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Vychází
+
+# sentence level graph:
+(s1v1 / vycházet-014
+        :ARG0 (s1e1 / entity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1v1: 1-1
+s1e1: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1             2      3  4  5  6     7  8      9  10 11  12   13 14 15
+Words: Českomoravský profit č  .  18 Zákon o  bytech :  A  teď hrrr na ně !
+
+# sentence level graph:
+(s2a1 / and
+        :op1 (s2p1 / profit
+            :mod (s2c1 / Českomoravský
+                :refer-number singular)
+            :mod (s2c2 / číslo
+                :mod (s2x1 / 18))
+            :refer-number singular)
+        :op2 (s2z1 / zákon
+            :ARG1 (s2b1 / byt
+                :refer-number plural)
+            :refer-number singular)
+        :op3 (s2h1 / hrrr-001
+            :clausal-marker (s2a2 / a)
+            :temporal (s2t1 / teď)
+            :goal s2b1
+            :aspect state))
+
+# alignment:
+s2a1: 9-9
+s2p1: 2-2
+s2c1: 1-1
+s2c2: 3-3
+s2x1: 5-5
+s2z1: 6-6
+s2b1: 7-8,13-14
+s2h1: 12-12
+s2a2: 10-10
+s2t1: 11-11
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2     3  4      5  6      7  8     9  10    11
+Words: Dlouhá cesta k  zákonu o  bytech je možná u  konce .
+
+# sentence level graph:
+(s3b1 / být-011
+        :ARG0 (s3c1 / cesta
+            :goal (s3z1 / zákon
+                :ARG0 (s3e1 / entity)
+                :ARG1 (s3b2 / byt
+                    :refer-number plural)
+                :refer-number singular)
+            :mod (s3d1 / dlouhý
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s3m1 / možná)
+        :place (s3k1 / konec
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3b1: 7-7
+s3c1: 2-2
+s3z1: 3-4
+s3e1: 0-0
+s3b2: 5-6
+s3d1: 1-1
+s3m1: 8-8
+s3k1: 9-10
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3z1 :same-entity s2z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2     3  4     5 6   7     8
+Words: Za úsměv se platí , ale kolik ?
+
+# sentence level graph:
+(s4b1 / but-91
+        :ARG1 (s4p1 / platit-001
+            :ARG0 (s4e1 / entity)
+            :cause (s4u1 / úsměv
+                :refer-number singular)
+            :ARG1 (s4e2 / entity)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG2 (s4p2 / platit-008
+            :ARG0 s4e1
+            :extent (s4k1 / kolik)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s4b1: 6-6
+s4p1: 3-4
+s4u1: 1-2
+s4e2: 0-0
+s4e1: 0-0
+s4p2: 0-0
+s4k1: 7-7
+
+# document level annotation:
+(s4s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2    3     4  5   6      7  8          9        10     11 12         13 14   15 16   17  18      19     20         21
+Words: Dosud není jasné ,  zda budeme do zubařských ordinací chodit s  peněženkou v  ruce ,  nebo nám postačí průkaz pojištěnce .
+
+# sentence level graph:
+(s5b1 / být-007
+        :temporal (s5d1 / dosud)
+        :ARG1 (s5j1 / jasný
+            :refer-number singular)
+        :ARG0 (s5o1 / or
+            :op1 (s5c1 / chodit-006
+                :goal (s5o2 / ordinace
+                    :mod (s5z1 / zubařský
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG0 (s5e1 / entity
+                    :refer-number plural
+                    :refer-person 1st)
+                :companion (s5p1 / peněženka
+                    :place (s5r1 / ruka
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect activity)
+            :op2 (s5p2 / postačit-001
+                :ARG1 s5e1
+                :ARG0 (s5p3 / průkaz
+                    :possessor (s5p4 / pojištěnec
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s5b1: 2-2
+s5d1: 1-1
+s5j1: 3-3
+s5o1: 16-16
+s5c1: 5-6,10-10
+s5o2: 7-7,9-9
+s5z1: 8-8
+s5e1: 17-17
+s5p1: 11-12
+s5r1: 13-14
+s5p2: 5-5,18-18
+s5p3: 19-19
+s5p4: 20-20
+
+# document level annotation:
+(s5s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2  3    4 5    6   7
+Words: Dáte si kávu , nebo čaj ?
+
+# sentence level graph:
+(s6d1 / dát-si-001
+        :ARG0 (s6e1 / entity
+            :refer-number plural
+            :refer-person 2nd)
+        :ARG1 (s6o1 / or
+            :op1 (s6k1 / káva
+                :refer-number singular)
+            :op2 (s6c1 / čaj
+                :refer-number singular))
+        :refer-number plural
+        :refer-person 2nd
+        :aspect performance)
+
+# alignment:
+s6d1: 1-2
+s6e1: 0-0
+s6o1: 5-5
+s6k1: 3-3
+s6c1: 6-6
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1      2  3   4        5        6
+Words: Profit za vás sondoval kávovary .
+
+# sentence level graph:
+(s7s1 / sondovat-001
+        :ARG0 (s7p1 / Profit
+            :refer-number singular)
+        :substitute (s7e1 / entity
+            :refer-number plural
+            :refer-person 2nd)
+        :ARG1 (s7k1 / kávovar
+            :refer-number plural)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s7s1: 4-4
+s7p1: 1-1
+s7e1: 2-3
+s7k1: 5-5
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2     3     4
+Words: Manažer hledá práci .
+
+# sentence level graph:
+(s8h1 / hledat-003
+        :ARG0 (s8m1 / manažer
+            :refer-number singular)
+        :ARG1 (s8p1 / práce
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s8h1: 2-2
+s8m1: 1-1
+s8p1: 3-3
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1    2       3       4    5       6        7       8  9        10 11   12         13  14
+Words: Nová rubrika Profitu dává možnost posoudit nabídku i  poptávku na trhu pracovních sil .
+
+# sentence level graph:
+(s9d1 / dávat-024
+        :ARG0 (s9r1 / rubrika
+            :possessor (s9p1 / Profit
+                :refer-number singular)
+            :mod (s9n1 / nový
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s9e1 / entity)
+        :predicative-noun (s9m1 / možnost
+            :ARG0 s9e1
+            :ARG1 (s9p2 / posoudit-001
+                :ARG0 s9e1
+                :ARG1 (s9a1 / and
+                    :op1 (s9n2 / nabídka
+                        :place (s9t1 / trh
+                            :possessor (s9s1 / síla
+                                :mod (s9p3 / pracovní
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :op2 (s9p4 / poptávka
+                        :place s9t1
+                        :refer-number singular))
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9d1: 4-4
+s9r1: 2-2
+s9p1: 3-3
+s9n1: 1-1
+s9e1: 0-0
+s9m1: 5-5
+s9p2: 6-6
+s9a1: 8-8
+s9n2: 7-7
+s9t1: 10-11
+s9s1: 13-13
+s9p3: 12-12
+s9p4: 9-9
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1       2       3 4      5       6
+Words: Krádeže ujídají z vašeho krajíce .
+
+# sentence level graph:
+(s10u1 / ujídat-001
+        :ARG0 (s10k1 / krádež
+            :refer-number plural)
+        :ARG1 (s10e1 / entity)
+        :start (s10k2 / krajíc
+            :possessor (s10e2 / entity
+                :refer-number plural
+                :refer-person 2nd)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s10u1: 2-2
+s10k1: 1-1
+s10e1: 0-0
+s10k2: 3-3,5-5
+s10e2: 4-4
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10e2 :same-entity s7e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1    2        3 4   5  6  7          8     9
+Words: Není prodejny , kde by se neztrácelo zboží .
+
+# sentence level graph:
+(s11b1 / být-011
+        :ARG0 (s11p1 / prodejna
+            :place-of (s11z1 / ztrácet-002
+                :ARG0 (s11e1 / entity)
+                :ARG1 (s11z2 / zboží
+                    :refer-number singular)
+                :refer-number singular
+                :aspect activity
+                :polarity -)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s11b1: 1-1
+s11p1: 2-2,4-4
+s11z1: 5-7
+s11e1: 0-0
+s11z2: 8-8
+
+# document level annotation:
+(s11s0 / sentence)
+
+

@@ -1,0 +1,149 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2   3    4  5         6   7      8   9    10    11  12      13    14       15 16          17        18     19       20 21    22     23        24 25     26    27       28 29         30   31   32        33       34
+Words: Společnost NCR Corp .  předvedla dva modely své řady Tower pro střední třídu počítačů a  představila pokročilý síťový software ,  který umožní počítačům z  rodiny Tower fungovat v  počítačové síti jako centrální počítače .
+
+# sentence level graph:
+(s1a1 / and
+        :op1 (s1p1 / předvést-001
+            :ARG0 (s1s1 / společnost
+                :name (s1x1 / #Forn
+                    :FPHR (s1n1 / NCR)
+                    :FPHR (s1c1 / Corp)
+                    :FPHR (s1x2 / .))
+                :refer-number singular)
+            :ARG2 (s1e1 / entity)
+            :ARG1 (s1m1 / model
+                :mod (s1d1 / dva
+                    :refer-number plural)
+                :mod (s1r1 / řada
+                    :mod s1s1
+                    :name (s1t1 / Tower
+                        :refer-number singular)
+                    :affectee (s1t2 / třída
+                        :mod (s1s2 / střední
+                            :refer-number singular)
+                        :mod (s1p2 / počítač
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :aspect performance)
+        :op2 (s1p3 / představit-002
+            :ARG0 s1s1
+            :ARG1 (s1s3 / software
+                :mod (s1p4 / pokročilý
+                    :refer-number singular)
+                :mod (s1s4 / síťový
+                    :refer-number singular)
+                :ARG0-of (s1u1 / umožnit-001
+                    :ARG2 (s1p5 / počítač
+                        :start (s1r2 / rodina
+                            :name (s1t3 / Tower
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :ARG1 (s1f1 / fungovat-001
+                        :ARG0 s1p5
+                        :place (s1s5 / síť
+                            :mod (s1p6 / počítačový
+                                :refer-number singular)
+                            :refer-number singular)
+                        :manner (s1p7 / počítač
+                            :mod-of s1p5
+                            :mod (s1c2 / centrální
+                                :refer-number plural)
+                            :refer-number plural)
+                        :aspect activity)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect performance)
+                :refer-number singular)
+            :aspect performance))
+
+# alignment:
+s1a1: 15-15
+s1p1: 5-5
+s1e1: 0-0
+s1m1: 7-7
+s1d1: 6-6
+s1r1: 9-9
+s1t1: 10-10
+s1t2: 11-11,13-13
+s1s2: 12-12
+s1p2: 14-14
+s1s1: 1-1,8-8
+s1x1: 0-0
+s1n1: 2-2
+s1c1: 3-3
+s1x2: 4-4
+s1p3: 16-16
+s1s3: 19-19,21-21
+s1p4: 17-17
+s1s4: 18-18
+s1u1: 22-22
+s1p5: 23-23
+s1r2: 24-25
+s1t3: 26-26
+s1f1: 27-27
+s1s5: 28-28,30-30
+s1p6: 29-29
+s1p7: 31-31,33-33
+s1c2: 32-32
+
+# document level annotation:
+(s1s0 / sentence
+    :coref ((s1r2 :same-entity s1r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2        3  4       5  6       7         8       9       10          11     12  13
+Words: Nový software je založen na síťovém operačním systému NetWare společnosti Novell Inc .
+
+# sentence level graph:
+(s2z1 / založit-001
+        :ARG0 (s2e1 / entity
+            :refer-number singular)
+        :ARG1 (s2s1 / software
+            :mod (s2n1 / nový
+                :refer-number singular)
+            :refer-number singular)
+        :source (s2s2 / systém
+            :mod (s2s3 / síťový
+                :refer-number singular)
+            :mod (s2o1 / operační
+                :refer-number singular)
+            :name (s2n2 / NetWare
+                :refer-number singular)
+            :mod (s2s4 / společnost
+                :name (s2x1 / #Forn
+                    :FPHR (s2n3 / Novell)
+                    :FPHR (s2i1 / Inc))
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s2z1: 3-4
+s2e1: 0-0
+s2s1: 2-2
+s2n1: 1-1
+s2s2: 5-5,8-8
+s2s3: 6-6
+s2o1: 7-7
+s2n2: 9-9
+s2s4: 10-10
+s2x1: 0-0
+s2n3: 11-11
+s2i1: 12-12
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2e1 :same-entity s1s1)
+            (s2s1 :same-entity s1s3)))
+
+

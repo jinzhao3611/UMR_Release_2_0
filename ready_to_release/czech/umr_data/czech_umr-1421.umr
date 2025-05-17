@@ -1,0 +1,238 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2  3
+Words: Zlato na lyžích
+
+# sentence level graph:
+(s1e1 / event
+        :ARG1 (s1z1 / zlato
+            :refer-number singular)
+        :place (s1l1 / lyže
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1z1: 1-1
+s1l1: 2-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2
+Words: Nice -
+
+# sentence level graph:
+(s2n1 / Nice)
+
+# alignment:
+s2n1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2              3     4        5       6  7          8           9      10 11     12       13     14      15 16        17    18
+Words: Česká reprezentantka Petra Stehnová získala na juniorském mistrovství Evropy ve vodním lyžování zlatou medaili ve figurální jízdě .
+
+# sentence level graph:
+(s3z1 / získat-001
+        :ARG0 (s3s1 / Stehnová
+            :mod (s3p1 / Petra
+                :refer-number singular)
+            :mod (s3r1 / reprezentantka
+                :mod (s3c1 / český
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :place (s3m1 / mistrovství
+            :regard (s3l1 / lyžování
+                :ARG0 (s3e1 / entity)
+                :mod (s3v1 / vodní
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3j1 / juniorský
+                :refer-number singular)
+            :possessor (s3e2 / Evropa
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3m2 / medaile
+            :mod (s3z2 / zlatý
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s3j2 / jízda
+            :mod (s3f1 / figurální
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3z1: 5-5
+s3s1: 4-4
+s3p1: 3-3
+s3r1: 2-2
+s3c1: 1-1
+s3m1: 6-6,8-8
+s3l1: 10-10,12-12
+s3e1: 0-0
+s3v1: 11-11
+s3j1: 7-7
+s3e2: 9-9
+s3m2: 14-14
+s3z2: 13-13
+s3j2: 15-15,17-17
+s3f1: 16-16
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3l1 :same-entity s1l1)
+            (s3m2 :same-entity s1z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2          3  4    5  6          7        8    9  10  11        12 13      14    15   16 17    18  19               20        21
+Words: Na šampionátu ,  jenž se uskutečnil nedaleko Nice ,  tak vykročila ve stopách svého otce ,  který byl několikanásobným šampiónem .
+
+# sentence level graph:
+(s4v1 / vykročit-002
+        :place (s4s1 / šampionát
+            :ARG0-of (s4u1 / uskutečnit-se-001
+                :place (s4n1 / Nice)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :manner (s4t1 / tak)
+        :ARG0 (s4e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :path (s4s2 / stopa
+            :possessor (s4o1 / otec
+                :possessor s4e1
+                :ARG0-of (s4b1 / být-007
+                    :ARG1 (s4s3 / šampión
+                        :mod (s4n2 / několikanásobný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s4v1: 11-11
+s4s1: 1-2,4-4
+s4u1: 5-6
+s4n1: 7-8
+s4t1: 10-10
+s4e1: 14-14
+s4s2: 12-13
+s4o1: 15-15,17-17
+s4b1: 18-18
+s4s3: 20-20
+s4n2: 19-19
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s1 :same-entity s3m1)
+            (s4n1 :same-entity s2n1)
+            (s4t1 :same-event s3z1)
+            (s4e1 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2  3 4      5      6              7
+Words: Dařilo se i dalším mladým reprezentantům .
+
+# sentence level graph:
+(s5d1 / dařit-se-001
+        :ARG1 (s5e1 / entity)
+        :clausal-marker (s5i1 / i)
+        :ARG0 (s5r1 / reprezentant
+            :mod (s5m1 / mladý
+                :refer-number plural)
+            :mod (s5d2 / další
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s5d1: 1-2
+s5e1: 0-0
+s5i1: 3-3
+s5r1: 6-6
+s5m1: 5-5
+s5d2: 4-4
+
+# document level annotation:
+(s5s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2       3     4  5       6      7     8  9      10   11         12
+Words: Danihelka obsadil sedmé a  Růžička deváté místo ,  stejně jako Stráníková .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6o1 / obsadit-003
+            :ARG0 (s6d1 / Danihelka
+                :refer-number singular)
+            :ARG1 (s6m1 / místo
+                :mod (s6s1 / sedmý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s6o2 / obsadit-003
+            :ARG0 (s6r1 / Růžička
+                :refer-number singular)
+            :ARG1 (s6m2 / místo
+                :mod (s6d2 / devátý
+                    :refer-number singular)
+                :refer-number singular)
+            :manner (s6s2 / stejně
+                :comparison (s6o3 / obsadit-003
+                    :ARG1 (s6e1 / entity
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :ARG0 (s6s3 / Stráníková
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance))
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s6a1: 4-4
+s6o1: 2-2
+s6d1: 1-1
+s6m1: 0-0
+s6s1: 3-3
+s6o2: 0-0
+s6r1: 5-5
+s6m2: 7-7
+s6d2: 6-6
+s6s2: 9-9
+s6o3: 0-0
+s6e1: 0-0
+s6s3: 11-11
+
+# document level annotation:
+(s6s0 / sentence)
+
+

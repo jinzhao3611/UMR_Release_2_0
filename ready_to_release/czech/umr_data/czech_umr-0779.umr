@@ -1,0 +1,505 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1   2 3       4      5   6
+Words: Boj o pražský Obecní dům trvá
+
+# sentence level graph:
+(s1t1 / trvat-003
+        :ARG0 (s1b1 / boj
+            :ARG1 (s1d1 / dům
+                :mod (s1o1 / obecní
+                    :refer-number singular)
+                :mod (s1p1 / pražský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1t1: 6-6
+s1b1: 1-1
+s1d1: 2-2,5-5
+s1o1: 4-4
+s1p1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( kva ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2k1 / kva)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2k1: 3-3
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2p1 :same-entity s1p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2  3    4        5  6     7      8  9     10 11     12        13     14             15      16 17    18      19 20           21        22       23   24
+Words: Až do noci zasedala v  úterý komise ,  která už jednou stanovila pořadí nejvhodnějších zájemců o  práce spojené s  rekonstrukcí pražského Obecního domu .
+
+# sentence level graph:
+(s3z1 / zasedat-002
+        :clausal-marker (s3a1 / až)
+        :temporal (s3n1 / noc
+            :refer-number singular)
+        :temporal (s3u1 / úterý
+            :refer-number singular)
+        :ARG0 (s3k1 / komise
+            :ARG0-of (s3s1 / stanovit-004
+                :clausal-marker (s3u2 / už)
+                :frequency (s3j1 / jednou)
+                :ARG1 (s3p1 / pořadí
+                    :possessor (s3z2 / zájemce
+                        :ARG1 (s3p2 / práce
+                            :mod (s3s2 / spojený
+                                :ARG1 (s3r1 / rekonstrukce
+                                    :ARG1 (s3d1 / dům
+                                        :mod (s3o1 / obecní
+                                            :refer-number singular)
+                                        :mod (s3p3 / pražský
+                                            :refer-number singular)
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :refer-number plural)
+                            :refer-number plural)
+                        :mod (s3v1 / vhodný
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s3z1: 4-4
+s3a1: 1-1
+s3n1: 2-3
+s3u1: 5-6
+s3k1: 7-7,9-9
+s3s1: 12-12
+s3u2: 10-10
+s3j1: 11-11
+s3p1: 13-13
+s3z2: 15-15
+s3p2: 16-17
+s3s2: 18-18
+s3r1: 19-20
+s3d1: 23-23
+s3o1: 22-22
+s3p3: 21-21
+s3v1: 14-14
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3d1 :same-entity s1d1)
+            (s3p3 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2  3        4       5     6          7      8  9    10 11   12    13        14  15         16 17        18     19   20             21       22    23
+Words: Protože se vyskytly námitky proti výběrovému řízení ,  měla za úkol znovu zdůvodnit své rozhodnutí a  předložit zprávu radě zastupitelstva hlavního města .
+
+# sentence level graph:
+(s4m1 / mít-004
+        :cause (s4v1 / vyskytnout-se-002
+            :ARG0 (s4n1 / námitka
+                :affectee (s4r1 / řízení
+                    :mod (s4v2 / výběrový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance)
+        :ARG0 (s4e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :effect (s4u1 / úkol
+            :refer-number singular)
+        :ARG1 (s4a1 / and
+            :op1 (s4z1 / zdůvodnit-001
+                :ARG0 s4e1
+                :temporal (s4z2 / znovu)
+                :ARG1 (s4r2 / rozhodnutí
+                    :ARG1 (s4e2 / entity)
+                    :ARG0 s4e1
+                    :refer-number singular)
+                :aspect performance)
+            :op2 (s4p1 / předložit-001
+                :ARG0 s4e1
+                :ARG1 (s4z3 / zpráva
+                    :refer-number singular)
+                :ARG2 (s4r3 / rada
+                    :possessor (s4z4 / zastupitelstvo
+                        :possessor (s4m2 / město
+                            :mod (s4h1 / hlavní
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance))
+        :aspect state)
+
+# alignment:
+s4m1: 9-9
+s4v1: 1-3
+s4n1: 4-4
+s4r1: 5-5,7-7
+s4v2: 6-6
+s4e1: 14-14
+s4u1: 10-11
+s4a1: 16-16
+s4z1: 13-13
+s4z2: 12-12
+s4r2: 15-15
+s4e2: 0-0
+s4p1: 17-17
+s4z3: 18-18
+s4r3: 19-19
+s4z4: 20-20
+s4m2: 22-22
+s4h1: 21-21
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3k1)
+            (s4r2 :same-event s3s1)
+            (s4m2 :same-entity s3p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2        3        4        5     6         7         8  9     10        11 12     13         14    15 16   17 18  19      20         21   22    23
+Words: Ačkoliv výsledek úterního zasedání nebyl oficiálně zveřejněn ,  podle informací LN komise neshledala důvod ,  proč by své původní stanovisko měla měnit .
+
+# sentence level graph:
+(s5b1 / but-91
+        :ARG2 (s5z1 / zveřejnit-001
+            :ARG1 (s5v1 / výsledek
+                :possessor (s5z2 / zasedání
+                    :ARG0 (s5e1 / entity)
+                    :temporal (s5u1 / úterní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s5e2 / entity)
+            :manner (s5o1 / oficiálně)
+            :refer-number singular
+            :aspect performance
+            :polarity -)
+        :ARG1 (s5s1 / shledat-002
+            :regard (s5i1 / informace
+                :ARG0 (s5l1 / LN
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 (s5k1 / komise
+                :refer-number singular)
+            :ARG1 (s5d1 / důvod
+                :ARG1 (s5m1 / měnit-002
+                    :ARG1 (s5s2 / stanovisko
+                        :possessor s5k1
+                        :mod (s5p1 / původní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0 s5k1
+                    :cause (s5p2 / proč)
+                    :aspect activity)
+                :refer-number singular)
+            :aspect performance
+            :polarity -))
+
+# alignment:
+s5b1: 1-1
+s5s1: 13-13
+s5i1: 9-10
+s5l1: 11-11
+s5k1: 12-12,18-18
+s5d1: 14-14
+s5m1: 17-17,21-22
+s5s2: 20-20
+s5p1: 19-19
+s5p2: 16-16
+s5z1: 5-5,7-7
+s5v1: 2-2
+s5z2: 4-4
+s5e1: 0-0
+s5u1: 3-3
+s5e2: 0-0
+s5o1: 6-6
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5k1 :same-entity s4e1)
+            (s5s2 :same-entity s4r2)
+            (s5z2 :same-event s3z1)
+            (s5u1 :same-entity s3u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2    3  4            5         6  7       8        9           10             11           12       13      14
+Words: Podle něho je nejvážnějším uchazečem o  zakázku sdružení společností reprezentované Průmyslovými stavbami Jihlava .
+
+# sentence level graph:
+(s6b1 / být-007
+        :regard (s6e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s6u1 / uchazeč
+            :ARG1 (s6z1 / zakázka
+                :refer-number singular)
+            :mod (s6v1 / vážný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s6s1 / sdružení
+            :possessor (s6s2 / společnost
+                :refer-number plural)
+            :mod (s6r1 / reprezentovaný
+                :ARG0 (s6s3 / stavba
+                    :name (s6j1 / Jihlava
+                        :refer-number singular)
+                    :mod (s6p1 / průmyslový
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 3-3
+s6e1: 1-2
+s6u1: 5-5
+s6z1: 6-7
+s6v1: 4-4
+s6s1: 8-8
+s6s2: 9-9
+s6r1: 10-10
+s6s3: 12-12
+s6j1: 13-13
+s6p1: 11-11
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1     2  3    4           5     6       7    8    9         10             11 12    13      14 15    16   17        18
+Words: Včera se měla záležitostí znovu zabývat také rada pražského zastupitelstva ,  avšak jednání o  tomto bodě přerušila .
+
+# sentence level graph:
+(s7b1 / but-91
+        :ARG1 (s7z1 / zabývat-se-001
+            :temporal (s7v1 / včera)
+            :ARG1 (s7z2 / záležitost
+                :refer-number singular)
+            :temporal (s7z3 / znovu)
+            :clausal-marker (s7t1 / také)
+            :ARG0 (s7r1 / rada
+                :possessor (s7z4 / zastupitelstvo
+                    :mod (s7p1 / pražský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity)
+        :ARG2 (s7p2 / přerušit-001
+            :ARG1 (s7j1 / jednání
+                :ARG1 (s7b2 / bod
+                    :mod (s7t2 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s7e1 / entity)
+                :ARG2 (s7e2 / entity)
+                :refer-number singular)
+            :ARG0 s7r1
+            :aspect performance))
+
+# alignment:
+s7b1: 12-12
+s7z1: 2-3,6-6
+s7v1: 1-1
+s7z2: 4-4
+s7z3: 5-5
+s7t1: 7-7
+s7r1: 8-8
+s7z4: 10-10
+s7p1: 9-9
+s7p2: 17-17
+s7j1: 13-13
+s7b2: 14-14,16-16
+s7t2: 15-15
+s7e1: 0-0
+s7e2: 0-0
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7r1 :same-entity s4r3)
+            (s7z4 :same-entity s4z4)
+            (s7p1 :same-entity s4m2)
+            (s7b2 :same-entity s7z2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2           3            4  5     6  7      8          9       10 11    12 13 14 15     16    17 18     19   20  21       22         23 24 25    26       27  28      29    30      31     32
+Words: Ředitel společnosti Konstruktiva ,  která se rovněž zúčastnila soutěže ,  avšak je až na třetím místě ,  svolal mezi tím tiskovou konferenci ,  na které potvrdil své námitky proti průběhu řízení .
+
+# sentence level graph:
+(s8s1 / svolat-001
+        :ARG0 (s8r1 / ředitel
+            :possessor (s8s2 / společnost
+                :name (s8k1 / Konstruktiva
+                    :refer-number singular)
+                :ARG0-of (s8b1 / but-91
+                    :ARG1 (s8z1 / zúčastnit-se-001
+                        :ARG1 (s8s3 / soutěž
+                            :refer-number singular)
+                        :clausal-marker (s8r2 / rovněž)
+                        :aspect performance)
+                    :ARG2 (s8b2 / být-011
+                        :place (s8m1 / místo
+                            :clausal-marker (s8a1 / až)
+                            :mod (s8t1 / třetí
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity))
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s8t2 / ten
+            :refer-number singular)
+        :ARG1 (s8k2 / konference
+            :mod (s8t3 / tiskový
+                :refer-number singular)
+            :place-of (s8p1 / potvrdit-001
+                :ARG0 s8r1
+                :ARG1 (s8n1 / námitka
+                    :ARG0 s8r1
+                    :affectee (s8p2 / průběh
+                        :ARG0 (s8r3 / řízení
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8s1: 18-18
+s8r1: 1-1,27-27
+s8s2: 2-2,5-5
+s8k1: 3-3
+s8b1: 11-11
+s8z1: 6-6,8-8
+s8s3: 9-9
+s8r2: 7-7
+s8b2: 12-12
+s8m1: 14-14,16-16
+s8a1: 13-13
+s8t1: 15-15
+s8t2: 19-20
+s8k2: 22-22,24-25
+s8t3: 21-21
+s8p1: 26-26
+s8n1: 28-28
+s8p2: 29-30
+s8r3: 31-31
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8s3 :same-entity s4r1)
+            (s8t2 :same-event s7p2)
+            (s8r3 :same-entity s8s3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1       2  3     4   5        6     7  8     9    10             11 12    13 14 15    16 17       18   19       20
+Words: Zakázka má objem 1.3 miliardy korun a  patří mezi nejzajímavější ,  které se v  Praze v  poslední době vyskytly .
+
+# sentence level graph:
+(s9a1 / and
+        :op1 (s9m1 / mít-008
+            :ARG0 (s9z1 / zakázka
+                :refer-number singular)
+            :ARG1 (s9o1 / objem
+                :mod (s9m2 / miliarda
+                    :mod (s9k1 / koruna
+                        :refer-number plural)
+                    :mod (s9x1 / 1.3)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state)
+        :op2 (s9p1 / patřit-003
+            :ARG0 s9z1
+            :goal (s9z2 / zakázka
+                :mod (s9z3 / zajímavý
+                    :refer-number plural)
+                :ARG0-of (s9v1 / vyskytnout-se-002
+                    :place (s9p2 / Praha
+                        :refer-number singular)
+                    :temporal (s9d1 / doba
+                        :mod (s9p3 / poslední
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state))
+
+# alignment:
+s9a1: 7-7
+s9m1: 2-2
+s9o1: 3-3
+s9m2: 5-5
+s9k1: 6-6
+s9x1: 4-4
+s9z1: 1-1
+s9p1: 8-8
+s9z2: 12-12
+s9z3: 10-10
+s9v1: 13-13,19-19
+s9p2: 14-15
+s9d1: 16-16,18-18
+s9p3: 17-17
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9z1 :same-entity s6z1)
+            (s9p2 :same-entity s7p1)))
+
+

@@ -1,0 +1,344 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2 3   4
+Words: Orlando v NBA rozdává
+
+# sentence level graph:
+(s1r1 / rozdávat-001
+        :ARG0 (s1o1 / Orlando
+            :refer-number singular)
+        :ARG1 (s1e1 / entity)
+        :ARG2 (s1e2 / entity)
+        :place (s1n1 / NBA)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect habitual)
+
+# alignment:
+s1r1: 4-4
+s1o1: 1-1
+s1e1: 0-0
+s1e2: 0-0
+s1n1: 2-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1   2    3
+Words: New York -
+
+# sentence level graph:
+(s2y1 / York
+        :mod (s2n1 / New)
+        :refer-number singular)
+
+# alignment:
+s2y1: 2-2
+s2n1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2     3    4             5    6   7       8     9
+Words: Skvělou formu mají basketbalisté týmu NBA Orlando Magic .
+
+# sentence level graph:
+(s3m1 / mít-008
+        :ARG1 (s3f1 / forma
+            :mod (s3s1 / skvělý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3b1 / basketbalista
+            :possessor (s3t1 / tým
+                :possessor (s3n1 / NBA)
+                :name (s3x1 / #Forn
+                    :FPHR (s3o1 / Orlando)
+                    :FPHR (s3m2 / Magic))
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s3m1: 3-3
+s3f1: 2-2
+s3s1: 1-1
+s3b1: 4-4
+s3t1: 5-5
+s3n1: 6-6
+s3x1: 0-0
+s3o1: 7-7
+s3m2: 8-8
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3t1 :same-entity s1o1)
+            (s3n1 :same-entity s1n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2     3         4   5            6   7  8  9  10 11      12    13        14       15    16        17  18 19  20
+Words: Minulý pátek zvítězili nad Philadelphií 129 :  83 ,  v  pondělí ještě výrazněji porazili celek Milwaukee 152 :  104 .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4z1 / zvítězit-001
+            :ARG0 (s4e1 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :temporal (s4p1 / pátek
+                :mod (s4m1 / minulý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s4p2 / Philadelphia
+                :refer-number singular)
+            :extent (s4m2 / math
+                :op1 (s4x1 / 129)
+                :op2 (s4x2 / 83))
+            :refer-number plural
+            :aspect performance)
+        :op2 (s4p3 / porazit-003
+            :ARG0 s4e1
+            :temporal (s4p4 / pondělí
+                :refer-number singular)
+            :clausal-marker (s4j1 / ještě)
+            :manner (s4v1 / výrazně)
+            :ARG1 (s4c1 / celek
+                :name (s4m3 / Milwaukee)
+                :refer-number singular)
+            :extent (s4m4 / math
+                :op1 (s4x4 / 152)
+                :op2 (s4x5 / 104))
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s4a1: 9-9
+s4z1: 3-3
+s4p1: 2-2
+s4m1: 1-1
+s4p2: 4-5
+s4m2: 7-7
+s4x1: 6-6
+s4x2: 8-8
+s4e1: 0-0
+s4p3: 14-14
+s4p4: 10-11
+s4j1: 12-12
+s4v1: 13-13
+s4c1: 15-15
+s4m3: 16-16
+s4m4: 18-18
+s4x4: 17-17
+s4x5: 19-19
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2   3        4      5  6      7   8     9    10     11 12    13      14  15 16  17 18 19 20       21   22    23    24
+Words: Překonali tím rekordní rozdíl ,  kterým kdy tento klub vyhrál -  dosud platilo 155 :  116 z  30 .  prosince 1990 proti Utahu .
+
+# sentence level graph:
+(s5p1 / překonat-001
+        :instrument (s5t1 / ten
+            :refer-number singular)
+        :ARG0 (s5e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s5r1 / rozdíl
+            :mod (s5r2 / rekordní
+                :refer-number singular)
+            :manner-of (s5v1 / vyhrát-001
+                :ARG0 (s5k1 / klub
+                    :mod (s5t2 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :temporal (s5k2 / kdy)
+                :ARG1 (s5e2 / entity)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :parenthesis (s5p2 / platit-009
+            :temporal (s5d1 / dosud)
+            :ARG0 (s5m1 / math
+                :op1 (s5x1 / 155
+                    :temporal (s5p3 / prosinec
+                        :mod (s5x2 / 30)
+                        :possessor (s5x3 / 1990)
+                        :refer-number singular)
+                    :affectee (s5u1 / Utah
+                        :refer-number singular))
+                :op2 (s5x4 / 116
+                    :temporal s5p3
+                    :affectee s5u1))
+            :refer-number singular
+            :aspect activity)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s5p1: 1-1
+s5t1: 2-2
+s5e1: 0-0
+s5r1: 4-4,6-6
+s5r2: 3-3
+s5v1: 10-10
+s5k1: 9-9
+s5t2: 8-8
+s5k2: 7-7
+s5e2: 0-0
+s5p2: 13-13
+s5d1: 12-12
+s5m1: 15-15
+s5x1: 14-14
+s5p3: 17-17,20-20
+s5x2: 18-18
+s5x3: 21-21
+s5u1: 22-23
+s5x4: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5t1 :same-event s4p3)
+            (s5e1 :same-entity s4e1)
+            (s5k1 :same-entity s3t1)
+            (s5m1 :same-entity s5r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2    3          4  5     6       7         8  9  10   11 12 13  14   15     16       17       18
+Words: Třicet bodů zaznamenal v  tomto souboji Shaquille O  '  Neal ,  o  pět méně přidal Anfernee Hardaway .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6z1 / zaznamenat-003
+            :ARG1 (s6b1 / bod
+                :mod (s6t1 / třicet
+                    :refer-number singular)
+                :refer-number plural)
+            :place (s6s1 / souboj
+                :mod (s6t2 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s6o1 / O_Neal
+                :mod (s6s2 / Shaquille
+                    :refer-number singular))
+            :refer-number singular
+            :aspect performance)
+        :op2 (s6p1 / přidat-003
+            :ARG1 (s6b2 / bod
+                :mod (s6m1 / málo
+                    :extent (s6p2 / pět
+                        :refer-number plural))
+                :refer-number plural)
+            :goal (s6e1 / entity)
+            :ARG0 (s6h1 / Hardaway
+                :mod (s6a2 / Anfernee
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s6a1: 11-11
+s6z1: 3-3
+s6b1: 2-2
+s6t1: 1-1
+s6s1: 4-4,6-6
+s6t2: 5-5
+s6o1: 8-8,10-10
+s6s2: 7-7
+s6p1: 15-15
+s6b2: 0-0
+s6m1: 14-14
+s6p2: 12-13
+s6e1: 0-0
+s6h1: 17-17
+s6a2: 16-16
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s1 :same-entity s5t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1      2        3  4        5  6   7     8           9       10 11 12 13    14   15       16 17     18 19 20  21
+Words: Naopak poražení si připsali na své konto nejkrutější porážku ,  27 .  ledna 1990 prohráli s  Utahem 96 :  144 .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7p1 / připsat-002
+            :ARG0 (s7p2 / poražený
+                :refer-number plural)
+            :clausal-marker (s7n1 / naopak)
+            :ARG2 s7p2
+            :goal (s7k1 / konto
+                :possessor s7p2
+                :refer-number singular)
+            :ARG1 (s7p3 / porážka
+                :mod (s7k2 / krutý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance)
+        :op2 (s7p4 / prohrát-001
+            :ARG0 s7p2
+            :temporal (s7l1 / leden
+                :mod (s7x4 / 27)
+                :possessor (s7x5 / 1990)
+                :refer-number singular)
+            :ARG1 (s7e1 / entity)
+            :ARG2 (s7u1 / Utah
+                :refer-number singular)
+            :extent (s7m1 / math
+                :op1 (s7x6 / 96)
+                :op2 (s7x7 / 144))
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s7a1: 10-10
+s7p1: 4-4
+s7n1: 1-1
+s7k1: 5-5,7-7
+s7p3: 9-9
+s7k2: 8-8
+s7p2: 2-3,6-6
+s7p4: 15-15
+s7l1: 13-13
+s7x4: 11-11
+s7x5: 14-14
+s7e1: 0-0
+s7u1: 16-17
+s7m1: 19-19
+s7x6: 18-18
+s7x7: 20-20
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7p2 :same-entity s4c1)
+            (s7x5 :same-entity s5x3)
+            (s7u1 :same-entity s5u1)))
+
+

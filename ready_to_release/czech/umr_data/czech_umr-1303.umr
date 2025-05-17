@@ -1,0 +1,539 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1 2     3        4       5
+Words: S cílem prorazit maltský beton
+
+# sentence level graph:
+(s1e1 / event
+        :companion (s1c1 / cíl
+            :ARG0 (s1e2 / entity)
+            :ARG1 (s1p1 / prorazit-001
+                :ARG0 s1e2
+                :ARG1 (s1b1 / beton
+                    :mod (s1m1 / maltský
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1c1: 1-2
+s1e2: 0-0
+s1p1: 3-3
+s1b1: 5-5
+s1m1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3  4 5  6 7
+Words: Opava ( šv , sn ) -
+
+# sentence level graph:
+(s2o1 / Opava
+        :parenthesis (s2a1 / and
+            :op1 (s2s1 / šv)
+            :op2 (s2s2 / sn))
+        :refer-number singular)
+
+# alignment:
+s2o1: 1-1
+s2a1: 4-4
+s2s1: 3-3
+s2s2: 5-5
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2            3     4      5  6     7   8      9        10   11 12          13 14        15  16 17 18 19  20
+Words: S  jednoznačným cílem vyhrát v  Opavě nad Maltou vstupuje dnes do kvalifikace ME fotbalový tým ČR do 21 let .
+
+# sentence level graph:
+(s3v1 / vstupovat-001
+        :companion (s3c1 / cíl
+            :ARG0 (s3e1 / entity)
+            :mod (s3j1 / jednoznačný
+                :refer-number singular)
+            :ARG1 (s3v2 / vyhrát-001
+                :ARG0 s3e1
+                :ARG1 (s3e2 / entity)
+                :place (s3o1 / Opava
+                    :refer-number singular)
+                :ARG2 (s3m1 / Malta
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :temporal (s3d1 / dnes)
+        :ARG1 (s3k1 / kvalifikace
+            :possessor (s3m2 / ME)
+            :refer-number singular)
+        :ARG0 (s3t1 / tým
+            :mod (s3f1 / fotbalový
+                :refer-number singular)
+            :possessor (s3c2 / ČR
+                :refer-number singular)
+            :temporal (s3r1 / rok
+                :mod (s3x2 / 21)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3v1: 9-9
+s3c1: 1-1,3-3
+s3e1: 0-0
+s3j1: 2-2
+s3v2: 4-4
+s3e2: 0-0
+s3o1: 5-6
+s3m1: 7-8
+s3d1: 10-10
+s3k1: 11-12
+s3m2: 13-13
+s3t1: 15-15
+s3f1: 14-14
+s3c2: 16-16
+s3r1: 17-17,19-19
+s3x2: 18-18
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3c1 :same-entity s1c1)
+            (s3o1 :same-entity s2o1)
+            (s3m1 :same-entity s1m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2       3        4  5    6  7        8  9  10    11             12    13 14 15   16 17      18
+Words: Vítěz skupiny postoupí do bojů o  evropský a  má velmi pravděpodobnou účast na OH 1996 v  Atlantě .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4p1 / postoupit-003
+            :ARG0 (s4v1 / vítěz
+                :possessor (s4s1 / skupina
+                    :refer-number singular)
+                :refer-number singular)
+            :goal (s4b1 / boj
+                :ARG1 (s4e1 / entity
+                    :mod (s4e2 / evropský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :op2 (s4m1 / mít-005
+            :ARG0 s4v1
+            :effect (s4p2 / pravděpodobný
+                :extent (s4v2 / velmi)
+                :refer-number singular)
+            :ARG1 (s4u1 / účast
+                :place (s4o1 / OH
+                    :possessor (s4x2 / 1996)
+                    :place (s4a2 / Atlanta
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state))
+
+# alignment:
+s4a1: 8-8
+s4p1: 3-3
+s4b1: 4-5
+s4e1: 0-0
+s4e2: 7-7
+s4v1: 1-1
+s4s1: 2-2
+s4m1: 9-9
+s4p2: 11-11
+s4v2: 10-10
+s4u1: 12-12
+s4o1: 13-14
+s4x2: 15-15
+s4a2: 16-17
+
+# document level annotation:
+(s4s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2    3      4    5       6  7   8     9    10        11   12  13        14 15     16 17         18 19   20          21 22       23  24
+Words: Malťany jsem osobně hrát neviděl ,  ale podle mých informací mají vše postavené na obraně ,  zabetonují se před šestnáctkou a  natahují čas .
+
+# sentence level graph:
+(s5b1 / but-91
+        :ARG1 (s5v1 / vidět-003
+            :ARG1 (s5m1 / Malťan
+                :refer-number plural)
+            :ARG0 (s5e1 / entity
+                :manner (s5o1 / osobně)
+                :refer-number singular
+                :refer-person 1st)
+            :effect (s5h1 / hrát-001
+                :ARG0 s5m1
+                :ARG1 (s5e2 / entity)
+                :aspect activity)
+            :refer-number singular
+            :aspect state
+            :polarity -)
+        :ARG2 (s5a1 / and
+            :op1 (s5m2 / mít-005
+                :ARG0 s5m1
+                :regard (s5i1 / informace
+                    :possessor s5e1
+                    :refer-number plural)
+                :ARG1 (s5v2 / všechen
+                    :refer-number singular
+                    :refer-person 3rd)
+                :effect (s5p1 / postavený
+                    :ARG1 (s5o2 / obrana
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect state)
+            :op2 (s5z1 / zabetonovat-001
+                :ARG0 s5m1
+                :ARG1 s5m1
+                :place (s5s1 / šestnáctka
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect performance)
+            :op3 (s5n1 / natahovat-002
+                :ARG0 s5m1
+                :ARG1 (s5c1 / čas
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)))
+
+# alignment:
+s5b1: 7-7
+s5v1: 2-2,5-5
+s5m1: 1-1,18-18
+s5e1: 9-9
+s5o1: 3-3
+s5h1: 4-4
+s5e2: 0-0
+s5a1: 21-21
+s5m2: 11-11
+s5i1: 8-8,10-10
+s5v2: 12-12
+s5p1: 13-13
+s5o2: 14-15
+s5z1: 17-17
+s5s1: 19-20
+s5n1: 22-22
+s5c1: 23-23
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5m1 :same-entity s3m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2   3      4        5  6    7      8       9      10   11      12
+Words: Musíme být hlavně trpěliví ,  říká trenér českého výběru Ivan Kopecký .
+
+# sentence level graph:
+(s6r1 / říkat-007
+        :ARG0 (s6k1 / Kopecký
+            :mod (s6i1 / Ivan
+                :refer-number singular)
+            :mod (s6t1 / trenér
+                :ARG1 (s6v1 / výběr
+                    :mod (s6c1 / český
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 1st)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 1st)
+        :ARG2 (s6e1 / entity)
+        :effect (s6b1 / být-007
+            :ARG0 (s6e2 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :clausal-marker (s6h1 / hlavně)
+            :ARG1 (s6t2 / trpělivý
+                :refer-number plural)
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6r1: 6-6
+s6k1: 11-11
+s6i1: 10-10
+s6t1: 7-7
+s6v1: 9-9
+s6c1: 8-8
+s6e1: 0-0
+s6b1: 1-2
+s6e2: 0-0
+s6h1: 3-3
+s6t2: 4-4
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6k1 :same-entity s5e1)
+            (s6v1 :same-entity s6e2)
+            (s6c1 :same-entity s3c2)
+            (s6e2 :same-entity s3t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2  3         4  5   6         7        8  9   10    11      12  13       14         15   16 17     18
+Words: Malťané to naznačili i  při včerejším tréninku ,  kdy téměř všechen čas věnovali odkopávání míčů od branky .
+
+# sentence level graph:
+(s7n1 / naznačit-001
+        :ARG0 (s7m1 / Malťan
+            :refer-number plural)
+        :ARG1 (s7t1 / ten
+            :refer-number singular)
+        :clausal-marker (s7i1 / i)
+        :temporal (s7t2 / trénink
+            :mod (s7v1 / včerejší
+                :refer-number singular)
+            :temporal-of (s7v2 / věnovat-003
+                :predicative-noun (s7c1 / čas
+                    :ARG0 s7m1
+                    :ARG1 s7o1
+                    :mod (s7v3 / všechen
+                        :extent (s7t3 / téměř)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 s7m1
+                :ARG2 (s7o1 / odkopávání
+                    :ARG0 s7m1
+                    :ARG1 (s7m2 / míč
+                        :refer-number plural)
+                    :start (s7b1 / branka
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :aspect process)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s7n1: 3-3
+s7m1: 1-1
+s7t1: 2-2
+s7i1: 4-4
+s7t2: 5-5,7-7,9-9
+s7v1: 6-6
+s7v2: 13-13
+s7c1: 12-12
+s7v3: 11-11
+s7t3: 10-10
+s7o1: 14-14
+s7m2: 15-15
+s7b1: 16-17
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7m1 :same-entity s5m1)
+            (s7t1 :same-entity s5a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2    3  4      5       6  7          8         9        10     11
+Words: To jsem v  životě neviděl ,  poznamenal Kopeckého asistent Kotrba .
+
+# sentence level graph:
+(s8p1 / poznamenat-004
+        :ARG0 (s8k1 / Kotrba
+            :mod (s8a1 / asistent
+                :possessor (s8k2 / Kopecký
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 1st)
+        :effect (s8v1 / vidět-007
+            :ARG1 (s8t1 / ten
+                :refer-number singular)
+            :ARG0 (s8e1 / entity
+                :refer-number singular
+                :refer-person 1st)
+            :temporal (s8z1 / život
+                :refer-number singular)
+            :refer-number singular
+            :aspect state
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8p1: 7-7
+s8k1: 10-10
+s8a1: 9-9
+s8k2: 8-8
+s8v1: 2-2,5-5
+s8t1: 1-1
+s8e1: 0-0
+s8z1: 3-4
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8k1 :same-entity s8e1)
+            (s8k2 :same-entity s6k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1      2      3  4     5     6  7    8  9      10       11         12
+Words: Utkání začíná v  17.00 hodin a  řídí ho polský rozhodčí Preszmycki .
+
+# sentence level graph:
+(s9a1 / and
+        :op1 (s9z1 / začínat-003
+            :ARG0 (s9u1 / utkání
+                :ARG0 (s9e1 / entity)
+                :ARG2 (s9e2 / entity)
+                :refer-number singular)
+            :temporal (s9h1 / hodina
+                :mod (s9x1 / 17.00)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s9r1 / řídit-001
+            :ARG1 s9u1
+            :ARG0 (s9p1 / Preszmycki
+                :mod (s9r2 / rozhodčí
+                    :mod (s9p2 / polský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s9a1: 6-6
+s9z1: 2-2
+s9u1: 1-1,8-8
+s9e1: 0-0
+s9e2: 0-0
+s9h1: 3-3,5-5
+s9x1: 4-4
+s9r1: 7-7
+s9p1: 11-11
+s9r2: 10-10
+s9p2: 9-9
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1             2       3  4  5     6  7       8  9      10 11      12 13    14 15    16 17    18 19 20      21 22       23 24    25 26    27      28 29      30 31      32
+Words: Pravděpodobná sestava ČR :  Černý -  Galásek -  Votava ,  Gabriel -  Vávra (  Skála ,  Kovář )  ,  Slončík ,  Jirousek ,  Čížek ,  Pavel Novotný -  Onderka ,  Lokvenc .
+
+# sentence level graph:
+(s10i1 / identity-91
+        :ARG1 (s10s1 / sestava
+            :possessor (s10c1 / ČR
+                :refer-number singular)
+            :mod (s10p1 / pravděpodobný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s10a1 / and
+            :op1 (s10a2 / and
+                :op1 (s10c2 / Černý
+                    :refer-number singular)
+                :op2 (s10g1 / Galásek
+                    :refer-number singular)
+                :op3 (s10v1 / Votava
+                    :refer-number singular))
+            :op2 (s10a3 / and
+                :op1 (s10g2 / Gabriel
+                    :parenthesis (s10a4 / and
+                        :op1 (s10s2 / Skála
+                            :refer-number singular)
+                        :op2 (s10k1 / Kovář
+                            :refer-number singular))
+                    :refer-number singular)
+                :op2 (s10v2 / Vávra
+                    :parenthesis s10a4
+                    :refer-number singular))
+            :op3 (s10s3 / Slončík
+                :refer-number singular)
+            :op4 (s10j1 / Jirousek
+                :refer-number singular)
+            :op5 (s10c3 / Čížek
+                :refer-number singular)
+            :op6 (s10p2 / Pavel
+                :refer-number singular)
+            :op7 (s10a5 / and
+                :op1 (s10n1 / Novotný
+                    :refer-number singular)
+                :op2 (s10o1 / Onderka
+                    :refer-number singular))
+            :op8 (s10l1 / Lokvenc
+                :refer-number singular)))
+
+# alignment:
+s10i1: 4-4
+s10s1: 2-2
+s10c1: 3-3
+s10p1: 1-1
+s10a1: 30-30
+s10a2: 8-8
+s10c2: 5-5
+s10g1: 7-7
+s10v1: 9-9
+s10a3: 12-12
+s10g2: 11-11
+s10a4: 16-16
+s10s2: 15-15
+s10k1: 17-17
+s10v2: 13-13
+s10s3: 20-20
+s10j1: 22-22
+s10c3: 24-24
+s10p2: 26-26
+s10a5: 28-28
+s10n1: 27-27
+s10o1: 29-29
+s10l1: 31-31
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10c1 :same-entity s6v1)))
+
+

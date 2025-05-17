@@ -1,0 +1,425 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2        3 4   5 6
+Words: Vojta Náprstek a dům U Halánků
+
+# sentence level graph:
+(s1a1 / and
+        :op1 (s1n1 / Náprstek
+            :mod (s1v1 / Vojta
+                :refer-number singular)
+            :refer-number singular)
+        :op2 (s1d1 / dům
+            :name (s1h1 / Halánek
+                :refer-number plural)
+            :refer-number singular))
+
+# alignment:
+s1a1: 3-3
+s1n1: 2-2
+s1v1: 1-1
+s1d1: 4-4
+s1h1: 5-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2      3   4   5  6     7        8         9       10          11       12      13 14    15         16 17       18
+Words: Zítra uplyne sto let od úmrtí význačné osobnosti pražské společnosti minulého století -  Vojty Fingerhuta -  Náprstka .
+
+# sentence level graph:
+(s2u1 / uplynout-001
+        :temporal (s2z1 / zítra)
+        :ARG0 (s2s1 / sto
+            :mod (s2r1 / rok
+                :refer-number plural)
+            :refer-number singular)
+        :temporal (s2u2 / úmrtí
+            :ARG0 (s2i1 / identity-91
+                :ARG1 (s2o1 / osobnost
+                    :possessor (s2s2 / společnost
+                        :possessor (s2s3 / století
+                            :mod (s2m1 / minulý
+                                :refer-number singular)
+                            :refer-number singular)
+                        :mod (s2p1 / pražský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s2v1 / význačný
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG2 (s2n1 / Náprstek
+                    :mod (s2v2 / Vojta
+                        :refer-number singular)
+                    :mod (s2f1 / Fingerhut
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s2u1: 2-2
+s2z1: 1-1
+s2s1: 3-3
+s2r1: 4-4
+s2u2: 5-6
+s2i1: 13-13
+s2o1: 8-8
+s2s2: 10-10
+s2s3: 12-12
+s2m1: 11-11
+s2p1: 9-9
+s2v1: 7-7
+s2n1: 17-17
+s2v2: 14-14
+s2f1: 15-15
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2i1 :same-entity s1n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2  3  4    5    6  7     8  9       10   11
+Words: Narodil se v  roce 1826 v  Praze na Uhelném trhu .
+
+# sentence level graph:
+(s3n1 / narodit-se-002
+        :ARG0 (s3e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s3r1 / rok
+            :mod (s3x1 / 1826)
+            :refer-number singular)
+        :place (s3p1 / Praha
+            :refer-number singular)
+        :place (s3t1 / trh
+            :mod (s3u1 / Uhelný
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3n1: 1-2
+s3e1: 0-0
+s3r1: 3-4
+s3x1: 5-5
+s3p1: 6-7
+s3t1: 8-8,10-10
+s3u1: 9-9
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2i1)
+            (s3p1 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2       3      4      5        6     7  8     9  10  11 12      13 14           15    16
+Words: Ve dvaceti letech odešel studovat práva do Vídně ,  kde se zapojil do studentského hnutí .
+
+# sentence level graph:
+(s4o1 / odejít-001
+        :temporal (s4r1 / rok
+            :mod (s4d1 / dvacet
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s4e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :start (s4e2 / entity)
+        :purpose (s4s1 / studovat-001
+            :ARG0 s4e1
+            :ARG1 (s4p1 / právo
+                :refer-number plural)
+            :aspect activity)
+        :goal (s4v1 / Vídeň
+            :place-of (s4z1 / zapojit-se-001
+                :ARG0 s4e1
+                :ARG1 (s4h1 / hnutí
+                    :mod (s4s2 / studentský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4o1: 4-4
+s4r1: 1-1,3-3
+s4d1: 2-2
+s4e1: 0-0
+s4e2: 0-0
+s4s1: 5-5
+s4p1: 6-6
+s4v1: 7-8,10-10
+s4z1: 11-12
+s4h1: 13-13,15-15
+s4s2: 14-14
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2        3  4    5    6     7    8     9  10 11  12
+Words: Porážka revoluce v  roce 1848 vedla jeho kroky až do USA .
+
+# sentence level graph:
+(s5v1 / vést-004
+        :ARG0 (s5p1 / porážka
+            :ARG1 (s5r1 / revoluce
+                :refer-number singular)
+            :temporal (s5r2 / rok
+                :mod (s5x1 / 1848)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s5k1 / krok
+            :ARG0 (s5e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number plural)
+        :clausal-marker (s5a1 / až)
+        :goal (s5u1 / USA
+            :refer-number plural)
+        :aspect activity)
+
+# alignment:
+s5v1: 6-6
+s5p1: 1-1
+s5r1: 2-2
+s5r2: 3-4
+s5x1: 5-5
+s5k1: 8-8
+s5e1: 7-7
+s5a1: 9-9
+s5u1: 10-11
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2  3  4      5      6      7  8     9  10      11 12     13      14       15 16       17          18    19
+Words: Když se po deseti letech vrátil do Prahy ,  rozhodl se využít získané znalosti ve prospěch všeobecného blaha .
+
+# sentence level graph:
+(s6r1 / rozhodnout-se-002
+        :temporal (s6v1 / vrátit-se-004
+            :ARG0 (s6e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :temporal (s6r2 / rok
+                :mod (s6d1 / deset
+                    :refer-number plural)
+                :refer-number plural)
+            :goal (s6p1 / Praha
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :ARG0 s6e1
+        :ARG1 (s6v2 / využít-001
+            :ARG0 s6e1
+            :ARG1 (s6z1 / znalost
+                :mod (s6z2 / získaný
+                    :refer-number plural)
+                :refer-number plural)
+            :affectee (s6b1 / blaho
+                :mod (s6v3 / všeobecný
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6r1: 10-11
+s6v1: 1-2,6-6
+s6e1: 0-0
+s6r2: 3-3,5-5
+s6d1: 4-4
+s6p1: 7-8
+s6v2: 12-12
+s6z1: 14-14
+s6z2: 13-13
+s6b1: 15-16,18-18
+s6v3: 17-17
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5e1)
+            (s6p1 :same-entity s3p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2    3    4       5  6    7    8  9       10         11    12     13
+Words: V  roce 1874 otevřel ve svém domě U  Halánků Průmyslové české muzeum .
+
+# sentence level graph:
+(s7o1 / otevřít-002
+        :temporal (s7r1 / rok
+            :mod (s7x1 / 1874)
+            :refer-number singular)
+        :ARG0 (s7e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :place (s7d1 / dům
+            :possessor s7e1
+            :name (s7h1 / Halánek
+                :refer-number plural)
+            :refer-number singular)
+        :ARG1 (s7m1 / muzeum
+            :mod (s7c1 / český
+                :refer-number singular)
+            :mod (s7p1 / průmyslový
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7o1: 4-4
+s7r1: 1-2
+s7x1: 3-3
+s7e1: 6-6
+s7d1: 5-5,7-7
+s7h1: 8-9
+s7m1: 12-12
+s7c1: 11-11
+s7p1: 10-10
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e1 :same-entity s6e1)
+            (s7d1 :same-entity s1d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1         2  3  4         5     6           7        8  9    10     11      12   13 14     15    16        17         18 19            20       21
+Words: Zasloužil se o  prosazení mnoha pokrokových myšlenek a  jako štědrý mecenáš stál v  pozadí všech pražských kulturních i  společenských událostí .
+
+# sentence level graph:
+(s8a1 / and
+        :op1 (s8z1 / zasloužit-se-001
+            :ARG0 (s8e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s8p1 / prosazení
+                :ARG0 (s8e2 / entity)
+                :ARG1 (s8m1 / myšlenka
+                    :mod (s8p2 / pokrokový
+                        :refer-number plural)
+                    :mod (s8m2 / mnoho)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s8s1 / stát-011
+            :ARG0 s8e1
+            :manner (s8m3 / mecenáš
+                :mod-of s8e1
+                :mod (s8s2 / štědrý
+                    :refer-number singular)
+                :refer-number singular)
+            :place (s8p3 / pozadí
+                :possessor (s8a2 / and
+                    :op1 (s8u1 / událost
+                        :mod (s8k1 / kulturní
+                            :refer-number plural)
+                        :mod (s8p4 / pražský
+                            :refer-number plural)
+                        :mod (s8v1 / všechen
+                            :refer-number plural)
+                        :refer-number plural)
+                    :op2 (s8u2 / událost
+                        :mod s8p4
+                        :mod s8v1
+                        :mod (s8s3 / společenský
+                            :refer-number plural)
+                        :refer-number plural))
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity))
+
+# alignment:
+s8a1: 8-8
+s8z1: 1-2
+s8p1: 3-4
+s8e2: 0-0
+s8m1: 7-7
+s8p2: 6-6
+s8m2: 5-5
+s8e1: 0-0
+s8s1: 12-12
+s8m3: 9-9,11-11
+s8s2: 10-10
+s8p3: 13-14
+s8a2: 18-18
+s8u1: 0-0
+s8k1: 17-17
+s8p4: 16-16
+s8v1: 15-15
+s8u2: 20-20
+s8s3: 19-19
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8e1 :same-entity s7e1)
+            (s8p4 :same-entity s6p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2  3      4     5  6  7  8  9     10
+Words: dr .  Milena Secká (  ČT 2  -  18.30 )
+
+# sentence level graph:
+(s9s1 / Secká
+        :mod (s9m1 / Milena
+            :refer-number singular)
+        :mod (s9d1 / doktorka)
+        :parenthesis (s9i1 / identity-91
+            :ARG1 (s9c1 / ČT
+                :mod (s9x1 / 2))
+            :ARG2 (s9x2 / 18.30))
+        :refer-number singular)
+
+# alignment:
+s9s1: 4-4
+s9m1: 3-3
+s9d1: 1-1
+s9i1: 8-8
+s9c1: 6-6
+s9x1: 7-7
+s9x2: 9-9
+
+# document level annotation:
+(s9s0 / sentence)
+
+

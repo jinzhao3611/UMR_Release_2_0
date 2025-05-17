@@ -1,0 +1,561 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2         3    4
+Words: Policejní moderátor bude vyšetřován
+
+# sentence level graph:
+(s1v1 / vyšetřovat-001
+        :ARG1 (s1m1 / moderátor
+            :mod (s1p1 / policejní
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s1e1 / entity)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s1v1: 3-4
+s1m1: 2-2
+s1p1: 1-1
+s1e1: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3  4 5
+Words: Praha ( js ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2j1 / js)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2j1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2         3     4         5      6       7     8         9       10   11 12 13     14 15 16 17 18       19        20   21 22   23     24      25      26   27          28
+Words: Přestože moderátor známé televizní relace Policie České republiky poručík Petr K  .  popírá ,  že by se dopustil trestného činu ,  jeho případ převzal pražský úřad vyšetřování .
+
+# sentence level graph:
+(s3b1 / but-91
+        :ARG2 (s3p1 / popírat-001
+            :ARG0 (s3k1 / K
+                :mod (s3p2 / Petr
+                    :refer-number singular)
+                :mod (s3p3 / poručík
+                    :refer-number singular)
+                :mod (s3m1 / moderátor
+                    :ARG1 (s3r1 / relace
+                        :name (s3p4 / Policie
+                            :possessor (s3r2 / republika
+                                :mod (s3c1 / Český
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :mod (s3t1 / televizní
+                            :refer-number singular)
+                        :mod (s3z1 / známý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s3d1 / dopustit-se-001
+                :ARG0 s3k1
+                :ARG1 (s3c2 / čin
+                    :mod (s3t2 / trestný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG1 (s3p5 / převzít-001
+            :ARG1 (s3p6 / případ
+                :possessor s3k1
+                :refer-number singular)
+            :ARG0 (s3u1 / úřad
+                :possessor (s3v1 / vyšetřování
+                    :ARG0 (s3e1 / entity)
+                    :ARG1 (s3e2 / entity)
+                    :refer-number singular)
+                :mod (s3p7 / pražský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s3b1: 1-1
+s3p5: 24-24
+s3p6: 23-23
+s3u1: 26-26
+s3v1: 27-27
+s3e1: 0-0
+s3e2: 0-0
+s3p7: 25-25
+s3p1: 13-13
+s3k1: 11-11,22-22
+s3p2: 10-10
+s3p3: 9-9
+s3m1: 2-2
+s3r1: 5-5
+s3p4: 6-6
+s3r2: 8-8
+s3c1: 7-7
+s3t1: 4-4
+s3z1: 3-3
+s3d1: 15-18
+s3c2: 20-20
+s3t2: 19-19
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p7 :same-entity s2p1)
+            (s3k1 :same-entity s1m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2          3  4        5            6      7     8          9  10 11 12   13       14 15     16      17  18             19 20   21 22 23  24      25 26     27 28     29
+Words: Vladimír Nechanický z  inspekce ministerstva vnitra včera informoval LN ,  že jeho oddělení ve středu předalo věc vyšetřovatelům a  Petr K  .  byl obviněn z  pokusu o  podvod .
+
+# sentence level graph:
+(s4i1 / informovat-001
+        :ARG0 (s4n1 / Nechanický
+            :mod (s4v1 / Vladimír
+                :refer-number singular)
+            :start (s4i2 / inspekce
+                :possessor (s4m1 / ministerstvo
+                    :possessor (s4v2 / vnitro
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s4v3 / včera)
+        :ARG2 (s4l1 / LN
+            :refer-number plural)
+        :ARG1 (s4a1 / and
+            :op1 (s4p1 / předat-001
+                :ARG0 (s4o1 / oddělení
+                    :possessor s4n1
+                    :refer-number singular)
+                :temporal (s4s1 / středa
+                    :refer-number singular)
+                :ARG1 (s4v4 / věc
+                    :refer-number singular)
+                :ARG2 (s4v5 / vyšetřovatel
+                    :refer-number plural)
+                :refer-number singular
+                :aspect performance)
+            :op2 (s4o2 / obvinit-001
+                :ARG2 (s4k1 / K
+                    :mod (s4p2 / Petr
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG0 (s4e1 / entity)
+                :ARG1 (s4p3 / pokus
+                    :ARG1 (s4p4 / podvod
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance))
+        :refer-number singular
+        :aspect process)
+
+# alignment:
+s4i1: 8-8
+s4n1: 2-2,12-12
+s4v1: 1-1
+s4i2: 3-4
+s4m1: 5-5
+s4v2: 6-6
+s4v3: 7-7
+s4l1: 9-9
+s4a1: 19-19
+s4p1: 11-11,16-16
+s4o1: 13-13
+s4s1: 14-15
+s4v4: 17-17
+s4v5: 18-18
+s4o2: 11-11,23-24
+s4k1: 21-21
+s4p2: 20-20
+s4e1: 0-0
+s4p3: 25-26
+s4p4: 27-28
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4v4 :same-entity s3p6)
+            (s4k1 :same-entity s3k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2         3        4           5        6  7  8  9  10 11    12     13        14 15  16 17    18        19     20  21 22  23      24    25 26  27      28   29
+Words: Pracovník tiskového oddělení policejního prezidia P  .  K  .  v  bance údajně zjišťoval ,  zda mu mohou proplatit celkem pět a  půl milionu korun na tři nekryté šeky .
+
+# sentence level graph:
+(s5z1 / zjišťovat-002
+        :clausal-marker (s5u1 / údajně)
+        :ARG0 (s5k1 / K
+            :mod (s5p1 / P)
+            :mod (s5p2 / pracovník
+                :possessor (s5o1 / oddělení
+                    :possessor (s5p3 / prezídium
+                        :mod (s5p4 / policejní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s5t1 / tiskový
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :place (s5b1 / banka
+            :refer-number singular)
+        :ARG1 (s5p5 / proplatit-001
+            :ARG0 (s5e1 / entity)
+            :ARG2 s5k1
+            :manner (s5s1 / šek
+                :mod (s5k2 / krytý
+                    :refer-number plural
+                    :polarity -)
+                :mod (s5t2 / tři
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s5m1 / milión
+                :mod (s5k3 / koruna
+                    :refer-number plural)
+                :mod (s5a1 / and
+                    :op1 (s5p6 / pět
+                        :extent (s5c1 / celkem)
+                        :refer-number singular)
+                    :op2 (s5p7 / půl
+                        :extent s5c1
+                        :refer-number singular))
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s5z1: 13-13
+s5u1: 12-12
+s5k1: 8-8,16-16
+s5p1: 6-6
+s5p2: 1-1
+s5o1: 3-3
+s5p3: 5-5
+s5p4: 4-4
+s5t1: 2-2
+s5b1: 10-11
+s5p5: 15-15,17-18
+s5e1: 0-0
+s5s1: 25-25,28-28
+s5k2: 27-27
+s5t2: 26-26
+s5m1: 23-23
+s5k3: 24-24
+s5a1: 21-21
+s5p6: 20-20
+s5c1: 19-19
+s5p7: 22-22
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5k1 :same-entity s4k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2        3  4  5         6       7  8        9  10 11          12       13   14     15
+Words: Podle inspekce MV je podezření důvodné a  obviněný je v  současnosti postaven mimo službu .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6b1 / být-007
+            :regard (s6i1 / inspekce
+                :possessor (s6m1 / MV
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s6p1 / podezření
+                :ARG1 (s6e1 / entity)
+                :refer-number singular)
+            :ARG1 (s6d1 / důvodný
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s6p2 / postavit-005
+            :ARG1 (s6o1 / obviněný
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG0 (s6e2 / entity)
+            :temporal (s6s1 / současnost
+                :refer-number singular)
+            :goal (s6s2 / služba
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s6a1: 7-7
+s6b1: 4-4
+s6i1: 1-2
+s6m1: 3-3
+s6p1: 5-5
+s6e1: 0-0
+s6d1: 6-6
+s6p2: 9-9,12-12
+s6o1: 8-8
+s6e2: 0-0
+s6s1: 10-11
+s6s2: 13-14
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6i1 :same-entity s4i2)
+            (s6m1 :same-entity s4m1)
+            (s6p1 :same-event s5z1)
+            (s6o1 :same-entity s5k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1    2  3  4  5     6         7  8  9  10      11        12   13         14 15      16      17    18     19    20 21 22   23 24    25       26     27        28     29
+Words: Petr K  .  v  pátek prohlásil ,  že se žádného trestného činu nedopustil a  označil uvedení svého plného jména v  MF Dnes za hrubé porušení zásady presumpce neviny .
+
+# sentence level graph:
+(s7p1 / prohlásit-003
+        :ARG0 (s7k1 / K
+            :mod (s7p2 / Petr
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s7p3 / pátek
+            :refer-number singular)
+        :effect (s7a1 / and
+            :op1 (s7d1 / dopustit-se-001
+                :ARG0 s7k1
+                :ARG1 (s7c1 / čin
+                    :mod (s7z1 / žádný
+                        :refer-number singular
+                        :polarity -)
+                    :mod (s7t1 / trestný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance
+                :polarity -)
+            :op2 (s7o1 / označit-001
+                :ARG0 s7k1
+                :ARG1 (s7u1 / uvedení
+                    :ARG0 (s7e1 / entity)
+                    :ARG1 (s7j1 / jméno
+                        :possessor s7k1
+                        :mod (s7p4 / plný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :place (s7m1 / MF
+                        :mod (s7d2 / Dnes))
+                    :refer-number singular)
+                :effect (s7p5 / porušení
+                    :ARG0 (s7e2 / entity)
+                    :ARG1 (s7z2 / zásada
+                        :possessor (s7p6 / presumpce
+                            :possessor (s7n1 / nevina
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s7h1 / hrubý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7p1: 6-6
+s7k1: 2-2,17-17
+s7p2: 1-1
+s7p3: 4-5
+s7a1: 14-14
+s7d1: 8-9,13-13
+s7c1: 12-12
+s7z1: 10-10
+s7t1: 11-11
+s7o1: 8-8,15-15
+s7u1: 16-16
+s7e1: 0-0
+s7j1: 19-19
+s7p4: 18-18
+s7m1: 20-21
+s7d2: 22-22
+s7p5: 23-23,25-25
+s7e2: 0-0
+s7z2: 26-26
+s7p6: 27-27
+s7n1: 28-28
+s7h1: 24-24
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7k1 :same-entity s6o1)
+            (s7c1 :same-entity s3c2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2  3          4  5    6  7  8      9      10    11       12        13 14     15        16  17      18     19 20        21          22     23
+Words: V  .  Nechanický LN řekl ,  že tomuto deníku pouze potvrdil informaci ,  kterou zpravodaj již předtím získal z  neznámých policejních zdrojů .
+
+# sentence level graph:
+(s8r1 / říci-008
+        :ARG0 (s8n1 / Nechanický
+            :mod (s8v1 / V)
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s8l1 / LN
+            :refer-number plural)
+        :clausal-marker (s8p1 / pouze)
+        :effect (s8p2 / potvrdit-001
+            :ARG2 (s8d1 / deník
+                :mod (s8t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s8n1
+            :ARG1 (s8i1 / informace
+                :ARG1-of (s8z1 / získat-002
+                    :ARG0 (s8z2 / zpravodaj
+                        :refer-number singular)
+                    :clausal-marker (s8j1 / již)
+                    :temporal (s8p3 / předtím)
+                    :source (s8z3 / zdroj
+                        :mod (s8p4 / policejní
+                            :refer-number plural)
+                        :mod (s8z4 / známý
+                            :refer-number plural
+                            :polarity -)
+                        :refer-number plural)
+                    :refer-number singular
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8r1: 5-5
+s8n1: 3-3
+s8v1: 1-1
+s8l1: 4-4
+s8p1: 10-10
+s8p2: 7-7,11-11
+s8d1: 9-9
+s8t1: 8-8
+s8i1: 12-12,14-14
+s8z1: 18-18
+s8z2: 15-15
+s8j1: 16-16
+s8p3: 17-17
+s8z3: 19-19,22-22
+s8p4: 21-21
+s8z4: 20-20
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8n1 :same-entity s4n1)
+            (s8l1 :same-entity s4l1)
+            (s8d1 :same-entity s7m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1    2  3  4         5  6     7  8  9       10 11  12 13 14   15   16      17 18    19       20 21  22     23     24   25
+Words: Petr K  .  prohlásil v  tisku ,  že nevěděl o  tom ,  že šeky jsou nekryté ,  tímto způsobem mu prý přítel vracel dluh .
+
+# sentence level graph:
+(s9p1 / prohlásit-003
+        :ARG0 (s9k1 / K
+            :mod (s9p2 / Petr
+                :refer-number singular)
+            :refer-number singular)
+        :place (s9t1 / tisk
+            :refer-number singular)
+        :effect (s9a1 / and
+            :op1 (s9v1 / vědět-001
+                :ARG0 s9k1
+                :ARG1 (s9b1 / být-007
+                    :ARG0 (s9s1 / šek
+                        :refer-number plural)
+                    :ARG1 (s9k2 / krytý
+                        :refer-number plural
+                        :polarity -)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular
+                :aspect state
+                :polarity -)
+            :op2 (s9v2 / vracet-001
+                :instrument (s9z1 / způsob
+                    :mod (s9t2 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s9p3 / přítel
+                    :refer-number singular)
+                :ARG2 s9k1
+                :clausal-marker (s9p4 / prý)
+                :ARG1 (s9d1 / dluh
+                    :refer-number singular)
+                :refer-number singular
+                :aspect activity))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s9p1: 4-4
+s9k1: 2-2,20-20
+s9p2: 1-1
+s9t1: 5-6
+s9a1: 17-17
+s9v1: 8-9
+s9b1: 10-11,13-13,15-15
+s9s1: 14-14
+s9k2: 16-16
+s9v2: 8-8,23-23
+s9z1: 19-19
+s9t2: 18-18
+s9p3: 22-22
+s9p4: 21-21
+s9d1: 24-24
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9k1 :same-entity s7k1)
+            (s9s1 :same-entity s5s1)
+            (s9z1 :same-entity s9s1)))
+
+

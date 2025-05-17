@@ -1,0 +1,352 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2     3      4 5  6  7
+Words: Další vězni chtějí z ČR na Slovensko
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1v1 / vězeň
+            :mod (s1d1 / další
+                :refer-number plural)
+            :refer-number plural)
+        :start (s1c1 / ČR
+            :refer-number singular)
+        :goal (s1s1 / Slovensko
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1v1: 2-2
+s1d1: 1-1
+s1c1: 4-5
+s1s1: 6-7
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2   3     4  5     6          7     8      9       10 11    12        13 14       15 16    17     18 19      20 21     22 23    24        25
+Words: Šedesát tři vězňů ,  kteří vykonávají trest odnětí svobody v  České republice ,  požádalo za první půlrok o  předání do věznic na území Slovenska .
+
+# sentence level graph:
+(s3p1 / požádat-001
+        :ARG0 (s3v1 / vězeň
+            :mod (s3s1 / šedesát
+                :refer-number singular)
+            :ARG0-of (s3v2 / vykonávat-002
+                :ARG1 (s3t1 / trest
+                    :ARG1 (s3o1 / odnětí
+                        :ARG0 (s3e1 / entity)
+                        :ARG1 (s3s2 / svoboda
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :place (s3r1 / republika
+                    :mod (s3c1 / český
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect habitual)
+            :mod (s3t2 / tři
+                :refer-number plural)
+            :refer-number plural)
+        :ARG2 (s3e2 / entity)
+        :duration (s3p2 / půlrok
+            :mod (s3p3 / první
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3p4 / předání
+            :ARG0 (s3e3 / entity)
+            :ARG1 (s3e4 / entity)
+            :goal (s3v3 / věznice
+                :place (s3u1 / území
+                    :possessor (s3s3 / Slovensko
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3p1: 14-14
+s3v1: 3-3,5-5
+s3s1: 1-1
+s3v2: 6-6
+s3t1: 7-7
+s3o1: 8-8
+s3e1: 0-0
+s3s2: 9-9
+s3r1: 10-10,12-12
+s3c1: 11-11
+s3t2: 2-2
+s3e2: 0-0
+s3p2: 15-15,17-17
+s3p3: 16-16
+s3p4: 18-19
+s3e3: 0-0
+s3e4: 0-0
+s3v3: 20-21
+s3u1: 22-23
+s3s3: 24-24
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3v1 :same-entity s1v1)
+            (s3r1 :same-entity s1c1)
+            (s3s3 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1          2  3   4     5       6      7           8           9        10     11 12     13    14
+Words: Informoval o  tom včera tiskový mluvčí generálního ředitelství Vězeňské služby ČR Eduard Vacek .
+
+# sentence level graph:
+(s4i1 / informovat-001
+        :ARG1 (s4t1 / ten
+            :refer-number singular)
+        :ARG2 (s4e1 / entity)
+        :temporal (s4v1 / včera)
+        :ARG0 (s4v2 / Vacek
+            :mod (s4e2 / Eduard
+                :refer-number singular)
+            :mod (s4m1 / mluvčí
+                :mod (s4t2 / tiskový
+                    :refer-number singular)
+                :possessor (s4r1 / ředitelství
+                    :possessor (s4s1 / služba
+                        :mod (s4v3 / Vězeňský
+                            :refer-number singular)
+                        :possessor (s4c1 / ČR
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s4g1 / generální
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect process)
+
+# alignment:
+s4i1: 1-1
+s4t1: 2-3
+s4e1: 0-0
+s4v1: 4-4
+s4v2: 13-13
+s4e2: 12-12
+s4m1: 6-6
+s4t2: 5-5
+s4r1: 8-8
+s4s1: 10-10
+s4v3: 9-9
+s4c1: 11-11
+s4g1: 7-7
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3p1)
+            (s4c1 :same-entity s3r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2  3  4    5      6    7      8   9           10
+Words: Dodal ,  že loni podalo tuto žádost 200 odsouzených .
+
+# sentence level graph:
+(s5d1 / dodat-005
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :effect (s5p1 / podat-008
+            :predicative-noun (s5z1 / žádost
+                :mod (s5t1 / tento
+                    :refer-number singular)
+                :ARG0 s5o1
+                :ARG1 (s5e2 / entity)
+                :ARG2 s5e3
+                :refer-number singular)
+            :ARG2 (s5e3 / entity)
+            :temporal (s5v1 / vloni)
+            :ARG0 (s5o1 / odsouzený
+                :mod (s5x3 / 200)
+                :refer-number plural)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5d1: 1-1
+s5e1: 0-0
+s5p1: 3-3,5-5
+s5z1: 7-7
+s5t1: 6-6
+s5e2: 0-0
+s5e3: 0-0
+s5v1: 4-4
+s5o1: 9-9
+s5x3: 8-8
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4v2)
+            (s5z1 :same-entity s3p4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2         3    4      5  6     7  8      9  10  11   12      13 14          15
+Words: Praktické předávání však začalo až letos v  červnu ,  kdy bylo předáno 16 odsouzených .
+
+# sentence level graph:
+(s6z1 / začít-002
+        :clausal-marker (s6v1 / však)
+        :ARG0 (s6p1 / předávání
+            :ARG0 (s6e1 / entity)
+            :ARG1 (s6e2 / entity)
+            :goal (s6e3 / entity)
+            :mod (s6p2 / praktický
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s6l1 / letos
+            :clausal-marker (s6a1 / až))
+        :temporal (s6c1 / červen
+            :temporal-of (s6p3 / předat-002
+                :ARG0 (s6e4 / entity)
+                :goal (s6e5 / entity)
+                :ARG1 (s6o1 / odsouzený
+                    :mod (s6x1 / 16)
+                    :refer-number plural)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6z1: 4-4
+s6v1: 3-3
+s6p1: 2-2
+s6e1: 0-0
+s6e2: 0-0
+s6e3: 0-0
+s6p2: 1-1
+s6l1: 6-6
+s6a1: 5-5
+s6c1: 7-8,10-10
+s6p3: 11-12
+s6e4: 0-0
+s6e5: 0-0
+s6o1: 14-14
+s6x1: 13-13
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1     2   3     4         5        6    7
+Words: Další dva budou převezeni počátkem září .
+
+# sentence level graph:
+(s7p1 / převézt-001
+        :ARG1 (s7d1 / dva
+            :mod (s7d2 / další
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s7e1 / entity)
+        :start (s7e2 / entity)
+        :goal (s7e3 / entity)
+        :temporal (s7z1 / září
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s7p1: 3-4
+s7d1: 2-2
+s7d2: 1-1
+s7e1: 0-0
+s7e2: 0-0
+s7e3: 0-0
+s7z1: 5-6
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1    2     3         4    5  6     7   8        9         10                11       12
+Words: Malý počet předaných osob je podle něj způsoben především administrativními problémy .
+
+# sentence level graph:
+(s8z1 / způsobit-002
+        :ARG1 (s8p1 / počet
+            :mod (s8o1 / osoba
+                :mod (s8p2 / předaný
+                    :refer-number plural)
+                :refer-number plural)
+            :mod (s8m1 / malý
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s8e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :clausal-marker (s8p3 / především)
+        :ARG0 (s8p4 / problém
+            :mod (s8a1 / administrativní
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8z1: 5-5,8-8
+s8p1: 2-2
+s8o1: 4-4
+s8p2: 3-3
+s8m1: 1-1
+s8e1: 6-7
+s8p3: 9-9
+s8p4: 11-11
+s8a1: 10-10
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8o1 :same-entity s5o1)
+            (s8e1 :same-entity s5e1)))
+
+

@@ -1,0 +1,228 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2          3 4      5 6
+Words: Ford připravuje ; výrobu v Polsku
+
+# sentence level graph:
+(s1p1 / připravovat-003
+        :ARG0 (s1f1 / Ford
+            :refer-number singular)
+        :ARG1 (s1v1 / výroba
+            :place (s1p2 / Polsko
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1p1: 2-2
+s1f1: 1-1
+s1v1: 4-4
+s1p2: 5-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2
+Words: Varšava -
+
+# sentence level graph:
+(s2v1 / Varšava
+        :refer-number singular)
+
+# alignment:
+s2v1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2     3      4    5       6    7  8       9      10     11 12      13 14      15      16
+Words: Ještě během tohoto roku započne Ford s  montáží modelů Escort a  Transit v  polském Plonsku .
+
+# sentence level graph:
+(s3z1 / započít-001
+        :clausal-marker (s3j1 / ještě)
+        :temporal (s3r1 / rok
+            :mod (s3t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3f1 / Ford
+            :refer-number singular)
+        :ARG1 (s3m1 / montáž
+            :ARG1 (s3m2 / model
+                :name (s3a1 / and
+                    :op1 (s3e1 / Escort
+                        :refer-number singular)
+                    :op2 (s3t2 / transit
+                        :refer-number singular))
+                :refer-number plural)
+            :refer-number singular)
+        :place (s3p1 / Plonsk
+            :mod (s3p2 / polský
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s3z1: 5-5
+s3j1: 1-1
+s3r1: 2-2,4-4
+s3t1: 3-3
+s3f1: 6-6
+s3m1: 7-8
+s3m2: 9-9
+s3a1: 11-11
+s3e1: 10-10
+s3t2: 12-12
+s3p1: 13-13,15-15
+s3p2: 14-14
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3f1 :same-entity s1f1)
+            (s3m1 :same-entity s1v1)
+            (s3p2 :same-entity s1p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2  3  4     5      6  7       8         9     10    11         12
+Words: Zpočátku se má roční výroba v  Plonsku pohybovat kolem 30000 automobilů .
+
+# sentence level graph:
+(s4p1 / pohybovat-se-001
+        :temporal (s4z1 / zpočátku)
+        :ARG0 (s4v1 / výroba
+            :place (s4p2 / Plonsk
+                :refer-number singular)
+            :mod (s4r1 / roční
+                :refer-number singular)
+            :refer-number singular)
+        :place (s4a1 / automobil
+            :mod (s4x1 / 30000)
+            :refer-number plural)
+        :aspect activity)
+
+# alignment:
+s4p1: 2-3,8-8
+s4z1: 1-1
+s4v1: 5-5
+s4p2: 6-7
+s4r1: 4-4
+s4a1: 9-9,11-11
+s4x1: 10-10
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4p2 :same-entity s3p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1        2    3   4      5      6     7      8      9    10 11    12 13   14 15        16
+Words: Potřebné díly pro montáž dodají kromě jiných závody Ford -  Werke AG Genk a  Saarlouis .
+
+# sentence level graph:
+(s5d1 / dodat-002
+        :ARG1 (s5d2 / díl
+            :affectee (s5m1 / montáž
+                :refer-number singular)
+            :mod (s5p1 / potřebný
+                :refer-number plural)
+            :refer-number plural)
+        :ARG2 (s5e1 / entity)
+        :subtraction (s5j1 / jiný
+            :refer-number plural)
+        :ARG0 (s5z1 / závod
+            :name (s5a1 / and
+                :op1 (s5x1 / #Forn
+                    :FPHR (s5f1 / Ford)
+                    :FPHR (s5x2 / -)
+                    :FPHR (s5w1 / Werke)
+                    :FPHR (s5a2 / AG)
+                    :FPHR (s5g1 / Genk))
+                :op2 (s5s1 / Saarlouis))
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s5d1: 5-5
+s5d2: 2-2
+s5m1: 3-4
+s5p1: 1-1
+s5e1: 0-0
+s5j1: 6-7
+s5z1: 8-8
+s5a1: 14-14
+s5x1: 0-0
+s5f1: 9-9
+s5x2: 10-10
+s5w1: 11-11
+s5a2: 12-12
+s5g1: 13-13
+s5s1: 15-15
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5m1 :same-entity s3m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2     3      4  5       6       7     8  9  10   11         12     13  14         15
+Words: V  novém závodu s  výrobní plochou 20000 m  2  bude zaměstnáno zhruba 250 pracovníků .
+
+# sentence level graph:
+(s6z1 / zaměstnat-001
+        :place (s6z2 / závod
+            :mod (s6n1 / nový
+                :refer-number singular)
+            :companion (s6p1 / plocha
+                :mod (s6v1 / výrobní
+                    :refer-number singular)
+                :mod (s6m1 / m_2
+                    :mod (s6x1 / 20000))
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s6e1 / entity)
+        :ARG1 (s6p2 / pracovník
+            :mod (s6x2 / 250
+                :extent (s6z3 / zhruba))
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6z1: 10-11
+s6z2: 1-1,3-3
+s6n1: 2-2
+s6p1: 4-4,6-6
+s6v1: 5-5
+s6m1: 8-9
+s6x1: 7-7
+s6e1: 0-0
+s6p2: 14-14
+s6x2: 13-13
+s6z3: 12-12
+
+# document level annotation:
+(s6s0 / sentence)
+
+

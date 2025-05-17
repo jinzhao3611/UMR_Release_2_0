@@ -1,0 +1,289 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2 3      4      5
+Words: Interrupce v Polsku nadále ilegální
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1i1 / interrupce
+            :refer-number plural)
+        :place (s1p1 / Polsko
+            :refer-number singular)
+        :duration (s1n1 / nadále)
+        :ARG1 (s1i2 / ilegální
+            :refer-number plural)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1i1: 1-1
+s1p1: 2-3
+s1n1: 4-4
+s1i2: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2
+Words: Varšava -
+
+# sentence level graph:
+(s2v1 / Varšava
+        :refer-number singular)
+
+# alignment:
+s2v1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2        3     4  5     6          7           8    9          10    11     12 13         14        15     16         17        18           19      20        21          22
+Words: Poslancům polského Sejmu se včera nepodařilo přehlasovat veto prezidenta Lecha Walesy na novelizaci trestního zákona umožňující částečnou liberalizaci umělého přerušení těhotenství .
+
+# sentence level graph:
+(s3p1 / podařit-se-001
+        :ARG0 (s3p2 / poslanec
+            :possessor (s3s1 / Sejm
+                :mod (s3p3 / polský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :temporal (s3v1 / včera)
+        :ARG1 (s3p4 / přehlasovat-001
+            :ARG0 s3p2
+            :ARG1 (s3v2 / veto
+                :ARG0 (s3w1 / Walesa
+                    :mod (s3l1 / Lech
+                        :refer-number singular)
+                    :mod (s3p5 / prezident
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s3n1 / novelizace
+                    :ARG1 (s3z1 / zákon
+                        :mod (s3t1 / trestní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s3u1 / umožňující
+                        :ARG1 (s3l2 / liberalizace
+                            :ARG1 (s3p6 / přerušení
+                                :ARG0 (s3e1 / entity)
+                                :ARG1 (s3t2 / těhotenství
+                                    :refer-number singular)
+                                :manner (s3u2 / umělý
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :mod (s3c1 / částečný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s3p1: 4-4,6-6
+s3p2: 1-1
+s3s1: 3-3
+s3p3: 2-2
+s3v1: 5-5
+s3p4: 7-7
+s3v2: 8-8
+s3w1: 11-11
+s3l1: 10-10
+s3p5: 9-9
+s3n1: 12-13
+s3z1: 15-15
+s3t1: 14-14
+s3u1: 16-16
+s3l2: 18-18
+s3p6: 20-20
+s3e1: 0-0
+s3t2: 21-21
+s3u2: 19-19
+s3c1: 17-17
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p3 :same-entity s1p1)
+            (s3p6 :same-entity s1i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1   2         3        4    5         6   7        8  9     10   11  12 13 14 15      16        17
+Words: Pro odmítnutí Walesova veta hlasovalo 232 poslanců ,  proti bylo 157 a  22 se zdrželo hlasování .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4h1 / hlasovat-003
+            :ARG1 (s4o1 / odmítnutí
+                :ARG1 (s4v1 / veto
+                    :ARG0 (s4w1 / Walesa
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s4e1 / entity)
+                :refer-number singular)
+            :ARG0 (s4p1 / poslanec
+                :mod (s4x1 / 232)
+                :refer-number plural)
+            :refer-number singular
+            :aspect activity)
+        :op2 (s4b1 / být-011
+            :affectee (s4e2 / entity)
+            :ARG0 (s4x2 / 157
+                :refer-number singular)
+            :refer-number singular
+            :aspect activity)
+        :op3 (s4z1 / zdržet-se-001
+            :ARG0 (s4x3 / 22
+                :refer-number singular)
+            :ARG1 (s4h2 / hlasování
+                :ARG0 s4p1
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s4a1: 12-12
+s4h1: 5-5
+s4o1: 1-2
+s4v1: 4-4
+s4w1: 3-3
+s4e1: 0-0
+s4p1: 7-7
+s4x1: 6-6
+s4b1: 10-10
+s4e2: 0-0
+s4x2: 11-11
+s4z1: 14-15
+s4x3: 13-13
+s4h2: 16-16
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4v1 :same-entity s3v2)
+            (s4w1 :same-entity s3w1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2            3              4    5  6     7      8      9        10            11      12 13    14    15     16  17    18
+Words: K  přehlasování prezidentského veta je podle polské ústavy nezbytná dvoutřetinová většina ,  která včera činila 274 hlasů .
+
+# sentence level graph:
+(s5b1 / být-007
+        :ARG1 (s5n1 / nezbytný
+            :manner (s5p1 / přehlasování
+                :ARG1 (s5v1 / veto
+                    :mod (s5p2 / prezidentský
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s5e1 / entity)
+                :refer-number singular)
+            :regard (s5u1 / ústava
+                :mod (s5p3 / polský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5v2 / většina
+            :mod (s5d1 / dvoutřetinový
+                :refer-number singular)
+            :ARG0-of (s5c1 / činit-007
+                :temporal (s5v3 / včera)
+                :extent (s5h1 / hlas
+                    :mod (s5x1 / 274)
+                    :refer-number plural)
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5b1: 5-5
+s5n1: 9-9
+s5p1: 1-2
+s5v1: 4-4
+s5p2: 3-3
+s5e1: 0-0
+s5u1: 6-6,8-8
+s5p3: 7-7
+s5v2: 11-11,13-13
+s5d1: 10-10
+s5c1: 15-15
+s5v3: 14-14
+s5h1: 17-17
+s5x1: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p3 :same-entity s3p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1        2         3         4  5  6  7      8     9  10     11         12      13    14      15
+Words: Výsledky hlasování znamenají ,  že v  Polsku budou i  nadále interrupce legálně téměř nemožné .
+
+# sentence level graph:
+(s6z1 / znamenat-001
+        :ARG0 (s6v1 / výsledek
+            :possessor (s6h1 / hlasování
+                :ARG0 (s6e1 / entity)
+                :refer-number singular)
+            :refer-number plural)
+        :ARG1 (s6b1 / být-159
+            :place (s6p1 / Polsko
+                :refer-number singular)
+            :clausal-marker (s6i1 / i)
+            :duration (s6n1 / nadále)
+            :ARG0 (s6i2 / interrupce
+                :refer-number plural)
+            :manner (s6l1 / legálně)
+            :extent (s6t1 / téměř)
+            :ARG1 (s6m1 / možný
+                :refer-number plural
+                :polarity -)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s6z1: 3-3
+s6v1: 1-1
+s6h1: 2-2
+s6e1: 0-0
+s6b1: 5-5,8-8
+s6p1: 6-7
+s6i1: 9-9
+s6n1: 10-10
+s6i2: 11-11
+s6l1: 12-12
+s6t1: 13-13
+s6m1: 14-14
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6h1 :same-entity s4h2)
+            (s6p1 :same-entity s5p3)
+            (s6i2 :same-entity s3p6)))
+
+

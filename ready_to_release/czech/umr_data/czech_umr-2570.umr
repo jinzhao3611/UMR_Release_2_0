@@ -1,0 +1,1208 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2 3   4       5
+Words: KB a IPB vyplatí dividendy
+
+# sentence level graph:
+(s1v1 / vyplatit-001
+        :ARG0 (s1a1 / and
+            :op1 (s1k1 / KB)
+            :op2 (s1i1 / IPB))
+        :ARG1 (s1d1 / dividenda
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1v1: 4-4
+s1a1: 2-2
+s1k1: 1-1
+s1i1: 3-3
+s1d1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3  4 5
+Words: Praha ( ip ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2i1 / ip)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2i1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2      3     4  5         6       7   8     9       10       11    12      13    14       15
+Words: Na každou akcii o  nominální hodnotě 500 korun vyplatí Komerční banka šedesát korun dividend .
+
+# sentence level graph:
+(s3v1 / vyplatit-001
+        :regard (s3a1 / akcie
+            :companion (s3h1 / hodnota
+                :mod (s3n1 / nominální
+                    :refer-number singular)
+                :mod (s3k1 / koruna
+                    :mod (s3x1 / 500)
+                    :refer-number plural)
+                :refer-number singular)
+            :mod (s3k2 / každý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3b1 / banka
+            :mod (s3k3 / Komerční
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3k4 / koruna
+            :mod (s3d1 / dividenda
+                :refer-number plural)
+            :mod (s3s1 / šedesát
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s3v1: 9-9
+s3a1: 1-1,3-3
+s3h1: 4-4,6-6
+s3n1: 5-5
+s3k1: 8-8
+s3x1: 7-7
+s3k2: 2-2
+s3b1: 11-11
+s3k3: 10-10
+s3k4: 13-13
+s3d1: 14-14
+s3s1: 12-12
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3b1 :same-entity s1k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2 3   4 5     6     7       8     9
+Words: Rozhodla o tom v pátek valná hromada banky .
+
+# sentence level graph:
+(s4r1 / rozhodnout-002
+        :ARG1 (s4t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s4p1 / pátek
+            :refer-number singular)
+        :ARG0 (s4h1 / hromada
+            :possessor (s4b1 / banka
+                :refer-number singular)
+            :mod (s4v1 / valný
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s4r1: 1-1
+s4t1: 2-3
+s4p1: 4-5
+s4h1: 7-7
+s4b1: 8-8
+s4v1: 6-6
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3v1)
+            (s4b1 :same-entity s3b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2  3         4         5    6         7  8     9     10       11    12 13 14 15     16   17
+Words: Nárok na vyplacení dividendy mají akcionáři ,  kteří budou držiteli akcií KB 29 .  května 1994 .
+
+# sentence level graph:
+(s5m1 / mít-032
+        :predicative-noun (s5n1 / nárok
+            :ARG1 (s5v1 / vyplacení
+                :ARG1 (s5d1 / dividenda
+                    :refer-number singular)
+                :ARG0 (s5e1 / entity)
+                :ARG2 s5a1
+                :refer-number singular)
+            :ARG0 s5a1
+            :refer-number singular)
+        :ARG0 (s5a1 / akcionář
+            :ARG0-of (s5b1 / být-007
+                :ARG1 (s5d2 / držitel
+                    :ARG1 (s5a2 / akcie
+                        :possessor (s5k1 / KB
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number plural)
+                :temporal (s5k2 / květen
+                    :mod (s5x3 / 29)
+                    :possessor (s5x4 / 1994)
+                    :refer-number singular)
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s5m1: 5-5
+s5n1: 1-1
+s5v1: 2-3
+s5d1: 4-4
+s5e1: 0-0
+s5a1: 6-6,8-8
+s5b1: 9-9
+s5d2: 10-10
+s5a2: 11-11
+s5k1: 12-12
+s5k2: 15-15
+s5x3: 13-13
+s5x4: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5d1 :same-entity s3s1)
+            (s5a2 :same-entity s3a1)
+            (s5k1 :same-entity s4b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2     3        4       5     6  7  8  9      10
+Words: Dividendy budou vyplácet pobočky banky do 29 .  června .
+
+# sentence level graph:
+(s6v1 / vyplácet-001
+        :ARG1 (s6d1 / dividenda
+            :refer-number plural)
+        :ARG2 (s6e1 / entity)
+        :ARG0 (s6p1 / pobočka
+            :possessor (s6b1 / banka
+                :refer-number singular)
+            :refer-number plural)
+        :temporal (s6c1 / červen
+            :mod (s6x1 / 29)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s6v1: 2-3
+s6d1: 1-1
+s6e1: 0-0
+s6p1: 4-4
+s6b1: 5-5
+s6c1: 6-6,9-9
+s6x1: 7-7
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6d1 :same-entity s5d1)
+            (s6b1 :same-entity s5k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1           2    3        4        5     6        7    8      9      10   11  12 13    14 15       16   17  18 19
+Words: Hospodaření naší největší obchodní banky skončilo loni čistým ziskem 2196 mld .  korun (  předloni 3.22 mld )  .
+
+# sentence level graph:
+(s7s1 / skončit-006
+        :ARG0 (s7h1 / hospodaření
+            :ARG0 (s7b1 / banka
+                :possessor (s7e1 / entity
+                    :refer-number plural
+                    :refer-person 1st)
+                :mod (s7o1 / obchodní
+                    :refer-number singular)
+                :mod (s7v1 / velký
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s7v2 / vloni)
+        :instrument (s7z1 / zisk
+            :mod (s7c1 / čistý
+                :refer-number singular)
+            :mod (s7m1 / miliarda
+                :mod (s7k1 / koruna
+                    :refer-number plural)
+                :mod (s7x1 / 2196))
+            :refer-number singular)
+        :parenthesis (s7e2 / event
+            :temporal (s7p1 / předloni)
+            :extent (s7m2 / miliarda
+                :mod (s7x2 / 3.22))
+            :aspect state)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7s1: 6-6
+s7h1: 1-1
+s7b1: 5-5
+s7e1: 2-2
+s7o1: 4-4
+s7v1: 3-3
+s7v2: 7-7
+s7z1: 9-9
+s7c1: 8-8
+s7m1: 11-11
+s7k1: 13-13
+s7x1: 10-10
+s7e2: 0-0
+s7p1: 15-15
+s7m2: 17-17
+s7x2: 16-16
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7b1 :same-entity s6b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1        2       3  4  5      6  7    8  9   10  11 12    13
+Words: Základní kapitál KB se zvýšil z  pěti na 7.5 mld .  korun .
+
+# sentence level graph:
+(s8z1 / zvýšit-se-001
+        :ARG0 (s8k1 / kapitál
+            :possessor (s8k2 / KB
+                :refer-number singular)
+            :mod (s8z2 / základní
+                :refer-number singular)
+            :refer-number singular)
+        :source (s8m1 / miliarda
+            :mod (s8p1 / pět
+                :refer-number plural))
+        :ARG1 (s8m2 / miliarda
+            :mod (s8k3 / koruna
+                :refer-number plural)
+            :mod (s8x1 / 7.5))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8z1: 4-5
+s8k1: 2-2
+s8k2: 3-3
+s8z2: 1-1
+s8m1: 0-0
+s8p1: 7-7
+s8m2: 8-8,10-10
+s8k3: 12-12
+s8x1: 9-9
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8k2 :same-entity s7b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1       2  3     4     5        6  7    8  9    10  11 12    13 14       15    16 17    18 19      20 21   22 23   24  25 26    27
+Words: Rezervy na krytí ztrát vzrostly z  9.36 na 15.2 mld .  korun ,  rezervní fondy ze zisku se snížily z  7.44 na 5.71 mld .  korun .
+
+# sentence level graph:
+(s9a1 / and
+        :op1 (s9v1 / vzrůst-001
+            :ARG0 (s9r1 / rezerva
+                :purpose (s9k1 / krytí
+                    :ARG0 (s9e1 / entity)
+                    :ARG1 (s9z1 / ztráta
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number plural)
+            :source (s9x1 / 9.36)
+            :ARG1 (s9m1 / miliarda
+                :mod (s9k2 / koruna
+                    :refer-number plural)
+                :mod (s9x2 / 15.2))
+            :refer-number plural
+            :aspect performance)
+        :op2 (s9s1 / snížit-se-001
+            :ARG0 (s9f1 / fond
+                :source (s9z2 / zisk
+                    :refer-number singular)
+                :mod (s9r2 / rezervní
+                    :refer-number plural)
+                :refer-number plural)
+            :source (s9x3 / 7.44)
+            :ARG1 (s9m2 / miliarda
+                :mod (s9k3 / koruna
+                    :refer-number plural)
+                :mod (s9x4 / 5.71))
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s9a1: 13-13
+s9v1: 5-5
+s9r1: 1-1
+s9k1: 2-3
+s9e1: 0-0
+s9z1: 4-4
+s9x1: 6-7
+s9m1: 8-8,10-10
+s9k2: 12-12
+s9x2: 9-9
+s9s1: 18-19
+s9f1: 15-15
+s9z2: 16-17
+s9r2: 14-14
+s9x3: 20-21
+s9m2: 22-22,24-24
+s9k3: 26-26
+s9x4: 23-23
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1          2           3  4  5     6         7        8  9        10      11      12 13     14   15 16
+Words: Kapitálová přiměřenost KB (  podíl vlastního kapitálu k  rizikově vázaným aktivům )  činila 6.78 %  .
+
+# sentence level graph:
+(s10c1 / činit-007
+        :ARG0 (s10i1 / identity-91
+            :ARG1 (s10p1 / přiměřenost
+                :possessor (s10k1 / KB)
+                :mod (s10k2 / kapitálový
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s10p2 / podíl
+                :ARG0 (s10k3 / kapitál
+                    :mod (s10v1 / vlastní
+                        :refer-number singular)
+                    :refer-number singular)
+                :regard (s10a1 / aktivum
+                    :mod (s10v2 / vázaný
+                        :manner (s10r1 / rizikově)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular))
+        :extent (s10x1 / #Percnt
+            :mod (s10x2 / 6.78))
+        :aspect activity)
+
+# alignment:
+s10c1: 13-13
+s10i1: 4-4
+s10p1: 2-2
+s10k1: 3-3
+s10k2: 1-1
+s10p2: 5-5
+s10k3: 7-7
+s10v1: 6-6
+s10a1: 8-8,11-11
+s10v2: 10-10
+s10r1: 9-9
+s10x1: 15-15
+s10x2: 14-14
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10k1 :same-entity s8k2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1     2          3       4  5            6       7  8    9      10 11 12 13 14 15
+Words: Podíl soukromého sektoru na poskytnutých úvěrech se loni zvýšil ze 30 na 54 %  .
+
+# sentence level graph:
+(s11z1 / zvýšit-se-001
+        :ARG0 (s11p1 / podíl
+            :ARG0 (s11s1 / sektor
+                :mod (s11s2 / soukromý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s11u1 / úvěr
+                :mod (s11p2 / poskytnutý
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :temporal (s11v1 / vloni)
+        :source (s11x1 / #Percnt
+            :mod (s11x2 / 30))
+        :ARG1 (s11x3 / #Percnt
+            :mod (s11x4 / 54))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s11z1: 7-7,9-9
+s11p1: 1-1
+s11s1: 3-3
+s11s2: 2-2
+s11u1: 4-4,6-6
+s11p2: 5-5
+s11v1: 8-8
+s11x1: 0-0
+s11x2: 11-11
+s11x3: 12-12,14-14
+s11x4: 13-13
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11v1 :same-entity s7v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1        2    3  4      5   6     7    8  9     10    11       12 13        14       15   16     17         18
+Words: Obchodní plán KB počítá pro další léta s  další emisí obligací ,  konkrétní podmínky však nebyly zveřejněny .
+
+# sentence level graph:
+(s12b1 / but-91
+        :ARG1 (s12p1 / počítat-007
+            :ARG0 (s12p2 / plán
+                :ARG0 (s12k1 / KB)
+                :mod (s12o1 / obchodní
+                    :refer-number singular)
+                :refer-number singular)
+            :duration (s12r1 / rok
+                :mod (s12d1 / další
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s12e1 / emise
+                :ARG1 (s12o2 / obligace
+                    :refer-number plural)
+                :mod (s12d2 / další
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG2 (s12z1 / zveřejnit-001
+            :ARG1 (s12p3 / podmínka
+                :mod (s12k2 / konkrétní
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 (s12e2 / entity)
+            :refer-number plural
+            :aspect performance
+            :polarity -))
+
+# alignment:
+s12b1: 15-15
+s12p1: 4-4
+s12p2: 2-2
+s12k1: 3-3
+s12o1: 1-1
+s12r1: 5-5,7-7
+s12d1: 6-6
+s12e1: 8-8,10-10
+s12o2: 11-11
+s12d2: 9-9
+s12z1: 16-17
+s12p3: 14-14
+s12k2: 13-13
+s12e2: 0-0
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12k1 :same-entity s10k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1      2       3  4      5     6       7    8          9  10       11    12
+Words: Valnou hromadu na minulý pátek svolala také Investiční a  Poštovní banka .
+
+# sentence level graph:
+(s13s1 / svolat-001
+        :ARG1 (s13h1 / hromada
+            :mod (s13v1 / valný
+                :refer-number singular)
+            :duration (s13p1 / pátek
+                :mod (s13m1 / minulý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s13t1 / také)
+        :ARG0 (s13b1 / banka
+            :mod (s13a1 / and
+                :op1 (s13i1 / Investiční
+                    :refer-number singular)
+                :op2 (s13p2 / Poštovní
+                    :refer-number singular))
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s13s1: 6-6
+s13h1: 2-2
+s13v1: 1-1
+s13p1: 3-3,5-5
+s13m1: 4-4
+s13t1: 7-7
+s13b1: 11-11
+s13a1: 9-9
+s13i1: 8-8
+s13p2: 10-10
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13p1 :same-entity s4p1)
+            (s13b1 :same-entity s1i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1   2       3          4  5   6                7         8
+Words: IPB vyplatí akcionářům za rok dvacetiprocentní dividendu .
+
+# sentence level graph:
+(s14v1 / vyplatit-001
+        :ARG0 (s14i1 / IPB
+            :refer-number singular)
+        :ARG2 (s14a1 / akcionář
+            :refer-number plural)
+        :duration (s14r1 / rok
+            :refer-number singular)
+        :ARG1 (s14d1 / dividenda
+            :mod (s14d2 / dvacetiprocentní
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s14v1: 2-2
+s14i1: 1-1
+s14a1: 3-3
+s14r1: 4-5
+s14d1: 7-7
+s14d2: 6-6
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14i1 :same-entity s13b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1  2     3               4     5   6   7        8   9     10        11
+Words: Na jednu tisícikorunovou akcii IPB tak připadne 200 korun dividendy .
+
+# sentence level graph:
+(s15p1 / připadnout-003
+        :clausal-marker (s15t1 / tak)
+        :ARG1 (s15a1 / akcie
+            :possessor (s15i1 / IPB
+                :refer-number singular)
+            :mod (s15t2 / tisícikorunový
+                :refer-number singular)
+            :mod (s15j1 / jeden
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s15k1 / koruna
+            :mod (s15d1 / dividenda
+                :refer-number singular)
+            :mod (s15x1 / 200)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s15p1: 7-7
+s15t1: 6-6
+s15a1: 1-1,4-4
+s15i1: 5-5
+s15t2: 3-3
+s15j1: 2-2
+s15k1: 9-9
+s15d1: 10-10
+s15x1: 8-8
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15i1 :same-entity s14i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1   2    3   4  5  6           7  8     9  10      11        12   13        14 15    16   17       18    19  20  21 22 23 24 25   26
+Words: Jak jsme již v  LN informovali ,  nárok na výplatu dividendy mají akcionáři ,  kteří byli držiteli akcií IPB dne 22 .  4  .  1994 .
+
+# sentence level graph:
+(s16m1 / mít-032
+        :parenthesis (s16i1 / informovat-001
+            :place (s16l1 / LN
+                :refer-number plural)
+            :temporal (s16j1 / již)
+            :ARG0 (s16e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :ARG1 s16m1
+            :ARG2 (s16e2 / entity)
+            :refer-number plural
+            :aspect process)
+        :predicative-noun (s16n1 / nárok
+            :ARG1 (s16v1 / výplata
+                :ARG1 (s16d1 / dividenda
+                    :refer-number singular)
+                :ARG0 (s16e3 / entity)
+                :ARG2 s16a1
+                :refer-number singular)
+            :ARG0 s16a1
+            :refer-number singular)
+        :ARG0 (s16a1 / akcionář
+            :ARG0-of (s16b1 / být-007
+                :ARG1 (s16d2 / držitel
+                    :ARG1 (s16a2 / akcie
+                        :possessor (s16i2 / IPB)
+                        :refer-number plural)
+                    :refer-number plural)
+                :temporal (s16d3 / den
+                    :mod (s16x4 / 4
+                        :possessor (s16x5 / 1994)
+                        :mod (s16x6 / 22))
+                    :refer-number singular)
+                :refer-number plural
+                :aspect activity)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s16m1: 12-12
+s16i1: 1-2,6-6
+s16l1: 4-5
+s16j1: 3-3
+s16e1: 0-0
+s16e2: 0-0
+s16n1: 8-8
+s16v1: 9-10
+s16d1: 11-11
+s16e3: 0-0
+s16a1: 13-13,15-15
+s16b1: 16-16
+s16d2: 17-17
+s16a2: 18-18
+s16i2: 19-19
+s16d3: 20-20
+s16x4: 23-23
+s16x5: 25-25
+s16x6: 21-21
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16d1 :same-entity s15k1)
+            (s16i2 :same-entity s15i1)
+            (s16x5 :same-entity s5x4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s17-root
+# :: snt17
+Index: 1       2        3    4        5  6 7      8
+Words: Výplata dividend bude ukončena 30 . června .
+
+# sentence level graph:
+(s17u1 / ukončit-001
+        :ARG1 (s17v1 / výplata
+            :ARG1 (s17d1 / dividenda
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s17e1 / entity)
+        :temporal (s17c1 / červen
+            :mod (s17x1 / 30)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s17u1: 3-4
+s17v1: 1-1
+s17d1: 2-2
+s17e1: 0-0
+s17c1: 7-7
+s17x1: 5-5
+
+# document level annotation:
+(s17s0 / sentence
+    :coref ((s17v1 :same-event s14v1)
+            (s17d1 :same-entity s16d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s18-root
+# :: snt18
+Index: 1     2          3      4     5       6   7       8        9           10 11   12     13     14  15      16    17
+Words: Podle auditorské zprávy firmy Coopers and Lybrand skončilo hospodaření IB loni čistým ziskem 352 milionů korun .
+
+# sentence level graph:
+(s18s1 / skončit-006
+        :regard (s18z1 / zpráva
+            :mod (s18a1 / auditorský
+                :refer-number singular)
+            :ARG0 (s18f1 / firma
+                :name (s18x1 / #Forn
+                    :FPHR (s18c1 / Coopers)
+                    :FPHR (s18a2 / and)
+                    :FPHR (s18l1 / Lybrand))
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s18h1 / hospodaření
+            :ARG0 (s18i1 / IB)
+            :refer-number singular)
+        :temporal (s18v1 / vloni)
+        :instrument (s18z2 / zisk
+            :mod (s18c2 / čistý
+                :refer-number singular)
+            :mod (s18m1 / milión
+                :mod (s18k1 / koruna
+                    :refer-number plural)
+                :mod (s18x2 / 352)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s18s1: 8-8
+s18z1: 1-1,3-3
+s18a1: 2-2
+s18f1: 4-4
+s18x1: 0-0
+s18c1: 5-5
+s18a2: 6-6
+s18l1: 7-7
+s18h1: 9-9
+s18i1: 10-10
+s18v1: 11-11
+s18z2: 13-13
+s18c2: 12-12
+s18m1: 15-15
+s18k1: 16-16
+s18x2: 14-14
+
+# document level annotation:
+(s18s0 / sentence
+    :coref ((s18v1 :same-entity s11v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s19-root
+# :: snt19
+Index: 1       2     3     4          5     6       7  8    9    10  11  12 13    14 15      16        17      18 19      20 21       22     23         24 25  26 27    28
+Words: Celkový objem aktiv Investiční banky přesáhl v  roce 1993 120 mld .  korun ,  úvěrové portfolio dosáhlo 85 miliard a  primární vklady překročily 78 mld .  korun .
+
+# sentence level graph:
+(s19a1 / and
+        :op1 (s19p1 / přesáhnout-001
+            :ARG0 (s19o1 / objem
+                :possessor (s19a2 / aktivum
+                    :possessor (s19b1 / banka
+                        :mod (s19i1 / Investiční
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :mod (s19c1 / celkový
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s19r1 / rok
+                :mod (s19x1 / 1993)
+                :refer-number singular)
+            :ARG1 (s19m1 / miliarda
+                :mod (s19k1 / koruna
+                    :refer-number plural)
+                :mod (s19x2 / 120))
+            :refer-number singular
+            :aspect performance)
+        :op2 (s19d1 / dosáhnout-002
+            :ARG0 (s19p2 / portfolio
+                :mod (s19u1 / úvěrový
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s19m2 / miliarda
+                :mod (s19x3 / 85)
+                :refer-number plural)
+            :refer-number singular
+            :aspect performance)
+        :op3 (s19p3 / překročit-002
+            :ARG0 (s19v1 / vklad
+                :mod (s19p4 / primární
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s19m3 / miliarda
+                :mod (s19k2 / koruna
+                    :refer-number plural)
+                :mod (s19x4 / 78))
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s19a1: 20-20
+s19p1: 6-6
+s19o1: 2-2
+s19a2: 3-3
+s19b1: 5-5
+s19i1: 4-4
+s19c1: 1-1
+s19r1: 7-8
+s19x1: 9-9
+s19m1: 11-11
+s19k1: 13-13
+s19x2: 10-10
+s19d1: 17-17
+s19p2: 16-16
+s19u1: 15-15
+s19m2: 19-19
+s19x3: 18-18
+s19p3: 23-23
+s19v1: 22-22
+s19p4: 21-21
+s19m3: 25-25
+s19k2: 27-27
+s19x4: 24-24
+
+# document level annotation:
+(s19s0 / sentence
+    :coref ((s19b1 :same-entity s16i2)
+            (s19r1 :same-entity s18v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s20-root
+# :: snt20
+Index: 1        2   3 4          5            6     7    8 9
+Words: Ukazatel tzv . kapitálové přiměřenosti činil 8.84 % .
+
+# sentence level graph:
+(s20c1 / činit-007
+        :ARG0 (s20u1 / ukazatel
+            :ARG1 (s20p1 / přiměřenost
+                :clausal-marker (s20t1 / takzvaný)
+                :mod (s20k1 / kapitálový
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s20x1 / #Percnt
+            :mod (s20x2 / 8.84))
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s20c1: 6-6
+s20u1: 1-1
+s20p1: 5-5
+s20t1: 2-2
+s20k1: 4-4
+s20x1: 8-8
+s20x2: 7-7
+
+# document level annotation:
+(s20s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s21-root
+# :: snt21
+Index: 1  2  3  4  5  6    7         8  9       10 11        12 13        14     15 16   17   18  19 20    21 22  23   24    25      26   27  28     29   30   31
+Words: K  31 .  12 .  1993 vytvořila IB rezervy k  pochybným a  ztrátovým úvěrům ve výši 3685 mld .  korun ,  což bylo téměř dvakrát více než koncem roku 1992 .
+
+# sentence level graph:
+(s21v1 / vytvořit-001
+        :temporal (s21x1 / 12
+            :possessor (s21x2 / 1993)
+            :mod (s21x3 / 31))
+        :ARG0 (s21i1 / IB)
+        :ARG1 (s21r1 / rezerva
+            :mod (s21u1 / úvěr
+                :mod (s21a1 / and
+                    :op1 (s21p1 / pochybný
+                        :refer-number plural)
+                    :op2 (s21z1 / ztrátový
+                        :refer-number plural))
+                :refer-number plural)
+            :mod (s21v2 / výše
+                :mod (s21i2 / identity-91
+                    :ARG1 (s21m1 / miliarda
+                        :mod (s21k1 / koruna
+                            :refer-number plural)
+                        :mod (s21x4 / 3685))
+                    :ARG2 (s21b1 / být-007
+                        :ARG0 (s21c1 / což)
+                        :ARG1 (s21h1 / hodně
+                            :extent (s21d1 / dvakrát
+                                :extent (s21t1 / téměř))
+                            :comparison (s21b2 / být-007
+                                :ARG0 (s21e1 / entity
+                                    :refer-number singular
+                                    :refer-person 3rd)
+                                :ARG1 (s21h2 / hodně)
+                                :temporal (s21r2 / rok
+                                    :mod (s21x5 / 1992)
+                                    :refer-number singular)
+                                :refer-number singular
+                                :aspect activity))
+                        :refer-number singular
+                        :aspect activity))
+                :refer-number singular)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s21v1: 7-7
+s21x1: 1-1,4-4
+s21x2: 6-6
+s21x3: 2-2
+s21i1: 8-8
+s21r1: 9-9
+s21u1: 10-10,14-14
+s21a1: 12-12
+s21p1: 11-11
+s21z1: 13-13
+s21v2: 15-16
+s21i2: 21-21
+s21m1: 18-18
+s21k1: 20-20
+s21x4: 17-17
+s21b1: 23-23
+s21c1: 22-22
+s21h1: 26-26
+s21d1: 25-25
+s21t1: 24-24
+s21b2: 0-0
+s21e1: 0-0
+s21h2: 0-0
+s21r2: 28-29
+s21x5: 30-30
+
+# document level annotation:
+(s21s0 / sentence
+    :coref ((s21x2 :same-entity s19x1)
+            (s21i1 :same-entity s18i1)
+            (s21c1 :same-entity s21m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s22-root
+# :: snt22
+Index: 1        2    3   4  5      6   7      8  9    10  11           12     13     14 15 16     17       18         19       20    21
+Words: Obchodní plán IPB na příští rok počítá s  více než dvojnásobným čistým ziskem a  s  dalším zvýšením základního kapitálu banky .
+
+# sentence level graph:
+(s22p1 / počítat-007
+        :ARG0 (s22p2 / plán
+            :ARG0 (s22i1 / IPB
+                :refer-number singular)
+            :mod (s22o1 / obchodní
+                :refer-number singular)
+            :duration (s22r1 / rok
+                :mod (s22p3 / příští
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s22a1 / and
+            :op1 (s22z1 / zisk
+                :mod (s22c1 / čistý
+                    :refer-number singular)
+                :mod (s22d1 / dvojnásobný
+                    :extent (s22h1 / hodně
+                        :part-of-phraseme (s22n1 / než))
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s22z2 / zvýšení
+                :ARG0 (s22k1 / kapitál
+                    :possessor (s22b1 / banka
+                        :refer-number singular)
+                    :mod (s22z3 / základní
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s22d2 / další
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s22p1: 7-7
+s22p2: 2-2
+s22i1: 3-3
+s22o1: 1-1
+s22r1: 4-4,6-6
+s22p3: 5-5
+s22a1: 14-14
+s22z1: 8-8,13-13
+s22c1: 12-12
+s22d1: 11-11
+s22h1: 9-9
+s22n1: 10-10
+s22z2: 15-15,17-17
+s22k1: 19-19
+s22b1: 20-20
+s22z3: 18-18
+s22d2: 16-16
+
+# document level annotation:
+(s22s0 / sentence
+    :coref ((s22i1 :same-entity s19b1)
+            (s22b1 :same-entity s22i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s23-root
+# :: snt23
+Index: 1     2       3      4         5       6      7       8         9   10 11       12     13        14 15  16 17    18 19 20         21 22 23  24
+Words: Valná hromada rovněž schválila rámcový emisní program dluhopisů IPB v  celkovém objemu maximálně 5  mld .  korun a  se splatností do 10 let .
+
+# sentence level graph:
+(s23s1 / schválit-002
+        :ARG0 (s23h1 / hromada
+            :mod (s23v1 / valný
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s23r1 / rovněž)
+        :ARG1 (s23p1 / program
+            :mod (s23e1 / emisní
+                :refer-number singular)
+            :possessor (s23d1 / dluhopis
+                :possessor (s23i1 / IPB
+                    :refer-number singular)
+                :refer-number plural)
+            :mod (s23r2 / rámcový
+                :refer-number singular)
+            :refer-number singular)
+        :companion (s23a1 / and
+            :op1 (s23o1 / objem
+                :mod (s23c1 / celkový
+                    :refer-number singular)
+                :mod (s23m1 / miliarda
+                    :mod (s23k1 / koruna
+                        :refer-number plural)
+                    :mod (s23x1 / 5
+                        :extent (s23m2 / maximálně)))
+                :refer-number singular)
+            :op2 (s23s2 / splatnost
+                :temporal (s23r3 / rok
+                    :mod (s23x2 / 10)
+                    :refer-number plural)
+                :refer-number singular))
+        :aspect performance)
+
+# alignment:
+s23s1: 4-4
+s23h1: 2-2
+s23v1: 1-1
+s23r1: 3-3
+s23p1: 7-7
+s23e1: 6-6
+s23d1: 8-8
+s23i1: 9-9
+s23r2: 5-5
+s23a1: 18-18
+s23o1: 10-10,12-12
+s23c1: 11-11
+s23m1: 15-15
+s23k1: 17-17
+s23x1: 14-14
+s23m2: 13-13
+s23s2: 19-20
+s23r3: 21-21,23-23
+s23x2: 22-22
+
+# document level annotation:
+(s23s0 / sentence
+    :coref ((s23h1 :same-entity s13h1)
+            (s23i1 :same-entity s22b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s24-root
+# :: snt24
+Index: 1         2         3    4     5        6    7         8         9  10  11    12    13   14 15    16     17
+Words: Maximální nominální cena jedné obligace byla předběžně stanovena na 100 tisíc korun nebo 10 tisíc dolarů .
+
+# sentence level graph:
+(s24s1 / stanovit-003
+        :ARG1 (s24c1 / cena
+            :ARG1 (s24o1 / obligace
+                :mod (s24j1 / jeden
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s24n1 / nominální
+                :refer-number singular)
+            :mod (s24m1 / maximální
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s24e1 / entity)
+        :manner (s24p1 / předběžně)
+        :effect (s24o2 / or
+            :op1 (s24t1 / tisíc
+                :mod (s24k1 / koruna
+                    :refer-number plural)
+                :mod (s24x1 / 100)
+                :refer-number singular)
+            :op2 (s24t2 / tisíc
+                :mod (s24d1 / dolar
+                    :refer-number plural)
+                :mod (s24x2 / 10)
+                :refer-number singular))
+        :aspect performance)
+
+# alignment:
+s24s1: 6-6,8-8
+s24c1: 3-3
+s24o1: 5-5
+s24j1: 4-4
+s24n1: 2-2
+s24m1: 1-1
+s24e1: 0-0
+s24p1: 7-7
+s24o2: 13-13
+s24t1: 9-9,11-11
+s24k1: 12-12
+s24x1: 10-10
+s24t2: 9-9,15-15
+s24d1: 16-16
+s24x2: 14-14
+
+# document level annotation:
+(s24s0 / sentence)
+
+

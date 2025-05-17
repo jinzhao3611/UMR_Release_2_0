@@ -1,0 +1,433 @@
+################################################################################
+# meta-info
+# :: snt1
+Index:               	1	2	3	4	5	6	7	8	9
+Words:               	Biih'iyou'u	    nenei'ooku'oononi	    hihcebe'	hono'   ,	nooxeihi'	niinoti'onoohootow	            tookooxuunookooxeise'               .
+Morphemes:           	biih'iyou -'u	    nenei'ooku'oo -noni	    hihcebe'	hono'	,   nooxeihi'	nii- noti'on- noohoot -ow	    tookooxuu- nookooxeise -'           .
+Morphemes(English):  	dark -0.ITER	    IC.look_at -2S.ITER	    above	    sky	    ,   maybe	    IMPERF- search_for- see -2S	    IC.across- white_track_lies -0S     .
+Part of Speech:      	vii+pl -infl	    vai -infl	            part	    ni	    ,   part	    prefix- prefix- vti -infl	    prefix- vii.incorp -infl            .
+Translation(English):	On a clear dark night when you look up at the sky, you can see a white streak that stretches all the way across the sky.
+
+# sentence level graph:
+(s1n / noti'onoohoot-00
+    :actor (s1p / person
+        :refer-person 2nd
+        :refer-number singular)
+    :theme (s1t / tookooxuunookooxeise-00
+        :path s1h2
+        :aspect state)   
+    :condition (s1n2 / nei'ooku'oo-00
+        :experiencer s1p
+        :stimulus (s1h / hono')
+        :direction (s1h2 / hihcebe')
+        :temporal (s1b / biih'iyou-00
+            :aspect state)
+        :aspect habitual)
+    :aspect habitual)
+
+
+# alignment:
+s1n: 7-7
+s1p: 7-7
+s1t: 8-8
+s1n2: 2-2
+s1h: 4-4
+s1h2: 3-3
+s1b: 1-1
+
+
+# document level annotation:
+(s1s0 / sentence
+    :temporal ((present-reference :overlap s1n)
+            (present-reference :overlap s1n2)
+            (present-reference :overlap s1b)
+            (present-reference :overlap s1t))
+    :modal ((author :neutral-affirmative s1n)
+            (author :full-affirmative s1n2)
+            (author :full-affirmative s1b)
+            (author :full-affirmative s1t)))
+
+
+
+################################################################################
+# meta-info
+# :: snt2
+Index:               	1	2	3	4	5	6	7
+Words:               	Hee3eeneentou'            ,   nehe'	heneecee	    noh	    woxhoox .
+Morphemes:           	hee3eeni- entou -'        ,   nehe'	heneecee	    noh	    woxhoox .
+Morphemes(English):  	why- located -0S          ,   this	buffalo.bull	and	    horse   .   
+Part of Speech:      	prefix.rel- vii -infl     ,   det	    na	            part	na      .
+Translation(English):	The reason that it is there is because of the buffalo and the horse.
+
+# sentence level graph:
+(s2e / exist-91
+    :ARG1 (s2p / place)
+    :ARG2 (s2t / thing
+        :refer-person 3rd
+        :refer-number singular)
+    :cause (s2a / and
+        :op1 (s2h2 / heneecee)
+        :op2 (s2w / woxhoox)
+        :mod (s2n2 / nehe'))
+    :aspect state)
+
+
+# alignment:
+s2e: 1-1
+s2p: 0-0
+s2t: 1-1
+s2a: 5-5
+s2h2: 4-4
+s2w: 6-6
+s2n2: 3-3
+
+
+# document level annotation:
+(s2s0 / sentence
+    :temporal ((document-creation-time :overlap s2e))
+    :modal ((author :full-affirmative s2e))
+    :coref ((s1h2 :same-entity s2p)
+            (s1t :same-entity s2t)
+            (s1t :same-event s2e)))
+
+
+
+################################################################################
+# meta-info
+# :: snt3
+Index:               	1	2	3	4	5	6
+Words:               	He'ih'eti3eihino'	        nehe'	woxhoox	    noh	    heneecee        .
+Morphemes:           	he'ih- 'eti3eihi -no'	    nehe'	woxhoox	    noh	    heneecee        .
+Morphemes(English):  	NARRPAST- called -pers.PL	this	horse	    and	    buffalo.bull    .
+Part of Speech:      	prefix- vai.pass -infl    det	    na	        part	na              .
+Translation(English):	The buffalo and horse were called together/ summoned.
+
+# sentence level graph:
+(s3h / heti3eihi-00
+    :actor (s3p / person)
+    :theme (s3a / and
+        :op1 (s3w / woxhoox)
+        :op2 (s3h2 / heneecee)
+        :mod (s3n / nehe'))
+    :aspect performance)
+
+
+# alignment:
+s3h: 1-1
+s3a: 4-4
+s3w: 3-3
+s3h2: 5-5
+s3n: 2-2
+
+
+# document level annotation:
+(s3s0 / sentence
+    :temporal ((document-creation-time :before s3h))
+    :modal ((author :full-affirmative s3h))
+    :coref ((s2w :same-entity s3w)
+            (s2h2 :same-entity s3h2)))
+
+
+
+################################################################################
+# meta-info
+# :: snt4
+Index:               	1	2	3	4	5	6
+Words:               	" Heetnonouhtinee         ,   "	    hee3eihohkoni'  .
+Morphemes:           	" heet- nonouhti -nee     ,   "       hee3eihohkoni'  .
+Morphemes(English):  	" FUT- race- 2PL          ,   "       said_to_s.o.    .
+Part of Speech:      	" prefix- vai.recip -infl ,   "       vta.4/3PL       .
+Translation(English):	"Race each other" he told them.
+
+# sentence level graph:
+(s4h / hee3-00
+    :actor (s4p2 / person
+        :refer-person 4th)
+    :theme (s4n / nonouhti-00
+        :mode imperative
+        :actor s4p
+        :aspect performance
+        :quote s4h)
+    :recipient (s4p / person        
+        :refer-person 3rd
+        :refer-number plural)
+    :aspect performance)
+
+
+# alignment:
+s4h: 5-5
+s4p2: 5-5
+s4n: 2-2
+s4p: 2-2
+
+
+# document level annotation:
+(s4s0 / sentence
+    :temporal ((s3h :after s4h)
+            (s4h :after s4n))
+    :modal ((author :full-affirmative s4h)
+            (author :full-affirmative s4p2)
+            (s4p2 :partial-affirmative s4n))
+    :coref ((s3p :same-entity s4p2)
+            (s4p :subset-of s3w)
+            (s4p :subset-of s3h2)))
+
+
+
+################################################################################
+# meta-info
+# :: snt5
+Index:               	1	2	3
+Words:               	Ne'nee'eestoo3i'	        heesinihii3eihi3i'                  ;
+Morphemes:           	ne- nee'eestoo -3i'	    heesi- nihii3eihi -3i'              ;
+Morphemes(English):  	then- do_thus/that -3PL   what/how- s.t._said_to_s.o. -3PL    ;
+Part of Speech:      	prefix- vai.back -infl    prefix.rel- vai.PASS -infl          ;
+Translation(English):	They did as they were told,
+
+# sentence level graph:
+(s5n / nee'eestoo-00
+    :actor (s5p / person
+        :refer-person 3rd
+        :refer-number plural)
+    :theme (s5t / thing
+        :theme-of (s5n2 / nihii3eihi-00
+            :recipient s5p
+            :aspect performance))
+    :aspect activity)
+
+
+# alignment:
+s5n: 1-1
+s5p: 1-1
+s5t: 2-2
+s5n2: 2-2
+
+
+# document level annotation:
+(s5s0 / sentence
+    :temporal ((s4h :after s5n))
+    :modal ((author :full-affirmative s5n))
+    :coref ((s4h :same-event s5n2)
+            (s4n :same-event s5t)
+            (s4p :same-entity s5p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt6
+Index:               	1	2	3	4	5
+Words:               	noh   bebene	neehii3ei'	    nee'ei'koohu3i'                         ;
+Morphemes:           	noh   bebene	neehii3ei'	    nee'ei'koohu -3i'                       ;
+Morphemes(English):  	and   approx.	in.the.middle   that.is.the.point.to.which.X.ran -3PL   ;
+Part of Speech:      	part	part	part	        vai.back -infl                          ;
+Translation(English):	and about to the the middle of the sky, that’s how far they both ran.
+
+# sentence level graph:
+(s6n / neehii3ei'
+    :mod (s6b / benene)
+    :goal-of (s6n2 / nee'ei'koohu-00
+        :actor (s6p / person
+            :refer-person 3rd
+            :refer-number plural)
+        :aspect performance))
+
+
+# alignment:
+s6n: 4-4
+s6p: 4-4
+s6n2: 3-3
+s6b: 2-2
+
+
+# document level annotation:
+(s6s0 / sentence
+    :modal ((author :full-affirmative s6n))
+    :coref ((s5p :same-entity s6p)
+            (s5t :same-event s6n)))
+
+
+
+################################################################################
+# meta-info
+# :: snt7
+Index:               	1	2	3	4
+Words:               	nehe'	heneecee	    he'ihnon3o'oo                       .
+Morphemes:           	nehe'	heneecee	    he'ih- non3o'oo                     .
+Morphemes(English):  	this	buffalo.bull	NARRPAST- get_lost/go_off_course    .
+Part of Speech:      	det	na	            prefix- vai                         .
+Translation(English):	and this buffalo got lost.
+
+# sentence level graph:
+(s7n / non3o'oo-00
+    :actor (s7h / heneecee
+        :mod (s7n2 / nehe'))
+    :aspect performance)
+
+
+# alignment:
+s7n: 3-3
+s7h: 2-2
+s7n2: 1-1
+
+
+# document level annotation:
+(s7s0 / sentence
+    :temporal ((s6n :after s7n))
+    :modal ((author :full-affirmative s7n))
+    :coref ((s3h2 :same-entity s7h)))
+
+
+
+################################################################################
+# meta-info
+# :: snt8
+Index:               	1	2
+Words:               	Woxhoox	    he'ih'oyei 
+Morphemes:           	woxhoox	    he'ih- 'oyei
+Morphemes(English):  	horse	        NARRPAST- win
+Part of Speech:      	na	        prefix- vai
+Translation(English):	The horse won the race
+
+# sentence level graph:
+(s8h2 / hoyei-00
+    :actor (s8w / woxhoox)
+    :aspect performance)
+
+
+# alignment:
+s8h2: 2-2
+s8w: 1-1
+
+
+# document level annotation:
+(s8s0 / sentence
+    :temporal ((s7n :after s8h2))
+    :modal ((author :full-affirmative s8h2))
+    :coref ((s3w :same-entity s8w)))
+
+
+
+################################################################################
+# meta-info
+# :: snt9
+Index:               	1	2	3	4	5	6	7
+Words:               	noh   woxhooxebii     ne'nihii'iiniikoheino'                          ,   hoowuuhu'	        heneeceeno'             .
+Morphemes:           	noh   woxhooxebii	    ne'- nih- ii'- iiniikohei -no'                  ,   hoow- uuhu' 	    heneecee -no'           .
+Morphemes(English):  	and   horses	        that- PAST- when- ride.a.horse.around -12       ,   3.NEG- ADV	        buffalo.bull -NA.PL     .
+Part of Speech:      	part  na.pl	        proclitic- prefix- prefix- vai/vta.INV -infl	,   infl+prefix- deriv	na -infl                .
+Translation(English):	and that is why we rode horses around instead of buffalos.
+
+# sentence level graph:
+(s9h / have-reason-91
+    :ARG1 (s9h2 / hiiniikohei-00
+        :actor (s9p / person
+            :refer-person 1st
+            :refer-number plural)
+        :theme (s9w / woxhoox
+            :refer-number plural
+            :ARG1-of (s9i / instead-of-91
+                :ARG2 (s9h3 / heneecee
+                    :refer-number plural))) 
+        :aspect habitual)
+    :ARG2 (s9t / thing)
+    :aspect state)
+
+
+# alignment:
+s9h: 3-3
+s9h2: 3-3
+s9w: 3-3
+s9i: 5-5
+s9h3: 6-6
+s9t: 3-3
+
+
+# document level annotation:
+(s9s0 / sentence
+    :temporal ((past-reference :overlap s9h2)
+            (present-reference :overlap s9h))
+    :modal ((author :full-affirmative s9h)
+            (author :full-affirmative s9h2))
+    :coref ((s8w :subset-of s9w)
+            (s7h :subset-of s9h3)))
+
+
+
+################################################################################
+# meta-info
+# :: snt10
+Index:               	1	2
+Words:               	he'ihkoo'ouu3koohuno'                         .
+Morphemes:           	he'ih- koo'ouu3koohu - no'                    .
+Morphemes(English):  	NARRPAST- run_leaving_dust_behind -pers.PL    .
+Part of Speech:      	prefix- vai -infl                             .
+Translation(English):	They ran leaving dust behind.
+
+# sentence level graph:
+(s10k / koo'ouu3koohu-00
+    :actor (s10p / person
+        :refer-person 3rd
+        :refer-number plural)
+    :aspect performance)
+
+
+# alignment:
+s10k: 1-1
+s10p: 1-1
+
+
+# document level annotation:
+(s10s0 / sentence
+    :modal ((author :full-affirmative s10k))
+    :coref ((s5t :same-event s10k)
+            (s6p :same-entity s10p)))
+
+
+
+################################################################################
+# meta-info
+# :: snt11
+Index:               	1	2	3	4	5	6	7
+Words:               	Noh   bebiisnei'oohobeihihek      ,	heetnoohobeihiinoo'	        nih'iitohceibkoohut                 heneecee        .
+Morphemes:           	noh   bebiis- nei'oohobeihi -hek  ,   heet- noohobeihiinoo -'	    nih'iitoh- ceibkoohu -t	            heneecee        .
+Morphemes(English):  	and   properly- looked_at -SUBJ   ,   FUT- seen/visible -0S	    PAST.where- pull/turn.off.road -3.S buffalo.bull    .
+Part of Speech:      	part	prefix- vai.PASS -infl      ,   prefix- vii.PASS -infl	    prefix+prefix.rel- vai -infl        na              .
+Translation(English):	If the milky way is looked at carefully, it can be seen where the buffalo ran off to the side.
+
+# sentence level graph:
+(s11n / noohobeihiinoo-00
+    :stimulus (s11p / place
+        :place-of (s11c / ceibkoohu-00
+            :actor (s11h / heneecee)
+            :aspect performance))
+    :condition (s11b / bebiisnei'oohobeihi-00
+        :stimulus (s11t / thing)
+        :aspect activity)
+    :aspect state)
+
+
+# alignment:
+s11n: 4-4
+s11p: 5-5
+s11c: 5-5
+s11h: 6-6
+s11b: 2-2
+s11t: 2-2
+
+
+# document level annotation:
+(s11s0 / sentence
+    :temporal ((present-reference :overlap s11b)
+            (s11b :overlap s11n)
+            (s11b :before s11c))
+    :modal ((author :partial-affirmative s11n)
+            (author :full-affirmative s11b)
+            (author :full-affirmative s11c))
+    :coref ((s6n :same-entity s11p)
+            (s7n :same-event s11c)
+            (s7h :same-entity s11h)
+            (s1t :same-entity s11t)))
+
+
+

@@ -1,0 +1,738 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2            3   4
+Words: Lodní reproduktory pro nevidomé
+
+# sentence level graph:
+(s1r1 / reproduktor
+        :mod (s1l1 / lodní
+            :refer-number plural)
+        :affectee (s1n1 / nevidomý
+            :refer-number plural)
+        :refer-number plural)
+
+# alignment:
+s1r1: 2-2
+s1l1: 1-1
+s1n1: 3-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3    4 5
+Words: Praha ( pech ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2p2 / pech)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2p2: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2    3          4         5          6       7  8      9      10 11        12 13    14  15 16    17   18 19       20 21          22      23 24   25          26       27         28        29       30 31 32    33    34 35    36
+Words: V  osmi autobusech pražských Dopravních podniků -  garáže Klíčov ,  jezdících na lince 187 ,  která vede z  Palmovky na holešovické nádraží ,  bylo namontováno zařízení umožňující nevidomým rozeznat ,  o  jakou linku se jedná .
+
+# sentence level graph:
+(s3n1 / namontovat-001
+        :place (s3a1 / autobus
+            :possessor (s3p1 / podnik
+                :mod (s3d1 / Dopravní
+                    :refer-number plural)
+                :mod (s3p2 / pražský
+                    :refer-number plural)
+                :mod (s3g1 / garáž
+                    :mod (s3k1 / Klíčov
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural)
+            :mod (s3o1 / osm
+                :refer-number plural)
+            :mod (s3j1 / jezdící
+                :place (s3l1 / linka
+                    :mod (s3x1 / 187)
+                    :ARG0-of (s3v1 / vést-012
+                        :start (s3p3 / Palmovka
+                            :refer-number singular)
+                        :goal (s3n2 / nádraží
+                            :mod (s3h1 / holešovický
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s3e1 / entity)
+        :ARG1 (s3z1 / zařízení
+            :mod (s3u1 / umožňující
+                :ARG2 (s3n3 / nevidomý
+                    :refer-number plural)
+                :ARG1 (s3r1 / rozeznat-002
+                    :ARG0 s3n3
+                    :ARG1 (s3j2 / jednat-se-002
+                        :ARG0 (s3l2 / linka
+                            :mod (s3j3 / jaký
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3n1: 24-25
+s3a1: 1-1,3-3
+s3p1: 6-6
+s3d1: 5-5
+s3p2: 4-4
+s3g1: 8-8
+s3k1: 9-9
+s3o1: 2-2
+s3j1: 11-11
+s3l1: 12-13,16-16
+s3x1: 14-14
+s3v1: 17-17
+s3p3: 18-19
+s3n2: 20-20,22-22
+s3h1: 21-21
+s3e1: 0-0
+s3z1: 26-26
+s3u1: 27-27
+s3n3: 28-28
+s3r1: 29-29
+s3j2: 34-35
+s3l2: 31-31,33-33
+s3j3: 32-32
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p2 :same-entity s2p1)
+            (s3n3 :same-entity s1n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2  3  4    5         6  7      8  9     10 11 12       13 14        15       16 17    18      19 20   21     22
+Words: Nevidomý má u  sebe vysílačku o  dosahu 40 metrů a  v  autobuse je přijímací zařízení ,  které reaguje na její signál .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4m1 / mít-002
+            :ARG0 (s4n1 / nevidomý
+                :refer-number singular)
+            :place s4n1
+            :ARG1 (s4v1 / vysílačka
+                :mod (s4d1 / dosah
+                    :mod (s4m2 / metr
+                        :mod (s4x2 / 40)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state)
+        :op2 (s4b1 / být-011
+            :place (s4a2 / autobus
+                :refer-number singular)
+            :ARG0 (s4z1 / zařízení
+                :mod (s4p1 / přijímací
+                    :refer-number singular)
+                :ARG0-of (s4r1 / reagovat-001
+                    :ARG1 (s4s1 / signál
+                        :ARG0 s4v1
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect process)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s4a1: 10-10
+s4m1: 2-2
+s4n1: 1-1,3-4
+s4v1: 5-5,20-20
+s4d1: 6-7
+s4m2: 9-9
+s4x2: 8-8
+s4b1: 13-13
+s4a2: 11-12
+s4z1: 15-15,17-17
+s4p1: 14-14
+s4r1: 18-18
+s4s1: 19-19,21-21
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4n1 :same-entity s3n3)
+            (s4a2 :same-entity s3a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1           2  3      4      5    6     7      8     9     10
+Words: Reproduktor na přední straně vozu potom oznámí číslo linky .
+
+# sentence level graph:
+(s5o1 / oznámit-002
+        :ARG0 (s5r1 / reproduktor
+            :place (s5s1 / strana
+                :possessor (s5v1 / vůz
+                    :refer-number singular)
+                :mod (s5p1 / přední
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s5e1 / entity)
+        :temporal (s5p2 / potom)
+        :effect (s5c1 / číslo
+            :possessor (s5l1 / linka
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s5o1: 7-7
+s5r1: 1-1
+s5s1: 2-2,4-4
+s5v1: 5-5
+s5p1: 3-3
+s5e1: 0-0
+s5p2: 6-6
+s5c1: 8-8
+s5l1: 9-9
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5r1 :same-entity s1r1)
+            (s5v1 :same-entity s4a2)
+            (s5l1 :same-entity s3l2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1        2       3   4 5            6
+Words: Největší problém byl s reproduktory .
+
+# sentence level graph:
+(s6b1 / být-011
+        :ARG0 (s6p1 / problém
+            :mod (s6v1 / velký
+                :refer-number singular)
+            :refer-number singular)
+        :companion (s6r1 / reproduktor
+            :refer-number plural)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s6b1: 3-3
+s6p1: 2-2
+s6v1: 1-1
+s6r1: 4-5
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6r1 :same-entity s5r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1      2   3           4        5   6  7   8  9    10    11      12 13       14 15 16      17     18       19      20     21 22   23    24    25
+Words: Musely být konstrukčně vyřešeny tak ,  aby je bylo možno umístit na autobuse ,  a  zároveň musely odolávat vnějším vlivům ,  řekl Tomáš Beneš .
+
+# sentence level graph:
+(s7r1 / říci-008
+        :ARG0 (s7b1 / Beneš
+            :mod (s7t1 / Tomáš
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s7e1 / entity)
+        :effect (s7a1 / and
+            :op1 (s7v1 / vyřešit-001
+                :regard (s7k1 / konstrukčně)
+                :ARG0 (s7e2 / entity)
+                :ARG1 (s7e3 / entity
+                    :refer-number plural
+                    :refer-person 3rd)
+                :extent (s7t2 / tak
+                    :result (s7b2 / být-159
+                        :ARG1 (s7m1 / možný
+                            :affectee (s7e4 / entity)
+                            :refer-number singular)
+                        :ARG0 (s7u1 / umístit-001
+                            :ARG0 s7e4
+                            :ARG1 s7e3
+                            :place (s7a2 / autobus
+                                :refer-number singular)
+                            :aspect performance)
+                        :refer-number singular
+                        :aspect activity))
+                :refer-number plural
+                :aspect performance)
+            :op2 (s7o1 / odolávat-001
+                :temporal (s7z1 / zároveň)
+                :ARG0 s7e3
+                :ARG1 (s7v2 / vliv
+                    :mod (s7v3 / vnější
+                        :refer-number plural)
+                    :refer-number plural)
+                :aspect habitual))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7r1: 22-22
+s7b1: 24-24
+s7t1: 23-23
+s7e1: 0-0
+s7a1: 15-15
+s7v1: 1-2,4-4
+s7k1: 3-3
+s7e2: 0-0
+s7e3: 8-8
+s7t2: 5-5
+s7b2: 7-7,9-9
+s7m1: 10-10
+s7e4: 0-0
+s7u1: 11-11
+s7a2: 12-13
+s7o1: 17-18
+s7z1: 16-16
+s7v2: 20-20
+s7v3: 19-19
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e3 :same-entity s6r1)
+            (s7a2 :same-entity s5v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1       2  3  4  5      6        7      8     9           10 11    12  13     14 15 16    17  18    19
+Words: Nakonec se až v  Norsku podařilo sehnat lodní reproduktor ,  který lze použít i  50 metrů pod vodou .
+
+# sentence level graph:
+(s8p1 / podařit-se-001
+        :temporal (s8n1 / nakonec)
+        :ARG0 (s8e1 / entity)
+        :ARG1 (s8s1 / sehnat-001
+            :ARG0 s8e1
+            :clausal-marker (s8a1 / až)
+            :place (s8n2 / Norsko
+                :refer-number singular)
+            :ARG1 (s8r1 / reproduktor
+                :mod (s8l1 / lodní
+                    :refer-number singular)
+                :mod (s8l2 / lze-001
+                    :affectee (s8e2 / entity)
+                    :ARG0 (s8p2 / použít-001
+                        :ARG1 s8r1
+                        :ARG0 s8e2
+                        :clausal-marker (s8i1 / i)
+                        :place (s8m1 / metr
+                            :mod (s8x4 / 50)
+                            :place (s8v1 / voda
+                                :refer-number singular)
+                            :refer-number plural)
+                        :aspect performance)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect state)
+                :refer-number singular
+                :refer-person 3rd)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8p1: 2-2,6-6
+s8n1: 1-1
+s8e1: 0-0
+s8s1: 7-7
+s8a1: 3-3
+s8n2: 4-5
+s8r1: 9-9,11-11
+s8l1: 8-8
+s8l2: 12-12
+s8e2: 0-0
+s8p2: 13-13
+s8i1: 14-14
+s8m1: 16-16
+s8x4: 15-15
+s8v1: 17-18
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8r1 :same-entity s7e3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1           2    3  4    5     6    7          8
+Words: Iniciátorem akce je také Česká unie nevidomých .
+
+# sentence level graph:
+(s9b1 / být-007
+        :ARG1 (s9i1 / iniciátor
+            :ARG1 (s9a1 / akce
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s9t1 / také)
+        :ARG0 (s9u1 / unie
+            :mod (s9c1 / český
+                :refer-number singular)
+            :possessor (s9n1 / nevidomý
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9b1: 3-3
+s9i1: 1-1
+s9a1: 2-2
+s9t1: 4-4
+s9u1: 6-6
+s9c1: 5-5
+s9n1: 7-7
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9a1 :same-event s3n1)
+            (s9n1 :same-entity s4n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1       2  3  4  5        6     7        8      9  10   11          12 13 14    15       16 17      18 19   20 21   22      23 24         25
+Words: Osvědčí -  li se zařízení během několika měsíců ,  bude namontováno i  na další autobusy a  uvažuje se také o  jeho použití v  tramvajích .
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10n1 / namontovat-002
+            :condition (s10o1 / osvědčit-se-001
+                :ARG0 (s10z1 / zařízení
+                    :refer-number singular)
+                :temporal (s10m1 / měsíc
+                    :mod (s10n2 / několik)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :ARG0 (s10e1 / entity)
+            :ARG1 s10z1
+            :goal (s10a2 / autobus
+                :clausal-marker (s10i1 / i)
+                :mod (s10d1 / další
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s10u1 / uvažovat-002
+            :ARG0 (s10e2 / entity)
+            :clausal-marker (s10t1 / také)
+            :ARG1 (s10p1 / použití
+                :ARG0 (s10e3 / entity)
+                :ARG1 s10z1
+                :place (s10t2 / tramvaj
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s10a1: 16-16
+s10n1: 10-11
+s10o1: 1-1,3-4
+s10z1: 5-5,21-21
+s10m1: 6-6,8-8
+s10n2: 7-7
+s10e1: 0-0
+s10a2: 13-13,15-15
+s10i1: 12-12
+s10d1: 14-14
+s10u1: 17-18
+s10e2: 0-0
+s10t1: 19-19
+s10p1: 20-20,22-22
+s10e3: 0-0
+s10t2: 23-24
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10z1 :same-entity s3z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1     2  3    4          5    6     7  8    9     10   11 12
+Words: Časem by mělo poskytovat více údajů (  směr jízdy apod )  .
+
+# sentence level graph:
+(s11p1 / poskytovat-001
+        :temporal (s11c1 / čas
+            :refer-number singular)
+        :ARG0 (s11e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s11e2 / entity)
+        :ARG1 (s11u1 / údaj
+            :mod (s11h1 / hodně)
+            :name (s11a1 / and
+                :op1 (s11s1 / směr
+                    :possessor (s11j1 / jízda
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s11a2 / apod))
+            :refer-number plural)
+        :aspect activity)
+
+# alignment:
+s11p1: 2-4
+s11c1: 1-1
+s11e1: 0-0
+s11e2: 0-0
+s11u1: 6-6
+s11h1: 5-5
+s11a1: 0-0
+s11s1: 8-8
+s11j1: 9-9
+s11a2: 10-10
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11e1 :same-entity s10z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1        2  3    4       5        6           7        8      9     10       11 12    13        14      15
+Words: Postupně by měla podobná zařízení informující nevidomé pomocí hlasu pracovat na mnoha veřejných místech .
+
+# sentence level graph:
+(s12p1 / pracovat-004
+        :temporal (s12p2 / postupně)
+        :ARG0 (s12z1 / zařízení
+            :mod (s12i1 / informující
+                :ARG1 (s12n1 / nevidomý
+                    :refer-number plural)
+                :instrument (s12h1 / hlas
+                    :refer-number singular)
+                :refer-number plural)
+            :mod (s12p3 / podobný
+                :refer-number plural)
+            :refer-number plural)
+        :place (s12m1 / místo
+            :mod (s12v1 / veřejný
+                :refer-number plural)
+            :mod (s12m2 / mnoho)
+            :refer-number plural)
+        :aspect activity)
+
+# alignment:
+s12p1: 2-3,10-10
+s12p2: 1-1
+s12z1: 5-5
+s12i1: 6-6
+s12n1: 7-7
+s12h1: 8-9
+s12p3: 4-4
+s12m1: 11-11,14-14
+s12v1: 13-13
+s12m2: 12-12
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12n1 :same-entity s9n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1   2    3    4        5         6  7         8  9       10        11    12 13 14   15 16 17       18 19       20        21
+Words: Již nyní jsou umístěna například v  Agrobance v  pražské Hybernské ulici a  v  Brně a  v  Olomouci na hlavních nádražích .
+
+# sentence level graph:
+(s13a1 / and
+        :op1 (s13u1 / umístit-001
+            :clausal-marker (s13j1 / již)
+            :temporal (s13n1 / nyní)
+            :ARG0 (s13e1 / entity)
+            :ARG1 (s13e2 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :clausal-marker (s13n2 / například)
+            :place (s13a2 / Agrobanka
+                :place (s13u2 / ulice
+                    :mod (s13h1 / Hybernský
+                        :refer-number singular)
+                    :mod (s13p1 / pražský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :op2 (s13u3 / umístit-001
+            :clausal-marker s13j1
+            :temporal s13n1
+            :ARG0 s13e1
+            :ARG1 s13e2
+            :place (s13a3 / and
+                :op1 (s13b1 / Brno
+                    :refer-number singular)
+                :op2 (s13o1 / Olomouc
+                    :refer-number singular))
+            :place (s13n3 / nádraží
+                :mod (s13h2 / hlavní
+                    :refer-number plural)
+                :refer-number plural)
+            :aspect performance))
+
+# alignment:
+s13a1: 12-12
+s13u1: 3-4
+s13n2: 5-5
+s13a2: 6-7
+s13u2: 8-8,11-11
+s13h1: 10-10
+s13p1: 9-9
+s13j1: 1-1
+s13n1: 2-2
+s13e1: 0-0
+s13e2: 0-0
+s13u3: 0-0
+s13a3: 15-15
+s13b1: 13-14
+s13o1: 16-17
+s13n3: 18-18,20-20
+s13h2: 19-19
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13p1 :same-entity s3p2)
+            (s13e2 :same-entity s12z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1         2  3    4    5     6     7    8       9        10      11 12      13          14        15
+Words: Vysílačka v  ceně 1280 korun patří mezi pomůcky částečně hrazené v  systému zdravotního pojištění .
+
+# sentence level graph:
+(s14p1 / patřit-003
+        :ARG0 (s14v1 / vysílačka
+            :mod (s14c1 / cena
+                :mod (s14k1 / koruna
+                    :mod (s14x1 / 1280)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd)
+        :goal (s14p2 / pomůcka
+            :mod (s14h1 / hrazený
+                :extent (s14c2 / částečně)
+                :place (s14s1 / systém
+                    :possessor (s14p3 / pojištění
+                        :ARG0 (s14e1 / entity)
+                        :ARG1 (s14e2 / entity)
+                        :regard (s14z1 / zdravotní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s14p1: 6-6
+s14v1: 1-1
+s14c1: 2-3
+s14k1: 5-5
+s14x1: 4-4
+s14p2: 7-8
+s14h1: 10-10
+s14c2: 9-9
+s14s1: 11-12
+s14p3: 14-14
+s14e1: 0-0
+s14e2: 0-0
+s14z1: 13-13
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14v1 :same-entity s4v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1         2         3          4        5   6        7
+Words: Všeobecná zdravotní pojišťovna přispívá 950 korunami .
+
+# sentence level graph:
+(s15p1 / přispívat-001
+        :ARG0 (s15p2 / pojišťovna
+            :mod (s15z1 / zdravotní
+                :refer-number singular)
+            :mod (s15v1 / všeobecný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s15e1 / entity)
+        :ARG1 (s15k1 / koruna
+            :mod (s15x1 / 950)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s15p1: 4-4
+s15p2: 3-3
+s15z1: 2-2
+s15v1: 1-1
+s15e1: 0-0
+s15k1: 6-6
+s15x1: 5-5
+
+# document level annotation:
+(s15s0 / sentence)
+
+

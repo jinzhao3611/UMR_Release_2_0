@@ -1,0 +1,409 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2     3 4       5  6    7
+Words: Lidský odpad z Německa do Čech ?
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1o1 / odpad
+            :mod (s1l1 / lidský
+                :refer-number singular)
+            :refer-number singular)
+        :start (s1n1 / Německo
+            :refer-number singular)
+        :goal (s1c1 / Čechy
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1o1: 2-2
+s1l1: 1-1
+s1n1: 3-4
+s1c1: 5-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2
+Words: Duchcov -
+
+# sentence level graph:
+(s2d1 / Duchcov
+        :refer-number singular)
+
+# alignment:
+s2d1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1            2          3  4    5      6  7  8     9     10       11 12      13     14 15   16       17          18     19
+Words: Severočeským pohraničím se valí zprávy ,  že jistá firma umisťuje do českých vesnic a  měst německou problémovou mládež .
+
+# sentence level graph:
+(s3v1 / valit-se-001
+        :path (s3p1 / pohraničí
+            :mod (s3s1 / severočeský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3z1 / zpráva
+            :ARG1 (s3u1 / umisťovat-002
+                :ARG0 (s3f1 / firma
+                    :mod (s3j1 / jistý
+                        :refer-number singular)
+                    :refer-number singular)
+                :goal (s3a1 / and
+                    :op1 (s3v2 / vesnice
+                        :mod (s3c1 / český
+                            :refer-number plural)
+                        :refer-number plural)
+                    :op2 (s3m1 / město
+                        :mod s3c1
+                        :refer-number plural))
+                :ARG1 (s3m2 / mládež
+                    :mod (s3p2 / problémový
+                        :refer-number singular)
+                    :mod (s3n1 / německý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3v1: 3-4
+s3p1: 2-2
+s3s1: 1-1
+s3z1: 5-5
+s3u1: 7-7,10-10
+s3f1: 9-9
+s3j1: 8-8
+s3a1: 14-14
+s3v2: 11-11,13-13
+s3c1: 12-12
+s3m1: 11-11,15-15
+s3m2: 18-18
+s3p2: 17-17
+s3n1: 16-16
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3c1 :same-entity s1c1)
+            (s3m2 :same-entity s1o1)
+            (s3n1 :same-entity s1n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2       3    4     5     6     7        8       9  10     11
+Words: Němečtí chlapci tady podle zpráv vážně narušují pořádek a  zákony .
+
+# sentence level graph:
+(s4n1 / narušovat-001
+        :ARG0 (s4c1 / chlapec
+            :mod (s4n2 / německý
+                :refer-number plural)
+            :refer-number plural)
+        :place (s4t1 / tady
+            :refer-number singular)
+        :regard (s4z1 / zpráva
+            :refer-number plural)
+        :manner (s4v1 / vážně)
+        :ARG1 (s4a1 / and
+            :op1 (s4p1 / pořádek
+                :refer-number singular)
+            :op2 (s4z2 / zákon
+                :refer-number plural))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4n1: 7-7
+s4c1: 2-2
+s4n2: 1-1
+s4t1: 3-3
+s4z1: 4-5
+s4v1: 6-6
+s4a1: 9-9
+s4p1: 8-8
+s4z2: 10-10
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4c1 :same-entity s3m2)
+            (s4n2 :same-entity s3n1)
+            (s4t1 :same-entity s3p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2          3     4  5     6         7          8  9        10        11 12    13
+Words: Jejich výtržnosti vedly k  stále častějším konfliktům s  místními obyvateli i  úřady .
+
+# sentence level graph:
+(s5v1 / vést-001
+        :ARG0 (s5v2 / výtržnost
+            :possessor (s5e1 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :refer-number plural)
+        :ARG1 (s5k1 / konflikt
+            :ARG1 (s5a1 / and
+                :op1 (s5o1 / obyvatel
+                    :mod (s5m1 / místní
+                        :refer-number plural)
+                    :refer-number plural)
+                :op2 (s5u1 / úřad
+                    :mod s5m1
+                    :refer-number plural))
+            :clausal-marker (s5s1 / stále)
+            :mod (s5c1 / častý
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s5v1: 3-3
+s5v2: 2-2
+s5e1: 1-1
+s5k1: 4-4,7-7
+s5a1: 11-11
+s5o1: 8-8,10-10
+s5m1: 9-9
+s5u1: 8-8,12-12
+s5s1: 5-5
+s5c1: 6-6
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4c1)
+            (s5m1 :same-entity s4t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2        3       4    5    6        7
+Words: Před nedávnem chlapci naši zemi opustili .
+
+# sentence level graph:
+(s6o1 / opustit-001
+        :temporal (s6n1 / nedávno
+            :refer-number singular)
+        :ARG0 (s6c1 / chlapec
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG1 (s6z1 / země
+            :possessor (s6e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s6o1: 6-6
+s6n1: 1-2
+s6c1: 3-3
+s6z1: 5-5
+s6e1: 4-4
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6c1 :same-entity s5e1)
+            (s6z1 :same-entity s3c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2  3     4      5      6         7  8      9    10 11 12  13      14    15        16      17      18    19
+Words: Pokusil se někdo zbavit něčeho obtížného ,  stejně jako se k  nám některé firmy pokoušely vyvážet toxický odpad ?
+
+# sentence level graph:
+(s7p1 / pokusit-se-001
+        :ARG0 (s7n1 / někdo
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s7z1 / zbavit-se-001
+            :ARG0 s7n1
+            :ARG1 (s7n2 / něco
+                :mod (s7o1 / obtížný
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :manner (s7s1 / stejně
+                :comparison (s7p2 / pokoušet-se-001
+                    :ARG0 (s7f1 / firma
+                        :mod (s7n3 / některý
+                            :refer-number plural)
+                        :refer-number plural)
+                    :ARG1 (s7v1 / vyvážet-001
+                        :ARG0 s7f1
+                        :start (s7e1 / entity)
+                        :goal (s7e2 / entity
+                            :refer-number plural
+                            :refer-person 1st)
+                        :ARG1 (s7o2 / odpad
+                            :mod (s7t1 / toxický
+                                :refer-number singular)
+                            :refer-number singular)
+                        :aspect activity)
+                    :refer-number plural
+                    :aspect activity))
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7p1: 1-2
+s7n1: 3-3
+s7z1: 2-2,4-4
+s7n2: 5-5
+s7o1: 6-6
+s7s1: 8-8
+s7p2: 9-10,15-15
+s7f1: 14-14
+s7n3: 13-13
+s7v1: 16-16
+s7e1: 0-0
+s7e2: 11-12
+s7o2: 18-18
+s7t1: 17-17
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7n2 :same-entity s6c1)
+            (s7e2 :same-entity s6z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1         2          3         4     5       6       7    8     9  10    11 12 13   14 15     16 17      18  19
+Words: Televizní zpracování reportáže Pavla Křemena uvidíte dnes večer v  21.45 na TV Nova v  pořadu Na vlastní oči .
+
+# sentence level graph:
+(s8u1 / uvidět-002
+        :ARG1 (s8z1 / zpracování
+            :ARG0 (s8e1 / entity)
+            :mod (s8t1 / televizní
+                :refer-number singular)
+            :ARG1 (s8r1 / reportáž
+                :ARG0 (s8k1 / Křemen
+                    :mod (s8p1 / Pavel
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s8e2 / entity
+            :refer-number plural
+            :refer-person 2nd)
+        :temporal (s8d1 / dnes)
+        :temporal (s8v1 / večer)
+        :temporal (s8x1 / 21.45)
+        :place (s8t2 / Televize
+            :name (s8n1 / Nova
+                :refer-number singular))
+        :place (s8p2 / pořad
+            :name (s8o1 / oko
+                :mod (s8v2 / vlastní
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect performance)
+
+# alignment:
+s8u1: 6-6
+s8z1: 2-2
+s8e1: 0-0
+s8t1: 1-1
+s8r1: 3-3
+s8k1: 5-5
+s8p1: 4-4
+s8e2: 0-0
+s8d1: 7-7
+s8v1: 8-8
+s8x1: 9-10
+s8t2: 11-12
+s8n1: 13-13
+s8p2: 14-15
+s8o1: 16-16,18-18
+s8v2: 17-17
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1   2  3         4    5    6     7         8  9   10        11        12 13    14
+Words: Pro LN zpracoval toto téma Pavel Vondráček ,  obě reportáže přineseme v  pátek .
+
+# sentence level graph:
+(s9a1 / and
+        :op1 (s9z1 / zpracovat-001
+            :ARG1 (s9t1 / téma
+                :mod (s9t2 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :affectee (s9l1 / LN
+                :refer-number plural)
+            :ARG0 (s9v1 / Vondráček
+                :mod (s9p1 / Pavel
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s9p2 / přinést-001
+            :ARG1 (s9r1 / reportáž
+                :mod (s9o1 / oba
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 s9l1
+            :ARG2 (s9e1 / entity)
+            :temporal (s9p3 / pátek
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 1st
+            :aspect performance))
+
+# alignment:
+s9a1: 8-8
+s9z1: 3-3
+s9t1: 5-5
+s9t2: 4-4
+s9l1: 1-2
+s9v1: 7-7
+s9p1: 6-6
+s9p2: 11-11
+s9r1: 10-10
+s9o1: 9-9
+s9e1: 0-0
+s9p3: 12-13
+
+# document level annotation:
+(s9s0 / sentence)
+
+

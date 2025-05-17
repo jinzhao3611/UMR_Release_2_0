@@ -1,0 +1,279 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2       3 4         5
+Words: Kritická situace v zairských táborech
+
+# sentence level graph:
+(s1s1 / situace
+        :mod (s1k1 / kritický
+            :refer-number singular)
+        :place (s1t1 / tábor
+            :mod (s1z1 / zairský
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular)
+
+# alignment:
+s1s1: 2-2
+s1k1: 1-1
+s1t1: 3-3,5-5
+s1z1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2 3      4
+Words: Goma / Ženeva -
+
+# sentence level graph:
+(s2a1 / and
+        :op1 (s2g1 / Goma
+            :refer-number singular)
+        :op2 (s2z1 / Ženeva
+            :refer-number singular))
+
+# alignment:
+s2a1: 2-2
+s2g1: 1-1
+s2z1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2           3           4      5         6          7  8        9     10   11    12       13 14 15           16      17 18       19 20       21  22     23 24 25 26      27      28   29       30      31
+Words: Pracovníci mezinárodní humanitární pomoci rwandským uprchlíkům v  zairském městě Goma včera oznámili ,  že bezpečnostní situace v  táborech se zhoršila tak prudce ,  že už nemohou zaručit svou normální činnost .
+
+# sentence level graph:
+(s3o1 / oznámit-002
+        :ARG0 (s3p1 / pracovník
+            :possessor (s3p2 / pomoc
+                :mod (s3h1 / humanitární
+                    :refer-number singular)
+                :mod (s3m1 / mezinárodní
+                    :refer-number singular)
+                :ARG1 (s3u1 / uprchlík
+                    :mod (s3r1 / rwandský
+                        :refer-number plural)
+                    :place (s3m2 / město
+                        :name (s3g1 / Goma
+                            :refer-number singular)
+                        :mod (s3z1 / zairský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number plural)
+        :ARG2 (s3e1 / entity)
+        :temporal (s3v1 / včera)
+        :effect (s3z2 / zhoršit-se-001
+            :ARG0 (s3s1 / situace
+                :mod (s3b1 / bezpečnostní
+                    :refer-number singular)
+                :place (s3t1 / tábor
+                    :refer-number plural)
+                :refer-number singular)
+            :manner (s3p3 / prudce
+                :extent (s3t2 / tak
+                    :result (s3z3 / zaručit-001
+                        :ARG0 s3p1
+                        :clausal-marker (s3u2 / už)
+                        :ARG1 (s3c1 / činnost
+                            :ARG0 s3p1
+                            :mod (s3n1 / normální
+                                :refer-number singular)
+                            :refer-number singular)
+                        :aspect performance
+                        :polarity -)))
+            :aspect performance)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s3o1: 12-12
+s3p1: 1-1,28-28
+s3p2: 4-4
+s3h1: 3-3
+s3m1: 2-2
+s3u1: 6-6
+s3r1: 5-5
+s3m2: 7-7,9-9
+s3g1: 10-10
+s3z1: 8-8
+s3e1: 0-0
+s3v1: 11-11
+s3z2: 14-14,19-20
+s3s1: 16-16
+s3b1: 15-15
+s3t1: 17-18
+s3p3: 22-22
+s3t2: 21-21
+s3z3: 24-24,26-27
+s3u2: 25-25
+s3c1: 30-30
+s3n1: 29-29
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3m2 :same-entity s2g1)
+            (s3z1 :same-entity s1z1)
+            (s3s1 :same-entity s1s1)
+            (s3t1 :same-entity s1t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2        3        4   5   6         7  8     9  10 11  12      13    14     15      16       17         18         19          20     21  22     23    24        25
+Words: Úřad vysokého komisaře OSN pro uprchlíky má obavy ,  že ani zairská vláda nebude schopna zajistit bezpečnost pracovníků humanitární pomoci ani stovek tisíc uprchlíků .
+
+# sentence level graph:
+(s4m1 / mít-031
+        :ARG0 (s4u1 / úřad
+            :possessor (s4k1 / komisař
+                :mod (s4v1 / vysoký
+                    :refer-number singular)
+                :possessor (s4o1 / OSN)
+                :purpose (s4u2 / uprchlík
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :predicative-noun (s4o2 / obava
+            :ARG0 s4u1
+            :ARG1 (s4b1 / být-007
+                :clausal-marker (s4a1 / ani)
+                :ARG0 (s4v2 / vláda
+                    :mod (s4z1 / zairský
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s4s1 / schopný
+                    :ARG1 (s4z2 / zajistit-002
+                        :ARG0 s4v2
+                        :ARG1 (s4b2 / bezpečnost
+                            :possessor (s4a2 / and
+                                :op1 (s4p1 / pracovník
+                                    :possessor (s4p2 / pomoc
+                                        :mod (s4h1 / humanitární
+                                            :refer-number singular)
+                                        :refer-number singular)
+                                    :refer-number plural)
+                                :op2 (s4s2 / stovka
+                                    :mod (s4t1 / tisíc
+                                        :mod (s4u3 / uprchlík
+                                            :refer-number plural)
+                                        :refer-number singular)
+                                    :refer-number plural))
+                            :refer-number singular)
+                        :aspect performance))
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity
+                :polarity -)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s4m1: 7-7
+s4u1: 1-1
+s4k1: 3-3
+s4v1: 2-2
+s4o1: 4-4
+s4u2: 5-6
+s4o2: 8-8
+s4b1: 10-10,14-14
+s4a1: 11-11
+s4v2: 13-13
+s4z1: 12-12
+s4s1: 15-15
+s4z2: 16-16
+s4b2: 17-17
+s4a2: 21-21
+s4p1: 18-18
+s4p2: 20-20
+s4h1: 19-19
+s4s2: 22-22
+s4t1: 23-23
+s4u3: 24-24
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4z1 :same-entity s3z1)
+            (s4p1 :same-entity s3p1)
+            (s4p2 :same-entity s3p2)
+            (s4u3 :same-entity s3u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2       3           4         5   6       7  8       9       10 11  12  13        14          15       16 17    18 19     20       21 22       23    24
+Words: Rwanda vyzvala generálního tajemníka OSN Butruse -  Butruse Ghálího ,  aby OSN vytvořila mezinárodní tribunál ,  který by soudil zločince z  občanské války .
+
+# sentence level graph:
+(s5v1 / vyzvat-001
+        :ARG0 (s5r1 / Rwanda
+            :refer-number singular)
+        :ARG2 (s5g1 / Ghálí
+            :mod (s5b1 / Butrus
+                :refer-number singular)
+            :mod (s5b2 / Butrus
+                :refer-number singular)
+            :mod (s5t1 / tajemník
+                :possessor (s5o1 / OSN)
+                :mod (s5g2 / generální
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s5v2 / vytvořit-001
+            :ARG0 (s5o2 / OSN)
+            :ARG1 (s5t2 / tribunál
+                :mod (s5m1 / mezinárodní
+                    :refer-number singular)
+                :ARG0-of (s5s1 / soudit-001
+                    :ARG1 (s5z1 / zločinec
+                        :start (s5v3 / válka
+                            :mod (s5o3 / občanský
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular
+                    :aspect activity)
+                :refer-number singular)
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s5v1: 2-2
+s5r1: 1-1
+s5g1: 9-9
+s5b1: 6-6
+s5b2: 8-8
+s5t1: 4-4
+s5o1: 5-5
+s5g2: 3-3
+s5v2: 11-11,13-13
+s5o2: 12-12
+s5t2: 15-15,17-17
+s5m1: 14-14
+s5s1: 18-19
+s5z1: 20-20
+s5v3: 21-21,23-23
+s5o3: 22-22
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5r1 :same-entity s3r1)
+            (s5o1 :same-entity s4o1)
+            (s5o2 :same-entity s5o1)))
+
+

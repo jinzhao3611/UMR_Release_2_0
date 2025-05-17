@@ -1,0 +1,162 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2    3       4      5  6  7  8     9  10      11 12 13      14       15   16 17    18    19     20 21 22 23   24     25   26       27 28       29    30
+Words: Na vaší titulní straně ze 4  .  října je uvedeno ,  že britští právníci musí u  soudu nosit paruky ,  a  že tyto paruky jsou vyrobeny z  koňských ohonů .
+
+# sentence level graph:
+(s1u1 / uvést-001
+        :ARG0 (s1e1 / entity)
+        :place (s1s1 / strana
+            :mod (s1e2 / entity
+                :refer-number singular
+                :refer-person 2nd)
+            :mod (s1t1 / titulní
+                :refer-number singular)
+            :temporal (s1r1 / říjen
+                :mod (s1x1 / 4)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1a1 / and
+            :op1 (s1n1 / nosit-002
+                :ARG0 (s1p1 / právník
+                    :mod (s1b1 / britský
+                        :refer-number plural)
+                    :refer-number plural)
+                :place (s1s2 / soud
+                    :refer-number singular)
+                :ARG1 (s1p2 / paruka
+                    :refer-number plural)
+                :aspect activity)
+            :op2 (s1v1 / vyrobit-001
+                :ARG0 (s1e3 / entity)
+                :ARG1 (s1p3 / paruka
+                    :mod (s1t2 / tento
+                        :refer-number plural)
+                    :refer-number plural)
+                :source (s1o1 / ohon
+                    :mod (s1k1 / koňský
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :aspect performance))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s1u1: 9-10
+s1e1: 0-0
+s1s1: 1-1,4-4
+s1e2: 2-2
+s1t1: 3-3
+s1r1: 5-5,8-8
+s1x1: 6-7
+s1a1: 21-21
+s1n1: 12-12,15-15,18-18
+s1p1: 14-14
+s1b1: 13-13
+s1s2: 16-17
+s1p2: 19-19
+s1v1: 22-22,25-26
+s1e3: 0-0
+s1p3: 24-24
+s1t2: 23-23
+s1o1: 27-27,29-29
+s1k1: 28-28
+
+# document level annotation:
+(s1s0 / sentence
+    :coref ((s1p3 :same-entity s1p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2  3  4       5    6    7  8  9  10 11
+Words: Myslíte ,  že Britové vědí něco ,  co my ne ?
+
+# sentence level graph:
+(s2m1 / myslet-003
+        :ARG0 (s2e1 / entity
+            :refer-number singular
+            :refer-person 2nd)
+        :effect (s2v1 / vědět-001
+            :ARG0 (s2b1 / Brit
+                :refer-number plural)
+            :ARG1 (s2n1 / něco
+                :ARG1-of (s2v2 / vědět-001
+                    :ARG0 (s2e2 / entity
+                        :refer-number plural
+                        :refer-person 1st)
+                    :clausal-marker (s2n2 / ne)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect state))
+            :refer-number plural
+            :refer-person 3rd
+            :aspect state)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect state)
+
+# alignment:
+s2m1: 1-1
+s2e1: 0-0
+s2v1: 3-3,5-5
+s2b1: 4-4
+s2n1: 6-6,8-8
+s2v2: 0-0
+s2e2: 9-9
+s2n2: 10-10
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2e1 :same-entity s1e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2   3
+Words: Yale Jay Lubkin
+
+# sentence level graph:
+(s3l1 / Lubkin
+        :mod (s3y1 / Yale
+            :refer-number singular)
+        :mod (s3j1 / Jay
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s3l1: 3-3
+s3y1: 1-1
+s3j1: 2-2
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2  3     4        5
+Words: Owings ve státě Maryland .
+
+# sentence level graph:
+(s4o1 / Owings
+        :place (s4s1 / stát
+            :name (s4m1 / Maryland
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s4o1: 1-1
+s4s1: 2-3
+s4m1: 4-4
+
+# document level annotation:
+(s4s0 / sentence)
+
+

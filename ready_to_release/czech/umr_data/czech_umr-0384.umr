@@ -1,0 +1,220 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2
+Words: Utopený Armén
+
+# sentence level graph:
+(s1a1 / Armén
+        :mod (s1u1 / utopený
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1a1: 2-2
+s1u1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2 3   4 5
+Words: Olomouc ( mot ) -
+
+# sentence level graph:
+(s2o1 / Olomouc
+        :parenthesis (s2m1 / mot)
+        :refer-number singular)
+
+# alignment:
+s2o1: 1-1
+s2m1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2           3      4  5       6      7            8     9  10    11  12 13     14     15
+Words: V  zavlažovací nádrži ZK Vilémov utonul patnáctiletý Armén ,  který byl na letním táboře .
+
+# sentence level graph:
+(s3u1 / utonout-001
+        :place (s3n1 / nádrž
+            :mod (s3z1 / ZK
+                :name (s3v1 / Vilémov
+                    :refer-number singular))
+            :mod (s3z2 / zavlažovací
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3a1 / Armén
+            :mod (s3p1 / patnáctiletý
+                :refer-number singular)
+            :ARG0-of (s3b1 / být-011
+                :place (s3t1 / tábor
+                    :mod (s3l1 / letní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3u1: 6-6
+s3n1: 1-1,3-3
+s3z1: 4-4
+s3v1: 5-5
+s3z2: 2-2
+s3a1: 8-8,10-10
+s3p1: 7-7
+s3b1: 11-11
+s3t1: 12-12,14-14
+s3l1: 13-13
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3a1 :same-entity s1a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2      3  4   5   6  7         8     9  10 11        12     13     14  15       16 17 18 19        20
+Words: V  nádrži ,  kde byl s  ostatními dětmi ,  z  neznámých příčin zmizel pod hladinou a  už se nevynořil .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4z1 / zmizet-001
+            :ARG0 s4e1
+            :place (s4n1 / nádrž
+                :place-of (s4b1 / být-011
+                    :ARG0 (s4e1 / entity
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :companion (s4d1 / dítě
+                        :mod (s4o1 / ostatní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular
+                    :aspect activity)
+                :refer-number singular)
+            :cause (s4p1 / příčina
+                :mod (s4z2 / známý
+                    :refer-number plural
+                    :polarity -)
+                :refer-number plural)
+            :place (s4h1 / hladina
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s4v1 / vynořit-se-001
+            :ARG0 s4e1
+            :start (s4e2 / entity)
+            :temporal (s4u1 / už)
+            :refer-number singular
+            :aspect performance
+            :polarity -))
+
+# alignment:
+s4a1: 16-16
+s4z1: 13-13
+s4n1: 1-2,4-4
+s4b1: 5-5
+s4e1: 0-0
+s4d1: 6-6,8-8
+s4o1: 7-7
+s4p1: 10-10,12-12
+s4z2: 11-11
+s4h1: 14-15
+s4v1: 18-19
+s4e2: 0-0
+s4u1: 17-17
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4n1 :same-entity s3n1)
+            (s4e1 :same-entity s3a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2     3    4    5  6  7             8        9
+Words: Hasiči našli jeho tělo až po čtyřiadvaceti hodinách .
+
+# sentence level graph:
+(s5n1 / najít-002
+        :ARG0 (s5h1 / hasič
+            :refer-number plural)
+        :ARG1 (s5t1 / tělo
+            :possessor (s5e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :refer-number singular)
+        :clausal-marker (s5a1 / až)
+        :temporal (s5h2 / hodina
+            :mod (s5c1 / čtyřiadvacet
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s5n1: 2-2
+s5h1: 1-1
+s5t1: 4-4
+s5e1: 3-3
+s5a1: 5-5
+s5h2: 6-6,8-8
+s5c1: 7-7
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2   3  4      5  6           7      8  9        10 11   12
+Words: Chlapec žil s  rodiči v  utečeneckém táboře v  Zastávce u  Brna .
+
+# sentence level graph:
+(s6z1 / žít-005
+        :ARG0 (s6c1 / chlapec
+            :refer-number singular
+            :refer-person 3rd)
+        :companion (s6r1 / rodič
+            :refer-number singular)
+        :place (s6t1 / tábor
+            :mod (s6u1 / utečenecký
+                :refer-number singular)
+            :place (s6z2 / zastávka
+                :mod (s6b1 / Brno
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s6z1: 2-2
+s6c1: 1-1
+s6r1: 3-4
+s6t1: 5-5,7-7
+s6u1: 6-6
+s6z2: 8-9
+s6b1: 10-11
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6c1 :same-entity s5e1)))
+
+

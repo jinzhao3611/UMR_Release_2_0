@@ -1,0 +1,488 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2  3        4   5  6
+Words: Papež je odhodlán jet do Sarajeva
+
+# sentence level graph:
+(s1b1 / být-007
+        :ARG0 (s1p1 / papež
+            :refer-number singular)
+        :ARG1 (s1o1 / odhodlaný
+            :ARG1 (s1j1 / jet-004
+                :ARG0 s1p1
+                :goal (s1s1 / Sarajevo
+                    :refer-number singular)
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1b1: 2-2
+s1p1: 1-1
+s1o1: 3-3
+s1j1: 4-4
+s1s1: 5-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2
+Words: Sarajevo -
+
+# sentence level graph:
+(s2s1 / Sarajevo
+        :refer-number singular)
+
+# alignment:
+s2s1: 1-1
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2s1 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2   3     4  5  6  7      8     9     10       11 12 13   14          15       16        17
+Words: Papež Jan Pavel II .  v  neděli večer znovu potvrdil ,  že svou sarajevskou návštěvu uskuteční .
+
+# sentence level graph:
+(s3p1 / potvrdit-001
+        :ARG0 (s3p2 / Pavel
+            :mod (s3j1 / Jan
+                :refer-number singular)
+            :mod (s3i1 / II)
+            :mod (s3p3 / papež
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3n1 / neděle
+            :refer-number singular)
+        :temporal (s3v1 / večer)
+        :temporal (s3z1 / znovu)
+        :ARG1 (s3u1 / uskutečnit-001
+            :ARG1 (s3n2 / návštěva
+                :ARG0 s3p2
+                :mod (s3s1 / sarajevský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s3p2
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3p1: 10-10
+s3p2: 3-3,13-13
+s3j1: 2-2
+s3i1: 4-4
+s3p3: 1-1
+s3n1: 6-7
+s3v1: 8-8
+s3z1: 9-9
+s3u1: 12-12,16-16
+s3n2: 15-15
+s3s1: 14-14
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p2 :same-entity s1p1)
+            (s3s1 :same-entity s2s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2       3         4         5     6     7  8        9    10 11 12    13     14       15    16     17   18    19 20 21 22       23 24    25 26        27 28      29 30 31   32
+Words: Papežský nuncius Francesco Montarisi ještě včera v  Sarajevu řekl ,  že zatím nemůže potvrdit cestu papeže Jana Pavla II .  do Sarajeva ,  která je plánována na čtvrtek 8  .  září .
+
+# sentence level graph:
+(s4r1 / říci-008
+        :ARG0 (s4m1 / Montarisi
+            :mod (s4f1 / Francesco
+                :refer-number singular)
+            :mod (s4n1 / nuncius
+                :mod (s4p1 / papežský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s4j1 / ještě)
+        :temporal (s4v1 / včera)
+        :ARG2 (s4e1 / entity)
+        :place (s4s1 / Sarajevo
+            :refer-number singular)
+        :effect (s4p2 / potvrdit-001
+            :temporal (s4z1 / zatím)
+            :ARG0 s4m1
+            :ARG1 (s4c1 / cesta
+                :ARG0 (s4p3 / Pavel
+                    :mod (s4p4 / papež
+                        :refer-number singular)
+                    :mod (s4i1 / II)
+                    :mod (s4j2 / Jan
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd)
+                :goal (s4s2 / Sarajevo
+                    :refer-number singular)
+                :ARG1-of (s4p5 / plánovat-001
+                    :ARG0 (s4e2 / entity)
+                    :duration (s4c2 / čtvrtek
+                        :possessor (s4z2 / září
+                            :mod (s4x2 / 8)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect activity)
+                :refer-number singular)
+            :aspect performance
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4r1: 9-9
+s4m1: 4-4
+s4f1: 3-3
+s4n1: 2-2
+s4p1: 1-1
+s4j1: 5-5
+s4v1: 6-6
+s4e1: 0-0
+s4s1: 7-8
+s4p2: 11-11,13-14
+s4z1: 12-12
+s4c1: 15-15,24-24
+s4p3: 18-18
+s4p4: 16-16
+s4i1: 19-19
+s4j2: 17-17
+s4s2: 21-22
+s4p5: 25-26
+s4e2: 0-0
+s4c2: 27-28
+s4z2: 31-31
+s4x2: 29-29
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s1 :same-entity s3s1)
+            (s4p3 :same-entity s3p2)
+            (s4s2 :same-entity s4s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2      3     4       5          6    7        8        9           10 11   12 13      14      15 16 17 18  19        20
+Words: V  sobotu totiž předáci bosenských Srbů papežovu návštěvu zpochybnili ,  když se odmítli zaručit ,  že na něj nezaútočí .
+
+# sentence level graph:
+(s5z1 / zpochybnit-001
+        :temporal (s5s1 / sobota
+            :refer-number singular)
+        :clausal-marker (s5t1 / totiž)
+        :ARG0 (s5p1 / předák
+            :possessor (s5s2 / Srb
+                :mod (s5b1 / bosenský
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s5n1 / návštěva
+            :ARG0 (s5p2 / papež
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s5o1 / odmítnout-003
+            :ARG0 s5p1
+            :ARG1 (s5z2 / zaručit-se-001
+                :ARG0 (s5e1 / entity)
+                :ARG1 s5p1
+                :ARG2 (s5e2 / entity)
+                :instrument (s5z3 / zaútočit-001
+                    :ARG0 s5p1
+                    :ARG1 s5p2
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect performance
+                    :polarity -)
+                :aspect performance)
+            :refer-number plural
+            :aspect performance)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s5z1: 9-9
+s5s1: 1-2
+s5t1: 3-3
+s5p1: 4-4
+s5s2: 6-6
+s5b1: 5-5
+s5n1: 8-8
+s5p2: 7-7,17-18
+s5o1: 11-11,13-13
+s5z2: 12-12,14-14
+s5e1: 0-0
+s5e2: 0-0
+s5z3: 16-16,19-19
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5n1 :same-entity s3n2)
+            (s5p2 :same-entity s4p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1          2  3  4       5     6  7    8       9  10    11 12 13  14   15      16    17 18          19   20
+Words: Prohlásili ,  že nemohou ručit za činy Muslimů ,  kteří by se pak vinu snažili svést na pravoslavné Srby .
+
+# sentence level graph:
+(s6p1 / prohlásit-003
+        :ARG0 (s6e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :effect (s6r1 / ručit-001
+            :ARG0 s6e1
+            :ARG2 (s6e2 / entity)
+            :ARG1 (s6c1 / čin
+                :ARG0 (s6m1 / muslim
+                    :ARG0-of (s6s1 / snažit-se-001
+                        :temporal (s6p2 / pak)
+                        :ARG1 (s6s2 / svést-001
+                            :ARG1 (s6v1 / vina
+                                :refer-number singular)
+                            :ARG0 s6m1
+                            :ARG2 (s6s3 / Srb
+                                :mod (s6p3 / pravoslavný
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :aspect performance)
+                        :refer-number plural
+                        :aspect activity)
+                    :refer-number plural)
+                :refer-number plural)
+            :aspect activity
+            :polarity -)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s6p1: 1-1
+s6e1: 0-0
+s6r1: 3-5
+s6e2: 0-0
+s6c1: 6-7
+s6m1: 8-8,10-10
+s6s1: 11-12,15-15
+s6p2: 13-13
+s6s2: 16-16
+s6v1: 14-14
+s6s3: 17-17,19-19
+s6p3: 18-18
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5p1)
+            (s6s3 :same-entity s5s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2  3        4         5        6  7     8          9  10    11 12      13          14         15    16 17    18
+Words: Situace v  bosenské metropoli Sarajevu je stále napjatější a  množí se případy ozbrojených přestřelek přímo ve městě .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7b1 / být-007
+            :ARG0 (s7s1 / situace
+                :place (s7m1 / metropol
+                    :mod (s7b2 / bosenský
+                        :refer-number singular)
+                    :mod (s7s2 / Sarajevo
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :duration (s7s3 / stále)
+            :ARG1 (s7n1 / napjatý
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s7m2 / množit-se-001
+            :ARG0 (s7p1 / případ
+                :ARG1 (s7p2 / přestřelka
+                    :mod (s7o1 / ozbrojený
+                        :refer-number plural)
+                    :clausal-marker (s7p3 / přímo)
+                    :place (s7m3 / město
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s7a1: 9-9
+s7b1: 6-6
+s7s1: 1-1
+s7m1: 2-2,4-4
+s7b2: 3-3
+s7s2: 5-5
+s7s3: 7-7
+s7n1: 8-8
+s7m2: 10-11
+s7p1: 12-12
+s7p2: 14-14
+s7o1: 13-13
+s7p3: 15-15
+s7m3: 16-17
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7b2 :same-entity s5b1)
+            (s7s2 :same-entity s4s2)
+            (s7m3 :same-entity s7s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2  3      4        5  6        7  8  9        10
+Words: Uvedl to mluvčí UNPROFOR v  Sarajevu S  .  Pasquier .
+
+# sentence level graph:
+(s8u1 / uvést-007
+        :effect (s8t1 / ten
+            :refer-number singular)
+        :ARG0 (s8p1 / Pasquier
+            :mod (s8s1 / S)
+            :mod (s8m1 / mluvčí
+                :place (s8s2 / Sarajevo
+                    :refer-number singular)
+                :possessor (s8u2 / UNPROFOR)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8u1: 1-1
+s8t1: 2-2
+s8p1: 9-9
+s8s1: 7-7
+s8m1: 3-3
+s8s2: 5-6
+s8u2: 4-4
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8t1 :same-entity s7a1)
+            (s8s2 :same-entity s7m3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2     3         4    5     6  7  8  9         10      11 12        13        14          15          16       17     18 19 20         21      22 23  24   25    26    27  28 29       30       31    32        33  34  35    36   37
+Words: Ve snaze upozornit Jana Pavla II .  na nebezpečí spojené s  chystanou návštěvou ostřelovali pravoslavní bosenští Srbové mj .  sarajevský stadion ,  kde chce papež během své 12 hodinové návštěvy města uspořádat mši pro 25000 lidí .
+
+# sentence level graph:
+(s9o1 / ostřelovat-001
+        :condition (s9s1 / snaha
+            :ARG0 s9s2
+            :ARG1 (s9u1 / upozornit-001
+                :ARG2 (s9p1 / Pavel
+                    :mod (s9j1 / Jan
+                        :refer-number singular)
+                    :mod (s9i1 / II)
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG0 s9s2
+                :ARG1 (s9n1 / nebezpečí
+                    :mod (s9s3 / spojený
+                        :ARG1 (s9n2 / návštěva
+                            :mod (s9c1 / chystaný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :ARG0 (s9s2 / Srb
+            :mod (s9b1 / bosenský
+                :refer-number plural)
+            :mod (s9p2 / pravoslavný
+                :refer-number plural)
+            :refer-number plural)
+        :subtraction (s9m1 / mj)
+        :ARG1 (s9s4 / stadión
+            :mod (s9s5 / sarajevský
+                :refer-number singular)
+            :place-of (s9u2 / uspořádat-001
+                :ARG0 (s9p3 / papež
+                    :refer-number singular)
+                :temporal (s9n3 / návštěva
+                    :ARG1 (s9m2 / město
+                        :refer-number singular)
+                    :ARG0 s9p3
+                    :mod (s9x4 / 12_hodinový)
+                    :refer-number singular)
+                :ARG1 (s9m3 / mše
+                    :refer-number singular)
+                :affectee (s9c2 / člověk
+                    :mod (s9x5 / 25000)
+                    :refer-number plural)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s9o1: 14-14
+s9s1: 1-2
+s9u1: 3-3
+s9p1: 5-5
+s9j1: 4-4
+s9i1: 6-6
+s9n1: 8-9
+s9s3: 10-10
+s9n2: 11-11,13-13
+s9c1: 12-12
+s9s2: 17-17
+s9b1: 16-16
+s9p2: 15-15
+s9m1: 18-18
+s9s4: 21-21,23-23
+s9s5: 20-20
+s9u2: 24-24,32-32
+s9p3: 25-25,27-27
+s9n3: 26-26,30-30
+s9m2: 31-31
+s9x4: 28-29
+s9m3: 33-33
+s9c2: 34-34,36-36
+s9x5: 35-35
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9p1 :same-entity s5p2)
+            (s9n2 :same-entity s5n1)
+            (s9b1 :same-entity s7b2)
+            (s9s5 :same-entity s8s2)
+            (s9p3 :same-entity s9p1)
+            (s9n3 :same-entity s9n2)
+            (s9m2 :same-entity s9s5)))
+
+

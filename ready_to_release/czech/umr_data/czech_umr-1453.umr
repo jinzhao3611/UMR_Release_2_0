@@ -1,0 +1,132 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2        3     4         5  6             7         8  9        10     11        12         13   14 15    16        17 18        19
+Words: Na dovezené zboží prodávané na nejrůznějších tržištích se vztahují stejné atestační povinnosti jako na zboží prodávané v  obchodech .
+
+# sentence level graph:
+(s1v1 / vztahovat-se-001
+        :ARG1 (s1z1 / zboží
+            :mod (s1d1 / dovezený
+                :refer-number singular)
+            :mod (s1p1 / prodávaný
+                :place (s1t1 / tržiště
+                    :mod (s1r1 / různý
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s1p2 / povinnost
+            :mod (s1a1 / atestační
+                :refer-number plural)
+            :mod (s1s1 / stejný
+                :comparison (s1v2 / vztahovat-se-001
+                    :ARG0 s1p2
+                    :ARG1 (s1z2 / zboží
+                        :mod (s1p3 / prodávaný
+                            :place (s1o1 / obchod
+                                :refer-number plural)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1v1: 8-9
+s1z1: 1-1,3-3
+s1d1: 2-2
+s1p1: 4-4
+s1t1: 5-5,7-7
+s1r1: 6-6
+s1p2: 12-12
+s1a1: 11-11
+s1s1: 10-10
+s1v2: 0-0
+s1z2: 14-15
+s1p3: 16-16
+s1o1: 17-18
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2  3  4   5     6       7        8  9      10 11           12         13     14
+Words: Zákazník tu ke své škodě málokdy přemýšlí o  původu a  vlastnostech nabízeného tovaru .
+
+# sentence level graph:
+(s2p1 / přemýšlet-001
+        :clausal-marker (s2k1 / ke_škodě
+            :possessor s2z1
+            :refer-number singular)
+        :ARG0 (s2z1 / zákazník
+            :refer-number singular)
+        :place (s2t1 / tu
+            :refer-number plural)
+        :frequency (s2m1 / málokdy)
+        :ARG1 (s2a1 / and
+            :op1 (s2p2 / původ
+                :possessor (s2t2 / tovar
+                    :mod (s2n1 / nabízený
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s2v1 / vlastnost
+                :possessor s2t2
+                :refer-number plural))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2p1: 7-7
+s2k1: 3-3,5-5
+s2z1: 1-1,4-4
+s2t1: 2-2
+s2m1: 6-6
+s2a1: 10-10
+s2p2: 8-9
+s2t2: 13-13
+s2n1: 12-12
+s2v1: 8-8,11-11
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2t1 :same-entity s1t1)
+            (s2t2 :same-entity s1z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2     3
+Words: Foto Karel Cudlín
+
+# sentence level graph:
+(s3e1 / event
+        :ARG1 (s3f1 / foto
+            :refer-number singular)
+        :ARG0 (s3c1 / Cudlín
+            :mod (s3k1 / Karel
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s3e1: 0-0
+s3f1: 1-1
+s3c1: 3-3
+s3k1: 2-2
+
+# document level annotation:
+(s3s0 / sentence)
+
+

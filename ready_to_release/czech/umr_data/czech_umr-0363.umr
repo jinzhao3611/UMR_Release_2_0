@@ -1,0 +1,454 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2  3   4        5
+Words: Většina je pro dostavbu Temelína
+
+# sentence level graph:
+(s1b1 / být-011
+        :ARG0 (s1v1 / většina
+            :refer-number singular)
+        :affectee (s1d1 / dostavba
+            :ARG1 (s1t1 / Temelín
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1b1: 2-2
+s1v1: 1-1
+s1d1: 3-4
+s1t1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2        3       4          5       6  7   8    9       10 11      12 13 14        15        16        17      18      19   20
+Words: Pro dostavbu jaderné elektrárny Temelín a  pro její uvedení do provozu by v  případném referendu hlasovalo šedesát procent lidí .
+
+# sentence level graph:
+(s3h1 / hlasovat-003
+        :ARG1 (s3a1 / and
+            :op1 (s3d1 / dostavba
+                :ARG1 (s3e1 / elektrárna
+                    :mod (s3j1 / jaderný
+                        :refer-number singular)
+                    :name (s3t1 / Temelín
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s3u1 / uvedení
+                :ARG0 (s3e2 / entity)
+                :ARG1 s3e1
+                :goal (s3p1 / provoz
+                    :refer-number singular)
+                :refer-number singular))
+        :place (s3r1 / referendum
+            :mod (s3p2 / případný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3p3 / procento
+            :mod (s3c1 / člověk
+                :refer-number plural)
+            :mod (s3s1 / šedesát
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s3h1: 12-12,16-16
+s3a1: 6-6
+s3d1: 1-2
+s3e1: 4-4,8-8
+s3j1: 3-3
+s3t1: 5-5
+s3u1: 7-7,9-9
+s3e2: 0-0
+s3p1: 10-11
+s3r1: 13-13,15-15
+s3p2: 14-14
+s3p3: 18-18
+s3c1: 19-19
+s3s1: 17-17
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s1t1)
+            (s3p3 :same-entity s1v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1         2  3  4        5         6      7  8     9  10       11          12         13   14
+Words: Vyplynulo to z  průzkumu veřejného mínění ,  který v  červenci uskutečnila společnost AISA .
+
+# sentence level graph:
+(s4v1 / vyplynout-001
+        :ARG0 (s4t1 / ten
+            :refer-number singular)
+        :ARG1 (s4p1 / průzkum
+            :ARG1 (s4m1 / mínění
+                :ARG0 (s4e1 / entity)
+                :ARG1 (s4e2 / entity)
+                :mod (s4v2 / veřejný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1-of (s4u1 / uskutečnit-001
+                :temporal (s4c1 / červenec
+                    :refer-number singular)
+                :ARG0 (s4s1 / společnost
+                    :name (s4a1 / AISA
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4v1: 1-1
+s4t1: 2-2
+s4p1: 3-4,8-8
+s4m1: 6-6
+s4e1: 0-0
+s4e2: 0-0
+s4v2: 5-5
+s4u1: 11-11
+s4c1: 9-10
+s4s1: 12-12
+s4a1: 13-13
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2        3  4  5  6         7         8         9  10      11   12
+Words: Proti dostavbě by se v  případném referendu vyslovilo 23 procent lidí .
+
+# sentence level graph:
+(s5v1 / vyslovit-se-002
+        :ARG1 (s5d1 / dostavba
+            :refer-number singular)
+        :place (s5r1 / referendum
+            :mod (s5p1 / případný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5p2 / procento
+            :mod (s5c1 / člověk
+                :refer-number plural)
+            :mod (s5x1 / 23)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5v1: 3-4,8-8
+s5d1: 1-2
+s5r1: 5-5,7-7
+s5p1: 6-6
+s5p2: 10-10
+s5c1: 11-11
+s5x1: 9-9
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5d1 :same-entity s3d1)
+            (s5r1 :same-entity s3r1)
+            (s5c1 :same-entity s3c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2         3  4       5        6  7    8   9  10 11
+Words: Poměr příznivců a  odpůrců Temelína je tedy 2.5 :  1  .
+
+# sentence level graph:
+(s6b1 / být-007
+        :ARG0 (s6p1 / poměr
+            :possessor (s6a1 / and
+                :op1 (s6p2 / příznivec
+                    :possessor (s6t1 / Temelín
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :refer-number plural)
+                :op2 (s6o1 / odpůrce
+                    :possessor s6t1
+                    :refer-number plural))
+            :refer-number singular)
+        :clausal-marker (s6t2 / tedy)
+        :ARG1 (s6m1 / math
+            :op1 (s6x2 / 2.5)
+            :op2 (s6x3 / 1))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 6-6
+s6p1: 1-1
+s6a1: 3-3
+s6p2: 2-2
+s6t1: 5-5
+s6o1: 4-4
+s6t2: 7-7
+s6m1: 9-9
+s6x2: 8-8
+s6x3: 10-10
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p2 :same-entity s3p3)
+            (s6t1 :same-entity s3e1)
+            (s6o1 :same-entity s5p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1    2   3     4        5        6     7         8  9  10      11 12       13 14       15      16      17     18        19         20
+Words: Více než jedna polovina obyvatel České republiky ,  60 procent ,  souhlasí s  využitím jaderné energie formou jaderných elektráren .
+
+# sentence level graph:
+(s7s1 / souhlasit-003
+        :ARG0 (s7i1 / identity-91
+            :ARG1 (s7h1 / hodně
+                :comparison (s7p1 / polovina
+                    :mod (s7o1 / obyvatel
+                        :possessor (s7r1 / republika
+                            :mod (s7c1 / Český
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s7j1 / jeden
+                        :refer-number singular)
+                    :refer-number singular))
+            :ARG2 (s7p2 / procento
+                :mod (s7x1 / 60)
+                :refer-number plural))
+        :ARG1 (s7v1 / využití
+            :ARG0 (s7e1 / entity)
+            :ARG1 (s7e2 / energie
+                :mod (s7j2 / jaderný
+                    :refer-number singular)
+                :refer-number singular)
+            :manner (s7e3 / elektrárna
+                :mod (s7j3 / jaderný
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s7s1: 12-12
+s7i1: 8-8
+s7h1: 1-1
+s7p1: 2-2,4-4
+s7o1: 5-5
+s7r1: 7-7
+s7c1: 6-6
+s7j1: 3-3
+s7p2: 10-10
+s7x1: 9-9
+s7v1: 13-14
+s7e1: 0-0
+s7e2: 16-16
+s7j2: 15-15
+s7e3: 17-17,19-19
+s7j3: 18-18
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7o1 :same-entity s5c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1         2         3     4       5  6    7  8  9       10         11
+Words: Nesouhlas vyslovila jedna třetina ,  resp .  35 procent dotázaných .
+
+# sentence level graph:
+(s8v1 / vyslovit-004
+        :predicative-noun (s8n1 / nesouhlas
+            :ARG0 s8i1
+            :ARG1 (s8e1 / entity)
+            :refer-number singular)
+        :ARG0 (s8i1 / identity-91
+            :ARG1 (s8t1 / třetina
+                :mod (s8d1 / dotázaný
+                    :refer-number plural)
+                :mod (s8j1 / jeden
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s8r1 / respektive)
+            :ARG2 (s8p1 / procento
+                :mod s8d1
+                :mod (s8x3 / 35)
+                :refer-number plural))
+        :aspect performance)
+
+# alignment:
+s8v1: 2-2
+s8n1: 1-1
+s8e1: 0-0
+s8i1: 5-5
+s8t1: 4-4
+s8j1: 3-3
+s8d1: 10-10
+s8r1: 6-6
+s8p1: 9-9
+s8x3: 8-8
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1   2       3    4
+Words: Pět procent neví .
+
+# sentence level graph:
+(s9v1 / vědět-004
+        :ARG0 (s9p1 / procento
+            :mod (s9p2 / pět
+                :refer-number singular)
+            :refer-number plural)
+        :effect (s9e1 / entity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state
+        :polarity -)
+
+# alignment:
+s9v1: 3-3
+s9p1: 2-2
+s9p2: 1-1
+s9e1: 0-0
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1      2      3  4  5  6        7       8       9        10       11 12      13       14
+Words: Výzkum ukázal ,  že s  využitím jaderné energie rozhodně souhlasí 23 procent obyvatel .
+
+# sentence level graph:
+(s10u1 / ukázat-001
+        :ARG0 (s10v1 / výzkum
+            :refer-number singular)
+        :ARG2 (s10e1 / entity)
+        :ARG1 (s10s1 / souhlasit-003
+            :ARG1 (s10v2 / využití
+                :ARG1 (s10e2 / energie
+                    :mod (s10j1 / jaderný
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s10e3 / entity)
+                :refer-number singular)
+            :manner (s10r1 / rozhodně)
+            :ARG0 (s10p1 / procento
+                :mod (s10o1 / obyvatel
+                    :refer-number singular)
+                :mod (s10x1 / 23)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s10u1: 2-2
+s10v1: 1-1
+s10e1: 0-0
+s10s1: 4-4,10-10
+s10v2: 5-6
+s10e2: 8-8
+s10j1: 7-7
+s10e3: 0-0
+s10r1: 9-9
+s10p1: 12-12
+s10o1: 13-13
+s10x1: 11-11
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10v1 :same-entity s4p1)
+            (s10v2 :same-entity s7v1)
+            (s10e2 :same-entity s7e2)
+            (s10o1 :same-entity s7o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1        2         3         4  5       6           7
+Words: Rozhodný nesouhlas vyslovilo 14 procent respondentů .
+
+# sentence level graph:
+(s11v1 / vyslovit-004
+        :predicative-noun (s11n1 / nesouhlas
+            :ARG0 s11p1
+            :ARG1 (s11e1 / entity)
+            :mod (s11r1 / rozhodný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s11p1 / procento
+            :mod (s11r2 / respondent
+                :refer-number plural)
+            :mod (s11x2 / 14)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s11v1: 3-3
+s11n1: 2-2
+s11e1: 0-0
+s11r1: 1-1
+s11p1: 5-5
+s11r2: 6-6
+s11x2: 4-4
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11r2 :same-entity s8d1)))
+
+

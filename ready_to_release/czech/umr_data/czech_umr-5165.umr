@@ -1,0 +1,99 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2      3  4      5       6   7     8       9  10 11 12    13 14  15 16   17   18    19 20   21 22
+Words: Společnost Ogilvy &  Mather skupiny WPP GROUP očekává ,  že se marže v  USA v  roce 1990 zvýší na 11.5 %  .
+
+# sentence level graph:
+(s1o1 / očekávat-001
+        :ARG0 (s1s1 / společnost
+            :name (s1x1 / #Forn
+                :FPHR (s1o2 / Ogilvy)
+                :FPHR (s1x2 / &)
+                :FPHR (s1m1 / Mather))
+            :mod (s1s2 / skupina
+                :name (s1x3 / #Forn
+                    :FPHR (s1w1 / WPP)
+                    :FPHR (s1g1 / GROUP))
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1z1 / zvýšit-se-001
+            :ARG0 (s1m2 / marže
+                :place (s1x4 / #Idph
+                    :name (s1u1 / USA))
+                :refer-number singular)
+            :temporal (s1r1 / rok
+                :name (s1x5 / 1990)
+                :refer-number singular)
+            :ARG1 (s1x6 / #Percnt
+                :mod (s1x7 / 11.5))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1o1: 8-8
+s1s1: 1-1
+s1x1: 0-0
+s1o2: 2-2
+s1x2: 3-3
+s1m1: 4-4
+s1s2: 5-5
+s1x3: 0-0
+s1w1: 6-6
+s1g1: 7-7
+s1z1: 10-11,18-18
+s1m2: 12-12
+s1x4: 0-0
+s1u1: 14-14
+s1r1: 15-16
+s1x5: 17-17
+s1x6: 19-19,21-21
+s1x7: 20-20
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2      3           4  5   6  7    8  9       10    11
+Words: Včerejší vydání neupřesnilo ,  kde by mělo ke zvýšení dojít .
+
+# sentence level graph:
+(s2u1 / upřesnit-001
+        :ARG0 (s2v1 / vydání
+            :mod (s2v2 / včerejší
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2d1 / dojít-009
+            :place (s2k1 / kde)
+            :ARG0 (s2z1 / zvýšení
+                :ARG0 (s2e1 / entity
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s2u1: 3-3
+s2v1: 2-2
+s2v2: 1-1
+s2d1: 6-7,10-10
+s2k1: 5-5
+s2z1: 8-9
+s2e1: 0-0
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2z1 :same-event s1z1)
+            (s2e1 :same-entity s1m2)))
+
+

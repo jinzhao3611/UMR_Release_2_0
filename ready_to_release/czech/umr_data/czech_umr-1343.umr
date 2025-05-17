@@ -1,0 +1,215 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1              2
+Words: Nenapravitelní taxikáři
+
+# sentence level graph:
+(s1t1 / taxikář
+        :mod (s1n1 / napravitelný
+            :refer-number plural
+            :polarity -)
+        :refer-number plural)
+
+# alignment:
+s1t1: 2-2
+s1n1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2          3      4 5      6       7
+Words: Taxikáři předražují jízdné o stovky procent .
+
+# sentence level graph:
+(s3p1 / předražovat-001
+        :ARG0 (s3t1 / taxikář
+            :refer-number plural)
+        :ARG1 (s3j1 / jízdné
+            :refer-number singular)
+        :extent (s3s1 / stovka
+            :mod (s3p2 / procento
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3p1: 2-2
+s3t1: 1-1
+s3j1: 3-3
+s3s1: 4-5
+s3p2: 6-6
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3t1 :same-entity s1t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2  3           4              5      6        7     8   9     10        11   12       13 14       15  16       17
+Words: Zjistili to zaměstnanci živnostenského odboru hlavního města při další kontrolní akci zaměřené na účtování cen jízdného .
+
+# sentence level graph:
+(s4z1 / zjistit-002
+        :ARG1 (s4t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s4z2 / zaměstnanec
+            :possessor (s4o1 / odbor
+                :mod (s4z3 / živnostenský
+                    :refer-number singular)
+                :possessor (s4m1 / město
+                    :mod (s4h1 / hlavní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :temporal (s4a1 / akce
+            :mod (s4k1 / kontrolní
+                :refer-number singular)
+            :mod (s4z4 / zaměřený
+                :ARG1 (s4u1 / účtování
+                    :ARG0 (s4e1 / entity)
+                    :ARG1 (s4c1 / cena
+                        :ARG1 (s4j1 / jízdné
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s4d1 / další
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s4z1: 1-1
+s4t1: 2-2
+s4z2: 3-3
+s4o1: 5-5
+s4z3: 4-4
+s4m1: 7-7
+s4h1: 6-6
+s4a1: 8-8,11-11
+s4k1: 10-10
+s4z4: 12-12
+s4u1: 13-14
+s4e1: 0-0
+s4c1: 15-15
+s4j1: 16-16
+s4d1: 9-9
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3p1)
+            (s4m1 :same-entity s2p1)
+            (s4j1 :same-entity s3j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1            2    3     4    5  6  7     8         9        10              11      12     13
+Words: Kontrolovány byly čtyři vozy a  ve všech případech taxikáři několikanásobně zvýšili částku .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5k1 / kontrolovat-001
+            :ARG0 (s5e1 / entity)
+            :ARG1 (s5v1 / vůz
+                :mod (s5c1 / čtyři
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect activity)
+        :op2 (s5z1 / zvýšit-001
+            :ARG0 (s5t1 / taxikář
+                :refer-number plural)
+            :temporal (s5p1 / případ
+                :mod (s5v2 / všechen
+                    :refer-number plural)
+                :refer-number plural)
+            :extent (s5n1 / několikanásobně)
+            :ARG1 (s5c2 / částka
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s5a1: 5-5
+s5k1: 1-2
+s5e1: 0-0
+s5v1: 4-4
+s5c1: 3-3
+s5z1: 11-11
+s5t1: 9-9
+s5p1: 6-6,8-8
+s5v2: 7-7
+s5n1: 10-10
+s5c2: 12-12
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5t1 :same-entity s3t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2         3      4       5 6   7   8       9
+Words: Jeden předražil jízdné dokonce o pět set procent .
+
+# sentence level graph:
+(s6p1 / předražit-001
+        :ARG0 (s6j1 / jeden
+            :refer-number singular)
+        :ARG1 (s6j2 / jízdné
+            :refer-number singular)
+        :extent (s6s1 / sto
+            :clausal-marker (s6d1 / dokonce)
+            :mod (s6p2 / procento
+                :refer-number plural)
+            :mod (s6p3 / pět
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6p1: 2-2
+s6j1: 1-1
+s6j2: 3-3
+s6s1: 5-5,7-7
+s6d1: 4-4
+s6p2: 8-8
+s6p3: 6-6
+
+# document level annotation:
+(s6s0 / sentence)
+
+

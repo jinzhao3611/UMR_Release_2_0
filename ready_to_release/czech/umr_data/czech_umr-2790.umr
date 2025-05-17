@@ -1,0 +1,62 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2
+Words: SPORTOVEC MĚSÍCE
+
+# sentence level graph:
+(s1s1 / sportovec
+        :possessor (s1m1 / měsíc
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1s1: 1-1
+s1m1: 2-2
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Manon Rheaumeová
+
+# sentence level graph:
+(s2r1 / Rheaumeová
+        :mod (s2m1 / Manon)
+        :refer-number singular)
+
+# alignment:
+s2r1: 2-2
+s2m1: 1-1
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2r1 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2
+Words: SPORTOVEC MĚSÍCE
+
+# sentence level graph:
+(s3s1 / sportovec
+        :possessor (s3m1 / měsíc
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s3s1: 1-1
+s3m1: 2-2
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s1 :same-entity s2r1)
+            (s3m1 :same-entity s1m1)))
+
+

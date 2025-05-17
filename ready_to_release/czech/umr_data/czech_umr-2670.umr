@@ -1,0 +1,706 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2      3    4
+Words: Holandsko nechce naši ocel
+
+# sentence level graph:
+(s1c1 / chtít-001
+        :ARG0 (s1h1 / Holandsko
+            :refer-number singular)
+        :ARG1 (s1o1 / ocel
+            :possessor (s1e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state
+        :polarity -)
+
+# alignment:
+s1c1: 2-2
+s1h1: 1-1
+s1o1: 4-4
+s1e1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1             2     3        4      5  6  7 8
+Words: PRAVDĚPODOBNĚ BUDOU ZOSTŘENY SANKCE NA ČS . VÝVOZ
+
+# sentence level graph:
+(s2z1 / zostřit-001
+        :ARG0 (s2e1 / entity)
+        :clausal-marker (s2p1 / pravděpodobně)
+        :ARG1 (s2s1 / sankce
+            :purpose (s2v1 / vývoz
+                :mod (s2c1 / československý
+                    :refer-number plural
+                    :refer-person 1st)
+                :refer-number singular)
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s2z1: 2-3
+s2e1: 0-0
+s2p1: 1-1
+s2s1: 4-4
+s2v1: 5-5,8-8
+s2c1: 6-6
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2c1 :same-entity s1e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2     3        4      5  6  7   8     9      10      11     12    13 14             15
+Words: Holandská vláda požádala komisi ES ,  aby mohla zavést omezení dovozu oceli z  Československa .
+
+# sentence level graph:
+(s3p1 / požádat-001
+        :ARG0 (s3v1 / vláda
+            :mod (s3h1 / holandský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s3k1 / komise
+            :possessor (s3e1 / ES)
+            :refer-number singular)
+        :ARG1 (s3z1 / zavést-003
+            :ARG0 s3k1
+            :ARG1 (s3o1 / omezení
+                :ARG0 (s3e2 / entity)
+                :ARG1 (s3d1 / dovoz
+                    :ARG1 (s3o2 / ocel
+                        :refer-number singular)
+                    :start (s3c1 / Československo
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s3p1: 3-3
+s3v1: 2-2
+s3h1: 1-1
+s3k1: 4-4
+s3e1: 5-5
+s3z1: 7-9
+s3o1: 10-10
+s3e2: 0-0
+s3d1: 11-11
+s3o2: 12-12
+s3c1: 13-14
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3h1 :same-entity s1h1)
+            (s3o2 :same-entity s1o1)
+            (s3c1 :same-entity s2c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2  3   4  5        6  7        8       9  10 11        12     13 14    15   16      17     18 19 20 21    22  23      24      25       26          27       28 29             30 31      32 33      34 35     36 37 38      39    40   41 42
+Words: Mělo by jít o  aplikaci "  ochranné doložky "  z  Asociační dohody ,  která byla použita komisí ES 14 .  srpna pro omezení exportu určitých ocelářských produktů z  Československa do Německa ,  Francie a  Itálie ,  na všechny další země ES .
+
+# sentence level graph:
+(s4j1 / jít-035
+        :ARG0 (s4a1 / aplikace
+            :ARG1 (s4d1 / doložka
+                :mod (s4o1 / ochranný
+                    :refer-number singular)
+                :start (s4d2 / dohoda
+                    :mod (s4a2 / Asociační
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1-of (s4p1 / použít-001
+                    :ARG0 (s4k1 / komise
+                        :possessor (s4e1 / ES)
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :temporal (s4s1 / srpen
+                        :mod (s4x1 / 14)
+                        :refer-number singular)
+                    :affectee (s4o2 / omezení
+                        :ARG0 (s4e2 / entity)
+                        :ARG1 (s4e3 / export
+                            :ARG1 (s4p2 / produkt
+                                :mod (s4u1 / určitý
+                                    :refer-number plural)
+                                :mod (s4o3 / ocelářský
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :start (s4c1 / Československo
+                                :refer-number singular)
+                            :goal (s4a3 / and
+                                :op1 (s4n1 / Německo
+                                    :refer-number singular)
+                                :op2 (s4f1 / Francie
+                                    :refer-number singular)
+                                :op3 (s4i1 / Itálie
+                                    :refer-number singular))
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect performance)
+                :refer-number singular)
+            :goal (s4z1 / země
+                :possessor (s4e4 / ES)
+                :mod (s4d3 / další
+                    :refer-number plural)
+                :mod (s4v1 / všechen
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s4j1: 1-3
+s4a1: 4-5
+s4d1: 8-8,14-14
+s4o1: 7-7
+s4d2: 10-10,12-12
+s4a2: 11-11
+s4p1: 15-16
+s4k1: 17-17
+s4e1: 18-18
+s4s1: 21-21
+s4x1: 19-19
+s4o2: 22-23
+s4e2: 0-0
+s4e3: 24-24
+s4p2: 27-27
+s4u1: 25-25
+s4o3: 26-26
+s4c1: 28-29
+s4a3: 34-34
+s4n1: 30-31
+s4f1: 30-30,33-33
+s4i1: 30-30,35-35
+s4z1: 37-37,40-40
+s4e4: 41-41
+s4d3: 39-39
+s4v1: 38-38
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4k1 :same-entity s3k1)
+            (s4e1 :same-entity s3e1)
+            (s4c1 :same-entity s3c1)
+            (s4e4 :same-entity s4e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2     3    4      5          6       7  8   9      10    11 12     13 14 15        16     17    18     19 20        21  22    23 24    25    26   27        28 29        30   31 32
+Words: Holandská vláda tuto žádost zdůvodňuje rizikem ,  kdy objemy ocele ,  kterou čs .  exportéři chtěli letos vyvézt do uvedených tří států ,  budou místo toho směrovány do ostatních zemí ES .
+
+# sentence level graph:
+(s5z1 / zdůvodňovat-001
+        :ARG0 (s5v1 / vláda
+            :mod (s5h1 / holandský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s5z2 / žádost
+            :mod (s5t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :instrument (s5r1 / riziko
+            :temporal-of (s5s1 / směrovat-001
+                :ARG1 (s5o1 / objem
+                    :possessor (s5o2 / ocel
+                        :ARG1-of (s5v2 / vyvézt-001
+                            :ARG0 (s5e1 / exportér
+                                :mod (s5c1 / československý
+                                    :refer-number singular)
+                                :refer-number plural)
+                            :start (s5e2 / entity)
+                            :goal (s5s2 / stát
+                                :mod (s5u1 / uvedený
+                                    :refer-number plural)
+                                :mod (s5t2 / tři
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :temporal (s5l1 / letos)
+                            :aspect performance)
+                        :refer-number singular)
+                    :refer-number plural)
+                :substitute (s5t3 / ten
+                    :refer-number singular)
+                :ARG0 (s5e3 / entity)
+                :goal (s5z3 / země
+                    :possessor (s5e4 / ES)
+                    :mod (s5o3 / ostatní
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5z1: 5-5
+s5v1: 2-2
+s5h1: 1-1
+s5z2: 4-4
+s5t1: 3-3
+s5r1: 6-6,8-8
+s5s1: 24-24,27-27
+s5o1: 9-9
+s5o2: 10-10,12-12
+s5v2: 16-16,18-18
+s5e1: 15-15
+s5c1: 13-13
+s5e2: 0-0
+s5s2: 19-19,22-22
+s5u1: 20-20
+s5t2: 21-21
+s5l1: 17-17
+s5t3: 25-26
+s5e3: 0-0
+s5z3: 28-28,30-30
+s5e4: 31-31
+s5o3: 29-29
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5v1 :same-entity s3v1)
+            (s5h1 :same-entity s3h1)
+            (s5z2 :same-event s3p1)
+            (s5c1 :same-entity s4c1)
+            (s5s2 :same-entity s4a3)
+            (s5t3 :same-event s5v2)
+            (s5z3 :same-entity s4z1)
+            (s5e4 :same-entity s4e4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1   2      3     4  5         6      7  8     9  10 11    12 13      14   15 16 17    18 19      20 21      22 23     24 25 26    27        28
+Words: Kdy přesně dojde k  rozšíření sankcí na vývoz čs .  oceli na všechny země ES a  nejen do Německa ,  Francie a  Itálie ,  je těžké odhadnout .
+
+# sentence level graph:
+(s6b1 / být-007
+        :ARG1 (s6t1 / těžký
+            :affectee (s6e1 / entity)
+            :refer-number singular)
+        :ARG0 (s6o1 / odhadnout-002
+            :ARG1 (s6d1 / dojít-009
+                :temporal (s6k1 / kdy)
+                :manner (s6p1 / přesně)
+                :ARG0 (s6r1 / rozšíření
+                    :goal (s6g1 / gradation
+                        :op1 (s6z1 / země
+                            :mod (s6v1 / všechen
+                                :refer-number plural)
+                            :possessor (s6e2 / ES)
+                            :refer-number plural)
+                        :clausal-marker (s6n1 / nejen)
+                        :op2 (s6a1 / and
+                            :op1 (s6n2 / Německo
+                                :refer-number singular)
+                            :op2 (s6f1 / Francie
+                                :refer-number singular)
+                            :op3 (s6i1 / Itálie
+                                :refer-number singular)
+                            :refer-number plural))
+                    :ARG0 (s6e3 / entity)
+                    :ARG1 (s6s1 / sankce
+                        :purpose (s6v2 / vývoz
+                            :ARG1 (s6o2 / ocel
+                                :mod (s6c1 / československý)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :ARG0 s6e1
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 25-25
+s6t1: 26-26
+s6e1: 0-0
+s6o1: 27-27
+s6d1: 3-3
+s6k1: 1-1
+s6p1: 2-2
+s6r1: 4-5
+s6g1: 16-16
+s6z1: 12-12,14-14
+s6v1: 13-13
+s6e2: 15-15
+s6n1: 17-17
+s6a1: 22-22
+s6n2: 18-19
+s6f1: 18-18,21-21
+s6i1: 18-18,23-23
+s6e3: 0-0
+s6s1: 6-6
+s6v2: 7-8
+s6o2: 11-11
+s6c1: 9-9
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6r1 :same-entity s4a1)
+            (s6e2 :same-entity s5e4)
+            (s6a1 :same-entity s5s2)
+            (s6s1 :same-entity s2s1)
+            (s6v2 :same-entity s2v1)
+            (s6o2 :same-entity s5o2)
+            (s6c1 :same-entity s5c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1         2        3        4       5     6        7       8  9    10       11 12
+Words: Všeobecná aplikace ochranné doložky totiž vyžaduje souhlas od rady ministrů ES .
+
+# sentence level graph:
+(s7v1 / vyžadovat-001
+        :clausal-marker (s7t1 / totiž)
+        :ARG0 (s7a1 / aplikace
+            :mod (s7v2 / všeobecný
+                :refer-number singular)
+            :ARG1 (s7d1 / doložka
+                :mod (s7o1 / ochranný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s7s1 / souhlas
+            :ARG0 (s7r1 / rada
+                :possessor (s7e1 / ES)
+                :possessor (s7m1 / ministr
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7v1: 6-6
+s7t1: 5-5
+s7a1: 2-2
+s7v2: 1-1
+s7d1: 4-4
+s7o1: 3-3
+s7s1: 7-7
+s7r1: 8-9
+s7e1: 11-11
+s7m1: 10-10
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7a1 :same-entity s6r1)
+            (s7d1 :same-entity s4d1)
+            (s7e1 :same-entity s6e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1        2       3  4  5       6    7  8          9     10    11 12 13    14   15    16    17 18       19        20 21 22    23   24   25      26     27 28 29  30         31        32         33 34        35     36
+Words: Částečné omezení (  na několik trhů a  specifické druhy oceli )  v  srpnu bylo možné podle "  urgentní procedury "  ,  která dává tuto možnost Komisi ES ,  byť rozhodnutí předchází konzultace s  členskými zeměmi .
+
+# sentence level graph:
+(s8b1 / být-159
+        :ARG0 (s8o1 / omezení
+            :ARG0 (s8e1 / entity)
+            :ARG1 (s8e2 / entity)
+            :extent (s8c1 / částečný
+                :refer-number singular)
+            :effect (s8a1 / and
+                :op1 (s8t1 / trh
+                    :mod (s8n1 / několik)
+                    :refer-number plural)
+                :op2 (s8d1 / druh
+                    :possessor (s8o2 / ocel
+                        :refer-number singular)
+                    :mod (s8s1 / specifický
+                        :refer-number plural)
+                    :refer-number plural))
+            :refer-number singular)
+        :temporal (s8s2 / srpen
+            :refer-number singular)
+        :ARG1 (s8m1 / možný
+            :regard (s8p1 / procedura
+                :ARG0-of (s8b2 / but-91
+                    :ARG1 (s8d2 / dávat-024
+                        :predicative-noun (s8m2 / možnost
+                            :mod (s8t2 / tento
+                                :refer-number singular)
+                            :ARG0 s8k1
+                            :ARG1 (s8e3 / entity)
+                            :refer-number singular)
+                        :ARG2 (s8k1 / Komise
+                            :possessor (s8e4 / ES)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :ARG2 (s8p2 / předcházet-001
+                        :ARG1 (s8r1 / rozhodnutí
+                            :ARG0 (s8e5 / entity)
+                            :ARG1 (s8e6 / entity)
+                            :refer-number singular)
+                        :ARG0 (s8k2 / konzultace
+                            :ARG2 (s8z1 / země
+                                :mod (s8c2 / členský
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity))
+                :mod (s8u1 / urgentní
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s8b1: 14-14
+s8o1: 2-2
+s8e1: 0-0
+s8e2: 0-0
+s8c1: 1-1
+s8a1: 7-7
+s8t1: 4-4,6-6
+s8n1: 5-5
+s8d1: 4-4,9-9
+s8o2: 10-10
+s8s1: 8-8
+s8s2: 12-13
+s8m1: 15-15
+s8p1: 16-16,19-19,22-22
+s8u1: 18-18
+s8b2: 29-29
+s8d2: 23-23
+s8m2: 25-25
+s8t2: 24-24
+s8e3: 0-0
+s8k1: 26-26
+s8e4: 27-27
+s8p2: 31-31
+s8r1: 30-30
+s8e5: 0-0
+s8e6: 0-0
+s8k2: 32-32
+s8z1: 33-33,35-35
+s8c2: 34-34
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8o1 :same-entity s4o2)
+            (s8t1 :same-entity s6a1)
+            (s8o2 :same-entity s6o2)
+            (s8k1 :same-entity s4k1)
+            (s8e4 :same-entity s7e1)
+            (s8z1 :same-entity s6z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2          3  4  5    6           7      8  9  10      11 12 13      14    15 16  17        18   19 20   21    22        23    24 25    26      27           28     29          30      31       32      33
+Words: Je překvapivé ,  že před rozhodnutím komise ES o  omezení čs .  exportu oceli do tří vybraných zemí to byla právě holandská vláda ,  která nejvíce protestovala oproti všeobecnému použití ochranné doložky .
+
+# sentence level graph:
+(s9b1 / být-007
+        :ARG1 (s9p1 / překvapivý
+            :refer-number singular)
+        :ARG0 (s9b2 / být-007
+            :temporal (s9r1 / rozhodnutí
+                :ARG0 (s9k1 / komise
+                    :possessor (s9e1 / ES)
+                    :refer-number singular)
+                :ARG1 (s9o1 / omezení
+                    :ARG1 (s9e2 / export
+                        :mod (s9c1 / československý)
+                        :ARG1 (s9o2 / ocel
+                            :refer-number singular)
+                        :goal (s9z1 / země
+                            :mod (s9t1 / tři
+                                :refer-number plural)
+                            :mod (s9v1 / vybraný
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :ARG0 (s9e3 / entity)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s9t2 / ten
+                :refer-number singular)
+            :ARG1 (s9v2 / vláda
+                :clausal-marker (s9p2 / právě)
+                :mod (s9h1 / holandský
+                    :refer-number singular)
+                :ARG0-of (s9p3 / protestovat-001
+                    :extent (s9h2 / hodně)
+                    :ARG1 (s9p4 / použití
+                        :ARG1 (s9d1 / doložka
+                            :mod (s9o3 / ochranný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG0 (s9e4 / entity)
+                        :manner (s9v3 / všeobecný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect activity)
+                :refer-number singular)
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9b1: 1-1
+s9p1: 2-2
+s9b2: 4-4,20-20
+s9r1: 5-6
+s9k1: 7-7
+s9e1: 8-8
+s9o1: 9-10
+s9e2: 13-13
+s9c1: 11-11
+s9o2: 14-14
+s9z1: 15-15,18-18
+s9t1: 16-16
+s9v1: 17-17
+s9e3: 0-0
+s9t2: 19-19
+s9v2: 23-23,25-25
+s9p2: 21-21
+s9h1: 22-22
+s9p3: 27-27
+s9h2: 26-26
+s9p4: 28-28,30-30
+s9d1: 32-32
+s9o3: 31-31
+s9e4: 0-0
+s9v3: 29-29
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9k1 :same-entity s8k1)
+            (s9e1 :same-entity s8e4)
+            (s9o1 :same-entity s8o1)
+            (s9e2 :same-entity s4e3)
+            (s9c1 :same-entity s6c1)
+            (s9o2 :same-entity s8o2)
+            (s9z1 :same-entity s8t1)
+            (s9v2 :same-entity s5v1)
+            (s9h1 :same-entity s5h1)
+            (s9p4 :same-entity s7a1)
+            (s9d1 :same-entity s7d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1     2       3         4     5  6          7         8    9  10 11      12     13    14        15 16 17 18         19    20    21   22     23     24     25
+Words: Změna postoje holandské vlády a  náchylnost ostatních vlád ES k  omezení dovozu oceli naznačují ,  že k  rozhodnutí dojde ještě před koncem tohoto měsíce .
+
+# sentence level graph:
+(s10n1 / naznačovat-001
+        :ARG0 (s10a1 / and
+            :op1 (s10z1 / změna
+                :ARG0 (s10p1 / postoj
+                    :ARG0 (s10v1 / vláda
+                        :mod (s10h1 / holandský
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s10n2 / náchylnost
+                :ARG1 (s10o1 / omezení
+                    :ARG0 s10v2
+                    :ARG1 (s10d1 / dovoz
+                        :ARG1 (s10o2 / ocel
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s10v2 / vláda
+                    :possessor (s10e1 / ES)
+                    :mod (s10o3 / ostatní
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular))
+        :ARG2 (s10e2 / entity)
+        :ARG1 (s10d2 / dojít-009
+            :ARG0 (s10r1 / rozhodnutí
+                :ARG0 (s10e3 / entity)
+                :ARG1 (s10e4 / entity)
+                :refer-number singular)
+            :clausal-marker (s10j1 / ještě)
+            :temporal (s10k1 / konec
+                :possessor (s10m1 / měsíc
+                    :mod (s10t1 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s10n1: 14-14
+s10a1: 5-5
+s10z1: 1-1
+s10p1: 2-2
+s10v1: 4-4
+s10h1: 3-3
+s10n2: 6-6
+s10o1: 10-11
+s10d1: 12-12
+s10o2: 13-13
+s10v2: 8-8
+s10e1: 9-9
+s10o3: 7-7
+s10e2: 0-0
+s10d2: 16-16,19-19
+s10r1: 17-18
+s10e3: 0-0
+s10e4: 0-0
+s10j1: 20-20
+s10k1: 21-22
+s10m1: 24-24
+s10t1: 23-23
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10v1 :same-entity s9v2)
+            (s10h1 :same-entity s9h1)
+            (s10o1 :same-entity s9p4)
+            (s10o2 :same-entity s9o2)
+            (s10e1 :same-entity s9e1)))
+
+

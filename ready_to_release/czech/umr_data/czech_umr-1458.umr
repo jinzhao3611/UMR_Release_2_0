@@ -1,0 +1,385 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2       3
+Words: Hádky motivem vraždy
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1h1 / hádka
+            :refer-number plural)
+        :ARG1 (s1m1 / motiv
+            :possessor (s1v1 / vražda
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1h1: 1-1
+s1m1: 2-2
+s1v1: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2 3   4 5
+Words: Brno ( luč ) -
+
+# sentence level graph:
+(s2b1 / Brno
+        :parenthesis (s2l1 / luč)
+        :refer-number singular)
+
+# alignment:
+s2b1: 1-1
+s2l1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2     3      4  5    6  7      8  9       10                11 12 13 14 15 16      17   18 19       20    21   22 23       24  25     26       27
+Words: Kuchyňským nožem ubodal v  noci z  neděle na pondělí třiačtyřicetiletý J  .  S  .  v  kuchyni bytu v  Pekařské ulici svou o  jedenáct let mladší manželku .
+
+# sentence level graph:
+(s3u1 / ubodat-001
+        :instrument (s3n1 / nůž
+            :mod (s3k1 / kuchyňský
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3n2 / noc
+            :temporal (s3n3 / neděle
+                :refer-number singular)
+            :temporal (s3p1 / pondělí
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3s1 / S
+            :mod (s3j1 / J)
+            :mod (s3t1 / třiačtyřicetiletý
+                :refer-number singular)
+            :refer-number singular)
+        :place (s3k2 / kuchyně
+            :possessor (s3b1 / byt
+                :place (s3u2 / ulice
+                    :mod (s3p2 / Pekařský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3m1 / manželka
+            :possessor s3s1
+            :mod (s3m2 / mladý
+                :extent (s3r1 / rok
+                    :mod (s3j2 / jedenáct
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3u1: 3-3
+s3n1: 2-2
+s3k1: 1-1
+s3n2: 4-5
+s3n3: 6-7
+s3p1: 8-9
+s3s1: 13-13,21-21
+s3j1: 11-11
+s3t1: 10-10
+s3k2: 15-16
+s3b1: 17-17
+s3u2: 18-18,20-20
+s3p2: 19-19
+s3m1: 26-26
+s3m2: 25-25
+s3r1: 22-22,24-24
+s3j2: 23-23
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2  3      4            5         6     7           8
+Words: LN to sdělil vyšetřovatel Krajského úřadu vyšetřování .
+
+# sentence level graph:
+(s4s1 / sdělit-002
+        :ARG2 (s4l1 / LN
+            :refer-number plural)
+        :effect (s4t1 / ten
+            :refer-number singular)
+        :ARG0 (s4v1 / vyšetřovatel
+            :possessor (s4u1 / úřad
+                :possessor (s4v2 / vyšetřování
+                    :ARG0 (s4e1 / entity)
+                    :ARG1 (s4e2 / entity)
+                    :refer-number singular)
+                :mod (s4k1 / Krajský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4s1: 3-3
+s4l1: 1-1
+s4t1: 2-2
+s4v1: 4-4
+s4u1: 6-6
+s4v2: 7-7
+s4e1: 0-0
+s4e2: 0-0
+s4k1: 5-5
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2    3  4     5        6   7       8  9    10           11        12      13
+Words: Motivem činu ,  který pachatel sám ohlásil ,  byly déletrvající manželské neshody .
+
+# sentence level graph:
+(s5b1 / být-007
+        :ARG1 (s5m1 / motiv
+            :possessor (s5c1 / čin
+                :ARG1-of (s5o1 / ohlásit-001
+                    :ARG0 (s5p1 / pachatel
+                        :refer-number singular)
+                    :ARG2 (s5e1 / entity)
+                    :manner (s5s1 / sám
+                        :mod-of s5p1
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5n1 / neshoda
+            :mod (s5m2 / manželský
+                :refer-number plural)
+            :mod (s5d1 / déletrvající
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s5b1: 9-9
+s5m1: 1-1
+s5c1: 2-2,4-4
+s5o1: 7-7
+s5p1: 5-5
+s5e1: 0-0
+s5s1: 6-6
+s5n1: 12-12
+s5m2: 11-11
+s5d1: 10-10
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5m1 :same-entity s1m1)
+            (s5c1 :same-entity s1v1)
+            (s5p1 :same-entity s3s1)
+            (s5n1 :same-entity s1h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1         2      3  4     5  6  7     8    9       10 11       12        13 14    15 16 17 18 19 20           21 22        23   24   25 26 27       28   29
+Words: Policejní hlídka ,  která se na místo činu vzápětí po ohlášení dostavila ,  našla J  .  S  .  ,  krvácejícího z  předloktí levé ruky ,  na schodech domu .
+
+# sentence level graph:
+(s6n1 / najít-002
+        :ARG0 (s6h1 / hlídka
+            :mod (s6p1 / policejní
+                :refer-number singular)
+            :ARG0-of (s6d1 / dostavit-se-001
+                :goal (s6m1 / místo
+                    :mod (s6c1 / čin
+                        :refer-number singular)
+                    :refer-number singular)
+                :temporal (s6v1 / vzápětí
+                    :temporal (s6o1 / ohlášení
+                        :ARG0 (s6e1 / entity)
+                        :ARG1 (s6e2 / entity)
+                        :refer-number singular))
+                :aspect performance)
+            :refer-number singular)
+        :ARG1 (s6s1 / S
+            :mod (s6j1 / J)
+            :refer-number singular)
+        :manner (s6k1 / krvácející
+            :mod-of s6s1
+            :start (s6p2 / předloktí
+                :possessor (s6r1 / ruka
+                    :mod (s6l1 / levý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :place (s6s2 / schod
+            :possessor (s6d2 / dům
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s6n1: 14-14
+s6h1: 2-2,4-4
+s6p1: 1-1
+s6d1: 5-5,12-12
+s6m1: 6-7
+s6c1: 8-8
+s6v1: 9-9
+s6o1: 10-11
+s6e1: 0-0
+s6e2: 0-0
+s6s1: 17-17
+s6j1: 15-15
+s6k1: 20-20
+s6p2: 21-22
+s6r1: 24-24
+s6l1: 23-23
+s6s2: 26-27
+s6d2: 28-28
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6m1 :same-entity s3k2)
+            (s6c1 :same-entity s5c1)
+            (s6o1 :same-event s5o1)
+            (s6s1 :same-entity s5p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1   2  3     4  5        6      7    8         9         10       11  12 13  14             15 16        17
+Words: Muž ,  který si hlubokou bodnou ránu vražedným nástrojem způsobil sám ,  byl hospitalizován v  nemocnici .
+
+# sentence level graph:
+(s7h1 / hospitalizovat-001
+        :ARG1 (s7m1 / muž
+            :ARG0-of (s7z1 / způsobit-001
+                :ARG1 (s7r1 / rána
+                    :mod (s7b1 / bodný
+                        :refer-number singular)
+                    :mod (s7h2 / hluboký
+                        :refer-number singular)
+                    :refer-number singular)
+                :instrument (s7n1 / nástroj
+                    :mod (s7v1 / vražedný
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG2 s7m1
+                :manner (s7s1 / sám
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :ARG0 (s7e1 / entity)
+        :place (s7n2 / nemocnice
+            :refer-number singular)
+        :refer-number singular
+        :aspect process)
+
+# alignment:
+s7h1: 13-14
+s7m1: 1-1,3-4
+s7z1: 10-10
+s7r1: 7-7
+s7b1: 6-6
+s7h2: 5-5
+s7n1: 9-9
+s7v1: 8-8
+s7s1: 11-11
+s7e1: 0-0
+s7n2: 15-16
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7m1 :same-entity s6s1)
+            (s7n1 :same-entity s3n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1        2  3         4    5      6    7        8    9  10 11   12 13 14 15 16      17         18 19       20        21 22       23
+Words: Obvinění z  trestného činu vraždy bude vzneseno poté ,  co bude J  .  S  .  schopen transportu do vězeňské nemocnice a  výslechu .
+
+# sentence level graph:
+(s8v1 / vznést-001
+        :predicative-noun (s8o1 / obvinění
+            :ARG0 s8e1
+            :ARG2 (s8e2 / entity)
+            :ARG1 (s8c1 / čin
+                :mod (s8t1 / trestný
+                    :refer-number singular)
+                :mod (s8v2 / vražda
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s8e1 / entity)
+        :temporal (s8b1 / být-007
+            :ARG0 (s8s1 / S
+                :mod (s8j1 / J)
+                :refer-number singular)
+            :ARG1 (s8s2 / schopný
+                :ARG1 (s8a1 / and
+                    :op1 (s8t2 / transport
+                        :goal (s8n1 / nemocnice
+                            :mod (s8v3 / vězeňský
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :op2 (s8v4 / výslech
+                        :refer-number singular))
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8v1: 6-7
+s8o1: 1-1
+s8e2: 0-0
+s8c1: 2-2,4-4
+s8t1: 3-3
+s8v2: 5-5
+s8e1: 0-0
+s8b1: 8-8,10-11
+s8s1: 14-14
+s8j1: 12-12
+s8s2: 16-16
+s8a1: 21-21
+s8t2: 17-17
+s8n1: 18-18,20-20
+s8v3: 19-19
+s8v4: 22-22
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8s1 :same-entity s7m1)))
+
+

@@ -1,0 +1,615 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2         3    4        5     6 7           8
+Words: Prezident Miloševič chce obklíčit Bosnu a Hercegovinu kontrolami
+
+# sentence level graph:
+(s1o1 / obklíčit-001
+        :ARG0 (s1m1 / Miloševič
+            :mod (s1p1 / prezident
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1a1 / and
+            :op1 (s1b1 / Bosna
+                :refer-number singular)
+            :op2 (s1h1 / Hercegovina
+                :refer-number singular))
+        :manner (s1k1 / kontrola
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s1o1: 3-4
+s1m1: 2-2
+s1p1: 1-1
+s1a1: 6-6
+s1b1: 5-5
+s1h1: 7-7
+s1k1: 8-8
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2
+Words: Sarajevo -
+
+# sentence level graph:
+(s2s1 / Sarajevo
+        :refer-number singular)
+
+# alignment:
+s2s1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2         3        4         5  6       7       8           9        10  11      12         13   14 15    16   17      18       19        20 21 22        23         24 25    26
+Words: Srbský prezident Slobodan Miloševič je ochoten povolit mezinárodní kontrolu své blokády bosenských Srbů ,  pokud bude obdobná kontrola uplatněna i  na hranicích Chorvatska a  Bosny .
+
+# sentence level graph:
+(s3b1 / být-007
+        :ARG0 (s3m1 / Miloševič
+            :mod (s3s1 / Slobodan
+                :refer-number singular)
+            :mod (s3p1 / prezident
+                :mod (s3s2 / srbský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3o1 / ochotný
+            :ARG1 (s3p2 / povolit-001
+                :ARG0 s3m1
+                :ARG2 (s3e1 / entity)
+                :ARG1 (s3k1 / kontrola
+                    :mod (s3m2 / mezinárodní
+                        :refer-number singular)
+                    :ARG1 (s3b2 / blokáda
+                        :possessor s3m1
+                        :ARG1 (s3s3 / Srb
+                            :mod (s3b3 / bosenský
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :condition (s3u1 / uplatnit-001
+                    :ARG1 (s3k2 / kontrola
+                        :mod (s3o2 / obdobný
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0 (s3e2 / entity)
+                    :clausal-marker (s3i1 / i)
+                    :place (s3h1 / hranice
+                        :possessor (s3a1 / and
+                            :op1 (s3c1 / Chorvatsko
+                                :refer-number singular)
+                            :op2 (s3b4 / Bosna
+                                :refer-number singular))
+                        :refer-number plural)
+                    :aspect performance)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3b1: 5-5
+s3m1: 4-4,10-10
+s3s1: 3-3
+s3p1: 2-2
+s3s2: 1-1
+s3o1: 6-6
+s3p2: 7-7
+s3e1: 0-0
+s3k1: 9-9
+s3m2: 8-8
+s3b2: 11-11
+s3s3: 13-13
+s3b3: 12-12
+s3u1: 15-16,19-19
+s3k2: 18-18
+s3o2: 17-17
+s3e2: 0-0
+s3i1: 20-20
+s3h1: 21-22
+s3a1: 24-24
+s3c1: 23-23
+s3b4: 25-25
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3m1 :same-entity s1m1)
+            (s3b3 :same-entity s1a1)
+            (s3b4 :same-entity s3b3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2    3       4  5    6      7      8      9   10       11      12
+Words: Kontrola této hranice by měla bránit dovozu zbraní pro bosenské Muslimy .
+
+# sentence level graph:
+(s4b1 / bránit-003
+        :ARG0 (s4k1 / kontrola
+            :ARG1 (s4h1 / hranice
+                :mod (s4t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s4d1 / dovoz
+            :ARG1 (s4z1 / zbraň
+                :affectee (s4m1 / muslim
+                    :mod (s4b2 / bosenský
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect activity)
+
+# alignment:
+s4b1: 4-6
+s4k1: 1-1
+s4h1: 3-3
+s4t1: 2-2
+s4d1: 7-7
+s4z1: 8-8
+s4m1: 9-9,11-11
+s4b2: 10-10
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4k1 :same-entity s3k2)
+            (s4h1 :same-entity s3h1)
+            (s4b2 :same-entity s3b4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2  3       4         5  6       7      8   9            10 11    12 13    14 15      16           17   18
+Words: Miloševič je ochoten připustit na hranici Srbska 400 pozorovatelů z  Ruska ,  Řecka a  dalších spřátelených zemí .
+
+# sentence level graph:
+(s5b1 / být-007
+        :ARG0 (s5m1 / Miloševič
+            :refer-number singular)
+        :ARG1 (s5o1 / ochotný
+            :ARG1 (s5p1 / připustit-004
+                :place (s5h1 / hranice
+                    :possessor (s5s1 / Srbsko
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 s5m1
+                :ARG1 (s5p2 / pozorovatel
+                    :mod (s5x2 / 400)
+                    :start (s5a1 / and
+                        :op1 (s5r1 / Rusko
+                            :refer-number singular)
+                        :op2 (s5r2 / Řecko
+                            :refer-number singular)
+                        :op3 (s5z1 / země
+                            :mod (s5s2 / spřátelený
+                                :refer-number plural)
+                            :mod (s5d1 / další
+                                :refer-number plural)
+                            :refer-number plural))
+                    :refer-number plural)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5b1: 2-2
+s5m1: 1-1
+s5o1: 3-3
+s5p1: 4-4
+s5h1: 5-6
+s5s1: 7-7
+s5p2: 9-9
+s5x2: 8-8
+s5a1: 14-14
+s5r1: 10-11
+s5r2: 10-10,13-13
+s5z1: 10-10,17-17
+s5s2: 16-16
+s5d1: 15-15
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5m1 :same-entity s3m1)
+            (s5s1 :same-entity s3s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2  3     4      5    6
+Words: Oznámil to včera srbský tisk .
+
+# sentence level graph:
+(s6o1 / oznámit-002
+        :effect (s6t1 / ten
+            :refer-number singular)
+        :ARG2 (s6e1 / entity)
+        :temporal (s6v1 / včera)
+        :ARG0 (s6t2 / tisk
+            :mod (s6s1 / srbský
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6o1: 1-1
+s6t1: 2-2
+s6e1: 0-0
+s6v1: 3-3
+s6t2: 5-5
+s6s1: 4-4
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s1 :same-entity s5s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2         3           4         5   6   7       8          9      10    11   12    13        14    15 16         17 18 19     20   21      22 23 24     25  26    27           28           29     30  31       32       33
+Words: Zvláštní zmocněnec generálního tajemníka OSN pro bývalou Jugoslávii Jasuši Akaši řekl včera italskému listu La Repubblica ,  že papeži Janu Pavlovi II .  nemůže dát nikdo stoprocentní bezpečnostní záruky při návštěvě Sarajeva .
+
+# sentence level graph:
+(s7r1 / říci-008
+        :ARG0 (s7a1 / Akaši
+            :mod (s7j1 / Jasuši
+                :refer-number singular)
+            :mod (s7z1 / zmocněnec
+                :ARG1 (s7t1 / tajemník
+                    :possessor (s7o1 / OSN)
+                    :mod (s7g1 / generální
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s7z2 / zvláštní
+                    :refer-number singular)
+                :affectee (s7j2 / Jugoslávie
+                    :mod (s7b1 / bývalý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s7v1 / včera)
+        :ARG2 (s7l1 / list
+            :mod (s7i1 / italský
+                :refer-number singular)
+            :name (s7x1 / #Forn
+                :FPHR (s7l2 / La)
+                :FPHR (s7r2 / Repubblica))
+            :refer-number singular)
+        :effect (s7d1 / dát-024
+            :ARG2 (s7p1 / Pavel
+                :mod (s7j3 / Jan
+                    :refer-number singular)
+                :mod (s7i2 / II)
+                :mod (s7p2 / papež
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s7n1 / nikdo
+                :refer-number singular
+                :refer-person 3rd
+                :polarity -)
+            :predicative-noun (s7z3 / záruka
+                :ARG0 s7n1
+                :ARG1 (s7e1 / entity)
+                :ARG2 s7p1
+                :mod (s7b2 / bezpečnostní
+                    :refer-number plural)
+                :mod (s7s1 / stoprocentní
+                    :refer-number plural)
+                :refer-number plural)
+            :temporal (s7n2 / návštěva
+                :ARG1 (s7s2 / Sarajevo
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7r1: 11-11
+s7a1: 10-10
+s7j1: 9-9
+s7z1: 2-2
+s7t1: 4-4
+s7o1: 5-5
+s7g1: 3-3
+s7z2: 1-1
+s7j2: 6-6,8-8
+s7b1: 7-7
+s7v1: 12-12
+s7l1: 14-14
+s7i1: 13-13
+s7x1: 0-0
+s7l2: 15-15
+s7r2: 16-16
+s7d1: 18-18,24-25
+s7p1: 21-21
+s7j3: 20-20
+s7i2: 22-22
+s7p2: 19-19
+s7n1: 26-26
+s7z3: 29-29
+s7e1: 0-0
+s7b2: 28-28
+s7s1: 27-27
+s7n2: 30-31
+s7s2: 32-32
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7s2 :same-entity s2s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1        2        3  4  5          6 7 8    9
+Words: Papežova návštěva se má uskutečnit 8 . září .
+
+# sentence level graph:
+(s8u1 / uskutečnit-se-001
+        :ARG0 (s8n1 / návštěva
+            :ARG0 (s8p1 / papež
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s8z1 / září
+            :mod (s8x1 / 8)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s8u1: 3-5
+s8n1: 2-2
+s8p1: 1-1
+s8z1: 8-8
+s8x1: 6-6
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8n1 :same-entity s7n2)
+            (s8p1 :same-entity s7p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1     2   3         4      5  6     7        8         9          10     11 12         13
+Words: Vláda tzv Republiky srbské v  Bosně zakázala provádění jakýchkoli plateb do Jugoslávie .
+
+# sentence level graph:
+(s9z1 / zakázat-001
+        :ARG0 (s9v1 / vláda
+            :possessor (s9r1 / republika
+                :clausal-marker (s9t1 / takzvaný)
+                :mod (s9s1 / srbský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s9e1 / entity)
+        :place (s9b1 / Bosna
+            :refer-number singular)
+        :ARG1 (s9p1 / provádění
+            :ARG0 s9e1
+            :ARG1 (s9p2 / platba
+                :goal (s9j1 / Jugoslávie
+                    :refer-number singular)
+                :mod (s9j2 / jakýkoli
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s9z1: 7-7
+s9v1: 1-1
+s9r1: 3-3
+s9t1: 2-2
+s9s1: 4-4
+s9e1: 0-0
+s9b1: 5-6
+s9p1: 8-8
+s9p2: 10-10
+s9j1: 11-12
+s9j2: 9-9
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9b1 :same-entity s4b2)
+            (s9j1 :same-entity s7j2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1     2    3    4          5         6       7         8     9  10      11 12         13
+Words: Zákaz mimo jiné znemožňuje vyplácení důchodů bosenským Srbům ,  žijícím v  Jugoslávii .
+
+# sentence level graph:
+(s10z1 / znemožňovat-001
+        :ARG0 (s10z2 / zákaz
+            :refer-number singular)
+        :subtraction (s10j1 / jiný
+            :refer-number singular)
+        :ARG2 (s10e1 / entity)
+        :ARG1 (s10v1 / vyplácení
+            :ARG0 s10e1
+            :ARG1 (s10d1 / důchod
+                :refer-number plural)
+            :ARG2 (s10s1 / Srb
+                :mod (s10b1 / bosenský
+                    :refer-number plural)
+                :mod (s10z3 / žijící
+                    :place (s10j2 / Jugoslávie
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s10z1: 4-4
+s10z2: 1-1
+s10j1: 2-3
+s10e1: 0-0
+s10v1: 5-5
+s10d1: 6-6
+s10s1: 8-8
+s10b1: 7-7
+s10z3: 10-10
+s10j2: 11-12
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10z2 :same-event s9z1)
+            (s10b1 :same-entity s9b1)
+            (s10j2 :same-entity s9j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1     2           3           4  5       6     7  8      9     10     11    12   13     14   15      16  17    18        19 20     21 22    23     24 25    26 27   28  29       30  31
+Words: Vůdce muslimských separatistů z  enklávy Bihač na západě Bosny Fikret Abdič dnes odmítl plán návratu asi 50000 uprchlíků z  Bihače do svých domovů ,  které by byly pod ochranou OSN .
+
+# sentence level graph:
+(s11o1 / odmítnout-002
+        :ARG0 (s11a1 / Abdič
+            :mod (s11f1 / Fikret
+                :refer-number singular)
+            :mod (s11v1 / vůdce
+                :ARG1 (s11s1 / separatista
+                    :mod (s11m1 / muslimský
+                        :refer-number plural)
+                    :start (s11e1 / enkláva
+                        :name (s11b1 / Bihač
+                            :refer-number singular)
+                        :place (s11z1 / západ
+                            :possessor (s11b2 / Bosna
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s11d1 / dnes)
+        :ARG1 (s11p1 / plán
+            :ARG1 (s11n1 / návrat
+                :ARG0 (s11u1 / uprchlík
+                    :mod (s11x1 / 50000
+                        :extent (s11a2 / asi))
+                    :refer-number plural)
+                :start (s11b3 / Bihač
+                    :refer-number singular)
+                :goal (s11d2 / domov
+                    :possessor s11u1
+                    :ARG0-of (s11b4 / být-011
+                        :place (s11o2 / ochrana
+                            :ARG0 (s11o3 / OSN)
+                            :refer-number singular)
+                        :refer-number plural
+                        :aspect activity)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s11o1: 13-13
+s11a1: 11-11
+s11f1: 10-10
+s11v1: 1-1
+s11s1: 3-3
+s11m1: 2-2
+s11e1: 4-5
+s11b1: 6-6
+s11z1: 7-8
+s11b2: 9-9
+s11d1: 12-12
+s11p1: 14-14
+s11n1: 15-15
+s11u1: 18-18,22-22
+s11x1: 17-17
+s11a2: 16-16
+s11b3: 19-20
+s11d2: 21-21,23-23,25-25
+s11b4: 26-27
+s11o2: 28-29
+s11o3: 30-30
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11b2 :same-entity s10b1)
+            (s11b3 :same-entity s11b1)
+            (s11o3 :same-entity s7o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1    2  3  4     5         6           7   8  9          10    11        12
+Words: Plán mu v  úterý předložil velvyslanec USA v  Chorvatsku Peter Galbraith .
+
+# sentence level graph:
+(s12p1 / předložit-001
+        :ARG1 (s12p2 / plán
+            :refer-number singular)
+        :ARG2 (s12e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s12u1 / úterý
+            :refer-number singular)
+        :ARG0 (s12g1 / Galbraith
+            :mod (s12p3 / Peter
+                :refer-number singular)
+            :mod (s12v1 / velvyslanec
+                :possessor (s12u2 / USA
+                    :refer-number plural)
+                :place (s12c1 / Chorvatsko
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s12p1: 5-5
+s12p2: 1-1
+s12e1: 2-2
+s12u1: 3-4
+s12g1: 11-11
+s12p3: 10-10
+s12v1: 6-6
+s12u2: 7-7
+s12c1: 8-9
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12p2 :same-entity s11p1)
+            (s12e1 :same-entity s11a1)
+            (s12c1 :same-entity s3c1)))
+
+

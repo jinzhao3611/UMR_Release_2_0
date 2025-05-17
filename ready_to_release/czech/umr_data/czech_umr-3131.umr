@@ -1,0 +1,325 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2 3      4      5       6
+Words: VW v Evropě vyrábí nejvíce automobilů
+
+# sentence level graph:
+(s1v1 / vyrábět-001
+        :ARG0 (s1v2 / VW
+            :refer-number singular)
+        :place (s1e1 / Evropa
+            :refer-number singular)
+        :ARG1 (s1a1 / automobil
+            :mod (s1h1 / hodně)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1v1: 4-4
+s1v2: 1-1
+s1e1: 2-3
+s1a1: 6-6
+s1h1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Paříž -
+
+# sentence level graph:
+(s2p1 / Paříž
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2          3  4       5      6       7         8    9          10      11         12 13 14   15    16       17   18      19   20    21 22     23 24   25       26 27   28       29
+Words: Společnost Volkswagen si udržuje nadále vedoucí postavení mezi evropskými výrobci automobilů ,  i  když proti loňskému roku poklesl její podíl na výrobě ze 17.4 procenta na 16.4 procenta .
+
+# sentence level graph:
+(s3b1 / but-91
+        :ARG1 (s3u1 / udržovat-003
+            :ARG0 (s3s1 / společnost
+                :name (s3v1 / Volkswagen
+                    :refer-number singular)
+                :refer-number singular)
+            :affectee s3s1
+            :duration (s3n1 / nadále)
+            :ARG1 (s3p1 / postavení
+                :mod (s3v2 / vedoucí
+                    :refer-number singular)
+                :place (s3v3 / výrobce
+                    :ARG1 (s3a1 / automobil
+                        :refer-number plural)
+                    :mod (s3e1 / evropský
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG2 (s3p2 / poklesnout-001
+            :comparison (s3r1 / rok
+                :mod (s3l1 / loňský
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s3p3 / podíl
+                :ARG0 s3s1
+                :ARG1 (s3v4 / výroba
+                    :refer-number singular)
+                :refer-number singular)
+            :source (s3p4 / procento
+                :mod (s3x3 / 17.4)
+                :refer-number singular)
+            :ARG1 (s3p5 / procento
+                :mod (s3x4 / 16.4)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s3b1: 14-14
+s3u1: 4-4
+s3s1: 1-1,3-3,19-19
+s3v1: 2-2
+s3n1: 5-5
+s3p1: 7-7
+s3v2: 6-6
+s3v3: 8-8,10-10
+s3a1: 11-11
+s3e1: 9-9
+s3p2: 13-13,18-18
+s3r1: 15-15,17-17
+s3l1: 16-16
+s3p3: 20-20
+s3v4: 21-22
+s3p4: 23-23,25-25
+s3x3: 24-24
+s3p5: 26-26,28-28
+s3x4: 27-27
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s1 :same-entity s1v2)
+            (s3a1 :same-entity s1a1)
+            (s3e1 :same-entity s1e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2           3  4        5     6  7       8          9      10 11     12      13          14   15 16   17       18 19   20   21   22 23 24
+Words: Po Volkswagenu má největší podíl na celkově vyrobených vozech v  Evropě italská automobilka Fiat s  11.8 procenty (  loni 12.5 proc .  )  .
+
+# sentence level graph:
+(s4m1 / mít-046
+        :temporal (s4v1 / Volkswagen
+            :refer-number singular
+            :refer-person 3rd)
+        :predicative-noun (s4p1 / podíl
+            :ARG1 (s4v2 / vůz
+                :mod (s4v3 / vyrobený
+                    :manner (s4c1 / celkově)
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 s4a1
+            :mod (s4v4 / velký
+                :refer-number singular)
+            :refer-number singular)
+        :place (s4e1 / Evropa
+            :refer-number singular)
+        :ARG0 (s4a1 / automobilka
+            :name (s4f1 / Fiat
+                :refer-number singular)
+            :mod (s4i1 / italský
+                :refer-number singular)
+            :refer-number singular)
+        :companion (s4p2 / procento
+            :mod (s4x2 / 11.8)
+            :refer-number plural)
+        :parenthesis (s4e2 / event
+            :temporal (s4v5 / vloni
+                :refer-number singular)
+            :ARG1 (s4p3 / procento
+                :mod (s4x3 / 12.5))
+            :aspect state)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s4m1: 3-3
+s4v1: 1-2
+s4p1: 5-5
+s4v2: 6-6,9-9
+s4v3: 8-8
+s4c1: 7-7
+s4v4: 4-4
+s4e1: 10-11
+s4a1: 13-13
+s4f1: 14-14
+s4i1: 12-12
+s4p2: 15-15,17-17
+s4x2: 16-16
+s4e2: 0-0
+s4v5: 19-19
+s4p3: 21-21
+s4x3: 20-20
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4v1 :same-entity s3s1)
+            (s4v2 :same-entity s3a1)
+            (s4e1 :same-entity s3e1)
+            (s4v5 :same-entity s3r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2  3      4  5    6        7  8    9    10 11 12 13      14      15 16      17 18   19       20 21   22   23 24 25 26   27 28   29       30 31   32   33 34 35 36      37 38   39       40 41   42   43 44 45
+Words: Následuje GM Europe s  12.8 procenty (  12.4 proc .  )  ,  skupina Peugeot -  Citroen s  11.8 procenty (  11.9 proc .  )  ,  Ford s  11.5 procenty (  11.5 proc .  )  a  Renault s  10.3 procenty (  10.4 proc .  )  .
+
+# sentence level graph:
+(s5n1 / následovat-002
+        :ARG0 (s5a1 / and
+            :op1 (s5x1 / #Forn
+                :FPHR (s5g1 / GM)
+                :FPHR (s5e1 / Europe)
+                :companion (s5p1 / procento
+                    :mod (s5x2 / 12.8)
+                    :refer-number plural)
+                :parenthesis (s5p2 / procento
+                    :mod (s5x3 / 12.4)))
+            :op2 (s5s1 / skupina
+                :name (s5x4 / #Forn
+                    :FPHR (s5p3 / Peugeot
+                        :refer-number singular)
+                    :FPHR (s5x5 / -)
+                    :FPHR (s5c1 / Citroen
+                        :refer-number singular))
+                :companion (s5p4 / procento
+                    :mod (s5x6 / 11.8)
+                    :refer-number plural)
+                :parenthesis (s5p5 / procento
+                    :mod (s5x7 / 11.9))
+                :refer-number singular)
+            :op3 (s5f1 / Ford
+                :companion (s5p6 / procento
+                    :mod (s5x8 / 11.5)
+                    :refer-number plural)
+                :parenthesis (s5p7 / procento
+                    :mod (s5x9 / 11.5))
+                :refer-number singular)
+            :op4 (s5r1 / Renault
+                :companion (s5p8 / procento
+                    :mod (s5x10 / 10.3)
+                    :refer-number plural)
+                :parenthesis (s5p9 / procento
+                    :mod (s5x11 / 10.4))
+                :refer-number singular))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5n1: 1-1
+s5a1: 35-35
+s5x1: 0-0
+s5g1: 2-2
+s5e1: 3-3
+s5p1: 4-4,6-6
+s5x2: 5-5
+s5p2: 9-9
+s5x3: 8-8
+s5s1: 13-13
+s5x4: 0-0
+s5p3: 14-14
+s5x5: 15-15
+s5c1: 16-16
+s5p4: 17-17,19-19
+s5x6: 18-18
+s5p5: 22-22
+s5x7: 21-21
+s5f1: 26-26
+s5p6: 27-27,29-29
+s5x8: 28-28
+s5p7: 32-32
+s5x9: 31-31
+s5r1: 36-36
+s5p8: 37-37,39-39
+s5x10: 38-38
+s5p9: 42-42
+s5x11: 41-41
+
+# document level annotation:
+(s5s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2      3          4     5      6       7  8      9      10 11   12       13 14  15      16   17
+Words: Odbyt nových automobilů proti loňsku poklesl v  Evropě celkem o  17.2 procenta na 6.1 milionů vozů .
+
+# sentence level graph:
+(s6p1 / poklesnout-001
+        :ARG0 (s6o1 / odbyt
+            :possessor (s6a1 / automobil
+                :mod (s6n1 / nový
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :comparison (s6l1 / loňsko
+            :refer-number singular)
+        :place (s6e1 / Evropa
+            :refer-number singular)
+        :extent (s6c1 / celkem)
+        :extent (s6p2 / procento
+            :mod (s6x1 / 17.2)
+            :refer-number singular)
+        :ARG1 (s6m1 / milión
+            :mod (s6v1 / vůz
+                :refer-number plural)
+            :mod (s6x2 / 6.1)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6p1: 6-6
+s6o1: 1-1
+s6a1: 3-3
+s6n1: 2-2
+s6l1: 4-5
+s6e1: 7-8
+s6c1: 9-9
+s6p2: 10-10,12-12
+s6x1: 11-11
+s6m1: 13-13,15-15
+s6v1: 16-16
+s6x2: 14-14
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6a1 :same-entity s4v2)
+            (s6l1 :same-entity s4v5)
+            (s6e1 :same-entity s4e1)
+            (s6v1 :same-entity s6a1)))
+
+

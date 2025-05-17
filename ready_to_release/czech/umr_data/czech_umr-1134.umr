@@ -1,0 +1,201 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2
+Words: Méně úředníků
+
+# sentence level graph:
+(s1u1 / úředník
+        :mod (s1m1 / málo)
+        :refer-number plural)
+
+# alignment:
+s1u1: 2-2
+s1m1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( jpš ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2j1 / jpš)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2j1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1            2           3    4  5     6            7            8  9     10     11       12   13     14 15       16    17         18
+Words: Ministerstvo zemědělství chce na svých regionálních pracovištích do konce června příštího roku snížit o  polovinu počet pracovníků .
+
+# sentence level graph:
+(s3s1 / snížit-001
+        :ARG0 (s3m1 / ministerstvo
+            :possessor (s3z1 / zemědělství
+                :refer-number singular)
+            :refer-number singular)
+        :place (s3p1 / pracoviště
+            :possessor s3m1
+            :mod (s3r1 / regionální
+                :refer-number plural)
+            :refer-number plural)
+        :temporal (s3k1 / konec
+            :possessor (s3c1 / červen
+                :possessor (s3r2 / rok
+                    :mod (s3p2 / příští
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s3p3 / polovina
+            :refer-number singular)
+        :ARG1 (s3p4 / počet
+            :mod (s3p5 / pracovník
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3s1: 3-3,13-13
+s3m1: 1-1,5-5
+s3z1: 2-2
+s3p1: 4-4,7-7
+s3r1: 6-6
+s3k1: 8-9
+s3c1: 10-10
+s3r2: 12-12
+s3p2: 11-11
+s3p3: 14-15
+s3p4: 16-16
+s3p5: 17-17
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2   3           4           5  6    7      8     9   10
+Words: Ze 710 dosavadních zaměstnanců by mělo zůstat pouze 360 .
+
+# sentence level graph:
+(s4z1 / zůstat-005
+        :start (s4z2 / zaměstnanec
+            :mod (s4d1 / dosavadní
+                :refer-number plural)
+            :mod (s4x1 / 710
+                :refer-number singular)
+            :refer-number plural)
+        :place (s4e1 / entity)
+        :clausal-marker (s4p1 / pouze)
+        :ARG0 (s4x2 / 360
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s4z1: 5-7
+s4z2: 1-1,4-4
+s4d1: 3-3
+s4x1: 2-2
+s4e1: 0-0
+s4p1: 8-8
+s4x2: 9-9
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4z2 :same-entity s3p5)
+            (s4x1 :same-entity s3p4)
+            (s4x2 :same-entity s1u1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2  3     4       5           6     7   8
+Words: Oznámil to včera ministr zemědělství Josef Lux .
+
+# sentence level graph:
+(s5o1 / oznámit-002
+        :effect (s5t1 / ten
+            :refer-number singular)
+        :ARG2 (s5e1 / entity)
+        :temporal (s5v1 / včera)
+        :ARG0 (s5l1 / Lux
+            :mod (s5j1 / Josef
+                :refer-number singular)
+            :mod (s5m1 / ministr
+                :possessor (s5z1 / zemědělství
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5o1: 1-1
+s5t1: 2-2
+s5e1: 0-0
+s5v1: 3-3
+s5l1: 7-7
+s5j1: 6-6
+s5m1: 4-4
+s5z1: 5-5
+
+# document level annotation:
+(s5s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2   3      4      5   6       7     8     9       10
+Words: Podle něj územní odbory již většinu svých úkolů splnily .
+
+# sentence level graph:
+(s6s1 / splnit-001
+        :ARG0 (s6o1 / odbor
+            :mod (s6u1 / územní
+                :refer-number plural)
+            :refer-number plural)
+        :clausal-marker (s6j1 / již)
+        :ARG1 (s6v1 / většina
+            :mod (s6u2 / úkol
+                :ARG0 s6o1
+                :refer-number plural)
+            :refer-number singular)
+        :regard (s6e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s6s1: 9-9
+s6o1: 4-4,7-7
+s6u1: 3-3
+s6j1: 5-5
+s6v1: 6-6
+s6u2: 8-8
+s6e1: 1-2
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6o1 :same-entity s3p1)
+            (s6e1 :same-entity s5l1)))
+
+

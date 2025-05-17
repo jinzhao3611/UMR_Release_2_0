@@ -1,0 +1,589 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2  3   4  5 6
+Words: Felicia na trh až v listopadu
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1f1 / Felicia
+            :refer-number singular)
+        :goal (s1t1 / trh
+            :refer-number singular)
+        :clausal-marker (s1a1 / až)
+        :temporal (s1l1 / listopad
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1f1: 1-1
+s1t1: 2-3
+s1a1: 4-4
+s1l1: 5-6
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( pin ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2p2 / pin)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2p2: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1    2         3       4  5        6     7  8  9  10    11   12    13       14        15     16 17     18        19
+Words: Nový automobil Felicia z  produkce Škody -  VW si budou moci první tuzemští zákazníci koupit až koncem listopadu .
+
+# sentence level graph:
+(s3k1 / koupit-001
+        :ARG1 (s3a1 / automobil
+            :mod (s3n1 / nový
+                :refer-number singular)
+            :name (s3f1 / Felicia
+                :refer-number singular)
+            :start (s3p1 / produkce
+                :ARG0 (s3s1 / Škoda
+                    :mod (s3v1 / VW)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3z1 / zákazník
+            :mod (s3t1 / tuzemský
+                :refer-number plural)
+            :mod (s3p2 / první
+                :refer-number plural)
+            :refer-number plural)
+        :ARG2 s3z1
+        :clausal-marker (s3a2 / až)
+        :temporal (s3l1 / listopad
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3k1: 10-11,15-15
+s3a1: 2-2
+s3n1: 1-1
+s3f1: 3-3
+s3p1: 4-5
+s3s1: 6-6
+s3v1: 8-8
+s3z1: 9-9,14-14
+s3t1: 13-13
+s3p2: 12-12
+s3a2: 16-16
+s3l1: 17-18
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3a1 :same-entity s1f1)
+            (s3l1 :same-entity s1l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2                3           4     5      6       7      8  9  10 11      12     13 14        15       16    17
+Words: Mluvčí mladoboleslavské automobilky Milan Smutný zároveň popřel ,  že se felicie začnou v  zahraničí prodávat dříve .
+
+# sentence level graph:
+(s4p1 / popřít-001
+        :clausal-marker (s4z1 / zároveň)
+        :ARG0 (s4s1 / Smutný
+            :mod (s4m1 / Milan
+                :refer-number singular)
+            :mod (s4m2 / mluvčí
+                :possessor (s4a1 / automobilka
+                    :mod (s4m3 / mladoboleslavský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s4z2 / začít-001
+            :ARG0 (s4e1 / entity)
+            :ARG1 (s4p2 / prodávat-001
+                :ARG1 (s4f1 / Felicia
+                    :refer-number plural)
+                :ARG0 s4e1
+                :ARG2 (s4e2 / entity)
+                :place (s4z3 / zahraničí
+                    :refer-number singular)
+                :temporal (s4b1 / brzy)
+                :aspect habitual)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4p1: 7-7
+s4z1: 6-6
+s4s1: 5-5
+s4m1: 4-4
+s4m2: 1-1
+s4a1: 3-3
+s4m3: 2-2
+s4z2: 9-9,12-12
+s4e1: 0-0
+s4p2: 15-15
+s4f1: 11-11
+s4e2: 0-0
+s4z3: 13-14
+s4b1: 16-16
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4a1 :same-entity s3s1)
+            (s4f1 :same-entity s3a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2  3  4      5    6    7        8        9     10   11 12    13     14 15    16        17  18   19
+Words: Upozornil ,  že nových vozů bude zpočátku vyráběno velmi málo a  náběh výroby má trvat přibližně půl roku .
+
+# sentence level graph:
+(s5u1 / upozornit-001
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s5e2 / entity)
+        :ARG1 (s5a1 / and
+            :op1 (s5v1 / vyrábět-001
+                :ARG1 (s5v2 / vůz
+                    :mod (s5n1 / nový
+                        :refer-number plural)
+                    :refer-number plural)
+                :ARG0 (s5e3 / entity)
+                :temporal (s5z1 / zpočátku)
+                :extent (s5m1 / málo
+                    :extent (s5v3 / velmi))
+                :refer-number singular
+                :aspect activity)
+            :op2 (s5t1 / trvat-003
+                :ARG0 (s5n2 / náběh
+                    :ARG1 (s5v4 / výroba
+                        :refer-number singular)
+                    :refer-number singular)
+                :duration (s5p1 / půl
+                    :mod (s5r1 / rok
+                        :refer-number singular)
+                    :extent (s5p2 / přibližně)
+                    :refer-number singular)
+                :aspect activity))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5u1: 1-1
+s5e1: 0-0
+s5e2: 0-0
+s5a1: 11-11
+s5v1: 3-3,6-6,8-8
+s5v2: 5-5
+s5n1: 4-4
+s5e3: 0-0
+s5z1: 7-7
+s5m1: 10-10
+s5v3: 9-9
+s5t1: 3-3,14-15
+s5n2: 12-12
+s5v4: 13-13
+s5p1: 17-17
+s5r1: 18-18
+s5p2: 16-16
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4s1)
+            (s5v2 :same-entity s4f1)
+            (s5v4 :same-event s5v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2      3          4  5      6  7  8      9        10 11 12     13       14     15     16     17   18  19 20          21     22       23 24 25 26   27
+Words: Na otázku zpravodaje LN odmítl M  .  Smutný potvrdit ,  že termín zahájení náběhu výroby nového vozu byl ve vrchlabském závodě stanoven na 5  .  září .
+
+# sentence level graph:
+(s6o1 / odmítnout-002
+        :regard (s6o2 / otázka
+            :ARG0 (s6z1 / zpravodaj
+                :possessor (s6l1 / LN
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s6s1 / Smutný
+            :mod (s6m1 / M)
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s6p1 / potvrdit-001
+            :ARG0 s6s1
+            :ARG1 (s6s2 / stanovit-004
+                :ARG1 (s6t1 / termín
+                    :possessor (s6z2 / zahájení
+                        :ARG1 (s6n1 / náběh
+                            :ARG0 (s6v1 / výroba
+                                :ARG1 (s6v2 / vůz
+                                    :mod (s6n2 / nový
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG0 (s6e1 / entity)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s6e2 / entity)
+                :place (s6z3 / závod
+                    :mod (s6v3 / vrchlabský
+                        :refer-number singular)
+                    :refer-number singular)
+                :temporal (s6z4 / září
+                    :mod (s6x2 / 5)
+                    :refer-number singular)
+                :refer-number singular
+                :aspect performance)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6o1: 5-5
+s6o2: 1-2
+s6z1: 3-3
+s6l1: 4-4
+s6s1: 8-8
+s6m1: 6-6
+s6p1: 9-9
+s6s2: 11-11,18-18,22-22
+s6t1: 12-12
+s6z2: 13-13
+s6n1: 14-14
+s6v1: 15-15
+s6v2: 17-17
+s6n2: 16-16
+s6e1: 0-0
+s6e2: 0-0
+s6z3: 19-19,21-21
+s6v3: 20-20
+s6z4: 23-23,26-26
+s6x2: 24-24
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s1 :same-entity s5e1)
+            (s6n1 :same-entity s5n2)
+            (s6v1 :same-entity s5v4)
+            (s6v2 :same-entity s5v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2    3  4   5  6       7         8  9     10 11    12        13    14 15 16       17     18   19         20     21
+Words: Produkce vozu v  tzv .  krátkém provedení má přímo v  Mladé Boleslavi začít až po vyrobení 100000 kusů současných modelů .
+
+# sentence level graph:
+(s7z1 / začít-002
+        :ARG0 (s7p1 / produkce
+            :ARG1 (s7v1 / vůz
+                :mod (s7p2 / provedení
+                    :clausal-marker (s7t1 / takzvaný)
+                    :mod (s7k1 / krátký
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s7p3 / přímo)
+        :place (s7b1 / Boleslav
+            :mod (s7m1 / mladý
+                :refer-number singular)
+            :refer-number singular)
+        :clausal-marker (s7a1 / až)
+        :temporal (s7v2 / vyrobení
+            :ARG0 (s7e1 / entity)
+            :ARG1 (s7k2 / kus
+                :possessor (s7m2 / model
+                    :mod (s7s1 / současný
+                        :refer-number plural)
+                    :refer-number plural)
+                :mod (s7x1 / 100000)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s7z1: 8-8,13-13
+s7p1: 1-1
+s7v1: 2-2
+s7p2: 3-3,7-7
+s7t1: 4-4
+s7k1: 6-6
+s7p3: 9-9
+s7b1: 10-10,12-12
+s7m1: 11-11
+s7a1: 14-14
+s7v2: 15-16
+s7e1: 0-0
+s7k2: 18-18
+s7m2: 20-20
+s7s1: 19-19
+s7x1: 17-17
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2     3 4        5             6         7
+Words: Potom dojde k vynucené technologické přestávce .
+
+# sentence level graph:
+(s8d1 / dojít-009
+        :temporal (s8p1 / potom)
+        :ARG0 (s8p2 / přestávka
+            :mod (s8t1 / technologický
+                :refer-number singular)
+            :mod (s8v1 / vynucený
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s8d1: 2-2
+s8p1: 1-1
+s8p2: 3-3,6-6
+s8t1: 5-5
+s8v1: 4-4
+
+# document level annotation:
+(s8s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1   2      3       4      5     6  7    8      9   10  11      12 13       14
+Words: Při běžném provozu sjíždí denně z  pásů celkem asi 700 formanů a  favoritů .
+
+# sentence level graph:
+(s9s1 / sjíždět-001
+        :condition (s9p1 / provoz
+            :mod (s9b1 / běžný
+                :refer-number singular)
+            :refer-number singular)
+        :frequency (s9d1 / denně)
+        :start (s9p2 / pás
+            :refer-number plural)
+        :ARG0 (s9a1 / and
+            :op1 (s9f1 / Forman
+                :mod (s9x1 / 700
+                    :extent (s9c1 / celkem)
+                    :extent (s9a2 / asi))
+                :refer-number plural)
+            :op2 (s9f2 / Favorit
+                :mod s9x1
+                :refer-number plural))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s9s1: 4-4
+s9p1: 1-1,3-3
+s9b1: 2-2
+s9d1: 5-5
+s9p2: 6-7
+s9a1: 12-12
+s9f1: 11-11
+s9x1: 10-10
+s9c1: 8-8
+s9a2: 9-9
+s9f2: 13-13
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1    2       3    4     5  6  7       8  9       10  11      12     13    14
+Words: Cenu Felicie chce Škoda -  VW stlačit co nejvíce pod hranici 250000 korun .
+
+# sentence level graph:
+(s10s1 / stlačit-001
+        :ARG1 (s10c1 / cena
+            :ARG1 (s10f1 / Felicia
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s10s2 / Škoda
+            :mod (s10v1 / VW)
+            :refer-number singular)
+        :extent (s10h1 / hodně
+            :extent (s10c2 / co
+                :refer-number singular
+                :refer-person 3rd))
+        :goal (s10h2 / hranice
+            :mod (s10k1 / koruna
+                :mod (s10x1 / 250000)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s10s1: 3-3,7-7
+s10c1: 1-1
+s10f1: 2-2
+s10s2: 4-4
+s10v1: 6-6
+s10h1: 9-9
+s10c2: 8-8
+s10h2: 10-11
+s10k1: 13-13
+s10x1: 12-12
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10f1 :same-entity s6v2)
+            (s10s2 :same-entity s4a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1         2     3      4      5      6
+Words: Přesnější údaje odmítl mluvčí sdělit .
+
+# sentence level graph:
+(s11o1 / odmítnout-002
+        :ARG0 (s11m1 / mluvčí
+            :refer-number singular)
+        :ARG1 (s11s1 / sdělit-002
+            :effect (s11u1 / údaj
+                :mod (s11p1 / přesný
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG0 s11m1
+            :ARG2 (s11e1 / entity)
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s11o1: 3-3
+s11m1: 4-4
+s11s1: 5-5
+s11u1: 2-2
+s11p1: 1-1
+s11e1: 0-0
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11m1 :same-entity s6s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1             2     3      4      5  6  7     8       9        10       11   12 13    14   15   16 17  18    19      20 21   22 23     24          25 26        27 28   29   30   31
+Words: Modernizovaná verze modelu Forman se má začít vyrábět počátkem příštího roku a  první nové pick -  upy budou sjíždět z  pásů v  závodě automobilky v  Kvasinách od léta roku 1995 .
+
+# sentence level graph:
+(s12a1 / and
+        :op1 (s12z1 / začít-001
+            :ARG0 (s12e1 / entity)
+            :ARG1 (s12v1 / vyrábět-001
+                :ARG1 (s12v2 / verze
+                    :possessor (s12m1 / model
+                        :name (s12f1 / Forman
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s12m2 / modernizovaný
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 s12e1
+                :temporal (s12r1 / rok
+                    :mod (s12p1 / příští
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect activity)
+            :aspect performance)
+        :op2 (s12s1 / sjíždět-001
+            :ARG0 (s12x2 / #Forn
+                :FPHR (s12p2 / pick)
+                :FPHR (s12u1 / upy
+                    :refer-number plural)
+                :mod (s12n1 / nový
+                    :refer-number plural)
+                :mod (s12p3 / první
+                    :refer-number plural))
+            :start (s12p4 / pás
+                :place (s12z2 / závod
+                    :possessor (s12a2 / automobilka
+                        :place (s12k1 / Kvasiny
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :temporal (s12l1 / léto
+                :possessor (s12r2 / rok
+                    :mod (s12x3 / 1995)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect activity))
+
+# alignment:
+s12a1: 12-12
+s12z1: 6-7
+s12e1: 0-0
+s12v1: 8-8
+s12v2: 2-2
+s12m1: 3-3
+s12f1: 4-4
+s12m2: 1-1
+s12r1: 9-9,11-11
+s12p1: 10-10
+s12s1: 18-19
+s12x2: 0-0
+s12p2: 15-15
+s12u1: 17-17
+s12n1: 14-14
+s12p3: 13-13
+s12p4: 20-21
+s12z2: 22-23
+s12a2: 24-24
+s12k1: 25-26
+s12l1: 27-28
+s12r2: 29-29
+s12x3: 30-30
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12m1 :same-entity s9f1)
+            (s12a2 :same-entity s10s2)))
+
+

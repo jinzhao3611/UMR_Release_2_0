@@ -1,0 +1,179 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2        3    4  5      6  7  8       9          10 11      12 13      14     15 16    17   18      19        20     21           22 23           24     25 26      27 28       29
+Words: Společnost Manville Corp .  uvedla ,  že postaví elektrárnu v  hodnotě 24 milionů dolarů ,  která bude dodávat elektřinu jejímu celulózovému a  papírenskému závodu v  Igarasu v  Brazílii .
+
+# sentence level graph:
+(s1u1 / uvést-007
+        :ARG0 (s1s1 / společnost
+            :name (s1x1 / #Forn
+                :FPHR (s1m1 / Manville)
+                :FPHR (s1c1 / Corp)
+                :FPHR (s1x2 / .))
+            :refer-number singular)
+        :effect (s1p1 / postavit-002
+            :ARG0 s1s1
+            :ARG1 (s1e1 / elektrárna
+                :mod (s1h1 / hodnota
+                    :extent (s1m2 / milion
+                        :mod (s1x4 / 24)
+                        :mod (s1d1 / dolar
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :ARG0-of (s1d2 / dodávat-002
+                    :ARG1 (s1e2 / elektřina
+                        :refer-number singular)
+                    :ARG2 (s1z1 / závod
+                        :mod s1s1
+                        :mod (s1a1 / and
+                            :op1 (s1c2 / celulózový
+                                :refer-number singular)
+                            :op2 (s1p2 / papírenský
+                                :refer-number singular))
+                        :place (s1i1 / Igaras
+                            :place (s1b1 / Brazílie
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect habitual)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s1u1: 5-5
+s1s1: 1-1,20-20
+s1x1: 0-0
+s1m1: 2-2
+s1c1: 3-3
+s1x2: 4-4
+s1p1: 7-8
+s1e1: 9-9,16-16
+s1h1: 10-11
+s1m2: 13-13
+s1x4: 12-12
+s1d1: 14-14
+s1d2: 17-18
+s1e2: 19-19
+s1z1: 24-24
+s1a1: 22-22
+s1c2: 21-21
+s1p2: 23-23
+s1i1: 25-26
+s1b1: 27-28
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1          2          3  4  5    6          7  8       9         10      11  12      13 14    15   16          17      18
+Words: Společnost prohlásila ,  že tato elektrárna jí zajistí potřebnou energii pro papírnu a  sníží její energetické náklady .
+
+# sentence level graph:
+(s2p1 / prohlásit-003
+        :ARG0 (s2s1 / společnost
+            :refer-number singular
+            :refer-person 3rd)
+        :effect (s2a1 / and
+            :op1 (s2z1 / zajistit-001
+                :ARG0 (s2e1 / elektrárna
+                    :mod (s2t1 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG2 s2s1
+                :ARG1 (s2e2 / energie
+                    :mod (s2p2 / potřebný
+                        :refer-number singular)
+                    :affectee (s2p3 / papírna
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :op2 (s2s2 / snížit-001
+                :ARG0 s2e1
+                :ARG1 (s2n1 / náklad
+                    :mod s2p3
+                    :mod (s2e3 / energetický
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance))
+        :aspect performance)
+
+# alignment:
+s2p1: 2-2
+s2s1: 1-1,7-7
+s2a1: 13-13
+s2z1: 4-4,8-8
+s2e2: 10-10
+s2p2: 9-9
+s2p3: 11-12,15-15
+s2e1: 6-6
+s2t1: 5-5
+s2s2: 4-4,14-14
+s2n1: 17-17
+s2e3: 16-16
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2s1 :same-entity s1s1)
+            (s2p3 :same-entity s1z1)
+            (s2e1 :same-entity s1e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1          2        3      4  5  6     7      8         9     10         11       12     13   14   15
+Words: Společnost Manville uvedla ,  že podle jejího očekávání začne elektrárna pracovat koncem roku 1991 .
+
+# sentence level graph:
+(s3u1 / uvést-007
+        :ARG0 (s3s1 / společnost
+            :name (s3m1 / Manville)
+            :refer-number singular
+            :refer-person 3rd)
+        :effect (s3z1 / začít-001
+            :regard (s3o1 / očekávání
+                :ARG0 s3s1
+                :ARG1 s3z1
+                :refer-number singular)
+            :ARG0 (s3e1 / elektrárna
+                :refer-number singular)
+            :ARG1 (s3p1 / pracovat-004
+                :ARG0 s3e1
+                :aspect activity)
+            :temporal (s3r1 / rok
+                :name (s3x4 / 1991)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :aspect performance)
+
+# alignment:
+s3u1: 3-3
+s3s1: 1-1,7-7
+s3m1: 2-2
+s3z1: 5-5,9-9
+s3o1: 6-6,8-8
+s3e1: 10-10
+s3p1: 11-11
+s3r1: 12-13
+s3x4: 14-14
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s1 :same-entity s2s1)
+            (s3e1 :same-entity s2e1)))
+
+

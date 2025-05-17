@@ -1,0 +1,217 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1    2     3 4
+Words: Nová banka v Rusku
+
+# sentence level graph:
+(s1b1 / banka
+        :mod (s1n1 / nový
+            :refer-number singular)
+        :place (s1r1 / Rusko
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1b1: 2-2
+s1n1: 1-1
+s1r1: 3-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2
+Words: Moskva -
+
+# sentence level graph:
+(s2m1 / Moskva
+        :refer-number singular)
+
+# alignment:
+s2m1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2     3  4    5         6        7  8        9     10 11    12   13         14         15     16 17         18     19
+Words: V  Rusku by měla vzniknout Exportní a  importní banka ,  která bude financovat zahraniční obchod a  stimulovat export .
+
+# sentence level graph:
+(s3v1 / vzniknout-002
+        :place (s3r1 / Rusko
+            :refer-number singular)
+        :ARG0 (s3b1 / banka
+            :mod (s3a1 / and
+                :op1 (s3e1 / exportní
+                    :refer-number singular)
+                :op2 (s3i1 / importní
+                    :refer-number singular))
+            :ARG0-of (s3a2 / and
+                :op1 (s3f1 / financovat-001
+                    :ARG1 (s3o1 / obchod
+                        :mod (s3z1 / zahraniční
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect activity)
+                :op2 (s3s1 / stimulovat-002
+                    :ARG1 (s3e2 / export
+                        :refer-number singular)
+                    :aspect process))
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3v1: 3-5
+s3r1: 1-2
+s3b1: 9-9,11-11
+s3a1: 7-7
+s3e1: 6-6
+s3i1: 8-8
+s3a2: 16-16
+s3f1: 12-13
+s3o1: 15-15
+s3z1: 14-14
+s3s1: 17-17
+s3e2: 18-18
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3r1 :same-entity s1r1)
+            (s3b1 :same-entity s1b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2   3        4       5  6       7   8  9    10   11    12    13 14  15 16 17       18
+Words: Má mít základní kapitál 50 milionů USD ,  není však zatím jasné ,  kdo jí ho poskytne .
+
+# sentence level graph:
+(s4b1 / but-91
+        :ARG1 (s4m1 / mít-002
+            :ARG0 (s4e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s4k1 / kapitál
+                :mod (s4z1 / základní
+                    :refer-number singular)
+                :mod (s4m2 / milión
+                    :mod (s4u1 / USD)
+                    :mod (s4x1 / 50)
+                    :refer-number plural)
+                :refer-number singular)
+            :aspect state)
+        :ARG2 (s4b2 / být-007
+            :temporal (s4z2 / zatím)
+            :ARG1 (s4j1 / jasný
+                :refer-number singular)
+            :ARG0 (s4p1 / poskytnout-001
+                :ARG1 s4k1
+                :ARG2 s4e1
+                :ARG0 (s4k2 / kdo
+                    :refer-number singular
+                    :refer-person 3rd)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -))
+
+# alignment:
+s4b1: 10-10
+s4m1: 1-2
+s4e1: 15-15
+s4k1: 4-4,16-16
+s4z1: 3-3
+s4m2: 6-6
+s4u1: 7-7
+s4x1: 5-5
+s4b2: 9-9
+s4z2: 11-11
+s4j1: 12-12
+s4p1: 17-17
+s4k2: 14-14
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2  3    4       5          6      7        8              9  10    11      12   13      14 15      16      17           18 19       20    21
+Words: Převzít by měla většinu povinností bývalé sovětské Vněšekonombank ,  jejíž činnost byla omezena na obsluhu ruského zahraničního a  domácího dluhu .
+
+# sentence level graph:
+(s5p1 / převzít-002
+        :ARG0 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s5v1 / většina
+            :mod (s5p2 / povinnost
+                :possessor (s5v2 / Vněšekonombank
+                    :mod (s5s1 / sovětský
+                        :refer-number singular)
+                    :mod (s5b1 / bývalý
+                        :refer-number singular)
+                    :mod (s5o1 / omezit-001
+                        :ARG1 (s5c1 / činnost
+                            :ARG0 s5v2
+                            :refer-number singular)
+                        :ARG0 (s5e2 / entity)
+                        :effect (s5o2 / obsluha
+                            :ARG1 (s5a1 / and
+                                :op1 (s5d1 / dluh
+                                    :mod (s5r1 / ruský
+                                        :refer-number singular)
+                                    :mod (s5z1 / zahraniční
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :op2 (s5d2 / dluh
+                                    :mod s5r1
+                                    :mod (s5d3 / domácí
+                                        :refer-number singular)
+                                    :refer-number singular))
+                            :refer-number singular)
+                        :aspect performance)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s5p1: 1-3
+s5e1: 0-0
+s5v1: 4-4
+s5p2: 5-5
+s5v2: 8-8,10-10
+s5s1: 7-7
+s5b1: 6-6
+s5o1: 12-13
+s5c1: 11-11
+s5e2: 0-0
+s5o2: 14-15
+s5a1: 18-18
+s5d1: 0-0
+s5z1: 17-17
+s5r1: 16-16
+s5d2: 20-20
+s5d3: 19-19
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4e1)
+            (s5r1 :same-entity s3r1)))
+
+

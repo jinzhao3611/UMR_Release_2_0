@@ -1,0 +1,190 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2
+Words: Vydražené nezaplatil
+
+# sentence level graph:
+(s1z1 / zaplatit-001
+        :ARG1 (s1e1 / entity
+            :mod (s1v1 / vydražený
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s1e2 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :refer-number singular
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s1z1: 2-2
+s1e1: 0-0
+s1v1: 1-1
+s1e2: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2    3 4   5 6
+Words: Karlovy Vary ( vet ) -
+
+# sentence level graph:
+(s2v1 / Vary
+        :mod (s2k1 / Karel
+            :refer-number singular)
+        :parenthesis (s2v2 / vet)
+        :refer-number plural)
+
+# alignment:
+s2v1: 2-2
+s2k1: 1-1
+s2v2: 4-4
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2      3  4      5     6      7  8  9  10   11               12         13         14   15 16      17 18    19   20       21       22     23    24
+Words: V  dražbě za 553900 korun získal v  r  .  1991 jednatřicetiletý podnikatel provozovnu Kovo -  elektro ,  která byla majetkem Domácích potřeb Plzeň .
+
+# sentence level graph:
+(s3z1 / získat-001
+        :place (s3d1 / dražba
+            :mod (s3k1 / koruna
+                :mod (s3x1 / 553900)
+                :refer-number plural)
+            :refer-number singular)
+        :temporal (s3r1 / rok
+            :mod (s3x2 / 1991))
+        :ARG0 (s3p1 / podnikatel
+            :mod (s3j1 / jednatřicetiletý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3p2 / provozovna
+            :name (s3a1 / and
+                :op1 (s3k2 / Kovo
+                    :refer-number singular)
+                :op2 (s3e1 / elektro
+                    :refer-number singular))
+            :ARG0-of (s3b1 / být-007
+                :ARG1 (s3m1 / majetek
+                    :possessor (s3p3 / potřeba
+                        :name (s3p4 / Plzeň
+                            :refer-number singular)
+                        :mod (s3d2 / domácí
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3z1: 6-6
+s3d1: 1-2
+s3k1: 3-3,5-5
+s3x1: 4-4
+s3r1: 7-8
+s3x2: 10-10
+s3p1: 12-12
+s3j1: 11-11
+s3p2: 13-13,18-18
+s3a1: 15-15
+s3k2: 14-14
+s3e1: 16-16
+s3b1: 19-19
+s3m1: 20-20
+s3p3: 22-22
+s3p4: 23-23
+s3d2: 21-21
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s1e2)
+            (s3p2 :same-entity s1e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2        3    4     5        6     7     8  9
+Words: Nový vlastník však dosud zaplatil pouze 53900 Kč .
+
+# sentence level graph:
+(s4z1 / zaplatit-002
+        :clausal-marker (s4v1 / však)
+        :ARG0 (s4v2 / vlastník
+            :mod (s4n1 / nový
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s4d1 / dosud)
+        :clausal-marker (s4p1 / pouze)
+        :extent (s4k1 / Kč
+            :mod (s4x1 / 53900))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4z1: 5-5
+s4v1: 3-3
+s4v2: 2-2
+s4n1: 1-1
+s4d1: 4-4
+s4p1: 6-6
+s4k1: 8-8
+s4x1: 7-7
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4v2 :same-entity s3p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1            2  3       4 5          6        7             8     9
+Words: Vyšetřovatel ho obvinil z porušování pravidel hospodářského styku .
+
+# sentence level graph:
+(s5o1 / obvinit-001
+        :ARG0 (s5v1 / vyšetřovatel
+            :refer-number singular)
+        :ARG2 (s5e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s5p1 / porušování
+            :ARG0 (s5e2 / entity)
+            :ARG1 (s5p2 / pravidlo
+                :possessor (s5s1 / styk
+                    :mod (s5h1 / hospodářský
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5o1: 3-3
+s5v1: 1-1
+s5e1: 2-2
+s5p1: 4-5
+s5e2: 0-0
+s5p2: 6-6
+s5s1: 8-8
+s5h1: 7-7
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5e1 :same-entity s4v2)))
+
+

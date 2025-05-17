@@ -1,0 +1,441 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2   3       4   5
+Words: Jeden pes nahradí dva strážné
+
+# sentence level graph:
+(s1n1 / nahradit-002
+        :ARG0 (s1p1 / pes
+            :mod (s1j1 / jeden
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1s1 / strážný
+            :mod (s1d1 / dva
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1n1: 3-3
+s1p1: 2-2
+s1j1: 1-1
+s1s1: 5-5
+s1d1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3   4 5
+Words: Praha ( teb ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2t1 / teb)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2t1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2      3       4          5   6     7         8     9  10    11    12 13       14 15       16
+Words: První ročník přeboru služebních psů firmy Wackenhut Czech se konal včera na cvičišti v  Břevnově .
+
+# sentence level graph:
+(s3k1 / konat-se-001
+        :ARG0 (s3r1 / ročník
+            :possessor (s3p1 / přebor
+                :possessor (s3p2 / pes
+                    :possessor (s3f1 / firma
+                        :name (s3x1 / #Forn
+                            :FPHR (s3w1 / Wackenhut)
+                            :FPHR (s3c1 / Czech))
+                        :refer-number singular)
+                    :mod (s3s1 / služební
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :mod (s3p3 / první
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3v1 / včera)
+        :place (s3c2 / cvičiště
+            :place (s3b1 / Břevnov
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect activity)
+
+# alignment:
+s3k1: 9-10
+s3r1: 2-2
+s3p1: 3-3
+s3p2: 5-5
+s3f1: 6-6
+s3x1: 0-0
+s3w1: 7-7
+s3c1: 8-8
+s3s1: 4-4
+s3p3: 1-1
+s3v1: 11-11
+s3c2: 12-13
+s3b1: 14-15
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1       2  3          4  5   6  7        8         9      10
+Words: Soutěže se zúčastnilo 21 psů ,  většinou německých ovčáků .
+
+# sentence level graph:
+(s4z1 / zúčastnit-se-001
+        :ARG1 (s4s1 / soutěž
+            :refer-number singular)
+        :ARG0 (s4i1 / identity-91
+            :ARG1 (s4p1 / pes
+                :mod (s4x1 / 21)
+                :refer-number plural)
+            :clausal-marker (s4v1 / většinou)
+            :ARG2 (s4o1 / ovčák
+                :mod s4x1
+                :mod (s4n1 / německý
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4z1: 2-3
+s4s1: 1-1
+s4i1: 6-6
+s4p1: 5-5
+s4x1: 4-4
+s4v1: 7-7
+s4o1: 9-9
+s4n1: 8-8
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s1 :same-entity s3p1)
+            (s4i1 :same-entity s3p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1          2  3  4  5  6  7         8     9  10    11 12    13      14  15     16   17       18   19 20      21 22     23 24       25   26   27  28 29      30 31    32 33    34 35         36 37      38 39     40 41 42       43   44    45    46    47     48
+Words: Společnost s  r  .  o  .  Wackenhut Czech ,  která se kromě školení psů zabývá také ochranou osob a  objektů ,  střeží v  současné době více než 30 objektů v  Praze a  okolí ,  zaměstnává 40 psovodů ve službě a  v  budoucnu chce tento počet ještě zvýšit .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5s1 / střežit-001
+            :ARG0 (s5s2 / společnost
+                :name (s5x1 / #Forn
+                    :FPHR (s5w1 / Wackenhut)
+                    :FPHR (s5c1 / Czech))
+                :companion (s5r1 / ručení
+                    :mod (s5o1 / omezený
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0-of (s5z1 / zabývat-se-001
+                    :subtraction (s5s3 / školení
+                        :ARG0 (s5e1 / entity)
+                        :ARG1 (s5p1 / pes
+                            :refer-number plural)
+                        :refer-number singular)
+                    :clausal-marker (s5t1 / také)
+                    :ARG1 (s5o2 / ochrana
+                        :ARG1 (s5a2 / and
+                            :op1 (s5o3 / osoba
+                                :refer-number plural)
+                            :op2 (s5o4 / objekt
+                                :refer-number plural))
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :temporal (s5d1 / doba
+                :mod (s5s4 / současný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s5h1 / hodně
+                :comparison (s5o5 / objekt
+                    :mod (s5x2 / 30)
+                    :place (s5a3 / and
+                        :op1 (s5p2 / Praha
+                            :refer-number singular)
+                        :op2 (s5o6 / okolí
+                            :refer-number singular))
+                    :refer-number plural))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s5z2 / zaměstnávat-001
+            :ARG0 s5s2
+            :ARG1 (s5p3 / psovod
+                :mod (s5x4 / 40)
+                :refer-number plural)
+            :place (s5s5 / služba
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect habitual)
+        :op3 (s5z3 / zvýšit-001
+            :ARG0 s5s2
+            :temporal (s5b1 / budoucno
+                :refer-number singular)
+            :ARG1 (s5p4 / počet
+                :mod (s5t2 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :clausal-marker (s5j1 / ještě)
+            :aspect performance))
+
+# alignment:
+s5a1: 40-40
+s5s1: 22-22
+s5d1: 23-23,25-25
+s5s4: 24-24
+s5h1: 26-26
+s5o5: 27-27,29-29
+s5x2: 28-28
+s5a3: 32-32
+s5p2: 30-31
+s5o6: 30-30,33-33
+s5s2: 1-1,10-10
+s5x1: 0-0
+s5w1: 7-7
+s5c1: 8-8
+s5r1: 2-3
+s5o1: 5-5
+s5z1: 11-11,15-15
+s5s3: 12-13
+s5e1: 0-0
+s5p1: 14-14
+s5t1: 16-16
+s5o2: 17-17
+s5a2: 19-19
+s5o3: 18-18
+s5o4: 20-20
+s5z2: 35-35
+s5p3: 37-37
+s5x4: 36-36
+s5s5: 38-39
+s5z3: 43-43,47-47
+s5b1: 41-42
+s5p4: 45-45
+s5t2: 44-44
+s5j1: 46-46
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p2 :same-entity s2p1)
+            (s5s2 :same-entity s3f1)
+            (s5p1 :same-entity s1p1)
+            (s5p4 :same-entity s5x4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2  3      4      5       6  7        8    9  10 11 12 13
+Words: Cena za hodinu osobní ostrahy se pohybuje mezi 65 -  80 Kč .
+
+# sentence level graph:
+(s6p1 / pohybovat-se-001
+        :ARG0 (s6c1 / cena
+            :effect (s6h1 / hodina
+                :possessor (s6o1 / ostraha
+                    :mod (s6o2 / osobní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :place (s6k1 / Kč
+            :mod (s6m1 / math
+                :op1 (s6x1 / 65)
+                :op2 (s6x2 / 80)))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6p1: 6-7
+s6c1: 1-1
+s6h1: 2-3
+s6o1: 5-5
+s6o2: 4-4
+s6k1: 8-8,12-12
+s6m1: 10-10
+s6x1: 9-9
+s6x2: 11-11
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2   3     4  5  6  7  8  9  10     11
+Words: Služební pes vyjde na 15 až 24 Kč za hodinu .
+
+# sentence level graph:
+(s7v1 / vyjít-014
+        :ARG0 (s7p1 / pes
+            :mod (s7s1 / služební
+                :refer-number singular)
+            :refer-number singular)
+        :extent (s7k1 / Kč
+            :duration (s7h1 / hodina
+                :refer-number singular)
+            :mod (s7m1 / math
+                :op1 (s7x1 / 15)
+                :op2 (s7x2 / 24)))
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s7v1: 3-3
+s7p1: 2-2
+s7s1: 1-1
+s7k1: 4-4,8-8
+s7h1: 9-10
+s7m1: 6-6
+s7x1: 5-5
+s7x2: 7-7
+
+# document level annotation:
+(s7s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1   2  3   4        5       6  7        8      9          10  11     12 13 14       15 16     17 18       19            20 21         22        23     24     25 26   27 28      29    30    31        32
+Words: Pes je pro střežení objektů a  pochůzky mnohem výhodnější než člověk ,  je levnější ,  působí na psychiku kolemjdoucích a  případného pachatele snadno dohoní ,  řekl LN ředitel firmy Josef Povrazník .
+
+# sentence level graph:
+(s8r1 / říci-008
+        :ARG0 (s8p1 / Povrazník
+            :mod (s8j1 / Josef
+                :refer-number singular)
+            :mod (s8r2 / ředitel
+                :possessor (s8f1 / firma
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s8l1 / LN
+            :refer-number plural)
+        :effect (s8a1 / and
+            :op1 (s8b1 / být-007
+                :ARG0 (s8p2 / pes
+                    :refer-number singular)
+                :affectee (s8a2 / and
+                    :op1 (s8s1 / střežení
+                        :ARG0 (s8e1 / entity)
+                        :ARG1 (s8o1 / objekt
+                            :refer-number plural)
+                        :refer-number singular)
+                    :op2 (s8p3 / pochůzka
+                        :refer-number plural))
+                :ARG1 (s8v1 / výhodný
+                    :extent (s8m1 / mnohem)
+                    :comparison (s8b2 / být-007
+                        :ARG1 (s8v2 / výhodný
+                            :refer-number singular)
+                        :ARG0 (s8c1 / člověk
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect activity)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :op2 (s8b3 / být-007
+                :ARG0 s8p2
+                :ARG1 (s8l2 / levný
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :op3 (s8p4 / působit-003
+                :ARG0 s8p2
+                :ARG1 (s8p5 / psychika
+                    :mod (s8k1 / kolemjdoucí
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :op4 (s8d1 / dohonit-001
+                :ARG0 s8p2
+                :ARG1 (s8p6 / pachatel
+                    :mod (s8p7 / případný
+                        :refer-number singular)
+                    :refer-number singular)
+                :manner (s8s2 / snadno)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8r1: 26-26
+s8p1: 31-31
+s8j1: 30-30
+s8r2: 28-28
+s8f1: 29-29
+s8l1: 27-27
+s8a1: 20-20
+s8b1: 2-2
+s8a2: 6-6
+s8s1: 3-4
+s8e1: 0-0
+s8o1: 5-5
+s8p3: 3-3,7-7
+s8v1: 9-9
+s8m1: 8-8
+s8b2: 0-0
+s8v2: 0-0
+s8c1: 11-11
+s8p2: 1-1
+s8b3: 13-13
+s8l2: 14-14
+s8p4: 16-16
+s8p5: 17-18
+s8k1: 19-19
+s8d1: 24-24
+s8p6: 22-22
+s8p7: 21-21
+s8s2: 23-23
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8f1 :same-entity s5s2)
+            (s8o1 :same-entity s5o4)
+            (s8p2 :same-entity s5p1)))
+
+

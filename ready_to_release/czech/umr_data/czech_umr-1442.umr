@@ -1,0 +1,948 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2     3    4   5
+Words: Dovezené zboží musí mít atest
+
+# sentence level graph:
+(s1m1 / mít-002
+        :ARG0 (s1z1 / zboží
+            :mod (s1d1 / dovezený
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s1a1 / atest
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1m1: 3-4
+s1z1: 2-2
+s1d1: 1-1
+s1a1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1         2      3    4  5       6  7         8         9            10     11 12       13 14       15    16        17      18       19      20   21    22    23
+Words: Obohacení našeho trhu o  výrobky ze zahraničí přijímají spotřebitelé kladně ,  přestože se poslední dobou projevuje výrazná tendence kupovat spíš české zboží .
+
+# sentence level graph:
+(s2b1 / but-91
+        :ARG1 (s2p1 / přijímat-003
+            :ARG1 (s2o1 / obohacení
+                :ARG0 (s2e1 / entity)
+                :ARG1 (s2t1 / trh
+                    :possessor (s2e2 / entity
+                        :refer-number plural
+                        :refer-person 1st)
+                    :refer-number singular)
+                :effect (s2v1 / výrobek
+                    :start (s2z1 / zahraničí
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :manner (s2k1 / kladně)
+            :ARG0 (s2s1 / spotřebitel
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :ARG2 (s2p2 / projevovat-se-002
+            :temporal (s2d1 / doba
+                :mod (s2p3 / poslední
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s2t2 / tendence
+                :ARG0 (s2e3 / entity)
+                :mod (s2v2 / výrazný
+                    :refer-number singular)
+                :ARG1 (s2k2 / kupovat-001
+                    :ARG0 s2e3
+                    :ARG1 (s2z2 / zboží
+                        :clausal-marker (s2s2 / spíše)
+                        :mod (s2c1 / český
+                            :refer-number singular
+                            :refer-person 1st)
+                        :refer-number singular)
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s2b1: 12-12
+s2p1: 8-8
+s2o1: 1-1
+s2e1: 0-0
+s2t1: 3-3
+s2e2: 2-2
+s2v1: 4-5
+s2z1: 6-7
+s2k1: 10-10
+s2s1: 9-9
+s2p2: 13-13,16-16
+s2d1: 15-15
+s2p3: 14-14
+s2t2: 18-18
+s2e3: 0-0
+s2v2: 17-17
+s2k2: 19-19
+s2z2: 22-22
+s2s2: 20-20
+s2c1: 21-21
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2v1 :same-entity s1z1)
+            (s2c1 :same-entity s2e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2  3        4          5        6    7     8  9     10   11       12      13         14        15   16    17        18 19        20 21        22     23       24   25   26       27 28    29   30
+Words: Dovozci a  prodejci zahraniční produkce však stále ve velké míře porušují zákonem stanovenou povinnost toto zboží přihlásit ke schválení u  příslušné státní zkušebny před jeho uvedením do tržní sítě .
+
+# sentence level graph:
+(s3p1 / porušovat-001
+        :clausal-marker (s3v1 / však)
+        :ARG0 (s3a1 / and
+            :op1 (s3d1 / dovozce
+                :ARG1 (s3p2 / produkce
+                    :mod (s3z1 / zahraniční
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :op2 (s3p3 / prodejce
+                :ARG1 s3p2
+                :refer-number plural))
+        :duration (s3s1 / stále)
+        :extent (s3m1 / míra
+            :mod (s3v2 / velký
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3p4 / povinnost
+            :ARG0 (s3e1 / entity)
+            :mod (s3s2 / stanovený
+                :ARG0 (s3z2 / zákon
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s3p5 / přihlásit-002
+                :ARG1 (s3z3 / zboží
+                    :mod (s3t1 / tento
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 s3e1
+                :purpose (s3s3 / schválení
+                    :ARG0 (s3e2 / entity)
+                    :ARG1 s3z3
+                    :refer-number singular)
+                :place (s3z4 / zkušebna
+                    :mod (s3s4 / státní
+                        :refer-number singular)
+                    :mod (s3p6 / příslušný
+                        :refer-number singular)
+                    :refer-number singular)
+                :temporal (s3u1 / uvedení
+                    :ARG0 (s3e3 / entity)
+                    :ARG1 s3z3
+                    :goal (s3s5 / síť
+                        :mod (s3t2 / tržní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s3p1: 11-11
+s3v1: 6-6
+s3a1: 2-2
+s3d1: 1-1
+s3p2: 5-5
+s3z1: 4-4
+s3p3: 3-3
+s3s1: 7-7
+s3m1: 8-8,10-10
+s3v2: 9-9
+s3p4: 14-14
+s3e1: 0-0
+s3s2: 13-13
+s3z2: 12-12
+s3p5: 17-17
+s3z3: 16-16,25-25
+s3t1: 15-15
+s3s3: 18-19
+s3e2: 0-0
+s3z4: 20-20,23-23
+s3s4: 22-22
+s3p6: 21-21
+s3u1: 24-24,26-26
+s3e3: 0-0
+s3s5: 27-27,29-29
+s3t2: 28-28
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p2 :same-entity s2v1)
+            (s3z3 :same-entity s3p2)
+            (s3s5 :same-entity s2t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2   3  4      5          6       7     8      9       10
+Words: Stejně tak se mnohdy neobtěžují vybavit zboží českým návodem .
+
+# sentence level graph:
+(s4o1 / obtěžovat-se-001
+        :clausal-marker (s4s1 / stejně)
+        :clausal-marker (s4t1 / tak)
+        :ARG0 (s4e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :frequency (s4m1 / mnohdy)
+        :ARG1 (s4v1 / vybavit-001
+            :ARG1 (s4z1 / zboží
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG0 s4e1
+            :effect (s4n1 / návod
+                :mod (s4c1 / český
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s4o1: 3-3,5-5
+s4s1: 1-1
+s4t1: 2-2
+s4e1: 0-0
+s4m1: 4-4
+s4v1: 6-6
+s4z1: 7-7
+s4n1: 9-9
+s4c1: 8-8
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3a1)
+            (s4z1 :same-entity s3z3)
+            (s4c1 :same-entity s2c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1         2   3        4  5        6        7  8   9     10      11 12      13           14      15     16       17         18    19       20       21 22 23 24 25    26      27       28     29 30      31     32
+Words: Například při kontrole 81 obchodní jednotky a  760 druhů výrobků z  oblasti elektrického ručního nářadí zjistili inspektoři České obchodní inspekce ,  že u  93 druhů chyběly překlady návodů do českého jazyka .
+
+# sentence level graph:
+(s5z1 / zjistit-002
+        :clausal-marker (s5n1 / například)
+        :temporal (s5k1 / kontrola
+            :ARG1 (s5a1 / and
+                :op1 (s5j1 / jednotka
+                    :mod (s5o1 / obchodní
+                        :refer-number singular)
+                    :mod (s5x1 / 81)
+                    :refer-number singular)
+                :op2 (s5d1 / druh
+                    :possessor (s5v1 / výrobek
+                        :start (s5o2 / oblast
+                            :possessor (s5n2 / nářadí
+                                :mod (s5r1 / ruční
+                                    :refer-number singular)
+                                :mod (s5e1 / elektrický
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :mod (s5x2 / 760)
+                    :refer-number plural))
+            :refer-number singular)
+        :ARG0 (s5i1 / inspektor
+            :possessor (s5i2 / inspekce
+                :mod (s5o3 / obchodní
+                    :refer-number singular)
+                :mod (s5c1 / Český
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural)
+        :ARG1 (s5c2 / chybět-003
+            :place (s5d2 / druh
+                :mod (s5x3 / 93)
+                :refer-number plural)
+            :ARG0 (s5p1 / překlad
+                :effect (s5j2 / jazyk
+                    :mod (s5c3 / český
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s5n3 / návod
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect activity)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s5z1: 16-16
+s5n1: 1-1
+s5k1: 2-3
+s5a1: 7-7
+s5j1: 6-6
+s5o1: 5-5
+s5x1: 4-4
+s5d1: 9-9
+s5v1: 10-10
+s5o2: 11-12
+s5n2: 15-15
+s5r1: 14-14
+s5e1: 13-13
+s5x2: 8-8
+s5i1: 17-17
+s5i2: 20-20
+s5o3: 19-19
+s5c1: 18-18
+s5c2: 22-22,26-26
+s5d2: 23-23,25-25
+s5x3: 24-24
+s5p1: 27-27
+s5j2: 29-29,31-31
+s5c3: 30-30
+s5n3: 28-28
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5p1 :same-entity s4n1)
+            (s5c3 :same-entity s4c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2          3  4       5      6   7            8       9
+Words: Tento nedostatek je typický zvlášť pro individuální dovozce .
+
+# sentence level graph:
+(s6b1 / být-007
+        :ARG0 (s6n1 / nedostatek
+            :mod (s6t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s6t2 / typický
+            :affectee (s6d1 / dovozce
+                :clausal-marker (s6z1 / zvlášť)
+                :mod (s6i1 / individuální
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 3-3
+s6n1: 2-2
+s6t1: 1-1
+s6t2: 4-4
+s6d1: 6-6,8-8
+s6z1: 5-5
+s6i1: 7-7
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6n1 :same-event s5c2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2     3  4     5    6            7          8  9      10 11    12    13 14      15     16       17    18       19
+Words: Značkové firmy ,  které mají autorizované zastoupení a  prodej na našem území ,  českými návody dovážené zboží vybavují .
+
+# sentence level graph:
+(s7v1 / vybavovat-001
+        :ARG0 (s7f1 / firma
+            :mod (s7z1 / značkový
+                :refer-number plural)
+            :ARG0-of (s7m1 / mít-002
+                :ARG1 (s7a1 / and
+                    :op1 (s7z2 / zastoupení
+                        :possessor (s7e1 / entity)
+                        :mod (s7a2 / autorizovaný
+                            :refer-number singular)
+                        :place (s7u1 / území
+                            :possessor (s7e2 / entity
+                                :refer-number plural
+                                :refer-person 1st)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :op2 (s7p1 / prodej
+                        :place s7u1
+                        :refer-number singular))
+                :refer-number plural
+                :refer-person 3rd
+                :aspect state)
+            :refer-number plural)
+        :ARG1 (s7z3 / zboží
+            :mod (s7d1 / dovážený
+                :refer-number singular)
+            :refer-number singular)
+        :instrument (s7n1 / návod
+            :mod (s7c1 / český
+                :refer-number plural
+                :refer-person 1st)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7v1: 18-18
+s7f1: 2-2,4-4
+s7z1: 1-1
+s7m1: 5-5
+s7a1: 8-8
+s7z2: 7-7
+s7e1: 0-0
+s7a2: 6-6
+s7u1: 10-10,12-12
+s7e2: 11-11
+s7p1: 9-9
+s7z3: 17-17
+s7d1: 16-16
+s7n1: 15-15
+s7c1: 14-14
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7e2 :same-entity s5c3)
+            (s7z3 :same-entity s4z1)
+            (s7n1 :same-entity s5p1)
+            (s7c1 :same-entity s7e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1         2         3       4  5         6  7      8        9         10 11      12 13    14           15 16    17           18     19
+Words: Povinnost přihlásit výrobky ke schválení u  státní zkušebny nesplnilo 22 dovozců ,  kteří nepřihlásili 79 druhů elektrického nářadí .
+
+# sentence level graph:
+(s8s1 / splnit-001
+        :ARG1 (s8p1 / povinnost
+            :ARG1 (s8p2 / přihlásit-002
+                :place (s8z1 / zkušebna
+                    :mod (s8s2 / státní
+                        :refer-number singular)
+                    :refer-number singular)
+                :purpose (s8s3 / schválení
+                    :ARG0 (s8e1 / entity)
+                    :ARG1 s8v1
+                    :refer-number singular)
+                :ARG1 (s8v1 / výrobek
+                    :refer-number plural)
+                :ARG0 s8e2
+                :aspect performance)
+            :ARG0 (s8e2 / entity)
+            :refer-number singular)
+        :ARG0 (s8d1 / dovozce
+            :mod (s8x3 / 22)
+            :ARG0-of (s8p3 / přihlásit-002
+                :place (s8e3 / entity)
+                :ARG1 (s8d2 / druh
+                    :mod (s8n1 / nářadí
+                        :mod (s8e4 / elektrický
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s8x4 / 79)
+                    :refer-number plural)
+                :refer-number plural
+                :aspect performance
+                :polarity -)
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s8s1: 9-9
+s8p1: 1-1
+s8p2: 2-2
+s8z1: 6-6,8-8
+s8s2: 7-7
+s8s3: 4-5
+s8e1: 0-0
+s8v1: 3-3
+s8e2: 0-0
+s8d1: 11-11,13-13
+s8x3: 10-10
+s8p3: 14-14
+s8e3: 0-0
+s8d2: 16-16
+s8n1: 18-18
+s8e4: 17-17
+s8x4: 15-15
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8p1 :same-entity s3p4)
+            (s8z1 :same-entity s3z4)
+            (s8s3 :same-entity s3s3)
+            (s8v1 :same-entity s7z3)
+            (s8n1 :same-entity s5n2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2          3      4  5       6    7   8      9     10 11    12        13       14      15 16    17   18 19     20       21    22      23      24 25       26      27
+Words: Na elektrické nářadí v  hodnotě více než milion korun ,  které nesplnilo podmínky uvedení do tržní sítě ,  vydala inspekce zákaz dalšího prodeje do zjednání nápravy .
+
+# sentence level graph:
+(s9v1 / vydat-011
+        :regard (s9n1 / nářadí
+            :mod (s9e1 / elektrický
+                :refer-number singular)
+            :mod (s9h1 / hodnota
+                :mod (s9h2 / hodně
+                    :comparison (s9m1 / milión
+                        :mod (s9k1 / koruna
+                            :refer-number plural)
+                        :refer-number singular))
+                :refer-number singular)
+            :ARG0-of (s9s1 / splnit-001
+                :ARG1 (s9p1 / podmínka
+                    :ARG1 (s9u1 / uvedení
+                        :goal (s9s2 / síť
+                            :mod (s9t1 / tržní
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG0 (s9e2 / entity)
+                        :ARG1 s9n1
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular
+                :aspect performance
+                :polarity -)
+            :refer-number singular)
+        :ARG0 (s9i1 / inspekce
+            :refer-number singular)
+        :ARG2 (s9e3 / entity)
+        :predicative-noun (s9z1 / zákaz
+            :ARG0 s9i1
+            :ARG2 s9e3
+            :ARG1 (s9p2 / prodej
+                :ARG0 s9e3
+                :mod (s9d1 / další
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s9z2 / zjednání
+                :ARG0 (s9e4 / entity)
+                :ARG1 (s9n2 / náprava
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s9v1: 19-19
+s9n1: 1-1,3-3,11-11
+s9e1: 2-2
+s9h1: 4-5
+s9h2: 6-6
+s9m1: 7-8
+s9k1: 9-9
+s9s1: 12-12
+s9p1: 13-13
+s9u1: 14-14
+s9s2: 15-15,17-17
+s9t1: 16-16
+s9e2: 0-0
+s9i1: 20-20
+s9e3: 0-0
+s9z1: 21-21
+s9p2: 23-23
+s9d1: 22-22
+s9z2: 24-25
+s9e4: 0-0
+s9n2: 26-26
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9s2 :same-entity s3s5)
+            (s9i1 :same-entity s5i2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1           2          3     4  5           6          7    8  9      10      11         12
+Words: Schvalování dovezeného zboží v  příslušných zkušebnách není v  žádném případě samoúčelné .
+
+# sentence level graph:
+(s10b1 / být-007
+        :clausal-marker (s10v1 / v_případě
+            :mod (s10z1 / žádný
+                :refer-number singular
+                :polarity -)
+            :refer-number singular)
+        :ARG0 (s10s1 / schvalování
+            :ARG1 (s10z2 / zboží
+                :mod (s10d1 / dovezený
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG0 (s10e1 / entity)
+            :place (s10z3 / zkušebna
+                :mod (s10p1 / příslušný
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG1 (s10s2 / samoúčelný
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s10b1: 7-7
+s10v1: 8-8,10-10
+s10z1: 9-9
+s10s1: 1-1
+s10z2: 3-3
+s10d1: 2-2
+s10e1: 0-0
+s10z3: 4-4,6-6
+s10p1: 5-5
+s10s2: 11-11
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10s1 :same-entity s8s3)
+            (s10z2 :same-entity s8v1)
+            (s10z3 :same-entity s8z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1     2         3        4  5       6  7      8    9  10     11 12 13 14 15 16      17 18   19
+Words: Mnoho zákazníků naletělo na reklamu ,  líbivý obal a  mnohdy i  na to ,  že výrobek je cizí .
+
+# sentence level graph:
+(s11a1 / and
+        :op1 (s11n1 / naletět-001
+            :ARG0 (s11z1 / zákazník
+                :mod (s11m1 / mnoho)
+                :refer-number plural)
+            :instrument (s11a2 / and
+                :op1 (s11r1 / reklama
+                    :refer-number singular)
+                :op2 (s11o1 / obal
+                    :mod (s11l1 / líbivý
+                        :refer-number singular)
+                    :refer-number singular))
+            :refer-number singular
+            :aspect performance)
+        :op2 (s11n2 / naletět-001
+            :ARG0 s11z1
+            :frequency (s11m2 / mnohdy)
+            :clausal-marker (s11i1 / i)
+            :instrument (s11b1 / být-007
+                :ARG0 (s11v1 / výrobek
+                    :refer-number singular)
+                :ARG1 (s11c1 / cizí
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s11a1: 9-9
+s11n1: 3-3
+s11a2: 6-6
+s11r1: 4-5
+s11o1: 4-4,8-8
+s11l1: 7-7
+s11z1: 2-2
+s11m1: 1-1
+s11n2: 0-0
+s11m2: 10-10
+s11i1: 11-11
+s11b1: 12-13,15-15,17-17
+s11v1: 16-16
+s11c1: 18-18
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11v1 :same-entity s10z2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1  2    3     4         5  6  7    8   9     10       11 12           13     14 15    16        17
+Words: To však vůbec neznamená ,  že musí být velmi kvalitní ,  neohrožující zdraví a  život uživatele .
+
+# sentence level graph:
+(s12z1 / znamenat-001
+        :clausal-marker (s12v1 / však)
+        :ARG0 (s12t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :extent (s12v2 / vůbec)
+        :ARG1 (s12b1 / být-007
+            :ARG0 (s12e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG1 (s12a1 / and
+                :op1 (s12k1 / kvalitní
+                    :extent (s12v3 / velmi)
+                    :refer-number singular)
+                :op2 (s12o1 / ohrožující
+                    :ARG1 (s12a2 / and
+                        :op1 (s12z2 / zdraví
+                            :possessor (s12u1 / uživatel
+                                :refer-number singular)
+                            :refer-number singular)
+                        :op2 (s12z3 / život
+                            :possessor s12u1
+                            :refer-number singular))
+                    :refer-number singular
+                    :polarity -))
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state
+        :polarity -)
+
+# alignment:
+s12z1: 4-4
+s12v1: 2-2
+s12t1: 1-1
+s12v2: 3-3
+s12b1: 6-8
+s12e1: 0-0
+s12a1: 11-11
+s12k1: 10-10
+s12v3: 9-9
+s12o1: 12-12
+s12a2: 14-14
+s12z2: 13-13
+s12u1: 16-16
+s12z3: 15-15
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12t1 :same-event s11b1)
+            (s12e1 :same-entity s11v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1     2    3      4  5        6     7         8        9
+Words: Proto jsou atesty ze zkušeben velmi důležitým dokladem .
+
+# sentence level graph:
+(s13b1 / být-007
+        :clausal-marker (s13p1 / proto)
+        :ARG0 (s13a1 / atest
+            :start (s13z1 / zkušebna
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s13d1 / doklad
+            :mod (s13d2 / důležitý
+                :extent (s13v1 / velmi)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s13b1: 2-2
+s13p1: 1-1
+s13a1: 3-3
+s13z1: 4-5
+s13d1: 8-8
+s13d2: 7-7
+s13v1: 6-6
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13a1 :same-entity s1a1)
+            (s13z1 :same-entity s10z3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1     2  3    4        5      6     7  8      9  10   11  12      13 14 15       16 17 18      19        20 21   22 23        24    25      26 27         28
+Words: Pokud si chce zákazník koupit zboží z  dovozu a  chce mít jistotu ,  že zkušebna je k  prodeji schválila ,  může si příslušný atest vyžádat k  nahlédnutí .
+
+# sentence level graph:
+(s14v1 / vyžádat-si-001
+        :condition (s14a1 / and
+            :op1 (s14k1 / koupit-001
+                :ARG0 (s14z1 / zákazník
+                    :refer-number singular)
+                :ARG1 (s14z2 / zboží
+                    :start (s14d1 / dovoz
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG2 s14z1
+                :aspect performance)
+            :op2 (s14m1 / mít-008
+                :ARG0 s14z1
+                :ARG1 (s14j1 / jistota
+                    :mod (s14s1 / schválit-002
+                        :ARG0 (s14z3 / zkušebna
+                            :refer-number singular)
+                        :purpose (s14p1 / prodej
+                            :refer-number singular)
+                        :ARG1 s14z2
+                        :aspect performance)
+                    :refer-number singular)
+                :aspect state))
+        :ARG1 (s14a2 / atest
+            :mod (s14p2 / příslušný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 s14z1
+        :purpose (s14n1 / nahlédnutí
+            :ARG0 s14z1
+            :goal (s14e1 / entity)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s14v1: 21-22,25-25
+s14a1: 9-9
+s14k1: 1-1,3-3,5-5
+s14z2: 6-6,16-16
+s14d1: 7-8
+s14z1: 2-2,4-4
+s14m1: 1-1,10-11
+s14j1: 12-12
+s14s1: 14-14,19-19
+s14z3: 15-15
+s14p1: 17-18
+s14a2: 24-24
+s14p2: 23-23
+s14n1: 26-27
+s14e1: 0-0
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14z2 :same-entity s12e1)
+            (s14z3 :same-entity s13z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1        2  3   4       5  6       7  8  9  10      11 12    13 14    15   16 17    18      19          20     21   22    23
+Words: Prodejce je pak povinen mu vyhovět ,  a  to zejména u  zboží ,  jehož vady by mohly ohrozit zákazníkovo zdraví nebo život .
+
+# sentence level graph:
+(s15b1 / být-007
+        :clausal-marker (s15p1 / pak)
+        :ARG0 (s15p2 / prodejce
+            :refer-number singular)
+        :ARG1 (s15p3 / povinný
+            :ARG1 (s15i1 / identity-91
+                :ARG1 (s15v1 / vyhovět-001
+                    :ARG0 s15p2
+                    :ARG1 (s15e1 / entity
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :aspect performance)
+                :ARG2 (s15v2 / vyhovět-001
+                    :ARG0 s15p2
+                    :ARG1 s15e1
+                    :regard (s15z1 / zboží
+                        :clausal-marker (s15z2 / zejména)
+                        :mod (s15o1 / ohrozit-001
+                            :ARG0 (s15v3 / vada
+                                :possessor s15z1
+                                :refer-number plural)
+                            :ARG1 (s15o2 / or
+                                :op1 (s15z3 / zdraví
+                                    :possessor (s15z4 / zákazník
+                                        :refer-number singular
+                                        :refer-person 3rd)
+                                    :refer-number singular)
+                                :op2 (s15z5 / život
+                                    :possessor s15z4
+                                    :refer-number singular))
+                            :aspect performance)
+                        :refer-number singular)
+                    :aspect performance))
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s15b1: 2-2
+s15p1: 3-3
+s15p2: 1-1
+s15p3: 4-4
+s15i1: 8-9
+s15v1: 6-6
+s15e1: 5-5
+s15v2: 0-0
+s15z1: 11-12,14-14
+s15z2: 10-10
+s15o1: 16-18
+s15v3: 15-15
+s15o2: 21-21
+s15z3: 20-20
+s15z4: 19-19
+s15z5: 22-22
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15e1 :same-entity s14z1)
+            (s15z3 :same-entity s12z2)
+            (s15z4 :same-entity s15e1)
+            (s15z5 :same-entity s12z3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1 2  3
+Words: ( dr )
+
+# sentence level graph:
+(s16d1 / dr)
+
+# alignment:
+s16d1: 2-2
+
+# document level annotation:
+(s16s0 / sentence)
+
+

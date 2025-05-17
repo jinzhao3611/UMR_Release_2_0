@@ -1,0 +1,914 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1 2         3      4 5
+Words: V pražských halách o Barcelonu
+
+# sentence level graph:
+(s1e1 / event
+        :place (s1h1 / hala
+            :mod (s1p1 / pražský
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s1b1 / Barcelona
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1h1: 1-1,3-3
+s1p1: 2-2
+s1b1: 4-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2     3      4           5     6
+Words: Poslední šancí atletů mistrovství České republiky
+
+# sentence level graph:
+(s2e1 / event
+        :ARG1 (s2s1 / šance
+            :possessor (s2a1 / atlet
+                :refer-number plural)
+            :mod (s2p1 / poslední
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s2m1 / mistrovství
+            :possessor (s2r1 / republika
+                :mod (s2c1 / český
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s2e1: 0-0
+s2s1: 2-2
+s2a1: 3-3
+s2p1: 1-1
+s2m1: 4-4
+s2r1: 6-6
+s2c1: 5-5
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s3p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s3p1: 1-1
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s1p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2     3  4   5  6            7  8      9  10     11 12        13 14 15 16 17 18 19 20 21 22 23    24  25    26        27 28      29          30
+Words: Poslední šanci ,  jak se kvalifikovat na halové MS atletů v  Barceloně (  10 .  -  12 .  3  .  )  ,  budou mít čeští závodníci na domácím mistrovství .
+
+# sentence level graph:
+(s4m1 / mít-043
+        :predicative-noun (s4s1 / šance
+            :ARG0 s4z1
+            :mod (s4p1 / poslední
+                :refer-number singular)
+            :ARG1 (s4k1 / kvalifikovat-se-002
+                :manner (s4j1 / jak)
+                :ARG0 s4z1
+                :goal (s4m2 / MS
+                    :possessor (s4a1 / atlet
+                        :refer-number plural)
+                    :mod (s4h1 / halový
+                        :refer-number singular)
+                    :place (s4b1 / Barcelona
+                        :refer-number singular)
+                    :parenthesis (s4x3 / 3
+                        :mod (s4m3 / math
+                            :op1 (s4x4 / 10)
+                            :op2 (s4x5 / 12)))
+                    :refer-number singular)
+                :aspect process)
+            :refer-number singular)
+        :ARG0 (s4z1 / závodník
+            :mod (s4c1 / český
+                :refer-number plural)
+            :refer-number plural)
+        :place (s4m4 / mistrovství
+            :mod (s4d1 / domácí
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s4m1: 23-24
+s4s1: 2-2
+s4p1: 1-1
+s4k1: 5-6
+s4j1: 4-4
+s4m2: 7-7,9-9
+s4a1: 10-10
+s4h1: 8-8
+s4b1: 11-12
+s4x3: 19-19
+s4m3: 16-16
+s4x4: 14-14
+s4x5: 17-17
+s4z1: 26-26
+s4c1: 25-25
+s4m4: 27-27,29-29
+s4d1: 28-28
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4s1 :same-entity s2s1)
+            (s4m2 :same-entity s1b1)
+            (s4z1 :same-entity s2a1)
+            (s4c1 :same-entity s2r1)
+            (s4m4 :same-entity s2m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2    3  4     5         6     7  8     9  10      11 12   13 14     15        16 17 18     19        20 21   22           23     24 25       26 27 28        29
+Words: Po roce se český šampionát vrací do Prahy a  závodit se bude v  sobotu odpoledne a  v  neděli dopoledne ve dvou přetlakových halách na Strahově a  ve Stromovce .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5v1 / vracet-se-003
+            :temporal (s5r1 / rok
+                :refer-number singular)
+            :ARG0 (s5s1 / šampionát
+                :mod (s5c1 / český
+                    :refer-number singular)
+                :refer-number singular)
+            :goal (s5p1 / Praha
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s5z1 / závodit-001
+            :ARG0 (s5e1 / entity)
+            :temporal (s5a2 / and
+                :op1 (s5s2 / sobota
+                    :temporal (s5o1 / odpoledne)
+                    :refer-number singular)
+                :op2 (s5n1 / neděle
+                    :temporal (s5d1 / dopoledne)
+                    :refer-number singular))
+            :place (s5h1 / hala
+                :mod (s5p2 / přetlakový
+                    :refer-number plural)
+                :mod (s5d2 / dva
+                    :refer-number plural)
+                :place (s5a3 / and
+                    :op1 (s5s3 / Strahov
+                        :refer-number singular)
+                    :op2 (s5s4 / stromovka
+                        :refer-number singular))
+                :refer-number plural)
+            :aspect activity))
+
+# alignment:
+s5a1: 9-9
+s5v1: 3-3,6-6
+s5r1: 1-2
+s5s1: 5-5
+s5c1: 4-4
+s5p1: 7-8
+s5z1: 10-12
+s5e1: 0-0
+s5a2: 16-16
+s5s2: 13-14
+s5o1: 15-15
+s5n1: 17-18
+s5d1: 19-19
+s5h1: 20-20,23-23
+s5p2: 22-22
+s5d2: 21-21
+s5a3: 26-26
+s5s3: 24-25
+s5s4: 27-28
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s1 :same-entity s4m4)
+            (s5c1 :same-entity s4c1)
+            (s5p1 :same-entity s3p1)
+            (s5h1 :same-entity s1h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2  3  4    5   6    7      8    9  10             11 12  13    14       15 16 17  18       19 20   21    22   23
+Words: Sice se o  nich již léta hovoří jako o  nevyhovujících ,  ale lepší zařízení v  ČR pro atletiku v  zimě zatím není .
+
+# sentence level graph:
+(s6b1 / but-91
+        :clausal-marker (s6s1 / sice)
+        :ARG1 (s6h1 / hovořit-005
+            :ARG0 (s6e1 / entity)
+            :ARG1 (s6e2 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :clausal-marker (s6j1 / již)
+            :duration (s6r1 / rok
+                :refer-number plural)
+            :manner (s6v1 / vyhovující
+                :mod-of s6e2
+                :refer-number plural
+                :polarity -)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :ARG2 (s6b2 / být-011
+            :ARG0 (s6z1 / zařízení
+                :purpose (s6a1 / atletika
+                    :place (s6z2 / zima
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s6d1 / dobrý
+                    :refer-number singular)
+                :place (s6c1 / ČR
+                    :refer-number singular)
+                :refer-number singular)
+            :temporal (s6z3 / zatím)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity
+            :polarity -))
+
+# alignment:
+s6b1: 12-12
+s6s1: 1-1
+s6h1: 2-2,7-7
+s6e1: 0-0
+s6e2: 3-4
+s6j1: 5-5
+s6r1: 6-6
+s6v1: 8-10
+s6b2: 22-22
+s6z1: 14-14
+s6a1: 17-18
+s6z2: 19-20
+s6d1: 13-13
+s6c1: 15-16
+s6z3: 21-21
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e2 :same-entity s5h1)
+            (s6c1 :same-entity s5c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2      3    4  5       6    7  8   9       10     11 12   13 14      15 16        17   18   19     20 21        22 23   24 25        26    27 28     29      30 31 32  33    34         35 36       37 38         39        40 41       42    43 44
+Words: Na startu bude o  víkendu stát na 350 českých atletů k  nimž se připojí ze zahraničí sedm mužů vesměs ze Slovenska (  např .  překážkář Kováč a  výškař Ruffíni )  a  dvě Rusky startující za Jablonec (  čtvrtkařka Znamenská a  výškařka Janků )  .
+
+# sentence level graph:
+(s7s1 / stát-015
+        :place (s7s2 / start
+            :refer-number singular)
+        :temporal (s7v1 / víkend
+            :refer-number singular)
+        :ARG0 (s7a1 / atlet
+            :mod (s7c1 / český
+                :refer-number plural)
+            :mod (s7x1 / 350)
+            :goal-of (s7p1 / připojit-se-002
+                :start (s7z1 / zahraničí
+                    :refer-number singular)
+                :ARG0 (s7a2 / and
+                    :op1 (s7i1 / identity-91
+                        :ARG1 (s7m1 / muž
+                            :mod (s7s3 / sedm
+                                :refer-number singular)
+                            :start (s7s4 / Slovensko
+                                :extent (s7v2 / vesměs)
+                                :refer-number singular)
+                            :refer-number plural)
+                        :clausal-marker (s7n1 / například)
+                        :ARG2 (s7a3 / and
+                            :op1 (s7k1 / Kováč
+                                :mod (s7p2 / překážkář
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :op2 (s7r1 / Ruffíni
+                                :mod (s7v3 / výškař
+                                    :refer-number singular)
+                                :refer-number singular)))
+                    :op2 (s7i2 / identity-91
+                        :ARG1 (s7r2 / Ruska
+                            :mod (s7d1 / dva
+                                :refer-number plural)
+                            :mod (s7s5 / startující
+                                :substitute (s7j1 / Jablonec
+                                    :refer-number singular)
+                                :refer-number plural)
+                            :refer-number plural)
+                        :ARG2 (s7a4 / and
+                            :op1 (s7z2 / Znamenský
+                                :mod (s7c2 / čtvrtkařka
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :op2 (s7j2 / Janků
+                                :mod (s7v4 / výškařka
+                                    :refer-number singular)))))
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number plural)
+        :aspect activity)
+
+# alignment:
+s7s1: 3-3,6-6
+s7s2: 1-2
+s7v1: 4-5
+s7a1: 7-7,10-12
+s7c1: 9-9
+s7x1: 8-8
+s7p1: 13-14
+s7z1: 15-16
+s7a2: 31-31
+s7i1: 22-22
+s7m1: 18-18
+s7s3: 17-17
+s7s4: 20-21
+s7v2: 19-19
+s7n1: 23-23
+s7a3: 27-27
+s7k1: 26-26
+s7p2: 25-25
+s7r1: 29-29
+s7v3: 28-28
+s7i2: 37-37
+s7r2: 33-33
+s7d1: 32-32
+s7s5: 34-34
+s7j1: 35-36
+s7a4: 40-40
+s7z2: 39-39
+s7c2: 38-38
+s7j2: 42-42
+s7v4: 41-41
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7a1 :same-entity s4z1)
+            (s7c1 :same-entity s6c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2       3     4       5  6     7  8      9       10 11      12 13   14 15 16        17   18     19     20
+Words: Kromě půlkaře Pavla Soukupa ,  který se pokusí vyléčit si zranění na noze ,  se představí celá domácí špička .
+
+# sentence level graph:
+(s8p1 / představit-se-001
+        :subtraction (s8s1 / Soukup
+            :mod (s8p2 / Pavel
+                :refer-number singular)
+            :mod (s8p3 / půlkař
+                :refer-number singular)
+            :ARG0-of (s8p4 / pokusit-se-001
+                :ARG1 (s8v1 / vyléčit-001
+                    :ARG0 s8s1
+                    :affectee s8s1
+                    :ARG1 (s8z1 / zranění
+                        :place (s8n1 / noha
+                            :refer-number singular)
+                        :refer-number singular)
+                    :aspect performance)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number singular)
+        :ARG1 (s8e1 / entity)
+        :ARG0 (s8s2 / špička
+            :mod (s8d1 / domácí
+                :refer-number singular)
+            :mod (s8c1 / celý
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s8p1: 15-16
+s8s1: 1-1,4-4,6-6,10-10
+s8p2: 3-3
+s8p3: 2-2
+s8p4: 7-8
+s8v1: 9-9
+s8z1: 11-11
+s8n1: 12-13
+s8e1: 0-0
+s8s2: 19-19
+s8d1: 18-18
+s8c1: 17-17
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8d1 :same-entity s7c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1      2       3           4     5  6   7  8   9     10 11        12      13   14        15 16          17      18  19
+Words: Limity Českého atletického svazu (  ČAS )  pro start v  Barceloně splnilo šest závodníků a  čtvrtkařská štafeta žen .
+
+# sentence level graph:
+(s9s1 / splnit-001
+        :ARG1 (s9l1 / limit
+            :purpose (s9s2 / start
+                :place (s9b1 / Barcelona
+                    :refer-number singular)
+                :refer-number singular)
+            :possessor (s9i1 / identity-91
+                :ARG1 (s9s3 / svaz
+                    :mod (s9a1 / atletický
+                        :refer-number singular)
+                    :mod (s9c1 / český
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG2 (s9c2 / ČAS))
+            :refer-number plural)
+        :ARG0 (s9a2 / and
+            :op1 (s9z1 / závodník
+                :mod (s9s4 / šest
+                    :refer-number singular)
+                :refer-number plural)
+            :op2 (s9s5 / štafeta
+                :mod (s9c3 / čtvrtkařský
+                    :refer-number singular)
+                :possessor (s9z2 / žena
+                    :refer-number plural)
+                :refer-number singular))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s9s1: 12-12
+s9l1: 1-1
+s9s2: 8-9
+s9b1: 10-11
+s9i1: 5-5
+s9s3: 4-4
+s9a1: 3-3
+s9c1: 2-2
+s9c2: 6-6
+s9a2: 15-15
+s9z1: 14-14
+s9s4: 13-13
+s9s5: 17-17
+s9c3: 16-16
+s9z2: 18-18
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9b1 :same-entity s4b1)
+            (s9c1 :same-entity s8d1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1    2  3     4       5      6       7  8     9  10 11 12   13 14 15 16         17 18       19 20 21          22 23  24 25 26 27        28 29  30 31 32
+Words: Jsou to kromě Soukupa dálkař Gombala ,  Hudec (  60 m  přek .  )  ,  Kašpárková (  trojskok )  ,  Koštovalová (  400 m  )  a  Formanová (  800 m  )  .
+
+# sentence level graph:
+(s10b1 / být-007
+        :ARG0 (s10t1 / ten
+            :refer-number singular)
+        :subtraction (s10s1 / Soukup
+            :refer-number singular)
+        :ARG1 (s10a1 / and
+            :op1 (s10g1 / Gombala
+                :mod (s10d1 / dálkař
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s10h1 / Hudec
+                :parenthesis (s10m1 / metr
+                    :mod (s10p1 / přek
+                        :refer-number plural)
+                    :mod (s10x1 / 60))
+                :refer-number singular)
+            :op3 (s10k1 / Kašpárková
+                :parenthesis (s10t2 / trojskok
+                    :refer-number singular)
+                :refer-number singular)
+            :op4 (s10k2 / Koštovalová
+                :parenthesis (s10m2 / metr
+                    :mod (s10x2 / 400))
+                :refer-number singular)
+            :op5 (s10f1 / Formanová
+                :parenthesis (s10m3 / metr
+                    :mod (s10x3 / 800))
+                :refer-number singular))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s10b1: 1-1
+s10t1: 2-2
+s10s1: 3-4
+s10a1: 26-26
+s10g1: 6-6
+s10d1: 5-5
+s10h1: 8-8
+s10m1: 11-11
+s10p1: 12-12
+s10x1: 10-10
+s10k1: 16-16
+s10t2: 18-18
+s10k2: 21-21
+s10m2: 24-24
+s10x2: 23-23
+s10f1: 27-27
+s10m3: 30-30
+s10x3: 29-29
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10t1 :same-entity s9a2)
+            (s10s1 :same-entity s8s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1           2       3       4  5     6            7
+Words: Sedmibojaře Dvořáka pozvali na start organizátoři .
+
+# sentence level graph:
+(s11p1 / pozvat-001
+        :ARG1 (s11d1 / Dvořák
+            :mod (s11s1 / sedmibojař
+                :refer-number singular)
+            :refer-number singular)
+        :goal (s11s2 / start
+            :refer-number singular)
+        :ARG0 (s11o1 / organizátor
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s11p1: 3-3
+s11d1: 2-2
+s11s1: 1-1
+s11s2: 4-5
+s11o1: 6-6
+
+# document level annotation:
+(s11s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1      2         3        4  5         6  7          8     9           10        11       12   13
+Words: Dalším hlediskem nominace do Španělska je účastnický limit Mezinárodní atletické federace IAAF .
+
+# sentence level graph:
+(s12b1 / být-007
+        :ARG1 (s12h1 / hledisko
+            :possessor (s12n1 / nominace
+                :goal (s12s1 / Španělsko
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s12d1 / další
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s12l1 / limit
+            :mod (s12u1 / účastnický
+                :refer-number singular)
+            :possessor (s12f1 / federace
+                :mod (s12a1 / atletický
+                    :refer-number singular)
+                :mod (s12m1 / Mezinárodní
+                    :refer-number singular)
+                :name (s12i1 / IAAF)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s12b1: 6-6
+s12h1: 2-2
+s12n1: 3-3
+s12s1: 4-5
+s12d1: 1-1
+s12l1: 8-8
+s12u1: 7-7
+s12f1: 11-11
+s12a1: 10-10
+s12m1: 9-9
+s12i1: 12-12
+
+# document level annotation:
+(s12s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s13-root
+# :: snt13
+Index: 1   2    3        4  5   6  7  8  9         10 11          12 13  14 15 16 17 18        19 20    21 22 23     24 25 26 27   28 29 30 31    32 33 34 35 36 37        38 39  40 41 42
+Words: Ten mají Benešová (  200 m  )  ,  Klapáčová a  Obdržálková (  obě 50 m  )  ,  Makowková (  výška )  ,  Rudová (  60 m  přek .  )  ,  Valík (  60 m  )  a  Šuldesová (  800 m  )  .
+
+# sentence level graph:
+(s13m1 / mít-009
+        :ARG1 (s13t1 / ten
+            :refer-number singular)
+        :ARG0 (s13a1 / and
+            :op1 (s13b1 / Benešová
+                :parenthesis (s13m2 / metr
+                    :mod (s13x1 / 200))
+                :refer-number singular)
+            :op2 (s13a2 / and
+                :op1 (s13k1 / Klapáčová
+                    :parenthesis (s13e1 / event
+                        :ARG0 (s13o1 / oba
+                            :refer-number plural)
+                        :ARG1 (s13m3 / metr
+                            :mod (s13x2 / 50))
+                        :aspect state)
+                    :refer-number singular)
+                :op2 (s13o2 / Obdržálková
+                    :parenthesis s13e1
+                    :refer-number singular))
+            :op3 (s13m4 / Makowková
+                :parenthesis (s13v1 / výška
+                    :refer-number singular)
+                :refer-number singular)
+            :op4 (s13r1 / Rudová
+                :parenthesis (s13m5 / metr
+                    :mod (s13x4 / 60)
+                    :mod (s13p1 / přek
+                        :refer-number plural))
+                :refer-number singular)
+            :op5 (s13v2 / Valík
+                :parenthesis (s13m6 / metr
+                    :mod (s13x5 / 60))
+                :refer-number singular)
+            :op6 (s13s1 / Šuldesová
+                :parenthesis (s13m7 / metr
+                    :mod (s13x6 / 800))
+                :refer-number singular))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s13m1: 2-2
+s13t1: 1-1
+s13a1: 36-36
+s13b1: 3-3
+s13m2: 6-6
+s13x1: 5-5
+s13a2: 10-10
+s13k1: 9-9
+s13e1: 0-0
+s13o1: 13-13
+s13m3: 15-15
+s13x2: 14-14
+s13o2: 11-11
+s13m4: 18-18
+s13v1: 20-20
+s13r1: 23-23
+s13m5: 26-26
+s13x4: 25-25
+s13p1: 27-27
+s13v2: 31-31
+s13m6: 34-34
+s13x5: 33-33
+s13s1: 37-37
+s13m7: 40-40
+s13x6: 39-39
+
+# document level annotation:
+(s13s0 / sentence
+    :coref ((s13t1 :same-entity s12l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s14-root
+# :: snt14
+Index: 1       2  3     4         5  6     7  8   9      10 11  12     13          14    15      16 17   18     19       20 21      22       23 24    25 26     27 28   29 30  31 32 33    34 35   36 37
+Words: Dalšími ,  kteří připadají v  úvahu ,  ale musejí se při českém mistrovství ještě zlepšit ,  jsou tyčkař Netscher ,  dálkaři Michalík a  Orlík ,  Souček v  běhu na 400 m  a  Vydra na 1500 m  .
+
+# sentence level graph:
+(s14b1 / být-007
+        :ARG1 (s14d1 / další
+            :ARG0-of (s14b2 / but-91
+                :ARG1 (s14p1 / připadat-007
+                    :part-of-phraseme (s14v1 / v_úvahu
+                        :refer-number singular)
+                    :refer-number plural
+                    :refer-person 3rd
+                    :aspect activity)
+                :ARG2 (s14z1 / zlepšit-se-001
+                    :temporal (s14m1 / mistrovství
+                        :mod (s14c1 / český
+                            :refer-number singular)
+                        :refer-number singular)
+                    :clausal-marker (s14j1 / ještě)
+                    :aspect performance))
+            :refer-number plural)
+        :ARG0 (s14a1 / and
+            :op1 (s14n1 / Netscher
+                :mod (s14t1 / tyčkař
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s14a2 / and
+                :op1 (s14m2 / Michalík
+                    :mod (s14d2 / dálkař
+                        :refer-number plural)
+                    :refer-number singular)
+                :op2 (s14o1 / orlík
+                    :mod s14d2
+                    :refer-number singular))
+            :op3 (s14s1 / Souček
+                :regard (s14b3 / běh
+                    :mod (s14m3 / metr
+                        :mod (s14x2 / 400))
+                    :refer-number singular)
+                :refer-number singular)
+            :op4 (s14v2 / Vydra
+                :regard (s14b4 / běh
+                    :mod (s14m4 / metr
+                        :mod (s14x3 / 1500))
+                    :refer-number singular)
+                :refer-number singular))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s14b1: 17-17
+s14d1: 1-1,3-3
+s14b2: 8-8
+s14p1: 4-4
+s14v1: 5-6
+s14z1: 9-10,15-15
+s14m1: 11-11,13-13
+s14c1: 12-12
+s14j1: 14-14
+s14a1: 32-32
+s14n1: 19-19
+s14t1: 18-18
+s14a2: 23-23
+s14m2: 22-22
+s14d2: 21-21
+s14o1: 24-24
+s14s1: 26-26
+s14b3: 27-28
+s14m3: 29-29,31-31
+s14x2: 30-30
+s14v2: 33-33
+s14b4: 0-0
+s14m4: 34-34,36-36
+s14x3: 35-35
+
+# document level annotation:
+(s14s0 / sentence
+    :coref ((s14m1 :same-entity s5s1)
+            (s14c1 :same-entity s9c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s15-root
+# :: snt15
+Index: 1  2         3    4     5   6         7  8         9  10    11 12 13       14   15     16    17 18 19      20    21 22
+Words: Do Barcelony však vyšle ČAS maximálně 16 závodníků ,  jeden se do nominace může dostat ještě na "  divokou kartu "  .
+
+# sentence level graph:
+(s15a1 / and
+        :op1 (s15v1 / vyslat-002
+            :clausal-marker (s15v2 / však)
+            :ARG0 (s15c1 / ČAS
+                :refer-number singular)
+            :goal (s15b1 / Barcelona
+                :refer-number singular)
+            :ARG1 (s15z1 / závodník
+                :mod (s15x1 / 16
+                    :extent (s15m1 / maximálně))
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :op2 (s15d1 / dostat-se-008
+            :clausal-marker s15v2
+            :ARG0 (s15j1 / jeden
+                :refer-number singular)
+            :goal (s15n1 / nominace
+                :refer-number singular)
+            :clausal-marker (s15j2 / ještě)
+            :instrument (s15k1 / karta
+                :mod (s15d2 / divoký
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect performance))
+
+# alignment:
+s15a1: 9-9
+s15v1: 4-4
+s15c1: 5-5
+s15b1: 1-2
+s15z1: 8-8
+s15x1: 7-7
+s15m1: 6-6
+s15v2: 3-3
+s15d1: 11-11,14-15
+s15j1: 10-10
+s15n1: 12-13
+s15j2: 16-16
+s15k1: 17-17,20-20
+s15d2: 19-19
+
+# document level annotation:
+(s15s0 / sentence
+    :coref ((s15c1 :same-entity s9i1)
+            (s15b1 :same-entity s9b1)
+            (s15n1 :same-entity s12n1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s16-root
+# :: snt16
+Index: 1       2       3     4       5    6     7  8       9         10 11    12        13       14      15  16
+Words: Konečná sestava české výpravy bude známa v  pondělí odpoledne po jejím schválení výkonným výborem ČAS .
+
+# sentence level graph:
+(s16b1 / být-007
+        :ARG0 (s16s1 / sestava
+            :mod (s16v1 / výprava
+                :mod (s16c1 / český
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s16k1 / konečný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s16z1 / známý)
+        :temporal (s16p1 / pondělí
+            :refer-number singular)
+        :temporal (s16o1 / odpoledne)
+        :temporal (s16s2 / schválení
+            :ARG1 s16s1
+            :ARG0 (s16v2 / výbor
+                :possessor (s16c2 / časopis
+                    :refer-number singular)
+                :mod (s16v3 / výkonný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s16b1: 5-5
+s16s1: 2-2,11-11
+s16v1: 4-4
+s16c1: 3-3
+s16k1: 1-1
+s16z1: 6-6
+s16p1: 7-8
+s16o1: 9-9
+s16s2: 10-10,12-12
+s16v2: 14-14
+s16c2: 15-15
+s16v3: 13-13
+
+# document level annotation:
+(s16s0 / sentence
+    :coref ((s16c1 :same-entity s14c1)
+            (s16c2 :same-entity s15c1)))
+
+

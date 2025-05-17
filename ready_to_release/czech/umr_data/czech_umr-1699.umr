@@ -1,0 +1,127 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2      3 4
+Words: Senzační zpráva o Telecomu
+
+# sentence level graph:
+(s1z1 / zpráva
+        :ARG1 (s1t1 / Telecom
+            :refer-number singular)
+        :mod (s1s1 / senzační
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1z1: 2-2
+s1t1: 3-4
+s1s1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3        4    5    6 7
+Words: Praha ( agentura Wild Duck ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2a1 / agentura
+            :name (s2d1 / Duck
+                :mod (s2w1 / Wild))
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2a1: 3-3
+s2d1: 5-5
+s2w1: 4-4
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1 2   3       4    5    6  7       8     9
+Words: O SPT Telecom toho bylo už napsáno mnoho .
+
+# sentence level graph:
+(s3n1 / napsat-007
+        :ARG1 (s3s1 / SPT
+            :mod (s3t1 / Telecom
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3e1 / entity)
+        :clausal-marker (s3u1 / už)
+        :effect (s3m1 / mnoho
+            :mod (s3t2 / ten
+                :refer-number singular))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3n1: 5-5,7-7
+s3s1: 1-2
+s3t1: 3-3
+s3e1: 0-0
+s3u1: 6-6
+s3m1: 8-8
+s3t2: 4-4
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s1 :same-entity s1t1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2  3  4       5            6  7           8      9  10    11  12
+Words: Kdyby si to všechno telefonovali ,  nedozvěděli bychom se vůbec nic .
+
+# sentence level graph:
+(s4d1 / dozvědět-se-001
+        :condition (s4t1 / telefonovat-004
+            :effect (s4v1 / všechen
+                :mod (s4t2 / ten
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s4e1 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :ARG2 s4e1
+            :refer-number plural
+            :aspect activity)
+        :ARG0 (s4e2 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :extent (s4v2 / vůbec)
+        :ARG1 (s4n1 / nic
+            :refer-number singular
+            :refer-person 3rd
+            :polarity -)
+        :refer-number plural
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s4d1: 7-9
+s4t1: 1-1,5-5
+s4v1: 4-4
+s4t2: 3-3
+s4e1: 2-2
+s4e2: 0-0
+s4v2: 10-10
+s4n1: 11-11
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4v1 :same-entity s3m1)))
+
+

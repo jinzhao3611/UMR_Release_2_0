@@ -1,0 +1,483 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1          2         3     4        5
+Words: Volkswagen představí novou limuzínu Sharan
+
+# sentence level graph:
+(s1p1 / představit-001
+        :ARG0 (s1v1 / Volkswagen
+            :refer-number singular)
+        :ARG2 (s1e1 / entity)
+        :ARG1 (s1l1 / limuzína
+            :mod (s1n1 / nový
+                :refer-number singular)
+            :name (s1s1 / Sharan
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s1p1: 2-2
+s1v1: 1-1
+s1e1: 0-0
+s1l1: 4-4
+s1n1: 3-3
+s1s1: 5-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1         2
+Words: Wolfsburg -
+
+# sentence level graph:
+(s2w1 / Wolfsburg
+        :refer-number singular)
+
+# alignment:
+s2w1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2         3          4       5           6          7         8     9                10       11     12
+Words: Na Ženevském autosalónu německá automobilka Volkswagen představí novou velkoprostorovou limuzínu Sharan .
+
+# sentence level graph:
+(s3p1 / představit-002
+        :place (s3a1 / autosalón
+            :mod (s3z1 / ženevský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3a2 / automobilka
+            :mod (s3n1 / německý
+                :refer-number singular)
+            :name (s3v1 / Volkswagen
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3l1 / limuzína
+            :mod (s3v2 / velkoprostorový
+                :refer-number singular)
+            :mod (s3n2 / nový
+                :refer-number singular)
+            :name (s3s1 / Sharan
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s3p1: 7-7
+s3a1: 1-1,3-3
+s3z1: 2-2
+s3a2: 5-5
+s3n1: 4-4
+s3v1: 6-6
+s3l1: 10-10
+s3v2: 9-9
+s3n2: 8-8
+s3s1: 11-11
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3a2 :same-entity s1v1)
+            (s3l1 :same-entity s1l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1         2   3  4  5  6  7  8      9      10    11       12    13        14            15      16 17     18  19 20
+Words: Veřejnost tak 9  .  -  19 .  března poprvé uvidí sériovou verzi vybavenou šestiválcovým motorem o  výkonu 128 kW .
+
+# sentence level graph:
+(s4u1 / uvidět-002
+        :ARG0 (s4v1 / veřejnost
+            :refer-number singular)
+        :manner (s4t1 / tak)
+        :temporal (s4b1 / březen
+            :mod (s4m1 / math
+                :op1 (s4x1 / 9)
+                :op2 (s4x2 / 19))
+            :refer-number singular)
+        :frequency (s4p1 / poprvé)
+        :ARG1 (s4v2 / verze
+            :mod (s4s1 / sériový
+                :refer-number singular)
+            :mod (s4v3 / vybavený
+                :ARG1 (s4m2 / motor
+                    :mod (s4s2 / šestiválcový
+                        :refer-number singular)
+                    :mod (s4v4 / výkon
+                        :mod (s4k1 / kW
+                            :mod (s4x3 / 128))
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s4u1: 10-10
+s4v1: 1-1
+s4t1: 2-2
+s4b1: 8-8
+s4m1: 5-5
+s4x1: 3-3
+s4x2: 6-6
+s4p1: 9-9
+s4v2: 12-12
+s4s1: 11-11
+s4v3: 13-13
+s4m2: 15-15
+s4s2: 14-14
+s4v4: 16-17
+s4k1: 19-19
+s4x3: 18-18
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4v2 :same-entity s3l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2        3  4     5    6     7      8         9  10     11       12    13  14   15   16
+Words: Nová limuzína ,  jejíž cena dosud nebyla stanovena ,  nabízí dostatek místa pro sedm osob .
+
+# sentence level graph:
+(s5n1 / nabízet-001
+        :ARG0 (s5l1 / limuzína
+            :mod (s5n2 / nový
+                :refer-number singular)
+            :mod (s5s1 / stanovit-004
+                :ARG1 (s5c1 / cena
+                    :ARG1 s5l1
+                    :refer-number singular)
+                :ARG0 (s5e1 / entity)
+                :temporal (s5d1 / dosud)
+                :aspect performance
+                :polarity -)
+            :refer-number singular)
+        :ARG2 (s5e2 / entity)
+        :ARG1 (s5d2 / dostatek
+            :mod (s5m1 / místo
+                :affectee (s5o1 / osoba
+                    :mod (s5s2 / sedm
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5n1: 10-10
+s5l1: 2-2,4-4
+s5n2: 1-1
+s5s1: 7-8
+s5c1: 5-5
+s5e1: 0-0
+s5d1: 6-6
+s5e2: 0-0
+s5d2: 11-11
+s5m1: 12-12
+s5o1: 13-13,15-15
+s5s2: 14-14
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5l1 :same-entity s4v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1  2       3                 4       5        6       7   8            9    10       11        12     13
+Words: V  oblasti velkoprostorových limuzín spatřuje koncern pro nadcházející léta největší přírůstky odbytu .
+
+# sentence level graph:
+(s6s1 / spatřovat-001
+        :effect (s6l1 / limuzína
+            :mod (s6v1 / velkoprostorový
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s6k1 / koncern
+            :refer-number singular)
+        :regard (s6r1 / rok
+            :mod (s6n1 / nadcházející
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s6p1 / přírůstek
+            :ARG0 (s6o1 / odbyt
+                :refer-number singular)
+            :mod (s6v2 / velký
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6s1: 5-5
+s6l1: 1-2,4-4
+s6v1: 3-3
+s6k1: 6-6
+s6r1: 7-7,9-9
+s6n1: 8-8
+s6p1: 11-11
+s6o1: 12-12
+s6v2: 10-10
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6k1 :same-entity s3a2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1      2  3            4         5  6  7       8       9        10  11 12   13    14   15   16    17 18       19       20        21  22 23
+Words: Sharan má čtyřdveřovou karosérii ,  je vybaven pohonem předních kol a  jeho délka činí 4.62 metru ,  užitečné zatížení přesahuje 700 kg .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7m1 / mít-009
+            :ARG0 (s7s1 / Sharan
+                :refer-number singular)
+            :ARG1 (s7k1 / karosérie
+                :mod (s7c1 / čtyřdveřový
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state)
+        :op2 (s7v1 / vybavit-001
+            :ARG0 (s7e1 / entity)
+            :ARG1 s7s1
+            :effect (s7p1 / pohon
+                :possessor (s7k2 / kolo
+                    :mod (s7p2 / přední
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op3 (s7c2 / činit-007
+            :ARG0 (s7d1 / délka
+                :possessor s7s1
+                :refer-number singular)
+            :extent (s7m2 / metr
+                :mod (s7x3 / 4.62)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op4 (s7p3 / přesahovat-001
+            :ARG0 (s7z1 / zatížení
+                :ARG0 (s7e2 / entity)
+                :ARG1 (s7e3 / entity)
+                :mod (s7u1 / užitečný
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s7k3 / kg
+                :mod (s7x4 / 700))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity))
+
+# alignment:
+s7a1: 11-11
+s7m1: 2-2
+s7s1: 1-1,12-12
+s7k1: 4-4
+s7c1: 3-3
+s7v1: 6-7
+s7e1: 0-0
+s7p1: 8-8
+s7k2: 10-10
+s7p2: 9-9
+s7c2: 14-14
+s7d1: 13-13
+s7m2: 16-16
+s7x3: 15-15
+s7p3: 20-20
+s7z1: 19-19
+s7e2: 0-0
+s7e3: 0-0
+s7u1: 18-18
+s7k3: 22-22
+s7x4: 21-21
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7s1 :same-entity s5l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2       3     4    5      6       7          8       9  10       11             12   13  14     15 16          17
+Words: V  Německu budou vozy Sharan sériově vybavovány airbagy a  napínači bezpečnostních pásů pro řidiče a  spolujezdce .
+
+# sentence level graph:
+(s8v1 / vybavovat-001
+        :place (s8n1 / Německo
+            :refer-number singular)
+        :ARG1 (s8v2 / vůz
+            :name (s8s1 / Sharan
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd)
+        :ARG0 (s8e1 / entity)
+        :manner (s8s2 / sériově)
+        :instrument (s8a1 / and
+            :op1 (s8a2 / airbag
+                :refer-number plural)
+            :op2 (s8n2 / napínač
+                :ARG1 (s8a3 / and
+                    :op1 (s8p1 / pás
+                        :affectee (s8r1 / řidič
+                            :refer-number singular)
+                        :mod (s8b1 / bezpečnostní
+                            :refer-number plural)
+                        :refer-number plural)
+                    :op2 (s8p2 / pás
+                        :mod s8b1
+                        :affectee (s8s3 / spolujezdec
+                            :refer-number singular)
+                        :refer-number plural))
+                :refer-number plural))
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s8v1: 3-3,7-7
+s8n1: 1-2
+s8v2: 4-4
+s8s1: 5-5
+s8e1: 0-0
+s8s2: 6-6
+s8a1: 9-9
+s8a2: 8-8
+s8n2: 10-10
+s8a3: 15-15
+s8p1: 12-12
+s8r1: 13-14
+s8b1: 11-11
+s8p2: 0-0
+s8s3: 13-13,16-16
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8n1 :same-entity s3n1)
+            (s8v2 :same-entity s7s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1        2          3  4     5          6        7        8       9
+Words: Počínaje provedením GL budou vybavovány otočnými předními sedadly .
+
+# sentence level graph:
+(s9v1 / vybavovat-001
+        :temporal (s9p1 / provedení
+            :mod (s9g1 / GL)
+            :refer-number singular)
+        :ARG0 (s9e1 / entity)
+        :ARG1 (s9e2 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :instrument (s9s1 / sedadlo
+            :mod (s9p2 / přední
+                :refer-number plural)
+            :mod (s9o1 / otočný
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :aspect activity)
+
+# alignment:
+s9v1: 4-5
+s9p1: 1-2
+s9g1: 3-3
+s9e1: 0-0
+s9e2: 0-0
+s9s1: 8-8
+s9p2: 7-7
+s9o1: 6-6
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9e2 :same-entity s8v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1        2  3   4  5   6         7   8  9  10 11   12    13    14      15  16    17      18    19
+Words: Spotřeba na 100 km při rychlosti 120 km /  h  bude podle údajů výrobce 9.8 litru benzínu super .
+
+# sentence level graph:
+(s10b1 / být-007
+        :ARG0 (s10s1 / spotřeba
+            :regard (s10k1 / km
+                :mod (s10x1 / 100))
+            :condition (s10r1 / rychlost
+                :mod (s10k2 / km
+                    :mod (s10h1 / hodina)
+                    :mod (s10x2 / 120))
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s10u1 / údaj
+            :ARG0 (s10v1 / výrobce
+                :refer-number singular)
+            :refer-number plural)
+        :ARG1 (s10l1 / litr
+            :possessor (s10b2 / benzín
+                :mod (s10s2 / super)
+                :refer-number singular)
+            :mod (s10x3 / 9.8)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s10b1: 11-11
+s10s1: 1-1
+s10k1: 2-2,4-4
+s10x1: 3-3
+s10r1: 5-6
+s10k2: 8-8
+s10h1: 10-10
+s10x2: 7-7
+s10u1: 12-13
+s10v1: 14-14
+s10l1: 16-16
+s10b2: 17-17
+s10s2: 18-18
+s10x3: 15-15
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10v1 :same-entity s6k1)))
+
+

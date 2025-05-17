@@ -1,0 +1,551 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1   2 3       4      5
+Words: ČNB k případu sporné směnky
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1c1 / ČNB)
+        :ARG1 (s1p1 / případ
+            :ARG1 (s1s1 / směnka
+                :mod (s1s2 / sporný
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1c1: 1-1
+s1p1: 2-3
+s1s1: 5-5
+s1s2: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2        3      4     5         6  7         8      9          10     11    12    13    14 15         16 17 18    19      20      21           22       23 24      25 26       27     28
+Words: ČNB obdržela minulý týden informaci o  existenci směnek opatřených avalem České banky spolu s  vyjádřením ,  že banka pravost podpisu statutárního zástupce a  razítka na směnkách popírá .
+
+# sentence level graph:
+(s3o1 / obdržet-001
+        :ARG0 (s3c1 / ČNB)
+        :temporal (s3t1 / týden
+            :mod (s3m1 / minulý
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3i1 / informace
+            :ARG1 (s3e1 / existence
+                :ARG0 (s3s1 / směnka
+                    :mod (s3o2 / opatřený
+                        :effect (s3a1 / aval
+                            :possessor (s3b1 / banka
+                                :mod (s3c2 / Český
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :companion (s3v1 / vyjádření
+            :ARG0 (s3e2 / entity)
+            :ARG1 (s3p1 / popírat-001
+                :ARG0 (s3b2 / banka
+                    :refer-number singular)
+                :ARG1 (s3p2 / pravost
+                    :possessor (s3a2 / and
+                        :op1 (s3p3 / podpis
+                            :ARG0 (s3z1 / zástupce
+                                :mod (s3s2 / statutární
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :place (s3s3 / směnka
+                                :refer-number plural)
+                            :refer-number singular)
+                        :op2 (s3r1 / razítko
+                            :place s3s3
+                            :refer-number singular))
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect activity)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3o1: 2-2
+s3c1: 1-1
+s3t1: 4-4
+s3m1: 3-3
+s3i1: 5-5
+s3e1: 6-7
+s3s1: 8-8
+s3o2: 9-9
+s3a1: 10-10
+s3b1: 12-12
+s3c2: 11-11
+s3v1: 13-15
+s3e2: 0-0
+s3p1: 17-17,27-27
+s3b2: 18-18
+s3p2: 19-19
+s3a2: 23-23
+s3p3: 20-20
+s3z1: 22-22
+s3s2: 21-21
+s3s3: 25-26
+s3r1: 24-24
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3c1 :same-entity s1c1)
+            (s3s1 :same-entity s1s1)
+            (s3b2 :same-entity s3b1)
+            (s3s3 :same-entity s3s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2      3       4      5           6         7  8             9       10     11   12    13    14           15      16
+Words: Pokud nebude pravost těchto náležitostí prokázána ,  nepředstavují zmíněné směnky vůči České bance uplatnitelný závazek .
+
+# sentence level graph:
+(s4p1 / představovat-003
+        :condition (s4p2 / prokázat-001
+            :ARG1 (s4p3 / pravost
+                :possessor (s4n1 / náležitost
+                    :mod (s4t1 / tento
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :ARG0 (s4e1 / entity)
+            :aspect performance
+            :polarity -)
+        :ARG0 (s4s1 / směnka
+            :mod (s4z1 / zmíněný
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s4z2 / závazek
+            :mod (s4u1 / uplatnitelný
+                :regard (s4b1 / banka
+                    :mod (s4c1 / Český
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity
+        :polarity -)
+
+# alignment:
+s4p1: 8-8
+s4p2: 1-2,6-6
+s4p3: 3-3
+s4n1: 5-5
+s4t1: 4-4
+s4e1: 0-0
+s4s1: 10-10
+s4z1: 9-9
+s4z2: 15-15
+s4u1: 14-14
+s4b1: 11-11,13-13
+s4c1: 12-12
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4n1 :same-entity s3a2)
+            (s4s1 :same-entity s3s3)
+            (s4b1 :same-entity s3b2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1      2  3     4       5      6   7
+Words: Sdělil to včera tiskový mluvčí ČNB .
+
+# sentence level graph:
+(s5s1 / sdělit-002
+        :effect (s5t1 / ten
+            :refer-number singular)
+        :ARG2 (s5e1 / entity)
+        :temporal (s5v1 / včera)
+        :ARG0 (s5m1 / mluvčí
+            :possessor (s5c1 / ČNB)
+            :mod (s5t2 / tiskový
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5s1: 1-1
+s5t1: 2-2
+s5e1: 0-0
+s5v1: 3-3
+s5m1: 5-5
+s5c1: 6-6
+s5t2: 4-4
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5c1 :same-entity s3c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2        3  4       5           6  7  8      9     10 11       12     13        14     15     16 17 18      19    20 21    22 23   24       25    26    27      28          29 30      31       32 33 34 35 36 37
+Words: Česká televize v  pondělí informovala ,  že orgány činné v  trestním řízení vyšetřují případ směnky na 48 miliónů korun ,  které by měla vyplatit Česká banka pražské společnosti s  ručením omezeným T  .  I  .  C  .
+
+# sentence level graph:
+(s6i1 / informovat-001
+        :ARG0 (s6t1 / televize
+            :mod (s6c1 / Český
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s6e1 / entity)
+        :temporal (s6p1 / pondělí
+            :refer-number singular)
+        :ARG1 (s6v1 / vyšetřovat-001
+            :ARG0 (s6o1 / orgán
+                :mod (s6c2 / činný
+                    :regard (s6r1 / řízení
+                        :mod (s6t2 / trestní
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number plural)
+            :ARG1 (s6p2 / případ
+                :ARG1 (s6s1 / směnka
+                    :mod (s6m1 / milión
+                        :mod (s6k1 / koruna
+                            :ARG1-of (s6v2 / vyplatit-001
+                                :ARG0 (s6b1 / banka
+                                    :mod (s6c3 / český
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :ARG2 (s6s2 / společnost
+                                    :mod (s6p3 / pražský
+                                        :refer-number singular)
+                                    :companion (s6r2 / ručení
+                                        :mod (s6o2 / omezený
+                                            :refer-number singular)
+                                        :refer-number singular)
+                                    :name (s6x1 / #Forn
+                                        :FPHR (s6t3 / T)
+                                        :FPHR (s6x2 / .)
+                                        :FPHR (s6i2 / I)
+                                        :FPHR (s6x3 / .)
+                                        :FPHR (s6c4 / C)
+                                        :FPHR (s6x4 / .))
+                                    :refer-number singular)
+                                :aspect performance)
+                            :refer-number plural)
+                        :mod (s6x5 / 48)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :aspect process)
+
+# alignment:
+s6i1: 5-5
+s6t1: 2-2
+s6c1: 1-1
+s6e1: 0-0
+s6p1: 3-4
+s6v1: 7-7,13-13
+s6o1: 8-8
+s6c2: 9-9
+s6r1: 10-10,12-12
+s6t2: 11-11
+s6p2: 14-14
+s6s1: 15-15
+s6m1: 16-16,18-18
+s6k1: 19-19,21-21
+s6v2: 22-24
+s6b1: 26-26
+s6c3: 25-25
+s6s2: 28-28
+s6p3: 27-27
+s6r2: 29-30
+s6o2: 31-31
+s6x1: 0-0
+s6t3: 32-32
+s6x2: 33-33
+s6i2: 34-34
+s6x3: 35-35
+s6c4: 36-36
+s6x4: 37-37
+s6x5: 17-17
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s1 :same-entity s4s1)
+            (s6b1 :same-entity s4b1)
+            (s6p3 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1     2     3    4          5      6      7  8       9       10    11 12     13     14          15       16 17     18    19  20      21
+Words: Česká banka však proplacení směnky odmítá ,  protože razítko banky a  podpis jejího generálního ředitele na směnce mohou být falešné .
+
+# sentence level graph:
+(s7o1 / odmítat-002
+        :clausal-marker (s7v1 / však)
+        :ARG0 (s7b1 / banka
+            :mod (s7c1 / český
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s7p1 / proplacení
+            :ARG1 (s7s1 / směnka
+                :refer-number singular)
+            :ARG0 s7b1
+            :refer-number singular)
+        :cause (s7b2 / být-007
+            :ARG0 (s7a1 / and
+                :op1 (s7r1 / razítko
+                    :possessor (s7b3 / banka
+                        :refer-number singular)
+                    :place (s7s2 / směnka
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s7p2 / podpis
+                    :place s7s2
+                    :ARG0 (s7r2 / ředitel
+                        :possessor s7b3
+                        :mod (s7g1 / generální
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular))
+            :ARG1 (s7f1 / falešný
+                :refer-number plural)
+            :aspect activity)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s7o1: 6-6
+s7v1: 3-3
+s7b1: 2-2
+s7c1: 1-1
+s7p1: 4-4
+s7s1: 5-5
+s7b2: 8-8,18-19
+s7a1: 11-11
+s7r1: 9-9
+s7b3: 10-10,13-13
+s7s2: 16-17
+s7p2: 12-12
+s7r2: 15-15
+s7g1: 14-14
+s7f1: 20-20
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7b1 :same-entity s6b1)
+            (s7c1 :same-entity s6c3)
+            (s7s1 :same-entity s6s1)
+            (s7r1 :same-entity s3r1)
+            (s7b3 :same-entity s7b1)
+            (s7s2 :same-entity s7s1)
+            (s7p2 :same-entity s3p3)
+            (s7r2 :same-entity s3z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2        3   4        5      6        7   8  9         10 11  12 13     14   15       16
+Words: Podle mluvčího ČNB bankovní dohled zasahuje jen v  případech ,  kdy je zdraví bank ohroženo .
+
+# sentence level graph:
+(s8z1 / zasahovat-004
+        :ARG0 (s8d1 / dohled
+            :mod (s8b1 / bankovní
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s8m1 / mluvčí
+            :possessor (s8c1 / ČNB)
+            :refer-number singular)
+        :clausal-marker (s8j1 / jen)
+        :condition (s8p1 / případ
+            :temporal-of (s8o1 / ohrozit-001
+                :ARG1 (s8z2 / zdraví
+                    :possessor (s8b2 / banka
+                        :refer-number plural)
+                    :refer-number singular)
+                :ARG0 (s8e1 / entity)
+                :refer-number singular
+                :aspect performance)
+            :refer-number plural)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s8z1: 6-6
+s8d1: 5-5
+s8b1: 4-4
+s8m1: 1-2
+s8c1: 3-3
+s8j1: 7-7
+s8p1: 8-9,11-11
+s8o1: 12-12,15-15
+s8z2: 13-13
+s8b2: 14-14
+s8e1: 0-0
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8c1 :same-entity s5c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2       3           4     5      6      7      8
+Words: Ve zmíněné souvislosti nelze takové závěry učinit .
+
+# sentence level graph:
+(s9l1 / lze-001
+        :regard (s9s1 / souvislost
+            :mod (s9z1 / zmíněný
+                :refer-number singular)
+            :refer-number singular)
+        :affectee (s9e1 / entity)
+        :ARG0 (s9u1 / učinit-008
+            :predicative-noun (s9z2 / závěr
+                :mod (s9t1 / takový
+                    :refer-number plural)
+                :ARG0 s9e1
+                :refer-number plural)
+            :ARG0 s9e1
+            :source (s9e2 / entity)
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect state
+        :polarity -)
+
+# alignment:
+s9l1: 4-4
+s9s1: 1-1,3-3
+s9z1: 2-2
+s9e1: 0-0
+s9u1: 7-7
+s9z2: 6-6
+s9t1: 5-5
+s9e2: 0-0
+
+# document level annotation:
+(s9s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1        2      3    4        5         6  7            8          9       10         11   12 13 14     15   16     17 18    19       20 21    22
+Words: Bankovní dohled nemá pravomoc zasahovat do jednotlivých obchodních případů komerčních bank a  do vztahů mezi bankou a  jejím klientem ,  dodal .
+
+# sentence level graph:
+(s10d1 / dodat-005
+        :ARG0 (s10e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :effect (s10m1 / mít-028
+            :ARG0 (s10d2 / dohled
+                :mod (s10b1 / bankovní
+                    :refer-number singular)
+                :refer-number singular)
+            :predicative-noun (s10p1 / pravomoc
+                :ARG0 s10d2
+                :ARG1 (s10z1 / zasahovat-002
+                    :ARG0 s10d2
+                    :ARG1 (s10a1 / and
+                        :op1 (s10p2 / případ
+                            :ARG1 (s10b2 / banka
+                                :mod (s10k1 / komerční
+                                    :refer-number plural)
+                                :refer-number plural)
+                            :mod (s10o1 / obchodní
+                                :refer-number plural)
+                            :mod (s10j1 / jednotlivý
+                                :refer-number plural)
+                            :refer-number plural)
+                        :op2 (s10v1 / vztah
+                            :ARG2 (s10x3 / #Rcp)
+                            :ARG0 (s10a2 / and
+                                :op1 (s10b3 / banka
+                                    :refer-number singular)
+                                :op2 (s10k2 / klient
+                                    :possessor s10b3
+                                    :refer-number singular))
+                            :refer-number plural))
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect state
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s10d1: 21-21
+s10e1: 0-0
+s10m1: 3-3
+s10d2: 2-2
+s10b1: 1-1
+s10p1: 4-4
+s10z1: 5-5
+s10a1: 12-12
+s10p2: 6-6,9-9
+s10b2: 11-11
+s10k1: 10-10
+s10o1: 8-8
+s10j1: 7-7
+s10v1: 13-14
+s10x3: 0-0
+s10a2: 17-17
+s10b3: 15-16,18-18
+s10k2: 15-15,19-19
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10e1 :same-entity s8m1)
+            (s10d2 :same-entity s8d1)
+            (s10x3 :same-entity s10a2)))
+
+

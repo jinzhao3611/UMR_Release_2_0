@@ -1,0 +1,427 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1  2       3   4 5
+Words: Na vlastní oči v Sedlčanech
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1x1 / #Idph
+            :name (s1o1 / oko
+                :mod (s1v1 / vlastní
+                    :refer-number plural)
+                :refer-number singular))
+        :place (s1s1 / Sedlčany
+            :refer-number plural)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1x1: 0-0
+s1o1: 3-3
+s1v1: 2-2
+s1s1: 4-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2         3        4      5        6    7          8  9         10
+Words: Skupinky rockových fanoušků bloudí Sedlčany nebo vysedávají po hospodách .
+
+# sentence level graph:
+(s2a1 / and
+        :op1 (s2b1 / bloudit-001
+            :ARG0 (s2s1 / skupinka
+                :mod (s2f1 / fanoušek
+                    :mod (s2r1 / rockový
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural)
+            :path (s2s2 / Sedlčany
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s2v1 / vysedávat-001
+            :ARG0 s2s1
+            :place (s2h1 / hospoda
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect habitual))
+
+# alignment:
+s2a1: 6-6
+s2b1: 4-4
+s2s2: 5-5
+s2s1: 1-1
+s2f1: 3-3
+s2r1: 2-2
+s2v1: 7-7
+s2h1: 8-9
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2s2 :same-entity s1s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2  3        4       5       6      7    8  9  10     11   12        13 14     15 16     17 18 19    20
+Words: Přijely na největší rockový maraton tohoto roku ,  na kterém mělo vystoupit 80 skupin z  domova i  ze světa .
+
+# sentence level graph:
+(s3p1 / přijet-001
+        :ARG0 (s3e1 / entity
+            :refer-number plural
+            :refer-person 3rd)
+        :goal (s3m1 / maraton
+            :mod (s3r1 / rockový
+                :refer-number singular)
+            :mod (s3v1 / velký
+                :refer-number singular)
+            :possessor (s3r2 / rok
+                :mod (s3t1 / tento
+                    :refer-number singular)
+                :refer-number singular)
+            :place-of (s3v2 / vystoupit-003
+                :ARG0 (s3s1 / skupina
+                    :mod (s3x1 / 80)
+                    :start (s3a1 / and
+                        :op1 (s3d1 / domov
+                            :refer-number singular)
+                        :op2 (s3s2 / svět
+                            :refer-number singular))
+                    :refer-number plural)
+                :aspect performance)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s3p1: 1-1
+s3e1: 0-0
+s3m1: 2-2,5-5,9-10
+s3r1: 4-4
+s3v1: 3-3
+s3r2: 7-7
+s3t1: 6-6
+s3v2: 11-12
+s3s1: 14-14
+s3x1: 13-13
+s3a1: 17-17
+s3d1: 15-16
+s3s2: 18-19
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2s1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2  3     4    5           6       7      8       9  10   11 12       13     14      15  16       17    18         19
+Words: Akce ,  která byla naplánována několik měsíců dopředu ,  byla na poslední chvíli zrušena bez jediného slova vysvětlení .
+
+# sentence level graph:
+(s4z1 / zrušit-001
+        :ARG1 (s4a1 / akce
+            :ARG1-of (s4n1 / naplánovat-001
+                :ARG0 (s4e1 / entity)
+                :temporal (s4m1 / měsíc
+                    :mod (s4n2 / několik)
+                    :goal (s4d1 / dopředu)
+                    :refer-number plural)
+                :aspect performance)
+            :refer-number singular)
+        :ARG0 (s4e2 / entity)
+        :temporal (s4c1 / chvíle
+            :mod (s4p1 / poslední
+                :refer-number singular)
+            :refer-number singular)
+        :companion (s4s1 / slovo
+            :ARG1 (s4v1 / vysvětlení
+                :ARG0 (s4e3 / entity)
+                :ARG1 (s4e4 / entity)
+                :refer-number singular)
+            :mod (s4j1 / jediný
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s4z1: 10-10,14-14
+s4a1: 1-1,3-3
+s4n1: 4-5
+s4e1: 0-0
+s4m1: 7-7
+s4n2: 6-6
+s4d1: 8-8
+s4e2: 0-0
+s4c1: 11-11,13-13
+s4p1: 12-12
+s4s1: 15-15,17-17
+s4v1: 18-18
+s4e3: 0-0
+s4e4: 0-0
+s4j1: 16-16
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4a1 :same-entity s3m1)
+            (s4e3 :same-entity s4e2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2     3  4     5  6    7           8    9
+Words: Mezi lidmi ve městě se šíří nejrůznější fámy .
+
+# sentence level graph:
+(s5s1 / šířit-se-001
+        :place (s5c1 / člověk
+            :place (s5m1 / město
+                :refer-number singular)
+            :refer-number plural)
+        :ARG0 (s5f1 / fáma
+            :mod (s5r1 / různý
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5s1: 5-6
+s5c1: 1-2
+s5m1: 3-4
+s5f1: 8-8
+s5r1: 7-7
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5m1 :same-entity s2s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1       2  3  4  5      6           7  8         9      10        11 12    13   14   15       16     17
+Words: Pravdou je ,  že jediný organizátor a  pořadatel celého festivalu se týden před jeho začátkem oběsil .
+
+# sentence level graph:
+(s6b1 / být-007
+        :ARG1 (s6p1 / pravda
+            :refer-number singular)
+        :ARG0 (s6o1 / oběsit-001
+            :ARG0 (s6a1 / and
+                :op1 (s6o2 / organizátor
+                    :ARG1 (s6f1 / festival
+                        :mod (s6c1 / celý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s6j1 / jediný
+                        :refer-number singular)
+                    :refer-number singular)
+                :op2 (s6p2 / pořadatel
+                    :ARG1 s6f1
+                    :mod s6j1
+                    :refer-number singular))
+            :ARG1 s6a1
+            :temporal (s6t1 / týden
+                :temporal (s6z1 / začátek
+                    :possessor s6f1
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s6b1: 2-2
+s6p1: 1-1
+s6o1: 4-4,16-16
+s6a1: 7-7,11-11
+s6o2: 6-6
+s6f1: 10-10,14-14
+s6c1: 9-9
+s6j1: 5-5
+s6p2: 8-8
+s6t1: 12-12
+s6z1: 13-13,15-15
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6f1 :same-entity s4a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2   3  4  5       6  7      8       9  10         11 12  13 14   15     16          17   18      19   20           21 22        23 24    25   26     27 28    29      30       31      32     33   34 35 36     37 38     39 40      41  42 43    44     45   46   47 48    49 50 51     52 53 54 55       56     57     58
+Words: O  tom ,  co dohnalo 23 letého mladíka k  sebevraždě ,  zda se stal terčem vyhrožování nebo neunesl tíhu odpovědnosti v  podnikání ,  jakou roli sehrál v  celém případu kapelník skupiny Markýz John ,  se dovíte v  pořadu Na vlastní oči ,  který vysílá NOVA dnes ve 20.55 ,  a  věnují se mu i  zítřejší Lidové noviny .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7d1 / dovědět-se-002
+            :ARG1 (s7a2 / and
+                :op1 (s7d2 / dohnat-001
+                    :ARG1 (s7s1 / sebevražda
+                        :refer-number singular)
+                    :ARG2 (s7m1 / mladík
+                        :mod (s7x1 / 23_letý)
+                        :refer-number singular)
+                    :ARG0 (s7c1 / co
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :refer-number singular
+                    :aspect performance)
+                :op2 (s7o1 / or
+                    :op1 (s7s2 / stát-se-001
+                        :ARG0 s7m1
+                        :ARG1 (s7t1 / terč
+                            :possessor (s7v1 / vyhrožování
+                                :ARG0 (s7e1 / entity)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :aspect performance)
+                    :op2 (s7u1 / unést-004
+                        :ARG0 s7m1
+                        :ARG1 (s7t2 / tíha
+                            :possessor (s7o2 / odpovědnost
+                                :place (s7p1 / podnikání
+                                    :ARG0 (s7e2 / entity)
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular
+                        :aspect performance
+                        :polarity -))
+                :op3 (s7s3 / sehrát-003
+                    :place (s7p2 / případ
+                        :mod (s7c2 / celý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG0 (s7k1 / kapelník
+                        :possessor (s7s4 / skupina
+                            :name (s7m2 / Markýz
+                                :name (s7j1 / John
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :part-of-phraseme (s7r1 / roli
+                        :mod (s7j2 / jaký
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect performance))
+            :ARG0 (s7e3 / entity
+                :refer-number plural
+                :refer-person 2nd)
+            :effect (s7e4 / entity)
+            :place (s7p3 / pořad
+                :name (s7o3 / oko
+                    :mod (s7v2 / vlastní
+                        :refer-number plural)
+                    :refer-number singular)
+                :ARG1-of (s7v3 / vysílat-003
+                    :ARG0 (s7n1 / Nova
+                        :refer-number singular)
+                    :temporal (s7d3 / dnes)
+                    :temporal (s7x4 / 20.55)
+                    :refer-number singular
+                    :refer-person 3rd
+                    :aspect activity)
+                :refer-number singular)
+            :refer-number plural
+            :refer-person 2nd
+            :aspect performance)
+        :op2 (s7v4 / věnovat-se-001
+            :ARG1 s7p2
+            :clausal-marker (s7i1 / i)
+            :ARG0 (s7n2 / noviny
+                :mod (s7l1 / Lidový
+                    :refer-number plural)
+                :mod (s7z1 / zítřejší
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect process))
+
+# alignment:
+s7a1: 50-50
+s7d1: 35-36
+s7a2: 23-23
+s7d2: 1-2,5-5
+s7s1: 9-10
+s7m1: 8-8
+s7x1: 6-7
+s7c1: 4-4
+s7o1: 17-17
+s7s2: 1-1,12-14
+s7t1: 15-15
+s7v1: 16-16
+s7e1: 0-0
+s7u1: 1-1,12-12,18-18
+s7t2: 19-19
+s7o2: 20-20
+s7p1: 21-22
+s7e2: 0-0
+s7s3: 1-1,26-26
+s7p2: 27-27,29-29,53-53
+s7c2: 28-28
+s7k1: 30-30
+s7s4: 31-31
+s7m2: 32-32
+s7j1: 33-33
+s7r1: 25-25
+s7j2: 24-24
+s7e3: 0-0
+s7e4: 0-0
+s7p3: 37-38,43-43
+s7o3: 39-39,41-41
+s7v2: 40-40
+s7v3: 44-44
+s7n1: 45-45
+s7d3: 46-46
+s7x4: 47-48
+s7v4: 51-52
+s7i1: 54-54
+s7n2: 57-57
+s7l1: 56-56
+s7z1: 55-55
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7s1 :same-event s6o1)
+            (s7p3 :same-entity s1x1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1 2   3
+Words: ( okř )
+
+# sentence level graph:
+(s8o1 / okř)
+
+# alignment:
+s8o1: 2-2
+
+# document level annotation:
+(s8s0 / sentence)
+
+

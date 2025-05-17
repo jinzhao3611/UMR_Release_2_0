@@ -1,0 +1,175 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Krátce
+
+# sentence level graph:
+(s1e1 / event
+        :manner (s1k1 / krátce)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1k1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2          3     4       5           6      7     8    9  10        11 12 13 14    15        16   17 18   19       20
+Words: Základní leasingová sazba akciové společnosti Corfin Praha byla s  účinností od 1  .  srpna stanovena nově na 15.5 procenta .
+
+# sentence level graph:
+(s2s1 / stanovit-001
+        :ARG1 (s2s2 / sazba
+            :mod (s2l1 / leasingový
+                :refer-number singular)
+            :mod (s2z1 / základní
+                :refer-number singular)
+            :possessor (s2s3 / společnost
+                :mod (s2a1 / akciový
+                    :refer-number singular)
+                :name (s2c1 / Corfin
+                    :mod (s2p1 / Praha
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :companion (s2u1 / účinnost
+            :temporal (s2s4 / srpen
+                :mod (s2x1 / 1)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s2e1 / entity)
+        :manner (s2n1 / nově)
+        :effect (s2p2 / procento
+            :mod (s2x2 / 15.5)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s2s1: 8-8,15-15
+s2s2: 3-3
+s2l1: 2-2
+s2z1: 1-1
+s2s3: 5-5
+s2a1: 4-4
+s2c1: 6-6
+s2p1: 7-7
+s2u1: 9-10
+s2s4: 11-11,14-14
+s2x1: 12-12
+s2e1: 0-0
+s2n1: 16-16
+s2p2: 17-17,19-19
+s2x2: 18-18
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1        2     3    4   5     6      7         8     9
+Words: Základní sazba může být podle pohybu úrokových sazeb měněna
+
+# sentence level graph:
+(s3m1 / měnit-002
+        :ARG1 (s3s1 / sazba
+            :mod (s3z1 / základní
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s3p1 / pohyb
+            :ARG0 (s3s2 / sazba
+                :mod (s3u1 / úrokový
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :ARG0 (s3e1 / entity)
+        :aspect activity)
+
+# alignment:
+s3m1: 3-4,9-9
+s3s1: 2-2
+s3z1: 1-1
+s3p1: 5-6
+s3s2: 8-8
+s3u1: 7-7
+s3e1: 0-0
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3s1 :same-entity s2s2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1      2     3    4       5        6   7    8  9  10     11      12       13      14 15          16     17      18          19     20     21
+Words: Značku Czech Made udělilo Sdružení pro cenu ČR za jakost kolekci pánských ponožek z  mercerované bavlny akciové společnosti Trepon Třebíč .
+
+# sentence level graph:
+(s4u1 / udělit-001
+        :ARG1 (s4z1 / značka
+            :name (s4x1 / #Forn
+                :FPHR (s4c1 / Czech)
+                :FPHR (s4m1 / Made))
+            :refer-number singular)
+        :ARG0 (s4s1 / sdružení
+            :purpose (s4c2 / cena
+                :cause (s4j1 / jakost
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s4c3 / ČR
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s4k1 / kolekce
+            :possessor (s4p1 / ponožka
+                :mod (s4p2 / pánský
+                    :refer-number plural)
+                :source (s4b1 / bavlna
+                    :mod (s4m2 / mercerovaný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :possessor (s4s2 / společnost
+                :mod (s4a1 / akciový
+                    :refer-number singular)
+                :name (s4t1 / Trepon
+                    :mod (s4t2 / Třebíč
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4u1: 4-4
+s4z1: 1-1
+s4x1: 0-0
+s4c1: 2-2
+s4m1: 3-3
+s4s1: 5-5
+s4c2: 6-7
+s4j1: 9-10
+s4c3: 8-8
+s4k1: 11-11
+s4p1: 13-13
+s4p2: 12-12
+s4b1: 14-14,16-16
+s4m2: 15-15
+s4s2: 18-18
+s4a1: 17-17
+s4t1: 19-19
+s4t2: 20-20
+
+# document level annotation:
+(s4s0 / sentence)
+
+

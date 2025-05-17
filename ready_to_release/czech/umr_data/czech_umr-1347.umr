@@ -1,0 +1,380 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1      2      3 4
+Words: Průtrž mračen v Krkonoších
+
+# sentence level graph:
+(s1p1 / průtrž
+        :ARG0 (s1m1 / mračno
+            :refer-number plural)
+        :place (s1k1 / Krkonoše
+            :refer-number plural)
+        :refer-number singular)
+
+# alignment:
+s1p1: 1-1
+s1m1: 2-2
+s1k1: 3-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2 3   4 5
+Words: Krkonoše ( jop ) -
+
+# sentence level graph:
+(s2k1 / Krkonoše
+        :parenthesis (s2j1 / jop)
+        :refer-number plural)
+
+# alignment:
+s2k1: 1-1
+s2j1: 3-3
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2k1 :same-entity s1k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2      3  4     5        6        7  8     9  10     11 12        13     14    15           16        17    18
+Words: Průtrž mračen ,  která postihla Krkonoše z  pátku na sobotu ,  způsobila značné škody Krkonošskému národnímu parku .
+
+# sentence level graph:
+(s3z1 / způsobit-001
+        :ARG0 (s3p1 / průtrž
+            :ARG0 (s3m1 / mračno
+                :refer-number plural)
+            :ARG0-of (s3p2 / postihnout-002
+                :ARG1 (s3k1 / Krkonoše
+                    :refer-number plural)
+                :temporal (s3p3 / pátek
+                    :refer-number singular)
+                :temporal (s3s1 / sobota
+                    :refer-number singular)
+                :aspect performance)
+            :refer-number singular)
+        :ARG1 (s3s2 / škoda
+            :mod (s3z2 / značný
+                :refer-number plural)
+            :refer-number plural)
+        :ARG2 (s3p4 / park
+            :mod (s3k2 / Krkonošský
+                :refer-number singular)
+            :mod (s3n1 / národní
+                :refer-number singular)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3z1: 12-12
+s3p1: 1-1,4-4
+s3m1: 2-2
+s3p2: 5-5
+s3k1: 6-6
+s3p3: 7-8
+s3s1: 9-10
+s3s2: 14-14
+s3z2: 13-13
+s3p4: 17-17
+s3k2: 15-15
+s3n1: 16-16
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s1p1)
+            (s3k1 :same-entity s2k1)
+            (s3k2 :same-entity s3k1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2    3     4      5  6          7       8      9  10 11     12
+Words: Během čtyř hodin spadlo v  nejvyšších českých horách 60 mm srážek .
+
+# sentence level graph:
+(s4s1 / spadnout-003
+        :temporal (s4h1 / hodina
+            :mod (s4c1 / čtyři
+                :refer-number plural)
+            :refer-number plural)
+        :place (s4h2 / hora
+            :mod (s4c2 / český
+                :refer-number plural)
+            :mod (s4v1 / vysoký
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s4m1 / mm
+            :mod (s4s2 / srážka
+                :refer-number plural)
+            :mod (s4x1 / 60))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4s1: 4-4
+s4h1: 1-1,3-3
+s4c1: 2-2
+s4h2: 5-5,8-8
+s4c2: 7-7
+s4v1: 6-6
+s4m1: 10-10
+s4s2: 11-11
+s4x1: 9-9
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4h2 :same-entity s3k2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2         3  4     5      6         7      8  9         10     11     12 13   14     15 16    17     18    19 20  21    22    23   24      25     26     27
+Words: Silně poškozená je cesta údolím Klínového potoka od Strážného směrem nahoru a  také stezky v  okolí Labské boudy ,  nad Bílým Labem byly hlášeny sesuvy kamenů .
+
+# sentence level graph:
+(s5a1 / and
+        :op1 (s5b1 / být-007
+            :ARG1 (s5p1 / poškozený
+                :extent (s5s1 / silně)
+                :refer-number singular)
+            :ARG0 (s5a2 / and
+                :op1 (s5c1 / cesta
+                    :path (s5u1 / údolí
+                        :possessor (s5p2 / potok
+                            :mod (s5k1 / Klínový
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :start (s5s2 / Strážný
+                        :refer-number singular)
+                    :goal (s5s3 / směr
+                        :mod (s5n1 / nahoru)
+                        :refer-number singular)
+                    :refer-number singular)
+                :clausal-marker (s5t1 / také)
+                :op2 (s5s4 / stezka
+                    :place (s5o1 / okolí
+                        :possessor (s5b2 / bouda
+                            :mod (s5l1 / Labský
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number plural))
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s5h1 / hlásit-001
+            :place (s5l2 / Labe
+                :mod (s5b3 / Bílý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s5e1 / entity)
+            :ARG1 (s5s5 / sesuv
+                :ARG0 (s5k2 / kámen
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect activity))
+
+# alignment:
+s5a1: 19-19
+s5b1: 3-3
+s5p1: 2-2
+s5s1: 1-1
+s5a2: 12-12
+s5c1: 4-4
+s5u1: 5-5
+s5p2: 7-7
+s5k1: 6-6
+s5s2: 8-9
+s5s3: 10-10
+s5n1: 11-11
+s5t1: 13-13
+s5s4: 14-14
+s5o1: 15-16
+s5b2: 18-18
+s5l1: 17-17
+s5h1: 23-24
+s5l2: 20-20,22-22
+s5b3: 21-21
+s5e1: 0-0
+s5s5: 25-25
+s5k2: 26-26
+
+# document level annotation:
+(s5s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2         3            4  5  6  7    8  9    10         11 12 13 14     15 16     17    18 19          20    21
+Words: Něco podobného nepamatujeme od r  .  1977 ,  řekl zpravodaji LN A  .  Pucher ze Správy KRNAP ve Špindlerově Mlýně .
+
+# sentence level graph:
+(s6r1 / říci-008
+        :ARG0 (s6p1 / Pucher
+            :mod (s6a1 / A)
+            :start (s6s1 / správa
+                :ARG1 (s6k1 / KRNAP
+                    :refer-number singular)
+                :place (s6m1 / mlýn
+                    :mod (s6s2 / Špindler
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s6z1 / zpravodaj
+            :possessor (s6l1 / LN
+                :refer-number plural)
+            :refer-number singular)
+        :effect (s6p2 / pamatovat-001
+            :ARG1 (s6n1 / něco
+                :mod (s6p3 / podobný
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG0 s6s1
+            :temporal (s6r2 / rok
+                :mod (s6x2 / 1977))
+            :refer-number plural
+            :refer-person 1st
+            :aspect activity
+            :polarity -)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6r1: 9-9
+s6p1: 14-14
+s6a1: 12-12
+s6s1: 15-16
+s6k1: 17-17
+s6m1: 18-18,20-20
+s6s2: 19-19
+s6z1: 10-10
+s6l1: 11-11
+s6p2: 3-3
+s6n1: 1-1
+s6p3: 2-2
+s6r2: 4-5
+s6x2: 7-7
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6k1 :same-entity s3p4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2              3   4    5       6  7  8                  9      10       11
+Words: V  inkriminovanou noc měli napilno i  na špindlerovomlýnské Labské přehradě .
+
+# sentence level graph:
+(s7m1 / mít-111
+        :temporal (s7n1 / noc
+            :mod (s7i1 / inkriminovaný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7e1 / entity)
+        :part-of-phraseme (s7n2 / napilno)
+        :clausal-marker (s7i2 / i)
+        :place (s7p1 / přehrada
+            :mod (s7l1 / Labský
+                :refer-number singular)
+            :mod (s7s1 / špindlerovomlýnské
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect state)
+
+# alignment:
+s7m1: 4-4
+s7n1: 1-1,3-3
+s7i1: 2-2
+s7e1: 0-0
+s7n2: 5-5
+s7i2: 6-6
+s7p1: 7-7,10-10
+s7l1: 9-9
+s7s1: 8-8
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7s1 :same-entity s6m1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1        2  3    4  5  6              7       8  9    10  11    12  13        14      15 16     17 18 19    20         21 22      23        24        25     26
+Words: Vzhledem k  tomu ,  že meteorologická stanice v  Ústí nad Labem jim nahlásila blížící se průtrž až po jejím propuknutí ,  vzniklo nebezpečí přeplnění nádrže .
+
+# sentence level graph:
+(s8v1 / vzniknout-002
+        :regard (s8n1 / nahlásit-001
+            :ARG0 (s8s1 / stanice
+                :mod (s8m1 / meteorologický
+                    :refer-number singular)
+                :place (s8u1 / Ústí
+                    :mod (s8l1 / Labe
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s8p1 / průtrž
+                :mod (s8b1 / blížící_se
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s8e1 / entity
+                :refer-number plural
+                :refer-person 3rd)
+            :clausal-marker (s8a1 / až)
+            :temporal (s8p2 / propuknutí
+                :ARG0 s8p1
+                :refer-number singular)
+            :aspect performance)
+        :ARG0 (s8n2 / nebezpečí
+            :name (s8p3 / přeplnění
+                :ARG1 (s8n3 / nádrž
+                    :refer-number singular)
+                :ARG0 (s8e2 / entity)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8v1: 22-22
+s8n1: 1-3,5-5,13-13
+s8s1: 7-7
+s8m1: 6-6
+s8u1: 8-9
+s8l1: 10-11
+s8p1: 16-16,19-19
+s8b1: 14-15
+s8e1: 12-12
+s8a1: 17-17
+s8p2: 18-18,20-20
+s8n2: 23-23
+s8p3: 24-24
+s8n3: 25-25
+s8e2: 0-0
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8l1 :same-entity s5l2)
+            (s8e1 :same-entity s7e1)
+            (s8n3 :same-entity s7p1)))
+
+

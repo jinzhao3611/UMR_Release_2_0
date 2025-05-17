@@ -1,0 +1,377 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2           3
+Words: Schválen konzervační program
+
+# sentence level graph:
+(s1s1 / schválit-002
+        :ARG0 (s1e1 / entity)
+        :ARG1 (s1p1 / program
+            :mod (s1k1 / konzervační
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s1s1: 1-1
+s1e1: 0-0
+s1p1: 3-3
+s1k1: 2-2
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2 3  4 5
+Words: Praha ( is ) -
+
+# sentence level graph:
+(s2p1 / Praha
+        :parenthesis (s2i1 / is)
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+s2i1: 3-3
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2    3    4  5    6     7  8          9       10    11    12 13 14 15         16  17  18 19  20 21  22  23    24
+Words: Do roku 2000 by mělo dojít k  postupnému omezení těžby uranu v  ČR ze současných 950 tun na 300 až 500 tun ročně .
+
+# sentence level graph:
+(s3d1 / dojít-009
+        :temporal (s3r1 / rok
+            :mod (s3x1 / 2000)
+            :refer-number singular)
+        :ARG0 (s3o1 / omezení
+            :ARG0 (s3e1 / entity)
+            :manner (s3p1 / postupný
+                :refer-number singular)
+            :ARG1 (s3t1 / těžba
+                :ARG1 (s3u1 / uran
+                    :refer-number singular)
+                :place (s3c1 / ČR
+                    :refer-number singular)
+                :refer-number singular)
+            :source (s3t2 / tuna
+                :mod (s3x2 / 950)
+                :mod (s3s1 / současný
+                    :refer-number plural)
+                :refer-number plural)
+            :effect (s3t3 / tuna
+                :mod (s3m1 / math
+                    :op1 (s3x3 / 300)
+                    :op2 (s3x4 / 500))
+                :duration (s3r2 / ročně)
+                :refer-number plural)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s3d1: 4-6
+s3r1: 1-2
+s3x1: 3-3
+s3o1: 7-7,9-9
+s3e1: 0-0
+s3p1: 8-8
+s3t1: 10-10
+s3u1: 11-11
+s3c1: 12-13
+s3t2: 14-14,17-17
+s3x2: 16-16
+s3s1: 15-15
+s3t3: 18-18,22-22
+s3m1: 20-20
+s3x3: 19-19
+s3x4: 21-21
+s3r2: 23-23
+
+# document level annotation:
+(s3s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2  3     4       5            6     7         8     9    10
+Words: Uvedl to včera ministr hospodářství České republiky Karel Dyba .
+
+# sentence level graph:
+(s4u1 / uvést-007
+        :effect (s4t1 / ten
+            :refer-number singular)
+        :temporal (s4v1 / včera)
+        :ARG0 (s4d1 / Dyba
+            :mod (s4k1 / Karel
+                :refer-number singular)
+            :mod (s4m1 / ministr
+                :possessor (s4h1 / hospodářství
+                    :refer-number singular)
+                :possessor (s4r1 / republika
+                    :mod (s4c1 / český
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4u1: 1-1
+s4t1: 2-2
+s4v1: 3-3
+s4d1: 9-9
+s4k1: 8-8
+s4m1: 4-4
+s4h1: 5-5
+s4r1: 7-7
+s4c1: 6-6
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4t1 :same-event s3d1)
+            (s4r1 :same-entity s3c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1   2    3    4  5       6            7        8         9           10      11   12     13 14        15      16    17   18       19 20  21      22     23   24     25       26
+Words: Jak dále řekl ,  poradou ekonomických ministrů schválený konzervační program sice povede k  prvotnímu omezení těžby této suroviny ,  ale zároveň umožní její rychlé obnovení .
+
+# sentence level graph:
+(s5b1 / but-91
+        :clausal-marker (s5s1 / sice)
+        :ARG1 (s5v1 / vést-001
+            :parenthesis (s5r1 / říci-009
+                :ARG0 (s5e1 / entity
+                    :refer-number singular
+                    :refer-person 3rd)
+                :ARG2 (s5e2 / entity)
+                :effect s5b1
+                :duration (s5d1 / dále)
+                :refer-number singular
+                :aspect performance)
+            :ARG0 (s5p1 / program
+                :mod (s5k1 / konzervační
+                    :refer-number singular)
+                :mod (s5s2 / schválený
+                    :ARG0 (s5p2 / porada
+                        :ARG0 (s5m1 / ministr
+                            :mod (s5e3 / ekonomický
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG1 (s5o1 / omezení
+                :ARG0 (s5e4 / entity)
+                :manner (s5p3 / prvotní
+                    :refer-number singular)
+                :ARG1 (s5t1 / těžba
+                    :ARG1 (s5s3 / surovina
+                        :mod (s5t2 / tento
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :ARG2 (s5u1 / umožnit-001
+            :parenthesis s5r1
+            :ARG0 s5p1
+            :temporal (s5z1 / zároveň)
+            :ARG2 (s5e5 / entity)
+            :ARG1 (s5o2 / obnovení
+                :ARG0 s5e5
+                :ARG1 s5t1
+                :mod (s5r2 / rychlý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance))
+
+# alignment:
+s5b1: 20-20
+s5s1: 11-11
+s5v1: 12-12
+s5o1: 13-13,15-15
+s5e4: 0-0
+s5p3: 14-14
+s5t1: 16-16,23-23
+s5s3: 18-18
+s5t2: 17-17
+s5r1: 1-1,3-3
+s5e1: 0-0
+s5e2: 0-0
+s5d1: 2-2
+s5p1: 10-10
+s5k1: 9-9
+s5s2: 8-8
+s5p2: 5-5
+s5m1: 7-7
+s5e3: 6-6
+s5u1: 22-22
+s5z1: 21-21
+s5e5: 0-0
+s5o2: 25-25
+s5r2: 24-24
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5o1 :same-entity s3o1)
+            (s5t1 :same-entity s3t1)
+            (s5s3 :same-entity s3u1)
+            (s5e1 :same-entity s4d1)
+            (s5p1 :same-entity s1p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1    2       3  4     5      6  7   8       9  10 11    12 13 14    15         16      17 18   19 20 21    22   23    24 25        26     27
+Words: Tato situace by mohla nastat v  tom případě ,  že těžba by se stala ekonomicky výhodná ,  např .  po změně ceny uranu na světových trzích .
+
+# sentence level graph:
+(s6n1 / nastat-001
+        :ARG0 (s6s1 / situace
+            :mod (s6t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s6i1 / identity-91
+            :ARG1 (s6p1 / případ
+                :mod (s6t2 / ten
+                    :refer-number singular)
+                :ARG1 (s6s2 / stát-se-001
+                    :ARG0 (s6t3 / těžba
+                        :refer-number singular
+                        :refer-person 3rd)
+                    :ARG1 (s6v1 / výhodný
+                        :regard (s6e1 / ekonomicky)
+                        :refer-number singular)
+                    :aspect performance)
+                :refer-number singular)
+            :clausal-marker (s6n2 / například)
+            :ARG2 (s6z1 / změna
+                :ARG1 (s6c1 / cena
+                    :ARG1 (s6u1 / uran
+                        :refer-number singular)
+                    :refer-number singular)
+                :place (s6t4 / trh
+                    :mod (s6s3 / světový
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular))
+        :aspect performance)
+
+# alignment:
+s6n1: 3-5
+s6s1: 2-2
+s6t1: 1-1
+s6i1: 17-17
+s6p1: 6-6,8-8
+s6t2: 7-7
+s6s2: 10-10,12-14
+s6t3: 11-11
+s6v1: 16-16
+s6e1: 15-15
+s6n2: 18-18
+s6z1: 20-21
+s6c1: 22-22
+s6u1: 23-23
+s6t4: 24-24,26-26
+s6s3: 25-25
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6s1 :same-entity s5o2)
+            (s6t3 :same-entity s5t1)
+            (s6u1 :same-entity s5s3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1        2        3  4       5       6  7    8           9  10   11         12   13     14 15    16   17 18      19    20      21 22     23         24      25
+Words: Ministři průmyslu a  financí dostali v  této souvislosti za úkol vypracovat plán výdajů ,  které jsou s  útlumem těžby spojeny ,  včetně odškodnění horníků .
+
+# sentence level graph:
+(s7d1 / dostat-005
+        :ARG0 (s7a1 / and
+            :op1 (s7m1 / ministr
+                :possessor (s7p1 / průmysl
+                    :refer-number singular)
+                :refer-number plural)
+            :op2 (s7m2 / ministr
+                :possessor (s7f1 / finance
+                    :refer-number singular)
+                :refer-number plural))
+        :regard (s7s1 / souvislost
+            :mod (s7t1 / tento
+                :refer-number singular)
+            :refer-number singular)
+        :effect (s7u1 / úkol
+            :refer-number singular)
+        :ARG1 (s7v1 / vypracovat-001
+            :ARG0 s7a1
+            :ARG1 (s7p2 / plán
+                :ARG1 (s7v2 / výdaj
+                    :ARG1-of (s7s2 / spojit-003
+                        :effect (s7u2 / útlum
+                            :ARG1 (s7t2 / těžba
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG0 (s7e1 / entity)
+                        :refer-number plural
+                        :aspect performance)
+                    :companion (s7o1 / odškodnění
+                        :ARG0 (s7e2 / entity)
+                        :ARG1 (s7h1 / horník
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number plural)
+                :refer-number singular)
+            :aspect performance)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s7d1: 5-5
+s7a1: 3-3
+s7m1: 1-1
+s7p1: 2-2
+s7m2: 0-0
+s7f1: 4-4
+s7s1: 6-6,8-8
+s7t1: 7-7
+s7u1: 9-10
+s7v1: 11-11
+s7p2: 12-12
+s7v2: 13-13,15-15
+s7s2: 16-16,20-20
+s7u2: 17-18
+s7t2: 19-19
+s7e1: 0-0
+s7o1: 22-23
+s7e2: 0-0
+s7h1: 24-24
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7u2 :same-entity s5o1)
+            (s7t2 :same-entity s6t3)))
+
+

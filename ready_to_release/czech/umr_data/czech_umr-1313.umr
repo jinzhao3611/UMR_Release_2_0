@@ -1,0 +1,655 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1   2  3     4      5
+Words: Rok od smrti Filipa Venclíka
+
+# sentence level graph:
+(s1r1 / rok
+        :temporal (s1s1 / smrt
+            :possessor (s1v1 / Venclík
+                :mod (s1f1 / Filip
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1r1: 1-1
+s1s1: 2-3
+s1v1: 5-5
+s1f1: 4-4
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1           2     3       4  5       6  7            8  9         10
+Words: Demonstrace proti fašismu ,  rasismu a  nacionalismu v  pražských ulicích
+
+# sentence level graph:
+(s2d1 / demonstrace
+        :affectee (s2a1 / and
+            :op1 (s2f1 / fašizmus
+                :refer-number singular)
+            :op2 (s2r1 / rasizmus
+                :refer-number singular)
+            :op3 (s2n1 / nacionalizmus
+                :refer-number singular))
+        :place (s2u1 / ulice
+            :mod (s2p1 / pražský
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number singular)
+
+# alignment:
+s2d1: 1-1
+s2a1: 6-6
+s2f1: 2-3
+s2r1: 2-2,5-5
+s2n1: 2-2,7-7
+s2u1: 8-8,10-10
+s2p1: 9-9
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s3p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s3p1: 1-1
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p1 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1        2          3  4  5       6           7  8     9          10    11     12    13            14     15       16
+Words: Převážně anarchisté si na sobotní demonstraci v  Praze připomněli první výročí smrti dvacetiletého Filipa Venclíka .
+
+# sentence level graph:
+(s4p1 / připomenout-001
+        :clausal-marker (s4p2 / převážně)
+        :ARG0 (s4a1 / anarchista
+            :refer-number plural)
+        :ARG2 s4a1
+        :place (s4d1 / demonstrace
+            :mod (s4s1 / sobotní
+                :refer-number singular)
+            :place (s4p3 / Praha
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s4v1 / výročí
+            :possessor (s4s2 / smrt
+                :possessor (s4v2 / Venclík
+                    :mod (s4f1 / Filip
+                        :mod (s4d2 / dvacetiletý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s4p4 / první
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s4p1: 9-9
+s4p2: 1-1
+s4a1: 2-3
+s4d1: 4-4,6-6
+s4s1: 5-5
+s4p3: 7-8
+s4v1: 11-11
+s4s2: 12-12
+s4v2: 15-15
+s4f1: 14-14
+s4d2: 13-13
+s4p4: 10-10
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4d1 :same-entity s2d1)
+            (s4p3 :same-entity s3p1)
+            (s4s2 :same-entity s1s1)
+            (s4v2 :same-entity s1v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1           2        3     4       5  6       7  8            9  10 11 12        13     14      15 16      17     18  19        20
+Words: Manifestace zaměřená proti fašismu ,  rasismu a  nacionalismu se až na ojedinělé osobní potyčky s  policií obešla bez incidentů .
+
+# sentence level graph:
+(s5o1 / obejít-se-001
+        :ARG0 (s5m1 / manifestace
+            :mod (s5z1 / zaměřený
+                :ARG1 (s5a1 / and
+                    :op1 (s5f1 / fašismus
+                        :refer-number singular)
+                    :op2 (s5r1 / rasismus
+                        :refer-number singular)
+                    :op3 (s5n1 / nacionalismus
+                        :refer-number singular))
+                :refer-number singular)
+            :refer-number singular)
+        :subtraction (s5p1 / potyčka
+            :mod (s5o2 / osobní
+                :refer-number plural)
+            :mod (s5o3 / ojedinělý
+                :refer-number plural)
+            :ARG2 (s5p2 / policie
+                :refer-number singular)
+            :refer-number plural)
+        :ARG1 (s5i1 / incident
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s5o1: 9-9,17-17
+s5m1: 1-1
+s5z1: 2-2
+s5a1: 7-7
+s5f1: 3-4
+s5r1: 3-3,6-6
+s5n1: 3-3,8-8
+s5p1: 10-11,14-14
+s5o2: 13-13
+s5o3: 12-12
+s5p2: 15-16
+s5i1: 18-19
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5m1 :same-entity s4d1)
+            (s5a1 :same-entity s2a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1            2       3  4     5      6        7          8   9  10  11   12
+Words: Podvečerního průvodu se podle odhadů novinářů zúčastnilo 200 až 300 lidí .
+
+# sentence level graph:
+(s6z1 / zúčastnit-se-001
+        :ARG1 (s6p1 / průvod
+            :mod (s6p2 / podvečerní
+                :refer-number singular)
+            :refer-number singular)
+        :regard (s6o1 / odhad
+            :ARG0 (s6n1 / novinář
+                :refer-number plural)
+            :refer-number plural)
+        :ARG0 (s6c1 / člověk
+            :mod (s6m1 / math
+                :op1 (s6x1 / 200)
+                :op2 (s6x2 / 300))
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s6z1: 3-3,7-7
+s6p1: 2-2
+s6p2: 1-1
+s6o1: 4-5
+s6n1: 6-6
+s6c1: 11-11
+s6m1: 9-9
+s6x1: 8-8
+s6x2: 10-10
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1          2      3       4     5    6      7    8  9       10   11 12 13     14
+Words: Anarchisté prošli centrem města přes Karlův most a  Pražský hrad až do Dejvic .
+
+# sentence level graph:
+(s7p1 / projít-005
+        :ARG0 (s7a1 / anarchista
+            :refer-number plural)
+        :path (s7c1 / centrum
+            :possessor (s7m1 / město
+                :refer-number singular)
+            :refer-number singular)
+        :path (s7a2 / and
+            :op1 (s7m2 / most
+                :mod (s7k1 / Karel
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s7h1 / hrad
+                :mod (s7p2 / Pražský
+                    :refer-number singular)
+                :refer-number singular))
+        :clausal-marker (s7a3 / až)
+        :goal (s7d1 / Dejvice
+            :refer-number plural)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s7p1: 2-2
+s7a1: 1-1
+s7c1: 3-3
+s7m1: 4-4
+s7a2: 8-8
+s7m2: 5-5,7-7
+s7k1: 6-6
+s7h1: 5-5,10-10
+s7p2: 9-9
+s7a3: 11-11
+s7d1: 12-13
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7a1 :same-entity s4a1)
+            (s7m1 :same-entity s4p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1  2       3     4        5  6     7   8  9   10   11
+Words: U  stanice metra Dejvická se sešlo 500 až 700 osob .
+
+# sentence level graph:
+(s8s1 / sejít-se-001
+        :place (s8s2 / stanice
+            :possessor (s8m1 / metro
+                :refer-number singular)
+            :name (s8d1 / Dejvický
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s8x1 / #Rcp
+            :refer-number plural)
+        :ARG0 (s8o1 / osoba
+            :mod (s8m2 / math
+                :op1 (s8x2 / 500)
+                :op2 (s8x3 / 700))
+            :refer-number plural)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8s1: 5-6
+s8s2: 1-2
+s8m1: 3-3
+s8d1: 4-4
+s8x1: 0-0
+s8o1: 10-10
+s8m2: 8-8
+s8x2: 7-7
+s8x3: 9-9
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8x1 :same-entity s8o1)
+            (s8o1 :same-entity s7a1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1            2  3   4         5      6  7         8       9  10  11 12    13      14      15       16         17 18 19   20    21     22 23 24       25         26    27       28   29              30 31              32     33     34       35 36       37           38    39        40
+Words: Demonstranti se pak přesunuli metrem na Václavské náměstí ,  kde u  sochy svatého Václava přečetli prohlášení ,  v  němž kromě zabití F  .  Venclíka připomněli další nedávnou oběť nesnášenlivosti ,  sedmnáctiletého Zdeňka Čepelu zabitého v  Tanvaldu příslušníkem hnutí skinheads .
+
+# sentence level graph:
+(s9p1 / přesunout-se-001
+        :ARG0 (s9d1 / demonstrant
+            :refer-number plural)
+        :start (s9e1 / entity)
+        :temporal (s9p2 / pak)
+        :instrument (s9m1 / metro
+            :refer-number singular)
+        :goal (s9n1 / náměstí
+            :mod (s9v1 / Václavský
+                :refer-number singular)
+            :place-of (s9p3 / přečíst-004
+                :place (s9s1 / socha
+                    :ARG1 (s9v2 / Václav
+                        :mod (s9s2 / svatý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 s9d1
+                :effect (s9p4 / prohlášení
+                    :place-of (s9p5 / připomenout-001
+                        :subtraction (s9z1 / zabití
+                            :ARG1 (s9v3 / Venclík
+                                :mod (s9f1 / F)
+                                :refer-number singular)
+                            :ARG0 (s9e2 / entity)
+                            :refer-number singular)
+                        :ARG0 s9d1
+                        :ARG2 (s9e3 / entity)
+                        :ARG1 (s9i1 / identity-91
+                            :ARG1 (s9o1 / oběť
+                                :possessor (s9s3 / snášenlivost
+                                    :refer-number singular
+                                    :polarity -)
+                                :mod (s9d2 / dávný
+                                    :refer-number singular
+                                    :polarity -)
+                                :mod (s9d3 / další
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :ARG2 (s9c1 / Čepela
+                                :mod (s9z2 / Zdeněk
+                                    :refer-number singular)
+                                :mod (s9s4 / sedmnáctiletý
+                                    :refer-number singular)
+                                :mod (s9z3 / zabitý
+                                    :place (s9t1 / Tanvald
+                                        :refer-number singular)
+                                    :ARG0 (s9p6 / příslušník
+                                        :possessor (s9h1 / hnutí
+                                            :name (s9s5 / skinheads
+                                                :refer-number plural)
+                                            :refer-number singular)
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :refer-number singular))
+                        :refer-number plural
+                        :aspect performance)
+                    :refer-number singular)
+                :refer-number plural
+                :aspect performance)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s9p1: 2-2,4-4
+s9d1: 1-1
+s9e1: 0-0
+s9p2: 3-3
+s9m1: 5-5
+s9n1: 6-6,8-8,10-10
+s9v1: 7-7
+s9p3: 15-15
+s9s1: 11-12
+s9v2: 14-14
+s9s2: 13-13
+s9p4: 16-16,18-19
+s9p5: 25-25
+s9z1: 20-21
+s9v3: 24-24
+s9f1: 22-22
+s9e2: 0-0
+s9e3: 0-0
+s9i1: 30-30
+s9o1: 28-28
+s9s3: 29-29
+s9d2: 27-27
+s9d3: 26-26
+s9c1: 33-33
+s9z2: 32-32
+s9s4: 31-31
+s9z3: 34-34
+s9t1: 35-36
+s9p6: 37-37
+s9h1: 38-38
+s9s5: 39-39
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9d1 :same-entity s8o1)
+            (s9m1 :same-entity s8m1)
+            (s9z1 :same-entity s4s2)
+            (s9v3 :same-entity s4v2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1  2          3  4  5  6     7  8     9      10         11   12 13      14   15  16   17    18     19      20 21    22   23     24   25 26         27 28       29      30     31 32     33  34  35 36 37  38      39  40       41  42 43   44   45
+Words: V  prohlášení se mj .  praví :  Kromě bestií vraždících lidi na ulicích jsou zde však ještě jejich přátelé ,  kteří dnes klidně sedí v  parlamentu ,  vydávají vlastní noviny a  dělají vše pro to ,  aby jednoho dne převzali moc v  této zemi .
+
+# sentence level graph:
+(s10p1 / pravit-003
+        :place (s10p2 / prohlášení
+            :refer-number singular)
+        :subtraction (s10m1 / mj)
+        :ARG0 (s10e1 / entity)
+        :ARG2 (s10e2 / entity)
+        :effect (s10b1 / být-011
+            :clausal-marker (s10v1 / však)
+            :subtraction (s10b2 / bestie
+                :mod (s10v2 / vraždící
+                    :ARG1 (s10c1 / člověk
+                        :refer-number plural)
+                    :place (s10u1 / ulice
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural)
+            :place (s10z1 / zde)
+            :clausal-marker (s10j1 / ještě)
+            :ARG0 (s10p3 / přítel
+                :possessor s10b2
+                :ARG0-of (s10a1 / and
+                    :op1 (s10s1 / sedět-002
+                        :temporal (s10d1 / dnes)
+                        :manner (s10k1 / klidně)
+                        :place (s10p4 / parlament
+                            :refer-number singular)
+                        :refer-number plural
+                        :refer-person 3rd
+                        :aspect activity)
+                    :op2 (s10v3 / vydávat-006
+                        :ARG1 (s10n1 / noviny
+                            :mod (s10v4 / vlastní
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number plural
+                        :refer-person 3rd
+                        :aspect habitual)
+                    :op3 (s10d2 / dělat-010
+                        :ARG1 (s10v5 / všechen
+                            :refer-number singular
+                            :refer-person 3rd)
+                        :purpose (s10p5 / převzít-002
+                            :temporal (s10d3 / den
+                                :mod (s10j2 / jeden
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :ARG0 s10p3
+                            :ARG1 (s10m2 / moc
+                                :place (s10z2 / země
+                                    :mod (s10t1 / tento
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :refer-number plural
+                            :aspect performance)
+                        :refer-number plural
+                        :refer-person 3rd
+                        :aspect activity))
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect process)
+
+# alignment:
+s10p1: 3-3,6-6
+s10p2: 1-2
+s10m1: 4-4
+s10e1: 0-0
+s10e2: 0-0
+s10b1: 14-14
+s10v1: 16-16
+s10b2: 8-9,18-18
+s10v2: 10-10
+s10c1: 11-11
+s10u1: 12-13
+s10z1: 15-15
+s10j1: 17-17
+s10p3: 19-19,21-21
+s10a1: 31-31
+s10s1: 24-24
+s10d1: 22-22
+s10k1: 23-23
+s10p4: 25-26
+s10v3: 28-28
+s10n1: 30-30
+s10v4: 29-29
+s10d2: 32-32
+s10v5: 33-33
+s10p5: 34-35,37-37,40-40
+s10d3: 39-39
+s10j2: 38-38
+s10m2: 41-41
+s10z2: 42-42,44-44
+s10t1: 43-43
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10p2 :same-entity s9p4)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1    2   3  4     5       6        7           8      9  10       11  12        13 14             15     16             17 18     19         20 21   22         23
+Words: Máme tím na mysli legálně působící fašistickou stranu -  Sdružení pro republiku -  Republikánskou stranu Československa ,  uvedli anarchisté ve svém prohlášení .
+
+# sentence level graph:
+(s11u1 / uvést-007
+        :ARG0 (s11a1 / anarchista
+            :refer-number plural
+            :refer-person 1st)
+        :place (s11p1 / prohlášení
+            :ARG1 (s11e1 / entity)
+            :ARG0 s11a1
+            :refer-number singular)
+        :effect (s11m1 / mít-065
+            :regard (s11t1 / ten
+                :refer-number singular)
+            :ARG0 (s11e2 / entity
+                :refer-number plural
+                :refer-person 1st)
+            :part-of-phraseme (s11n1 / na_mysli
+                :refer-number singular)
+            :ARG1 (s11i1 / identity-91
+                :ARG1 (s11s1 / strana
+                    :mod (s11f1 / fašistický
+                        :refer-number singular)
+                    :mod (s11p2 / působící
+                        :manner (s11l1 / legálně)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG2 (s11i2 / identity-91
+                    :ARG1 (s11s2 / Sdružení
+                        :affectee (s11r1 / republika
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG2 (s11s3 / strana
+                        :possessor (s11c1 / Československo
+                            :refer-number singular)
+                        :mod (s11r2 / Republikánský
+                            :refer-number singular)
+                        :refer-number singular))
+                :refer-number plural
+                :refer-person 3rd)
+            :refer-number plural
+            :refer-person 1st
+            :aspect state)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s11u1: 18-18
+s11a1: 19-19,21-21
+s11p1: 20-20,22-22
+s11e1: 0-0
+s11m1: 1-1
+s11t1: 2-2
+s11e2: 0-0
+s11n1: 3-4
+s11i1: 9-9
+s11s1: 8-8
+s11f1: 7-7
+s11p2: 6-6
+s11l1: 5-5
+s11i2: 13-13
+s11s2: 10-10
+s11r1: 11-12
+s11s3: 15-15
+s11c1: 16-16
+s11r2: 14-14
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11a1 :same-entity s11e2)
+            (s11p1 :same-entity s10p2)
+            (s11e2 :same-entity s9d1)
+            (s11i1 :same-entity s10p3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s12-root
+# :: snt12
+Index: 1          2  3     4           5       6  7         8         9          10    11       12
+Words: Anarchisté na závěr shromáždění vyzvali k  vytvoření radikální organizace proti fašistům .
+
+# sentence level graph:
+(s12v1 / vyzvat-001
+        :ARG0 (s12a1 / anarchista
+            :refer-number plural)
+        :ARG2 (s12e1 / entity)
+        :temporal (s12s1 / shromáždění
+            :refer-number singular)
+        :ARG1 (s12v2 / vytvoření
+            :ARG0 (s12e2 / entity)
+            :ARG1 (s12o1 / organizace
+                :affectee (s12f1 / fašista
+                    :refer-number plural)
+                :mod (s12r1 / radikální
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number plural
+        :aspect performance)
+
+# alignment:
+s12v1: 5-5
+s12a1: 1-1
+s12e1: 0-0
+s12s1: 2-4
+s12v2: 6-7
+s12e2: 0-0
+s12o1: 9-9
+s12f1: 10-11
+s12r1: 8-8
+
+# document level annotation:
+(s12s0 / sentence
+    :coref ((s12a1 :same-entity s11a1)
+            (s12s1 :same-entity s5m1)))
+
+

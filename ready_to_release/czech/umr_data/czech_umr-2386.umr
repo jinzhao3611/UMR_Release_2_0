@@ -1,0 +1,319 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1 2           3
+Words: Z fotbalových kruhů
+
+# sentence level graph:
+(s1e1 / event
+        :start (s1k1 / kruh
+            :mod (s1f1 / fotbalový
+                :refer-number plural)
+            :refer-number plural)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1k1: 1-1,3-3
+s1f1: 2-2
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1      2    3        4            5      6  7            8    9  10        11     12 13   14      15     16    17      18
+Words: Krátce před začátkem regionálního utkání v  portugalském Pico de Regalados zemřel 31 letý brankář Albino Silva Ribeiro .
+
+# sentence level graph:
+(s2z1 / zemřít-001
+        :manner (s2k1 / krátce
+            :temporal (s2z2 / začátek
+                :possessor (s2u1 / utkání
+                    :ARG0 (s2e1 / entity)
+                    :ARG2 (s2e2 / entity)
+                    :manner (s2r1 / regionální
+                        :refer-number singular)
+                    :place (s2x1 / #Forn
+                        :FPHR (s2p1 / Pico)
+                        :FPHR (s2d1 / de)
+                        :FPHR (s2r2 / Regalados)
+                        :mod (s2p2 / portugalský
+                            :refer-number singular))
+                    :refer-number singular)
+                :refer-number singular))
+        :ARG0 (s2r3 / Ribeiro
+            :mod (s2a1 / Albino
+                :refer-number singular)
+            :mod (s2s1 / Silva
+                :refer-number singular)
+            :mod (s2b1 / brankář
+                :mod (s2x2 / 31_letý)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s2z1: 11-11
+s2k1: 1-1
+s2z2: 2-3
+s2u1: 5-5
+s2e1: 0-0
+s2e2: 0-0
+s2r1: 4-4
+s2x1: 0-0
+s2p1: 8-8
+s2d1: 9-9
+s2r2: 10-10
+s2p2: 7-7
+s2r3: 17-17
+s2a1: 15-15
+s2s1: 16-16
+s2b1: 14-14
+s2x2: 12-13
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1   2            3      4       5    6  7    8  9  10     11       12
+Words: Při rozcvičování chytil několik míčů a  poté se v  brance zhroutil .
+
+# sentence level graph:
+(s3a1 / and
+        :op1 (s3c1 / chytit-001
+            :ARG0 (s3e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :temporal (s3r1 / rozcvičování
+                :ARG0 (s3e2 / entity)
+                :refer-number singular)
+            :ARG1 (s3m1 / míč
+                :mod (s3n1 / několik)
+                :refer-number plural)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s3z1 / zhroutit-se-002
+            :ARG0 s3e1
+            :temporal (s3p1 / poté)
+            :place (s3b1 / branka
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s3a1: 6-6
+s3c1: 3-3
+s3r1: 1-2
+s3e2: 0-0
+s3m1: 5-5
+s3n1: 4-4
+s3e1: 0-0
+s3z1: 8-8,11-11
+s3p1: 7-7
+s3b1: 9-10
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2r3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2  3       4  5         6      7
+Words: Brzy po převozu do nemocnice zemřel .
+
+# sentence level graph:
+(s4z1 / zemřít-001
+        :temporal (s4b1 / brzy
+            :temporal (s4p1 / převoz
+                :goal (s4n1 / nemocnice
+                    :refer-number singular)
+                :refer-number singular))
+        :ARG0 (s4e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4z1: 6-6
+s4b1: 1-1
+s4p1: 2-3
+s4n1: 4-5
+s4e1: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4e1 :same-entity s3e1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2     3      4     5       6
+Words: Příčina smrti nebyla zatím uvedena .
+
+# sentence level graph:
+(s5u1 / uvést-001
+        :ARG1 (s5p1 / příčina
+            :ARG1 (s5s1 / smrt
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s5e1 / entity)
+        :temporal (s5z1 / zatím)
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s5u1: 3-3,5-5
+s5p1: 1-1
+s5s1: 2-2
+s5e1: 0-0
+s5z1: 4-4
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5s1 :same-event s4z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1      2        3  4       5         6       7  8  9    10    11 12      13
+Words: Lothar Matthäus ,  kapitán německého Bayernu ,  se brzy vrátí na trávník .
+
+# sentence level graph:
+(s6v1 / vrátit-se-004
+        :ARG0 (s6i1 / identity-91
+            :ARG1 (s6m1 / Matthäus
+                :mod (s6l1 / Lothar
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s6k1 / kapitán
+                :possessor (s6b1 / Bayern
+                    :mod (s6n1 / německý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular))
+        :temporal (s6b2 / brzy)
+        :goal (s6t1 / trávník
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance)
+
+# alignment:
+s6v1: 8-8,10-10
+s6i1: 3-3
+s6m1: 2-2
+s6l1: 1-1
+s6k1: 4-4
+s6b1: 6-6
+s6n1: 5-5
+s6b2: 9-9
+s6t1: 11-12
+
+# document level annotation:
+(s6s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2  3 4         5   6         7     8        9
+Words: Oznámil to v rozhovoru pro televizní kanál Premiere .
+
+# sentence level graph:
+(s7o1 / oznámit-003
+        :effect (s7t1 / ten
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG0 (s7e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG2 (s7e2 / entity)
+        :place (s7r1 / rozhovor
+            :affectee (s7k1 / kanál
+                :mod (s7t2 / televizní
+                    :refer-number singular)
+                :name (s7p1 / Premiere)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s7o1: 1-1
+s7t1: 2-2
+s7e1: 0-0
+s7e2: 0-0
+s7r1: 3-4
+s7k1: 5-5,7-7
+s7t2: 6-6
+s7p1: 8-8
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7t1 :same-event s6v1)
+            (s7e1 :same-entity s6i1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1        2      3  4     5  6          7      8  9       10        11    12      13         14
+Words: Matthäus utrpěl v  lednu v  přátelském utkání s  Arminií Bielefeld vážné zranění achillovky .
+
+# sentence level graph:
+(s8u1 / utrpět-001
+        :ARG0 (s8m1 / Matthäus
+            :refer-number singular
+            :refer-person 3rd)
+        :temporal (s8l1 / leden
+            :refer-number singular)
+        :place (s8u2 / utkání
+            :ARG0 (s8e1 / entity)
+            :ARG2 (s8a1 / Arminia
+                :mod (s8b1 / Bielefeld
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s8p1 / přátelský
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s8z1 / zranění
+            :ARG0 (s8e2 / entity)
+            :ARG1 (s8a2 / achilovka
+                :refer-number singular)
+            :manner (s8v1 / vážný
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8u1: 2-2
+s8m1: 1-1
+s8l1: 3-4
+s8u2: 5-5,7-7
+s8e1: 0-0
+s8a1: 8-9
+s8b1: 10-10
+s8p1: 6-6
+s8z1: 12-12
+s8e2: 0-0
+s8a2: 13-13
+s8v1: 11-11
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8m1 :same-entity s7e1)))
+
+

@@ -1,0 +1,53 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2      3 4     5  6      7    8
+Words: Britští vojáci v Irsku na snímku Jana Mihalička
+
+# sentence level graph:
+(s1e1 / event
+        :ARG0 (s1v1 / voják
+            :mod (s1b1 / britský
+                :refer-number plural)
+            :place (s1i1 / Irsko
+                :refer-number singular)
+            :refer-number plural)
+        :place (s1s1 / snímek
+            :ARG0 (s1m1 / Mihaliček
+                :mod (s1j1 / Jan
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1v1: 2-2
+s1b1: 1-1
+s1i1: 3-4
+s1s1: 5-6
+s1m1: 8-8
+s1j1: 7-7
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1
+Words: Foto
+
+# sentence level graph:
+(s2f1 / foto
+        :refer-number singular)
+
+# alignment:
+s2f1: 1-1
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2f1 :same-entity s1s1)))
+
+

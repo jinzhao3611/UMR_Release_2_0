@@ -1,0 +1,283 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1 2           3
+Words: | Nezapomeňte |
+
+# sentence level graph:
+(s1z1 / zapomenout-001
+        :ARG0 (s1e1 / entity)
+        :ARG1 (s1e2 / entity)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s1z1: 2-2
+s1e1: 0-0
+s1e2: 0-0
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1  2     3  4  5      6  7     8         9   10
+Words: V  pátek 25 .  března se platí spotřební daň :
+
+# sentence level graph:
+(s2p1 / platit-001
+        :temporal (s2p2 / pátek
+            :refer-number singular)
+        :temporal (s2b1 / březen
+            :mod (s2x1 / 25)
+            :refer-number singular)
+        :ARG0 (s2e1 / entity)
+        :ARG1 (s2d1 / daň
+            :mod (s2s1 / spotřební
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2p1: 6-7
+s2p2: 1-2
+s2b1: 5-5
+s2x1: 3-3
+s2e1: 0-0
+s2d1: 9-9
+s2s1: 8-8
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2b1 :same-entity s2p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2        3  4  5  6  7   8  9    10     11 12    13      14     15        16         17     18     19 20 21 22 23        24     25         26 27   28 29     30 31    32      33     34        35         36     37     38 39 40         41      42 43 44 45 46        47     48         49 50   51 52   53      54      55       56
+Words: Podání přiznání a  :  a  )  daň za únor plátce ,  jehož měsíční daňová povinnost nepřekročí částku 100000 Kč ,  b  )  vyrovnání daňové povinnosti za únor u  plátce ,  jehož měsíční daňová povinnost nepřekročí částku 100000 Kč a  nepřesáhne 2000000 Kč ,  c  )  vyrovnání daňové povinnosti za únor u  daně hrazené denními zálohami .
+
+# sentence level graph:
+(s3i1 / identity-91
+        :ARG1 (s3p1 / podání
+            :ARG0 (s3e1 / entity)
+            :ARG1 (s3p2 / přiznání
+                :refer-number singular)
+            :refer-number singular)
+        :ARG2 (s3a1 / and
+            :op1 (s3d1 / daň
+                :clausal-marker (s3a2 / a)
+                :duration (s3u1 / únor
+                    :refer-number singular)
+                :possessor (s3p3 / plátce
+                    :mod (s3p4 / překročit-002
+                        :ARG0 (s3p5 / povinnost
+                            :possessor s3p3
+                            :mod (s3d2 / daňový
+                                :refer-number singular)
+                            :mod (s3m1 / měsíční
+                                :refer-number singular)
+                            :refer-number singular)
+                        :ARG1 (s3c1 / částka
+                            :mod (s3k1 / Kč
+                                :mod (s3x2 / 100000))
+                            :refer-number singular)
+                        :refer-number singular
+                        :refer-person 3rd
+                        :aspect performance
+                        :polarity -)
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s3v1 / vyrovnání
+                :clausal-marker (s3b1 / b)
+                :ARG1 (s3p6 / povinnost
+                    :mod (s3d3 / daňový
+                        :refer-number singular)
+                    :duration (s3u2 / únor
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s3e2 / entity)
+                :place (s3p7 / plátce
+                    :mod (s3a3 / and
+                        :op1 (s3p8 / překročit-002
+                            :ARG0 (s3p9 / povinnost
+                                :possessor s3p7
+                                :mod (s3m2 / měsíční
+                                    :refer-number singular)
+                                :mod (s3d4 / daňový
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :ARG1 (s3c2 / částka
+                                :mod (s3k2 / Kč
+                                    :mod (s3x4 / 100000))
+                                :refer-number singular)
+                            :refer-number singular
+                            :refer-person 3rd
+                            :aspect performance
+                            :polarity -)
+                        :op2 (s3p10 / přesáhnout-001
+                            :ARG0 s3p9
+                            :ARG1 (s3k3 / Kč
+                                :mod (s3x6 / 2000000))
+                            :refer-number singular
+                            :refer-person 3rd
+                            :aspect performance
+                            :polarity -))
+                    :refer-number singular)
+                :refer-number singular)
+            :op3 (s3v2 / vyrovnání
+                :clausal-marker (s3c3 / c)
+                :ARG1 (s3p11 / povinnost
+                    :mod (s3d5 / daňový
+                        :refer-number singular)
+                    :duration (s3u3 / únor
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG0 (s3e3 / entity)
+                :place (s3d6 / daň
+                    :mod (s3h1 / hrazený
+                        :ARG0 (s3z1 / záloha
+                            :mod (s3d7 / denní
+                                :refer-number plural)
+                            :refer-number plural)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)))
+
+# alignment:
+s3i1: 3-3
+s3p1: 1-1
+s3e1: 0-0
+s3p2: 2-2
+s3a1: 43-43
+s3d1: 7-7
+s3a2: 5-5
+s3u1: 8-9
+s3p3: 10-10,12-12
+s3p4: 16-16
+s3p5: 15-15
+s3d2: 14-14
+s3m1: 13-13
+s3c1: 17-17
+s3k1: 19-19
+s3x2: 18-18
+s3v1: 23-23
+s3b1: 21-21
+s3p6: 25-25
+s3d3: 24-24
+s3u2: 26-27
+s3e2: 0-0
+s3p7: 28-29,31-31
+s3a3: 39-39
+s3p8: 35-35
+s3c2: 36-36
+s3k2: 38-38
+s3x4: 37-37
+s3p9: 34-34
+s3m2: 32-32
+s3d4: 33-33
+s3p10: 40-40
+s3k3: 42-42
+s3x6: 41-41
+s3v2: 46-46
+s3c3: 44-44
+s3p11: 48-48
+s3d5: 47-47
+s3u3: 49-50
+s3e3: 0-0
+s3d6: 51-52
+s3h1: 53-53
+s3z1: 55-55
+s3d7: 54-54
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3u2 :same-entity s3u1)
+            (s3p9 :same-entity s3p5)
+            (s3u3 :same-entity s3u2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2      3   4  5      6   7       8    9  10      11      12 13     14       15 16  17 18   19     20 21       22         23      24
+Words: Ve stejný den je termín pro placení Daně z  přidané hodnoty :  Podání přiznání a  daň za únor plátce s  měsíčním zdaňovacím obdobím .
+
+# sentence level graph:
+(s4b1 / být-011
+        :temporal (s4d1 / den
+            :mod (s4s1 / stejný
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s4t1 / termín
+            :purpose (s4i1 / identity-91
+                :ARG1 (s4p1 / placení
+                    :ARG0 (s4e1 / entity)
+                    :ARG1 (s4d2 / daň
+                        :mod (s4h1 / hodnota
+                            :mod (s4p2 / přidaný
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG2 (s4e2 / event
+                    :ARG0 (s4a1 / and
+                        :op1 (s4p3 / podání
+                            :ARG0 (s4e3 / entity)
+                            :ARG1 (s4p4 / přiznání
+                                :refer-number singular)
+                            :refer-number singular)
+                        :op2 (s4d3 / daň
+                            :possessor (s4p5 / plátce
+                                :companion (s4o1 / období
+                                    :mod (s4z1 / zdaňovací
+                                        :refer-number singular)
+                                    :mod (s4m1 / měsíční
+                                        :refer-number singular)
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :duration (s4u1 / únor
+                                :refer-number singular)
+                            :refer-number singular))
+                    :aspect state))
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s4b1: 4-4
+s4d1: 1-1,3-3
+s4s1: 2-2
+s4t1: 5-5
+s4i1: 12-12
+s4p1: 6-7
+s4e1: 0-0
+s4d2: 8-8
+s4h1: 9-9,11-11
+s4p2: 10-10
+s4e2: 0-0
+s4a1: 15-15
+s4p3: 13-13
+s4e3: 0-0
+s4p4: 14-14
+s4d3: 16-16
+s4p5: 19-19
+s4o1: 20-20,23-23
+s4z1: 22-22
+s4m1: 21-21
+s4u1: 17-18
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4d1 :same-entity s2b1)
+            (s4u1 :same-entity s3u3)))
+
+

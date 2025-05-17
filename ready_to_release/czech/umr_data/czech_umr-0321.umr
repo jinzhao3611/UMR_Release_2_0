@@ -1,0 +1,325 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1     2  3       4
+Words: Děvče ze Zlatého západu
+
+# sentence level graph:
+(s1d1 / děvče
+        :start (s1z1 / západ
+            :mod (s1z2 / Zlatý
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1d1: 1-1
+s1z1: 2-2,4-4
+s1z2: 3-3
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1        2       3  4    5  6    7  8       9  10    11         12     13
+Words: Giacommo Puccini (  1858 -  1924 )  pochází ze staré hudebnické rodiny .
+
+# sentence level graph:
+(s2p1 / pocházet-002
+        :ARG0 (s2p2 / Puccini
+            :mod (s2g1 / Giacommo
+                :refer-number singular)
+            :parenthesis (s2m1 / math
+                :op1 (s2x1 / 1858)
+                :op2 (s2x2 / 1924))
+            :refer-number singular)
+        :start (s2r1 / rodina
+            :mod (s2h1 / hudebnický
+                :refer-number singular)
+            :mod (s2s1 / starý
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s2p1: 8-8
+s2p2: 2-2
+s2g1: 1-1
+s2m1: 5-5
+s2x1: 4-4
+s2x2: 6-6
+s2r1: 9-9,12-12
+s2h1: 11-11
+s2s1: 10-10
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1         2     3     4      5    6          7       8
+Words: Pucciniho opery patří dodnes mezi nejčastěji uváděné .
+
+# sentence level graph:
+(s3p1 / patřit-003
+        :ARG0 (s3o1 / opera
+            :source (s3p2 / Puccini
+                :refer-number singular)
+            :refer-number plural)
+        :temporal (s3d1 / dodnes)
+        :goal (s3o2 / opera
+            :mod (s3u1 / uváděný
+                :frequency (s3c1 / často)
+                :refer-number plural)
+            :refer-number plural)
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s3p1: 3-3
+s3o1: 2-2
+s3p2: 1-1
+s3d1: 4-4
+s3o2: 0-0
+s3u1: 7-7
+s3c1: 6-6
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3p2 :same-entity s2p2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1    2              3     4     5      6  7      8         9  10       11
+Words: Mezi nejoblíbenější stále patří Bohéma ,  Madame Butterfly ,  Turandot .
+
+# sentence level graph:
+(s4p1 / patřit-003
+        :goal (s4o1 / opera
+            :mod (s4o2 / oblíbený
+                :refer-number plural)
+            :refer-number plural)
+        :duration (s4s1 / stále)
+        :ARG0 (s4a1 / and
+            :op1 (s4b1 / Bohéma
+                :refer-number singular)
+            :op2 (s4b2 / Butterfly
+                :mod (s4m1 / Madame))
+            :op3 (s4t1 / Turandot))
+        :refer-number plural
+        :refer-person 3rd
+        :aspect state)
+
+# alignment:
+s4p1: 4-4
+s4o1: 0-0
+s4o2: 2-2
+s4s1: 3-3
+s4a1: 9-9
+s4b1: 5-5
+s4b2: 8-8
+s4m1: 7-7
+s4t1: 10-10
+
+# document level annotation:
+(s4s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1    2     3  4     5     6  7       8      9  10    11       12   13   14   15      16
+Words: Méně známá je opera Děvče ze Zlatého západu ,  jejíž premiéra roku 1910 byla senzací .
+
+# sentence level graph:
+(s5b1 / být-007
+        :ARG1 (s5z1 / známý
+            :extent (s5m1 / málo)
+            :refer-number singular)
+        :ARG0 (s5o1 / opera
+            :name (s5d1 / Děvče
+                :start (s5z2 / západ
+                    :mod (s5z3 / zlatý
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s5b2 / být-007
+                :ARG0 (s5p1 / premiéra
+                    :possessor s5o1
+                    :temporal (s5r1 / rok
+                        :mod (s5x2 / 1910)
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s5s1 / senzace
+                    :refer-number singular)
+                :aspect activity)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5b1: 3-3
+s5z1: 2-2
+s5m1: 1-1
+s5o1: 4-4,10-10
+s5d1: 5-5
+s5z2: 6-6,8-8
+s5z3: 7-7
+s5b2: 14-14
+s5p1: 11-11
+s5r1: 12-12
+s5x2: 13-13
+s5s1: 15-15
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5o1 :same-entity s1d1)
+            (s5z2 :same-entity s1z1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1   2      3  4       5         6       7       8  9      10     11 12 13      14 15    16     17        18
+Words: Při pobytu v  Americe Pucciniho zaujala činohra ,  kterou napsal D  .  Belasco ,  autor Madame Butterfly .
+
+# sentence level graph:
+(s6z1 / zaujmout-001
+        :temporal (s6p1 / pobyt
+            :place (s6a1 / Amerika
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s6p2 / Puccini
+            :refer-number singular)
+        :ARG0 (s6c1 / činohra
+            :effect-of (s6n1 / napsat-007
+                :ARG0 (s6i1 / identity-91
+                    :ARG1 (s6b1 / Belasco
+                        :mod (s6d1 / D)
+                        :refer-number singular)
+                    :ARG2 (s6a2 / autor
+                        :ARG1 (s6b2 / Butterfly
+                            :mod (s6m1 / madame))
+                        :refer-number singular))
+                :refer-number singular
+                :aspect performance)
+            :refer-number singular)
+        :aspect performance)
+
+# alignment:
+s6z1: 6-6
+s6p1: 1-2
+s6a1: 3-4
+s6p2: 5-5
+s6c1: 7-7,9-9
+s6n1: 10-10
+s6i1: 14-14
+s6b1: 13-13
+s6d1: 11-11
+s6a2: 15-15
+s6b2: 17-17
+s6m1: 16-16
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6p2 :same-entity s3p2)
+            (s6b2 :same-entity s4b2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1  2          3       4     5  6         7         8     9       10 11       12     13 14 15      16 17 18 19          20
+Words: V  televizním záznamu opery z  Londýnské královské opery uvidíme v  hlavních rolích P  .  Dominga a  C  .  Neblettovou .
+
+# sentence level graph:
+(s7u1 / uvidět-002
+        :place (s7z1 / záznam
+            :ARG1 (s7o1 / opera
+                :refer-number singular)
+            :mod (s7t1 / televizní
+                :refer-number singular)
+            :start (s7o2 / opera
+                :mod (s7k1 / královský
+                    :refer-number singular)
+                :mod (s7l1 / Londýnský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s7e1 / entity
+            :refer-number plural
+            :refer-person 1st)
+        :place (s7r1 / role
+            :mod (s7h1 / hlavní
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s7a1 / and
+            :op1 (s7d1 / Domingo
+                :mod (s7p1 / P)
+                :refer-number singular)
+            :op2 (s7n1 / Neblettová
+                :mod (s7c1 / C)
+                :refer-number singular))
+        :refer-number plural
+        :refer-person 1st
+        :aspect performance)
+
+# alignment:
+s7u1: 9-9
+s7z1: 1-1,3-3
+s7o1: 4-4
+s7t1: 2-2
+s7o2: 5-5,8-8
+s7k1: 7-7
+s7l1: 6-6
+s7e1: 0-0
+s7r1: 10-10,12-12
+s7h1: 11-11
+s7a1: 16-16
+s7d1: 15-15
+s7p1: 13-13
+s7n1: 19-19
+s7c1: 17-17
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7o1 :same-entity s5o1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1 2   3 4 5  6 7 8     9
+Words: ( jež ) ( ČT 2 - 20.10 )
+
+# sentence level graph:
+(s8a1 / and
+        :op1 (s8x1 / #Dash
+            :ARG0 (s8c1 / ČT
+                :mod (s8x2 / 2))
+            :temporal (s8x3 / 20.10))
+        :op2 (s8j1 / jež))
+
+# alignment:
+s8a1: 0-0
+s8x1: 7-7
+s8c1: 5-5
+s8x2: 6-6
+s8x3: 8-8
+s8j1: 2-2
+
+# document level annotation:
+(s8s0 / sentence)
+
+

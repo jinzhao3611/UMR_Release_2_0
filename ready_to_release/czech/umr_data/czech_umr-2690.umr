@@ -1,0 +1,212 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2
+Words: Škodlivá vodka
+
+# sentence level graph:
+(s1v1 / vodka
+        :mod (s1s1 / škodlivý
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1v1: 2-2
+s1s1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1     2
+Words: Praha -
+
+# sentence level graph:
+(s2p1 / Praha
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1      2         3     4        5     6          7  8             9        10 11   12 13 14 15      16    17     18         19         20       21
+Words: Zdraví škodlivou látku zjistila Česká zemědělská a  potravinářská inspekce (  ČZPI )  u  25 procent vodky značky Stoličnaja zahraniční produkce .
+
+# sentence level graph:
+(s3z1 / zjistit-002
+        :ARG1 (s3l1 / látka
+            :mod (s3s1 / škodlivý
+                :ARG1 (s3z2 / zdraví
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s3i1 / identity-91
+            :ARG1 (s3i2 / inspekce
+                :mod (s3a1 / and
+                    :op1 (s3z3 / zemědělský
+                        :refer-number singular)
+                    :op2 (s3p1 / potravinářský
+                        :refer-number singular))
+                :mod (s3c1 / Český
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s3c2 / ČZPI))
+        :place (s3p2 / procento
+            :mod (s3v1 / vodka
+                :mod (s3z4 / značka
+                    :name (s3s2 / Stoličnaja
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s3p3 / produkce
+                    :mod (s3z5 / zahraniční
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3x1 / 25)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s3z1: 4-4
+s3l1: 3-3
+s3s1: 2-2
+s3z2: 1-1
+s3i1: 10-10
+s3i2: 9-9
+s3a1: 7-7
+s3z3: 6-6
+s3p1: 8-8
+s3c1: 5-5
+s3c2: 11-11
+s3p2: 13-13,15-15
+s3v1: 16-16
+s3z4: 17-17
+s3s2: 18-18
+s3p3: 20-20
+s3z5: 19-19
+s3x1: 14-14
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3v1 :same-entity s1v1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1   2     3     4        5  6       7   8            9    10 11   12
+Words: Byl vydán zákaz expedice a  prodeje pro nevyhovující chuť a  vůni .
+
+# sentence level graph:
+(s4v1 / vydat-011
+        :ARG0 (s4e1 / entity)
+        :ARG2 (s4e2 / entity)
+        :predicative-noun (s4a1 / and
+            :op1 (s4z1 / zákaz
+                :ARG0 s4e1
+                :ARG2 s4e2
+                :ARG1 (s4e3 / expedice
+                    :ARG0 s4e2
+                    :refer-number singular)
+                :refer-number singular)
+            :op2 (s4z2 / zákaz
+                :ARG0 s4e1
+                :ARG2 s4e2
+                :ARG1 (s4p1 / prodej
+                    :ARG0 s4e2
+                    :refer-number singular)
+                :refer-number singular))
+        :cause (s4a2 / and
+            :op1 (s4c1 / chuť
+                :mod (s4v2 / vyhovující
+                    :refer-number singular
+                    :polarity -)
+                :refer-number singular)
+            :op2 (s4v3 / vůně
+                :mod s4v2
+                :refer-number singular))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4v1: 1-2
+s4e1: 0-0
+s4e2: 0-0
+s4a1: 5-5
+s4z1: 3-3
+s4e3: 4-4
+s4z2: 0-0
+s4p1: 6-6
+s4a2: 10-10
+s4c1: 7-7,9-9
+s4v2: 8-8
+s4v3: 7-7,11-11
+
+# document level annotation:
+(s4s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1  2           3     4  5        6             7          8     9        10   11     12 13      14            15
+Words: V  pozastavené vodce se podařilo identifikovat stonásobně větší množství cizí složky -  ftalátu dibutylnatého .
+
+# sentence level graph:
+(s5p1 / podařit-se-001
+        :ARG0 (s5e1 / entity)
+        :ARG1 (s5i1 / identifikovat-002
+            :place (s5v1 / vodka
+                :mod (s5p2 / pozastavený
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 s5e1
+            :ARG1 (s5m1 / množství
+                :mod (s5v2 / velký
+                    :extent (s5s1 / stonásobně)
+                    :refer-number singular)
+                :mod (s5i2 / identity-91
+                    :ARG1 (s5s2 / složka
+                        :mod (s5c1 / cizí
+                            :refer-number singular)
+                        :refer-number singular)
+                    :ARG2 (s5f1 / ftalát
+                        :mod (s5d1 / dibutylnatý
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :aspect process)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s5p1: 4-5
+s5e1: 0-0
+s5i1: 6-6
+s5v1: 1-1,3-3
+s5p2: 2-2
+s5m1: 9-9
+s5v2: 8-8
+s5s1: 7-7
+s5i2: 12-12
+s5s2: 11-11
+s5c1: 10-10
+s5f1: 13-13
+s5d1: 14-14
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5v1 :same-entity s3v1)
+            (s5i2 :same-entity s3l1)))
+
+

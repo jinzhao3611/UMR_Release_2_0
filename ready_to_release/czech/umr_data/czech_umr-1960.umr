@@ -1,0 +1,117 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1
+Words: Krátce
+
+# sentence level graph:
+(s1e1 / event
+        :manner (s1k1 / krátce)
+        :aspect state)
+
+# alignment:
+s1e1: 0-0
+s1k1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1          2       3          4     5     6     7  8  9    10      11 12         13    14    15         16  17       18      19      20     21
+Words: Chorvatský tenista Ivaniševič musel vzdát zápas 1  .  kola turnaje ve Stuttgartu proti Švédu Larssonovi pro obnovené bolesti pravého kolena .
+
+# sentence level graph:
+(s2v1 / vzdát-002
+        :ARG0 (s2i1 / Ivaniševič
+            :mod (s2t1 / tenista
+                :mod (s2c1 / chorvatský
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s2z1 / zápas
+            :possessor (s2k1 / kolo
+                :possessor (s2t2 / turnaj
+                    :place (s2s1 / Stuttgart
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s2x1 / 1)
+                :refer-number singular)
+            :affectee (s2l1 / Larsson
+                :mod (s2s2 / Švéd
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :cause (s2b1 / bolest
+            :ARG1 (s2k2 / koleno
+                :mod (s2p1 / pravý
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s2o1 / obnovený
+                :refer-number plural)
+            :refer-number plural)
+        :aspect performance)
+
+# alignment:
+s2v1: 4-5
+s2i1: 3-3
+s2t1: 2-2
+s2c1: 1-1
+s2z1: 6-6
+s2k1: 9-9
+s2t2: 10-10
+s2s1: 11-12
+s2x1: 7-7
+s2l1: 13-13,15-15
+s2s2: 14-14
+s2b1: 16-16,18-18
+s2k2: 20-20
+s2p1: 19-19
+s2o1: 17-17
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1       2       3  4  5  6       7        8          9       10      11
+Words: Zároveň oznámil ,  že se podrobí nedaleko Norimberku operaci menisku .
+
+# sentence level graph:
+(s3o1 / oznámit-001
+        :temporal (s3z1 / zároveň)
+        :ARG0 (s3e1 / entity
+            :refer-number singular
+            :refer-person 3rd)
+        :ARG1 (s3p1 / podrobit-se-001
+            :ARG0 s3e1
+            :place (s3n1 / Norimberk
+                :refer-number singular)
+            :ARG1 (s3o2 / operace
+                :ARG1 (s3m1 / meniskus
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3o1: 2-2
+s3z1: 1-1
+s3e1: 0-0
+s3p1: 4-6
+s3n1: 7-8
+s3o2: 9-9
+s3m1: 10-10
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3e1 :same-entity s2i1)))
+
+

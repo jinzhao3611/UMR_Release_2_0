@@ -1,0 +1,259 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1       2
+Words: Lemieux odpočívá
+
+# sentence level graph:
+(s1o1 / odpočívat-001
+        :ARG0 (s1l1 / Lemieux
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s1o1: 2-2
+s1l1: 1-1
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1          2
+Words: Pittsburgh -
+
+# sentence level graph:
+(s2p1 / Pittsburgh
+        :refer-number singular)
+
+# alignment:
+s2p1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1     2  3          4                5         6     7       8       9  10      11         12 13          14 15 16        17           18     19
+Words: Jeden z  nejlepších severoamerických hokejistů Mario Lemieux oznámil na tiskové konferenci v  Pittsburghu ,  že vynechává nadcházející sezonu .
+
+# sentence level graph:
+(s3o1 / oznámit-001
+        :ARG0 (s3l1 / Lemieux
+            :mod (s3m1 / Mario
+                :refer-number singular)
+            :mod (s3j1 / jeden
+                :start (s3h1 / hokejista
+                    :mod (s3s1 / severoamerický
+                        :refer-number plural)
+                    :mod (s3d1 / dobrý
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number singular)
+            :refer-number singular)
+        :place (s3k1 / konference
+            :mod (s3t1 / tiskový
+                :refer-number singular)
+            :place (s3p1 / Pittsburgh
+                :refer-number singular)
+            :refer-number singular)
+        :ARG1 (s3v1 / vynechávat-001
+            :ARG0 s3l1
+            :ARG1 (s3s2 / sezona
+                :mod (s3n1 / nadcházející
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect habitual)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3o1: 8-8
+s3l1: 7-7
+s3m1: 6-6
+s3j1: 1-1
+s3h1: 2-2,5-5
+s3s1: 4-4
+s3d1: 3-3
+s3k1: 9-9,11-11
+s3t1: 10-10
+s3p1: 12-13
+s3v1: 15-16
+s3s2: 18-18
+s3n1: 17-17
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3l1 :same-entity s1l1)
+            (s3p1 :same-entity s2p1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1     2     3      4     5  6   7    8    9  10  11     12 13 14           15 16   17   18   19         20       21
+Words: Stále ještě miluji hokej a  rád bych hrál ,  ale lékaři mi to nedoporučují ,  řekl hráč týmu Pittsburgh Penguins .
+
+# sentence level graph:
+(s4r1 / říci-008
+        :ARG0 (s4h1 / hráč
+            :possessor (s4t1 / tým
+                :name (s4x1 / #Forn
+                    :FPHR (s4p1 / Pittsburgh)
+                    :FPHR (s4p2 / Penguins))
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 1st)
+        :ARG2 (s4e1 / entity)
+        :effect (s4b1 / but-91
+            :ARG1 (s4a1 / and
+                :op1 (s4m1 / milovat-001
+                    :ARG0 (s4e2 / entity
+                        :refer-number singular
+                        :refer-person 1st)
+                    :duration (s4s1 / stále)
+                    :duration (s4j1 / ještě)
+                    :ARG1 (s4h2 / hokej
+                        :refer-number singular)
+                    :refer-number singular
+                    :refer-person 1st
+                    :aspect state)
+                :op2 (s4h3 / hrát-001
+                    :ARG0 s4e2
+                    :ARG1 (s4e3 / entity)
+                    :manner (s4r2 / rád
+                        :mod-of s4e2
+                        :refer-number singular)
+                    :refer-number singular
+                    :aspect activity))
+            :ARG2 (s4d1 / doporučovat-001
+                :ARG0 (s4l1 / lékař
+                    :refer-number plural)
+                :ARG1 (s4t2 / ten
+                    :refer-number singular)
+                :ARG2 s4e2
+                :refer-number plural
+                :refer-person 3rd
+                :aspect activity
+                :polarity -))
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s4r1: 16-16
+s4h1: 17-17
+s4t1: 18-18
+s4x1: 0-0
+s4p1: 19-19
+s4p2: 20-20
+s4e1: 0-0
+s4b1: 10-10
+s4a1: 5-5
+s4m1: 3-3
+s4s1: 1-1
+s4j1: 2-2
+s4h2: 4-4
+s4e2: 12-12
+s4h3: 7-8
+s4e3: 0-0
+s4r2: 6-6
+s4d1: 14-14
+s4l1: 11-11
+s4t2: 13-13
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4h1 :same-entity s4e2)
+            (s4e2 :same-entity s3l1)
+            (s4t2 :same-event s4h3)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1       2    3     4           5      6
+Words: Lemieux trpí řadou zdravotních potíží .
+
+# sentence level graph:
+(s5t1 / trpět-002
+        :ARG0 (s5l1 / Lemieux
+            :refer-number singular)
+        :ARG1 (s5r1 / řada
+            :mod (s5p1 / potíž
+                :mod (s5z1 / zdravotní
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect activity)
+
+# alignment:
+s5t1: 2-2
+s5l1: 1-1
+s5r1: 3-3
+s5p1: 5-5
+s5z1: 4-4
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5l1 :same-entity s4h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1     2  3      4       5   6  7     8  9      10       11     12
+Words: Trápí ho vleklé bolesti zad ,  navíc mu lékaři zjistili anémii .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6t1 / trápit-001
+            :ARG1 (s6e1 / entity
+                :refer-number singular
+                :refer-person 3rd)
+            :ARG0 (s6b1 / bolest
+                :ARG0 (s6z1 / záda
+                    :refer-number singular)
+                :mod (s6v1 / vleklý
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :refer-person 3rd
+            :aspect activity)
+        :op2 (s6z2 / zjistit-002
+            :clausal-marker (s6n1 / navíc)
+            :ARG0 (s6l1 / lékař
+                :refer-number plural)
+            :affectee s6e1
+            :ARG1 (s6a2 / anémie
+                :refer-number singular)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s6a1: 6-6
+s6t1: 1-1
+s6e1: 2-2,8-8
+s6b1: 4-4
+s6z1: 5-5
+s6v1: 3-3
+s6z2: 10-10
+s6n1: 7-7
+s6l1: 9-9
+s6a2: 11-11
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6e1 :same-entity s5l1)
+            (s6l1 :same-entity s4l1)))
+
+

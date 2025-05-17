@@ -1,0 +1,550 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1         2     3       4 5
+Words: Likvidace ropné havárie v Jihlavě
+
+# sentence level graph:
+(s1l1 / likvidace
+        :ARG1 (s1h1 / havárie
+            :mod (s1r1 / ropný
+                :refer-number singular)
+            :place (s1j1 / Jihlava
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular)
+
+# alignment:
+s1l1: 1-1
+s1h1: 3-3
+s1r1: 2-2
+s1j1: 4-5
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1       2
+Words: Jihlava -
+
+# sentence level graph:
+(s2j1 / Jihlava
+        :refer-number singular)
+
+# alignment:
+s2j1: 1-1
+
+# document level annotation:
+(s2s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s3-root
+# :: snt3
+Index: 1  2     3     4        5     6  7          8        9       10 11      12        13 14   15      16 17   18   19  20       21
+Words: Na 20000 litrů motorové nafty z  havarované cisterny vyteklo v  pondělí odpoledne do řeky Jihlavy u  obce Luka nad Jihlavou .
+
+# sentence level graph:
+(s3v1 / vytéci-001
+        :ARG0 (s3l1 / l
+            :mod (s3n1 / nafta
+                :mod (s3m1 / motorový
+                    :refer-number singular)
+                :refer-number singular)
+            :mod (s3x1 / 20000)
+            :refer-number plural)
+        :start (s3c1 / cisterna
+            :mod (s3h1 / havarovaný
+                :refer-number singular)
+            :refer-number singular)
+        :temporal (s3p1 / pondělí
+            :refer-number singular)
+        :temporal (s3o1 / odpoledne)
+        :goal (s3r1 / řeka
+            :mod (s3j1 / Jihlava
+                :refer-number singular)
+            :refer-number singular)
+        :place (s3o2 / obec
+            :name (s3l2 / Luka
+                :mod (s3j2 / Jihlava
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s3v1: 9-9
+s3l1: 1-1,3-3
+s3n1: 5-5
+s3m1: 4-4
+s3x1: 2-2
+s3c1: 6-6,8-8
+s3h1: 7-7
+s3p1: 10-11
+s3o1: 12-12
+s3r1: 13-14
+s3j1: 15-15
+s3o2: 16-17
+s3l2: 18-18
+s3j2: 19-20
+
+# document level annotation:
+(s3s0 / sentence
+    :coref ((s3r1 :same-entity s1j1)
+            (s3j2 :same-entity s3r1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s4-root
+# :: snt4
+Index: 1  2               3     4    5          6         7     8     9  10    11        12
+Words: Na půlkilometrovém úseku řeky vybudovali požárníci norné stěny a  naftu odčerpali .
+
+# sentence level graph:
+(s4a1 / and
+        :op1 (s4v1 / vybudovat-002
+            :place (s4u1 / úsek
+                :possessor (s4r1 / řeka
+                    :refer-number singular)
+                :mod (s4p1 / půlkilometrový
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s4p2 / požárník
+                :refer-number plural)
+            :ARG1 (s4s1 / stěna
+                :mod (s4n1 / norný
+                    :refer-number plural)
+                :refer-number plural)
+            :refer-number plural
+            :aspect performance)
+        :op2 (s4o1 / odčerpat-002
+            :ARG1 (s4n2 / nafta
+                :refer-number singular)
+            :ARG0 s4p2
+            :start (s4e1 / entity)
+            :refer-number plural
+            :aspect performance))
+
+# alignment:
+s4a1: 9-9
+s4v1: 5-5
+s4u1: 1-1,3-3
+s4r1: 4-4
+s4p1: 2-2
+s4p2: 6-6
+s4s1: 8-8
+s4n1: 7-7
+s4o1: 11-11
+s4n2: 10-10
+s4e1: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :coref ((s4r1 :same-entity s3j2)
+            (s4n2 :same-entity s3l1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s5-root
+# :: snt5
+Index: 1     2  3   4          5        6       7      8     9       10      11 12      13        14      15
+Words: Včera o  tom informoval náčelník okresní správy Sboru požární ochrany v  Jihlavě František Tretera .
+
+# sentence level graph:
+(s5i1 / informovat-001
+        :temporal (s5v1 / včera)
+        :ARG1 (s5t1 / ten
+            :refer-number singular)
+        :ARG2 (s5e1 / entity)
+        :ARG0 (s5t2 / Tretera
+            :mod (s5f1 / František
+                :refer-number singular)
+            :mod (s5n1 / náčelník
+                :possessor (s5s1 / správa
+                    :possessor (s5s2 / sbor
+                        :possessor (s5o1 / ochrana
+                            :mod (s5p1 / požární
+                                :refer-number singular)
+                            :refer-number singular)
+                        :place (s5j1 / Jihlava
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s5o2 / okresní
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :refer-number singular
+        :aspect process)
+
+# alignment:
+s5i1: 4-4
+s5v1: 1-1
+s5t1: 2-3
+s5e1: 0-0
+s5t2: 14-14
+s5f1: 13-13
+s5n1: 5-5
+s5s1: 7-7
+s5s2: 8-8
+s5o1: 10-10
+s5p1: 9-9
+s5j1: 11-12
+s5o2: 6-6
+
+# document level annotation:
+(s5s0 / sentence
+    :coref ((s5j1 :same-entity s2j1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s6-root
+# :: snt6
+Index: 1                2     3        4        5  6  7  8  9  10 11    12            13       14    15 16 17          18      19   20 21    22       23 24      25 26       27
+Words: Sedmatřicetiletý řidič cisterny brněnské s  .  r  .  o  .  Hekra nepřizpůsobil rychlost jízdy ,  v  pravotočivé zatáčce vjel na levou krajnici a  narazil do svodidel .
+
+# sentence level graph:
+(s6a1 / and
+        :op1 (s6p1 / přizpůsobit-001
+            :ARG0 (s6r1 / řidič
+                :ARG1 (s6c1 / cisterna
+                    :refer-number singular)
+                :possessor (s6s1 / společnost
+                    :name (s6h1 / Hekra
+                        :refer-number singular)
+                    :companion (s6r2 / ručení
+                        :mod (s6o1 / omezený
+                            :refer-number singular)
+                        :refer-number singular)
+                    :mod (s6b1 / brněnský
+                        :refer-number singular)
+                    :refer-number singular)
+                :mod (s6s2 / sedmatřicetiletý
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG2 (s6e1 / entity)
+            :ARG1 (s6r3 / rychlost
+                :possessor (s6j1 / jízda
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance
+            :polarity -)
+        :op2 (s6v1 / vjet-001
+            :ARG0 s6r1
+            :place (s6z1 / zatáčka
+                :mod (s6p2 / pravotočivý
+                    :refer-number singular)
+                :refer-number singular)
+            :goal (s6k1 / krajnice
+                :mod (s6l1 / levý
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op3 (s6n1 / narazit-006
+            :ARG0 s6r1
+            :goal (s6s3 / svodidlo
+                :refer-number plural)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s6a1: 23-23
+s6p1: 12-12
+s6e1: 0-0
+s6r3: 13-13
+s6j1: 14-14
+s6r1: 2-2
+s6c1: 3-3
+s6s1: 5-5
+s6h1: 11-11
+s6r2: 7-7
+s6o1: 9-9
+s6b1: 4-4
+s6s2: 1-1
+s6v1: 19-19
+s6z1: 16-16,18-18
+s6p2: 17-17
+s6k1: 20-20,22-22
+s6l1: 21-21
+s6n1: 24-24
+s6s3: 25-26
+
+# document level annotation:
+(s6s0 / sentence
+    :coref ((s6c1 :same-entity s3c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s7-root
+# :: snt7
+Index: 1       2  3    4          5  6       7  8      9  10    11
+Words: Vozidlo se poté převrátilo na střechu a  spadlo ze srázu .
+
+# sentence level graph:
+(s7a1 / and
+        :op1 (s7p1 / převrátit-se-001
+            :ARG0 (s7v1 / vozidlo
+                :refer-number singular)
+            :temporal (s7p2 / poté)
+            :goal (s7s1 / střecha
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance)
+        :op2 (s7s2 / spadnout-002
+            :ARG0 s7v1
+            :start (s7s3 / sráz
+                :refer-number singular)
+            :refer-number singular
+            :aspect performance))
+
+# alignment:
+s7a1: 7-7
+s7p1: 2-2,4-4
+s7p2: 3-3
+s7s1: 5-6
+s7v1: 1-1
+s7s2: 8-8
+s7s3: 9-10
+
+# document level annotation:
+(s7s0 / sentence
+    :coref ((s7v1 :same-entity s6c1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s8-root
+# :: snt8
+Index: 1     2     3          4         5      6       7  8     9  10     11     12 13   14   15    16
+Words: Řidič podle brněnských policistů utrpěl zranění ,  které si vyžádá léčení po dobu čtyř týdnů .
+
+# sentence level graph:
+(s8u1 / utrpět-001
+        :ARG0 (s8r1 / řidič
+            :refer-number singular)
+        :regard (s8p1 / policista
+            :mod (s8b1 / brněnský
+                :refer-number plural)
+            :refer-number plural)
+        :ARG1 (s8z1 / zranění
+            :ARG0 (s8e1 / entity)
+            :ARG0-of (s8v1 / vyžádat-si-001
+                :ARG1 (s8l1 / léčení
+                    :ARG0 (s8e2 / entity)
+                    :ARG1 (s8e3 / entity)
+                    :duration (s8t1 / týden
+                        :mod (s8c1 / čtyři
+                            :refer-number plural)
+                        :refer-number plural)
+                    :refer-number singular)
+                :refer-number singular
+                :refer-person 3rd
+                :aspect performance)
+            :refer-number singular)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s8u1: 5-5
+s8r1: 1-1
+s8p1: 2-2,4-4
+s8b1: 3-3
+s8z1: 6-6,8-8
+s8e1: 0-0
+s8v1: 9-10
+s8l1: 11-11
+s8e2: 0-0
+s8e3: 0-0
+s8t1: 12-13,15-15
+s8c1: 14-14
+
+# document level annotation:
+(s8s0 / sentence
+    :coref ((s8r1 :same-entity s6r1)
+            (s8b1 :same-entity s6b1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s9-root
+# :: snt9
+Index: 1  2    3       4       5         6  7     8  9     10      11     12 13 14    15 16   17         18    19             20 21       22 23       24        25
+Words: I  když rychlým zásahem požárníků ,  kteří na místo havárie dojeli za 12 minut ,  byly ekologické škody minimalizovány ,  náčelník je nedokáže odhadnout .
+
+# sentence level graph:
+(s9d1 / dokázat-002
+        :ARG1 (s9b1 / but-91
+            :ARG2 (s9m1 / minimalizovat-001
+                :ARG0 (s9z1 / zásah
+                    :ARG0 (s9p1 / požárník
+                        :ARG0-of (s9d2 / dojet-002
+                            :goal (s9m2 / místo
+                                :possessor (s9h1 / havárie
+                                    :refer-number singular)
+                                :refer-number singular)
+                            :duration (s9m3 / minuta
+                                :mod (s9x1 / 12)
+                                :refer-number plural)
+                            :refer-number plural
+                            :aspect performance)
+                        :refer-number plural
+                        :refer-person 3rd)
+                    :mod (s9r1 / rychlý
+                        :refer-number singular)
+                    :refer-number singular)
+                :ARG1 (s9s1 / škoda
+                    :mod (s9e1 / ekologický
+                        :refer-number plural)
+                    :refer-number plural)
+                :refer-number plural
+                :aspect process)
+            :ARG1 (s9o1 / odhadnout-001
+                :ARG0 s9n1
+                :ARG1 s9s1
+                :aspect performance))
+        :ARG0 (s9n1 / náčelník
+            :refer-number singular)
+        :refer-number singular
+        :refer-person 3rd
+        :aspect performance
+        :polarity -)
+
+# alignment:
+s9d1: 23-23
+s9n1: 21-21
+s9b1: 2-2
+s9o1: 24-24
+s9m1: 1-1,16-16,19-19
+s9z1: 4-4
+s9p1: 5-5,7-7
+s9d2: 11-11
+s9m2: 8-9
+s9h1: 10-10
+s9m3: 12-12,14-14
+s9x1: 13-13
+s9r1: 3-3
+s9s1: 18-18,22-22
+s9e1: 17-17
+
+# document level annotation:
+(s9s0 / sentence
+    :coref ((s9n1 :same-entity s5t2)
+            (s9z1 :same-entity s1l1)
+            (s9p1 :same-entity s4p2)
+            (s9m2 :same-entity s6z1)
+            (s9h1 :same-entity s1h1)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s10-root
+# :: snt10
+Index: 1         2     3  4     5    6        7  8          9  10      11       12 13        14 15   16 17    18 19      20            21     22
+Words: Odčerpaná nafta s  vodou byla odvezena v  cisternách do Benziny Šlapánov k  likvidaci a  dnes se začne s  odběrem kontaminované zeminy .
+
+# sentence level graph:
+(s10a1 / and
+        :op1 (s10o1 / odvézt-002
+            :ARG1 (s10n1 / nafta
+                :mod (s10o2 / odčerpaný
+                    :refer-number singular)
+                :companion (s10v1 / voda
+                    :refer-number singular)
+                :refer-number singular)
+            :ARG0 (s10e1 / entity)
+            :start (s10e2 / entity)
+            :manner (s10c1 / cisterna
+                :refer-number plural)
+            :goal (s10b1 / Benzina
+                :mod (s10s1 / Šlapánov
+                    :refer-number singular)
+                :refer-number singular)
+            :purpose (s10l1 / likvidace
+                :refer-number singular)
+            :aspect performance)
+        :op2 (s10z1 / začít-001
+            :temporal (s10d1 / dnes)
+            :ARG0 (s10e3 / entity)
+            :ARG1 (s10o3 / odběr
+                :ARG1 (s10z2 / zemina
+                    :mod (s10k1 / kontaminovaný
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect performance))
+
+# alignment:
+s10a1: 14-14
+s10o1: 5-6
+s10n1: 2-2
+s10o2: 1-1
+s10v1: 3-4
+s10e1: 0-0
+s10e2: 0-0
+s10c1: 7-8
+s10b1: 9-10
+s10s1: 11-11
+s10l1: 12-13
+s10z1: 16-17
+s10d1: 15-15
+s10e3: 0-0
+s10o3: 18-19
+s10z2: 21-21
+s10k1: 20-20
+
+# document level annotation:
+(s10s0 / sentence
+    :coref ((s10n1 :same-entity s4n2)))
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s11-root
+# :: snt11
+Index: 1        2     3    4    5   6        7     8  9   10 11      12      13
+Words: Zasažené pásmo však bude pod dohledem ještě 14 dnů ,  podotkl Tretera .
+
+# sentence level graph:
+(s11p1 / podotknout-001
+        :ARG0 (s11t1 / Tretera
+            :refer-number singular)
+        :effect (s11b1 / být-011
+            :clausal-marker (s11v1 / však)
+            :ARG0 (s11p2 / pásmo
+                :mod (s11z1 / zasažený
+                    :refer-number singular)
+                :refer-number singular)
+            :goal (s11d1 / dohled
+                :refer-number singular)
+            :duration (s11d2 / den
+                :clausal-marker (s11j1 / ještě)
+                :mod (s11x1 / 14)
+                :refer-number plural)
+            :refer-number singular
+            :refer-person 3rd
+            :aspect activity)
+        :refer-number singular
+        :aspect performance)
+
+# alignment:
+s11p1: 11-11
+s11t1: 12-12
+s11b1: 4-4
+s11v1: 3-3
+s11p2: 2-2
+s11z1: 1-1
+s11d1: 5-6
+s11d2: 9-9
+s11j1: 7-7
+s11x1: 8-8
+
+# document level annotation:
+(s11s0 / sentence
+    :coref ((s11t1 :same-entity s9n1)
+            (s11p2 :same-entity s4u1)))
+
+

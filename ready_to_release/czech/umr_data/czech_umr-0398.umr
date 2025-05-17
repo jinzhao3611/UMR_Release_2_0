@@ -1,0 +1,87 @@
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s1-root
+# :: snt1
+Index: 1        2           3   4       5        6     7           8       9  10          11    12        13      14
+Words: Množství elektroniky pod kapotou ovládáte řadou nenápadných spínačů na přístrojové desce obklopené béžovou kůží
+
+# sentence level graph:
+(s1o1 / ovládat-001
+        :ARG1 (s1m1 / množství
+            :mod (s1e1 / elektronika
+                :place (s1k1 / kapota
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :ARG0 (s1e2 / entity
+            :refer-number plural
+            :refer-person 2nd)
+        :instrument (s1r1 / řada
+            :mod (s1s1 / spínač
+                :mod (s1n1 / nápadný
+                    :refer-number plural
+                    :polarity -)
+                :place (s1d1 / deska
+                    :mod (s1p1 / přístrojový
+                        :refer-number singular)
+                    :mod (s1o2 / obklopený
+                        :instrument (s1k2 / kůže
+                            :mod (s1b1 / béžový
+                                :refer-number singular)
+                            :refer-number singular)
+                        :refer-number singular)
+                    :refer-number singular)
+                :refer-number plural)
+            :refer-number singular)
+        :refer-number plural
+        :refer-person 2nd
+        :aspect activity)
+
+# alignment:
+s1o1: 5-5
+s1m1: 1-1
+s1e1: 2-2
+s1k1: 3-4
+s1e2: 0-0
+s1r1: 6-6
+s1s1: 8-8
+s1n1: 7-7
+s1d1: 9-9,11-11
+s1p1: 10-10
+s1o2: 12-12
+s1k2: 14-14
+s1b1: 13-13
+
+# document level annotation:
+(s1s0 / sentence)
+
+
+################################################################################
+# meta-info :: type = partial_conversion :: sent_id = u_tree-cs-s2-root
+# :: snt2
+Index: 1    2     3 4        5
+Words: Foto autor - Vladimír Šulc
+
+# sentence level graph:
+(s2e1 / event
+        :ARG1 (s2f1 / foto
+            :refer-number singular)
+        :ARG0 (s2a1 / autor
+            :parenthesis (s2s1 / Šulc
+                :mod (s2v1 / Vladimír
+                    :refer-number singular)
+                :refer-number singular)
+            :refer-number singular)
+        :aspect state)
+
+# alignment:
+s2e1: 0-0
+s2f1: 1-1
+s2a1: 2-2
+s2s1: 5-5
+s2v1: 4-4
+
+# document level annotation:
+(s2s0 / sentence
+    :coref ((s2s1 :same-entity s2a1)))
+
+
