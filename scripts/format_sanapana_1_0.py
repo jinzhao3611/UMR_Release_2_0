@@ -8,6 +8,9 @@ root = current_script_dir.parent
 
 import re
 
+# Import the formatting functions from tab_format.py
+from tab_format import format_graph, format_doc_annotation, format_alignment
+
 def align_rows(rows):
     """
     Given a list of rows, each row a list of strings, preserve the exact spacing
@@ -186,23 +189,45 @@ def reformat_file(old_path, new_path):
             # 3) If we're in *none* of those sections, then we parse morphological lines
             parts = line.split(None, 1)
             if len(parts) >= 2:
-                tag, content = parts[0], parts[1]
-                if tag == "Words":
+                tag = parts[0]
+                content = parts[1]
+
+                # Special handling for multi-word tag names
+                if tag == "Morpheme" and content.startswith("Cat"):
+                    # Handle "Morpheme Cat" tag
+                    tag = "Morpheme Cat"
+                    # Extract the actual content (skip "Cat" and any following whitespace)
+                    content = content[3:].lstrip()
+                    wc_line = content
+                elif tag == "Word" and content.startswith("Gloss"):
+                    # Handle "Word Gloss" tag
+                    tag = "Word Gloss"
+                    # Extract the actual content (skip "Gloss" and any following whitespace)
+                    content = content[5:].lstrip()
+                    wg_line = content
+                # Normal tag handling
+                elif tag == "Words":
                     tx_line = content
                 elif tag == "Morphemes":
                     mb_line = content
-                elif tag == "Morpheme Gloss(en)":
-                    ge_line = content
-                elif tag == "Morpheme Gloss(es)":
-                    ps_line = content
-                elif tag == "Morpheme Cat":
-                    wc_line = content
-                elif tag == "Word Gloss":
-                    wg_line = content
+                elif tag == "Morpheme" and content.startswith("Gloss(en)"):
+                    ge_line = content[9:].lstrip()
+                elif tag == "Morpheme" and content.startswith("Gloss(es)"):
+                    ps_line = content[9:].lstrip()
+                elif tag == "English" and content.startswith("Sent Gloss:"):
+                    tr_text_eng = content[11:].strip()
+                elif tag == "Spanish" and content.startswith("Sent Gloss"):
+                    tr_text_spa = content[10:].strip()
+                    # Remove leading colon if present
+                    if tr_text_spa.startswith(":"):
+                        tr_text_spa = tr_text_spa[1:].strip()
                 elif tag == "English Sent Gloss:":
                     tr_text_eng = content.strip()
                 elif tag == "Spanish Sent Gloss":
                     tr_text_spa = content.strip()
+                    # Remove leading colon if present
+                    if tr_text_spa.startswith(":"):
+                        tr_text_spa = tr_text_spa[1:].strip()
                 # If none of those, just ignore or do something else...
                 continue
 
@@ -254,39 +279,66 @@ def reformat_file(old_path, new_path):
             # Generate index numbers
             index_parts = [str(i+1) for i in range(len(all_tokens))]
             
+            # Debug info
+            print(f"wc_line exists: {wc_line is not None}, Value: {wc_line}")
+            print(f"wg_line exists: {wg_line is not None}, Value: {wg_line}")
+            
             # Add rows with new labels but preserve original content
             reformatted.append(INDEX_TITLE + "\t".join(index_parts))
             reformatted.append(TITLES["Words"] + tx_line)
             if mb_line: reformatted.append(TITLES["Morphemes"] + mb_line)
-            if ge_line: reformatted.append(TITLES["Morpheme Gloss(English)"] + ge_line)
-            if ps_line: reformatted.append(TITLES["Morpheme Gloss(Spanish)"] + ps_line)
-            if tr_text_eng: reformatted.append(TITLES["Translation(English)"] + tr_text_eng)
-            if tr_text_spa: reformatted.append(TITLES["Translation(Spanish)"] + tr_text_spa)
+            if ge_line: reformatted.append(TITLES["Morpheme Gloss(en)"] + ge_line)
+            if ps_line: reformatted.append(TITLES["Morpheme Gloss(es)"] + ps_line)
+            if wc_line: reformatted.append(TITLES["Morpheme Cat"] + wc_line)
+            if wg_line: reformatted.append(TITLES["Word Gloss"] + wg_line)
+            if tr_text_eng: reformatted.append(TITLES["English Sent Gloss:"] + tr_text_eng)
+            if tr_text_spa: reformatted.append(TITLES["Spanish Sent Gloss"] + tr_text_spa)
             
-            # Add translation on its own line if it exists
-            if tr_text_eng:
-                reformatted.append(TRANSLATION_TITLE + tr_text_eng)
-            if tr_text_spa:
-                reformatted.append(TRANSLATION_TITLE + tr_text_spa)
+            # Remove the duplicate translation entries
+            # No longer add translation on its own line
 
         # Add the sections with their content
         reformatted.append("")
-        reformatted.append("# sentence level graph:")
+        
+        # Format the sentence level graph with consistent tab indentation
         if sentence_level_graph:
-            for line in sentence_level_graph[1:]:  # Skip the header since we already added it
-                reformatted.append(line)
+            # Construct the graph with header
+            graph_section = "\n".join(sentence_level_graph)
+            # Apply the format_graph function to consistently format with tab indentation
+            formatted_graph = format_graph(graph_section)
+            # Add the formatted graph section to the output
+            reformatted.append(formatted_graph)
+        else:
+            # Just add the header if there's no graph
+            reformatted.append("# sentence level graph:")
 
         reformatted.append("")
-        reformatted.append("# alignment:")
+        
+        # Format the alignment section with space after colon instead of before
         if alignment_lines:
-            for line in alignment_lines[1:]:  # Skip the header since we already added it
-                reformatted.append(line)
+            # Construct the alignment section with header
+            alignment_section = "\n".join(alignment_lines)
+            # Apply the format_alignment function for consistent formatting
+            formatted_alignment = format_alignment(alignment_section)
+            # Add the formatted alignment section to the output
+            reformatted.append(formatted_alignment)
+        else:
+            # Just add the header if there's no alignment
+            reformatted.append("# alignment:")
 
         reformatted.append("")
-        reformatted.append("# document level annotation:")
+        
+        # Format the document level annotation with consistent tab indentation
         if doc_level_annotation:
-            for line in doc_level_annotation[1:]:  # Skip the header since we already added it
-                reformatted.append(line)
+            # Construct the annotation with header
+            doc_annotation = "\n".join(doc_level_annotation)
+            # Apply the format_doc_annotation function to consistently format with tab indentation
+            formatted_doc_annotation = format_doc_annotation(doc_annotation)
+            # Add the formatted annotation section to the output
+            reformatted.append(formatted_doc_annotation)
+        else:
+            # Just add the header if there's no annotation
+            reformatted.append("# document level annotation:")
 
         # Add a newline before the next block
         reformatted.append("")
