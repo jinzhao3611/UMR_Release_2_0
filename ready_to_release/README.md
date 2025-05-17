@@ -181,7 +181,7 @@ This dataset includes annotated data from the following languages:
 
 ### Notes
 
-For detailed mapping between the current file names and their original workset names, refer to the provided **name_mappings.txt**.
+For detailed mapping between the current file names and their original workset names, refer to the provided **umr_file_name_mapping.txt**.
 
 ## Statistics Tables Description
 
