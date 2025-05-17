@@ -1,4 +1,16 @@
-# UMR data Parser Tool
+# UMR 2.0 Data Parser Tool
+
+## Table of Contents
+- [UMR 2.0 Data Parser Tool](#umr-20-data-parser-tool)
+  - [Usage](#usage)
+  - [Options](#options)
+  - [Examples](#examples)
+  - [Output Format](#output-format)
+- [UMR 2.0 Data format Description](#umr-annotated-sentences-dataset)
+  - [Block Structure](#block-structure)
+  - [Language Coverage](#language-coverage)
+  - [Notes](#notes)
+- [UMR 2.0 Data statistics](#run-statisticspy)
 
 The `parse_umr_to_json.py` script extracts content from UMR files and converts it to JSON format. It properly handles the block structure of UMR files, where:
 
@@ -79,12 +91,12 @@ The script outputs a JSON file containing an array of UMR documents. Each docume
 }
 ```
 
-# UMR Annotated Sentences Dataset
+# UMR 2.0 Data format Description
 
 This dataset is organized in **blocks**, each corresponding to a single sentence.  
 Blocks are separated by a line of 80 hash signs:
 
-
+## Block Structure
 
 Within each block, there are **five parts**, separated by a single hash sign (`#`):
 
@@ -164,8 +176,9 @@ This dataset includes annotated data from the following languages:
 
 For detailed mapping between the current file names and their original workset names, refer to the provided **name_mappings.txt**.
 
-# Run statistics.py
--  following is the description of what each item means in the three table
+# Statistics 
+Run statistics.py to get umr_statistics file containing tables
+-  following is the description of what each item means in the three types of tables
 -  partial-conversion data means data that are partially converted from amr (english and chinese has this type).
 -  non-partial-conversion data includes data that are annotated from scratch or data that are fully converted from amr.
 
