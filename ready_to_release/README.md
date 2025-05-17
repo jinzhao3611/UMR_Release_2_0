@@ -15,7 +15,7 @@
     - [Alignment Information](#4-alignment-information)
     - [Document-Level Annotation](#5-document-level-annotation)
     - [Language Coverage](#language-coverage)
-  - [Statistics](#statistics)
+  - [Statistics Tables Description](#statistics)
 
 ## UMR 2.0 Data Parser Tool
 
@@ -184,7 +184,7 @@ For detailed mapping between the current file names and their original workset n
 
 ## Statistics Tables Description
 
-Run `statistics.py` to generate the `umr_statistics` file, which contains summary tables.
+Run `statistics.py` to generate the `umr_statistics.txt` file, which contains summary tables.
 
 ### Notes:
 - The following descriptions explain the metrics used in the three types of tables.
