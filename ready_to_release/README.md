@@ -1,12 +1,5 @@
 # UMR Parser Tool
 
-This repository contains two Python tools for working with UMR (Uniform Meaning Representation) data:
-
-1. `rename_umr_files.py` - Renames UMR files to follow a consistent naming convention
-2. `parse_umr_to_json.py` - Parses UMR files into JSON format with filtering options
-
-## UMR Parser Tool
-
 The `parse_umr_to_json.py` script extracts content from UMR files and converts it to JSON format. It properly handles the block structure of UMR files, where:
 
 - Files are divided into blocks (sentences) separated by 80 hash signs (`####...####`)
@@ -86,17 +79,142 @@ The script outputs a JSON file containing an array of UMR documents. Each docume
 }
 ```
 
-## UMR File Renaming Tool
+# UMR Annotated Sentences Dataset
 
-The `rename_umr_files.py` script renames UMR files to follow the naming convention established in UMR 1.0 Release. See script comments for more details.
+This dataset is organized in **blocks**, each corresponding to a single sentence.  
+Blocks are separated by a line of 80 hash signs:
 
-### Usage
 
-```bash
-python rename_umr_files.py
-```
 
-## Requirements
+Within each block, there are **five parts**, separated by a single hash sign (`#`):
 
-- Python 3.6+
-- The UMR_Release_2_0 directory structure with language subdirectories 
+---
+
+## 1. Meta Information
+
+- Entries are separated by two colons (`::`).
+- Example entries:
+  - `type = partial_conversion`: Indicates that the UMR annotation for this sentence was converted from AMR.
+  - `sent_id = u_tree-cs-s1-root`: Maps to the original sentence ID from the source workset.
+
+---
+
+## 2. Sentence Information
+
+This section may include the following fields:
+
+- **Index**: Token indices  
+- **Words**: Tokens of the sentence  
+- **Morphemes**: Morphological breakdown of words  
+- **Morpheme Gloss (English)**: English glosses of morphemes  
+- **Morpheme Gloss (Spanish)**: Spanish glosses of morphemes  
+- **Morpheme Category**: Categories or grammatical roles of morphemes  
+- **Words (English)**: English translation of the individual words  
+- **Part of Speech**: POS tags  
+- **Sentence**: Original sentence  
+- **Translation (English)**: English translation of the sentence  
+- **Translation (Spanish)**: Spanish translation of the sentence  
+
+---
+
+## 3. Sentence-Level UMR Annotation
+
+- UMR structure is represented in **Penman notation**.
+
+---
+
+## 4. Alignment Information
+
+- Alignments between UMR concepts and token indices.
+
+---
+
+## 5. Document-Level Annotation
+
+- If no annotation is available, it is represented as:
+
+
+
+---
+
+## Language Coverage
+
+This dataset includes annotated data from the following languages:
+
+### Included in UMR 1.0 Release
+
+- Arapaho  
+- Kukama  
+- Navajo  
+- Sanapaná  
+
+### Included in Both UMR 1.0 and UMR 2.0 Releases
+
+- English  
+- Chinese  
+
+### New in UMR 2.0 Release
+
+- Czech  
+- Latin  
+
+---
+
+## Notes
+
+For detailed mapping between the current file names and their original workset names, refer to the provided **name_mappings.txt**.
+
+# Run statistics.py
+Note: 
+- 1. following is the description of what each item means in the three table
+- 2. partial-conversion data means data that are partially converted from amr (english and chinese has this type).
+- 3. non-partial-conversion data includes data that are annotated from scratch or data that are fully converted from amr.
+
+=== Stats for ALL ===
++-----------+----------------------------------+
+| Metric    | Count                            |
++===========+==================================+
+| Documents | Total documents of this language |
++-----------+----------------------------------+
+
+=== Stats for PARTIAL-CONVERSION ===
++----------------------------+-------------------------------------------------------------------+
+| Metric                     | Count                                                             |
++============================+===================================================================+
+| Documents                  | Documents that contain at least one partial annotation            |
++----------------------------+-------------------------------------------------------------------+
+| Sentences (Blocks)         | Sentences that have partially converted annotation                |
++----------------------------+-------------------------------------------------------------------+
+| Words                      | Total words of sentences that have partially converted annotation |
++----------------------------+-------------------------------------------------------------------+
+| Sentence-level Graphs      | partially converted sentence level annotations                    |
++----------------------------+-------------------------------------------------------------------+
+| Doc-level Graphs           | partially converted document level annotations                    |
++----------------------------+-------------------------------------------------------------------+
+| Relations (Sentence-level) | Total relations in partially converted sentence level annotation  |
++----------------------------+-------------------------------------------------------------------+
+| Concepts (Sentence-level)  | Total concepts in partially converted annotation                  |
++----------------------------+-------------------------------------------------------------------+
+| Relations (Document-level) | Total relations in partially converted document level annotation  |
++----------------------------+-------------------------------------------------------------------+
+
+=== Stats for NON-PARTIAL-CONVERSION Blocks ===
++----------------------------+-----------------------------------------------------------------------+
+| Metric                     | Count                                                                 |
++============================+=======================================================================+
+| Documents                  | Documents that contain at least one non-partial annotation            |
++----------------------------+-----------------------------------------------------------------------+
+| Sentences (Blocks)         | Sentences that have non-partially converted annotation                |
++----------------------------+-----------------------------------------------------------------------+
+| Words                      | Total words of sentences that have non-partially converted annotation |
++----------------------------+-----------------------------------------------------------------------+
+| Sentence-level Graphs      | non-partially converted sentence level annotations                    |
++----------------------------+-----------------------------------------------------------------------+
+| Doc-level Graphs           | non-partially converted document level annotations                    |
++----------------------------+-----------------------------------------------------------------------+
+| Relations (Sentence-level) | Total relations in non-partially converted sentence level annotation  |
++----------------------------+-----------------------------------------------------------------------+
+| Concepts (Sentence-level)  | Total concepts in non-partially converted annotation                  |
++----------------------------+-----------------------------------------------------------------------+
+| Relations (Document-level) | Total relations in non-partially converted document level annotation  |
++----------------------------+-----------------------------------------------------------------------+
