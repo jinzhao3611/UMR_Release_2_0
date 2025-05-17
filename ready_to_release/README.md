@@ -183,7 +183,7 @@ This dataset includes annotated data from the following languages:
 
 For detailed mapping between the current file names and their original workset names, refer to the provided **name_mappings.txt**.
 
-## Statistics
+## Statistics Tables Description
 
 Run `statistics.py` to generate the `umr_statistics` file, which contains summary tables.
 
@@ -206,13 +206,13 @@ Run `statistics.py` to generate the `umr_statistics` file, which contains summar
 | Metric                     | Count                                                             |
 |----------------------------|-------------------------------------------------------------------|
 | Documents                  | Documents that contain at least one partial annotation            |
-| Sentences (Blocks)         | Sentences that have partially converted annotation                |
-| Words                      | Total words of sentences that have partially converted annotation |
+| Sentences (Blocks)         | Sentences that have partially converted annotations                |
+| Words                      | Total words of sentences that have partially converted annotations |
 | Sentence-level Graphs      | Partially converted sentence level annotations                    |
 | Doc-level Graphs           | Partially converted document level annotations                    |
-| Relations (Sentence-level) | Total relations in partially converted sentence level annotation  |
-| Concepts (Sentence-level)  | Total concepts in partially converted annotation                  |
-| Relations (Document-level) | Total relations in partially converted document level annotation  |
+| Relations (Sentence-level) | Total relations in partially converted sentence level annotations  |
+| Concepts (Sentence-level)  | Total concepts in partially converted annotations                  |
+| Relations (Document-level) | Total relations in partially converted document level annotations  |
 
 ---
 
@@ -221,10 +221,10 @@ Run `statistics.py` to generate the `umr_statistics` file, which contains summar
 | Metric                     | Count                                                                 |
 |----------------------------|------------------------------------------------------------------------|
 | Documents                  | Documents that contain at least one non-partial annotation            |
-| Sentences (Blocks)         | Sentences that have non-partially converted annotation                |
-| Words                      | Total words of sentences that have non-partially converted annotation |
-| Sentence-level Graphs      | Non-partially converted sentence level annotations                    |
-| Doc-level Graphs           | Non-partially converted document level annotations                    |
-| Relations (Sentence-level) | Total relations in non-partially converted sentence level annotation  |
-| Concepts (Sentence-level)  | Total concepts in non-partially converted annotation                  |
-| Relations (Document-level) | Total relations in non-partially converted document level annotation  |
+| Sentences (Blocks)         | Sentences that have non-partially converted annotations                |
+| Words                      | Total words of sentences that have non-partially converted annotations |
+| Sentence-level Graphs      | Manually annotated sentence level graphs                    |
+| Doc-level Graphs           | Manually annotated document level graphs                    |
+| Relations (Sentence-level) | Total relations in manually annotated sentence level annotations  |
+| Concepts (Sentence-level)  | Total concepts in manually annotated annotations                  |
+| Relations (Document-level) | Total relations in manually annotated document level annotations  |
