@@ -14,7 +14,8 @@ def pre_format(input_file_path, output_file_path):
             modified_lines.append("################################################################################\n")
             modified_lines.append(line.replace("# sent_id =", "# meta-info :: sent_id ="))
         else:
-            modified_lines.append(line)
+            # Replace "Sentence Gloss (en):" with "Translation(English):"
+            modified_lines.append(line.replace("Sentence Gloss (en):", "Translation(English):"))
 
     with open(output_file_path, 'w', encoding='utf-8') as outfile:
         outfile.writelines(modified_lines)
